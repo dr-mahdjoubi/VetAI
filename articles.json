@@ -1,0 +1,18 @@
+{
+  "section": "articles",
+  "last_updated": "2026-10-10T12:00:00Z",
+  "items": [
+    {
+      "id": "2026-10-10-001",
+      "title_ar": "عنوان بالعربية",
+      "title_en": "Title in English",
+      "summary_ar": "ملخص مكتوب بأسلوب أصلي في 2-3 جمل.",
+      "summary_en": "Original 2-3 sentence summary.",
+      "source_name": "اسم المصدر",
+      "source_url": "https://example.com/article",
+      "category": "animal-health",
+      "published": "2026-10-09",
+      "status": "pending_review"
+    }
+  ]
+}
