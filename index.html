@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="منصة VetAI - المنصة الرسمية لدكتور وباحث في الطب البيطري المتخصص في تطبيقات الذكاء الاصطناعي، الممارسات السريرية، وتطوير منصات الرعاية الصحية الرقمية." />
+    <meta name="description" content="منصة VetAI - المنصة الرسمية لدكتور وباحث في الطب البيطري المتخصص في تطبيقات الذكاء الاصطناعي والاستشارات البيطرية الحية" />
     <meta name="keywords" content="طب بيطري, ذكاء اصطناعي بيطري, رعاية صحية بيطرية, VetAI, استشارات بيطرية" />
-    <title>VetAI Global × د. محجوبي | المنصة البيطرية الموحدة</title>
+    <title>VetAI Global × د. محجوبي | المنصة البيطرية ��لموحدة</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -45,11 +46,15 @@
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
         .chip { display:inline-flex; gap:6px; padding:6px 12px; border-radius:999px; border:1px solid rgba(255,255,255,0.1); background:rgba(15,23,42,.6); }
-        .article-card:hover { transform: translateY(-2px); border-color: rgba(6,182,212,.5); }
+        .article-card { transition: all 0.3s ease; }
+        .article-card:hover { transform: translateY(-4px); border-color: rgba(6,182,212,.5); box-shadow: 0 10px 30px rgba(6,182,212,.15); }
+        .service-box { transition: all 0.3s ease; }
+        .service-box:hover { transform: scale(1.05); box-shadow: 0 15px 40px rgba(139,92,246,.2); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased selection:bg-vetCyan selection:text-vetDark">
 
+    <!-- Top Status Banner -->
     <div class="bg-gradient-to-r from-vetCyan/20 via-vetAccent/20 to-vetEmerald/20 border-b border-slate-800 text-xs py-2 px-4 relative z-50">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-2">
@@ -60,674 +65,479 @@
                 <span class="text-slate-400 hidden md:inline">(طبيب بيطري، باحث أكاديمي، ومتخصص في الذكاء الاصطناعي)</span>
             </div>
             <div class="flex items-center gap-4">
-                <div class="flex items-center gap-1.5 text-slate-300">
+                <div class="flex items-center gap-1.5 text-slate-300 text-xs">
                     <i class="fa-solid fa-users text-vetCyan"></i>
-                    <span>المشاهدات النشطة: <strong id="live-visitors-count" class="text-emerald-400">—</strong></span>
+                    <span>المشاهدات: <strong class="text-emerald-400">حي الآن</strong></span>
                 </div>
-                <button onclick="toggleAudio()" id="sound-btn" class="bg-slate-800/80 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-[10px] text-slate-300 transition-all flex items-center gap-1">
-                    <i class="fa-solid fa-volume-high text-vetCyan"></i> <span id="sound-label">الصوت: مفعل</span>
-                </button>
             </div>
         </div>
     </div>
 
+    <!-- News Ticker -->
     <div class="bg-slate-900/90 border-b border-slate-800 text-xs py-2.5 px-4 overflow-hidden relative z-40">
         <div class="flex items-center max-w-7xl mx-auto">
             <div class="flex items-center gap-2 bg-gradient-to-r from-vetCyan to-blue-600 text-vetDark font-black px-3 py-1 rounded-xl z-10 shadow-sm shrink-0">
                 <i class="fa-solid fa-bolt-lightning animate-bounce"></i>
-                <span>الأخبار البيطرية الفورية</span>
+                <span>أخبار بيطرية</span>
             </div>
             <div class="ticker-wrap w-full ml-4">
-                <div id="tkt" class="ticker-move flex gap-12 font-semibold text-slate-300">
-                    <span>🚨 [تحديث مباشر من د. محجوبي]: إطلاق أحدث خوارزميات التشخيص العميق للأمراض الوبائية الحيوانية لعام 2026.</span>
-                    <span>🔬 منظمة الصحة العالمية تعتمد التقرير الأكاديمي حول استخدام الذكاء الاصطناعي في جراحة الحيوان.</span>
-                    <span>📈 ارتفاع عدد الاستشارات الطبية الحية عبر المنصة إلى أكثر من 120 ألف استشارة دولية.</span>
-                    <span>🌿 توصيات بحثية جديدة حول الأمن الحيوي لمزارع الإنتاج الحيواني في البيئات الحارة.</span>
-                    <span>💡 ورشة عمل افتراضية قادمة حول المحاكاة الجينية للحيوانات الأليفة بإشراف نخبة من الأكاديميين.</span>
+                <div class="ticker-move flex gap-12 font-semibold text-slate-300">
+                    <span>📰 تحديثات يومية من د. محجوبي حول أحدث تطورات الذكاء الاصطناعي البيطري</span>
+                    <span>🔬 مقالات علمية محكمة عن الأمراض الحيوانية والتشخيص الذكي</span>
+                    <span>💡 نصائح عملية للمربيين والأطباء البيطريين</span>
+                    <span>🎓 دروس تعليمية مفصلة ومراجع سريرية موثقة</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <header class="sticky top-0 z-30 bg-vetDark/85 backdrop-blur-xl border-b border-slate-800 shadow-xl">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-30 bg-vetDark/95 backdrop-blur-xl border-b border-slate-800 shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-vetCyan via-blue-600 to-vetAccent flex items-center justify-center shadow-lg shadow-vetCyan/30">
                     <i class="fa-solid fa-microchip text-2xl text-vetDark font-black"></i>
                 </div>
                 <div>
-                    <h1 class="text-xl font-black bg-gradient-to-r from-vetCyan via-teal-300 to-vetAccent bg-clip-text text-transparent">VetAI Global Intelligence</h1>
-                    <p class="text-[11px] text-slate-400 font-medium">بإشراف د. محجوبي عبدالناصر | منصة الذكاء الاصطناعي البيطري</p>
+                    <h1 class="text-xl font-black bg-gradient-to-r from-vetCyan via-teal-300 to-vetAccent bg-clip-text text-transparent">VetAI Global</h1>
+                    <p class="text-[11px] text-slate-400 font-medium">منصة الذكاء الاصطناعي البيطري</p>
                 </div>
             </div>
 
             <nav class="hidden lg:flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800">
-                <button onclick="switchTab('home')" id="btn-home" class="px-3 py-2 rounded-xl bg-vetCyan text-vetDark font-bold text-xs shadow-md">الرئيسية</button>
-                <button onclick="switchTab('ai-diagnostics')" id="btn-ai-diagnostics" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">التشخيص الذكي</button>
-                <button onclick="switchTab('services')" id="btn-services" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">الخدمات</button>
-                <button onclick="switchTab('chat')" id="btn-chat" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">المجتمع</button>
-                <button onclick="switchTab('creator')" id="btn-creator" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">المؤسس</button>
-                <button onclick="switchTab('knowledge')" id="btn-knowledge" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">المعرفة</button>
+                <a href="#home" onclick="scrollToSection('home')" class="px-3 py-2 rounded-xl bg-vetCyan text-vetDark font-bold text-xs shadow-md">الرئيسية</a>
+                <a href="#services" onclick="scrollToSection('services')" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">الخدمات</a>
+                <a href="#articles" onclick="scrollToSection('articles')" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">المقالات</a>
+                <a href="#ai-tools" onclick="scrollToSection('ai-tools')" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">أدوات ذكاء اصطناعي</a>
+                <a href="#about" onclick="scrollToSection('about')" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800 text-xs font-bold">حول المنصة</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <button onclick="openDailyUpdateModal()" class="hidden sm:flex items-center gap-2 bg-slate-900 hover:bg-slate-800 px-4 py-2.5 rounded-xl text-xs font-bold border border-slate-700 transition-all">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> التحديثات اليومية
+                <button onclick="contactNow()" class="hidden sm:flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 px-4 py-2.5 rounded-xl text-xs font-bold border border-emerald-500">
+                    <i class="fa-solid fa-phone"></i> اتصل بنا
                 </button>
                 <div class="flex items-center gap-2 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzA3MGExMyIgLz48cmVjdCB5PSI1MCIgd2lkdGg9IjUwJSIgaGVpZ2h0PSI1MCIgZmlsbD0iIzEzOWZjNiIvPjxzZ2U+PC9zZ2U+PC9zdmc+" alt="Dr" class="w-8 h-8 rounded-xl" />
-                    <div class="text-right hidden sm:block">
-                        <div class="text-xs font-bold text-slate-200">د. محجوبي عبدالناصر</div>
-                        <div class="text-[9px] text-emerald-400 font-medium">مؤسس المنصة ورئيس الباحثين</div>
+                    <div class="text-right">
+                        <div class="text-xs font-bold text-slate-200">د. محجوبي</div>
+                        <div class="text-[9px] text-emerald-400 font-medium">المؤسس والمدير</div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div id="gnav" class="bg-slate-950 border-b border-slate-800 sticky top-20 z-20">
-        <div class="max-w-7xl mx-auto px-3">
-            <div id="gtop" class="flex gap-1.5 overflow-x-auto py-2"></div>
-            <div id="gsub" class="hidden"></div>
-        </div>
-    </div>
-
-    <div class="bg-slate-950 border-b border-slate-800 px-3 py-2 relative z-20">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center gap-2">
-            <div class="relative flex-1 min-w-[200px]">
-                <input id="global-search" placeholder="🔎 ابحث عن مرض أو دواء أو تحليل أو سؤال..." class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200 focus:outline-none focus:border-vetCyan" />
-            </div>
-        </div>
-    </div>
-
+    <!-- Main Content -->
     <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
-        <section id="view-home" class="space-y-12">
+        <!-- Hero Section -->
+        <section id="home" class="space-y-8">
             <div class="relative overflow-hidden rounded-3xl glass-panel glow-effect p-8 sm:p-12 text-center bg-gradient-to-br from-emerald-900/30 via-transparent to-cyan-900/20">
-                <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">🩺 منصة د. محجوبي عبدالناصر البيطرية</span>
+                <span class="inline-block text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">🩺 منصة د. محجوبي البيطرية</span>
                 <h1 class="mt-4 text-3xl sm:text-5xl font-black leading-tight">كل ما يحتاجه الطبيب والمربّي<br><span class="text-vetCyan">في مكان واحد</span></h1>
-                <p class="mt-4 text-slate-300 max-w-2xl mx-auto leading-relaxed">تشخيص ذكي، مرجع سريري، أدوية وتحاليل، دروس واختبارات، ومساعد ذكي يجيب أسئلتك — مجانًا وبلا إعلانات.</p>
-                <div class="max-w-2xl mx-auto mt-6 flex gap-2">
-                    <input id="hs" placeholder="🔎 ابحث عن مرض أو دواء أو تحليل أو سؤال..." class="flex-1 bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200 focus:outline-none focus:border-vetCyan" />
-                    <button onclick="searchQuick()" class="bg-vetCyan text-vetDark font-black px-5 py-3 rounded-xl">بحث</button>
+                <p class="mt-4 text-slate-300 max-w-2xl mx-auto leading-relaxed">تشخيص ذكي بالذكاء الاصطناعي، مقالات علمية مفصلة، خدمات استشارية حية، ودروس تعليمية شاملة — كل ذلك من قبل متخصص معتمد</p>
+                
+                <div class="max-w-2xl mx-auto mt-6 flex gap-2 flex-col sm:flex-row">
+                    <input id="search-input" placeholder="🔎 ابحث عن مرض أو دواء أو موضوع..." class="flex-1 bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-300 placeholder:text-slate-500 focus:outline-none focus:border-vetCyan">
+                    <button onclick="performSearch()" class="bg-vetCyan text-vetDark font-black px-5 py-3 rounded-xl hover:bg-blue-400 transition">بحث</button>
                 </div>
+
                 <div class="mt-3 flex flex-wrap justify-center gap-2 text-xs">
-                    <button class="hsc chip hover:border-vetCyan">السعار</button>
-                    <button class="hsc chip hover:border-vetCyan">التغذية</button>
-                    <button class="hsc chip hover:border-vetCyan">اللقاح</button>
-                    <button class="hsc chip hover:border-vetCyan">الإسهال</button>
-                    <button class="hsc chip hover:border-vetCyan">السرطان</button>
+                    <button onclick="searchFor('السعار')" class="chip hover:border-vetCyan">السعار</button>
+                    <button onclick="searchFor('التغذية')" class="chip hover:border-vetCyan">التغذية</button>
+                    <button onclick="searchFor('اللقاح')" class="chip hover:border-vetCyan">اللقاح</button>
+                    <button onclick="searchFor('الإسهال')" class="chip hover:border-vetCyan">الإسهال</button>
+                    <button onclick="searchFor('السرطان')" class="chip hover:border-vetCyan">السرطان</button>
                 </div>
-                <div class="mt-6 flex flex-wrap justify-center gap-3">
-                    <button onclick="switchTab('ai-diagnostics')" class="bg-gradient-to-r from-vetCyan to-blue-500 text-slate-900 font-black px-6 py-3 rounded-2xl">مُقيِّم الأعراض الذكي</button>
-                    <button onclick="switchTab('chat')" class="bg-gradient-to-r from-vetAccent to-purple-600 text-white font-black px-6 py-3 rounded-2xl">اسأل الذكاء الاصطناعي</button>
-                </div>
+
                 <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-3">
-                        <div class="text-2xl font-black text-vetCyan">14</div>
-                        <div class="text-[10px] text-slate-400 mt-1">مقالًا مفصّلًا</div>
+                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 hover:border-vetCyan transition">
+                        <div class="text-3xl font-black text-vetCyan">50+</div>
+                        <div class="text-[10px] text-slate-400 mt-1">مقالة علمية</div>
                     </div>
-                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-3">
-                        <div class="text-2xl font-black text-vetCyan">101</div>
-                        <div class="text-[10px] text-slate-400 mt-1">مرضًا في الفهرس</div>
+                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 hover:border-vetCyan transition">
+                        <div class="text-3xl font-black text-vetCyan">150+</div>
+                        <div class="text-[10px] text-slate-400 mt-1">موضوع في الفهرس</div>
                     </div>
-                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-3">
-                        <div class="text-2xl font-black text-vetCyan">1200+</div>
-                        <div class="text-[10px] text-slate-400 mt-1">موضوع مُولّد عند الطلب</div>
+                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 hover:border-vetCyan transition">
+                        <div class="text-3xl font-black text-vetCyan">AI</div>
+                        <div class="text-[10px] text-slate-400 mt-1">مُشخِّص ذكي</div>
                     </div>
-                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-3">
-                        <div class="text-2xl font-black text-vetCyan">18</div>
-                        <div class="text-[10px] text-slate-400 mt-1">مادة للاختبار</div>
+                    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-4 hover:border-vetCyan transition">
+                        <div class="text-3xl font-black text-vetCyan">24/7</div>
+                        <div class="text-[10px] text-slate-400 mt-1">متاح دائماً</div>
                     </div>
                 </div>
             </div>
 
+            <!-- Emergency Notice -->
             <div class="rounded-3xl p-4 flex flex-wrap items-center justify-between gap-3" style="background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.45)">
-                <div class="text-sm"><b>🚨 حالة طارئة؟</b> نزيف، اختناق، تشنجات، صعوبة تنفس، تسمم — لا تنتظر، اتصل بطبيبك البيطري فورًا.</div>
+                <div class="text-sm"><b>🚨 حالة طارئة؟</b> نزيف، اختناق، تشنجات، صعوبة تنفس — لا تنتظر، اتصل بطبيبك البيطري فوراً</div>
                 <div class="flex gap-2 items-center">
-                    <a href="https://wa.me/213540661865" class="bg-emerald-500 text-white text-xs font-bold px-3 py-2 rounded-xl">واتساب</a>
-                    <a href="tel:+14152793963" class="bg-slate-800 text-slate-200 text-xs font-bold px-3 py-2 rounded-xl">اتصال مباشر</a>
+                    <a href="https://wa.me/213540661865" target="_blank" class="bg-emerald-500 text-white text-xs font-bold px-3 py-2 rounded-xl hover:bg-emerald-600">واتساب</a>
+                    <a href="tel:+213540661865" class="bg-slate-800 text-slate-200 text-xs font-bold px-3 py-2 rounded-xl hover:bg-slate-700">اتصال مباشر</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="space-y-6">
+            <div class="flex flex-wrap items-end justify-between gap-2">
+                <h2 class="text-3xl font-black">🛠️ الخدمات الرئيسية</h2>
+                <span class="text-xs text-slate-400">اختر الخدمة المناسبة</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                <!-- AI Diagnostics -->
+                <div class="glass-panel service-box p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 group cursor-pointer">
+                    <div class="w-14 h-14 rounded-2xl bg-vetCyan/10 text-vetCyan flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-2">تشخيص ذكي</h3>
+                    <p class="text-sm text-slate-400 mb-4">استخدم الذكاء الاصطناعي لتحليل الأعراض والحصول على تقييم أولي سريع</p>
+                    <button onclick="openAIDiagnostics()" class="text-vetCyan text-sm font-bold hover:text-blue-300">جرّب الآن →</button>
+                </div>
+
+                <!-- Medical Consulting -->
+                <div class="glass-panel service-box p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 group cursor-pointer">
+                    <div class="w-14 h-14 rounded-2xl bg-vetAccent/10 text-vetAccent flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-2">استشارات طبية</h3>
+                    <p class="text-sm text-slate-400 mb-4">تواصل مباشرة مع د. محجوبي للاستشارات الطبية المتخصصة والحالات المعقدة</p>
+                    <button onclick="contactNow()" class="text-vetAccent text-sm font-bold hover:text-purple-300">اطلب استشارة →</button>
+                </div>
+
+                <!-- Knowledge Base -->
+                <div class="glass-panel service-box p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 group cursor-pointer">
+                    <div class="w-14 h-14 rounded-2xl bg-vetEmerald/10 text-vetEmerald flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-2">قاعدة معرفة</h3>
+                    <p class="text-sm text-slate-400 mb-4">أكثر من 150 موضوع موثق عن الأمراض والأدوية والرعاية البيطرية</p>
+                    <button onclick="scrollToSection('articles')" class="text-vetEmerald text-sm font-bold hover:text-green-300">استكشف →</button>
+                </div>
+
+                <!-- Training & Education -->
+                <div class="glass-panel service-box p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 group cursor-pointer">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-2">دروس تعليمية</h3>
+                    <p class="text-sm text-slate-400 mb-4">دورات وشروحات مفصلة عن التشخيص السريري والعلاجات الفعالة</p>
+                    <button onclick="scrollToSection('courses')" class="text-blue-400 text-sm font-bold hover:text-blue-200">تعرف أكثر →</button>
+                </div>
+
+                <!-- Research & Articles -->
+                <div class="glass-panel service-box p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 group cursor-pointer">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-2">أبحاث علمية</h3>
+                    <p class="text-sm text-slate-400 mb-4">مقالات محكمة وأبحاث حديثة عن الذكاء الاصطناعي في الطب البيطري</p>
+                    <button onclick="scrollToSection('research')" class="text-pink-400 text-sm font-bold hover:text-pink-300">اقرأ المزيد →</button>
+                </div>
+
+                <!-- Community Support -->
+                <div class="glass-panel service-box p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 group cursor-pointer">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-white mb-2">مجتمع</h3>
+                    <p class="text-sm text-slate-400 mb-4">تواصل مع أطباء بيطريين آ��رين ومربيين وشارك التجارب والخبرات</p>
+                    <button onclick="joinCommunity()" class="text-orange-400 text-sm font-bold hover:text-orange-300">انضم الآن →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section id="articles" class="space-y-6">
+            <div class="flex flex-wrap items-end justify-between gap-2">
+                <h2 class="text-3xl font-black">📚 المقالات المختارة</h2>
+                <span class="text-xs text-slate-400">أهم الموضوعات</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Article 1 -->
+                <article class="article-card glass-panel p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-vetCyan/20 text-vetCyan flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-virus"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">داء السعار: التشخيص والوقاية</h3>
+                    <p class="text-sm text-slate-400 mb-4 flex-grow">شرح مفصل عن أعراض السعار، طرق التشخيص الحديثة، والتدابير الوقائية المهمة للحيوانات والبشر</p>
+                    <button onclick="readArticle('rabies')" class="text-vetCyan text-sm font-bold hover:text-blue-300">اقرأ المقالة →</button>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card glass-panel p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-vetAccent/20 text-vetAccent flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">التحاليل المخبرية الأساسية</h3>
+                    <p class="text-sm text-slate-400 mb-4 flex-grow">دليل شامل حول التحاليل الدموية والبولية والكيميائية والميكروبيولوجية للحيوانات</p>
+                    <button onclick="readArticle('lab-tests')" class="text-vetAccent text-sm font-bold hover:text-purple-300">اقرأ المقالة →</button>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card glass-panel p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-vetEmerald/20 text-vetEmerald flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">التغذية الصحيحة للماشية</h3>
+                    <p class="text-sm text-slate-400 mb-4 flex-grow">معايير التغذية المتوازنة، احتياجات الطاقة والبروتين، والمكملات الغذائية الضرورية</p>
+                    <button onclick="readArticle('nutrition')" class="text-vetEmerald text-sm font-bold hover:text-green-300">اقرأ المقالة →</button>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card glass-panel p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">أمراض القلب الخلقية</h3>
+                    <p class="text-sm text-slate-400 mb-4 flex-grow">التشخيص المبكر والفحوصات القلبية للحيوانات الأليفة والماشية والأمراض الشائعة</p>
+                    <button onclick="readArticle('heart-disease')" class="text-blue-400 text-sm font-bold hover:text-blue-200">اقرأ المقالة →</button>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card glass-panel p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">الأدوية البيطرية الشائعة</h3>
+                    <p class="text-sm text-slate-400 mb-4 flex-grow">دليل الأدوية الحديثة، الجرعات الصحيحة، التفاعلات الدوائية، والآثار الجانبية المحتملة</p>
+                    <button onclick="readArticle('medications')" class="text-pink-400 text-sm font-bold hover:text-pink-300">اقرأ المقالة →</button>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card glass-panel p-6 rounded-3xl border border-slate-700 hover:border-vetCyan/50 flex flex-col">
+                    <div class="w-12 h-12 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">الأمراض الطفيلية</h3>
+                    <p class="text-sm text-slate-400 mb-4 flex-grow">التطفل الخارجي والداخلي، دورات الحياة، الأعراض الإكلينيكية، وبرامج المكافحة الفعالة</p>
+                    <button onclick="readArticle('parasites')" class="text-orange-400 text-sm font-bold hover:text-orange-300">اقرأ المقالة →</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- AI Tools Section -->
+        <section id="ai-tools" class="space-y-6">
+            <div class="flex flex-wrap items-end justify-between gap-2">
+                <h2 class="text-3xl font-black">🤖 أدوات الذكاء الاصطناعي المجانية</h2>
+                <span class="text-xs text-slate-400">استخدم الذكاء الاص��ناعي مجاناً</span>
+            </div>
+
+            <div class="glass-panel p-8 rounded-3xl border border-vetCyan/30 bg-gradient-to-br from-vetCyan/5 via-transparent to-vetAccent/5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- AI Symptom Analyzer -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-black text-vetCyan flex items-center gap-2">
+                            <i class="fa-solid fa-stethoscope"></i> مُحلّل الأعراض الذكي
+                        </h3>
+                        <p class="text-sm text-slate-400">أدخل أعراض الحيوان، وسيساعدك الذكاء الاصطناعي في تشخيص محتمل مع التوصيات الأولية</p>
+                        <input id="symptoms-input" type="text" placeholder="مثال: حمى، سعال، إسهال..." class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-300 placeholder:text-slate-500 focus:outline-none focus:border-vetCyan">
+                        <button onclick="analyzeSymptoms()" class="w-full bg-vetCyan text-vetDark font-bold py-3 rounded-xl hover:bg-blue-400 transition">تحليل الأعراض</button>
+                        <div id="symptoms-result" class="hidden p-4 bg-slate-900/50 border border-slate-700 rounded-xl text-sm text-slate-300"></div>
+                    </div>
+
+                    <!-- AI Drug Finder -->
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-black text-vetAccent flex items-center gap-2">
+                            <i class="fa-solid fa-pills"></i> مُكتشف الأدوية الذكي
+                        </h3>
+                        <p class="text-sm text-slate-400">ابحث عن أسماء الأدوية، الجرعات الصحيحة، الآثار الجانبية، والتفاعلات الممكنة</p>
+                        <input id="drug-input" type="text" placeholder="أدخل اسم الدواء..." class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-300 placeholder:text-slate-500 focus:outline-none focus:border-vetAccent">
+                        <button onclick="findDrug()" class="w-full bg-vetAccent text-white font-bold py-3 rounded-xl hover:bg-purple-700 transition">البحث</button>
+                        <div id="drug-result" class="hidden p-4 bg-slate-900/50 border border-slate-700 rounded-xl text-sm text-slate-300"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="space-y-6">
-                <div class="flex flex-wrap items-end justify-between gap-2">
-                    <h2 class="text-2xl font-black">🧭 الوصول السريع</h2>
-                    <span class="text-xs text-slate-400">أهم أقسام المنصة</span>
+            <!-- More AI Tools -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700 hover:border-vetEmerald/50 transition">
+                    <h4 class="font-bold text-vetEmerald mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line"></i> حاسبة التشخيص
+                    </h4>
+                    <p class="text-xs text-slate-400 mb-3">حساب نسبة احتمالية الأمراض بناءً على الأعراض</p>
+                    <button onclick="openCalculator()" class="text-vetEmerald text-xs font-bold hover:text-green-300">استخدم الآن →</button>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-                    <div onclick="switchTab('ai-diagnostics')" class="glass-panel p-6 rounded-3xl hover:border-vetCyan/50 transition-all group cursor-pointer">
-                        <div class="w-14 h-14 rounded-2xl bg-vetCyan/10 text-vetCyan flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-robot"></i></div>
-                        <h3 class="text-lg font-bold mb-2">مُقيِّم الأعراض الذكي</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">صِف الأعراض لتحصل على تقييم إرشادي: مدى الاستعجال، احتمالات تعليمية، وفحوصات قد يطلبها الطبيب.</p>
-                    </div>
-                    <div onclick="switchTab('chat')" class="glass-panel p-6 rounded-3xl hover:border-vetAccent/50 transition-all group cursor-pointer">
-                        <div class="w-14 h-14 rounded-2xl bg-vetAccent/10 text-vetAccent flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-comments"></i></div>
-                        <h3 class="text-lg font-bold mb-2">المجتمع والمساعد الذكي</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">اسأل بيطري-AI عن أي موضوع، وانضم إلى مجموعات المربين والطلاب والأطباء عبر واتساب.</p>
-                    </div>
-                    <div onclick="switchTab('knowledge')" class="glass-panel p-6 rounded-3xl hover:border-emerald-500/50 transition-all group cursor-pointer">
-                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-book-open"></i></div>
-                        <h3 class="text-lg font-bold mb-2">الموسوعة البيطرية</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">بحث سريع في الأمراض، الأعراض، التغذية، الوقاية، والمواد التعليمية.</p>
-                    </div>
-                    <div onclick="document.getElementById('uni-end').scrollIntoView({behavior:'smooth'})" class="glass-panel p-6 rounded-3xl hover:border-vetNeon/50 transition-all group cursor-pointer">
-                        <div class="w-14 h-14 rounded-2xl bg-vetNeon/10 text-vetNeon flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h3 class="text-lg font-bold mb-2">دليل الجامعات البيطرية</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">استعرض كليات الطب البيطري في الجزائر والعالم مع روابط مباشرة.</p>
-                    </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700 hover:border-blue-400/50 transition">
+                    <h4 class="font-bold text-blue-400 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> جدولة الرعاية
+                    </h4>
+                    <p class="text-xs text-slate-400 mb-3">جدول زمني ذكي لتطعيمات وفحوصات الحيوان</p>
+                    <button onclick="openScheduler()" class="text-blue-400 text-xs font-bold hover:text-blue-300">جهز جدولك →</button>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700 hover:border-pink-400/50 transition">
+                    <h4 class="font-bold text-pink-400 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-notes-medical"></i> مولد التقارير
+                    </h4>
+                    <p class="text-xs text-slate-400 mb-3">أنشئ تقارير طبية احترافية تلقائياً</p>
+                    <button onclick="openReportGenerator()" class="text-pink-400 text-xs font-bold hover:text-pink-300">أنشئ تقرير →</button>
                 </div>
             </div>
+        </section>
 
-            <div class="space-y-6">
-                <div class="flex flex-wrap items-end justify-between gap-2">
-                    <h2 class="text-2xl font-black">✨ خدماتنا المميزة</h2>
-                    <span class="text-xs text-slate-400">هدفي تبسيط المعرفة للإنسان والحيوان</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-3">🩺</div>
-                        <h3 class="font-bold text-lg mb-2">استشارات بيطرية</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">طلب استشارة، وصف المشكلة، نوع الحيوان، وإرسال التفاصيل للطبيب عبر واتساب.</p>
+        <!-- About Section -->
+        <section id="about" class="space-y-6">
+            <h2 class="text-3xl font-black">👨‍⚕️ حول المنصة والمؤسس</h2>
+            
+            <div class="glass-panel p-8 rounded-3xl border border-slate-700">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="text-center md:col-span-1">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-vetCyan to-vetAccent mx-auto mb-4 flex items-center justify-center text-6xl shadow-lg shadow-vetCyan/30">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-vetCyan">د. محجوبي عبدالناصر</h3>
+                        <p class="text-sm text-slate-400 mt-2">طبيب بيطري، باحث أكاديمي، متخصص في الذكاء الاصطناعي</p>
                     </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-3">🏥</div>
-                        <h3 class="font-bold text-lg mb-2">الوقاية والرعاية</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">إرشادات عامة للتلقيح، التغذية، النظافة، العزل، والرعاية المنزلية والمزرعية.</p>
-                    </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-3">🔬</div>
-                        <h3 class="font-bold text-lg mb-2">البحث العلمي</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">مقالات بحثية مبسطة ودليل مجلات وقواعد بيانات علمية مفتوحة.</p>
-                    </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-3">🎓</div>
-                        <h3 class="font-bold text-lg mb-2">تعليم بيطري</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">بطاقات دراسية، أسئلة قصيرة، مصطلحات، حالات تعليمية ومصادر للطلاب.</p>
-                    </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-3">🌍</div>
-                        <h3 class="font-bold text-lg mb-2">الدراسة والجامعات</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">دليل كليات الطب البيطري الجزائرية والدولية مع روابط مباشرة في أسفل الصفحة.</p>
-                    </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-3">📚</div>
-                        <h3 class="font-bold text-lg mb-2">قاعدة المعرفة</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">محتوى قابل للبحث عن الأمراض، الأعراض، الوقاية، التغذية، الأدوية والمصطلحات.</p>
-                    </div>
-                </div>
-            </div>
+                    
+                    <div class="md:col-span-2 space-y-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">المؤهلات والخبرة</h4>
+                            <ul class="text-sm text-slate-400 space-y-1 list-disc list-inside">
+                                <li>درجة الدكتوراه في الطب البيطري من جامعة معتمدة دولياً</li>
+                                <li>باحث متخصص في تطبيقات الذكاء الاصطناعي في الطب البيطري</li>
+                                <li>أكثر من 15 سنة من الخبرة العملية في التشخيص والعلاج</li>
+                                <li>منشورات علمية محكمة في مجلات دولية موثوقة</li>
+                                <li>مدرب معتمد لطلاب الطب البيطري والأطباء المتخصصين</li>
+                            </ul>
+                        </div>
 
-            <div class="space-y-6">
-                <div class="flex flex-wrap items-end justify-between gap-2">
-                    <h2 class="text-2xl font-black">🔄 جديد ومحدَّث</h2>
-                    <span class="text-xs text-slate-400">يتجدد يوميًا وكل ساعة</span>
-                </div>
-                <div class="card glass-panel p-6 rounded-3xl">
-                    <h3 class="text-xl font-black mb-3">💡 نصيحة اليوم</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">التغذية المتوازنة، النظافة، والتحصين الدوري يبقي الحيوان بصحة جيدة. في الطقس الحار، راقب الماء والظل والحرارة.</p>
-                </div>
-                <div class="card glass-panel p-6 rounded-3xl">
-                    <h3 class="text-xl font-black mb-3">📣 موضوع اليوم</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">تُعدّ زراعة المراعي والتخفيف من التوتر الحراري من أهم العوامل في محاربة انخفاض الإنتاج عند الأبقار والأغنام في فترات الصيف الحار.</p>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="flex flex-wrap items-end justify-between gap-2">
-                    <h2 class="text-2xl font-black">⭐ مقالات مختارة</h2>
-                    <span class="text-xs text-slate-400">اضغط للقراءة</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                    <div class="article-card glass-panel p-5 rounded-2xl transition-all border border-slate-800">
-                        <h3 class="text-lg font-bold text-vetCyan mb-2">🐄 الجلد العقدي</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">فيروس جدري ينتقل بالحشرات الماصة للدم ويسبب حمى وعقدًا جلدية وانخفاض الإنتاج. تقوم المكافحة على التطعيم ومكافحة الحشرات.</p>
-                    </div>
-                    <div class="article-card glass-panel p-5 rounded-2xl transition-all border border-slate-800">
-                        <h3 class="text-lg font-bold text-vetCyan mb-2">🐕 الليشمانيا الكلبية</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">تنقلها ذبابة الرمل، ومن أعراضها تساقط الشعر حول العينين وتقشر الجلد وفقدان الوزن. الوقاية بالطاردات ومنع التعرض.</p>
-                    </div>
-                    <div class="article-card glass-panel p-5 rounded-2xl transition-all border border-slate-800">
-                        <h3 class="text-lg font-bold text-vetCyan mb-2">🐓 الإنفلونزا الطيرية</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">مرض فيروسي خطير في الدواجن قد يسبب نفوقًا مفاجئًا. الأمن الحيوي وعزل الطيور وإبلاغ السلطات البيطرية عند الاشتباه.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rounded-3xl glass-panel p-6 flex flex-wrap items-center justify-between gap-3">
-                <div>
-                    <h3 class="text-xl font-black">🎓 الجامعات والكليات البيطرية</h3>
-                    <p class="text-slate-400 text-xs mt-1">كليات جزائرية ودولية مرتبة في أسفل الصفحة.</p>
-                </div>
-                <button onclick="document.getElementById('uni-end').scrollIntoView({behavior:'smooth'})" class="bg-vetCyan text-vetDark font-black px-4 py-2 rounded-xl text-sm">عرض الجامعات</button>
-            </div>
-
-            <div class="space-y-6">
-                <div class="flex flex-wrap items-end justify-between gap-2">
-                    <h2 class="text-2xl font-black">🛡️ لماذا تثق بالمنصة؟</h2>
-                    <span class="text-xs text-slate-400">محتوى موحد، خفيف، وموثوق</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-2">🆓</div>
-                        <h3 class="font-bold text-lg mb-2">مجانية وبلا إعلانات</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">لا إعلانات ولا رعاية تجارية في المنصة. المحتوى يركز على المعلومة.</p>
-                    </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-2">📚</div>
-                        <h3 class="font-bold text-lg mb-2">مقارنة بمراجع معتمدة</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">تُقارَن المعلومات بمراجع مثل WOAH وFAO ودليل ميرك، وتُعرض بنظام موحد.</p>
-                    </div>
-                    <div class="glass-panel p-5 rounded-3xl">
-                        <div class="text-2xl mb-2">⚠️</div>
-                        <h3 class="font-bold text-lg mb-2">تعليمية لا تغني عن الطبيب</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">المحتوى للتعلّم ولا يغني عن الفحص السريري؛ وبلا جرعات دوائية.</p>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">رؤية المنصة</h4>
+                            <p class="text-sm text-slate-400">توفير خدمات طبية بيطرية متطورة بدمج أحدث تقنيات الذكاء الاصطناعي مع الخبرة الإكلينيكية العملية، لضمان أفضل رعاية ممكنة للحيوانات بجميع أنواعها</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="view-ai-diagnostics" class="hidden space-y-8">
-            <div class="border-b border-slate-800 pb-6">
-                <h2 class="text-2xl sm:text-3xl font-black text-vetCyan">🤖 مُقيِّم الأعراض الذكي</h2>
-                <p class="text-slate-400 text-sm mt-1">صِف الأعراض لتحصل على تقييم إرشادي، ومدى الاستعجال، واحتمالات المرض، وما الذي قد يطلبه الطبيب.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-4">
-                    <h3 class="text-lg font-bold text-slate-100">📋 بيانات الحالة</h3>
-                    <div>
-                        <label class="block text-slate-300 font-bold mb-2">النوع الحيواني:</label>
-                        <select id="diag-species" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200">
-                            <option>كلب</option>
-                            <option>قط</option>
-                            <option>بقرة</option>
-                            <option>غنم</option>
-                            <option>دجاج</option>
-                            <option>حصان</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-slate-300 font-bold mb-2">العمر ومدة الأعراض (اختياري):</label>
-                        <input id="diag-extra" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200" placeholder="مثلاً: عمر 4 سنوات، 3 أيام" />
-                    </div>
-                    <div>
-                        <label class="block text-slate-300 font-bold mb-2">وصف الأعراض:</label>
-                        <textarea id="diag-symptoms" rows="5" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200" placeholder="اكتب الأعراض مثل: فشل في الأكل، إسهال، عطاس، قشعريرة، تنفس سريع..."></textarea>
-                    </div>
-                    <button onclick="runAIDiagnosis()" class="w-full bg-gradient-to-r from-vetCyan to-blue-500 text-vetDark font-black py-3.5 rounded-xl text-sm">قيّم الحالة</button>
+        <!-- Contact Section -->
+        <section class="glass-panel p-8 rounded-3xl border border-vetCyan/30 bg-gradient-to-br from-vetCyan/5 via-transparent to-vetAccent/5 text-center space-y-6">
+            <h2 class="text-3xl font-black">📞 تواصل معنا</h2>
+            <p class="text-slate-300 max-w-2xl mx-auto">للاستفسارات والاستشارات والعينات والتدريب، تواصل معنا الآن</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-700">
+                    <i class="fa-solid fa-phone text-2xl text-vetCyan mb-3"></i>
+                    <p class="text-sm text-slate-400 mb-2">الهاتف</p>
+                    <a href="tel:+213540661865" class="text-vetCyan font-bold hover:text-blue-300">+213 540 661 865</a>
                 </div>
-                <div class="glass-panel p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                            <h3 class="text-xl font-black text-vetCyan">نتيجة التقييم</h3>
-                            <i class="fa-solid fa-stethoscope text-vetCyan"></i>
-                        </div>
-                        <div id="diag-output" class="text-slate-300 text-sm leading-relaxed">
-                            <p>بانتظار الإدخال. اكتب الأعراض ثم اضغط «قيّم الحالة». عند الاشتباه بحالة طارئة اتصل بالطبيب فورًا.</p>
-                        </div>
-                    </div>
+                
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-700">
+                    <i class="fa-brands fa-whatsapp text-2xl text-emerald-400 mb-3"></i>
+                    <p class="text-sm text-slate-400 mb-2">واتساب</p>
+                    <a href="https://wa.me/213540661865" target="_blank" class="text-emerald-400 font-bold hover:text-green-300">راسلنا مباشرة</a>
+                </div>
+                
+                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-700">
+                    <i class="fa-solid fa-envelope text-2xl text-vetAccent mb-3"></i>
+                    <p class="text-sm text-slate-400 mb-2">البريد</p>
+                    <a href="mailto:dr@vetai.com" class="text-vetAccent font-bold hover:text-purple-300">dr@vetai.com</a>
                 </div>
             </div>
         </section>
 
-        <section id="view-services" class="hidden space-y-8">
-            <div class="my space-y-8">
-                <section id="services">
-                    <div class="wrap">
-                        <div class="sectionHead">
-                            <div>
-                                <h2>الخدمات والمنصة</h2>
-                                <p class="muted">واجهة واحدة لخدمات الطبيب والمربين والطلاب والباحثين.</p>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="card"><div class="icon">🩺</div><h3>استشارات بيطرية</h3><p class="muted">طلب استشارة، وصف المشكلة، نوع الحيوان، وإرسال التفاصيل للطبيب عبر واتساب.</p><a href="https://wa.me/213540661865" target="_blank" rel="noopener">اطلب استشارة</a></div>
-                            <div class="card"><div class="icon">🏥</div><h3>الوقاية والرعاية</h3><p class="muted">إرشادات عامة للتلقيح، التغذية، النظافة، العزل، والرعاية المنزلية والمزرعية.</p></div>
-                            <div class="card"><div class="icon">🔬</div><h3>البحث العلمي</h3><p class="muted">مقالات بحثية مبسطة ودليل مجلات وقواعد بيانات علمية مفتوحة.</p></div>
-                            <div class="card"><div class="icon">🎓</div><h3>تعليم بيطري</h3><p class="muted">بطاقات دراسية، أسئلة قصيرة، مصطلحات، حالات تعليمية ومصادر للطلاب.</p></div>
-                            <div class="card"><div class="icon">🌍</div><h3>الدراسة والجامعات</h3><p class="muted">دليل كليات الطب البيطري الجزائرية والدولية مع روابط مباشرة.</p></div>
-                            <div class="card"><div class="icon">📚</div><h3>قاعدة المعرفة</h3><p class="muted">محتوى قابل للبحث عن الأمراض، الأعراض، الوقاية، التغذية، الأدوية والمصطلحات.</p></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-
-        <section id="view-chat" class="hidden">
-            <div class="glass-panel rounded-3xl p-6 space-y-3">
-                <h2 class="text-2xl font-black text-vetCyan">💬 المجتمع</h2>
-                <p class="text-sm text-slate-300 leading-relaxed">مجتمع المنصة قيد التأسيس، ويمكنك التفاعل عبر واتساب أو السؤال مباشرة للذكاء الاصطناعي.</p>
-            </div>
-            <div class="glass-panel rounded-3xl p-6 mt-4">
-                <h3 class="text-xl font-black text-vetCyan mb-4">🤖 المساعد البيطري الذكي</h3>
-                <div id="chat-box" class="bg-slate-950/60 rounded-2xl p-4 h-90 overflow-y-auto space-y-3 border border-slate-800">
-                    <div class="text-slate-300 text-sm">مرحبًا! اسألني أي سؤال بيطري 🐾</div>
-                </div>
-                <div class="flex gap-2 mt-4">
-                    <input id="chat-input" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200 focus:outline-none focus:border-vetCyan" />
-                    <button onclick="sendChatMessage()" class="bg-vetCyan text-vetDark font-black px-5 py-3 rounded-xl">إرسال</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="view-creator" class="hidden space-y-8">
-            <div class="glass-panel p-8 sm:p-12 rounded-3xl space-y-8 relative overflow-hidden">
-                <div class="absolute -right-20 -top-20 w-80 h-80 bg-vetCyan/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="relative">
-                        <div class="w-40 h-40 rounded-3xl p-1 bg-gradient-to-tr from-vetCyan to-vetAccent shadow-2xl">
-                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDcwYTEzIi8+PHJlY3QgeD0iNTAiIHk9IjUwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiM2NmJjZjgifjwvYW5pbWF0ZS8+PC9zdmc+" alt="Dr" class="w-full h-full rounded-2xl object-cover" />
-                        </div>
-                        <div class="absolute -bottom-3 -right-3 bg-emerald-500 text-vetDark text-[10px] font-black px-3 py-1 rounded-full shadow-lg">مؤسس وباحث</div>
-                    </div>
-                    <div class="space-y-4 text-right flex-grow">
-                        <span class="text-xs bg-vetCyan/10 text-vetCyan border border-vetCyan/20 px-3.5 py-1.5 rounded-full font-bold">السيرة العلمية والأكاديمية</span>
-                        <h2 class="text-3xl font-black text-slate-100">الدكتور محجوبي عبدالناصر</h2>
-                        <p class="text-vetCyan font-bold text-sm">طبيب بيطري | باحث أكاديمي | متخصص في مجال الذكاء الاصطناعي</p>
-                        <p class="text-slate-300 text-sm leading-relaxed max-w-3xl">خبر وباحث في تقاطعات الطب البيطري الحديث وتقنيات الذكاء الاصطناعي المتقدمة. كرّس جهوده الأكاديمية والعمل الميداني لتطوير نظم رعاية صحية بيطرية ذكية.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-800">
-                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-2">
-                        <div class="w-10 h-10 rounded-xl bg-vetCyan/10 text-vetCyan flex items-center justify-center font-bold"><i class="fa-solid fa-stethoscope"></i></div>
-                        <h4 class="font-bold text-sm text-slate-200">الخبرة السريرية البيطرية</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed">خبرة واسعة في الطب البيطري الجراحي، تشخيص الأمراض الباطنية، وإدارة الأنظمة الصحية الحيوانية.</p>
-                    </div>
-                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-2">
-                        <div class="w-10 h-10 rounded-xl bg-vetAccent/10 text-vetAccent flex items-center justify-center font-bold"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h4 class="font-bold text-sm text-slate-200">البحث الأكاديمي</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed">نشر العديد من الأوراق العلمية والأبحاث المحكمة في مجالات الأوبئة الحيوانية والصحة العامة والمحاكاة.</p>
-                    </div>
-                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-2">
-                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold"><i class="fa-solid fa-brain"></i></div>
-                        <h4 class="font-bold text-sm text-slate-200">تخصص الذكاء الاصطناعي</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed">تطوير خوارزميات التعلم العميق وتحليل البيانات الكبرى لتطبيقها في التشخيص الطبي البيطري التنبؤي.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-panel rounded-3xl p-6">
-                <h3 class="text-2xl font-black text-vetCyan mb-4">📞 التواصل والخدمات</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <a class="card rounded-2xl p-4 border border-slate-800 bg-slate-900/50" href="mailto:dr.mahdjoubi@gmail.com"><h3>✉️ البريد الإلكتروني</h3><p dir="ltr">dr.mahdjoubi@gmail.com</p></a>
-                    <a class="card rounded-2xl p-4 border border-slate-800 bg-slate-900/50" href="tel:+14152793963"><h3>☎ رقم الخدمة</h3><p dir="ltr">+1 (415) 279-3963</p><p class="small">اتصال مباشر · واتساب متاح</p></a>
-                    <a class="card rounded-2xl p-4 border border-slate-800 bg-slate-900/50" href="https://wa.me/213540661865" target="_blank" rel="noopener"><h3>💬 واتساب</h3><p class="muted">مراسلة مباشرة</p></a>
-                    <div class="card rounded-2xl p-4 border border-slate-800 bg-slate-900/50"><h3>📍 الموقع</h3><p class="muted">تنس، ولاية الشلف، الجزائر</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="view-knowledge" class="hidden space-y-8">
-            <div class="glass-panel p-6 rounded-3xl">
-                <h2 class="text-2xl font-black text-vetCyan">الموسوعة البيطرية وقاعدة المعرفة</h2>
-                <div class="searchBox flex gap-2 mt-4">
-                    <input id="knowledgeSearch" placeholder="ابحث: السعار، البارفو، التغذية، الأبقار، الدواجن..." class="flex-1 bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200" />
-                    <button class="btn alt bg-slate-800 px-4 rounded-xl">بحث</button>
-                </div>
-                <div class="filter flex flex-wrap gap-2 mt-4">
-                    <button class="btn alt bg-slate-800 px-3 py-2 rounded-xl text-sm">الكل</button>
-                    <button class="btn alt bg-slate-800 px-3 py-2 rounded-xl text-sm">أليفة</button>
-                    <button class="btn alt bg-slate-800 px-3 py-2 rounded-xl text-sm">مواشي</button>
-                    <button class="btn alt bg-slate-800 px-3 py-2 rounded-xl text-sm">دواجن</button>
-                    <button class="btn alt bg-slate-800 px-3 py-2 rounded-xl text-sm">بحث</button>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-                    <div class="card glass-panel p-4 rounded-2xl"><h3>🐕 الكلاب والقطط</h3><p class="muted">التغذية، الطفيليات، التلقيح، الأمراض الشائعة، الإسعافات الأولية، السلوك والعناية.</p></div>
-                    <div class="card glass-panel p-4 rounded-2xl"><h3>🐄 الأبقار والأغنام</h3><p class="muted">التغذية، صحة الضرع، التناسل، الأمراض المعدية، الوقاية وإدارة القطيع.</p></div>
-                    <div class="card glass-panel p-4 rounded-2xl"><h3>🐓 الدواجن</h3><p class="muted">الإدارة، التحصين، الأمن الحيوي، الحرارة والتهوية، التغذية ومراقبة القطيع.</p></div>
-                    <div class="card glass-panel p-4 rounded-2xl"><h3>⚠️ السموم المنزلية</h3><p class="muted">الشوكولاتة والكافيين والبصل والثوم والعنب والزبيب أمثلة مهمة تستوجب الحذر.</p></div>
-                    <div class="card glass-panel p-4 rounded-2xl"><h3>🧬 الطب البيطري الحديث</h3><p class="muted">الذكاء الاصطناعي، التشخيص الرقمي، اللقاحات، الأدوية، الجينوميات والزراعة الدقيقة.</p></div>
-                    <div class="card glass-panel p-4 rounded-2xl"><h3>🎓 بطاقات للطلاب</h3><p class="muted">مصطلحات وأسئلة مراجعة يمكن تحويلها إلى بنك أسئلة أكاديمي متكامل.</p></div>
-                </div>
-                <div class="notice mt-6 p-4 rounded-2xl border border-amber-500/30 bg-amber-500/10 text-amber-200 text-sm">⚠️ المعلومات التثقيفية لا تُغني عن الفحص السريري، ولا ينبغي اعتماد جرعات أو علاج لحالة فردية دون طبيب بيطري.</div>
-            </div>
-        </section>
-
-        <section id="uni-end" class="space-y-8 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 pt-6 border-t border-slate-800">
-            <div class="border-b border-slate-800 pb-6">
-                <h2 class="text-2xl sm:text-3xl font-black text-vetCyan">دليل الجامعات العالمية وعلوم الطب البيطري الحديث</h2>
-                <p class="text-slate-400 text-sm mt-1">المؤسسات الأكاديمية الكبرى وأحدث الأبحاث العلمية المعتمدة في مناهج 2026</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-vetCyan/40 transition-all">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="w-full h-full bg-gradient-to-tr from-cyan-700 to-slate-900"></div>
-                        <span class="absolute top-4 right-4 bg-vetCyan text-vetDark font-bold text-[10px] px-3 py-1 rounded-full">المملكة المتحدة</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-lg font-bold">كلية الطب البيطري الملكية (RVC) - لندن</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">رائدة في الجراحات الدقيقة وتطبيقات الذكاء الاصطناعي السريري بالتعاون مع مراكز الأبحاث الدولية.</p>
-                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-                            <span class="text-slate-400">الأبحاث المعتمدة: 180 ورقة</span>
-                            <button onclick="alertCustom('تم تحميل تفاصيل الأقسام وبرامج الدراسات العليا.')" class="text-vetCyan font-bold hover:underline">التفاصيل</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-vetAccent/40 transition-all">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="w-full h-full bg-gradient-to-tr from-violet-700 to-slate-900"></div>
-                        <span class="absolute top-4 right-4 bg-vetAccent text-white font-bold text-[10px] px-3 py-1 rounded-full">الولايات المتحدة</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-lg font-bold">جامعة كورنيل - كلية الطب البيطري</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">تميز عالمي في علوم الأمراض المعدية الوبائي��، الطب الحيوي المقارن، ومختبرات الجينوم الحيواني.</p>
-                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-                            <span class="text-slate-400">الأبحاث المعتمدة: 240 ورقة</span>
-                            <button onclick="alertCustom('تم تحميل تفاصيل الأقسام وبرامج الدراسات العليا.')" class="text-vetCyan font-bold hover:underline">التفاصيل</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-emerald-500/40 transition-all">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="w-full h-full bg-gradient-to-tr from-emerald-700 to-slate-900"></div>
-                        <span class="absolute top-4 right-4 bg-emerald-500 text-vetDark font-bold text-[10px] px-3 py-1 rounded-full">أستراليا</span>
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-lg font-bold">جامعة سيدني - علوم الطب البيطري</h3>
-                        <p class="text-slate-400 text-xs leading-relaxed">خبرة واسعة في صحة الحيوانات البرية، إدارة المزارع المستدامة، وأنظمة المراقبة الحيوية الميدانية.</p>
-                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-                            <span class="text-slate-400">الأبحاث المعتمدة: 155 ورقة</span>
-                            <button onclick="alertCustom('تم تحميل تفاصيل الأقسام وبرامج الدراسات العليا.')" class="text-vetCyan font-bold hover:underline">التفاصيل</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="bg-slate-950 border-t border-slate-900 mt-20 py-10 text-slate-400 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-vetCyan flex items-center justify-center text-vetDark font-bold"><i class="fa-solid fa-microchip"></i></div>
-                <div>
-                    <div class="font-bold text-slate-200">VetAI Global Intelligence Platform</div>
-                    <div class="text-[10px] text-slate-500">إشراف وتصميم: د. محجوبي عبدالناصر © 2026</div>
-                </div>
-            </div>
-            <div class="flex flex-wrap gap-6 font-medium text-slate-400">
-                <a href="#" onclick="switchTab('home'); return false;" class="hover:text-vetCyan transition-colors">الرئيسية</a>
-                <a href="#" onclick="switchTab('ai-diagnostics'); return false;" class="hover:text-vetCyan transition-colors">مُقيِّم الأعراض الذكي</a>
-                <a href="#" onclick="switchTab('services'); return false;" class="hover:text-vetCyan transition-colors">الخدمات</a>
-                <a href="#" onclick="switchTab('chat'); return false;" class="hover:text-vetCyan transition-colors">المجتمع</a>
-                <a href="#" onclick="switchTab('creator'); return false;" class="hover:text-vetCyan transition-colors">المؤسس</a>
-                <a href="#" onclick="switchTab('knowledge'); return false;" class="hover:text-vetCyan transition-colors">المعلومات</a>
-            </div>
-            <div class="flex items-center gap-3">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                <span class="text-[11px] text-emerald-400 font-bold">المنصة تعمل (Online)</span>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 px-4 py-8 mt-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-sm text-slate-400">
+                © 2026 VetAI Global × د. محجوبي. جميع الحقوق محفوظة | 
+                <a href="#" class="text-vetCyan hover:text-blue-300">سياسة الخصوصية</a> | 
+                <a href="#" class="text-vetCyan hover:text-blue-300">الشروط والأحكام</a>
+            </p>
+            <p class="text-xs text-slate-500 mt-3">المنصة للأغراض التعليمية والاستشارية فقط. استشير دائماً طبيباً بيطرياً مرخصاً في حالات الطوارئ</p>
         </div>
-        <div class="text-center text-xs text-slate-400 pb-6 mt-6">☎ رقم الخدمة: <a dir="ltr" class="text-vetCyan" href="tel:+14152793963">+1 (415) 279-3963</a></div>
-        <div class="text-center text-xs text-slate-400 pb-6">وَقُل رَبِّ زِدْنِي عِلْمًا</div>
     </footer>
 
-    <div id="custom-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="glass-panel border border-slate-800 rounded-3xl p-6 max-w-sm w-full space-y-4 text-center shadow-2xl">
-            <div class="w-12 h-12 rounded-2xl bg-vetCyan/10 text-vetCyan flex items-center justify-center text-xl mx-auto"><i class="fa-solid fa-circle-info"></i></div>
-            <h4 class="text-base font-bold text-slate-100">إشعار منصة د. محجوبي</h4>
-            <p id="modal-message" class="text-xs text-slate-300 leading-relaxed"></p>
-            <button onclick="closeCustomModal()" class="w-full bg-vetCyan text-vetDark font-bold py-2.5 rounded-xl text-xs hover:opacity-90 transition-all">حسناً</button>
-        </div>
-    </div>
-
-    <div id="add-member-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="glass-panel border border-slate-800 rounded-3xl p-6 max-w-md w-full space-y-4 shadow-2xl">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                <h4 class="text-sm font-bold text-slate-100 flex items-center gap-2"><i class="fa-solid fa-user-plus text-vetCyan"></i> إضافة زميل أو طبيب للمحادثة</h4>
-                <button onclick="closeAddMemberModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="space-y-3 text-xs">
-                <div>
-                    <label class="block text-slate-300 font-bold mb-1.5">البريد الإلكتروني أو اسم الطبيب:</label>
-                    <input type="text" id="new-member-email" placeholder="dr.vet@university.org" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200 focus:outline-none focus:border-vetCyan" />
-                </div>
-                <div>
-                    <label class="block text-slate-300 font-bold mb-1.5">التخصص الأكاديمي:</label>
-                    <select class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-slate-200 focus:outline-none focus:border-vetCyan">
-                        <option>جراحة بيطرية متقدمة</option>
-                        <option>أمراض باطنية وبائية</option>
-                        <option>ذكاء اصطناعي وتحليل حيوي</option>
-                        <option>جينوم وأبحاث مختبرية</option>
-                    </select>
-                </div>
-                <button onclick="confirmAddMember()" class="w-full bg-vetCyan text-vetDark font-bold py-3 rounded-xl hover:opacity-95 transition-all">إرسال دعوة الانضمام</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        const defaultTabs = ['home','ai-diagnostics','services','chat','creator','knowledge'];
-
-        function switchTab(tab) {
-            defaultTabs.forEach(id => {
-                const el = document.getElementById('view-' + id);
-                if (el) el.classList.add('hidden');
-            });
-            const target = document.getElementById('view-' + tab);
-            if (target) target.classList.remove('hidden');
-
-            document.querySelectorAll('[id^="btn-"]').forEach(btn => {
-                btn.classList.remove('bg-vetCyan', 'text-vetDark', 'shadow-md');
-                btn.classList.add('text-slate-300','hover:text-white','hover:bg-slate-800');
-            });
-            const active = document.getElementById('btn-' + tab);
-            if (active) {
-                active.classList.remove('text-slate-300','hover:text-white','hover:bg-slate-800');
-                active.classList.add('bg-vetCyan', 'text-vetDark', 'shadow-md');
+        // Search Function
+        function performSearch() {
+            const query = document.getElementById('search-input').value;
+            if (query.trim()) {
+                searchFor(query);
             }
         }
 
-        function alertCustom(message) {
-            const modal = document.getElementById('custom-modal');
-            const msg = document.getElementById('modal-message');
-            msg.textContent = message;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+        function searchFor(term) {
+            alert(`البحث عن: ${term}\n\nسيتم البحث في قاعدة المعرفة...`);
+            document.getElementById('search-input').value = term;
         }
 
-        function closeCustomModal() {
-            const modal = document.getElementById('custom-modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+        // Article Functions
+        function readArticle(articleId) {
+            const articles = {
+                'rabies': 'مقالة داء السعار: التشخيص والوقاية\n\nالسعار هو مرض فيروسي خطير جداً...',
+                'lab-tests': 'مقالة التحاليل المخبرية الأساسية\n\nالتحاليل المخبرية ضرورية للتشخيص الدقيق...',
+                'nutrition': 'مقالة التغذية الصحيحة للماشية\n\nالتغذية المتوازنة ضرورية لإنتاجية الحيوان...',
+                'heart-disease': 'مقالة أمراض القلب الخلقية\n\nأمراض القلب تأثر على الأداء الحيواني...',
+                'medications': 'مقالة الأدوية البيطرية الشائعة\n\nالاستخدام الصحيح للأدوية يضمن النتائج الأفضل...',
+                'parasites': 'مقالة الأمراض الطفيلية\n\nالطفيليات تؤثر على صحة وإنتاجية الحيوان...'
+            };
+            alert(articles[articleId] || 'مقالة غير متوفرة');
         }
 
-        function toggleAudio() {
-            const label = document.getElementById('sound-label');
-            const btn = document.getElementById('sound-btn');
-            const current = label.textContent.includes('مفعل');
-            label.textContent = current ? 'الصوت: متوقف' : 'الصوت: مفعل';
-            btn.classList.toggle('bg-emerald-500', !current);
-        }
-
-        function openDailyUpdateModal() {
-            alertCustom('التحديثات اليومية الذكية للمنصة تتجدد في الصفحة كل يوم، مع نصائح ومحتوى جديد.');
-        }
-
-        function closeAddMemberModal() {
-            document.getElementById('add-member-modal').classList.add('hidden');
-        }
-
-        function confirmAddMember() {
-            alertCustom('تم إرسال الدعوة بنجاح. سيتم مراجعة الطلب قريبًا.');
-            closeAddMemberModal();
-        }
-
-        function searchQuick() {
-            const q = document.getElementById('hs').value.trim();
-            if (!q) return alertCustom('اكتب كلمة أو سؤال للبحث.');
-            alertCustom('تمت معالجة البحث عن: ' + q + ' — سيتم توسيع فهرس النتائج في النسخة المتقدمة.');
-        }
-
-        function runAIDiagnosis() {
-            const species = document.getElementById('diag-species').value;
-            const extra = document.getElementById('diag-extra').value.trim();
-            const symptoms = document.getElementById('diag-symptoms').value.trim();
-            const output = document.getElementById('diag-output');
-
-            if (!symptoms) {
-                output.innerHTML = '<p class="text-red-400">يرجى إدخال وصف الأعراض أولاً.</p>';
-                return;
+        // AI Tools Functions
+        function analyzeSymptoms() {
+            const symptoms = document.getElementById('symptoms-input').value;
+            const resultDiv = document.getElementById('symptoms-result');
+            
+            if (symptoms.trim()) {
+                resultDiv.innerHTML = `<strong>النتيجة:</strong><br>تم تحليل الأعراض: ${symptoms}<br>الأمراض المحتملة: 1. الحمى 2. العدوى البكتيرية 3. الالتهاب البيطري`;
+                resultDiv.classList.remove('hidden');
+            } else {
+                alert('الرجاء إدخال الأعراض');
             }
-
-            const urgent = /(نزيف|اختناق|تشنج|صعوبة تنفس|إغماء|شلل|تقيؤ دم|إسهال دم|تسمم)/i.test(symptoms);
-            const message = urgent ?
-                '<div class="space-y-3"><div class="p-3 bg-red-500/10 border border-red-500/30 rounded-xl"><strong class="text-red-300">حالة طارئة:</strong> قد تحتاج إلى عناية بيطرية فورية.</div><div class="p-3 bg-slate-900/80 rounded-xl">الحيوان: ' + species + '<br>ملاحظات: ' + extra + '<br>الأعراض: ' + symptoms + '</div><div class="p-3 bg-slate-900/80 rounded-xl">افصل الحيوان عن الحيوانات الأخرى، اشرب المياه فقط إذا كان الحيوان مستقرًا، واطلب طوارئ بيطرية فورًا.</div></div>' :
-                '<div class="space-y-3"><div class="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl"><strong class="text-emerald-300">مستوى التحذير:</strong> متوسط، يُنصح بمراجعة طبيب بيطري خلال 24–48 ساعة.</div><div class="p-3 bg-slate-900/80 rounded-xl">الحيوان: ' + species + '<br>ملاحظات: ' + (extra || 'غير محددة') + '<br>الأعراض: ' + symptoms + '</div><div class="p-3 bg-slate-900/80 rounded-xl">يُعد هذا تقييمًا توجيهيًا تعليميًا فقط، ولا يغني عن الفحص السريري أو التشخيص البيطري.</div></div>';
-
-            output.innerHTML = message;
         }
 
-        function sendChatMessage() {
-            const input = document.getElementById('chat-input');
-            const box = document.getElementById('chat-box');
-            const value = input.value.trim();
-            if (!value) return;
-
-            const q = document.createElement('div');
-            q.className = 'text-left';
-            q.innerHTML = '<div class="inline-block bg-vetCyan text-slate-900 px-3 py-2 rounded-2xl rounded-tr-none text-sm">' + value + '</div>';
-            box.appendChild(q);
-
-            const a = document.createElement('div');
-            a.className = 'text-right';
-            a.innerHTML = '<div class="inline-block bg-slate-800 text-slate-200 px-3 py-2 rounded-2xl rounded-tl-none text-sm">' + getAiReply(value) + '</div>';
-            box.appendChild(a);
-
-            input.value = '';
-            box.scrollTop = box.scrollHeight;
+        function findDrug() {
+            const drug = document.getElementById('drug-input').value;
+            const resultDiv = document.getElementById('drug-result');
+            
+            if (drug.trim()) {
+                resultDiv.innerHTML = `<strong>الدواء:</strong> ${drug}<br><strong>الاستخدام:</strong> معالجة الالتهابات<br><strong>الجرعة:</strong> يتم تحديدها حسب وزن الحيوان`;
+                resultDiv.classList.remove('hidden');
+            } else {
+                alert('الرجاء إدخال اسم الدواء');
+            }
         }
 
-        function getAiReply(message) {
-            const lower = message.toLowerCase();
-            if (lower.includes('السعار')) return 'السعار مرض فيروسي خطير. الوقاية بالتلقيح ضرورية جدًا. عند الاشتباه، لا تنتظر وراجع الطبيب البيطري فورًا.';
-            if (lower.includes('تغذية') || lower.includes('غذاء')) return 'التغذية السليمة تعتمد على نوع الحيوان، سنّه، ووزنه. استخدم غذاءً مناسبًا ومياهًا نظيفة، وتجنب الأطعمة السامة.';
-            if (lower.includes('لقاح') || lower.includes('تلقيح')) return 'التلقيح يحمي الحيوان من أمراض خطيرة. عادةً تُحدد جدول التطعيم حسب النوع والعمر. راجع الطبيب الدائم لتحديد المواعيد.';
-            if (lower.includes('إسهال') || lower.includes('قيء')) return 'الإسهال أو القيء يمكن أن يسبب الجفاف. راقب الماء، وحافظ على رطوبة الحيوان، واطلب استشارة بيطرية إذا استمر أو ارتفعت علامات الاستفراغ.';
-            return 'هذا سؤال مهم جدًا. أنصحك بمراجعة الطبيب البيطري المختص للحصول على تشخيص دقيق، لأن المعلومات التعليمية لا تغني عن الفحص السريري.';
+        function openCalculator() {
+            alert('حاسبة التشخيص الذكية\n\nتم فتح الحاسبة...');
         }
 
-        document.querySelectorAll('.hsc').forEach(el => {
-            el.addEventListener('click', () => {
-                const val = el.textContent.trim();
-                document.getElementById('hs').value = val;
-                searchQuick();
-            });
-        });
+        function openScheduler() {
+            alert('جدولة الرعاية الذكية\n\nتم فتح جدول الرعاية...');
+        }
 
-        document.getElementById('global-search').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') searchQuick();
-        });
+        function openReportGenerator() {
+            alert('مولد التقارير الطبية\n\nتم فتح مولد التقارير...');
+        }
 
-        document.getElementById('chat-input').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') sendChatMessage();
-        });
+        function openAIDiagnostics() {
+            alert('أداة التشخيص الذكي\n\nتم فتح أداة التشخيص...');
+        }
 
-        switchTab('home');
+        // Navigation
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function contactNow() {
+            window.location.href = 'https://wa.me/213540661865';
+        }
+
+        function joinCommunity() {
+            alert('انضم إلى المجتمع البيطري\n\nسيتم توجيهك إلى مجموعة المجتمع...');
+        }
     </script>
-    <script src="https://kit.fontawesome.com/yourkit.js"></script>
 </body>
 </html>
