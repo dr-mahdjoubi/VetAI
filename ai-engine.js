@@ -1,4 +1,5 @@
-// محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
+var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
+/ محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
 // ضع رابط الـ Worker هنا بعد إنشائه (يبدأ بـ https:// وينتهي بـ workers.dev)
 var VETAI_WORKER_URL = '';
 
