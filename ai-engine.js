@@ -1,7 +1,6 @@
-var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
-/ محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
+// محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
 // ضع رابط الـ Worker هنا بعد إنشائه (يبدأ بـ https:// وينتهي بـ workers.dev)
-var VETAI_WORKER_URL = '';
+var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
 
 (function () {
   var SYSTEM = 'أنت "بيطري-AI"، مساعد في منصة VetAI Global Intelligence للطب البيطري. ' +
@@ -50,4 +49,27 @@ var VETAI_WORKER_URL = '';
       throw e;
     });
   };
+})();
+
+
+// جسر التوافق: يجعل كل ميزات الموقع التي تستدعي claude.use('sample') تعمل عبر الـ Worker
+(function () {
+  if (window.claude && typeof window.claude.use === 'function') return; // داخل Claude: لا حاجة للجسر
+  function toText(p) {
+    if (typeof p === 'string') return p;
+    if (Array.isArray(p)) return p.map(function (m) { return m && m.content != null ? m.content : ''; }).join('\n');
+    return String(p || '');
+  }
+  function trim(t) {
+    if (t.length <= 1900) return t;
+    return t.slice(0, 700) + '\n...\n' + t.slice(-1150);
+  }
+  async function sample(prompt, opts) {
+    var q = trim(toText(prompt));
+    var text = await window.VetAI_ask(q, [], '');
+    if (opts && typeof opts.onText === 'function') { try { opts.onText({ text: text }); } catch (e) {} }
+    return { text: text };
+  }
+  window.claude = window.claude || {};
+  window.claude.use = async function (name) { return name === 'sample' ? sample : null; };
 })();
