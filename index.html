@@ -1052,6 +1052,7 @@ let ix=0;o.querySelectorAll('div > div').forEach(()=>{});
 const groups=[...o.querySelectorAll('.mt-3 > div')];groups.forEach((gp,i)=>{const sh2=[...gp.querySelectorAll('.ex-opt')];const opts=sh(j.qs[i].o.map((x,k)=>[x,k==0]));sh2.forEach((b,k)=>{b.textContent=opts[k][0];b.dataset.r=opts[k][1]?1:0})});
 o.onclick=e=>{const b=e.target.closest('.ex-opt');if(!b||b.parentNode.dataset.done)return;b.parentNode.dataset.done=1;d++;if(b.dataset.r==1){ok++;b.classList.add('ok')}else{b.classList.add('no');b.parentNode.querySelector('[data-r="1"]').classList.add('ok')}if(d==j.qs.length)g('sqr').textContent='النتيجة: '+ok+' / '+d+' ('+Math.round(ok/d*100)+'%)'}}catch(e){o.innerHTML='<p class="text-sm text-amber-300">تعذّر التوليد الآن (قد تحتاج الموافقة على تفعيل المساعد الذكي). استخدم الاختبارات الجاهزة أعلاه.</p>'}}}
 })();
-</script>
+</script> 
+<script src="ai-engine.js"></script>
 </body>
 </html>
