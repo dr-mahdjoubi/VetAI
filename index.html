@@ -156,10 +156,10 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
       <span class="text-2xl">🩺</span>
       <h1 class="text-lg font-bold text-white tracking-wide">VetAI Global</h1>
     </div>
-    <!-- Header Search (#gs) with AI Integration -->
+    <!-- Header Search (#gs) - Independent AI Search -->
     <div class="flex items-center gap-2 max-w-xs w-full">
-      <input type="text" id="gs" placeholder="بحث ذكي شامل..." autocomplete="off" class="bg-slate-900 text-white px-3 py-1.5 rounded-lg border border-slate-700 text-sm focus:outline-none focus:border-cyan-500 w-full">
-      <button type="button" class="bg-cyan-600 hover:bg-cyan-500 text-white px-3 py-1.5 rounded-lg text-sm transition-colors shrink-0" onclick="const q=document.getElementById('gs').value.trim(); if(q){ if(typeof ask==='function'){ ask(q); } else { switchTab('ref'); setTimeout(()=>{const g=document.getElementById('gs'); if(g){g.dispatchEvent(new Event('input'));}},200); } }">🔍</button>
+      <input type="text" id="gs" placeholder="بحث ذكي في المنصة..." autocomplete="off" class="bg-slate-900 text-white px-3 py-1.5 rounded-lg border border-slate-700 text-sm focus:outline-none focus:border-cyan-500 w-full" onkeydown="if(event.key==='Enter'){const q=this.value.trim(); if(q && typeof ask==='function'){ask(q);}}">
+      <button type="button" class="bg-cyan-600 hover:bg-cyan-500 text-white px-3 py-1.5 rounded-lg text-sm transition-colors shrink-0" onclick="const q=document.getElementById('gs').value.trim(); if(q){ if(typeof ask==='function'){ ask(q); } else if(typeof handleSearch==='function'){ handleSearch(q); } else { console.log('AI Function not found'); } }">🔍</button>
     </div>
   </div>
 </header>
@@ -171,16 +171,17 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
     <div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-10 text-center">
       <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold mb-4">المنصة البيطرية الموحدة</span>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">مرجعك الطبي والدوائي الشامل</h1>
-      <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base mb-6">ابحث في القاعدة الدوائية، الدلائل العلاجية، أو استشر الذكاء الاصطناعي مباشرة</p>
+      <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base mb-6">اسأل الذكاء الاصطناعي مباشرة عن أي دواء، جرعة، أو حالة مرضية</p>
       
-      <!-- Central Search Box (#hs & #hsb) with AI Integration -->
+      <!-- Central Independent AI Search Box (#hs & #hsb) -->
       <div class="max-w-2xl mx-auto flex items-center gap-2 bg-slate-950 p-2 rounded-2xl border border-slate-800">
-        <input type="text" id="hs" placeholder="اسأل الذكاء الاصطناعي عن دواء أو حالة مرضية..." class="bg-transparent text-white px-4 py-2 w-full focus:outline-none text-sm sm:text-base">
-        <button type="button" id="hsb" class="bg-cyan-600 hover:bg-cyan-500 text-white font-medium px-5 py-2 rounded-xl text-sm transition-colors shrink-0" onclick="const q=document.getElementById('hs').value.trim(); if(q){ if(typeof ask==='function'){ ask(q); } else { switchTab('ref'); setTimeout(()=>{const g=document.getElementById('gs'); if(g){g.value=q; g.dispatchEvent(new Event('input'));}},200); } }">بحث ذكي</button>
+        <input type="text" id="hs" placeholder="اكتب سؤالك الطبي هنا لاستشارة الذكاء الاصطناعي..." class="bg-transparent text-white px-4 py-2 w-full focus:outline-none text-sm sm:text-base" onkeydown="if(event.key==='Enter'){const q=this.value.trim(); if(q && typeof ask==='function'){ask(q);}}">
+        <button type="button" id="hsb" class="bg-cyan-600 hover:bg-cyan-500 text-white font-medium px-5 py-2 rounded-xl text-sm transition-colors shrink-0" onclick="const q=document.getElementById('hs').value.trim(); if(q){ if(typeof ask==='function'){ ask(q); } else if(typeof handleSearch==='function'){ handleSearch(q); } else { alert('يرجى التأكد من تحميل محرك الذكاء الاصطناعي'); } }">اسأل الذكاء الاصطناعي</button>
       </div>
     </div>
   </section>
 </main>
+
 
         <!-- VIEW 1: HOME -->
         <section id="view-home" class="space-y-12">
