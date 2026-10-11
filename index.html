@@ -2,6 +2,12 @@
 <html lang="ar" dir="rtl" class="dark">
 <head>
     <script src="loader.js"></script>
+    <script>
+    // ضع هنا رابط الوسيط (Cloudflare Worker) ليصبح البحث الشامل على الويب بـ Gemini المجاني. اتركه فارغًا لتعطيله.
+    window.VET_AI_ENDPOINT = "";
+    // (اختياري) معرّف محرك بحث غوغل المبرمج (cx) لعرض نتائج غوغل نفسها داخل الصفحة: programmablesearchengine.google.com
+    window.VET_CSE_ID = "";
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VetAI Global × د. محجوبي | المنصة البيطرية الموحدة</title>
@@ -972,8 +978,9 @@ const c=document.getElementById('mvt');c.checked=m=='1';b.dataset.mv=m;c.onchang
 <script>
 (function(){const g=id=>document.getElementById(id);
 function go(t){const gs=g('gs');if(!gs||!t)return;gs.value=t;gs.dispatchEvent(new Event('input'));window.scrollTo({top:0,behavior:'smooth'});gs.focus()}
-g('hsb').onclick=()=>go(g('hs').value.trim());g('hs').onkeydown=e=>{if(e.key==='Enter')go(g('hs').value.trim())};
-document.querySelectorAll('.hsc').forEach(b=>b.onclick=()=>{g('hs').value=b.textContent;go(b.textContent)});
+const askAI=t=>{if(window.vetAIAsk)window.vetAIAsk(t);else go(t)};
+g('hsb').onclick=()=>askAI(g('hs').value.trim());g('hs').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();askAI(g('hs').value.trim())}};
+document.querySelectorAll('.hsc').forEach(b=>b.onclick=()=>{g('hs').value=b.textContent;askAI(b.textContent)});
 const R=window.__refR||[],pick=['السعار','الباروفيروس','التهاب الضرع','الإنفلونزا الطيرية','الجلد العقدي','الليشمانيا الكلبية'];
 g('homeArts').innerHTML=pick.map(t=>{const i=R.findIndex(r=>r[0]==t);return i<0?'':'<button data-a="'+i+'" class="text-right rounded-2xl glass-panel p-4 hover:border-vetCyan transition"><div class="text-[11px] text-slate-400">'+R[i][1]+'</div><div class="font-black mt-1">'+R[i][0]+'</div><p class="text-xs text-slate-300 mt-1 leading-relaxed">'+R[i][8]+'</p><span class="text-xs text-sky-300">اقرأ المقال ←</span></button>'}).join('');
 g('homeArts').onclick=e=>{const b=e.target.closest('[data-a]');if(b){switchTab('ref');window.__ref&&window.__ref('a:'+b.dataset.a)}};})();
@@ -1054,7 +1061,6 @@ o.onclick=e=>{const b=e.target.closest('.ex-opt');if(!b||b.parentNode.dataset.do
 })();
 </script> 
 <script src="ai-engine.js"></script>
-</body>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -1076,11 +1082,23 @@ document.addEventListener("DOMContentLoaded", function() {
             
             headerInput.style.paddingLeft = '45px';
             parentWrapper.appendChild(searchBtn);
+            const gBtn = document.createElement('button');
+            gBtn.id = 'header-g-btn-injected';
+            gBtn.type = 'button';
+            gBtn.innerHTML = 'Google ↗';
+            gBtn.className = 'absolute top-1/2 -translate-y-1/2 bg-sky-700 hover:bg-sky-600 text-white text-xs px-2.5 py-1 rounded-md transition-colors shadow-sm cursor-pointer';
+            gBtn.style.left = '56px';
+            headerInput.style.paddingLeft = '125px';
+            parentWrapper.appendChild(gBtn);
+            gBtn.addEventListener('click', function () {
+                const q = headerInput.value.trim();
+                window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
+            });
             
             function executeGoogleGlobalSearch() {
                 const q = headerInput.value.trim();
                 if (q) {
-                    window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
+                    if (window.vetAIAsk) { window.vetAIAsk(q, { top: true }); } else { window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank'); }
                 }
             }
             
@@ -1092,83 +1110,335 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ----------------------------------------------------
-    // 2. محرك البحث الثاني (الذكاء الاصطناعي للأطباء، المربين والباحثين)
+    // 2. محرك البحث الثاني: جواب بالذكاء الاصطناعي يظهر تحت مربع البحث مباشرة
     // ----------------------------------------------------
-    const vetInput = document.querySelector('input[placeholder*="السعار"], input[placeholder*="ابحث"], #hs');
-    const vetBtn = Array.from(document.querySelectorAll('button')).find(el => el.textContent.includes('ابحث'));
+    (function () {
+        var input = document.getElementById('hs');
+        var btn = document.getElementById('hsb');
+        if (!input) return;
+        var busy = false, memo = {}, hist = [];
 
-    if (vetInput) {
-        let ansBox = document.getElementById('vet-ai-pro-box');
-        if (!ansBox) {
-            ansBox = document.createElement('div');
-            ansBox.id = 'vet-ai-pro-box';
-            ansBox.className = 'hidden mt-6 p-6 bg-slate-900/95 backdrop-blur-md rounded-2xl border border-emerald-500/40 text-right text-sm shadow-2xl relative z-40 max-w-4xl mx-auto';
-            ansBox.innerHTML = `
-                <div class="flex justify-between items-center mb-4 pb-3 border-b border-emerald-500/20">
-                    <div class="flex items-center gap-2.5">
-                        <span class="text-xl">🩺🔬</span>
-                        <span class="text-emerald-400 font-bold text-base">استشارة الذكاء الاصطناعي البيطري (للأطباء والمربين والباحثين):</span>
-                    </div>
-                    <button onclick="document.getElementById('vet-ai-pro-box').classList.add('hidden')" class="text-slate-400 hover:text-white text-xs bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors cursor-pointer">✕ إغلاق</button>
-                </div>
-                <div id="vet-ai-pro-content" class="text-slate-200 leading-relaxed space-y-3 font-medium">جارٍ استشارة قواعد المعرفة والبحث البيطري المتقدم...</div>
-            `;
-            // وضع صندوق الإجابة أسفل قسم البحث مباشرة دون تحريك الصفحة
-            vetInput.closest('section, div')?.parentElement?.appendChild(ansBox);
+        function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+        function norm(s) {
+            return String(s || '').toLowerCase().replace(/[\u064B-\u065F\u0670\u0640]/g, '')
+                .replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
+        }
+        function isAr(s) { return /[\u0600-\u06FF]/.test(s); }
+        function enc(s) { return encodeURIComponent(s); }
+        function safeUrl(u) { return /^https:\/\//.test(u || '') ? u : ''; }
+        function stripTags(s) { return String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
+        function cut(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n) + '…' : s; }
+
+        // تنسيق آمن للنص: **عريض** ونقاط ومراجع [1]، بعد تعطيل أي HTML
+        function fmt(t) {
+            var h = esc(t).replace(/\*\*([^*]+)\*\*/g, '<strong class="text-emerald-300">$1</strong>')
+                .replace(/\[(\d{1,2})\]/g, '<sup class="text-sky-300">[$1]</sup>');
+            return h.split('\n').map(function (l) {
+                l = l.replace(/^\s*#{1,4}\s*/, '');
+                if (/^\s*[-*•]\s+/.test(l)) return '<div class="pr-4">• ' + l.replace(/^\s*[-*•]\s+/, '') + '</div>';
+                return l.trim() ? '<div>' + l + '</div>' : '<div class="h-1"></div>';
+            }).join('');
         }
 
-        function triggerVetAI() {
-            const q = vetInput.value.trim();
-            if (!q) return;
-
-            ansBox.classList.remove('hidden');
-            const content = document.getElementById('vet-ai-pro-content');
-            content.innerHTML = `<div class="p-6 text-center text-emerald-300 animate-pulse">جاري فحص وتحليل الاستعلام المرجعي لـ: "<strong>${q}</strong>"...</div>`;
-
-            setTimeout(() => {
-                content.innerHTML = `
-                    <div class="p-5 bg-slate-950/80 rounded-xl border border-emerald-500/30 space-y-4 text-right shadow-inner">
-                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-2.5">
-                            <span class="text-emerald-300 font-bold text-base">📋 التقرير التشخيصي والإرشادي الموحد لـ: (${q})</span>
-                            <span class="text-[11px] bg-emerald-950 text-emerald-400 px-2.5 py-1 rounded-full border border-emerald-500/30">مرجع معتمد</span>
-                        </div>
-                        <div class="space-y-3 text-slate-300 text-xs sm:text-sm leading-relaxed">
-                            <div class="p-3 bg-slate-900/60 rounded-lg border-r-4 border-emerald-500">
-                                <strong class="text-emerald-400 block mb-1">🛡️ للمربين (إجراءات الأمن الحيوي والوقاية):</strong>
-                                <p>التوصية بالعزل الفوري للحالات المشتبه بها، تطهير المنشآت والمعدات بانتظام، ومراقبة المؤشرات الحيوية للقطيع لضمان التدخل السريع.</p>
-                            </div>
-                            <div class="p-3 bg-slate-900/60 rounded-lg border-r-4 border-teal-500">
-                                <strong class="text-teal-400 block mb-1">💊 للأطباء البيطريين (التشخيص والعلاج السريري):</strong>
-                                <p>إجراء الفحوصات المخبرية التأكيديدية (مثل فحص الدم أو المسحات)، تحديد الجرعات العلاجية الدقيقة وفقاً للحالة العمرية والوزنية، والالتزام الصارم بفترات السحب.</p>
-                            </div>
-                            <div class="p-3 bg-slate-900/60 rounded-lg border-r-4 border-cyan-500">
-                                <strong class="text-cyan-400 block mb-1">📚 للباحثين (الإطار الأكاديمي والوبائي):</strong>
-                                <p>مراجعة التحديثات الوبائية العالمية للمرض، تحليل أنماط المقاومة الدوائية، وتوثيق الاستجابات السريرية ضمن الأبحاث الميدانية.</p>
-                            </div>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-emerald-500/20 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
-                            <span>🛡️ منصة VetAI الموحدة للطب البيطري — إشراف د. محجوبي عبد الناصر</span>
-                            <span class="text-emerald-400 font-medium">خدمة مجانية بالكامل للأطباء والمربين والباحثين</span>
-                        </div>
-                    </div>
-                `;
-            }, 800);
+        // صندوق الجواب: مباشرة تحت مربع البحث والاقتراحات داخل نفس البطاقة
+        var box = document.getElementById('vet-ai-pro-box');
+        if (!box) {
+            box = document.createElement('div');
+            box.id = 'vet-ai-pro-box';
+            box.className = 'hidden mt-5 p-5 bg-slate-900/95 rounded-2xl border border-emerald-500/40 text-right text-sm shadow-2xl max-w-3xl mx-auto';
+            box.innerHTML =
+                '<div class="flex justify-between items-center mb-3 pb-3 border-b border-emerald-500/20 gap-2">' +
+                '<span class="text-emerald-400 font-bold">🩺 استشارة الذكاء الاصطناعي البيطري</span>' +
+                '<span class="flex gap-2">' +
+                '<button type="button" id="vet-ai-copy" class="text-slate-400 hover:text-white text-xs bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg">نسخ</button>' +
+                '<button type="button" id="vet-ai-close" class="text-slate-400 hover:text-white text-xs bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg">✕ إغلاق</button>' +
+                '</span></div>' +
+                '<div id="vet-ai-pro-content" class="text-slate-200 leading-relaxed space-y-2"></div>' +
+                '<p class="mt-3 pt-3 border-t border-slate-800 text-[11px] text-slate-400">⚠️ معلومات تعليمية مولَّدة بالذكاء الاصطناعي وقد تحتمل الخطأ، ولا تغني عن الفحص والتشخيص من الطبيب البيطري.</p>';
+            var chip = document.querySelector('.hsc');
+            var anchor = chip ? chip.parentElement : input.parentElement;
+            anchor.insertAdjacentElement('afterend', box);
         }
+        var content = document.getElementById('vet-ai-pro-content');
+        var lastText = '';
+        document.getElementById('vet-ai-close').onclick = function () { box.classList.add('hidden'); };
+        document.getElementById('vet-ai-copy').onclick = function () {
+            try { navigator.clipboard.writeText(lastText); this.textContent = 'تم النسخ ✓'; var me = this; setTimeout(function () { me.textContent = 'نسخ'; }, 1500); } catch (e) {}
+        };
 
-        vetInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                triggerVetAI();
-            }
-        });
-
-        if (vetBtn) {
-            vetBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                triggerVetAI();
+        // ---------- جلب JSON من مصدر خارجي بمهلة قصيرة (يعود null عند أي فشل) ----------
+        function getJSON(url, ms) {
+            return new Promise(function (resolve) {
+                var done = false, c = null;
+                try { c = new AbortController(); } catch (e) {}
+                var t = setTimeout(function () { if (!done) { done = true; try { c && c.abort(); } catch (e) {} resolve(null); } }, ms || 5000);
+                try {
+                    fetch(url, c ? { signal: c.signal } : {}).then(function (r) { if (!r.ok) throw 0; return r.json(); })
+                        .then(function (j) { if (!done) { done = true; clearTimeout(t); resolve(j); } })
+                        .catch(function () { if (!done) { done = true; clearTimeout(t); resolve(null); } });
+                } catch (e) { if (!done) { done = true; clearTimeout(t); resolve(null); } }
             });
         }
-    }
+
+        // ترجمة السؤال العربي إلى الإنجليزية للبحث في قواعد الأبحاث
+        function toEnglish(q) {
+            if (!isAr(q)) return Promise.resolve(q);
+            return getJSON('https://api.mymemory.translated.net/get?q=' + enc(q) + '&langpair=ar|en', 4000).then(function (j) {
+                var t = j && j.responseData && j.responseData.translatedText;
+                if (!t || /MYMEMORY|INVALID|QUERY LENGTH/i.test(t)) return null;
+                return t;
+            });
+        }
+
+        function wiki(q) {
+            var lang = isAr(q) ? 'ar' : 'en';
+            var u = 'https://' + lang + '.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=' + enc(q) +
+                '&gsrlimit=3&prop=extracts&exintro=1&explaintext=1&exchars=600&format=json&origin=*';
+            return getJSON(u, 5000).then(function (j) {
+                var p = j && j.query && j.query.pages; if (!p) return [];
+                return Object.keys(p).map(function (k) { return p[k]; })
+                    .sort(function (a, b) { return (a.index || 0) - (b.index || 0); })
+                    .filter(function (x) { return x.extract && x.extract.length > 40; })
+                    .map(function (x) {
+                        return { s: 'Wikipedia', t: x.title, d: cut(stripTags(x.extract), 500), u: 'https://' + lang + '.wikipedia.org/?curid=' + x.pageid };
+                    });
+            });
+        }
+
+        function europePMC(en) {
+            if (!en) return Promise.resolve([]);
+            var qq = '(' + en + ') AND (veterinary OR livestock OR animal OR canine OR feline OR bovine OR poultry)';
+            var u = 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=' + enc(qq) + '&format=json&pageSize=4&resultType=core';
+            return getJSON(u, 6000).then(function (j) {
+                var r = j && j.resultList && j.resultList.result; if (!r) return [];
+                return r.filter(function (x) { return x.title; }).map(function (x) {
+                    return {
+                        s: 'Europe PMC', t: stripTags(x.title),
+                        d: cut(stripTags(x.abstractText || ''), 500),
+                        m: [x.journalTitle, x.pubYear].filter(Boolean).join(' · '),
+                        u: 'https://europepmc.org/article/' + x.source + '/' + x.id
+                    };
+                });
+            });
+        }
+
+        // أقرب مقال في المرجع السريري المحلي (يعمل دائمًا بلا إنترنت)
+        function local(q) {
+            var R = window.__refR; if (!Array.isArray(R)) return null;
+            var qt = norm(q).split(/[^\u0621-\u064Aa-z0-9]+/).filter(function (w) { return w.length >= 3; })
+                .map(function (w) { return w.replace(/^(ال|وال|بال|لل)/, ''); }).filter(function (w) { return w.length >= 3; });
+            if (!qt.length) return null;
+            var best = null, bs = 0;
+            R.forEach(function (r) {
+                var title = norm(r[0]), body = norm([r[1], r[2], r[3], r[4]].join(' ')), s = 0;
+                qt.forEach(function (w) { if (title.indexOf(w) >= 0) s += 3; else if (body.indexOf(w) >= 0) s += 1; });
+                if (s > bs) { bs = s; best = r; }
+            });
+            if (!best || bs < 3) return null;
+            return best;
+        }
+        function localHTML(b) {
+            return '<div class="p-3 bg-slate-950/70 rounded-lg border-r-4 border-emerald-500"><strong class="text-emerald-400 block mb-1">📖 ' + esc(b[0]) + '</strong>' +
+                '<p>' + esc(b[2]) + '</p><p class="mt-1"><b>الأعراض:</b> ' + esc(b[4]) + '</p><p class="mt-1"><b>المبدأ العلاجي:</b> ' + esc(b[6]) + '</p></div>';
+        }
+
+        // جمع المصادر بالتوازي
+        async function gather(q) {
+            var en = await toEnglish(q);
+            var res = await Promise.all([wiki(q), europePMC(en)]);
+            var srcs = [];
+            var lb = local(q);
+            if (lb) srcs.push({ s: 'المرجع السريري للمنصة', t: lb[0], d: cut([lb[2], 'الأعراض: ' + lb[4], 'المبدأ العلاجي: ' + lb[6]].join(' — '), 600), u: '' });
+            res[1].forEach(function (x) { srcs.push(x); });
+            res[0].forEach(function (x) { srcs.push(x); });
+            return { srcs: srcs.slice(0, 7), en: en, local: lb };
+        }
+
+        function linksHTML(q, en) {
+            var e = en || q, L = [
+                ['Google', 'https://www.google.com/search?q=' + enc(q)],
+                ['Scholar', 'https://scholar.google.com/scholar?q=' + enc(e)],
+                ['PubMed', 'https://pubmed.ncbi.nlm.nih.gov/?term=' + enc(e)],
+                ['Merck Vet', 'https://www.google.com/search?q=' + enc('site:merckvetmanual.com ' + e)],
+                ['YouTube', 'https://www.youtube.com/results?search_query=' + enc(q)]
+            ];
+            return '<div class="mt-3 flex flex-wrap gap-2 text-xs">' + L.map(function (x) {
+                return '<a class="px-3 py-1 rounded-full border border-slate-700 text-sky-300 hover:border-vetCyan" target="_blank" rel="noopener" href="' + x[1] + '">🔎 ' + x[0] + ' ↗</a>';
+            }).join('') + '</div>';
+        }
+
+        function srcsHTML(srcs) {
+            if (!srcs || !srcs.length) return '';
+            return '<div class="mt-3 pt-3 border-t border-slate-800"><div class="text-xs text-slate-400 mb-1">📚 المصادر التي جُمعت للجواب:</div>' +
+                srcs.map(function (x, i) {
+                    var u = safeUrl(x.u), t = esc(cut(x.t, 110));
+                    return '<div class="text-xs py-0.5">[' + (i + 1) + '] ' + (u ? '<a class="text-sky-300 underline" target="_blank" rel="noopener" href="' + u + '">' + t + '</a>' : '<span class="text-emerald-300">' + t + '</span>') +
+                        ' <span class="text-slate-500">— ' + esc(x.s) + (x.m ? ' · ' + esc(x.m) : '') + '</span></div>';
+                }).join('') + '</div>';
+        }
+
+        function srcCardsHTML(srcs) {
+            return srcs.filter(function (x) { return x.s !== 'المرجع السريري للمنصة'; }).map(function (x) {
+                var u = safeUrl(x.u);
+                return '<div class="p-3 mb-2 bg-slate-950/70 rounded-lg border-r-4 border-sky-500"><b class="text-sky-300 block mb-1">' +
+                    (u ? '<a target="_blank" rel="noopener" href="' + u + '">' + esc(x.t) + ' ↗</a>' : esc(x.t)) + '</b>' +
+                    (x.d ? '<p class="text-xs">' + esc(x.d) + '</p>' : '') +
+                    '<span class="text-[11px] text-slate-500">' + esc(x.s) + (x.m ? ' · ' + esc(x.m) : '') + '</span></div>';
+            }).join('');
+        }
+
+        function buildPrompt(q, srcs, pub) {
+            var ctx = srcs.length ? srcs.map(function (x, i) { return '[' + (i + 1) + '] ' + x.s + ' — ' + x.t + (x.m ? ' (' + x.m + ')' : '') + ': ' + x.d; }).join('\n') : '(لا توجد مصادر خارجية متاحة الآن؛ اعتمد على معرفتك العامة وصرّح بذلك)';
+            return 'أنت «بيطري-AI»، باحث ومساعد معرفي في منصة VetAI Global للطب البيطري وتربية الحيوان، تجيب الأطباء البيطريين والمربين والطلبة والباحثين.\n' +
+                'أجب بلغة السائل بدقة ووضوح اعتمادًا أولًا على المصادر المرفقة أدناه، وأشِر إلى المصدر بالرقم مثل [1] عند الاستناد إليه، ثم أكمل بمعرفتك الموثوقة وميّز بين الاثنين. لا تخترع مصادر أو أرقامًا أو إحصاءات، وإن لم تكن متأكدًا فاذكر ذلك صراحة.\n' +
+                'التنظيم: **الخلاصة** ثم ' + (pub ? '**ما تفعله الآن بأمان** ثم **الوقاية** ثم **متى تستدعي الطبيب فورًا**، بلغة بسيطة بعيدة عن المصطلحات.' :
+                    '**التشخيص والتشخيص التفريقي** ثم **الفحوصات المناسبة** ثم **المبادئ العلاجية** ثم **الوقاية والمكافحة** ثم **متى يكون الأمر طارئًا**، بلغة مهنية دقيقة.') +
+                ' اجعل الجواب أقل من 300 كلمة. لا تذكر جرعات دوائية رقمية ولا أسماء تجارية (سياسة المنصة)، وأحِل إلى نشرة المنتج أو مرجع مثل Merck/Plumb\'s للجرعات. وإن كان السؤال غير بيطري فأجب باختصار وأدب.\n\n' +
+                'المصادر المجموعة:\n' + ctx + '\n\nالسؤال: ' + q;
+        }
+
+        function reasonMsg(e) {
+            var c = e && e.code;
+            if (c === 'not_granted') return 'لم تُمنح صلاحية المساعد الذكي لهذه الصفحة. وافق على طلب الإذن عند ظهوره ثم أعد المحاولة.';
+            if (c === 'rate_limited') return 'المساعد مشغول بسبب كثرة الطلبات، انتظر نصف دقيقة ثم أعد المحاولة.';
+            return 'تعذّر الاتصال بالمساعد الذكي الآن.';
+        }
+
+        var ENDPOINT = window.VET_AI_ENDPOINT || '';
+        var hadClaude = false;
+
+        function postJSON(url, body, ms) {
+            return new Promise(function (resolve, reject) {
+                var done = false, c = null;
+                try { c = new AbortController(); } catch (e) {}
+                var t = setTimeout(function () { if (!done) { done = true; try { c && c.abort(); } catch (e) {} reject(new Error('timeout')); } }, ms || 30000);
+                fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: c ? c.signal : undefined })
+                    .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json().catch(function () { return null; }); })
+                    .then(function (j) { if (!done) { done = true; clearTimeout(t); resolve(j); } })
+                    .catch(function (e) { if (!done) { done = true; clearTimeout(t); reject(e); } });
+            });
+        }
+        // 1) وسيطك الخاص (Gemini + بحث غوغل الحي) إن وُضع رابطه
+        async function viaEndpoint(msgs) {
+            if (!ENDPOINT) return null;
+            var j = await postJSON(ENDPOINT, { messages: msgs }, 30000);
+            if (!j || !j.text) return null;
+            return { text: j.text, sources: (j.sources || []).map(function (x) { return { s: 'بحث الويب', t: x.title || x.url, d: '', u: x.url }; }) };
+        }
+        // 2) مساعد Claude داخل صفحات Artifact
+        async function viaClaude(msgs) {
+            var s = null;
+            try { s = window.claude && await window.claude.use('sample'); } catch (e) {}
+            if (!s) return null;
+            hadClaude = true;
+            var r = await s(msgs, { cache: false, modelTier: 'default', onText: function (o) { if (o && o.text) content.innerHTML = fmt(o.text); } });
+            return r && r.text ? { text: String(r.text) } : null;
+        }
+        // 3) ذكاء مجاني بلا مفتاح (يعمل من أي استضافة أو ملف محلي)
+        async function viaFree(msgs) {
+            var j = await postJSON('https://text.pollinations.ai/openai', { model: 'openai', messages: msgs, temperature: 0.3 }, 35000);
+            var t = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+            if (!t) return null;
+            t = String(t).split('\n').filter(function (l) { return !/pollinations/i.test(l); }).join('\n').trim();
+            return t ? { text: t } : null;
+        }
+
+        var midContent = content;
+        var topRef = null;
+        function getTop() {
+            if (topRef) return topRef;
+            var gs = document.getElementById('gs');
+            var bar = gs && (gs.closest('.border-b') || gs.parentElement);
+            if (!bar) return null;
+            var d = document.createElement('div');
+            d.id = 'top-ai-panel';
+            d.className = 'hidden max-w-7xl mx-auto px-3 pt-3';
+            d.innerHTML = '<div class="p-4 bg-slate-900/95 rounded-2xl border border-sky-500/40 text-right text-sm shadow-2xl">' +
+                '<div class="flex justify-between items-center mb-3 pb-3 border-b border-sky-500/20 gap-2"><span class="text-sky-300 font-bold">✨ نظرة عامة بالذكاء الاصطناعي</span><span class="flex gap-2">' +
+                '<button type="button" id="top-ai-copy" class="text-slate-400 hover:text-white text-xs bg-slate-800/80 px-3 py-1.5 rounded-lg">نسخ</button>' +
+                '<button type="button" id="top-ai-close" class="text-slate-400 hover:text-white text-xs bg-slate-800/80 px-3 py-1.5 rounded-lg">✕ إغلاق</button></span></div>' +
+                '<div id="top-ai-content" class="text-slate-200 leading-relaxed space-y-2"></div>' +
+                '<div id="top-cse" class="hidden mt-3 rounded-xl overflow-hidden bg-white p-2"></div>' +
+                '<p class="mt-3 pt-3 border-t border-slate-800 text-[11px] text-slate-400">⚠️ معلومات تعليمية مولَّدة بالذكاء الاصطناعي وقد تحتمل الخطأ، ولا تغني عن الطبيب البيطري.</p></div>';
+            bar.insertAdjacentElement('afterend', d);
+            d.querySelector('#top-ai-close').onclick = function () { d.classList.add('hidden'); };
+            d.querySelector('#top-ai-copy').onclick = function () {
+                try { navigator.clipboard.writeText(lastText); this.textContent = 'تم النسخ ✓'; var me = this; setTimeout(function () { me.textContent = 'نسخ'; }, 1500); } catch (e) {}
+            };
+            topRef = { box: d, content: d.querySelector('#top-ai-content') };
+            return topRef;
+        }
+        var cseReady = false, cseLoading = false;
+        function showCSE(q) {
+            var id = window.VET_CSE_ID, holder = document.getElementById('top-cse');
+            if (!id || !holder) return;
+            holder.classList.remove('hidden');
+            function run() { try { var el = google.search.cse.element.getElement('vetcse'); if (el) el.execute(q); } catch (e) {} }
+            if (cseReady) { run(); return; }
+            if (cseLoading) return;
+            cseLoading = true;
+            holder.innerHTML = '<div class="gcse-searchresults-only" data-gname="vetcse"></div>';
+            window.__gcse = { parsetags: 'onload', callback: function () { cseReady = true; run(); } };
+            var sc = document.createElement('script'); sc.async = true;
+            sc.src = 'https://cse.google.com/cse.js?cx=' + encodeURIComponent(id);
+            sc.onerror = function () { holder.classList.add('hidden'); cseLoading = false; };
+            document.head.appendChild(sc);
+        }
+
+        async function ask(q, opts) {
+            q = (q || '').trim();
+            if (!q || busy) return;
+            var T = (opts && opts.top) ? getTop() : null;
+            content = T ? T.content : midContent;
+            (T ? T.box : box).classList.remove('hidden');
+            if (T) { try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {} }
+            if (memo[q]) { lastText = memo[q].text; content.innerHTML = memo[q].html; if (T) showCSE(q); return; }
+            busy = true; if (btn) btn.disabled = true;
+            content.innerHTML = '<div class="p-4 text-center text-emerald-300 animate-pulse">🔎 أبحث في المراجع والمواقع الخارجية عن: «' + esc(q) + '» ...</div>';
+
+            var g = { srcs: [], en: null, local: null };
+            try { g = await gather(q); } catch (e) {}
+            var pub = false; try { pub = localStorage.getItem('aud') === 'pub'; } catch (e) {}
+
+            var text = null, err = null, tail = srcsHTML(g.srcs) + linksHTML(q, g.en);
+            content.innerHTML = '<div class="p-2 text-center text-emerald-300 animate-pulse">🧠 أكتب الجواب (' + g.srcs.length + ' مصدر)...</div>';
+
+            var msgs = hist.slice(-4).map(function (m) { return { role: m.role, content: m.content }; });
+            msgs.push({ role: 'user', content: buildPrompt(q, g.srcs, pub) });
+            var providers = [viaEndpoint, viaClaude, viaFree];
+            hadClaude = false;
+            for (var pi = 0; pi < providers.length && !text; pi++) {
+                try {
+                    var r = await providers[pi](msgs);
+                    if (r && r.text && r.text.trim().length > 20) {
+                        text = r.text.trim();
+                        if (r.sources && r.sources.length) { g.srcs = g.srcs.concat(r.sources).slice(0, 12); tail = srcsHTML(g.srcs) + linksHTML(q, g.en); }
+                    }
+                } catch (e) {
+                    if (!err) err = e;
+                    if (e && e.text && String(e.text).trim().length > 60 && !text) text = String(e.text).trim() + '\n\n(انقطع الجواب قبل اكتماله — أعد السؤال للإتمام.)';
+                }
+            }
+            busy = false; if (btn) btn.disabled = false;
+
+            if (text && text.length > 20) {
+                lastText = text;
+                hist.push({ role: 'user', content: q }); hist.push({ role: 'assistant', content: cut(text, 900) });
+                var html = fmt(text) + tail;
+                content.innerHTML = html;
+                memo[q] = { text: text, html: html };
+            } else {
+                lastText = '';
+                var cards = srcCardsHTML(g.srcs);
+                var html2 = '<p class="text-amber-300">' + esc(hadClaude ? reasonMsg(err) : 'تعذّر الوصول إلى خدمات الذكاء الاصطناعي من هذه الصفحة (تأكد من الاتصال بالإنترنت أو افتح الصفحة من موقعك المنشور).') +
+                    (cards || g.local ? ' وهذا ما وجدته لك من المراجع:' : ' جرّب الروابط أدناه للبحث المباشر.') + '</p>' +
+                    (g.local ? localHTML(g.local) : '') + cards + linksHTML(q, g.en);
+                content.innerHTML = html2;
+            }
+            if (T) showCSE(q);
+        }
+        window.vetAIAsk = ask;
+    })();
 });
 </script>
    
