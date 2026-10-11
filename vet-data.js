@@ -1,36 +1,37 @@
-// تفعيل محرك البحث في منصة VetAI - د. محجوبي عبدالناصر
-window.vetPlatformData = {
-    status: "active"
-};
-
-// تفعيل وظيفة البحث والضغط تلقائياً
+// محرك البحث المباشر لمنصة VetAI - د. محجوبي عبدالناصر
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         const searchBtn = document.getElementById("hsb");
         const searchInput = document.getElementById("hs");
         
         if(searchBtn && searchInput) {
-            searchBtn.onclick = function() {
+            // إلغاء الوظيفة القديمة وتعطيل الانتقال للشريط العلوي
+            searchBtn.replaceWith(searchBtn.cloneNode(true));
+            const newSearchBtn = document.getElementById("hsb");
+            
+            newSearchBtn.addEventListener("click", function(e) {
+                e.preventDefault();
                 const query = searchInput.value.trim();
                 if(query) {
-                    // الانتقال المباشر إلى قسم المرجع السريري وتفعيل البحث
+                    // الانتقال التلقائي إلى قسم المرجع السريري وعرض نتائج البحث
                     if(typeof switchTab === 'function') {
                         switchTab('ref');
                     }
-                    const globalSearch = document.getElementById("gs");
-                    if(globalSearch) {
-                        globalSearch.value = query;
-                        globalSearch.dispatchEvent(new Event('input'));
-                    }
+                    setTimeout(function() {
+                        const globalSearch = document.getElementById("gs");
+                        if(globalSearch) {
+                            globalSearch.value = query;
+                            globalSearch.dispatchEvent(new Event('input'));
+                        }
+                    }, 300);
                 }
-            };
+            });
             
-            // تفعيل الضغط على زر الإدخال (Enter) أيضاً
             searchInput.onkeydown = function(e) {
                 if(e.key === 'Enter') {
-                    searchBtn.click();
+                    newSearchBtn.click();
                 }
             };
         }
-    }, 500);
+    }, 600);
 });
