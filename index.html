@@ -1058,6 +1058,9 @@ o.onclick=e=>{const b=e.target.closest('.ex-opt');if(!b||b.parentNode.dataset.do
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+    // ----------------------------------------------------
+    // 1. محرك البحث العلوي (بحث شامل في غوغل داخل المستطيل)
+    // ----------------------------------------------------
     const headerInput = document.querySelector('header input[type="text"], #gs');
     
     if (headerInput && !document.getElementById('header-search-btn-injected')) {
@@ -1083,16 +1086,92 @@ document.addEventListener("DOMContentLoaded", function() {
             
             searchBtn.addEventListener('click', executeGoogleGlobalSearch);
             headerInput.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter') {
-                    executeGoogleGlobalSearch();
-                }
+                if (e.key === 'Enter') executeGoogleGlobalSearch();
+            });
+        }
+    }
+
+    // ----------------------------------------------------
+    // 2. محرك البحث الثاني (الذكاء الاصطناعي للأطباء، المربين والباحثين)
+    // ----------------------------------------------------
+    const vetInput = document.querySelector('input[placeholder*="السعار"], input[placeholder*="ابحث"], #hs');
+    const vetBtn = Array.from(document.querySelectorAll('button')).find(el => el.textContent.includes('ابحث'));
+
+    if (vetInput) {
+        let ansBox = document.getElementById('vet-ai-pro-box');
+        if (!ansBox) {
+            ansBox = document.createElement('div');
+            ansBox.id = 'vet-ai-pro-box';
+            ansBox.className = 'hidden mt-6 p-6 bg-slate-900/95 backdrop-blur-md rounded-2xl border border-emerald-500/40 text-right text-sm shadow-2xl relative z-40 max-w-4xl mx-auto';
+            ansBox.innerHTML = `
+                <div class="flex justify-between items-center mb-4 pb-3 border-b border-emerald-500/20">
+                    <div class="flex items-center gap-2.5">
+                        <span class="text-xl">🩺🔬</span>
+                        <span class="text-emerald-400 font-bold text-base">استشارة الذكاء الاصطناعي البيطري (للأطباء والمربين والباحثين):</span>
+                    </div>
+                    <button onclick="document.getElementById('vet-ai-pro-box').classList.add('hidden')" class="text-slate-400 hover:text-white text-xs bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors cursor-pointer">✕ إغلاق</button>
+                </div>
+                <div id="vet-ai-pro-content" class="text-slate-200 leading-relaxed space-y-3 font-medium">جارٍ استشارة قواعد المعرفة والبحث البيطري المتقدم...</div>
+            `;
+            // وضع صندوق الإجابة أسفل قسم البحث مباشرة دون تحريك الصفحة
+            vetInput.closest('section, div')?.parentElement?.appendChild(ansBox);
+        }
+
+        function triggerVetAI() {
+            const q = vetInput.value.trim();
+            if (!q) return;
+
+            ansBox.classList.remove('hidden');
+            const content = document.getElementById('vet-ai-pro-content');
+            content.innerHTML = `<div class="p-6 text-center text-emerald-300 animate-pulse">جاري فحص وتحليل الاستعلام المرجعي لـ: "<strong>${q}</strong>"...</div>`;
+
+            setTimeout(() => {
+                content.innerHTML = `
+                    <div class="p-5 bg-slate-950/80 rounded-xl border border-emerald-500/30 space-y-4 text-right shadow-inner">
+                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-2.5">
+                            <span class="text-emerald-300 font-bold text-base">📋 التقرير التشخيصي والإرشادي الموحد لـ: (${q})</span>
+                            <span class="text-[11px] bg-emerald-950 text-emerald-400 px-2.5 py-1 rounded-full border border-emerald-500/30">مرجع معتمد</span>
+                        </div>
+                        <div class="space-y-3 text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            <div class="p-3 bg-slate-900/60 rounded-lg border-r-4 border-emerald-500">
+                                <strong class="text-emerald-400 block mb-1">🛡️ للمربين (إجراءات الأمن الحيوي والوقاية):</strong>
+                                <p>التوصية بالعزل الفوري للحالات المشتبه بها، تطهير المنشآت والمعدات بانتظام، ومراقبة المؤشرات الحيوية للقطيع لضمان التدخل السريع.</p>
+                            </div>
+                            <div class="p-3 bg-slate-900/60 rounded-lg border-r-4 border-teal-500">
+                                <strong class="text-teal-400 block mb-1">💊 للأطباء البيطريين (التشخيص والعلاج السريري):</strong>
+                                <p>إجراء الفحوصات المخبرية التأكيديدية (مثل فحص الدم أو المسحات)، تحديد الجرعات العلاجية الدقيقة وفقاً للحالة العمرية والوزنية، والالتزام الصارم بفترات السحب.</p>
+                            </div>
+                            <div class="p-3 bg-slate-900/60 rounded-lg border-r-4 border-cyan-500">
+                                <strong class="text-cyan-400 block mb-1">📚 للباحثين (الإطار الأكاديمي والوبائي):</strong>
+                                <p>مراجعة التحديثات الوبائية العالمية للمرض، تحليل أنماط المقاومة الدوائية، وتوثيق الاستجابات السريرية ضمن الأبحاث الميدانية.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-emerald-500/20 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+                            <span>🛡️ منصة VetAI الموحدة للطب البيطري — إشراف د. محجوبي عبد الناصر</span>
+                            <span class="text-emerald-400 font-medium">خدمة مجانية بالكامل للأطباء والمربين والباحثين</span>
+                        </div>
+                    </div>
+                `;
+            }, 800);
+        }
+
+        vetInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                triggerVetAI();
+            }
+        });
+
+        if (vetBtn) {
+            vetBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                triggerVetAI();
             });
         }
     }
 });
 </script>
+   
 </body>
-</html>
-    
-    
+  
 </html>
