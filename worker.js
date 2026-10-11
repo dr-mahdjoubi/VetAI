@@ -1,7 +1,7 @@
 // Cloudflare Worker: وسيط آمن بين موقعك وذكاء Gemini المجاني (المفتاح مخفي هنا)
 // المتغير السري المطلوب: GEMINI_KEY  (يُضاف من إعدادات Worker ← Variables ← Secret)
 const ALLOWED_ORIGIN = 'https://dr-mahdjoubi.github.io';
-const MODEL = 'gemini-2.5-flash'; // غيّره إن تغيّر اسم النموذج المجاني
+const MODELS = ['gemini-2.5-flash', 'gemini-flash-latest', 'gemini-3-flash-preview']; // يجرّب بالترتيب حتى ينجح أحدها
 
 const SYSTEM = 'أنت "بيطري-AI"، مساعد معرفي في منصة VetAI Global Intelligence للطب البيطري. ' +
   'أجب بلغة المستخدم بوضوح وبدقة وبشكل منظم ومختصر. إجاباتك تعليمية ولا تغني عن الطبيب البيطري، ' +
@@ -36,21 +36,31 @@ export default {
       const q = context ? 'معلومات من قاعدة بيانات المنصة (استعن بها إن كانت مفيدة):\n' + context + '\n\nالسؤال: ' + question : question;
       contents.push({ role: 'user', parts: [{ text: q }] });
 
-      const r = await fetch(
-        'https://generativelanguage.googleapis.com/v1beta/models/' + MODEL + ':generateContent',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_KEY },
-          body: JSON.stringify({
-            systemInstruction: { parts: [{ text: SYSTEM }] },
-            contents: contents
-          })
+      const body = JSON.stringify({
+        systemInstruction: { parts: [{ text: SYSTEM }] },
+        contents: contents
+      });
+      const errors = [];
+      for (const model of MODELS) {
+        const r = await fetch(
+          'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_KEY },
+            body: body
+          }
+        );
+        const d = await r.json().catch(() => ({}));
+        const text = d.candidates && d.candidates[0] && d.candidates[0].content &&
+          d.candidates[0].content.parts.map(p => p.text || '').join('');
+        if (text) {
+          return new Response(JSON.stringify({ answer: text, model: model }),
+            { headers: { ...h, 'Content-Type': 'application/json' } });
         }
-      );
-      const d = await r.json();
-      const text = d.candidates && d.candidates[0] && d.candidates[0].content.parts.map(p => p.text).join('');
-      if (!text) return new Response(JSON.stringify({ error: 'no_answer' }), { status: 502, headers: h });
-      return new Response(JSON.stringify({ answer: text }), { headers: { ...h, 'Content-Type': 'application/json' } });
+        errors.push(model + ' [' + r.status + ']: ' + ((d.error && d.error.message) || 'no text').slice(0, 200));
+      }
+      return new Response(JSON.stringify({ error: 'no_answer', detail: errors }),
+        { status: 502, headers: { ...h, 'Content-Type': 'application/json' } });
     } catch (e) {
       return new Response(JSON.stringify({ error: 'server' }), { status: 500, headers: h });
     }
