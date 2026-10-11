@@ -43,7 +43,7 @@ var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
   window.VetAI_ask = function (question, history, context) {
     history = history || []; context = context || '';
     var first = VETAI_WORKER_URL ? viaWorker : viaFree;
-    var second = VETAI_WORKER_URL ? viaFree : null;
+    var second = null; // البديل المجاني الخارجي صار مدفوعاً، لذا نعتمد على الـ Worker فقط
     return withTimeout(first(question, history, context), 25000).catch(function (e) {
       if (second) return withTimeout(second(question, history, context), 25000);
       throw e;
