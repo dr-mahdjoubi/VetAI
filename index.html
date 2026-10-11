@@ -166,7 +166,7 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
 
 <!-- MAIN CONTAINER -->
 <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
-  <!-- VIEW 1: HOME - كل ما يحتاجه الطبيب والمربي -->
+  <!-- VIEW 1: HOME - بطاقة واحدة فقط بدون تكرار -->
   <section id="view-home" class="space-y-8">
     <div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-10 text-center shadow-2xl">
       <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold mb-4">منصة د. محجوبي عبد الناصر البيطرية</span>
@@ -188,7 +188,7 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
         <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 cursor-pointer hover:bg-emerald-900/40" onclick="document.getElementById('hs').value='مضاد حيوي'; runVetAI();">مضاد حيوي</span>
       </div>
 
-      <!-- GREEN AI Professional Answer Box (Appears Right After Clicking Search) -->
+      <!-- GREEN AI Professional Answer Box -->
       <div id="ans-box-hs" class="hidden mt-6 max-w-3xl mx-auto p-5 bg-slate-950 rounded-2xl border-2 border-emerald-500 text-right text-sm shadow-2xl">
         <div class="flex justify-between items-center mb-3 pb-2 border-b border-emerald-500/30">
           <div class="flex items-center gap-2">
@@ -226,12 +226,10 @@ function runVetAI() {
     content.innerHTML = '<span class="animate-pulse text-emerald-300">جارٍ تحليل الاستعلام الطبي لـ: "<strong>' + q + '</strong>" وإعداد التقرير البيطري المتخصص...</span>';
   }
 
-  // محاولة ربط دالة المنصة الأصلية إن وجدت
   if (typeof ask === 'function') {
     try { ask(q); } catch(e) {}
   }
 
-  // استجابة الذكاء الاصطناعي البيطري الاحترافية داخل الإطار الأخضر
   setTimeout(() => {
     if (content) {
       content.innerHTML = `
@@ -252,7 +250,7 @@ function runVetAI() {
   }, 900);
 }
 </script>
-  
+
         <!-- VIEW 1: HOME -->
         <section id="view-home" class="space-y-12">
 <div class="relative overflow-hidden rounded-3xl glass-panel glow-effect p-8 sm:p-12 text-center bg-gradient-to-br from-emerald-900/30 via-transparent to-cyan-900/20">
