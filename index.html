@@ -1055,4 +1055,44 @@ o.onclick=e=>{const b=e.target.closest('.ex-opt');if(!b||b.parentNode.dataset.do
 </script> 
 <script src="ai-engine.js"></script>
 </body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const headerInput = document.querySelector('header input[type="text"], #gs');
+    
+    if (headerInput && !document.getElementById('header-search-btn-injected')) {
+        const parentWrapper = headerInput.parentElement;
+        if (parentWrapper) {
+            parentWrapper.style.position = 'relative';
+            
+            const searchBtn = document.createElement('button');
+            searchBtn.id = 'header-search-btn-injected';
+            searchBtn.type = 'button';
+            searchBtn.innerHTML = 'بحث';
+            searchBtn.className = 'absolute left-1.5 top-1/2 -translate-y-1/2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-2.5 py-1 rounded-md transition-colors shadow-sm cursor-pointer';
+            
+            headerInput.style.paddingLeft = '45px';
+            parentWrapper.appendChild(searchBtn);
+            
+            function executeGoogleGlobalSearch() {
+                const q = headerInput.value.trim();
+                if (q) {
+                    window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
+                }
+            }
+            
+            searchBtn.addEventListener('click', executeGoogleGlobalSearch);
+            headerInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    executeGoogleGlobalSearch();
+                }
+            });
+        }
+    }
+});
+</script>
+</body>
+</html>
+    
+    
 </html>
