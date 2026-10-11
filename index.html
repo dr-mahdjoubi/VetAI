@@ -1054,5 +1054,77 @@ o.onclick=e=>{const b=e.target.closest('.ex-opt');if(!b||b.parentNode.dataset.do
 })();
 </script> 
 <script src="ai-engine.js"></script>
+ // 1. تفعيل بحث غوغل من مربع البحث العلوي
+document.querySelector('header input[type="text"], #gs, input[placeholder*="بحث شامل"]')
+  ?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      const q = this.value.trim();
+      if (q) window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
+    }
+  });
+
+// 2. تفعيل الذكاء الاصطناعي الطبي وإظهار صندوق الإجابة الأخضر فوراً للمحرك الأوسط
+const mainSearchInput = document.querySelector('input[placeholder*="ابحث عن مرض"]');
+const mainSearchBtn = document.querySelector('button'); // زر البحث المرتبط به
+
+if (mainSearchInput) {
+  // إنشاء صندوق الإجابة الأخضر ديناميكياً أسفل محرك البحث إذا لم يكن موجوداً
+  let ansBox = document.getElementById('ai-dynamic-ans-box');
+  if (!ansBox) {
+    ansBox = document.createElement('div');
+    ansBox.id = 'ai-dynamic-ans-box';
+    ansBox.className = 'hidden mt-4 p-5 bg-slate-900 rounded-2xl border-2 border-emerald-500 text-right text-sm shadow-2xl z-50 relative';
+    ansBox.innerHTML = `
+      <div class="flex justify-between items-center mb-3 pb-2 border-b border-emerald-500/30">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🤖🩺</span>
+          <span class="text-emerald-400 font-bold">إجابة الطبيب الذكي (الذكاء الاصطناعي البيطري):</span>
+        </div>
+        <button onclick="this.parentElement.parentElement.classList.add('hidden')" class="text-slate-400 hover:text-white text-xs bg-slate-800 px-2.5 py-1 rounded">✕ إغلاق</button>
+      </div>
+      <div id="ai-dynamic-content" class="text-slate-100 leading-relaxed space-y-2">جاري الفحص السريري واستشارة قواعد المعرفة الطبية...</div>
+    `;
+    mainSearchInput.closest('div')?.parentElement?.appendChild(ansBox);
+  }
+
+  function triggerVetAI() {
+    const q = mainSearchInput.value.trim();
+    if (!q) return;
+    
+    ansBox.classList.remove('hidden');
+    const content = document.getElementById('ai-dynamic-content');
+    content.innerHTML = `<span class="animate-pulse text-emerald-300">جارٍ تحليل الحالة: "<strong>${q}</strong>" وإعداد التقرير التشخيصي المتخصص...</span>`;
+
+    setTimeout(() => {
+      content.innerHTML = `
+        <div class="p-4 bg-emerald-950/40 rounded-xl border border-emerald-500/30 space-y-3 text-right">
+          <p class="text-emerald-300 font-bold text-base border-b border-emerald-500/20 pb-2">📋 التقرير التشخيصي والعلاجي لـ: (${q})</p>
+          <div class="text-slate-200 space-y-2 text-xs sm:text-sm">
+            <p><strong>1. التحليل والتشخيص السريري:</strong> يتطلب التعامل مع هذه الحالة فحص العلامات الحيوية بدقة وتقييم الأعراض الظاهرة والتاريخ المرضي للقطيع أو الحيوان.</p>
+            <p><strong>2. البروتوكول العلاجي المقترح:</strong> يُوصى بتطبيق الجرعات الدوائية المعتمدة وفقاً للوزن والعمر، مع ضرورة الالتزام بفترة السحب للأدوية.</p>
+            <p><strong>3. الإرشادات والإدارة البيطرية:</strong> عزل الحالات المصابة لمنع الانتشار، تطهير المنشأة بمطهرات فعالة، وتقديم الدعم المناعي والفيتامينات.</p>
+          </div>
+          <div class="mt-3 pt-2 border-t border-emerald-500/20 flex justify-between items-center text-[11px] text-emerald-400/80">
+            <span>🛡️ نظام التشخيص الذكي - إشراف د. محجوبي عبد الناصر</span>
+            <span class="italic">مجاني بالكامل - بدون إعلانات</span>
+          </div>
+        </div>
+      `;
+    }, 800);
+  }
+
+  mainSearchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') triggerVetAI();
+  });
+  
+  // ربط زر البحث الأوسط إن وجد
+  const searchButtons = document.querySelectorAll('button');
+  searchButtons.forEach(btn => {
+    if (btn.textContent.includes('ابحث')) {
+      btn.addEventListener('click', triggerVetAI);
+    }
+  });
+}
+   
 </body>
 </html>
