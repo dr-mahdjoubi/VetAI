@@ -57,6 +57,15 @@
     });
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
-  else run();
+  function loadExtra() {
+    ['extra-articles.js', 'library-extra.js'].forEach(function (f) {
+      var el = document.createElement('script');
+      el.src = f + '?v=' + Date.now();
+      document.body.appendChild(el);
+    });
+  }
+  function start() { run(); loadExtra(); }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();
