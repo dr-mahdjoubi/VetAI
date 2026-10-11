@@ -1,0 +1,42 @@
+name: Update VetAI content
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # كل 6 ساعات، 24 ساعة في اليوم و7 أيام في الأسبوع
+  workflow_dispatch:          # يسمح بتشغيله يدوياً من تبويب Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-content
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run content agents
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+        run: node update.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "vetai-bot"
+          git config user.email "vetai-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "لا تغييرات جديدة"
+          else
+            git commit -m "auto: update content $(date -u +%F-%H%M)"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
