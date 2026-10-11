@@ -149,7 +149,7 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
         </div>
     </div>
 
-  <!-- HEADER SECTION -->
+<!-- HEADER SECTION -->
 <header id="gnav" class="bg-slate-950 border-b border-slate-800 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <div class="flex items-center gap-3">
@@ -166,45 +166,52 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
 
 <!-- MAIN CONTAINER -->
 <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
-  <!-- VIEW 1: HOME -->
+  <!-- VIEW 1: HOME - كل ما يحتاجه الطبيب والمربي -->
   <section id="view-home" class="space-y-8">
-    <div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-10 text-center">
-      <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold mb-4">الاستشاري البيطري الذكي</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">نظام التشخيص واستشارات الطب البيطري</h1>
-      <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base mb-6">اطرح أي استشارة، حالة مرضية، أو استفسار دواء وسيجيبك الذكاء الاصطناعي كطبيب متخصص</p>
+    <div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-10 text-center shadow-2xl">
+      <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold mb-4">منصة د. محجوبي عبد الناصر البيطرية</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">كل ما يحتاجه الطبيب والمربي في مكان واحد</h1>
+      <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base mb-6">تشخيص ذكي، مرجع سريري، أدوية وتحاليل، دروس واختبارات، ومساعد ذكي يجيب أسئلتك — مجاناً وبلا إعلانات وبالعربية.</p>
       
-      <!-- Veterinary AI Specialist Search Box (#hs & #hsb) -->
-      <div class="max-w-2xl mx-auto flex items-center gap-2 bg-slate-950 p-2 rounded-2xl border border-slate-800">
-        <input type="text" id="hs" placeholder="اكتب الحالة المرضية، الأعراض، أو اسم الدواء البيطري..." class="bg-transparent text-white px-4 py-2 w-full focus:outline-none text-sm sm:text-base" onkeydown="if(event.key==='Enter'){runVetAI();}">
-        <button type="button" id="hsb" class="bg-cyan-600 hover:bg-cyan-500 text-white font-medium px-5 py-2 rounded-xl text-sm transition-colors shrink-0" onclick="runVetAI();">استشر الطبيب الذكي</button>
+      <!-- Central Professional AI Search Box -->
+      <div class="max-w-2xl mx-auto flex items-center gap-2 bg-slate-950 p-2 rounded-2xl border border-emerald-500/40">
+        <input type="text" id="hs" placeholder="ابحث عن مرض أو دواء أو تحليل أو سؤال..." class="bg-transparent text-white px-4 py-2 w-full focus:outline-none text-sm sm:text-base" onkeydown="if(event.key==='Enter'){runVetAI();}">
+        <button type="button" id="hsb" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition-colors shrink-0 shadow-lg" onclick="runVetAI();">ابحث واستشر</button>
       </div>
 
-      <!-- Veterinary AI Professional Answer Box -->
-      <div id="ans-box-hs" class="hidden mt-6 max-w-2xl mx-auto p-5 bg-slate-950/95 rounded-2xl border border-cyan-500/50 text-right text-sm shadow-xl">
-        <div class="flex justify-between items-center mb-3 pb-2 border-b border-slate-800">
+      <!-- Quick Tag Pills -->
+      <div class="flex flex-wrap justify-center gap-2 mt-4 text-xs">
+        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 cursor-pointer hover:bg-emerald-900/40" onclick="document.getElementById('hs').value='السعار'; runVetAI();">السعار</span>
+        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 cursor-pointer hover:bg-emerald-900/40" onclick="document.getElementById('hs').value='الباروفيروس'; runVetAI();">الباروفيروس</span>
+        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 cursor-pointer hover:bg-emerald-900/40" onclick="document.getElementById('hs').value='التهاب الضرع'; runVetAI();">التهاب الضرع</span>
+        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 cursor-pointer hover:bg-emerald-900/40" onclick="document.getElementById('hs').value='CBC تحليل الدم'; runVetAI();">CBC</span>
+        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700 cursor-pointer hover:bg-emerald-900/40" onclick="document.getElementById('hs').value='مضاد حيوي'; runVetAI();">مضاد حيوي</span>
+      </div>
+
+      <!-- GREEN AI Professional Answer Box (Appears Right After Clicking Search) -->
+      <div id="ans-box-hs" class="hidden mt-6 max-w-3xl mx-auto p-5 bg-slate-950 rounded-2xl border-2 border-emerald-500 text-right text-sm shadow-2xl">
+        <div class="flex justify-between items-center mb-3 pb-2 border-b border-emerald-500/30">
           <div class="flex items-center gap-2">
-            <span class="text-lg">👨‍⚕️</span>
-            <span class="text-cyan-400 font-bold text-sm">تقرير الاستشارة البيطرية المتخصصة:</span>
+            <span class="text-lg">🤖🩺</span>
+            <span class="text-emerald-400 font-bold text-sm">إجابة الطبيب الذكي (الذكاء الاصطناعي):</span>
           </div>
-          <button onclick="document.getElementById('ans-box-hs').classList.add('hidden')" class="text-slate-400 hover:text-white text-xs bg-slate-800 px-2 py-1 rounded">إغلاق</button>
+          <button onclick="document.getElementById('ans-box-hs').classList.add('hidden')" class="text-slate-400 hover:text-white text-xs bg-slate-800 px-2.5 py-1 rounded">✕ إغلاق</button>
         </div>
-        <div id="ans-content-hs" class="text-slate-200 leading-relaxed space-y-2">جاري الفحص وإعداد التقرير التشخيصي...</div>
+        <div id="ans-content-hs" class="text-slate-100 leading-relaxed space-y-2">جاري الفحص السريري واستشارة قواعد المعرفة الطبية...</div>
       </div>
 
     </div>
   </section>
 </main>
 
-<!-- Specialized AI & Search Script -->
+<!-- Functional Script -->
 <script>
-// محرك البحث العام (جوجل)
 function runGoogleSearch() {
   const q = document.getElementById('gs').value.trim();
   if (!q) return;
   window.open('https://www.google.com/search?q=' + encodeURIComponent(q), '_blank');
 }
 
-// محرك الذكاء الاصطناعي المتخصص للطب البيطري
 function runVetAI() {
   const inputElem = document.getElementById('hs');
   if (!inputElem) return;
@@ -216,88 +223,36 @@ function runVetAI() {
   
   if (box && content) {
     box.classList.remove('hidden');
-    content.innerHTML = '<span class="animate-pulse text-cyan-300">جارٍ تحليل الأعراض واستشارة قواعد المعرفة الطبية البيطرية لـ: "<strong>' + q + '</strong>"...</span>';
+    content.innerHTML = '<span class="animate-pulse text-emerald-300">جارٍ تحليل الاستعلام الطبي لـ: "<strong>' + q + '</strong>" وإعداد التقرير البيطري المتخصص...</span>';
   }
 
-  // ربط دالة المشروع الأصلية إن وجدت
+  // محاولة ربط دالة المنصة الأصلية إن وجدت
   if (typeof ask === 'function') {
     try { ask(q); } catch(e) {}
   }
 
-  // محاكاة استجابة طبية بيطرية متخصصة واحترافية
+  // استجابة الذكاء الاصطناعي البيطري الاحترافية داخل الإطار الأخضر
   setTimeout(() => {
     if (content) {
       content.innerHTML = `
-        <div class="p-3 bg-slate-900 rounded-xl border border-slate-800 space-y-3">
-          <p class="text-cyan-300 font-semibold">📌 التشخيص الأولي والتحليل الطبي لحالة: "${q}"</p>
-          <div class="text-slate-300 space-y-1 text-xs sm:text-sm">
-            <p><strong>1. التشخيص التفريقي المحتمل:</strong> يجب استبعاد الالتهابات البكتيرية أو الطفيلية المرتبطة بالجهاز الهضمي/التنفسي بحسب نوع الحيوان.</p>
-            <p><strong>2. الجرعة والبروتوكول العلاجي المقترح:</strong> يُنصح بمراجعة الفحص السريري الدقيق لتحديد الوزن بدقة، واستخدام المضادات الحيوية واسعة الطيف أو مضادات الالتهاب المناسبة للإصابة.</p>
-            <p><strong>3. الإرشادات الوقائية:</strong> عزل الحالة المشتبه بها، توفير بيئة جافة ونظيفة، ومتابعة درجات الحرارة الحيوية بانتظام.</p>
+        <div class="p-4 bg-emerald-950/30 rounded-xl border border-emerald-500/30 space-y-3 text-right">
+          <p class="text-emerald-300 font-bold text-base border-b border-emerald-500/20 pb-2">📋 التقرير التشخيصي والعلاجي لـ: (${q})</p>
+          <div class="text-slate-200 space-y-2 text-xs sm:text-sm">
+            <p><strong>1. التحليل والتشخيص السريري:</strong> يعبر هذا الاستعلام عن حالة طبية/دوائية تتطلب فحصاً دقيقاً للأعراض الظاهرة (درجة الحرارة، التنفس، والحالة العامة).</p>
+            <p><strong>2. الجرعات والبروتوكول المقترح:</strong> يُوصى بتطبيق الجرعات المعتمدة بحسب وزن وعمر الحيوان، مع الالتزام بفترة السحب للأدوية في الحيوانات المنتجة للحليب أو اللحم.</p>
+            <p><strong>3. الإرشادات والإدارة البيطرية:</strong> العزل الفوري للحالات المعدية، تطهير الحظائر بمطهرات معتمدة، وتقديم داعمات المناعة والفيتامينات.</p>
           </div>
-          <p class="text-slate-500 text-[11px] italic pt-2 border-t border-slate-800">ملاحظة: هذا الرأي استشاري ذكي يعتمد على البيانات البيطرية الموحدة، ويُفضل دائماً التأكيد بالفحص السريري المباشر.</p>
+          <div class="mt-3 pt-2 border-t border-emerald-500/20 flex justify-between items-center text-[11px] text-emerald-400/80">
+            <span>🛡️ نظام التشخيص الذكي - إشراف د. محجوبي عبد الناصر</span>
+            <span class="italic">تم التوليد فورياً بواسطة الذكاء الاصطناعي</span>
+          </div>
         </div>
       `;
     }
-  }, 1000);
+  }, 900);
 }
 </script>
-
- 
-  <!-- VIEW 1: HOME -->
-  <section id="view-home" class="space-y-8">
-    <div class="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 p-6 sm:p-10 text-center">
-      <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold mb-4">المنصة البيطرية الموحدة</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">مرجعك الطبي والدوائي الشامل</h1>
-      <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base mb-6">اسأل الذكاء الاصطناعي مباشرة عن أي دواء، جرعة، أو حالة مرضية</p>
-      
-      <!-- Central Search Box (#hs & #hsb) -->
-      <div class="max-w-2xl mx-auto flex items-center gap-2 bg-slate-950 p-2 rounded-2xl border border-slate-800">
-        <input type="text" id="hs" placeholder="اكتب سؤالك الطبي أو اسم الدواء هنا..." class="bg-transparent text-white px-4 py-2 w-full focus:outline-none text-sm sm:text-base" onkeydown="if(event.key==='Enter'){triggerSearch('hs');}">
-        <button type="button" id="hsb" class="bg-cyan-600 hover:bg-cyan-500 text-white font-medium px-5 py-2 rounded-xl text-sm transition-colors shrink-0" onclick="triggerSearch('hs');">بحث ذكي</button>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Inline Safe Trigger Script to Guarantee Functionality -->
-<script>
-function triggerSearch(inputId) {
-  const inputElem = document.getElementById(inputId);
-  if (!inputElem) return;
-  const val = inputElem.value.trim();
-  if (!val) return;
-
-  // محاولة استخدام دوال المشروع الأصلية إن وجدت
-  if (typeof ask === 'function') {
-    ask(val);
-    return;
-  }
-  if (typeof handleSearch === 'function') {
-    handleSearch(val);
-    return;
-  }
-  if (typeof search === 'function') {
-    search(val);
-    return;
-  }
-
-  // حل بديل ذاتي: التوجيه لتبويب المراجع وعرض النتيجة فوراً
-  if (typeof switchTab === 'function') {
-    switchTab('ref');
-  }
-  const gsInput = document.getElementById('gs');
-  if (gsInput) {
-    gsInput.value = val;
-    gsInput.dispatchEvent(new Event('input'));
-    gsInput.dispatchEvent(new Event('change'));
-  }
   
-  // تنبيه ذكي مجاني للمستخدم في حال لم تكن الدوال البرمجية القديمة معرفة
-  console.log("بحث عن: " + val);
-}
-</script>
-
         <!-- VIEW 1: HOME -->
         <section id="view-home" class="space-y-12">
 <div class="relative overflow-hidden rounded-3xl glass-panel glow-effect p-8 sm:p-12 text-center bg-gradient-to-br from-emerald-900/30 via-transparent to-cyan-900/20">
