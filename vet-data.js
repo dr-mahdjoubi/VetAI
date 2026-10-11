@@ -1,19 +1,19 @@
-// محرك البحث المباشر لمنصة VetAI - د. محجوبي عبدالناصر
+// حل مباشر لتشغيل زر البحث في منتصف الصفحة
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         const searchBtn = document.getElementById("hsb");
         const searchInput = document.getElementById("hs");
         
         if(searchBtn && searchInput) {
-            // إلغاء الوظيفة القديمة وتعطيل الانتقال للشريط العلوي
-            searchBtn.replaceWith(searchBtn.cloneNode(true));
-            const newSearchBtn = document.getElementById("hsb");
+            // إنشاء زر جديد كلياً بدلاً من القديم لقطع أي ارتباط برمجي سابق
+            const newBtn = searchBtn.cloneNode(true);
+            searchBtn.parentNode.replaceChild(newBtn, searchBtn);
             
-            newSearchBtn.addEventListener("click", function(e) {
+            newBtn.addEventListener("click", function(e) {
                 e.preventDefault();
                 const query = searchInput.value.trim();
                 if(query) {
-                    // الانتقال التلقائي إلى قسم المرجع السريري وعرض نتائج البحث
+                    // الانتقال المباشر لقسم المرجع السريري وعرض النتائج
                     if(typeof switchTab === 'function') {
                         switchTab('ref');
                     }
@@ -23,15 +23,16 @@ document.addEventListener("DOMContentLoaded", function() {
                             globalSearch.value = query;
                             globalSearch.dispatchEvent(new Event('input'));
                         }
-                    }, 300);
+                    }, 350);
                 }
             });
             
-            searchInput.onkeydown = function(e) {
+            searchInput.addEventListener("keydown", function(e) {
                 if(e.key === 'Enter') {
-                    newSearchBtn.click();
+                    e.preventDefault();
+                    newBtn.click();
                 }
-            };
+            });
         }
-    }, 600);
+    }, 800);
 });
