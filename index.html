@@ -1452,33 +1452,37 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 
 <script>
-    // الإعدادات الأولية للعداد
-    const BASE_VISITORS = 135322; // الرقم الابتدائي المطلـوب
-    const NAMESPACE = 'vetai-global-mahdjoubi'; // معرف خاص بموقعك
-    const KEY = 'visits_count';
+    // إعدادات عداد الزوار التلقائي (يتغير ويزداد مع كل زيارة جديدة)
+    const BASE_VISITORS = 135322; // الرقم الأساسي المبدئي
+    const NAMESPACE = 'vetai-global-mahdjoubi-2026'; // معرف فريد لموقعك
+    const KEY = 'active_visits';
 
     async function updateVisitorCounter() {
-        const counterEl = document.getElementById('visitor-counter');
+        const counterEl = document.getElementById('live-visitors-count');
+        if (!counterEl) return;
+        
         try {
-            // جلب وزيادة عدد الزيارات عبر CountAPI
+            // إرسال طلب لزيادة العداد وجلب القيمة المحدثة تلقائياً
             const response = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`);
             const data = await response.json();
             
-            // إضافة الزيارات الجديدة فوق الرقم الأساسي (135322)
+            // حساب العدد الإجمالي (الرقم الأساسي + عدد الزيارات الحقيقية الجديدة)
             const totalVisits = BASE_VISITORS + data.value;
             
-            // تنسيق الرقم بفاصلة آلاف (135,323)
-            counterEl.innerText = totalVisits.toLocaleString('ar-EG');
+            // تحديث الرقم في الصفحة باللغة الإنجليزية وتنسيق الفواصل (مثال: 135,323)
+            counterEl.innerText = totalVisits.toLocaleString('en-US');
         } catch (error) {
-            console.error('تعذر تحديث العداد:', error);
-            // في حالة انقطاع الاتصال يتم عرض الرقم المبدئي
-            counterEl.innerText = BASE_VISITORS.toLocaleString('ar-EG');
+            console.error('تعذر الاتصال بخدمة العداد:', error);
+            // في حالة عدم توفر الإنترنت، يظل الرقم الابتدائي ظاهراً بالإنجليزية
+            counterEl.innerText = BASE_VISITORS.toLocaleString('en-US');
         }
     }
 
-    // تشغيل العداد عند تحميل الصفحة
+    // تشغيل الدالة فور تحميل الصفحة لتغيير وتحديث الرقم
     document.addEventListener('DOMContentLoaded', updateVisitorCounter);
 </script>
+
+    
    
    
 </body>
