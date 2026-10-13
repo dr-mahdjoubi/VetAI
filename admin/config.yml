@@ -1,0 +1,68 @@
+backend:
+  name: github
+  repo: dr-mahdjoubi/VetAI
+  branch: main
+
+media_folder: images/uploads
+public_folder: /VetAI/images/uploads
+
+collections:
+  - name: library
+    label: المكتبة
+    files:
+      - name: books
+        label: الكتب
+        file: data/books.json
+        format: json
+        fields:
+          - label: قائمة الكتب
+            name: books
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "العنوان", name: title, widget: string }
+              - { label: "المؤلف", name: author, widget: string, required: false }
+              - { label: "الوصف", name: description, widget: text, required: false }
+              - { label: "ملف الكتاب (PDF)", name: file, widget: file, media_folder: /books, public_folder: /VetAI/books }
+              - { label: "صورة الغلاف", name: cover, widget: image, required: false }
+      - name: gallery
+        label: معرض الصور
+        file: data/gallery.json
+        format: json
+        fields:
+          - label: الصور
+            name: photos
+            widget: list
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "الصورة", name: image, widget: image }
+              - { label: "الوصف", name: caption, widget: string, required: false }
+      - name: articles
+        label: المقالات
+        file: data/articles.json
+        format: json
+        fields:
+          - label: المقالات
+            name: articles
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "العنوان", name: title, widget: string }
+              - { label: "التاريخ", name: date, widget: datetime, time_format: false, required: false }
+              - { label: "ملخص قصير", name: summary, widget: text, required: false }
+              - { label: "نص المقال (افصل الفقرات بسطر فارغ)", name: body, widget: text }
+              - { label: "صورة المقال", name: image, widget: image, required: false }
+      - name: exams
+        label: الامتحانات
+        file: data/exams.json
+        format: json
+        fields:
+          - label: الامتحانات
+            name: exams
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "العنوان", name: title, widget: string }
+              - { label: "المادة", name: subject, widget: string, required: false }
+              - { label: "السنة", name: year, widget: string, required: false }
+              - { label: "ملف الامتحان (صورة أو PDF)", name: file, widget: file, media_folder: /exams, public_folder: /VetAI/exams }
