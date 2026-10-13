@@ -355,7 +355,7 @@ header nav{display:none!important}#mnav{display:none!important}#gnav button{whit
 <div class="card"><h3>🤝 تعاون أكاديمي</h3><p class="muted">نموذج للتواصل مع الباحثين والطلبة والجامعات والمختبرات.</p></div>
 </div>
 </div></section></div></section><section id="view-library" class="hidden space-y-8"><div class="my space-y-8"><section id="library"><div class="wrap"><div class="sectionHead"><div><h2>📚 المكتبة: مقالات بحثية وكتب مجانية</h2><p class="muted">اضغط على أي عنوان لقراءة الملخص.</p></div></div>
-<div class="grid"><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة؛ الموقع لا يستضيف الكتب نفسها.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
+<div class="grid"><div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
 <div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8" id="newgames"><section><div class="wrap"><div class="sectionHead"><div><h2>🎲 ألعاب حيوانات ممتعة للكبار والصغار</h2><p class="muted">ألعاب تعمل مباشرة هنا، وبعدها روابط لألعاب مجانية في مواقع أخرى.</p></div></div>
 <div class="gameGrid">
 <div class="card"><div class="icon">🔨</div><h3>اضرب الحيوان (للأطفال)</h3><p class="muted">اضغط الحيوان قبل أن يختفي! 30 ثانية.</p><div class="wm" id="wm"></div><div class="score" id="wms">النقاط: 0 · الوقت: 30</div><button class="btn primary" id="wmgo">ابدأ</button></div>
@@ -1485,6 +1485,50 @@ document.addEventListener("DOMContentLoaded", function() {
     
    
    
+<script>
+(function(){
+  function ok(u){return typeof u==='string'&&/^(\/|\.\/|[\w-]+\/|https:\/\/)/.test(u)&&!/^\s*javascript:/i.test(u);}
+  async function load(p){try{var r=await fetch(p,{cache:'no-store'});return r.ok?await r.json():{};}catch(e){return {};}}
+  function head(t){var h=document.createElement('h4');h.textContent=t;h.style.cssText='margin:14px 0 6px;font-weight:800';return h;}
+  function link(box,x){
+    if(!ok(x.file))return false;
+    var a=document.createElement('a');a.className='bk';a.href=x.file;a.target='_blank';a.rel='noopener';
+    a.textContent='📘 '+(x.title||'')+(x.author?' — '+x.author:'')+(x.subject?' ('+x.subject+')':'')+(x.year?' '+x.year:'');
+    box.appendChild(a);return true;
+  }
+  async function run(){
+    var any=false;
+    var b=(await load('data/books.json')).books||[];
+    var bb=document.getElementById('myBooks');
+    if(b.length){bb.appendChild(head('📚 الكتب'));b.forEach(function(x){if(link(bb,x))any=true;});}
+    var ar=(await load('data/articles.json')).articles||[];
+    var ab=document.getElementById('myArticles');
+    if(ar.length){
+      ab.appendChild(head('📝 المقالات'));
+      ar.forEach(function(x){
+        var d=document.createElement('details');d.className='art';
+        var s=document.createElement('summary');s.textContent=(x.title||'')+(x.date?' · '+String(x.date).slice(0,10):'');d.appendChild(s);
+        if(x.summary){var p=document.createElement('p');p.className='muted';p.textContent=x.summary;d.appendChild(p);}
+        String(x.body||'').split(/\n{2,}/).forEach(function(t){if(t.trim()){var p=document.createElement('p');p.textContent=t.trim();p.style.margin='6px 0';d.appendChild(p);}});
+        if(x.image&&ok(x.image)){var i=document.createElement('img');i.src=x.image;i.alt='';i.loading='lazy';i.style.cssText='max-width:100%;border-radius:10px;margin-top:6px';d.appendChild(i);}
+        ab.appendChild(d);any=true;
+      });
+    }
+    var ex=(await load('data/exams.json')).exams||[];
+    var eb=document.getElementById('myExams');
+    if(ex.length){eb.appendChild(head('📝 الامتحانات'));ex.forEach(function(x){if(link(eb,x))any=true;});}
+    var g=(await load('data/gallery.json')).photos||[];
+    var gb=document.getElementById('myGallery');
+    g.forEach(function(x){
+      if(!ok(x.image))return;
+      var i=document.createElement('img');i.src=x.image;i.alt=x.caption||'';i.loading='lazy';
+      i.style.cssText='width:100%;height:110px;object-fit:cover;border-radius:8px';gb.appendChild(i);any=true;
+    });
+    if(any){var e=document.getElementById('myLibEmpty');if(e)e.remove();}
+  }
+  run();
+})();
+</script>
 </body>
   
 </html>
