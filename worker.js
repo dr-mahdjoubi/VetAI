@@ -1,68 +1,35 @@
-// Cloudflare Worker: وسيط آمن بين موقعك وذكاء Gemini المجاني (المفتاح مخفي هنا)
-// المتغير السري المطلوب: GEMINI_KEY  (يُضاف من إعدادات Worker ← Variables ← Secret)
-const ALLOWED_ORIGIN = 'https://dr-mahdjoubi.github.io';
-const MODELS = ['gemini-2.5-flash', 'gemini-flash-latest', 'gemini-3-flash-preview']; // يجرّب بالترتيب حتى ينجح أحدها
+/* وسيط الذكاء الاصطناعي لمنصة VetAI — Cloudflare Worker + Workers AI
+   الواجهة: POST { messages:[{role,content}] }  →  { text }
+   الإعداد: أضف Binding من نوع Workers AI باسم AI، وعدّل ALLOWED أدناه إلى نطاق موقعك. */
+const ALLOWED=['https://dr-mahdjoubi.github.io'];
+const MODEL='@cf/meta/llama-3.1-8b-instruct'; // تحقق من اسم النموذج المتاح في لوحة Cloudflare
+const MAX_MSGS=8, MAX_CHARS=6000;
 
-const SYSTEM = 'أنت "بيطري-AI"، مساعد معرفي في منصة VetAI Global Intelligence للطب البيطري. ' +
-  'أجب بلغة المستخدم بوضوح وبدقة وبشكل منظم ومختصر. إجاباتك تعليمية ولا تغني عن الطبيب البيطري، ' +
-  'وفي الحالات الخطيرة انصح بمراجعة طبيب بيطري فوراً. لا تخترع مصادر أو أرقاماً. ' +
-  'إن لم تكن متأكداً فقل ذلك. يمكنك الإجابة عن أي موضوع آخر بذكاء وأدب.';
-
-function cors(origin) {
-  return {
-    'Access-Control-Allow-Origin': origin === ALLOWED_ORIGIN ? origin : ALLOWED_ORIGIN,
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type'
-  };
+function cors(origin){
+  const ok=ALLOWED.includes(origin);
+  return {'Access-Control-Allow-Origin':ok?origin:ALLOWED[0],'Access-Control-Allow-Methods':'POST, OPTIONS',
+          'Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'};
 }
-
 export default {
-  async fetch(req, env) {
-    const origin = req.headers.get('Origin') || '';
-    const h = cors(origin);
-    if (req.method === 'OPTIONS') return new Response(null, { headers: h });
-    if (req.method !== 'POST') return new Response('OK', { headers: h });
-    if (origin !== ALLOWED_ORIGIN) return new Response('Forbidden', { status: 403, headers: h });
-
-    try {
-      const { question, history = [], context = '' } = await req.json();
-      if (!question || question.length > 2000) {
-        return new Response(JSON.stringify({ error: 'bad_request' }), { status: 400, headers: h });
-      }
-      const contents = history.slice(-8).map(m => ({
-        role: m.role === 'assistant' ? 'model' : 'user',
-        parts: [{ text: String(m.content).slice(0, 2000) }]
-      }));
-      const q = context ? 'معلومات من قاعدة بيانات المنصة (استعن بها إن كانت مفيدة):\n' + context + '\n\nالسؤال: ' + question : question;
-      contents.push({ role: 'user', parts: [{ text: q }] });
-
-      const body = JSON.stringify({
-        systemInstruction: { parts: [{ text: SYSTEM }] },
-        contents: contents
-      });
-      const errors = [];
-      for (const model of MODELS) {
-        const r = await fetch(
-          'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_KEY },
-            body: body
-          }
-        );
-        const d = await r.json().catch(() => ({}));
-        const text = d.candidates && d.candidates[0] && d.candidates[0].content &&
-          d.candidates[0].content.parts.map(p => p.text || '').join('');
-        if (text) {
-          return new Response(JSON.stringify({ answer: text, model: model }),
-            { headers: { ...h, 'Content-Type': 'application/json' } });
-        }
-        errors.push(model + ' [' + r.status + ']: ' + ((d.error && d.error.message) || 'no text').slice(0, 200));
-      }
-      return new Response(JSON.stringify({ error: 'no_answer', detail: errors }),
-        { status: 502, headers: { ...h, 'Content-Type': 'application/json' } });
-    } catch (e) {
-      return new Response(JSON.stringify({ error: 'server' }), { status: 500, headers: h });
+  async fetch(req,env){
+    const origin=req.headers.get('Origin')||'';
+    const h=cors(origin);
+    if(req.method==='OPTIONS')return new Response(null,{status:204,headers:h});
+    if(req.method!=='POST')return new Response('Method Not Allowed',{status:405,headers:h});
+    if(!ALLOWED.includes(origin))return new Response('Forbidden',{status:403,headers:h});
+    let body;try{body=await req.json();}catch(e){return new Response('Bad JSON',{status:400,headers:h});}
+    const m=body&&body.messages;
+    if(!Array.isArray(m)||!m.length||m.length>MAX_MSGS)return new Response('Bad messages',{status:400,headers:h});
+    // النص فقط: الصور ترفضها الواجهة ثم تنتقل الصفحة تلقائيًا إلى المزوّد التالي
+    for(const x of m){
+      if(typeof x.content!=='string'||x.content.length>MAX_CHARS||!['system','user','assistant'].includes(x.role))
+        return new Response('Unsupported message',{status:400,headers:h});
     }
+    try{
+      const r=await env.AI.run(MODEL,{messages:m,max_tokens:600,temperature:0.2});
+      const text=(r&&(r.response||r.result&&r.result.response))||'';
+      if(!text)return new Response('Empty',{status:502,headers:h});
+      return new Response(JSON.stringify({text}),{headers:{...h,'Content-Type':'application/json'}});
+    }catch(e){return new Response('AI error',{status:502,headers:h});}
   }
 };
