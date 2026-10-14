@@ -1781,6 +1781,95 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 </script>
 
+
+<script>
+/* أيقونات SVG عصرية بدل الإيموجي في بطاقات «الوصول السريع» — رسم برمجي بلا صور خارجية */
+(function(){
+  var I={
+   'ai-diagnostics':`<svg viewBox="0 0 64 64"><defs><linearGradient id="iqa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7db3ff"/><stop offset="1" stop-color="#3a63e0"/></linearGradient></defs><path d="M32 17v-6" stroke="#3a63e0" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="9" r="4.5" fill="#ff375f"/><rect x="4" y="27" width="6" height="14" rx="3" fill="#3a63e0"/><rect x="54" y="27" width="6" height="14" rx="3" fill="#3a63e0"/><rect x="9" y="17" width="46" height="38" rx="15" fill="url(#iqa)"/><rect x="15" y="26" width="34" height="18" rx="9" fill="#10265c"/><circle cx="25" cy="35" r="4.2" fill="#5ef2ff"/><circle cx="39" cy="35" r="4.2" fill="#5ef2ff"/><path d="M26 49h12" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".85"/><path d="M16 22c4-4 12-5 18-4" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".5" fill="none"/></svg>`,
+   'chat':`<svg viewBox="0 0 64 64"><defs><linearGradient id="iqb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffc4dc"/><stop offset="1" stop-color="#ff6b9d"/></linearGradient></defs><g transform="translate(0 6)"><path d="M32 12c-4-5-13-3-15 3-6 1-9 8-6 13-3 5 0 12 6 13 2 6 10 8 15 3 5 5 13 3 15-3 6-1 9-8 6-13 3-5 0-12-6-13-2-6-11-8-15-3z" fill="url(#iqb)"/><path d="M32 13v31M19 22c4 0 7 3 7 7M45 22c-4 0-7 3-7 7M19 38c4 0 7-3 7-7M45 38c-4 0-7-3-7-7" stroke="#d6336c" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".75"/><ellipse cx="22" cy="19" rx="5" ry="3" fill="#fff" opacity=".55" transform="rotate(-30 22 19)"/></g></svg>`,
+   'ref':`<svg viewBox="0 0 64 64"><defs><linearGradient id="iqc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfe0ff"/></linearGradient></defs><path d="M5 20v35c9-2 18-2 27 3 9-5 18-5 27-3V20z" fill="#1e40af"/><path d="M32 21c-7-5-15-5-23-3v34c8-2 16-2 23 3z" fill="url(#iqc)" stroke="#8fb0ff" stroke-width="1.5"/><path d="M32 21c7-5 15-5 23-3v34c-8-2-16-2-23 3z" fill="url(#iqc)" stroke="#8fb0ff" stroke-width="1.5"/><path d="M14 28c5-1 10-1 14 1M14 35c5-1 10-1 14 1M14 42c5-1 10-1 14 1M36 29c4-2 9-2 14-1M36 36c4-2 9-2 14-1" stroke="#6b8de6" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M32 8l3 6 6 1-4.5 4 1.2 6L32 22.5 26.3 25l1.2-6L23 15l6-1z" fill="#ffc400" transform="translate(0 -3) scale(.9) translate(3.5 0)"/></svg>`,
+   'drugs':`<svg viewBox="0 0 64 64"><g transform="rotate(-38 32 32)"><rect x="6" y="20" width="52" height="24" rx="12" fill="#fff"/><path d="M18 20h14v24H18a12 12 0 010-24z" fill="#ff375f"/><path d="M32 20h14a12 12 0 010 24H32z" fill="#ffd60a"/><rect x="13" y="24" width="26" height="4.5" rx="2.2" fill="#fff" opacity=".55"/><rect x="6" y="20" width="52" height="24" rx="12" fill="none" stroke="#000" stroke-opacity=".08" stroke-width="1.5"/></g><circle cx="49" cy="49" r="9" fill="#34c759"/><path d="M49 44v10M44 49h10" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>`,
+   'dxlab':`<svg viewBox="0 0 64 64"><defs><linearGradient id="iqd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs><path d="M25 8h14v16l13 25c2.500 5-1 10-7 10H19c-6 0-9.500-5-7-10l13-25z" fill="#e3f6ff" stroke="#7cc4ee" stroke-width="2.500" stroke-linejoin="round"/><path d="M19 42h26l7 14c1.500 3-1 5-4 5H16c-3 0-5.500-2-4-5z" fill="url(#iqd)" transform="translate(0 -3)"/><rect x="22" y="6" width="20" height="5" rx="2.500" fill="#7cc4ee"/><circle cx="29" cy="46" r="2.500" fill="#fff" opacity=".8"/><circle cx="37" cy="40" r="2" fill="#fff" opacity=".8"/><circle cx="33" cy="52" r="1.800" fill="#fff" opacity=".8"/></svg>`,
+   'exams':`<svg viewBox="0 0 64 64"><rect x="10" y="8" width="44" height="52" rx="8" fill="#ff9f0a"/><rect x="15" y="15" width="34" height="41" rx="4" fill="#fff"/><rect x="24" y="5" width="16" height="9" rx="4.500" fill="#475569"/><path d="M21 27l3 3 6-6" stroke="#34c759" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M21 40l3 3 6-6" stroke="#34c759" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M35 28h9M35 41h9" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/></svg>`,
+   'library':`<svg viewBox="0 0 64 64"><rect x="8" y="42" width="48" height="13" rx="3.500" fill="#ff375f"/><rect x="12" y="29" width="44" height="12" rx="3.500" fill="#ffc400"/><rect x="8" y="16" width="40" height="12" rx="3.500" fill="#34c759" transform="rotate(-6 28 22)"/><path d="M14 46v5M19 46v5M16 33v5M21 33v5" stroke="#fff" stroke-width="2.500" stroke-linecap="round" opacity=".8"/><path d="M14 22l17-1.800" stroke="#fff" stroke-width="2.500" stroke-linecap="round" opacity=".8"/></svg>`,
+   'knowledge':`<svg viewBox="0 0 64 64"><path d="M18 9v18a14 14 0 0028 0V9" stroke="#334155" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="18" cy="8" r="3.500" fill="#94a3b8"/><circle cx="46" cy="8" r="3.500" fill="#94a3b8"/><path d="M32 41v6c0 6 5 9 10 9" stroke="#334155" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="47" cy="52" r="8" fill="#ffb300"/><circle cx="47" cy="52" r="4" fill="#fff3c4"/></svg>`
+  };
+  function apply(){
+    var h=Array.prototype.slice.call(document.querySelectorAll('h2')).filter(function(x){return /الوصول السريع/.test(x.textContent);})[0];
+    if(!h)return;
+    var bar=h.parentElement,grid=bar&&bar.nextElementSibling;
+    if(!grid)return;
+    Array.prototype.forEach.call(grid.querySelectorAll(':scope>button'),function(btn){
+      var m=(btn.getAttribute('onclick')||'').match(/switchTab\('([^']+)'\)/);
+      var ic=btn.firstElementChild;
+      if(!m||!I[m[1]]||!ic||ic.querySelector('svg'))return;
+      ic.innerHTML=I[m[1]];ic.setAttribute('aria-hidden','true');
+    });
+    if(!document.getElementById('ios-ico-css')){
+      var s=document.createElement('style');s.id='ios-ico-css';
+      s.textContent='.ios-quick>button>div:first-child{background:rgba(255,255,255,.93)!important;padding:.4rem;box-sizing:border-box}'+
+        '.ios-quick>button>div:first-child svg{width:100%;height:100%;display:block;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}';
+      document.head.appendChild(s);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+  window.addEventListener('load',apply);
+})();
+</script>
+
+
+<script>
+/* بطاقات الجامعات الثلاث: حجم مصغّر + النقر يفتح الموقع الرسمي في تبويب جديد */
+(function(){
+  var U=[
+    {k:/RVC|الملكية/,url:'https://www.rvc.ac.uk',t:'Royal Vet College',c:'#06b6d4'},
+    {k:/كورنيل/,url:'https://www.vet.cornell.edu',t:'Cornell University',c:'#8b5cf6'},
+    {k:/سيدني/,url:'https://sydney.edu.au/vetscience/',t:'University of Sydney',c:'#10b981'}
+  ];
+  function banner(t,c){
+    var s='<svg xmlns="http://www.w3.org/2000/svg" width="600" height="150"><rect width="100%" height="100%" fill="#0f172a"/><text x="50%" y="50%" fill="'+c+'" font-family="sans-serif" font-size="46" font-weight="700" text-anchor="middle" dominant-baseline="middle">'+t+'</text></svg>';
+    return 'data:image/svg+xml;base64,'+btoa(s);
+  }
+  function go(url){var w=window.open(url,'_blank','noopener,noreferrer');if(!w)location.href=url;}
+  function apply(){
+    var grid=document.querySelector('#uni-end>.grid');
+    if(!grid||grid.dataset.uniMini)return;
+    grid.dataset.uniMini='1';
+    Array.prototype.forEach.call(grid.children,function(card){
+      var h=card.querySelector('h3');if(!h)return;
+      var u=U.filter(function(x){return x.k.test(h.textContent);})[0];
+      if(!u)return;
+      card.classList.add('uni-mini');
+      card.setAttribute('role','link');card.setAttribute('tabindex','0');
+      card.setAttribute('aria-label',h.textContent.trim()+' — فتح الموقع الرسمي');
+      card.title='فتح الموقع الرسمي';
+      var img=card.querySelector('img');if(img){img.src=banner(u.t,u.c);img.alt=u.t;}
+      var btn=card.querySelector('button');
+      if(btn){btn.removeAttribute('onclick');btn.textContent='زيارة الموقع ↗';}
+      card.addEventListener('click',function(){go(u.url);});
+      card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go(u.url);}});
+    });
+    if(!document.getElementById('uni-mini-css')){
+      var s=document.createElement('style');s.id='uni-mini-css';
+      s.textContent='#uni-end>.grid{gap:12px!important}'+
+        '#uni-end .uni-mini{cursor:pointer;transition:transform .15s ease}'+
+        '#uni-end .uni-mini:hover{transform:translateY(-2px)}#uni-end .uni-mini:active{transform:scale(.98)}'+
+        '#uni-end .uni-mini>div:first-child{height:84px!important}'+
+        '#uni-end .uni-mini img{height:84px!important;width:100%!important;object-fit:cover}'+
+        '#uni-end .uni-mini>div:last-child{padding:12px!important}'+
+        '#uni-end .uni-mini h3{font-size:.9rem!important;line-height:1.35}'+
+        '#uni-end .uni-mini p{font-size:.72rem!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}'+
+        '#uni-end .uni-mini>div:last-child>div{padding-top:8px!important}'+
+        '@media(prefers-reduced-motion:reduce){#uni-end .uni-mini{transition:none}}';
+      document.head.appendChild(s);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+  window.addEventListener('load',apply);
+})();
+</script>
+
 </body>
   
 </html>
