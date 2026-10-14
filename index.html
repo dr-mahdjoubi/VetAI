@@ -1720,6 +1720,67 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 </script>
 
+
+<script>
+/* بطاقات «ابدأ من هنا» بأسلوب أيقونات تطبيقات الآيفون — ألوان فقط، دون المساس بالخلفية أو بقية الصفحة */
+(function(){
+  function apply(){
+    var h=Array.prototype.slice.call(document.querySelectorAll('h2')).filter(function(x){return /ابدأ من هنا/.test(x.textContent);})[0];
+    if(!h)return;
+    var p=h.parentElement,grid=null;
+    var c=p.querySelectorAll('div.grid');
+    for(var i=0;i<c.length;i++){if(c[i].querySelector('button')){grid=c[i];break;}}
+    if(!grid||grid.classList.contains('ios-apps'))return;
+    grid.classList.add('ios-apps');
+    if(!document.getElementById('ios-apps-css')){
+      var s=document.createElement('style');s.id='ios-apps-css';
+      var g=[['#34c759','#0a9d58'],['#bf5af2','#5e5ce6'],['#0a84ff','#5ac8fa'],['#ff9f0a','#ff5e00'],['#ff375f','#ff2d55'],['#00c7be','#0a84ff'],['#ffd60a','#ff9f0a']];
+      var css='.ios-apps>button{border:0!important;color:#fff!important;border-radius:24px!important;text-align:center!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:18px 10px!important;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.35)!important;transition:transform .15s ease,filter .15s ease!important}'+
+      '.ios-apps>button:hover{transform:translateY(-2px) scale(1.03);filter:saturate(1.15)}'+
+      '.ios-apps>button:active{transform:scale(.95)}'+
+      '.ios-apps>button *{color:#fff!important}'+
+      '.ios-apps>button .text-2xl{font-size:2.5rem!important;line-height:1.1;filter:drop-shadow(0 3px 4px rgba(0,0,0,.3))}'+
+      '.ios-apps>button .font-bold{font-weight:800!important;text-shadow:0 1px 2px rgba(0,0,0,.35)}'+
+      '.ios-apps>button .text-\\[11px\\]{color:rgba(255,255,255,.92)!important}';
+      g.forEach(function(x,i){css+='.ios-apps>button:nth-child('+(i+1)+'){background:linear-gradient(145deg,'+x[0]+','+x[1]+')!important}';});
+      css+='@media(prefers-reduced-motion:reduce){.ios-apps>button{transition:none!important}.ios-apps>button:hover,.ios-apps>button:active{transform:none}}';
+      s.textContent=css;document.head.appendChild(s);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+  window.addEventListener('load',apply);
+})();
+</script>
+
+
+<script>
+/* بطاقات «الوصول السريع» بأسلوب أيقونات الآيفون — ألوان وشكل البطاقات فقط */
+(function(){
+  function apply(){
+    var h=Array.prototype.slice.call(document.querySelectorAll('h2')).filter(function(x){return /الوصول السريع/.test(x.textContent);})[0];
+    if(!h)return;
+    var bar=h.parentElement,grid=bar&&bar.nextElementSibling;
+    if(!grid||!grid.querySelector('button')||grid.classList.contains('ios-quick'))return;
+    grid.classList.add('ios-quick');
+    if(document.getElementById('ios-quick-css'))return;
+    var s=document.createElement('style');s.id='ios-quick-css';
+    var g=[['#bf5af2','#5e5ce6'],['#0a84ff','#5ac8fa'],['#34c759','#0a9d58'],['#ff375f','#ff2d55'],['#ff9f0a','#ff5e00'],['#00c7be','#0a84ff'],['#ffd60a','#ff9f0a'],['#5e5ce6','#bf5af2']];
+    var css='.ios-quick>button{border:0!important;color:#fff!important;border-radius:24px!important;box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.35)!important;transition:transform .15s ease,filter .15s ease!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}'+
+    '.ios-quick>button:hover{filter:saturate(1.15)}'+
+    '.ios-quick>button:active{transform:scale(.95)!important}'+
+    '.ios-quick>button *{color:#fff!important}'+
+    '.ios-quick>button>div:first-child{background:rgba(255,255,255,.28)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)!important;width:3.25rem!important;height:3.25rem!important;border-radius:16px!important;font-size:2rem!important}'+
+    '.ios-quick>button .font-black{font-weight:800!important;text-shadow:0 1px 2px rgba(0,0,0,.35)}'+
+    '.ios-quick>button .text-\\[11px\\]{color:rgba(255,255,255,.92)!important}';
+    g.forEach(function(x,i){css+='.ios-quick>button:nth-child('+(i+1)+'){background:linear-gradient(145deg,'+x[0]+','+x[1]+')!important}';});
+    css+='@media(prefers-reduced-motion:reduce){.ios-quick>button{transition:none!important}.ios-quick>button:active{transform:none!important}}';
+    s.textContent=css;document.head.appendChild(s);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+  window.addEventListener('load',apply);
+})();
+</script>
+
 </body>
   
 </html>
