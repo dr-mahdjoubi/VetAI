@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="dark">
 <head>
+<script>try{var _l=localStorage.getItem("lang");if(_l==="en"||_l==="fr"){var _h=document.documentElement;_h.lang=_l;_h.dir="ltr";_h.setAttribute("data-lang",_l)}}catch(e){}</script>
     <script>document.documentElement.classList.add("js")</script>
     <script src="loader.js"></script>
     <script>
@@ -409,6 +410,11 @@ footer.vf{margin-top:60px;border-top:1px solid var(--bd);padding:44px 0 26px;col
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=Amiri:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="i18n.css">
+<link rel="stylesheet" href="audience.css">
+<script src="i18n.js" defer></script>
+<script src="audience.js" defer></script>
 <style id="nw-style">
 /* ============ 1) البسملة: أصغر وأهدأ ============ */
 #topline .bsm2{
@@ -543,7 +549,7 @@ body[data-theme=light] .bar>.mq{background:rgba(255,255,255,.78)}
 
 <div class="toolrow"><div class="tr">
  <div class="srch"><svg class="i"><use href="#i-se"/></svg><input id="gs" autocomplete="off" placeholder="بحث شامل: مرض، سم، حيوان، موضوع..." class="inp"><div id="gsr" class="hidden absolute right-0 left-0 top-full mt-1 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl max-h-80 overflow-auto"></div></div>
- <select id="lsel" class="inp sm" title="Language"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option><option value="zh">中文</option></select>
+ <select id="lsel" class="inp sm" title="Language"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option></select>
  <div class="seg" id="thm"><button data-t="calm" title="مريح للعين">مريح</button><button data-t="dark">داكن</button><button data-t="light">فاتح</button></div>
  <div class="seg"><button id="aud-pro">مهني</button><button id="aud-pub">جمهور</button></div>
  <input type="checkbox" id="mvt" hidden>
@@ -1216,12 +1222,7 @@ let ri=0;function showR(){const x=riddles[ri];$('#whoHint').textContent=x[0];$('
 
 $('#sendWA').onclick=()=>{const n=$('#cn').value.trim(),p=$('#cph').value.trim(),a=$('#ca').value.trim();const m=`السلام عليكم دكتور، أنا ${n}.\nهاتف: ${p}\nالاستشارة: ${a}`;window.open('https://wa.me/213540661865?text='+encodeURIComponent(m),'_blank','noopener')};
 
-($('#lang')||{}).onchange=e=>{
- const l=e.target.value;
- if(l==='العربية'){document.documentElement.lang='ar';document.documentElement.dir='rtl';return}
- alert('تم تجهيز البنية متعددة اللغات. يمكن إضافة ترجمة كاملة لكل صفحات المحتوى وربطها بملفات لغة مستقلة في النسخة التالية.');
- e.target.value='العربية';
-};
+/* language switching: see i18n.js */
 
 
 const K=[
@@ -1428,7 +1429,7 @@ const get=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k)||'null');return
 const TP=['الوقاية والتلقيح','الأمراض المشتركة','تغذية الحيوان','الدواجن','المجترات','الحيوانات الأليفة','الأدوية والاستخدام الآمن','التحاليل البيطرية','رفاه الحيوان','الطب البيطري الحديث'];
 const PL=[['فيسبوك','https://www.facebook.com/sharer/sharer.php?u={U}&quote={T}'],['واتساب','https://wa.me/?text={T}'],['تيليغرام','https://t.me/share/url?url={U}&text={T}'],['X','https://twitter.com/intent/tweet?text={T}'],['لينكدإن','https://www.linkedin.com/sharing/share-offsite/?url={U}'],['إنستغرام (نسخ فقط)','']];
 const link=(i,t)=>PL[i][1].replace('{U}',encodeURIComponent(URLS)).replace('{T}',encodeURIComponent(t));
-async function S(p){try{const s=window.claude&&await claude.use('sample');if(!s)return null;const r=await s(p,{cache:false});return r.text}catch(e){return null}}
+async function S(p){try{const s=window.claude&&await claude.use('sample');if(!s)return null;const r=await s(p+(window.I18N?I18N.aiSuffix():''),{cache:false});return r.text}catch(e){return null}}
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const tmpl=(t)=>'🐾 '+t+'\n\nمعلومة سريعة: الوقاية والفحص الدوري والاستشارة المبكرة أفضل من العلاج المتأخر.\n\nتعرّف على المزيد في منصة د. محجوبي البيطرية:\n'+URLS+'\n\n#الطب_البيطري #صحة_الحيوان #رعاية_الحيوان';
 const SAFE=' معلومات صحيحة ومتحفظة، دون جرعات علاجية، وبلا مبالغة أو ادعاءات علاجية. أعد النص فقط.';
@@ -1513,30 +1514,6 @@ g('fbm').innerHTML=b.dataset.f=='up'?'شكرًا لتقييمك 🌿':'نأسف.
 <script>
 (function(){const S=async p=>{try{const s=window.claude&&await claude.use('sample');if(!s)return null;const r=await s(p,{cache:false});return r.text}catch(e){return null}};
 const g=id=>document.getElementById(id);
-// ===== Language engine
-const NAME={en:'English',fr:'French',es:'Spanish',zh:'Simplified Chinese'};
-const SEED={en:{'🏠 الرئيسية':'🏠 Home','📖 مرجع':'📖 Reference','🎓 تعلّم':'🎓 Learn','🛠️ أدوات':'🛠️ Tools','💬 مجتمع':'💬 Community','🎮 ألعاب':'🎮 Games','ℹ️ عنّا':'ℹ️ About','كل ما يحتاجه الطبيب والمربّي':'Everything veterinarians and animal keepers need','في مكان واحد':'in one place','ابحث':'Search'},
-fr:{'🏠 الرئيسية':'🏠 Accueil','📖 مرجع':'📖 Référence','🎓 تعلّم':'🎓 Apprendre','🛠️ أدوات':'🛠️ Outils','💬 مجتمع':'💬 Communauté','🎮 ألعاب':'🎮 Jeux','ℹ️ عنّا':'ℹ️ À propos','كل ما يحتاجه الطبيب والمربّي':'Tout ce dont vétérinaires et éleveurs ont besoin','في مكان واحد':'en un seul endroit','ابحث':'Rechercher'},
-es:{'🏠 الرئيسية':'🏠 Inicio','📖 مرجع':'📖 Referencia','🎓 تعلّم':'🎓 Aprender','🛠️ أدوات':'🛠️ Herramientas','💬 مجتمع':'💬 Comunidad','🎮 ألعاب':'🎮 Juegos','ℹ️ عنّا':'ℹ️ Acerca de','كل ما يحتاجه الطبيب والمربّي':'Todo lo que veterinarios y criadores necesitan','في مكان واحد':'en un solo lugar','ابحث':'Buscar'},
-zh:{'🏠 الرئيسية':'🏠 首页','📖 مرجع':'📖 参考','🎓 تعلّم':'🎓 学习','🛠️ أدوات':'🛠️ 工具','💬 مجتمع':'💬 社区','🎮 ألعاب':'🎮 游戏','ℹ️ عنّا':'ℹ️ 关于','كل ما يحتاجه الطبيب والمربّي':'兽医和养殖者所需的一切','في مكان واحد':'集于一处','ابحث':'搜索'}};
-const AR=/[\u0600-\u06FF]/;let lang='ar',cache={},rec=new Map(),busy=false,warned=false;
-try{lang=localStorage.getItem('lang')||'ar'}catch(e){}
-const st=document.createElement('div');st.style.cssText='position:fixed;bottom:130px;left:18px;z-index:70;background:#0f172a;color:#e2e8f0;border:1px solid #334155;border-radius:12px;padding:6px 10px;font-size:11px;display:none';document.body.append(st);
-const msg=t=>{st.textContent=t;st.style.display=t?'block':'none'};
-function loadCache(){try{cache=JSON.parse(localStorage.getItem('tr_'+lang)||'{}')}catch(e){cache={}}Object.assign(cache,SEED[lang]||{})}
-function saveCache(){try{localStorage.setItem('tr_'+lang,JSON.stringify(cache))}catch(e){}}
-function scan(){const out=[],w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||/^(SCRIPT|STYLE|TEXTAREA|NOSCRIPT|OPTION)$/.test(p.tagName)&&p.tagName!='OPTION')return 2;if(p.closest('.hidden,#lsel option'))return 2;return AR.test(n.nodeValue)?1:2}});let n;while(n=w.nextNode())out.push(n);return out}
-function attrs(){return [...document.querySelectorAll('[placeholder]')].filter(e=>AR.test(e.getAttribute('placeholder'))&&!e.closest('.hidden'))}
-function apply(){scan().forEach(n=>{const t=n.nodeValue.trim();const c=cache[t];if(c){if(!rec.has(n))rec.set(n,n.nodeValue);n.nodeValue=n.nodeValue.replace(t,c)}});attrs().forEach(e=>{const t=e.getAttribute('placeholder').trim(),c=cache[t];if(c){if(!rec.has(e))rec.set(e,e.getAttribute('placeholder'));e.setAttribute('placeholder',c)}})}
-async function run(){if(lang=='ar'||busy)return;busy=true;try{apply();const need=[...new Set([...scan().map(n=>n.nodeValue.trim()),...attrs().map(e=>e.getAttribute('placeholder').trim())])].filter(t=>t&&!cache[t]);if(!need.length){msg('');return}
-const chunks=[];let cur=[],len=0;need.forEach(t=>{if(cur.length>=35||len+t.length>2600){chunks.push(cur);cur=[];len=0}cur.push(t);len+=t.length});if(cur.length)chunks.push(cur);
-for(let i=0;i<chunks.length;i++){if(lang=='ar')break;msg('🌐 '+(i+1)+'/'+chunks.length+' …');const r=await S('Translate each Arabic string in the JSON array into '+NAME[lang]+'. Be literal, faithful and precise (veterinary and medical terminology). Keep emojis, digits, symbols and URLs unchanged. Return ONLY a JSON array of strings with exactly the same number of items, no commentary.\n'+JSON.stringify(chunks[i]));
-if(!r){if(!warned){warned=true;alert('الترجمة الكاملة تحتاج تفعيل المساعد الذكي (موافقة عند أول استخدام). / Full translation needs the AI assistant to be enabled.')}msg('');return}
-try{const a=JSON.parse(r.match(/\[[\s\S]*\]/)[0]);if(a.length==chunks[i].length){chunks[i].forEach((t,k)=>cache[t]=String(a[k]));saveCache();apply()}}catch(e){}}msg('')}finally{busy=false}}
-function restore(){rec.forEach((o,k)=>{if(k.nodeType==3)k.nodeValue=o;else k.setAttribute('placeholder',o)});rec.clear()}
-function setLang(l){lang=l;try{localStorage.setItem('lang',l)}catch(e){}document.documentElement.lang=l;document.documentElement.dir=l=='ar'?'rtl':'ltr';g('lsel').value=l;if(l=='ar'){restore();msg('');return}loadCache();apply();run()}
-let tm;new MutationObserver(()=>{if(lang!='ar'){clearTimeout(tm);tm=setTimeout(run,600)}}).observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class']});
-g('lsel').onchange=e=>setLang(e.target.value);if(lang!='ar')setLang(lang);else g('lsel').value='ar';
 // ===== Catalog of 1000+ topics
 const D=(window.__DZ||[]).map(r=>[r[0],r[1]]);
 const AS=['نظرة عامة','الأسباب والمسبب','الأعراض','التشخيص والتحاليل','العلاج (مبادئ عامة)','الوقاية والمكافحة','الرعاية والإدارة','المضاعفات والإنذار','التشخيص التفريقي','متى تراجع الطبيب؟','أسئلة شائعة','ملخص للطلاب'];
