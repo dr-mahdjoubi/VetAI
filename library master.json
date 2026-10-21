@@ -1,0 +1,333 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "title_original": "Merck Veterinary Manual",
+      "title_ar": "الدليل البيطري لميرك",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "طب الماشية",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Merck & Co.",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "مرجع شامل يُعدّ من أشهر المراجع العالمية في تشخيص الأمراض وعلاجها لدى الحيوانات الأليفة والمواشي. يجمع بين الجانب الإكلينيكي والتعريفي في عرض منظم. يخدم الأطباء البيطريين والطلاب والمربين كمرجع أولي.",
+      "keywords": [
+        "دليل ميرك البيطري",
+        "تشخيص الأمراض",
+        "علاج الأمراض",
+        "الحيوانات الأليفة",
+        "المواشي",
+        "مرجع إكلينيكي",
+        "Merck Veterinary Manual"
+      ],
+      "source_url": "https://www.merckvetmanual.com",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. يشمل أنواعاً متعددة؛ التصنيف الأقرب طب الحيوانات الأليفة والبديل طب الماشية."
+    },
+    {
+      "id": 2,
+      "title_original": "Textbook of Veterinary Internal Medicine",
+      "title_ar": "كتاب الطب الباطني البيطري",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Stephen J. Ettinger & Edward C. Feldman",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "المرجع الأساسي لدراسة الأمراض الباطنية لدى الكلاب والقطط والحيوانات الصغيرة. كتاب أكاديمي مرجعي من تأليف ستيفن إتينجر وإدوارد فيلدمان. يعتمد عليه الطلاب والأطباء في فهم الأمراض الباطنية وتشخيصها.",
+      "keywords": [
+        "الطب الباطني البيطري",
+        "الكلاب",
+        "القطط",
+        "الحيوانات الصغيرة",
+        "كتاب أكاديمي",
+        "Veterinary Internal Medicine"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة."
+    },
+    {
+      "id": 3,
+      "title_original": "Veterinary Surgery: Small Animal",
+      "title_ar": "الجراحة البيطرية: الحيوانات الصغيرة",
+      "category": "جراحة بيطرية",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Karen M. Tobias & Spencer A. Johnston",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "كتاب جراحي متخصص يغطي أحدث التقنيات الجراحية للحيوانات الصغيرة. يعرض تفاصيل العمليات خطوة بخطوة. موجّه للجراحين البيطريين وطلاب الجراحة.",
+      "keywords": [
+        "الجراحة البيطرية",
+        "الحيوانات الصغيرة",
+        "التقنيات الجراحية",
+        "العمليات الجراحية",
+        "جراحة الكلاب والقطط",
+        "Small Animal Surgery"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة."
+    },
+    {
+      "id": 4,
+      "title_original": "Large Animal Internal Medicine",
+      "title_ar": "الطب الباطني للحيوانات الكبيرة",
+      "category": "طب الماشية",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Bradford P. Smith",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "مرجع علمي يختص بالطب الباطني للحيوانات الكبيرة والماشية، ومنها الأبقار والخيول والأغنام. يفيد الأطباء والطلاب العاملين في طب المزارع والخيول.",
+      "keywords": [
+        "الطب الباطني",
+        "الحيوانات الكبيرة",
+        "الماشية",
+        "الأبقار",
+        "الخيول",
+        "الأغنام",
+        "Large Animal Medicine"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة."
+    },
+    {
+      "id": 5,
+      "title_original": "Adams' and Stashak's Lameness in Horses",
+      "title_ar": "العرج في الخيول (آدامز وستاشاك)",
+      "category": "طب الماشية",
+      "alt_category": "جراحة بيطرية",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Ted S. Stashak & Troy N. Baxter",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "مرجع تخصصي في طب الخيول يُعدّ الأهم عالمياً لتشخيص وعلاج مشاكل العرج والحركة. موجّه لأطباء الخيول والمتخصصين في الجهاز الحركي.",
+      "keywords": [
+        "العرج",
+        "الخيول",
+        "طب الخيول",
+        "الجهاز الحركي",
+        "تشخيص العرج",
+        "علاج العرج",
+        "Equine Lameness"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. القائمة لا تحوي تصنيفاً للخيول؛ اخترت طب الماشية (حيوانات كبيرة)."
+    },
+    {
+      "id": 6,
+      "title_original": "Veterinary Pharmacology and Therapeutics",
+      "title_ar": "علم الأدوية والعلاج البيطري",
+      "category": "علم الأدوية",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Jim R. Riviere & Mark G. Papich",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "مرجع علمي يغطي حركية الدواء وتأثيراته الدوائية والجرعات لمختلف الحيوانات. يخدم الأطباء البيطريين وطلاب علم الأدوية.",
+      "keywords": [
+        "علم الأدوية البيطري",
+        "حركية الدواء",
+        "التأثيرات الدوائية",
+        "الجرعات",
+        "العلاج البيطري",
+        "Veterinary Pharmacology"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة."
+    },
+    {
+      "id": 7,
+      "title_original": "Pathologic Basis of Veterinary Disease",
+      "title_ar": "الأساس المرضي للأمراض البيطرية",
+      "category": "تشخيص مخبري",
+      "alt_category": "أمراض معدية وبائية",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "James F. Zachary",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "كتاب في علم الأمراض يشرح التغيرات المرضية والتشريحية للأنسجة والأعضاء المصابة لدى الحيوانات. يساعد على فهم أسس المرض وربطها بالتشخيص.",
+      "keywords": [
+        "علم الأمراض",
+        "التغيرات المرضية",
+        "الأنسجة والأعضاء",
+        "التشخيص المرضي",
+        "Veterinary Pathology"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. علم الأمراض لا يطابق تصنيفاً بعينه؛ التصنيف الأقرب تشخيص مخبري."
+    },
+    {
+      "id": 8,
+      "title_original": "Handbook of Veterinary Emergency and Critical Care",
+      "title_ar": "دليل الطوارئ والعناية الحرجة البيطرية",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "جراحة بيطرية",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Rebecca Kirby & Erik R. Hofmeister [يحتاج تحقق]",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "دليل إرشادي يركز على العناية المركزة وإدارة حالات الطوارئ والإسعافات البيطرية الحرجة. موجّه للأطباء العاملين في العيادات ومراكز الطوارئ.",
+      "keywords": [
+        "الطوارئ البيطرية",
+        "العناية المركزة",
+        "الإسعافات الحرجة",
+        "الإنعاش",
+        "Veterinary Emergency",
+        "Critical Care"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. لم أتمكن من تأكيد مطابقة هذا العنوان لهذين المؤلفين؛ راجع صفحة الكتاب قبل النشر."
+    },
+    {
+      "id": 9,
+      "title_original": "Blackwell's Five-Minute Veterinary Consult: Canine and Feline",
+      "title_ar": "استشارة بلاكويل البيطرية في خمس دقائق: الكلاب والقطط",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "Larry P. Tilley & Francis W. K. Smith Jr.",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "دليل تشخيص وعلاج سريع للكلاب والقطط. مرجع منظم يتيح للأطباء الوصول السريع إلى بروتوكولات العلاج.",
+      "keywords": [
+        "استشارة بيطرية سريعة",
+        "تشخيص وعلاج",
+        "الكلاب",
+        "القطط",
+        "بروتوكولات العلاج",
+        "Five-Minute Veterinary Consult"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة."
+    },
+    {
+      "id": 10,
+      "title_original": "Veterinary Microbiology",
+      "title_ar": "علم الأحياء الدقيقة البيطري",
+      "category": "أمراض معدية وبائية",
+      "alt_category": "تشخيص مخبري",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "D. Scott McVey, Melissa J. Kennedy, M. Boulianne [يحتاج تحقق]",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "كتاب في علم الأحياء الدقيقة يتناول البكتيريا والفيروسات والفطريات المسببة للأمراض البيطرية وطرق مقاومتها.",
+      "keywords": [
+        "الأحياء الدقيقة البيطرية",
+        "البكتيريا",
+        "الفيروسات",
+        "الفطريات",
+        "مسببات الأمراض",
+        "Veterinary Microbiology"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. اسم المؤلف الثالث كما وصلني؛ راجع صفحة الغلاف لأنني لا أستطيع تأكيده."
+    },
+    {
+      "id": 11,
+      "title_original": "Veterinary Parasitology",
+      "title_ar": "علم الطفيليات البيطري",
+      "category": "أمراض معدية وبائية",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "M.A. Taylor, R.L. Coop, R.L. Wall",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "كتاب في علم الطفيليات يغطي الطفيليات الداخلية والخارجية التي تصيب الحيوانات. يتناول طرق الوقاية منها وعلاجها.",
+      "keywords": [
+        "الطفيليات البيطرية",
+        "الطفيليات الداخلية",
+        "الطفيليات الخارجية",
+        "الوقاية",
+        "العلاج",
+        "Veterinary Parasitology"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة."
+    },
+    {
+      "id": 12,
+      "title_original": "Anatomy of Domestic Animals: Textbook and Colour Atlas",
+      "title_ar": "تشريح الحيوانات المستأنسة: كتاب وأطلس ملوّن",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "H. G. König & H. G. Liebich",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "أطلس تشريحي مصور يقدّم مرجعاً بصرياً دقيقاً لتشريح أعضاء وأجهزة الحيوانات المستأنسة. يفيد طلاب الطب البيطري والأطباء.",
+      "keywords": [
+        "التشريح البيطري",
+        "الحيوانات المستأنسة",
+        "أطلس تشريحي",
+        "الأعضاء والأجهزة",
+        "Veterinary Anatomy"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. لا يوجد تصنيف للتشريح ضمن قائمتك؛ وضعته مؤقتاً تحت طب الحيوانات الأليفة، ويُفضّل إضافة تصنيف «علوم أساسية»."
+    },
+    {
+      "id": 13,
+      "title_original": "Journal of Veterinary Internal Medicine (JVIM)",
+      "title_ar": "مجلة الطب الباطني البيطري (JVIM)",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "",
+      "content_type": "مجلة دورية",
+      "authors_publisher": "Wiley Online Library",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "دورية بحثية عالمية محكمة تنشر أحدث الأبحاث السريرية في الطب الباطني البيطري. مصدر للأطباء والباحثين لمتابعة المستجدات.",
+      "keywords": [
+        "الطب الباطني البيطري",
+        "أبحاث سريرية",
+        "دورية محكمة",
+        "JVIM",
+        "Veterinary Internal Medicine"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. الناشر كما وصلني (Wiley Online Library هي المنصة)؛ تأكد من الجهة الناشرة. تصنيفها يشمل أنواعاً متعددة."
+    },
+    {
+      "id": 14,
+      "title_original": "American Journal of Veterinary Research (AJVR)",
+      "title_ar": "المجلة الأمريكية للأبحاث البيطرية (AJVR)",
+      "category": "طب الحيوانات الأليفة",
+      "alt_category": "طب الماشية",
+      "content_type": "مجلة دورية",
+      "authors_publisher": "American Veterinary Medical Association (AVMA)",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "مجلة أبحاث محكمة تُعدّ منصة رائدة لنشر الدراسات والأبحاث المخبرية والميدانية البيطرية الحديثة.",
+      "keywords": [
+        "أبحاث بيطرية",
+        "دراسات مخبرية",
+        "دراسات ميدانية",
+        "مجلة محكمة",
+        "AJVR",
+        "AVMA"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. تغطي أنواعاً متعددة ولا تنحصر في تصنيف واحد."
+    },
+    {
+      "id": 15,
+      "title_original": "Clinical Veterinary Advisor: The Horse",
+      "title_ar": "المستشار السريري البيطري: الخيول",
+      "category": "طب الماشية",
+      "alt_category": "",
+      "content_type": "كتاب تعليمي",
+      "authors_publisher": "David A. Wilson",
+      "year": "[يحتاج تحقق]",
+      "abstract_ar": "مرجع إكلينيكي للخيول يقدم إرشادات سريعة ومنظمة للأمراض الشائعة والحرجة وطرق التعامل معها.",
+      "keywords": [
+        "طب الخيول",
+        "مرجع إكلينيكي",
+        "أمراض الخيول",
+        "الحالات الحرجة",
+        "Equine Medicine"
+      ],
+      "source_url": "",
+      "abstract_basis": "وصف المستخدم + العنوان فقط",
+      "notes": "السنة غير مزوّدة. القائمة لا تحوي تصنيفاً للخيول؛ اخترت طب الماشية."
+    }
+  ]
+}
