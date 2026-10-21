@@ -1,0 +1,37 @@
+name: Security and Code Quality Scan
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  schedule:
+    - cron: '30 1 * * 1' # يفحص النظام أسبوعياً تلقائياً (الاثنين 01:30 UTC)
+
+jobs:
+  security-check:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # فحص مكتبات Python (السكريبت يعتمد على requirements.txt)
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/python@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --file=requirements.txt --sarif-file-output=snyk.sarif
+
+      # يُرفع التقرير فقط إذا تم إنشاؤه فعلاً
+      - name: Upload result to GitHub Security
+        if: always() && hashFiles('snyk.sarif') != ''
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: snyk.sarif
