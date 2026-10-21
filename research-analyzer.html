@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>محلل الأبحاث العلمية البيطرية · VetAI</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f9fb;--fg:#17222b;--mut:#5a6b78;--card:#fff;--bd:#dbe3ea;--ac:#0f766e;--acfg:#fff;--warn:#fff4e0;--warnbd:#e8b45c;--err:#b42318}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1519;--fg:#e6edf2;--mut:#98a8b4;--card:#18222a;--bd:#2a3944;--ac:#4fd1c0;--acfg:#06201c;--warn:#2d2410;--warnbd:#8a6a24;--err:#ff9d93}}
+:root[data-theme="dark"]{--bg:#0f1519;--fg:#e6edf2;--mut:#98a8b4;--card:#18222a;--bd:#2a3944;--ac:#4fd1c0;--acfg:#06201c;--warn:#2d2410;--warnbd:#8a6a24;--err:#ff9d93}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;line-height:1.8;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.w{max-width:820px;margin:0 auto;padding:16px}
+a{color:var(--ac)}
+h1{font-size:1.5rem;margin:.3em 0 .1em}
+.sub,.note{color:var(--mut)}.note{font-size:.88rem}
+.warn{background:var(--warn);border:1px solid var(--warnbd);border-radius:12px;padding:10px 14px;margin:12px 0;font-size:.92rem}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin:12px 0}
+.drop{display:block;border:2px dashed var(--bd);border-radius:14px;padding:24px 14px;text-align:center;cursor:pointer;color:var(--mut)}
+.drop:hover,.drop:focus-within{border-color:var(--ac);color:var(--fg)}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+label.f{display:block;font-weight:600;margin:12px 0 4px}
+textarea{width:100%;min-height:110px;font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px;resize:vertical}
+.go{width:100%;margin-top:14px;font:inherit;font-weight:700;border:0;border-radius:12px;padding:13px;background:var(--ac);color:var(--acfg);cursor:pointer}
+.go:disabled{opacity:.55;cursor:wait}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.rep h2{font-size:1.1rem;margin:1.3em 0 .3em;border-bottom:1px solid var(--bd);padding-bottom:4px}
+.rep h3{font-size:1rem;margin:.9em 0 .2em}
+.rep ul{margin:.3em 0;padding-inline-start:1.2em}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:.92rem}
+th,td{border:1px solid var(--bd);padding:7px 9px;text-align:right;vertical-align:top}
+th{background:var(--bg)}
+.cite{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;margin:6px 0;direction:ltr;text-align:left;overflow-wrap:anywhere;font-size:.92rem}
+.cp{font:inherit;font-size:.85rem;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:8px;padding:4px 12px;cursor:pointer;margin-bottom:10px}
+.err{color:var(--err)}
+</style>
+</head>
+<body>
+<div class="w">
+  <a href="index_new.html">العودة إلى الموقع</a>
+  <h1>محلل الأبحاث العلمية البيطرية</h1>
+  <p class="sub">ارفع بحثًا بصيغة PDF أو الصق نصه، واحصل على ملخص علمي وتطبيق عملي وفجوات بحثية واقتباس جاهز.</p>
+  <div class="warn"><b>تنبيه:</b> التحليل مولَّد بالذكاء الاصطناعي ويستند إلى نص البحث المرفوع فقط. راجع الأرقام والاقتباسات في البحث الأصلي قبل الاستشهاد بها أو تطبيقها سريريًا.</div>
+
+  <div class="box">
+    <label class="drop"><input id="file" type="file" accept="application/pdf">
+      <b id="fn">اختر ملف PDF</b><br><span class="note">حتى 15 ميغابايت. أو الصق النص في الحقل أدناه.</span></label>
+    <label class="f" for="tx">أو الصق نص البحث / الملخص</label>
+    <textarea id="tx" placeholder="الصق هنا العنوان والملخص أو النص الكامل"></textarea>
+    <button class="go" id="go" type="button">حلّل البحث</button>
+    <p class="note" id="st" role="status"></p>
+  </div>
+  <div id="out" aria-live="polite"></div>
+</div>
+
+<script>
+/* الخادم الوسيط الذي يحمل مفتاح API (research-proxy.js). لا تضع المفتاح هنا. */
+var API_URL='/api/research', MAX=15*1024*1024, pdf=null;
+var $=function(i){return document.getElementById(i)};
+function el(t,x,c){var e=document.createElement(t);if(x!=null)e.textContent=x;if(c)e.className=c;return e}
+function list(a){var u=el('ul');(a||[]).forEach(function(x){u.appendChild(el('li',x))});return u}
+
+$('file').addEventListener('change',function(e){
+  var f=e.target.files[0];if(!f)return;
+  if(f.size>MAX){$('st').textContent='الملف أكبر من 15 ميغابايت. الصق النص بدلًا منه.';e.target.value='';return}
+  var r=new FileReader();r.onload=function(){pdf=r.result.split(',')[1];$('fn').textContent=f.name};r.readAsDataURL(f);
+});
+
+$('go').addEventListener('click',async function(){
+  var st=$('st'),out=$('out'),b=$('go'),tx=$('tx').value.trim();
+  if(!pdf&&tx.length<200){st.textContent='ارفع ملف PDF أو الصق نصًا لا يقل عن بضعة أسطر.';return}
+  b.disabled=true;st.textContent='جارٍ قراءة البحث وتحليله، قد يستغرق دقيقة أو أكثر...';out.textContent='';
+  try{
+    var r=await fetch(API_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pdf:pdf,text:pdf?'':tx.slice(0,120000)})});
+    if(!r.ok)throw 0;var d=await r.json();render(d.report||d);st.textContent='';
+  }catch(e){st.textContent='';out.appendChild(el('p','تعذّر التحليل. تأكد أن الملف نصي (غير ممسوح ضوئيًا بجودة رديئة) وأقل من الحد المسموح، ثم أعد المحاولة.','err'))}
+  b.disabled=false;
+});
+
+/* ---- تنسيق الاقتباس ---- */
+function initials(g){return (g||'').split(/[\s]+/).filter(Boolean).map(function(p){return p.split('-').map(function(q){return q.charAt(0).toUpperCase()})})}
+function apaA(a){var i=initials(a.given).map(function(p){return p.map(function(x){return x+'.'}).join('-')}).join(' ');return a.family+(i?', '+i:'')}
+function vanA(a){return a.family+' '+initials(a.given).map(function(p){return p.join('')}).join('')}
+function citeAPA(m){
+  var A=(m.authors||[]).map(apaA),au=A.length>1?A.slice(0,-1).join(', ')+', & '+A[A.length-1]:(A[0]||'');
+  var vol=m.volume?m.volume+(m.issue?'('+m.issue+')':''):'';
+  var parts=[au,'('+(m.year||'n.d.')+').',(m.title||'').replace(/\.$/,'')+'.'];
+  var j=[m.journal,vol,m.pages].filter(Boolean);
+  return {t:parts.join(' ')+(j.length?' '+j.join(', ')+'.':'')+(m.doi?' https://doi.org/'+m.doi:''),
+          h:parts.join(' ')+(j.length?' <i>'+[m.journal,vol&&'<i>'+vol.split('(')[0]+'</i>'+(m.issue?'('+m.issue+')':''),m.pages].filter(Boolean).join(', ').replace('<i></i>','')+'</i>.':'')+(m.doi?' https://doi.org/'+m.doi:'')};
+}
+function citeVan(m){
+  var A=(m.authors||[]).map(vanA),au=A.length>6?A.slice(0,6).join(', ')+', et al.':A.join(', ');
+  var j=(m.journal_abbrev||m.journal||'')+' '+(m.year||'')+(m.volume?';'+m.volume+(m.issue?'('+m.issue+')':''):'')+(m.pages?':'+m.pages:'');
+  return au+(au?'. ':'')+(m.title||'').replace(/\.$/,'')+'. '+j.trim()+'.'+(m.doi?' doi:'+m.doi:'');
+}
+function copyBtn(txt,html){
+  var b=el('button','نسخ','cp');b.type='button';
+  b.onclick=async function(){
+    try{if(html&&window.ClipboardItem){await navigator.clipboard.write([new ClipboardItem({'text/plain':new Blob([txt],{type:'text/plain'}),'text/html':new Blob([html],{type:'text/html'})})])}else{await navigator.clipboard.writeText(txt)}b.textContent='تم النسخ'}
+    catch(e){b.textContent='انسخ يدويًا'}
+    setTimeout(function(){b.textContent='نسخ'},1800)};
+  return b;
+}
+
+function render(r){
+  var rep=el('div',null,'rep'),s=r.summary||{},m=s.methodology||{};
+  rep.appendChild(el('h2','1. الملخص العلمي'));
+  if(r.source_note)rep.appendChild(el('p',r.source_note,'note'));
+  rep.appendChild(el('h3','الهدف الرئيسي'));rep.appendChild(el('p',s.objective));
+  rep.appendChild(el('h3','المنهجية (Methodology)'));
+  var rows=[['التصميم',m.design],['العينة والحيوانات',m.population],['التدخل / القياسات',m.interventions],['المدة والمكان',m.setting],['التحليل الإحصائي',m.statistics]].filter(function(x){return x[1]});
+  var tw=el('div',null,'tw'),t=el('table');rows.forEach(function(x){var tr=el('tr');tr.appendChild(el('th',x[0]));tr.appendChild(el('td',x[1]));t.appendChild(tr)});tw.appendChild(t);rep.appendChild(tw);
+  rep.appendChild(el('h3','أهم النتائج الرقمية'));
+  var tw2=el('div',null,'tw'),t2=el('table'),h=el('tr');['النتيجة','القيم كما وردت في البحث'].forEach(function(x){h.appendChild(el('th',x))});t2.appendChild(h);
+  (s.key_results||[]).forEach(function(k){var tr=el('tr');tr.appendChild(el('td',k.finding));tr.appendChild(el('td',k.numbers));t2.appendChild(tr)});tw2.appendChild(t2);rep.appendChild(tw2);
+  if((s.limitations||[]).length){rep.appendChild(el('h3','حدود الدراسة'));rep.appendChild(list(s.limitations))}
+  rep.appendChild(el('h2','2. التطبيق العملي للطبيب الممارس'));
+  rep.appendChild(list(r.practical));
+  if(r.practical_caveat)rep.appendChild(el('p',r.practical_caveat,'note'));
+  rep.appendChild(el('h2','3. الفجوات البحثية'));rep.appendChild(list(r.gaps));
+  rep.appendChild(el('h2','4. التوثيق'));
+  var m2=r.metadata||{},a=citeAPA(m2),v=citeVan(m2);
+  rep.appendChild(el('h3','APA 7'));rep.appendChild(el('div',a.t,'cite'));rep.appendChild(copyBtn(a.t,a.h));
+  rep.appendChild(el('h3','Vancouver'));rep.appendChild(el('div',v,'cite'));rep.appendChild(copyBtn(v));
+  rep.appendChild(el('p','الاقتباس مبني على بيانات استُخرجت من الملف نفسه. تحقق من اسم المجلة والمجلد والصفحات وDOI قبل النشر. إن غابت بيانات فستظهر ناقصة ولا تُخمَّن.','note'));
+  rep.appendChild(el('p','إخلاء مسؤولية: تحليل استرشادي مدعوم بالذكاء الاصطناعي ولا يغني عن قراءة البحث الأصلي وتقييمه نقديًا.','note'));
+  $('out').appendChild(rep);rep.scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>
