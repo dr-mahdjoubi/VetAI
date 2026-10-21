@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدليل المرجعي للأمراض البيطرية · VetAI</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f9fb;--fg:#17222b;--mut:#5a6b78;--card:#fff;--bd:#dbe3ea;--ac:#0f766e;--warn:#fff4e0;--warnbd:#e8b45c}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1519;--fg:#e6edf2;--mut:#98a8b4;--card:#18222a;--bd:#2a3944;--ac:#4fd1c0;--warn:#2d2410;--warnbd:#8a6a24}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;line-height:1.8}
+.w{max-width:960px;margin:0 auto;padding:16px}
+a{color:var(--ac)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+h1{font-size:1.5rem;margin:.4em 0}
+.warn{background:var(--warn);border:1px solid var(--warnbd);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:.95rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{display:block;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;text-decoration:none;color:inherit}
+.card b{display:block;font-size:1.1rem;color:var(--ac)}
+.card span{color:var(--mut);font-size:.9rem}
+#doc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 18px;overflow-wrap:anywhere}
+#doc h1{font-size:1.4rem} #doc h2{font-size:1.2rem;border-bottom:1px solid var(--bd);padding-bottom:4px;margin-top:1.6em} #doc h3{font-size:1.05rem}
+.tw{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92rem}
+th,td{border:1px solid var(--bd);padding:8px 10px;vertical-align:top;text-align:right}
+th{background:var(--bg)}
+blockquote{margin:10px 0;padding:8px 14px;border-inline-start:4px solid var(--warnbd);background:var(--warn);border-radius:8px}
+.err{color:#b42318}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="top"><a href="index_new.html">← العودة إلى الموقع</a><a id="back" href="#" hidden>← كل المجلدات</a></div>
+  <h1>الدليل المرجعي للأمراض البيطرية</h1>
+  <div class="warn"><b>تنبيه مهني:</b> هذا المحتوى مرجع تعليمي مساعد وليس بديلًا عن الفحص السريري. الجرعات نطاقات شائعة في المراجع، وفترات السحب خاصة بكل منتج وبلد، والمرجع القانوني الوحيد هو نشرة المنتج المرخص محليًا. راجع الجرعات مع مرجع دوائي مثل Plumb's قبل أي استعمال.</div>
+
+  <div id="hub" class="grid">
+    <a class="card" href="#vol1"><b>المجلد الأول: الكلاب والقطط</b><span>Parvovirus، Distemper، Panleukopenia، الجهاز التنفسي العلوي للقطط، Leptospirosis</span></a>
+    <a class="card" href="#vol2"><b>المجلد الثاني: المجترات</b><span>حمى اللبن، Enterotoxemia، BRD، إسهال العجول، Brucellosis، FMD</span></a>
+    <a class="card" href="#vol3"><b>المجلد الثالث: الدواجن</b><span>Newcastle، Avian Influenza، Gumboro، Infectious Bronchitis، Coccidiosis، Colibacillosis</span></a>
+    <a class="card" href="#vol4"><b>المجلد الرابع: الأمراض المشتركة</b><span>داء الكلب، المالطية، الجمرة الخبيثة، حمى Q، داء الكيس العدري</span></a>
+  </div>
+
+  <div id="doc" hidden></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+<script>
+var VOLS={
+  vol1:{file:'guide-vol1-dogs-cats.md',title:'المجلد الأول: الكلاب والقطط'},
+  vol2:{file:'guide-vol2-ruminants.md',title:'المجلد الثاني: المجترات'},
+  vol3:{file:'guide-vol3-poultry.md',title:'المجلد الثالث: الدواجن'},
+  vol4:{file:'guide-vol4-zoonoses.md',title:'المجلد الرابع: الأمراض المشتركة'}
+};
+var hub=document.getElementById('hub'),doc=document.getElementById('doc'),back=document.getElementById('back');
+function show(){
+  var k=(location.hash||'').slice(1),v=VOLS[k];
+  if(!v){hub.hidden=false;doc.hidden=true;back.hidden=true;document.title='الدليل المرجعي للأمراض البيطرية · VetAI';return;}
+  hub.hidden=true;doc.hidden=false;back.hidden=false;document.title=v.title+' · VetAI';
+  doc.textContent='جارٍ التحميل...';
+  fetch(v.file,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(md){
+    var html=marked.parse(md);
+    doc.innerHTML=window.DOMPurify?DOMPurify.sanitize(html):html;
+    doc.querySelectorAll('table').forEach(function(t){var w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t);});
+    window.scrollTo(0,0);
+  }).catch(function(){
+    doc.innerHTML='<p class="err">تعذّر تحميل الملف <code dir="ltr">'+v.file+'</code>. تأكد أنه موجود بجانب هذه الصفحة، وأنك تفتح الموقع عبر رابط http/https لا من ملف محلي.</p>';
+  });
+}
+window.addEventListener('hashchange',show);show();
+</script>
+</body>
+</html>
