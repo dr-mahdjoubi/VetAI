@@ -1,0 +1,10 @@
+{
+  "books": [
+    {
+      "title": "الدليل البيطري لميرك",
+      "author": "Merck & Co.",
+      "subject": "طب الحيوانات الأليفة",
+      "file": "https://www.merckvetmanual.com"
+    }
+  ]
+}
