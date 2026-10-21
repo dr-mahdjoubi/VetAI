@@ -37,6 +37,27 @@
     ['📚 المراجع', '<ul class="aud-links">' + [link('https://pubmed.ncbi.nlm.nih.gov/', 'PubMed — الأدبيات المحكّمة'), link('https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-manual-online-access/', 'WOAH Terrestrial Manual'), link('https://www.merckvetmanual.com/', 'Merck Veterinary Manual'), link('https://wsava.org/global-guidelines/', 'WSAVA Global Guidelines'), link('https://www.acvim.org/consensus-statements', 'ACVIM Consensus Statements'), link('https://www.fao.org/animal-health/en', 'FAO — Animal Health')].join('') + '</ul>' + note('هذه بوابات مرجعية رسمية؛ ابحث فيها عن آخر الدراسات حول المرض الذي تهتم به.')]
   ];
 
+
+  /* ---- "🆕 الجديد" tab fed by data/*.json (written daily by agents/run_agents.py) ---- */
+  var esc = function (t) { return String(t == null ? '' : t).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var safeUrl = function (u) { return /^https?:\/\//i.test(u || '') ? esc(u) : ''; };
+  function renderFeed(a) {
+    return note('محتوى يُحدَّث يوميًا تلقائيًا بالذكاء الاصطناعي ولم يُراجَع طبيًا؛ ارجع للمصدر الأصلي.') + a.slice(0, 20).map(function (x) {
+      var body = x.body ? '<p>' + esc(x.body).split(/\n\s*\n/).join('</p><p>') + '</p>' : '';
+      return '<details><summary>' + esc(x.title) + '</summary><p>' + esc(x.summary) + '</p>' + body +
+        '<p><small>' + esc(x.category || '') + (x.journal ? ' · ' + esc(x.journal) : '') + (x.meta ? ' · ' + esc(x.meta) : '') + ' · ' + esc((x.added || '').slice(0, 10)) + '</small>' +
+        (safeUrl(x.url) ? ' <a href="' + safeUrl(x.url) + '" target="_blank" rel="noopener noreferrer">المصدر ↗</a>' : '') + '</p></details>';
+    }).join('');
+  }
+  function loadFeeds() {
+    [['breeder', 'breeders'], ['student', 'students'], ['researcher', 'researchers']].forEach(function (p) {
+      fetch('data/' + p[1] + '.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) {
+        if (!a.length) return; D[p[0]].tabs.unshift(['🆕 الجديد', renderFeed(a)]);
+        if (ov && !ov.hidden && cur === p[0]) show(cur, tab + 1);
+      }).catch(function () {});
+    });
+  }
+
   var order = ['breeder', 'student', 'researcher'], cur = 'breeder', tab = 0, opener = null, ov;
   function build() {
     ov = document.createElement('div'); ov.className = 'aud-ov'; ov.hidden = true;
@@ -69,6 +90,7 @@
     setTimeout(function () { ov.hidden = true; }, 220); if (opener) opener.focus();
   }
   function init() {
+    loadFeeds();
     var cards = document.querySelectorAll('.tri .card');
     cards.forEach(function (c, i) {
       var k = order[i]; if (!k) return;
