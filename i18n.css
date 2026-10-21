@@ -1,0 +1,32 @@
+/* VetAI i18n — fonts, bidi and layout stability (ar / en / fr) */
+:root{--f-ar:'Cairo','Tajawal',system-ui,sans-serif;--f-lat:'Inter','Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif}
+
+/* Fonts per language (beats the page's !important rules by specificity) */
+html[lang=ar] body,html[lang=ar] :where(h1,h2,h3,h4,.font-black,.font-extrabold){font-family:var(--f-ar)!important}
+html[lang=en] body,html[lang=fr] body,
+html[lang=en] :where(h1,h2,h3,h4,.font-black,.font-extrabold),
+html[lang=fr] :where(h1,h2,h3,h4,.font-black,.font-extrabold){font-family:var(--f-lat)!important}
+html:not([lang=ar]) :is(.bsm h1,.bsm2,.zdn){font-family:Georgia,'Times New Roman',serif!important}
+html:not([lang=ar]) .bsm small{letter-spacing:.2em}
+html[lang=en] body,html[lang=fr] body{line-height:1.65;letter-spacing:0}
+
+/* Mixed-direction text: Latin terms and numbers stay readable, no glyph/symbol shuffling */
+:where(p,li,h1,h2,h3,h4,h5,h6,td,th,label,summary,figcaption,input,textarea){unicode-bidi:plaintext;text-align:start}
+:where(bdi,.ltr-term,code,kbd){unicode-bidi:isolate;direction:ltr}
+input[type=number],input[type=tel],input[type=email],input[type=url]{text-align:start}
+html[dir=ltr] input[type=number]{direction:ltr}
+
+/* Logical alignment replacing physical Tailwind utilities (same look in RTL, mirrored in LTR) */
+.text-right{text-align:start!important}.text-left{text-align:end!important}
+.ex-opt{text-align:start!important}
+html[dir=ltr] .qa:hover .go{transform:translateX(4px)}
+html[dir=ltr] [class*="rotate-180"]{--tw-rotate:0deg}
+@keyframes vxmq-ltr{to{transform:translateX(-50%)}}
+html[dir=ltr] [style*="vxmq"],html[dir=ltr] .marquee,html[dir=ltr] .mq{animation-name:vxmq-ltr!important}
+
+/* Layout stability: text length may change, boxes must not */
+.grid>*,.flex>*{min-width:0}
+:where(h1,h2,h3,h4,p,li,td,th,button,a,label,span){overflow-wrap:break-word}
+select,button,input{max-width:100%}
+.glass-panel,.card,.qa{box-sizing:border-box}
+select#lsel{min-width:5.5rem;inline-size:auto}
