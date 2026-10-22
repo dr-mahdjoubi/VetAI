@@ -691,6 +691,50 @@ document.addEventListener('DOMContentLoaded',function(){window.aiFill()});
 .sq:hover>.am-img{transform:none}
 @media(max-width:900px){.vh{grid-template-columns:1fr;padding-top:30px}.sp-g{grid-template-columns:repeat(2,1fr)}.sq{height:140px}.vh .stats{flex-wrap:wrap;gap:14px 0}.vh .stats>div{flex:1 1 45%}.vit b{font-size:1.35rem}}
 </style>
+<meta name="description" content="منصة بيطرية عربية مجانية بإشراف د. محجوبي عبدالناصر: مقيّم أعراض، مرجع أمراض وأدوية، اختبارات، ومساعد ذكي.">
+<style id="vx-polish">
+/* ===== طبقة تحسين التصميم ===== */
+:root{--vx-r:18px;--vx-ease:cubic-bezier(.22,.8,.3,1)}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--barh,90px) + 12px)}
+body{font-family:'IBM Plex Sans Arabic','Cairo','Inter',system-ui,sans-serif;line-height:1.85;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.sh2 h2{font-family:'Cairo','IBM Plex Sans Arabic',sans-serif;text-wrap:balance}
+p,.sub,.muted{text-wrap:pretty}
+.vh .sub,.sh2 p,.muted{max-width:68ch}
+::selection{background:color-mix(in srgb,var(--a1,#06b6d4) 35%,transparent);color:inherit}
+/* تركيز واضح للوحة المفاتيح */
+a:focus-visible,button:focus-visible,[role=button]:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--a1,#06b6d4);outline-offset:3px;border-radius:12px}
+/* بطاقات: تماسك في الحواف والعمق */
+.card,.tool,.glass-panel{border-radius:var(--vx-r);transition:transform .35s var(--vx-ease),border-color .3s,box-shadow .35s var(--vx-ease)}
+.qa:hover,.card.aud-card:hover{border-color:color-mix(in srgb,var(--a1,#06b6d4) 55%,var(--bd,#334155));box-shadow:0 22px 44px -26px color-mix(in srgb,var(--a1,#06b6d4) 70%,transparent)}
+.dl{display:flex;flex-direction:column;gap:2px;padding:12px 14px;margin:8px 0;border:1px solid var(--bd,#1e293b);border-radius:14px;text-decoration:none;color:inherit;transition:border-color .25s,background .25s}
+.dl:hover{border-color:var(--a1,#06b6d4);background:color-mix(in srgb,var(--a1,#06b6d4) 8%,transparent)}
+.dl b{overflow-wrap:anywhere}.dl span{font-size:.85rem;color:var(--mut,#94a3b8)}
+/* حقول الإدخال */
+input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea{transition:border-color .2s,box-shadow .2s}
+input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,select:focus,textarea:focus{border-color:var(--a1,#06b6d4)!important;box-shadow:0 0 0 4px color-mix(in srgb,var(--a1,#06b6d4) 18%,transparent);outline:none}
+.vh .hsearch:focus-within{box-shadow:0 0 0 4px color-mix(in srgb,var(--a1,#06b6d4) 20%,transparent)}
+/* أزرار */
+.btn{min-height:44px}.btn:active{transform:scale(.98)}
+/* التفاصيل القابلة للطي */
+details.art>summary,details>summary{cursor:pointer;list-style:none}details>summary::-webkit-details-marker{display:none}
+details[open]>summary{margin-bottom:8px}
+/* شريط التمرير بلون المنصة */
+*{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--a1,#06b6d4) 40%,#1e293b) transparent}
+/* الجداول على الهاتف */
+table{max-width:100%}.vxp,.tool,.card{overflow-wrap:anywhere}
+/* الهاتف */
+@media(max-width:640px){
+  .vh{padding:32px 0 8px;gap:26px}
+  .vh h1{line-height:1.4}
+  .btn,.hsc,.ex-chip{min-height:44px}
+  main{padding-top:20px!important}
+}
+/* احترام تقليل الحركة */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .ticker-move,.aur i{animation:none!important}
+}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1080,7 +1124,7 @@ document.addEventListener('DOMContentLoaded',function(){window.aiFill()});
 <div class="card"><div class="icon">✅</div><h3>صح أم خطأ؟ (للكبار)</h3><p class="muted" id="tq">—</p><button class="btn primary" data-tf="1">صح</button><button class="btn alt" data-tf="0">خطأ</button><div class="result" id="tr">—</div><div class="score" id="ts">النقاط: 0</div></div>
 <div class="card"><div class="icon">🔤</div><h3>رتّب الحروف (للكبار)</h3><p class="muted">رتّب الحروف لتكوّن اسم حيوان.</p><div class="kpi" id="sw" style="letter-spacing:.3em">—</div><input id="si" placeholder="اكتب الإجابة" style="width:100%"><button class="btn primary" id="sc">تحقق</button><button class="btn alt" id="sh2">تلميح</button><div class="result" id="sr">—</div><div class="score" id="ss">النقاط: 0</div></div>
 </div></div></section>
-<section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="National Geographic Kids"><b>https://kids.nationalgeographic.com/games</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="San Diego Zoo Kids"><b>https://kids.sandiegozoo.org</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="PBS Kids Games"><b>https://pbskids.org/games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="ABCya"><b>https://www.abcya.com</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="Funbrain"><b>https://www.funbrain.com</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="Poki"><b>https://poki.com</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="CrazyGames"><b>https://www.crazygames.com</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="بحث: ألعاب حيوانات مجانية"><b>https://www.google.com/search?q=ألعاب+حيوانات+مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><div class="my space-y-8"><section id="games"><div class="wrap"><div class="sectionHead"><div><h2>ألعاب الحيوانات المجانية</h2><p class="muted">ألعاب خفيفة للتسلية والتعليم، بدون تسجيل وبدون دفع.</p></div></div>
+<section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="https://kids.nationalgeographic.com/games"><b>National Geographic Kids</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://kids.sandiegozoo.org"><b>San Diego Zoo Kids</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://pbskids.org/games"><b>PBS Kids Games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.abcya.com"><b>ABCya</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.funbrain.com"><b>Funbrain</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://poki.com"><b>Poki</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.crazygames.com"><b>CrazyGames</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.google.com/search?q=ألعاب+حيوانات+مجانية"><b>بحث: ألعاب حيوانات مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><div class="my space-y-8"><section id="games"><div class="wrap"><div class="sectionHead"><div><h2>ألعاب الحيوانات المجانية</h2><p class="muted">ألعاب خفيفة للتسلية والتعليم، بدون تسجيل وبدون دفع.</p></div></div>
 <div class="gameGrid">
 <div class="card game"><div><div class="icon">🧠</div><h3>اختبار الحيوان</h3><p class="muted" id="quizQ">أي حيوان يُعد من المجترات؟</p><div id="quizOpts"></div></div><div class="score" id="quizScore">النقاط: 0</div></div>
 <div class="card game"><div><div class="icon">🃏</div><h3>ذاكرة الحيوانات</h3><p class="muted">اكشف البطاقات وطابق الأزواج.</p><div class="gameboard" id="memory"></div></div><button class="btn primary" id="resetMemory">لعبة جديدة</button></div>
