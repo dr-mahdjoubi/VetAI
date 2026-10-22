@@ -647,6 +647,50 @@ window.AI_SP={'كلاب':'dog','قطط':'cat','خيول':'horse','أبقار':'c
 window.aiFill=function(root){(root||document).querySelectorAll('img[data-ai]').forEach(function(i){var s=window.AIMG[i.dataset.ai];if(s&&i.getAttribute('src')!==s)i.src=s})};
 document.addEventListener('DOMContentLoaded',function(){window.aiFill()});
 </script>
+<style id="vx-vet">
+/* ===== VetAI · عيادة رقمية: سجل المريض + العلامات الحيوية + الفرز ===== */
+.vh{display:grid;grid-template-columns:1.05fr .95fr;gap:34px 52px;align-items:start;padding:60px 0 20px;position:relative}
+.vh::before{content:"";position:absolute;inset:-40px -6vw auto;height:520px;z-index:-1;pointer-events:none;
+ background:radial-gradient(700px 360px at 88% 0,color-mix(in srgb,var(--a1) 16%,transparent),transparent 70%),radial-gradient(600px 320px at 5% 30%,color-mix(in srgb,var(--a2) 12%,transparent),transparent 70%)}
+.vh-eb{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:800;color:var(--a1);letter-spacing:.02em}
+.vh-eb i{width:28px;height:2px;background:var(--a1);display:block}
+.vh h1{font-size:clamp(2.1rem,4.3vw,3.4rem);line-height:1.3;font-weight:800;margin:14px 0 14px}
+.vh .sub{color:var(--mut);line-height:2;font-size:1.04rem;max-width:58ch}
+.vh .hsearch{margin:22px 0 12px;border-radius:12px}
+.vh .stats{display:flex;margin-top:30px;padding-top:20px;border-top:1px solid var(--bd)}
+.vh .stats>div{flex:1;padding:0 16px;border-inline-start:1px solid var(--bd)}.vh .stats>div:first-child{border:0;padding-inline-start:0}
+.vh .stats b{display:block;font-size:1.9rem;font-weight:800;line-height:1.15}.vh .stats span{font-size:12.5px;color:var(--mut)}
+/* سجل المريض */
+.chart{position:relative;padding:18px;border-radius:18px;border:1px solid var(--bd);box-shadow:0 40px 80px -40px rgba(0,0,0,.55);
+ background-color:color-mix(in srgb,var(--bg) 70%,var(--card));
+ background-image:linear-gradient(color-mix(in srgb,var(--a1) 9%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--a1) 9%,transparent) 1px,transparent 1px);background-size:16px 16px}
+.ch-h{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px dashed var(--bd)}
+.ch-h img{width:52px;height:52px;border-radius:14px;object-fit:cover;border:2px solid var(--a1)}
+.ch-h b{display:block;font-size:14.5px}.ch-h small{color:var(--mut);font-size:12px}
+.ch-h em{margin-inline-start:auto;font-style:normal;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--bd);color:var(--mut)}
+.chart .ecg{width:100%;height:56px;margin:10px 0 4px;fill:none;stroke:var(--a1);stroke-width:2;stroke-linejoin:round}
+.vit{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.vit>div{padding:12px;border-radius:12px;border:1px solid var(--bd);background:color-mix(in srgb,var(--bg) 55%,transparent)}
+.vit span{font-size:12px;color:var(--mut)}
+.vit b{display:block;font:800 1.7rem/1.2 ui-monospace,"SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+.vit u{text-decoration:none;font-size:.7rem;color:var(--mut);margin-inline-start:3px;font-weight:600}
+.rg{display:block;position:relative;height:6px;border-radius:4px;margin:8px 0 6px;background:linear-gradient(90deg,#ef4444,#f59e0b 14%,#10b981 28%,#10b981 72%,#f59e0b 86%,#ef4444)}
+.rg::after{content:"";position:absolute;top:-4px;left:calc(15% + var(--p)*.7);width:3px;height:14px;border-radius:2px;background:var(--fg);transform:translateX(-50%)}
+.vit small{font-size:10.5px;color:var(--mut)}
+.tri3{display:flex;gap:6px;margin:14px 0 12px}
+.tri3 span{flex:1;text-align:center;padding:8px 6px;border-radius:8px;font-size:12px;font-weight:800;opacity:.32;color:#fff}
+.tri3 .t1{background:#059669}.tri3 .t2{background:#d97706;flex:1.7}.tri3 .t3{background:#dc2626}.tri3 .on{opacity:1;box-shadow:0 8px 20px -8px #d97706}
+.note{font-size:13px;line-height:1.9;color:var(--mut);margin:0}.note b{color:var(--fg)}
+/* اختيار النوع */
+.sp{grid-column:1/-1;padding-top:22px}
+.sp-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}.sp-h b{font-size:1.35rem;font-weight:800}.sp-h span{color:var(--mut);font-size:13.5px}
+.sp-g{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sq{height:170px;border-radius:16px;border:1px solid var(--bd);display:flex;align-items:flex-end;padding:14px;text-align:start;cursor:pointer;transition:border-color .25s,transform .25s}
+.sq:hover{border-color:var(--a1);transform:translateY(-2px)}
+.sq .am-label b{display:block;font-size:15px}.sq .am-label small{font-size:11.5px;opacity:.85;font-variant-numeric:tabular-nums}
+.sq:hover>.am-img{transform:none}
+@media(max-width:900px){.vh{grid-template-columns:1fr;padding-top:30px}.sp-g{grid-template-columns:repeat(2,1fr)}.sq{height:140px}.vh .stats{flex-wrap:wrap;gap:14px 0}.vh .stats>div{flex:1 1 45%}.vit b{font-size:1.35rem}}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -708,23 +752,28 @@ document.addEventListener('DOMContentLoaded',function(){window.aiFill()});
         <!-- VIEW 1: HOME -->
         <section id="view-home" class="space-y-12">
 
-<div class="hero2">
- <div class="vr">
-  <span class="pill">مدعومة بالذكاء الاصطناعي · إشراف د. محجوبي عبدالناصر</span>
-  <h1>كل ما يحتاجه الطبيب والمربّي<br><span class="g">في مكان واحد</span></h1>
-  <p class="sub">تشخيص ذكي، مرجع سريري، أدوية وتحاليل، دروس واختبارات، ومساعد ذكي يجيب أسئلتك — مجانًا وبلا إعلانات وبالعربية.</p>
+<div class="vh">
+ <div class="vh-main vr">
+  <span class="vh-eb"><i></i>عيادة بيطرية رقمية · إشراف د. محجوبي عبدالناصر</span>
+  <h1>رعاية بيطرية بدقة الطبيب،<br><span class="g">في متناول كل مربٍّ</span></h1>
+  <p class="sub">افحص الأعراض، قارن العلامات الحيوية بمعدلاتها الطبيعية لكل نوع، وصنّف درجة الخطورة قبل أن تصل العيادة — مجانًا وبالعربية.</p>
   <div class="hsearch"><input id="hs" placeholder="ابحث عن مرض أو دواء أو تحليل أو سؤال..."><button id="hsb" class="btn p s" style="margin:0"><svg class="i"><use href="#i-sp"/></svg>ابحث</button></div>
   <div class="hchips"><button class="hsc">السعار</button><button class="hsc">الباروفيروس</button><button class="hsc">التهاب الضرع</button><button class="hsc">CBC</button><button class="hsc">مضاد حيوي</button></div>
   <div class="row"><a class="btn p" onclick="switchTab('ai-diagnostics')" role="button" tabindex="0"><svg class="i"><use href="#i-sp"/></svg>مُقيِّم الأعراض الذكي</a><a class="btn" onclick="switchTab('chat')" role="button" tabindex="0">اسأل بيطري-AI</a><a class="btn" onclick="switchTab('ref')" role="button" tabindex="0">المرجع السريري</a></div>
-  <div class="stats"><div><b class="g">14</b><span>مقالًا مفصلًا</span></div><div><b class="g">101</b><span>مرضًا في الفهرس</span></div><div><b class="g">1200+</b><span>موضوع يُولَّد عند الطلب</span></div><div><b class="g">18</b><span>مادة للاختبار</span></div></div>
+  <div class="stats"><div><b class="g">14</b><span>مقالًا مفصلًا</span></div><div><b class="g">101</b><span>مرضًا في الفهرس</span></div><div><b class="g">1200+</b><span>موضوع عند الطلب</span></div><div><b class="g">18</b><span>مادة للاختبار</span></div></div>
  </div>
- <div class="card pv vr" aria-hidden="true">
-  <div class="dots"><i></i><i></i><i></i><em>مثال توضيحي</em></div>
+ <div class="chart vr" aria-hidden="true">
+  <div class="ch-h"><img class="am-img" data-ai="dog" alt="" width="640" height="480" loading="lazy" decoding="async"><div><b>سجل المريض · #VA-2481</b><small>كلب جيرمن شيبرد · ذكر · 4 سنوات · 32 كغ</small></div><em>مثال توضيحي</em></div>
   <svg class="ecg" viewBox="0 0 400 56" preserveAspectRatio="none"><path d="M0 30H110L124 30 134 6 148 50 160 30H260L272 30 282 14 294 42 304 30H400"/></svg>
-  <div class="vch"><span>الحرارة <b>38.6° طبيعي</b></span><span>النبض <b>72</b></span><span>التنفس <b>18</b></span></div>
-  <div class="bub u">عجل عمره أسبوعان: إسهال وخمول</div>
-  <div class="bub a">الخطورة: <b>عاجل</b>. الاحتمال الأرجح إسهال العجول حديثة الولادة. تأكد من شرب اللبأ والسوائل، واتصل بالطبيب اليوم.</div>
+  <div class="vit">
+   <div><span>الحرارة</span><b>38.6<u>°م</u></b><i class="rg" style="--p:65%"></i><small>الطبيعي 37.5–39.2</small></div>
+   <div><span>النبض</span><b>92<u>/د</u></b><i class="rg" style="--p:40%"></i><small>الطبيعي 60–140</small></div>
+   <div><span>التنفس</span><b>22<u>/د</u></b><i class="rg" style="--p:60%"></i><small>الطبيعي 10–30</small></div>
+  </div>
+  <div class="tri3"><span class="t1">مستقر</span><span class="t2 on">راقب خلال 24 ساعة</span><span class="t3">عاجل</span></div>
+  <p class="note"><b>الشكوى:</b> قيء متكرر منذ يومين وخمول.<br><b>التقييم:</b> علاماته الحيوية ضمن الطبيعي، لكن استمرار القيء يستدعي فحصًا وسوائل. اتصل بطبيبك اليوم.</p>
  </div>
+ <div class="sp vr"><div class="sp-h"><b>من هو مريضك؟</b><span>اختر النوع لتصل إلى مرجعه ومعدلاته الطبيعية</span></div><div class="sp-g"><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="dog" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>كلاب</b><small>الطبيعي 37.5–39.2°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="cat" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>قطط</b><small>الطبيعي 38.1–39.2°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="horse" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>خيول</b><small>الطبيعي 37.5–38.5°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="cow" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>أبقار</b><small>الطبيعي 38.0–39.3°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="sheep" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>أغنام وماعز</b><small>الطبيعي 38.5–40.0°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="hen" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>دواجن</b><small>الطبيعي 40.6–43.0°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="exotic" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>أرانب وغريبة</b><small>الطبيعي 38.5–40.0°م</small></span></button><button class="sq am" onclick="switchTab('ref')"><img class="am-img" data-ai="fish" alt="" width="640" height="480" loading="lazy" decoding="async"><span class="am-label"><b>أسماك</b><small>الطبيعي حسب حرارة الماء</small></span></button></div></div>
 </div>
 <div class="emg vr"><div class="text-sm"><b>حالة طارئة؟</b> نزيف، اختناق، تشنجات، صعوبة تنفس، تسمم — لا تنتظر، اتصل بطبيبك البيطري فورًا.</div><div class="row"><a href="tel:+14152793963" class="r1"><svg class="i"><use href="#i-ph"/></svg>اتصال بالدكتور</a><a href="https://wa.me/14152793963" target="_blank" rel="noopener noreferrer" class="r2"><svg class="i"><use href="#i-ms"/></svg>واتساب</a><a href="https://www.facebook.com/profile.php?id=61580238681634" target="_blank" rel="noopener noreferrer" class="r4" aria-label="صفحتنا الرسمية على فيسبوك"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.6 0-4.3 1.6-4.3 4.4v2.5H7v3.3h2.7V22h3.8z"/></svg>فيسبوك</a><a href="tel:+14152793963" dir="ltr" class="r3">+1 (415) 279-3963</a></div></div>
 
