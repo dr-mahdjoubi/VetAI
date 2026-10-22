@@ -26,3 +26,9 @@
 .aud-body details{border:1px solid var(--bd,#1e293b);border-radius:12px;padding:10px 14px;margin-block:8px}.aud-body summary{cursor:pointer;font-weight:700}.aud-body details p{margin:8px 0 0}
 .aud-links{list-style:none!important;padding:0!important}.aud-links a{color:var(--a1,#06b6d4);text-decoration:underline}
 @media(prefers-reduced-motion:reduce){.aud-ov,.aud-dlg,.aud-body.in{transition:none;animation:none}}
+
+.aud-chips{display:flex;gap:6px;overflow-x:auto;padding-block:2px 12px;scrollbar-width:thin}
+.aud-chip{flex:none;padding:6px 12px;border-radius:10px;border:1px solid var(--bd,#1e293b);background:transparent;color:var(--fg,#f8fafc);font:600 12.5px inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.aud-chip[aria-pressed=true]{background:var(--a1,#06b6d4);color:#04121a;border-color:transparent}
+.aud-meta{margin:0 0 6px;color:var(--mut,#94a3b8);font-size:13px}
+.aud-body table th[scope=row]{white-space:nowrap;min-inline-size:9rem}
