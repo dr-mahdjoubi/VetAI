@@ -1,0 +1,64 @@
+<!-- ضع هذا قبل </head> وانسخ مجلد animals/ بجانب index.html -->
+<style id="animal-media">
+/* ===== VetAI · صور الحيوانات داخل الأزرار والبطاقات ===== */
+.am{position:relative;isolation:isolate;overflow:hidden;background:#0f172a}
+.am>.am-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;transition:transform .5s ease,filter .3s}
+.am::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(to top,rgba(7,10,19,.88) 0%,rgba(7,10,19,.5) 42%,rgba(7,10,19,.12) 100%)}
+.am:hover>.am-img{transform:scale(1.07)}
+.am-label{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.85);position:relative}
+/* أزرار تصفية الحيوان */
+#today .nw-chip.am{min-width:118px;height:62px;padding:0 12px 8px;display:flex;align-items:flex-end;justify-content:center;
+  border-radius:16px;border:1px solid rgba(255,255,255,.16);color:#fff;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.85)}
+#today .nw-chip.am[aria-pressed=false]>.am-img{filter:saturate(.75) brightness(.8)}
+#today .nw-chip.am[aria-pressed=true]{background:#0f172a;color:#fff;border-color:var(--a1);box-shadow:0 0 0 2px var(--a1),0 8px 22px -8px var(--a1)}
+/* صور بطاقات الأخبار */
+#today .nw-thumb.am{place-items:end start;padding:8px 12px}
+#today .nw-thumb.am::before{display:none}
+#today .nw-thumb.am::after{inset:0;width:auto;height:auto;border-radius:0;opacity:1;z-index:3;background:linear-gradient(to top,rgba(7,10,19,.7) 0%,rgba(7,10,19,.15) 60%,transparent 100%)}
+#today .nw-thumb.am>.am-img{z-index:0}
+#today .nw-thumb.am span{font-size:1.5rem;z-index:4}
+#today .nw-card:hover .nw-thumb.am>.am-img{transform:scale(1.07)}
+/* بطاقات الأنواع في المرجع السريري */
+.sp-card{min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;padding:12px;text-align:center;border-radius:1rem;border:1px solid rgba(255,255,255,.12);border-top-width:2px}
+/* ضبط نقطة التركيز لكل حيوان حتى لا يُقص الرأس */
+.am>img[data-ai=hen]{object-position:50% 14%}
+.am>img[data-ai=cow]{object-position:50% 38%}
+.am>img[data-ai=horse]{object-position:60% 30%}
+.am>img[data-ai=vet]{object-position:50% 35%}
+@media(prefers-reduced-motion:reduce){.am>.am-img{transition:none}.am:hover>.am-img{transform:none}}
+</style>
+<script id="animal-images">
+/* خريطة الصور (الاسم → المصدر) */
+window.AIMG={
+  pets:'animals/pets.webp',
+  dog:'animals/dog.webp',
+  cat:'animals/cat.webp',
+  rabbit:'animals/rabbit.webp',
+  cow:'animals/cow.webp',
+  sheep:'animals/sheep.webp',
+  horse:'animals/horse.webp',
+  parrots:'animals/parrots.webp',
+  fish:'animals/fish.webp',
+  hen:'animals/hen.webp',
+  exotic:'animals/exotic.webp',
+  vet:'animals/vet.webp'
+};
+/* ربط بطاقات الأنواع (العربية) بمفاتيح الصور */
+window.AI_SP={'كلاب':'dog','قطط':'cat','خيول':'horse','أبقار':'cow','أغنام':'sheep','دواجن':'hen','غريبة':'exotic','أسماك':'fish'};
+/* يملأ كل <img data-ai="مفتاح"> بالصورة الصحيحة؛ التحميل الكسول يتولاه المتصفح عبر loading="lazy" */
+window.aiFill=function(root){(root||document).querySelectorAll('img[data-ai]').forEach(function(i){var s=window.AIMG[i.dataset.ai];if(s&&i.getAttribute('src')!==s)i.src=s})};
+document.addEventListener('DOMContentLoaded',function(){window.aiFill()});
+</script>
+
+<!-- أمثلة HTML:
+<button class="nw-chip am" data-f="equine" aria-pressed="false">
+  <img class="am-img" data-ai="horse" alt="" width="640" height="480" loading="lazy" decoding="async">
+  <span class="am-label">خيول</span>
+</button>
+
+<div class="nw-thumb am">
+  <img class="am-img" data-ai="cow" alt="" width="640" height="480" loading="lazy" decoding="async">
+  <span aria-hidden="true">🐄</span>
+</div>
+-->
