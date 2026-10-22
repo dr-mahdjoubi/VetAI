@@ -2843,7 +2843,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var a=document.createElement('link');a.rel='apple-touch-icon';a.href='icon-192.png';document.head.appendChild(a);
     if(!document.querySelector('meta[name="theme-color"]')){var t=document.createElement('meta');t.name='theme-color';t.content='#10b981';document.head.appendChild(t);}
     if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){
-      window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
+      window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(function(r){r.update()}).catch(function(){});var _rl=false;navigator.serviceWorker.addEventListener('controllerchange',function(){if(_rl)return;_rl=true;location.reload()});});
     }
   }catch(e){}
 })();
