@@ -58,6 +58,28 @@
     });
   }
 
+
+  /* ---- disease library (data in diseases.js) ---- */
+  var dsel = 0;
+  var li = function (a) { return ul(a); };
+  function diseaseView(kind) {
+    var L = window.VET_DISEASES || []; if (!L.length) return '';
+    var d = L[dsel] || L[0];
+    var h = '<div class="aud-chips">' + L.map(function (x, i) { return '<button type="button" class="aud-chip" data-d="' + i + '" aria-pressed="' + (i === dsel) + '">' + x.name + '</button>'; }).join('') + '</div>';
+    h += '<h4>' + d.name + '</h4><p class="aud-meta">' + d.sci + ' · 🐾 ' + d.sp + (d.zoo ? ' · ⚠️ مشترك مع الإنسان' : '') + (d.rep ? ' · 📢 واجب الإبلاغ' : '') + '</p>';
+    if (kind === 'breeder') {
+      h += '<h4>👁️ ماذا ترى؟</h4>' + li(d.b.signs) + '<h4>🩹 ماذا تفعل الآن؟</h4>' + li(d.b.first) + '<h4>🛡️ الوقاية</h4>' + li(d.b.prev) + note('<b>🚨 اتصل بالطبيب فورًا:</b>' + li(d.b.danger), 'bad');
+    } else if (kind === 'student') {
+      var S = d.s, rows = [['Etiology — المسبب', S.eti], ['Pathogenesis — الآلية', S.path], ['Clinical signs — العلامات', S.signs], ['Lab diagnostics — التشخيص المخبري', S.lab], ['DDx — التفريقي', S.ddx], ['Treatment — العلاج', S.tx]];
+      h += tb(['المحور', 'الملخص'], rows);
+    } else {
+      h += '<h4>🛡️ الضبط والسيطرة</h4>' + li(d.r.ctrl) + '<h4>📝 ملاحظات علمية</h4>' + li(d.r.notes) +
+        '<h4>📚 المراجع</h4><ul class="aud-links">' + d.r.refs.map(function (r) { return link(r[0], r[1]); }).join('') + link('https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(d.en), 'PubMed — أحدث الأبحاث') + '</ul>' +
+        note('لا جرعات هنا عمدًا: ارجع لنشرة المنتج والمرجع الدوائي المعتمد.');
+    }
+    return h;
+  }
+
   var order = ['breeder', 'student', 'researcher'], cur = 'breeder', tab = 0, opener = null, ov;
   function build() {
     ov = document.createElement('div'); ov.className = 'aud-ov'; ov.hidden = true;
@@ -66,6 +88,7 @@
     ov.addEventListener('click', function (e) { if (e.target === ov || e.target.closest('.aud-x')) close(); });
     $('.aud-seg', ov).innerHTML = order.map(function (k) { return '<button type="button" role="tab" data-k="' + k + '">' + D[k].icon + ' ' + D[k].name + '</button>'; }).join('');
     $('.aud-seg', ov).onclick = function (e) { var b = e.target.closest('button'); if (b) show(b.dataset.k, 0); };
+    ov.addEventListener('click', function (e) { var c = e.target.closest('.aud-chip'); if (c) { dsel = +c.dataset.d; show(cur, tab); } });
     $('.aud-sub', ov).onclick = function (e) { var b = e.target.closest('button'); if (b) show(cur, +b.dataset.i); };
     document.addEventListener('keydown', function (e) {
       if (ov.hidden) return;
@@ -78,7 +101,7 @@
     $('#aud-ttl', ov).textContent = d.icon + ' ' + d.name;
     ov.querySelectorAll('.aud-seg button').forEach(function (b) { b.setAttribute('aria-selected', b.dataset.k === k); });
     $('.aud-sub', ov).innerHTML = d.tabs.map(function (t, j) { return '<button type="button" role="tab" data-i="' + j + '" aria-selected="' + (j === i) + '">' + t[0] + '</button>'; }).join('');
-    var b = $('.aud-body', ov); b.innerHTML = d.tabs[i][1]; b.scrollTop = 0; b.classList.remove('in'); void b.offsetWidth; b.classList.add('in');
+    var b = $('.aud-body', ov); var c = d.tabs[i][1]; b.innerHTML = typeof c === 'function' ? c() : c; b.scrollTop = 0; b.classList.remove('in'); void b.offsetWidth; b.classList.add('in');
   }
   function open(k, el) {
     if (!ov) build(); opener = el; ov.hidden = false; show(k, 0);
@@ -90,6 +113,7 @@
     setTimeout(function () { ov.hidden = true; }, 220); if (opener) opener.focus();
   }
   function init() {
+    if (window.VET_DISEASES) order.forEach(function (k) { D[k].tabs.unshift(['🦠 الأمراض', function () { return diseaseView(k); }]); });
     loadFeeds();
     var cards = document.querySelectorAll('.tri .card');
     cards.forEach(function (c, i) {
