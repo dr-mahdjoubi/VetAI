@@ -735,59 +735,6 @@ table{max-width:100%}.vxp,.tool,.card{overflow-wrap:anywhere}
   .ticker-move,.aur i{animation:none!important}
 }
 </style>
-<style id="vx-hero">
-/* ===== تطوير الواجهة الرئيسية ===== */
-/* دخول واحد منسّق للهيرو فقط */
-@keyframes vxIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.vh-main{animation:vxIn .7s var(--vx-ease) both}
-.vh .chart{animation:vxIn .8s .15s var(--vx-ease) both}
-/* العنوان: أكبر وأثبت */
-.vh h1{font-size:clamp(2.3rem,5vw,4rem);font-weight:900;line-height:1.25;letter-spacing:-.01em}
-.vh .sub{font-size:1.1rem;color:color-mix(in srgb,var(--fg) 72%,var(--mut))}
-/* البحث الرئيسي */
-.vh .hsearch{padding:6px;border-radius:18px;background:var(--card);border:1px solid var(--bd);box-shadow:0 18px 40px -26px rgba(0,0,0,.6);transition:box-shadow .25s,border-color .25s}
-.vh .hsearch:focus-within{border-color:var(--a1)}
-.vh .hsearch input{background:transparent!important;border:0!important;box-shadow:none!important;font-size:1rem;min-height:46px}
-.vh .hsearch .btn{border-radius:14px;min-height:46px}
-.hchips{display:flex;flex-wrap:wrap;gap:8px}
-.hsc{padding:7px 14px;border-radius:999px;border:1px solid var(--bd);background:transparent;color:var(--mut);font:600 13px inherit;font-family:inherit;cursor:pointer;transition:.2s}
-.hsc:hover{color:var(--fg);border-color:var(--a1);background:color-mix(in srgb,var(--a1) 10%,transparent)}
-/* الإحصاءات */
-.vh .stats b{font-size:2.1rem;font-variant-numeric:tabular-nums}
-.vh .stats>div{transition:transform .3s var(--vx-ease)}
-/* سجل المريض: نبض حي */
-.chart{transform:perspective(1200px) rotateY(-2deg);transition:transform .5s var(--vx-ease)}
-:root[dir=ltr] .chart{transform:perspective(1200px) rotateY(2deg)}
-.chart:hover{transform:none}
-@keyframes vxEcg{0%{stroke-dashoffset:620;opacity:1}65%{stroke-dashoffset:0;opacity:1}92%{stroke-dashoffset:0;opacity:.15}100%{stroke-dashoffset:620;opacity:0}}
-.chart .ecg path{stroke-dasharray:620;stroke-dashoffset:0;animation:vxEcg 3.6s linear infinite}
-@keyframes vxPulse{0%,100%{box-shadow:0 8px 20px -8px #d97706}50%{box-shadow:0 8px 26px -2px #d97706}}
-.tri3 .on{animation:vxPulse 2.4s ease-in-out infinite}
-/* بطاقات الأنواع: صورة مع تدرج لقراءة النص */
-.sq{position:relative;overflow:hidden;isolation:isolate;box-shadow:0 14px 30px -22px rgba(0,0,0,.6)}
-.sq::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(to top,rgba(4,8,16,.82),rgba(4,8,16,.12) 62%,transparent)}
-.sq .am-label{position:relative;z-index:1;color:#fff}
-.sq .am-label b{font-size:16px;font-weight:800}
-.sq:hover{box-shadow:0 22px 40px -22px color-mix(in srgb,var(--a1) 60%,transparent)}
-/* الطوارئ */
-.emg{border-inline-start:4px solid #ef4444;border-radius:16px}
-/* عناوين الأقسام */
-.sh2{position:relative}
-.sh2 .eb{padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--a1) 12%,transparent);font-size:12.5px}
-.sh2 h2{font-weight:800}
-/* الوصول السريع */
-.bento{gap:16px}
-.qa{position:relative;overflow:hidden;padding:24px;border:1px solid var(--bd)}
-.qa .ib{transition:transform .35s var(--vx-ease)}
-.qa:hover .ib{transform:scale(1.08) rotate(-4deg)}
-.qa .go{opacity:.45;transition:transform .3s var(--vx-ease),opacity .3s}
-.qa:hover .go{opacity:1;transform:translateX(-4px)}
-:root[dir=ltr] .qa .go{transform:scaleX(-1)}
-:root[dir=ltr] .qa:hover .go{transform:scaleX(-1) translateX(-4px)}
-@media(max-width:900px){.chart{transform:none}.vh .stats{flex-wrap:wrap;gap:14px 0}.vh .stats>div{flex:1 1 45%}.vh .stats>div:nth-child(3){border-inline-start:0;padding-inline-start:0}}
-@media(max-width:520px){.sp-g{grid-template-columns:repeat(2,1fr)}.sq{height:140px}.vh h1{font-size:2.1rem}}
-@media(prefers-reduced-motion:reduce){.vh-main,.vh .chart{animation:none}.chart .ecg path,.tri3 .on{animation:none}.chart{transform:none}}
-</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
