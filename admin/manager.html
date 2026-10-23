@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>لوحة المدير — VetAI Guard</title>
+<style>
+  :root{
+    --bg:#0a1420; --bg2:#0d1f2d; --card:#10222f; --bd:#1e3a4c;
+    --fg:#e8f4f8; --mut:#9db8c4; --a1:#0ea5b7; --a2:#10b981;
+    --ok:#10b981; --warn:#f59e0b; --fail:#f43f5e;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,'Segoe UI',Tahoma,sans-serif;background:linear-gradient(160deg,var(--bg),var(--bg2));color:var(--fg);min-height:100vh}
+  .wrap{max-width:1020px;margin:0 auto;padding:26px 16px 60px}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  header .logo{font-size:30px}
+  h1{font-size:22px;margin:0}
+  .sub{color:var(--mut);font-size:13.5px;margin:2px 0 22px;line-height:1.8}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+  .stat{text-align:center;padding:20px 10px}
+  .stat .n{font-size:30px;font-weight:900}
+  .stat .l{color:var(--mut);font-size:13px;margin-top:4px}
+  .pill{display:inline-block;padding:3px 12px;border-radius:99px;font-size:12.5px;font-weight:800}
+  .pill.ok{background:rgba(16,185,129,.15);color:var(--ok);border:1px solid var(--ok)}
+  .pill.warn{background:rgba(245,158,11,.13);color:var(--warn);border:1px solid var(--warn)}
+  .pill.fail{background:rgba(244,63,94,.13);color:var(--fail);border:1px solid var(--fail)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  td,th{padding:9px 8px;border-bottom:1px solid var(--bd);text-align:right;vertical-align:top}
+  th{color:var(--mut);font-weight:700;font-size:12.5px}
+  .btn{display:inline-block;border:1px solid var(--bd);background:#0b2a3a;color:var(--fg);border-radius:11px;
+       padding:10px 16px;font:700 14px inherit;cursor:pointer;text-decoration:none;margin:0 0 8px 8px}
+  .btn.primary{background:linear-gradient(135deg,var(--a1),var(--a2));border:none;color:#fff}
+  .btn:active{transform:scale(.97)}
+  input[type=password]{width:100%;padding:13px;border-radius:12px;border:1px solid var(--bd);
+    background:#0b1c29;color:var(--fg);font:inherit;font-size:16px;margin-bottom:12px}
+  .gate{max-width:430px;margin:9vh auto 0}
+  .note{font-size:12.5px;color:var(--mut);line-height:1.9}
+  code{background:#0b1c29;border:1px solid var(--bd);border-radius:6px;padding:1px 7px;direction:ltr;display:inline-block}
+  .chg{padding:7px 0;border-bottom:1px dashed var(--bd);font-size:14px}
+  .chg:last-child{border-bottom:none}
+  .hidden{display:none!important}
+  footer{color:var(--mut);font-size:12px;text-align:center;margin-top:26px;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- بوابة الدخول -->
+  <div id="gate" class="gate card">
+    <header><span class="logo">🛡️</span><h1>لوحة المدير الخفية</h1></header>
+    <p class="sub">هذه اللوحة لمالك الموقع فقط. أدخل عبارة المرور لعرض تقارير «المدير الافتراضي» (حارس الموقع ومحرّك المحتوى).</p>
+    <div id="setupBox" class="hidden">
+      <p class="note">⚠️ لم تُضبط عبارة مرور بعد. احسب بصمة عبارتك ثم ضعها في ثابت <code>OWNER_HASH</code> أعلى سكربت هذه الصفحة:</p>
+      <p class="note"><code>printf %s 'عبارتك' | sha256sum</code></p>
+    </div>
+    <input type="password" id="pw" placeholder="عبارة المرور" autocomplete="current-password">
+    <button class="btn primary" id="enter" style="width:100%">دخول</button>
+    <p class="note">تنبيه أمني صادق: الحماية هنا من جهة المتصفح (لإخفاء التقارير عن العابرين) وليست بديلًا عن مصادقة خادم — لا تضع في اللوحة أسرارًا حقيقية أبدًا. التقارير نفسها بيانات تشغيل عامة.</p>
+  </div>
+
+  <!-- اللوحة -->
+  <div id="panel" class="hidden">
+    <header><span class="logo">🛡️</span><h1>تقارير المدير الافتراضي — VetAI Guard</h1></header>
+    <p class="sub" id="meta">جارٍ تحميل آخر تقرير…</p>
+
+    <div class="grid">
+      <div class="card stat"><div class="n" id="stOverall">—</div><div class="l">الحالة العامة</div></div>
+      <div class="card stat"><div class="n" id="stChecks">—</div><div class="l">فحوص ناجحة / الكل</div></div>
+      <div class="card stat"><div class="n" id="stMedia">—</div><div class="l">فيديوهات الوسائط</div></div>
+      <div class="card stat"><div class="n" id="stGallery">—</div><div class="l">صور المعرض</div></div>
+      <div class="card stat"><div class="n" id="stNews">—</div><div class="l">أخبار الشريط</div></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 10px">أوامر سريعة</h3>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/dr-mahdjoubi/VetAI/actions/workflows/site-guard.yml">▶ تشغيل فحص الحارس الآن</a>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/dr-mahdjoubi/VetAI/actions/workflows/content-refresh.yml">▶ تحديث الأخبار الآن</a>
+      <button class="btn" id="reload">↻ إعادة تحميل التقرير</button>
+      <button class="btn" id="lock">قفل اللوحة</button>
+      <p class="note">الأزرار تنقلك إلى GitHub Actions حيث تضغط «Run workflow» — هذه هي قناة الأوامر الآمنة لموقع ثابت (لا خادم خلفي).</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">نتائج الفحوص</h3>
+      <table><thead><tr><th>الفحص</th><th>الحالة</th><th>التفاصيل</th></tr></thead><tbody id="checksBody"></tbody></table>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">تغيّرات رصدها المدير</h3>
+      <div id="changesBox"><p class="note">لا تغيّرات مرصودة في آخر تقرير.</p></div>
+    </div>
+
+    <footer>VetAI Guard · التقرير يولّده tools/site-guard.mjs تلقائيًا (GitHub Actions يوميًا + طبقة وكيل Muse) · هذه الصفحة لا تجمع أي بيانات.</footer>
+  </div>
+</div>
+
+<script>
+'use strict';
+/* ضع هنا بصمة SHA-256 لعبارة مرورك (انظر MANAGER.md). اتركها كما هي لعرض وضع الإعداد. */
+const OWNER_HASH = 'PUT_YOUR_SHA256_HASH_HERE';
+const HASH_IS_SET = /^[a-f0-9]{64}$/.test(OWNER_HASH);
+const REPORT_URL = '../data/manager-report.json';
+
+const $ = s => document.querySelector(s);
+async function sha256(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+function pill(st) {
+  return st === 'ok' ? '<span class="pill ok">سليم</span>'
+       : st === 'warn' ? '<span class="pill warn">تنبيه</span>'
+       : '<span class="pill fail">عطل</span>';
+}
+async function loadReport() {
+  $('#meta').textContent = 'جارٍ تحميل آخر تقرير…';
+  try {
+    const r = await fetch(REPORT_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const rep = await r.json();
+    const okN = rep.checks.filter(c => c.status === 'ok').length;
+    $('#meta').textContent = 'آخر فحص: ' + new Date(rep.generatedAt).toLocaleString('ar') + ' · المصدر: ' + rep.base;
+    $('#stOverall').innerHTML = pill(rep.overall) ;
+    $('#stChecks').textContent = okN + ' / ' + rep.checks.length;
+    $('#stMedia').textContent = rep.counts['فيديوهات الوسائط'] ?? '—';
+    $('#stGallery').textContent = rep.counts['صور المعرض'] ?? '—';
+    $('#stNews').textContent = rep.counts['شريط الأخبار'] ?? '—';
+    $('#checksBody').innerHTML = rep.checks.map(c =>
+      '<tr><td>' + c.label + '</td><td>' + pill(c.status) + '</td><td>' + c.detail + '</td></tr>').join('');
+    if (rep.changes && rep.changes.length) {
+      $('#changesBox').innerHTML = rep.changes.map(x => '<div class="chg">• ' + x + '</div>').join('');
+    }
+  } catch (e) {
+    $('#meta').textContent = 'تعذّر تحميل التقرير (' + e.message + ') — تأكد أن الحارس نشر data/manager-report.json.';
+  }
+}
+async function tryEnter() {
+  if (!HASH_IS_SET) { $('#setupBox').classList.remove('hidden'); return; }
+  const h = await sha256($('#pw').value);
+  if (h === OWNER_HASH) {
+    sessionStorage.setItem('vetai-guard-ok', '1');
+    $('#gate').classList.add('hidden');
+    $('#panel').classList.remove('hidden');
+    loadReport();
+  } else {
+    $('#pw').value = '';
+    $('#pw').placeholder = 'عبارة غير صحيحة — حاول مجددًا';
+  }
+}
+$('#enter').onclick = tryEnter;
+$('#pw').addEventListener('keydown', e => { if (e.key === 'Enter') tryEnter(); });
+$('#reload').onclick = loadReport;
+$('#lock').onclick = () => { sessionStorage.removeItem('vetai-guard-ok'); location.reload(); };
+if (!HASH_IS_SET) $('#setupBox').classList.remove('hidden');
+if (sessionStorage.getItem('vetai-guard-ok') === '1' && HASH_IS_SET) {
+  $('#gate').classList.add('hidden');
+  $('#panel').classList.remove('hidden');
+  loadReport();
+}
+</script>
+</body>
+</html>
