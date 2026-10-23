@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-10-23T22:47:03.989Z",
+  "generator": "tools/site-guard.mjs",
+  "base": "https://vetai.vcom.workers.dev",
+  "overall": "ok",
+  "counts": {
+    "فيديوهات الوسائط": 40,
+    "صور المعرض": 34,
+    "بيانات الأنواع": 8,
+    "شريط الأخبار": 11
+  },
+  "changes": [],
+  "checks": [
+    {
+      "id": "mirror",
+      "label": "مرآة Cloudflare — الرئيسي",
+      "status": "ok",
+      "detail": "HTTP 200 · 645ms · العنوان سليم"
+    },
+    {
+      "id": "mirror",
+      "label": "مرآة Render — drvet",
+      "status": "ok",
+      "detail": "HTTP 200 · 720ms · العنوان سليم"
+    },
+    {
+      "id": "mirror",
+      "label": "مرآة Vercel",
+      "status": "ok",
+      "detail": "HTTP 200 · 1024ms · العنوان سليم"
+    },
+    {
+      "id": "mirror",
+      "label": "مرآة GitHub Pages",
+      "status": "ok",
+      "detail": "HTTP 200 · 1122ms · العنوان سليم"
+    },
+    {
+      "id": "data",
+      "label": "فيديوهات الوسائط",
+      "status": "ok",
+      "detail": "40 عنصرًا"
+    },
+    {
+      "id": "data",
+      "label": "صور المعرض",
+      "status": "ok",
+      "detail": "34 عنصرًا"
+    },
+    {
+      "id": "data",
+      "label": "بيانات الأنواع",
+      "status": "ok",
+      "detail": "8 أنواع · 6 بأصوات"
+    },
+    {
+      "id": "data",
+      "label": "شريط الأخبار",
+      "status": "ok",
+      "detail": "11 خبرًا · آخر تحديث 2026-10-23T06:54:19Z"
+    },
+    {
+      "id": "verify",
+      "label": "ملف تحقق Search Console",
+      "status": "ok",
+      "detail": "موجود وبالمحتوى الصحيح — لا تحذفه أبدًا"
+    },
+    {
+      "id": "sitemap",
+      "label": "خريطة الموقع",
+      "status": "ok",
+      "detail": "صالحة وتشير إلى النطاق الحالي"
+    },
+    {
+      "id": "perf",
+      "label": "أداء الصفحة الرئيسية",
+      "status": "ok",
+      "detail": "1034KB · 728ms"
+    },
+    {
+      "id": "links",
+      "label": "الروابط الداخلية",
+      "status": "ok",
+      "detail": "فُحص 43 مرجعًا داخليًا — لا كسور"
+    }
+  ]
+}
