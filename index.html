@@ -1264,6 +1264,19 @@ html body .vh .hsearch #hsb{height:44px;min-height:44px;padding:0 22px;font-size
   html body #view-home .vg-cine-footer{padding-top:14px}
 }
 </style>
+
+<style>
+/* ============================================================
+   المرحلة ج — تباين WCAG + خط عربي حديث
+   رُفع لون النص الخافت (--mut) في الثيمات الثلاثة ليتجاوز AA بهامش آمن
+   حتى فوق الأسطح الملوّنة، وأُلغيت شفافية نصوص التلميح داخل الحقول
+   الخط الأساسي أصلًا IBM Plex Sans Arabic (محمّل ومُفعّل) فبقي كما هو
+   ============================================================ */
+body{--mut:#a3b4c9}
+body[data-theme=calm]{--mut:#aac2bd}
+body[data-theme=light]{--mut:#47536b}
+input::placeholder,textarea::placeholder{opacity:1}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
