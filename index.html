@@ -1245,6 +1245,25 @@ html body #fun{bottom:calc(70px + env(safe-area-inset-bottom,0px))}
 html body #up{bottom:calc(70px + env(safe-area-inset-bottom,0px))}
 @media (min-width:641px){html body #up{bottom:calc(124px + env(safe-area-inset-bottom,0px))}}
 </style>
+
+<style>
+/* ============================================================
+   المرحلة ب — بحث الذكاء الاصطناعي هو النقطة البصرية الأولى
+   حقل البحث صعد مباشرة تحت العنوان الرئيسي وكُبّر وأُبرز بتوهّج الهوية
+   والمقدّمة السينمائية اختُصرت على الجوال واللوحي لتقليل التمرير
+   ============================================================ */
+html body .vh .hsearch{max-width:640px;margin-top:20px;padding:7px;border-color:color-mix(in srgb,var(--a1) 45%,var(--bd));box-shadow:0 14px 38px -12px var(--glow)}
+html body .vh .hsearch input{font-size:15.5px;padding:12px 18px}
+html body .vh .hsearch #hsb{height:44px;min-height:44px;padding:0 22px;font-size:14.5px;border-radius:99px}
+@media (max-width:1023px){
+  html body #view-home .vg-global-intro{padding:20px 16px}
+  html body #view-home .vg-cinematic{gap:18px}
+  html body #view-home .vg-cine-stage{max-width:330px;width:100%;margin-inline:auto}
+  html body #view-home .vg-cinematic h2{margin:8px 0 12px}
+  html body #view-home .vg-actions{margin-top:18px}
+  html body #view-home .vg-cine-footer{padding-top:14px}
+}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1351,8 +1370,8 @@ html body #up{bottom:calc(70px + env(safe-area-inset-bottom,0px))}
  <div class="vh-main vr">
   <span class="vh-eb"><i></i>عيادة بيطرية رقمية · إشراف د. محجوبي عبدالناصر</span>
   <h1>رعاية بيطرية بدقة الطبيب،<br><span class="g">في متناول كل مربٍّ</span></h1>
-  <p class="sub">استكشف الأعراض والمراجع والأدوات التعليمية والبيانات البيطرية في مساحة واحدة. صُممت المنصة لدعم الأطباء والطلاب والباحثين والمربين، مع إبقاء القرار السريري للطبيب البيطري.</p>
   <div class="hsearch"><input id="hs" placeholder="ابحث عن مرض أو دواء أو تحليل أو سؤال..."><button id="hsb" class="btn p s" style="margin:0"><svg class="i"><use href="#i-sp"/></svg>ابحث</button></div>
+  <p class="sub">استكشف الأعراض والمراجع والأدوات التعليمية والبيانات البيطرية في مساحة واحدة. صُممت المنصة لدعم الأطباء والطلاب والباحثين والمربين، مع إبقاء القرار السريري للطبيب البيطري.</p>
   <div class="hchips"><button class="hsc">السعار</button><button class="hsc">الباروفيروس</button><button class="hsc">التهاب الضرع</button><button class="hsc">CBC</button><button class="hsc">مضاد حيوي</button></div>
   <div class="row"><a class="btn p" onclick="switchTab('ai-diagnostics')" role="button" tabindex="0"><svg class="i"><use href="#i-sp"/></svg>مُقيِّم الأعراض الذكي</a><a class="btn" onclick="switchTab('chat')" role="button" tabindex="0">اسأل بيطري-AI</a><a class="btn" onclick="switchTab('ref')" role="button" tabindex="0">المرجع السريري</a></div>
   <div class="stats"><div><b class="g">14</b><span>مقالًا مفصلًا</span></div><div><b class="g">101</b><span>مرضًا في الفهرس</span></div><div><b class="g">1200+</b><span>موضوع عند الطلب</span></div><div><b class="g">18</b><span>مادة للاختبار</span></div></div>
