@@ -1442,6 +1442,13 @@ html body .text-6xl{font-size:2.7rem!important;line-height:1.2!important}
 #dzFormulary .dzf-note{margin-top:14px;font-size:.8rem;line-height:1.9;color:var(--mut);border:1px dashed var(--line);border-radius:12px;padding:10px 12px}
 @media (max-width:640px){#dzFormulary .dzf-grid{grid-template-columns:1fr}#dzFormulary .dzf-sp{min-width:96px}}
 </style>
+<style id="perf-css">
+html.perf-lite body .glass-panel,html.perf-lite body .card,html.perf-lite body .isl,html.perf-lite body .gsub,html.perf-lite body .hsearch,html.perf-lite body .paragraph-finder,html.perf-lite body #gnav .setpanel,html.perf-lite body #view-home .vg-hud,html.perf-lite body #view-bio .bx-card{backdrop-filter:blur(8px) saturate(1.25)!important;-webkit-backdrop-filter:blur(8px) saturate(1.25)!important}
+html.perf-lite body .aur i{filter:blur(60px)!important}
+html.perf-idle body .aur i,html.perf-idle body #tkt{animation-play-state:paused!important}
+html.perf-idle body #cv{display:none!important}
+@media (prefers-reduced-motion: reduce){html body .aur i,html body #tkt{animation:none!important}}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -3816,13 +3823,13 @@ document.addEventListener("DOMContentLoaded", function() {
  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('a[role=button],a.logo,.vf a[onclick]')){e.preventDefault();e.target.click()}});
  /* particle network */
  const cv=$('#cv');if(!cv||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
- const x=cv.getContext('2d');let W,H,P=[],run=true;const DPR=Math.min(devicePixelRatio||1,2);
+ const x=cv.getContext('2d');let W,H,P=[],run=true;const DPR=Math.min(devicePixelRatio||1,1.5);
  function rs(){W=cv.width=innerWidth*DPR;H=cv.height=innerHeight*DPR;const n=Math.round(Math.min(70,innerWidth/18));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25*DPR,vy:(Math.random()-.5)*.25*DPR}))}
  rs();addEventListener('resize',rs);
  document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)loop()});
  function col(){return getComputedStyle(document.body).getPropertyValue('--a1').trim()||'#5eead4'}
  let c=col();new MutationObserver(()=>c=col()).observe(document.body,{attributes:true,attributeFilter:['data-theme']});
- function loop(){if(!run)return;x.clearRect(0,0,W,H);x.fillStyle=c;x.strokeStyle=c;
+ function loop(){if(!run)return;const _n=performance.now();if(_n-(loop._t||0)<33){requestAnimationFrame(loop);return}loop._t=_n;x.clearRect(0,0,W,H);x.fillStyle=c;x.strokeStyle=c;
   for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.globalAlpha=.7;x.beginPath();x.arc(p.x,p.y,1.4*DPR,0,7);x.fill()}
   const L=150*DPR;for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=Math.hypot(dx,dy);if(d<L){x.globalAlpha=(1-d/L)*.35;x.lineWidth=DPR*.7;x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
   requestAnimationFrame(loop)}
@@ -4874,6 +4881,21 @@ render();
 })();
 </script>
 
+<script id="perf-guard">
+(function(){
+"use strict";
+var root=document.documentElement;
+try{
+if((navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4)||(navigator.deviceMemory&&navigator.deviceMemory<=4))root.classList.add("perf-lite");
+var idleT=0;
+function arm(){clearTimeout(idleT);idleT=setTimeout(function(){root.classList.add("perf-idle")},90000)}
+function act(){if(root.classList.contains("perf-idle"))root.classList.remove("perf-idle");arm()}
+["pointerdown","keydown","wheel","touchstart","scroll"].forEach(function(e){addEventListener(e,act,{passive:true})});
+document.addEventListener("visibilitychange",function(){if(document.hidden)root.classList.add("perf-idle");else act()});
+arm();
+}catch(e){}
+})();
+</script>
 </body>
   
 </html>
