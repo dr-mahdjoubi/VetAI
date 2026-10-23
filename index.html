@@ -1330,6 +1330,53 @@ input::placeholder,textarea::placeholder{opacity:1}
 .fbk-src{font-size:.78rem;color:var(--a2);margin-inline-start:10px}
 @media(max-width:480px){.fbk-grid{grid-template-columns:1fr}.fbk img{width:74px;height:105px}}
 </style>
+<style id="slb-css">
+/* ==========================================================================
+   المكتبة العلمية الشاملة للطب البيطري — Scientific Library Hub (slb-)
+   Modular CSS — يستخدم متغيرات هوية الموقع فقط، دون أي تغيير في التصميم العام
+   ========================================================================== */
+#sciLib .slb-head{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;justify-content:space-between}
+#sciLib .slb-head h3{margin:0 0 6px}
+#sciLib .slb-head p{margin:0;max-width:640px}
+#sciLib .slb-trbtn{flex:0 1 300px;text-align:start;border:0;cursor:pointer;border-radius:16px;padding:12px 16px;font:700 15px inherit;color:var(--on);background:linear-gradient(135deg,var(--a1),var(--a2));box-shadow:0 6px 18px rgba(0,0,0,.25)}
+#sciLib .slb-trbtn small{display:block;font-weight:400;font-size:12px;opacity:.92;margin-top:4px;line-height:1.7}
+#sciLib .slb-trbtn:active{transform:scale(.98)}
+#sciLib .slb-tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 4px;scrollbar-width:thin}
+#sciLib .slb-tab{flex:0 0 auto;border:1px solid var(--bd);background:var(--card2);color:var(--fg);border-radius:99px;padding:9px 16px;font:700 13.5px inherit;cursor:pointer;white-space:nowrap}
+#sciLib .slb-tab.on{background:var(--a1);border-color:var(--a1);color:var(--on)}
+#sciLib .slb-tab .slb-n{opacity:.75;font-weight:400}
+#sciLib .slb-filters{display:grid;grid-template-columns:2fr repeat(5,minmax(120px,1fr)) auto;gap:8px;margin-top:12px;align-items:end}
+#sciLib .slb-filters label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--mut)}
+#sciLib .slb-filters input,#sciLib .slb-filters select{background:var(--inp);border:1px solid var(--bd);color:var(--fg);border-radius:10px;padding:9px 10px;font:400 13.5px inherit;width:100%}
+#sciLib .slb-reset{border:1px solid var(--bd);background:var(--card2);color:var(--fg);border-radius:10px;padding:9px 14px;font:700 13px inherit;cursor:pointer;white-space:nowrap}
+#sciLib .slb-count{margin:10px 0 0}
+#sciLib .slb-panel{margin-top:12px}
+#sciLib .slb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:12px}
+#sciLib .slb-it{background:var(--card2);border:1px solid var(--bd);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+#sciLib .slb-it h4{margin:0;font-size:15px;line-height:1.6}
+#sciLib .slb-meta{display:flex;flex-wrap:wrap;gap:5px}
+#sciLib .slb-meta span{font-size:11px;color:var(--mut);border:1px solid var(--bd);border-radius:99px;padding:2px 8px;white-space:nowrap}
+#sciLib .slb-d{font-size:13px;line-height:1.8;color:var(--fg);margin:0;flex:1}
+#sciLib .slb-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+#sciLib .slb-a{display:inline-block;border-radius:10px;padding:8px 13px;font:700 13px inherit;text-decoration:none;cursor:pointer;border:1px solid var(--a1);background:var(--a1);color:var(--on)}
+#sciLib .slb-a.alt{background:transparent;color:var(--fg);border-color:var(--bd)}
+#sciLib .slb-sub{margin:18px 0 10px;font-size:16px}
+#sciLib .slb-live-h{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:10px}
+#sciLib .slb-live-h b{font-size:15px}
+#sciLib .slb-ref{border:1px solid var(--bd);background:var(--card2);color:var(--fg);border-radius:10px;padding:6px 12px;font:700 12.5px inherit;cursor:pointer}
+#sciLib .slb-empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:26px 10px;border:1px dashed var(--bd);border-radius:16px;font-size:14px}
+#sciLib .slb-note{margin-top:14px}
+@media (max-width:900px){
+  #sciLib .slb-filters{grid-template-columns:1fr 1fr}
+  #sciLib .slb-filters input{grid-column:1/-1}
+}
+@media (max-width:560px){
+  #sciLib .slb-grid{grid-template-columns:1fr}
+  #sciLib .slb-trbtn{flex:1 1 100%}
+  #sciLib .slb-tab{font-size:12.5px;padding:8px 12px}
+}
+
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1780,7 +1827,42 @@ input::placeholder,textarea::placeholder{opacity:1}
 <div class="card"><h3>🤝 تعاون أكاديمي</h3><p class="muted">نموذج للتواصل مع الباحثين والطلبة والجامعات والمختبرات.</p></div>
 </div>
 </div></section></div></section><section id="view-library" class="hidden space-y-8"><div class="my space-y-8"><section id="library"><div class="wrap"><div class="sectionHead"><div><h2>المكتبة: مقالات بحثية وكتب مجانية</h2><p class="muted">اضغط على أي عنوان لقراءة الملخص.</p></div></div>
-<div class="grid"><a class="card" href="library-guide.html" style="grid-column:1/-1;display:block;text-decoration:none;color:inherit;border-color:#06b6d4"><h3>📚 الدليل المرجعي للأمراض البيطرية (3 مجلدات)</h3><p class="small muted">الكلاب والقطط · المجترات · الدواجن — Parvovirus، Distemper، حمى اللبن، BRD، Newcastle، Gumboro وغيرها. اضغط للفتح ←</p></a><div class="card" id="freeBooks" style="grid-column:1/-1"><h3>📚 كتب مجانية PDF — قابلة للتنزيل بأغلفتها الأصلية</h3><p class="small">كتب أكاديمية مفتوحة الوصول من جامعات وناشرين علميين، وكتب كلاسيكية من الملك العام — مجانية قانونيًا بكاملها. اختر التصنيف ثم اضغط «تنزيل PDF».</p><div class="fbk-filters" role="group" aria-label="تصنيفات الكتب"><button type="button" class="fbk-chip on" data-f="all">📚 الكل (11)</button><button type="button" class="fbk-chip" data-f="vet">🩺 الطب البيطري (4)</button><button type="button" class="fbk-chip" data-f="sci">🐄 علوم الحيوانات (2)</button><button type="button" class="fbk-chip" data-f="zoo">🦠 الأمراض المتنقلة (2)</button><button type="button" class="fbk-chip" data-f="alt">🌿 الطب البديل للحيوانات (3)</button></div><div class="fbk-grid"><article class="fbk" data-cat="vet"><img src="assets/books/birds-eye.jpg" alt="غلاف كتاب A Bird's-Eye View of Veterinary Medicine" loading="lazy"><div class="fbk-b"><h4>A Bird's-Eye View of Veterinary Medicine</h4><p class="fbk-meta">تحرير: Carlos C. Perez-Marin · IntechOpen · 2012 · 626 صفحة · 19.9 MB</p><p class="fbk-d">نظرة شاملة على الطب البيطري الحديث: صحة ورفاهية حيوانات المزرعة والحيوانات الأليفة والبرية، والصحة العامة، وأحدث تقنيات التشخيص والبحث العلمي.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/1667/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/1667" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/cattle.jpg" alt="غلاف كتاب Cattle Diseases — Molecular and Biochemical Approach" loading="lazy"><div class="fbk-b"><h4>Cattle Diseases — Molecular and Biochemical Approach</h4><p class="fbk-meta">تحرير: Kükürt &amp; Gelen · IntechOpen · 2023 · 3.0 MB</p><p class="fbk-d">أمراض الأبقار بمنهج جزيئي وكيميائي حيوي حديث: آليات حدوث الأمراض، والتشخيص المخبري والمناعي المتقدم، وأحدث ما توصلت إليه الأبحاث.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/12086/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/12086" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/histology.jpg" alt="غلاف كتاب Veterinary Histology" loading="lazy"><div class="fbk-b"><h4>Veterinary Histology</h4><p class="fbk-meta">Ryan Jennings &amp; Christopher Premanandan · جامعة ولاية أوهايو · 2023 · رخصة CC BY-NC</p><p class="fbk-d">مرجع التشريح المجهري (علم الأنسجة) للحيوانات الأليفة وحيوانات المزرعة والخنازير والجمال، بصور عالية الدقة مشروحة وأهداف تعلم ومسرد لكل جهاز من أجهزة الجسم.</p><a class="fbk-dl" href="https://batch.libretexts.org/print/Letter/Finished/med-10044/Full.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://ohiostate.pressbooks.pub/vethisto/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/preventive.png" alt="غلاف كتاب Veterinary Preventive Medicine" loading="lazy"><div class="fbk-b"><h4>Veterinary Preventive Medicine</h4><p class="fbk-meta">Margaret Root Kustritz · جامعة منيسوتا · 2022 · رخصة CC BY-NC</p><p class="fbk-d">أسس الطب الوقائي البيطري: حماية صحة الحيوان والإنسان وتعزيزها، والوقاية من الأمراض والإعاقة والوفاة، ومهارات المشاركة في تحديات الصحة العالمية.</p><a class="fbk-dl" href="https://open.lib.umn.edu/vetprevmed/open/download?type=print_pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://open.lib.umn.edu/vetprevmed/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="sci"><img src="assets/books/anatomy.jpg" alt="غلاف كتاب Anatomy and Physiology of Animals" loading="lazy"><div class="fbk-b"><h4>Anatomy and Physiology of Animals</h4><p class="fbk-meta">J. Ruth Lawson · كتاب جامعي مفتوح · رخصة CC BY-NC-SA · 5.6 MB</p><p class="fbk-d">تشريح جسم الحيوان ووظائف أعضائه جهازًا جهازًا، بأسلوب مبسط موجه لطلاب علوم الحيوان والتمريض البيطري، مع تمارين واختبارات ذاتية في نهاية الفصول.</p><a class="fbk-dl" href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Anatomy_and_Physiology_of_Animals.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://commons.wikimedia.org/wiki/File:Anatomy_and_Physiology_of_Animals.pdf" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="sci"><img src="assets/books/nutrition.jpg" alt="غلاف كتاب A Guide to the Principles of Animal Nutrition" loading="lazy"><div class="fbk-b"><h4>A Guide to the Principles of Animal Nutrition</h4><p class="fbk-meta">Gita Cherian · جامعة ولاية أوريغون · 2020 · رخصة CC BY-NC</p><p class="fbk-d">مبادئ تغذية حيوانات الغذاء: العناصر الغذائية الستة وبناؤها وهضمها وتمثيلها، والطاقة الحيوية، وإضافات الأعلاف وتحليلها في المجترات والحيوانات أحادية المعدة.</p><a class="fbk-dl" href="https://open.oregonstate.education/animalnutrition/open/download?type=print_pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://open.oregonstate.education/animalnutrition/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="zoo"><img src="assets/books/zoonosis.jpg" alt="غلاف كتاب Zoonosis" loading="lazy"><div class="fbk-b"><h4>Zoonosis</h4><p class="fbk-meta">نخبة من الباحثين · IntechOpen · 2012 · 11.3 MB</p><p class="fbk-d">الأمراض المشتركة بين الإنسان والحيوان (الأمراض المتنقلة): مصادرها وطرق انتقالها وتشخيصها والسيطرة عليها، من الجمرة الخبيثة وداء الكلب إلى الطفيليات المنقولة بالماء والغذاء.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/1668/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/1668" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="zoo"><img src="assets/books/epidemiology.jpg" alt="غلاف كتاب Veterinary Epidemiology: Principles and Methods" loading="lazy"><div class="fbk-b"><h4>Veterinary Epidemiology: Principles and Methods</h4><p class="fbk-meta">S. Wayne Martin &amp; Alan H. Meek &amp; Preben Willeberg · مكتبات جامعة فرجينيا تك · رخصة CC BY-NC-ND · 6.9 MB</p><p class="fbk-d">المرجع الكلاسيكي في الوبائيات البيطرية: دراسة الأمراض في قطعان الحيوانات، والمسوحات والدراسات التحليلية والملاحظة، وإدارة صحة القطيع — أساس فهم انتشار الأمراض المتنقلة ومكافحتها.</p><a class="fbk-dl" href="https://trva-ind-media.s3.amazonaws.com/media/knowledgehub/Veterinary_Epidemiology_Principles_and_Methods_S._Wayne_Martin_Alan_H._Meek_Preben_Willeberg.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="http://hdl.handle.net/10919/72274" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/handbook.jpg" alt="غلاف كتاب Homœopathic Veterinary Hand-Book" loading="lazy"><div class="fbk-b"><h4>Homœopathic Veterinary Hand-Book</h4><p class="fbk-meta">من كلاسيكيات الهوميوباثي البيطري · 1879 · من الملك العام · 7.4 MB</p><p class="fbk-d">دليل عملي بلغة بسيطة للمربين: وصف أمراض الخيل والبقر والغنم والخنازير والكلاب وأعراضها وعلاجاتها المثلية (الهوميوباثي) كما مارسها الأطباء البيطريون في القرن التاسع عشر.</p><a class="fbk-dl" href="https://archive.org/download/homopathicveteri00john/homopathicveteri00john.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/homopathicveteri00john" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/guide.jpg" alt="غلاف كتاب Guide to Veterinary Homeopathy of the Horse and Cow" loading="lazy"><div class="fbk-b"><h4>Guide to Veterinary Homeopathy of the Horse and Cow</h4><p class="fbk-meta">S. N. Merriman · 1868 · من الملك العام · 2.4 MB</p><p class="fbk-d">دليل الهوميوباثي البيطري للخيل والبقر: الحمى والروماتيزم والتهابات الدماغ وغيرها، أعراضُ كل حالة وعلاجها المثلي خطوة بخطوة.</p><a class="fbk-dl" href="https://archive.org/download/guidetoveterinar00merr/guidetoveterinar00merr.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/guidetoveterinar00merr" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/schafer.jpg" alt="غلاف كتاب New Manual of Homœopathic Veterinary Medicine" loading="lazy"><div class="fbk-b"><h4>New Manual of Homœopathic Veterinary Medicine</h4><p class="fbk-meta">Johann Christoph Schäfer · ترجمة Charles J. Hempel · 1882 · من الملك العام · 17.3 MB</p><p class="fbk-d">الدليل الشامل للطب البيطري المثلي: ترتيب سهل وشامل لأمراض الخيل والبقر والغنم والخنازير والكلاب وعلاجها بأبسط الطرق وأقلها كلفة — من أشهر مراجع الهوميوباثي البيطري الكلاسيكية.</p><a class="fbk-dl" href="https://archive.org/download/101303458.nlm.nih.gov/101303458.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/101303458.nlm.nih.gov" target="_blank" rel="noopener">صفحة الكتاب</a></div></article></div><p class="small muted" style="margin-top:12px">تنبيه: كتب «الطب البديل» هنا كلاسيكيات تاريخية من الملك العام تُنشر للاطلاع التاريخي والبحثي، ولا تُغني عن الطب البيطري الحديث المبني على الدليل العلمي.</p></div><div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
+<div class="grid"><a class="card" href="library-guide.html" style="grid-column:1/-1;display:block;text-decoration:none;color:inherit;border-color:#06b6d4"><h3>📚 الدليل المرجعي للأمراض البيطرية (3 مجلدات)</h3><p class="small muted">الكلاب والقطط · المجترات · الدواجن — Parvovirus، Distemper، حمى اللبن، BRD، Newcastle، Gumboro وغيرها. اضغط للفتح ←</p></a><div class="card" id="freeBooks" style="grid-column:1/-1"><h3>📚 كتب مجانية PDF — قابلة للتنزيل بأغلفتها الأصلية</h3><p class="small">كتب أكاديمية مفتوحة الوصول من جامعات وناشرين علميين، وكتب كلاسيكية من الملك العام — مجانية قانونيًا بكاملها. اختر التصنيف ثم اضغط «تنزيل PDF».</p><div class="fbk-filters" role="group" aria-label="تصنيفات الكتب"><button type="button" class="fbk-chip on" data-f="all">📚 الكل (11)</button><button type="button" class="fbk-chip" data-f="vet">🩺 الطب البيطري (4)</button><button type="button" class="fbk-chip" data-f="sci">🐄 علوم الحيوانات (2)</button><button type="button" class="fbk-chip" data-f="zoo">🦠 الأمراض المتنقلة (2)</button><button type="button" class="fbk-chip" data-f="alt">🌿 الطب البديل للحيوانات (3)</button></div><div class="fbk-grid"><article class="fbk" data-cat="vet"><img src="assets/books/birds-eye.jpg" alt="غلاف كتاب A Bird's-Eye View of Veterinary Medicine" loading="lazy"><div class="fbk-b"><h4>A Bird's-Eye View of Veterinary Medicine</h4><p class="fbk-meta">تحرير: Carlos C. Perez-Marin · IntechOpen · 2012 · 626 صفحة · 19.9 MB</p><p class="fbk-d">نظرة شاملة على الطب البيطري الحديث: صحة ورفاهية حيوانات المزرعة والحيوانات الأليفة والبرية، والصحة العامة، وأحدث تقنيات التشخيص والبحث العلمي.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/1667/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/1667" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/cattle.jpg" alt="غلاف كتاب Cattle Diseases — Molecular and Biochemical Approach" loading="lazy"><div class="fbk-b"><h4>Cattle Diseases — Molecular and Biochemical Approach</h4><p class="fbk-meta">تحرير: Kükürt &amp; Gelen · IntechOpen · 2023 · 3.0 MB</p><p class="fbk-d">أمراض الأبقار بمنهج جزيئي وكيميائي حيوي حديث: آليات حدوث الأمراض، والتشخيص المخبري والمناعي المتقدم، وأحدث ما توصلت إليه الأبحاث.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/12086/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/12086" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/histology.jpg" alt="غلاف كتاب Veterinary Histology" loading="lazy"><div class="fbk-b"><h4>Veterinary Histology</h4><p class="fbk-meta">Ryan Jennings &amp; Christopher Premanandan · جامعة ولاية أوهايو · 2023 · رخصة CC BY-NC</p><p class="fbk-d">مرجع التشريح المجهري (علم الأنسجة) للحيوانات الأليفة وحيوانات المزرعة والخنازير والجمال، بصور عالية الدقة مشروحة وأهداف تعلم ومسرد لكل جهاز من أجهزة الجسم.</p><a class="fbk-dl" href="https://batch.libretexts.org/print/Letter/Finished/med-10044/Full.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://ohiostate.pressbooks.pub/vethisto/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/preventive.png" alt="غلاف كتاب Veterinary Preventive Medicine" loading="lazy"><div class="fbk-b"><h4>Veterinary Preventive Medicine</h4><p class="fbk-meta">Margaret Root Kustritz · جامعة منيسوتا · 2022 · رخصة CC BY-NC</p><p class="fbk-d">أسس الطب الوقائي البيطري: حماية صحة الحيوان والإنسان وتعزيزها، والوقاية من الأمراض والإعاقة والوفاة، ومهارات المشاركة في تحديات الصحة العالمية.</p><a class="fbk-dl" href="https://open.lib.umn.edu/vetprevmed/open/download?type=print_pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://open.lib.umn.edu/vetprevmed/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="sci"><img src="assets/books/anatomy.jpg" alt="غلاف كتاب Anatomy and Physiology of Animals" loading="lazy"><div class="fbk-b"><h4>Anatomy and Physiology of Animals</h4><p class="fbk-meta">J. Ruth Lawson · كتاب جامعي مفتوح · رخصة CC BY-NC-SA · 18.1 MB</p><p class="fbk-d">تشريح جسم الحيوان ووظائف أعضائه جهازًا جهازًا، بأسلوب مبسط موجه لطلاب علوم الحيوان والتمريض البيطري، مع تمارين واختبارات ذاتية في نهاية الفصول.</p><a class="fbk-dl" href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Anatomy_and_Physiology_of_Animals.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://commons.wikimedia.org/wiki/File:Anatomy_and_Physiology_of_Animals.pdf" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="sci"><img src="assets/books/nutrition.jpg" alt="غلاف كتاب A Guide to the Principles of Animal Nutrition" loading="lazy"><div class="fbk-b"><h4>A Guide to the Principles of Animal Nutrition</h4><p class="fbk-meta">Gita Cherian · جامعة ولاية أوريغون · 2020 · رخصة CC BY-NC</p><p class="fbk-d">مبادئ تغذية حيوانات الغذاء: العناصر الغذائية الستة وبناؤها وهضمها وتمثيلها، والطاقة الحيوية، وإضافات الأعلاف وتحليلها في المجترات والحيوانات أحادية المعدة.</p><a class="fbk-dl" href="https://open.oregonstate.education/animalnutrition/open/download?type=print_pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://open.oregonstate.education/animalnutrition/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="zoo"><img src="assets/books/zoonosis.jpg" alt="غلاف كتاب Zoonosis" loading="lazy"><div class="fbk-b"><h4>Zoonosis</h4><p class="fbk-meta">نخبة من الباحثين · IntechOpen · 2012 · 11.3 MB</p><p class="fbk-d">الأمراض المشتركة بين الإنسان والحيوان (الأمراض المتنقلة): مصادرها وطرق انتقالها وتشخيصها والسيطرة عليها، من الجمرة الخبيثة وداء الكلب إلى الطفيليات المنقولة بالماء والغذاء.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/1668/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/1668" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="zoo"><img src="assets/books/epidemiology.jpg" alt="غلاف كتاب Veterinary Epidemiology: Principles and Methods" loading="lazy"><div class="fbk-b"><h4>Veterinary Epidemiology: Principles and Methods</h4><p class="fbk-meta">S. Wayne Martin &amp; Alan H. Meek &amp; Preben Willeberg · مكتبات جامعة فرجينيا تك · رخصة CC BY-NC-ND · 6.9 MB</p><p class="fbk-d">المرجع الكلاسيكي في الوبائيات البيطرية: دراسة الأمراض في قطعان الحيوانات، والمسوحات والدراسات التحليلية والملاحظة، وإدارة صحة القطيع — أساس فهم انتشار الأمراض المتنقلة ومكافحتها.</p><a class="fbk-dl" href="https://trva-ind-media.s3.amazonaws.com/media/knowledgehub/Veterinary_Epidemiology_Principles_and_Methods_S._Wayne_Martin_Alan_H._Meek_Preben_Willeberg.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="http://hdl.handle.net/10919/72274" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/handbook.jpg" alt="غلاف كتاب Homœopathic Veterinary Hand-Book" loading="lazy"><div class="fbk-b"><h4>Homœopathic Veterinary Hand-Book</h4><p class="fbk-meta">من كلاسيكيات الهوميوباثي البيطري · 1879 · من الملك العام · 7.4 MB</p><p class="fbk-d">دليل عملي بلغة بسيطة للمربين: وصف أمراض الخيل والبقر والغنم والخنازير والكلاب وأعراضها وعلاجاتها المثلية (الهوميوباثي) كما مارسها الأطباء البيطريون في القرن التاسع عشر.</p><a class="fbk-dl" href="https://archive.org/download/homopathicveteri00john/homopathicveteri00john.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/homopathicveteri00john" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/guide.jpg" alt="غلاف كتاب Guide to Veterinary Homeopathy of the Horse and Cow" loading="lazy"><div class="fbk-b"><h4>Guide to Veterinary Homeopathy of the Horse and Cow</h4><p class="fbk-meta">S. N. Merriman · 1868 · من الملك العام · 2.4 MB</p><p class="fbk-d">دليل الهوميوباثي البيطري للخيل والبقر: الحمى والروماتيزم والتهابات الدماغ وغيرها، أعراضُ كل حالة وعلاجها المثلي خطوة بخطوة.</p><a class="fbk-dl" href="https://archive.org/download/guidetoveterinar00merr/guidetoveterinar00merr.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/guidetoveterinar00merr" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/schafer.jpg" alt="غلاف كتاب New Manual of Homœopathic Veterinary Medicine" loading="lazy"><div class="fbk-b"><h4>New Manual of Homœopathic Veterinary Medicine</h4><p class="fbk-meta">Johann Christoph Schäfer · ترجمة Charles J. Hempel · 1882 · من الملك العام · 17.3 MB</p><p class="fbk-d">الدليل الشامل للطب البيطري المثلي: ترتيب سهل وشامل لأمراض الخيل والبقر والغنم والخنازير والكلاب وعلاجها بأبسط الطرق وأقلها كلفة — من أشهر مراجع الهوميوباثي البيطري الكلاسيكية.</p><a class="fbk-dl" href="https://archive.org/download/101303458.nlm.nih.gov/101303458.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/101303458.nlm.nih.gov" target="_blank" rel="noopener">صفحة الكتاب</a></div></article></div><p class="small muted" style="margin-top:12px">تنبيه: كتب «الطب البديل» هنا كلاسيكيات تاريخية من الملك العام تُنشر للاطلاع التاريخي والبحثي، ولا تُغني عن الطب البيطري الحديث المبني على الدليل العلمي.</p></div><div class="card" id="sciLib" style="grid-column:1/-1">
+  <div class="slb-head">
+    <div>
+      <h3>🏛️ المكتبة العلمية الشاملة للطب البيطري</h3>
+      <p class="small">كتب بيطرية وتعليمية للطلاب والباحثين، امتحانات وأوراق أسئلة مقسمة حسب الدول (الجزائر · الوطن العربي · فرنسا · أمريكا)، أبحاث ومقالات حديثة، ومذكرات تخرج ورسائل ماجستير ودكتوراه — كلها منظمة بفلاتر ذكية: البلد، السنة، المستوى الدراسي، اللغة، والتخصص.</p>
+    </div>
+    <button type="button" class="slb-trbtn" id="slbTrBtn">🌐 الترجمة الفورية عابرة للغات<small>ترجمة النصوص وصور صفحات المستندات من الفرنسية والإنجليزية إلى العربية (وخمس لغات) بضغطة زر — يفتح مترجم المنصة بالأسفل</small></button>
+  </div>
+  <div class="slb-tabs" role="tablist" aria-label="أقسام المكتبة العلمية الشاملة">
+    <button type="button" class="slb-tab on" data-tab="books" role="tab" aria-selected="true">📚 الكتب التعليمية</button>
+    <button type="button" class="slb-tab" data-tab="exams" role="tab" aria-selected="false">📝 الامتحانات حسب الدول</button>
+    <button type="button" class="slb-tab" data-tab="research" role="tab" aria-selected="false">🔬 أبحاث ومقالات حديثة</button>
+    <button type="button" class="slb-tab" data-tab="theses" role="tab" aria-selected="false">🎓 مذكرات ورسائل جامعية</button>
+  </div>
+  <div class="slb-filters" id="slbFilters">
+    <input id="slbQ" type="search" placeholder="🔎 ابحث بالعنوان أو الوصف أو التخصص..." aria-label="بحث نصي">
+    <label>البلد<select id="slbFC" aria-label="تصفية حسب البلد"></select></label>
+    <label>السنة<select id="slbFY" aria-label="تصفية حسب السنة"></select></label>
+    <label>المستوى الدراسي<select id="slbFL" aria-label="تصفية حسب المستوى"></select></label>
+    <label>اللغة<select id="slbFG" aria-label="تصفية حسب اللغة"></select></label>
+    <label>التخصص<select id="slbFS" aria-label="تصفية حسب التخصص"></select></label>
+    <button type="button" id="slbReset" class="slb-reset">↺ إعادة تعيين</button>
+  </div>
+  <p class="small muted slb-count" id="slbCount" aria-live="polite"></p>
+  <div class="slb-panel" id="slbP-books"><div class="slb-grid" id="slbG-books"></div></div>
+  <div class="slb-panel" id="slbP-exams" style="display:none"><div class="slb-grid" id="slbG-exams"></div></div>
+  <div class="slb-panel" id="slbP-research" style="display:none">
+    <div class="slb-live-h"><b>📡 أحدث الدراسات المنشورة الآن — بث مباشر من ScienceDaily وPhys.org</b><button type="button" class="slb-ref" id="slbResRef">↻ تحديث البث</button></div>
+    <div class="slb-grid" id="slbLiveRes"><p class="small muted">يُجلب البث عند فتح هذا التبويب لأول مرة...</p></div>
+    <h4 class="slb-sub">🗄️ مجلات وقواعد بيانات علمية مفتوحة (تُصفّى بالفلاتر أعلاه)</h4>
+    <div class="slb-grid" id="slbG-research"></div>
+  </div>
+  <div class="slb-panel" id="slbP-theses" style="display:none"><div class="slb-grid" id="slbG-theses"></div></div>
+  <p class="small muted slb-note">ملاحظة: جميع الروابط الخارجية رسمية (جامعات وهيئات ترخيص ومستودعات جامعية) أو مفتوحة الوصول قانونيًا. الكتب بصيغة PDF كاملة بأغلفتها في القسم السابق مباشرة «كتب مجانية PDF»، وهذا القسم ينظمها أكاديميًا مع بقية الموارد.</p>
+</div>
+<div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
 <div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">أربع ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
 <div class="gameGrid">
 <div class="card game mg"><div><div class="icon">🃏</div><h3>ذاكرة الصور</h3><p class="muted">اقلب البطاقات وطابق صور الحيوانات بأقل حركات وأسرع وقت.</p>
@@ -4221,6 +4303,249 @@ const ANIMALS=[
     insert(all);
   }).catch(function(){});
 })();
+</script>
+<script id="sciLibJs">
+/* ==========================================================================
+   المكتبة العلمية الشاملة للطب البيطري — Scientific Library Hub
+   بنية معيارية (Modular): بيانات منظمة + عرض + فلاتر ذكية + بث أبحاث حي
+   كل عنصر: t=العنوان، d=الوصف، c=البلد، y=السنة، l=المستوى، g=اللغة، s=التخصص
+   الروابط: u=مصدر خارجي، pdf=تنزيل مباشر، go=قسم داخلي (data-go)، sc=تمرير لعنصر
+   ========================================================================== */
+(function () {
+  "use strict";
+  var host = document.getElementById("sciLib");
+  if (!host) return;
+
+  /* ---------------- 1) البيانات — كتب تعليمية (نفس كتب قسم PDF المجانية) --- */
+  var BOOKS = [
+    { t: "A Bird's-Eye View of Veterinary Medicine", d: "نظرة شاملة على الطب البيطري الحديث: صحة ورفاهية حيوانات المزرعة والأليفة والبرية، والصحة العامة، وأحدث تقنيات التشخيص والبحث. تحرير: Carlos C. Perez-Marin — IntechOpen، 626 صفحة، 19.9 MB.", c: "عالمي", y: "2012", l: "باحثون ودراسات عليا", g: "English", s: "طب بيطري عام", pdf: "https://mts.intechopen.com/storage/books/1667/authors_book/authors_book.pdf", u: "https://www.intechopen.com/books/1667" },
+    { t: "Cattle Diseases — Molecular and Biochemical Approach", d: "أمراض الأبقار بمنهج جزيئي وكيميائي حيوي حديث: آليات حدوث الأمراض والتشخيص المخبري والمناعي المتقدم. تحرير: Kükürt & Gelen — IntechOpen، 3.0 MB.", c: "عالمي", y: "2023", l: "باحثون ودراسات عليا", g: "English", s: "أمراض الأبقار", pdf: "https://mts.intechopen.com/storage/books/12086/authors_book/authors_book.pdf", u: "https://www.intechopen.com/books/12086" },
+    { t: "Veterinary Histology", d: "مرجع التشريح المجهري (علم الأنسجة) للحيوانات الأليفة وحيوانات المزرعة والخنازير والجمال، بصور عالية الدقة وأهداف تعلم لكل جهاز. Ryan Jennings & Christopher Premanandan — جامعة ولاية أوهايو، رخصة CC BY-NC.", c: "أمريكا", y: "2023", l: "طالب جامعي", g: "English", s: "علم الأنسجة", pdf: "https://batch.libretexts.org/print/Letter/Finished/med-10044/Full.pdf", u: "https://ohiostate.pressbooks.pub/vethisto/" },
+    { t: "Veterinary Preventive Medicine", d: "أسس الطب الوقائي البيطري: حماية صحة الحيوان والإنسان وتعزيزها، والوقاية من الأمراض والإعاقة، ومهارات مواجهة تحديات الصحة العالمية. Margaret Root Kustritz — جامعة منيسوتا، رخصة CC BY-NC.", c: "أمريكا", y: "2022", l: "طالب جامعي", g: "English", s: "الطب الوقائي والصحة العامة", pdf: "https://open.lib.umn.edu/vetprevmed/open/download?type=print_pdf", u: "https://open.lib.umn.edu/vetprevmed/" },
+    { t: "Anatomy and Physiology of Animals", d: "تشريح جسم الحيوان ووظائف أعضائه جهازًا جهازًا، بأسلوب مبسط لطلاب علوم الحيوان والتمريض البيطري، مع تمارين واختبارات ذاتية. J. Ruth Lawson — كتاب جامعي مفتوح، رخصة CC BY-NC-SA، 18.1 MB.", c: "عالمي", y: "", l: "طالب جامعي", g: "English", s: "التشريح ووظائف الأعضاء", pdf: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Anatomy_and_Physiology_of_Animals.pdf", u: "https://commons.wikimedia.org/wiki/File:Anatomy_and_Physiology_of_Animals.pdf" },
+    { t: "A Guide to the Principles of Animal Nutrition", d: "مبادئ تغذية حيوانات الغذاء: العناصر الغذائية الستة وهضمها وتمثيلها، والطاقة الحيوية، وإضافات الأعلاف وتحليلها في المجترات وأحادية المعدة. Gita Cherian — جامعة ولاية أوريغون، رخصة CC BY-NC.", c: "أمريكا", y: "2020", l: "طالب جامعي", g: "English", s: "تغذية الحيوان", pdf: "https://open.oregonstate.education/animalnutrition/open/download?type=print_pdf", u: "https://open.oregonstate.education/animalnutrition/" },
+    { t: "Zoonosis", d: "الأمراض المشتركة بين الإنسان والحيوان: مصادرها وطرق انتقالها وتشخيصها والسيطرة عليها، من الجمرة الخبيثة وداء الكلب إلى الطفيليات المنقولة بالماء والغذاء. نخبة من الباحثين — IntechOpen، 11.3 MB.", c: "عالمي", y: "2012", l: "باحثون ودراسات عليا", g: "English", s: "الأمراض المشتركة والوبائيات", pdf: "https://mts.intechopen.com/storage/books/1668/authors_book/authors_book.pdf", u: "https://www.intechopen.com/books/1668" },
+    { t: "Veterinary Epidemiology: Principles and Methods", d: "المرجع الكلاسيكي في الوبائيات البيطرية: دراسة الأمراض في القطعان، والمسوحات والدراسات التحليلية، وإدارة صحة القطيع. Martin & Meek & Willeberg — مكتبات جامعة فرجينيا تك، رخصة CC BY-NC-ND، 6.9 MB.", c: "أمريكا", y: "", l: "باحثون ودراسات عليا", g: "English", s: "الأمراض المشتركة والوبائيات", pdf: "https://trva-ind-media.s3.amazonaws.com/media/knowledgehub/Veterinary_Epidemiology_Principles_and_Methods_S._Wayne_Martin_Alan_H._Meek_Preben_Willeberg.pdf", u: "http://hdl.handle.net/10919/72274" },
+    { t: "Homœopathic Veterinary Hand-Book", d: "كلاسيكية تاريخية من الملك العام (1879): دليل عملي للمربين في أمراض الخيل والبقر والغنم والخنازير والكلاب وعلاجاتها المثلية كما مورست في القرن التاسع عشر — للاطلاع التاريخي والبحثي فقط، 7.4 MB.", c: "أمريكا", y: "1879", l: "باحثون ودراسات عليا", g: "English", s: "الطب البديل (تاريخي)", pdf: "https://archive.org/download/homopathicveteri00john/homopathicveteri00john.pdf", u: "https://archive.org/details/homopathicveteri00john" },
+    { t: "Guide to Veterinary Homeopathy of the Horse and Cow", d: "كلاسيكية تاريخية من الملك العام (1868): دليل الهوميوباثي البيطري للخيل والبقر — الحمى والروماتيزم والتهابات الدماغ، أعراض كل حالة وعلاجها المثلي. S. N. Merriman، 2.4 MB.", c: "أمريكا", y: "1868", l: "باحثون ودراسات عليا", g: "English", s: "الطب البديل (تاريخي)", pdf: "https://archive.org/download/guidetoveterinar00merr/guidetoveterinar00merr.pdf", u: "https://archive.org/details/guidetoveterinar00merr" },
+    { t: "New Manual of Homœopathic Veterinary Medicine", d: "كلاسيكية تاريخية من الملك العام (1882): الدليل الشامل للطب البيطري المثلي لأمراض الخيل والبقر والغنم والخنازير والكلاب. Johann Christoph Schäfer، ترجمة Charles J. Hempel، 17.3 MB.", c: "أمريكا", y: "1882", l: "باحثون ودراسات عليا", g: "English", s: "الطب البديل (تاريخي)", pdf: "https://archive.org/download/101303458.nlm.nih.gov/101303458.pdf", u: "https://archive.org/details/101303458.nlm.nih.gov" }
+  ];
+
+  /* ---------------- 2) البيانات — الامتحانات وأوراق الأسئلة حسب الدول ------ */
+  var EXAMS = [
+    { t: "اختبارات VetAI التفاعلية — 22 مادة بثلاث لغات", d: "بنك اختبارات المنصة نفسه: درس مبسط + أسئلة لكل مادة (التشريح، وظائف الأعضاء، الكيمياء الحيوية، علم الأنسجة والأجنة، الأحياء الدقيقة، المناعة، الطفيليات، علم الأدوية والسموم، علم الأمراض، الطب الباطني، الجراحة والتخدير، التوليد والتناسل، الصحة العامة، فحص الأغذية، التغذية، الوراثة، الأخلاقيات والرفق، الأشعة والتشخيص، أمراض الدواجن، الأمراض الجلدية، طب الطوارئ والعناية المركزة، أمراض العيون) بالعربية والإنجليزية والفرنسية، مع حفظ نتائجك.", c: "الوطن العربي", y: "2026", l: "طالب جامعي", g: "العربية · English · Français", s: "جميع التخصصات", go: "exams", a: "فتح قسم الاختبارات ←" },
+    { t: "المدرسة الوطنية العليا للبيطرة — الجزائر (ENSV): وثائق ونماذج رسمية", d: "صفحة التنزيلات الرسمية للمدرسة: نماذج أطروحات التخرج، نماذج صفحات الغلاف، اتفاقيات التربص واستمارات أقسام العلوم السريرية وما قبل السريرية — المرجع الرسمي لطالب البيطرة الجزائري في إعداد امتحاناته ومذكراته.", c: "الجزائر", y: "2024", l: "طالب جامعي", g: "Français · English", s: "عام", u: "https://www.ensv.dz/en/downloads/", a: "فتح الموقع الرسمي ↗" },
+    { t: "دراسة الطب البيطري في الجزائر — البوابة الرسمية Study in Algeria", d: "المنهج الرسمي الكامل لمعاهد العلوم البيطرية الجزائرية: المواد الأساسية (التشريح، الكيمياء الحيوية، وظائف الأعضاء، علم الأنسجة...) والمواد المتقدمة (علم الأوبئة، أمراض الدواجن، الميكروبيولوجيا...) وشروط القبول — لمعرفة خطة الدراسة ومواد الامتحانات سنة بسنة.", c: "الجزائر", y: "2025", l: "طالب جامعي", g: "English", s: "عام", u: "https://studyinalgeria.dz/pages/15031", a: "فتح البوابة الرسمية ↗" },
+    { t: "منصة EVE التعليمية — المدرسة الوطنية للبيطرة بألفور (EnvA)", d: "منصة التعلم الإلكتروني الرسمية لطلاب المدرسة الوطنية للبيطرة بألفور: دروس وموارد السنوات الخمس مرتبة بالفصول الدراسية والوحدات، ووحدة أطروحة الدكتوراه البيطرية — بعض الموارد قد يتطلب حسابًا جامعيًا.", c: "فرنسا", y: "2026", l: "طالب جامعي", g: "Français", s: "جميع التخصصات", u: "https://eve.vet-alfort.fr/", a: "فتح المنصة ↗" },
+    { t: "NAVLE — الدليل الرسمي والأسئلة التجريبية المجانية (ICVA)", d: "المجلس الدولي للتقييم البيطري (ICVA): شرح رسمي مجاني لمنصة امتحان الترخيص لأمريكا الشمالية مع 20 سؤالًا تجريبيًا بالإنجليزية والفرنسية، وخطة الامتحان (Blueprint) وتوزيع الأسئلة حسب الأنواع والكفاءات.", c: "أمريكا", y: "2026", l: "خريجون وممارسون", g: "English · Français", s: "ترخيص الممارسة", u: "https://www.icva.net/navle/prepare-for-the-navle/", a: "فتح الدليل الرسمي ↗" },
+    { t: "NAVLE Self-Assessments — تقييمات ذاتية رسمية (ICVA)", d: "أقرب محاكاة للامتحان الحقيقي: 200 سؤال اختيار من متعدد في 4 أقسام بنفس منصة الامتحان، بنمطين زمنيين، مع تقرير أداء ونطاق نتيجة متوقع وتفصيل حسب مجالات الخطة. رسمي مدفوع (50–65 دولارًا) — نذكره لأنه المرجع الرسمي الوحيد من نوعه.", c: "أمريكا", y: "2026", l: "خريجون وممارسون", g: "English · Français", s: "ترخيص الممارسة", u: "https://icva.net/navle/self-assessments", a: "فتح التقييمات الرسمية ↗" },
+    { t: "امتحان الترخيص البيطري في كندا وأمريكا الشمالية (CVMA)", d: "الجمعية الطبية البيطرية الكندية: بنية امتحان NAVLE ومجالات الكفاءة (الممارسة السريرية 70%، التواصل، الاحترافية، الطب الوقائي والرفق) والأوزان النسبية للأنواع، مع دليل الاستعداد ليوم الامتحان.", c: "أمريكا", y: "2026", l: "خريجون وممارسون", g: "English · Français", s: "ترخيص الممارسة", u: "https://www.canadianveterinarians.net/accreditation-and-national-examining-board/national-examining-board/north-american-veterinary-licensing-examination-navle/", a: "فتح الدليل الكندي ↗" }
+  ];
+
+  /* ---------------- 3) البيانات — أبحاث ومقالات (مصادر علمية مفتوحة) ------- */
+  var RESEARCH = [
+    { t: "المجلة الجزائرية الدولية للطب البيطري (AIVJ) — جامعة سوق أهراس", d: "مجلة علمية جزائرية مفتوحة الوصول تنشر بحوثًا أصلية من معهد العلوم الزراعية والبيطرية بسوق أهراس: دراسات وبائية ومخبرية في الخيل والأبقار والأغنام والدواجن من الجزائر والمنطقة.", c: "الجزائر", y: "2026", l: "باحثون ودراسات عليا", g: "English · Français", s: "بحوث بيطرية", u: "https://univ-soukahras.dz/en/publication/conf/aivj", a: "تصفح المجلة ↗" },
+    { t: "مقالات VetAI المفصلة — 103 مقالات سريرية متخصصة", d: "مكتبة المنصة المقالية بالعربية: مقالات مفصلة في التهاب الصفاق المعدي عند القطط (FIP)، إجهاض الكلاميديا عند الأغنام، الربو الخيلي، مجمع أمراض الجهاز التنفسي البقري (BRD)، خشونة المفاصل، التهاب البنكرياس وغيرها — تُحدّث باستمرار.", c: "الوطن العربي", y: "2026", l: "الكل", g: "العربية", s: "طب سريري", go: "knowledge", a: "فتح قسم المعرفة ←" },
+    { t: "PubMed Central — أرشيف الأبحاث الطبية الحيوية المفتوح", d: "نصوص كاملة مجانية لملايين المقالات المحكّمة في الطب البيطري وعلوم الحياة من المكتبة الوطنية الأمريكية للطب — ابحث بأي مرض أو نوع أو تقنية.", c: "أمريكا", y: "2026", l: "باحثون ودراسات عليا", g: "English", s: "بحوث بيطرية", u: "https://pmc.ncbi.nlm.nih.gov", a: "البحث في الأرشيف ↗" },
+    { t: "DOAJ — دليل المجلات العلمية مفتوحة الوصول", d: "فهرس موثوق يضم المجلات المحكّمة مفتوحة الوصول فقط في جميع التخصصات، ومنها عشرات المجلات البيطرية والزراعية — نقطة انطلاق آمنة للبحث العلمي المجاني.", c: "عالمي", y: "2026", l: "الكل", g: "English", s: "بحوث بيطرية", u: "https://doaj.org", a: "تصفح الدليل ↗" },
+    { t: "منشورات منظمة الأغذية والزراعة (FAO)", d: "تقارير ودراسات المنظمة في الصحة الحيوانية والثروة الحيوانية والأمن الغذائي وسلامة الأغذية، بكتب وأدلة عملية مجانية بعدة لغات منها العربية.", c: "عالمي", y: "2026", l: "الكل", g: "العربية · English · Français", s: "الصحة الحيوانية", u: "https://www.fao.org/publications", a: "تصفح المنشورات ↗" },
+    { t: "المنظمة العالمية للصحة الحيوانية (WOAH)", d: "المعايير الدولية للصحة الحيوانية، والتقارير الوبائية العالمية، وإشعارات الأمراض الحيوانية العابرة للحدود، وأدلة التشخيص واللقاحات الرسمية.", c: "عالمي", y: "2026", l: "الكل", g: "English · Français", s: "الأمراض المشتركة والوبائيات", u: "https://www.woah.org", a: "فتح موقع المنظمة ↗" }
+  ];
+
+  /* ---------------- 4) البيانات — مذكرات التخرج ورسائل الماجستير والدكتوراه */
+  var THESES = [
+    { t: "DUMAS — مستودع المذكرات الجامعية الفرنسي (منصة HAL)", d: "المستودع الجامعي الرسمي للمذكرات بعد المناقشة: آلاف المذكرات بنصوص كاملة مجانية بصيغة PDF، بينها مذكرات طلاب المدارس الوطنية للبيطرة الفرنسية في العلوم البيطرية والزراعية — ابحث بكلمات مثل vétérinaire أو santé animale.", c: "فرنسا", y: "2026", l: "مذكرات وماستر", g: "Français", s: "جميع التخصصات", u: "https://dumas.ccsd.cnrs.fr/", a: "فتح المستودع ↗" },
+    { t: "theses.fr — البوابة الوطنية لأطروحات الدكتوراه الفرنسية (ABES)", d: "الفهرس الرسمي الشامل: كل أطروحات الدكتوراه المناقَشة في فرنسا منذ 1985 مع الملخصات والكلمات المفتاحية وروابط النص الكامل متى توفر، ومنها أطروحات الدكتوراه البيطرية في ألفور وليون ونانت وتولوز.", c: "فرنسا", y: "2026", l: "دكتوراه", g: "Français", s: "جميع التخصصات", u: "https://theses.fr", a: "فتح البوابة ↗" },
+    { t: "نماذج أطروحات التخرج المعتمدة — المدرسة الوطنية العليا للبيطرة بالجزائر", d: "من صفحة التنزيلات الرسمية للمدرسة (ENSV): نموذج الأطروحة الكلاسيكية، ونموذج الأطروحة بالمقالات (Thesis by article)، ونموذج صفحة الغلاف النهائي — القوالب التي يجب أن يلتزم بها طلبة الدكتوراه البيطرية في الجزائر.", c: "الجزائر", y: "2024", l: "دكتوراه", g: "Français · English", s: "عام", u: "https://www.ensv.dz/en/downloads/", a: "تنزيل النماذج ↗" },
+    { t: "المكتبة المركزية — جامعة ابن خلدون تيارت ونظام SNDL الوطني", d: "خدمات المكتبة الجامعية الجزائرية: أكثر من 12,000 عنوان علمي عبر مكتبة «في مكتبتي»، وحسابات الوصول إلى النظام الوطني للتوثيق عبر الإنترنت (SNDL) لطلبة نهاية الدراسة والأطباء البيطريين وطلبة الدكتوراه والأساتذة.", c: "الجزائر", y: "2026", l: "دكتوراه", g: "العربية · Français", s: "عام", u: "https://www.univ-tiaret.dz/an/LibraryInfo.html", a: "فتح صفحة المكتبة ↗" },
+    { t: "مذكرات ورسائل «مكتبة د. محجوبي» — في هذه الصفحة", d: "القسم الخاص بالمنصة أسفل هذه البطاقة مباشرة: تُنشر فيه كتب ومقالات وامتحانات ومذكرات د. محجوبي عبدالناصر والباحثين المتعاونين فور توفرها بصيغة PDF قابلة للتنزيل.", c: "الوطن العربي", y: "2026", l: "الكل", g: "العربية", s: "عام", sc: "#myLib", a: "الانتقال إلى مكتبة د. محجوبي ↓" }
+  ];
+
+  var DATA = { books: BOOKS, exams: EXAMS, research: RESEARCH, theses: THESES };
+  var cur = "books";
+
+  /* ---------------- 5) أدوات العرض --------------------------------------- */
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function chips(it) {
+    var out = [];
+    if (it.c) out.push("📍 " + esc(it.c));
+    if (it.y) out.push("📅 " + esc(it.y));
+    if (it.l) out.push("🎓 " + esc(it.l));
+    if (it.g) out.push("🗣 " + esc(it.g));
+    if (it.s) out.push("🩺 " + esc(it.s));
+    return out.map(function (x) { return "<span>" + x + "</span>"; }).join("");
+  }
+  function links(it) {
+    var out = [];
+    if (it.pdf) out.push('<a class="slb-a" href="' + esc(it.pdf) + '" target="_blank" rel="noopener">⬇ تنزيل PDF</a>');
+    if (it.u) out.push('<a class="slb-a' + (it.pdf ? " alt" : "") + '" href="' + esc(it.u) + '" target="_blank" rel="noopener">' + esc(it.pdf ? "صفحة المصدر" : (it.a || "فتح المصدر ↗")) + "</a>");
+    if (it.go) out.push('<button type="button" class="slb-a" data-go="' + esc(it.go) + '">' + esc(it.a || "فتح ←") + "</button>");
+    if (it.sc) out.push('<button type="button" class="slb-a" data-slb-scroll="' + esc(it.sc) + '">' + esc(it.a || "انتقال ↓") + "</button>");
+    return out.join("");
+  }
+  function card(it) {
+    return '<article class="slb-it"><h4 dir="auto">' + esc(it.t) + '</h4><div class="slb-meta">' + chips(it) + '</div><p class="slb-d">' + esc(it.d) + '</p><div class="slb-links">' + links(it) + "</div></article>";
+  }
+
+  /* ---------------- 6) الفلاتر الذكية -------------------------------------- */
+  var F = { c: document.getElementById("slbFC"), y: document.getElementById("slbFY"), l: document.getElementById("slbFL"), g: document.getElementById("slbFG"), s: document.getElementById("slbFS") };
+  var Q = document.getElementById("slbQ");
+  var NAMES = { c: "كل الدول", y: "كل السنوات", l: "كل المستويات", g: "كل اللغات", s: "كل التخصصات" };
+  function uniq(arr, key) {
+    var seen = {}, out = [];
+    arr.forEach(function (it) { var v = it[key]; if (v && !seen[v]) { seen[v] = 1; out.push(v); } });
+    return out;
+  }
+  function buildFilters() {
+    var items = DATA[cur];
+    Object.keys(F).forEach(function (k) {
+      var sel = F[k], prev = sel.value;
+      var vals = uniq(items, k);
+      if (k === "y") vals.sort(function (a, b) { return Number(b) - Number(a); });
+      sel.innerHTML = '<option value="">' + NAMES[k] + "</option>" + vals.map(function (v) { return '<option value="' + esc(v) + '">' + esc(v) + "</option>"; }).join("");
+      if (prev && vals.indexOf(prev) >= 0) sel.value = prev;
+    });
+  }
+  function pass(it) {
+    if (F.c.value && it.c !== F.c.value) return false;
+    if (F.y.value && it.y !== F.y.value) return false;
+    if (F.l.value && it.l !== F.l.value) return false;
+    if (F.g.value && it.g !== F.g.value) return false;
+    if (F.s.value && it.s !== F.s.value) return false;
+    var q = (Q.value || "").trim().toLowerCase();
+    if (q && (it.t + " " + it.d + " " + it.s + " " + it.c).toLowerCase().indexOf(q) < 0) return false;
+    return true;
+  }
+  function render() {
+    var items = DATA[cur], grid = document.getElementById("slbG-" + cur);
+    var shown = items.filter(pass);
+    grid.innerHTML = shown.length ? shown.map(card).join("") : '<div class="slb-empty">لا توجد نتائج مطابقة لهذه الفلاتر — جرّب تخفيف فلتر أو إعادة التعيين.</div>';
+    document.getElementById("slbCount").textContent = "عرض " + shown.length + " من أصل " + items.length + " في هذا القسم";
+  }
+  Object.keys(F).forEach(function (k) { F[k].addEventListener("change", render); });
+  Q.addEventListener("input", render);
+  document.getElementById("slbReset").addEventListener("click", function () {
+    Object.keys(F).forEach(function (k) { F[k].value = ""; });
+    Q.value = ""; render();
+  });
+
+  /* ---------------- 7) التبويبات ------------------------------------------ */
+  var tabs = host.querySelectorAll(".slb-tab");
+  tabs.forEach(function (b) {
+    var n = DATA[b.dataset.tab] ? DATA[b.dataset.tab].length : 0;
+    b.innerHTML += ' <span class="slb-n">(' + n + ")</span>";
+    b.addEventListener("click", function () {
+      cur = b.dataset.tab;
+      tabs.forEach(function (x) { var on = x === b; x.classList.toggle("on", on); x.setAttribute("aria-selected", on ? "true" : "false"); });
+      ["books", "exams", "research", "theses"].forEach(function (k) {
+        document.getElementById("slbP-" + k).style.display = k === cur ? "" : "none";
+      });
+      buildFilters(); render();
+      if (cur === "research") loadLive(false);
+    });
+  });
+
+  /* ---------------- 8) زر الترجمة الفورية ---------------------------------- */
+  document.getElementById("slbTrBtn").addEventListener("click", function () {
+    var d = document.getElementById("mtr");
+    if (!d) return;
+    d.open = true;
+    d.scrollIntoView({ behavior: "smooth", block: "center" });
+    var t = document.getElementById("mtr-in");
+    if (t) setTimeout(function () { try { t.focus({ preventScroll: true }); } catch (e) { t.focus(); } }, 500);
+  });
+  host.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-slb-scroll]");
+    if (!b) return;
+    var el = document.querySelector(b.getAttribute("data-slb-scroll"));
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  /* ---------------- 9) بث الأبحاث الحي (RSS عبر سلسلة وسطاء) ----------------- */
+  var FEEDS = [
+    { name: "ScienceDaily — Animals", url: "https://www.sciencedaily.com/rss/plants_animals.xml", ico: "🔬" },
+    { name: "Phys.org — Veterinary Medicine", url: "https://phys.org/rss-feed/biology-news/veterinary-medicine/", ico: "🐾" }
+  ];
+  var PROX = [
+    function (u) { return u; },
+    function (u) { return "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(u); },
+    function (u) { return "https://api.allorigins.win/raw?url=" + encodeURIComponent(u); },
+    function (u) { return "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(u); }
+  ];
+  var resLoaded = false, resBusy = false;
+  function fetchText(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error("http " + r.status); return r.text(); });
+  }
+  function fetchFeed(feed) {
+    var chain = Promise.reject(new Error("start"));
+    PROX.forEach(function (px) {
+      chain = chain.catch(function () { return fetchText(px(feed.url)); });
+    });
+    return chain.then(function (txt) {
+      txt = String(txt || "");
+      if (txt.charAt(0) === "{") {
+        var j = JSON.parse(txt), items = (j.items || []).map(function (x) {
+          return { t: x.title || "", u: x.link || "", dt: x.pubDate ? new Date(x.pubDate) : null };
+        });
+        if (!items.length) throw new Error("empty");
+        return items;
+      }
+      var doc = new DOMParser().parseFromString(txt, "text/xml");
+      var nodes = doc.querySelectorAll("item"), out = [];
+      for (var i = 0; i < nodes.length; i++) {
+        var it = nodes[i], g = function (tag) { var n = it.querySelector(tag); return n ? n.textContent.trim() : ""; };
+        out.push({ t: g("title"), u: g("link"), dt: g("pubDate") ? new Date(g("pubDate")) : null });
+      }
+      if (!out.length) throw new Error("empty");
+      return out;
+    });
+  }
+  function relDate(dt) {
+    if (!dt || isNaN(dt)) return "";
+    var h = Math.round((Date.now() - dt.getTime()) / 36e5);
+    if (h < 1) return "الآن";
+    if (h < 24) return "قبل " + h + " ساعة";
+    var dd = Math.round(h / 24);
+    return dd === 1 ? "قبل يوم" : "قبل " + dd + " يوم";
+  }
+  function loadLive(force) {
+    if (resBusy || (resLoaded && !force)) return;
+    var box = document.getElementById("slbLiveRes");
+    var cache = null;
+    try { cache = JSON.parse(localStorage.getItem("va_slb_res_v1") || "null"); } catch (e) { cache = null; }
+    if (!force && cache && Date.now() - cache.ts < 30 * 60 * 1000 && cache.html) {
+      box.innerHTML = cache.html; resLoaded = true; return;
+    }
+    resBusy = true;
+    box.innerHTML = '<p class="small muted">جارٍ جلب أحدث الدراسات...</p>';
+    Promise.all(FEEDS.map(function (f) {
+      return fetchFeed(f).then(function (items) {
+        return items.map(function (x) { x.src = f.name; x.ico = f.ico; return x; });
+      }).catch(function () { return []; });
+    })).then(function (lists) {
+      var all = [];
+      lists.forEach(function (l) { all = all.concat(l); });
+      all = all.filter(function (x) { return x.t && x.u; });
+      all.sort(function (a, b) { return (b.dt || 0) - (a.dt || 0); });
+      all = all.slice(0, 8);
+      if (!all.length) {
+        box.innerHTML = '<div class="slb-empty">تعذّر جلب البث المباشر الآن (قيود الشبكة) — تصفح قواعد البيانات العلمية في القائمة التالية، فهي محدثة دائمًا.</div>';
+      } else {
+        box.innerHTML = all.map(function (x) {
+          return '<article class="slb-it"><h4 dir="auto">' + esc(x.t) + '</h4><div class="slb-meta"><span>' + x.ico + " " + esc(x.src) + "</span>" + (x.dt ? "<span>🕒 " + esc(relDate(x.dt)) + "</span>" : "") + '</div><div class="slb-links"><a class="slb-a alt" href="' + esc(x.u) + '" target="_blank" rel="noopener">قراءة الدراسة ↗</a></div></article>';
+        }).join("");
+        try { localStorage.setItem("va_slb_res_v1", JSON.stringify({ ts: Date.now(), html: box.innerHTML })); } catch (e) {}
+      }
+      resLoaded = true; resBusy = false;
+    });
+  }
+  document.getElementById("slbResRef").addEventListener("click", function () { loadLive(true); });
+
+  /* ---------------- 10) تشغيل أولي ----------------------------------------- */
+  buildFilters();
+  render();
+})();
+
 </script>
 </body>
   
