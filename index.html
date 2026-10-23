@@ -1285,6 +1285,32 @@ input::placeholder,textarea::placeholder{opacity:1}
 </style>
 
 <style>/* الشعار الرسمي للموقع (VetAI Global) داخل شارات الهيدر والتذييل */#gnav .logo b,.vf .brand b{overflow:hidden;padding:0}#gnav .logo b img,.vf .brand b img{width:100%;height:100%;object-fit:cover;display:block}</style>
+
+<style>/* ===== ألعاب عصرية (2026) ===== */
+.mg-cv{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--bd);background:linear-gradient(180deg,#bfe8f5,#e8f7ee);touch-action:none}
+.mg-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.mg-sel{padding:9px 12px;border-radius:12px;border:1px solid var(--bd);background:var(--inp);color:var(--fg);font:inherit}
+.mg-board{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px;perspective:700px}
+.mg-card{position:relative;aspect-ratio:1;border:none;border-radius:14px;cursor:pointer;background:transparent;padding:0;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.7,.3,1.2)}
+.mg-card .f{position:absolute;inset:0;display:grid;place-items:center;border-radius:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+.mg-card .fr{background:linear-gradient(135deg,var(--a1),var(--a2));font-size:26px;color:#fff}
+.mg-card .bk{transform:rotateY(180deg);background:var(--inp)}
+.mg-card .bk img{width:100%;height:100%;object-fit:cover;display:block}
+.mg-card.flip{transform:rotateY(180deg)}
+.mg-card.done{outline:3px solid #10b981;outline-offset:-3px;cursor:default}
+.mg-stage{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--bd);margin-top:6px}
+.mg-stage img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.mg-idle{aspect-ratio:4/3;display:grid;place-items:center;font-size:64px;background:linear-gradient(135deg,var(--a1),var(--a2));opacity:.85}
+.mg-timer{position:absolute;bottom:0;right:0;left:0;height:6px;background:rgba(0,0,0,.25)}
+.mg-timer i{display:block;height:100%;width:100%;background:#f59e0b;transition:width .1s linear}
+.mg-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.mg-opts button{padding:11px;border-radius:12px;border:1px solid var(--bd);background:var(--inp);color:var(--fg);font:inherit;font-weight:700;cursor:pointer}
+.mg-opts button.ok{background:#064e3b;border-color:#10b981;color:#d1fae5}
+.mg-opts button.no{background:#4c0519;border-color:#f43f5e;color:#ffe4e6}
+.mg-pad{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:10px}
+.mg-pad button{width:52px;height:44px;border-radius:12px;border:1px solid var(--bd);background:var(--inp);color:var(--fg);font-size:17px;cursor:pointer}
+.mg-pad span{display:flex;gap:6px}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1736,20 +1762,24 @@ input::placeholder,textarea::placeholder{opacity:1}
 </div>
 </div></section></div></section><section id="view-library" class="hidden space-y-8"><div class="my space-y-8"><section id="library"><div class="wrap"><div class="sectionHead"><div><h2>المكتبة: مقالات بحثية وكتب مجانية</h2><p class="muted">اضغط على أي عنوان لقراءة الملخص.</p></div></div>
 <div class="grid"><a class="card" href="library-guide.html" style="grid-column:1/-1;display:block;text-decoration:none;color:inherit;border-color:#06b6d4"><h3>📚 الدليل المرجعي للأمراض البيطرية (3 مجلدات)</h3><p class="small muted">الكلاب والقطط · المجترات · الدواجن — Parvovirus، Distemper، حمى اللبن، BRD، Newcastle، Gumboro وغيرها. اضغط للفتح ←</p></a><div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
-<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8" id="newgames"><section><div class="wrap"><div class="sectionHead"><div><h2>ألعاب حيوانات ممتعة للكبار والصغار</h2><p class="muted">ألعاب تعمل مباشرة هنا، وبعدها روابط لألعاب مجانية في مواقع أخرى.</p></div></div>
+<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">أربع ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
 <div class="gameGrid">
-<div class="card"><div class="icon">🔨</div><h3>اضرب الحيوان (للأطفال)</h3><p class="muted">اضغط الحيوان قبل أن يختفي! 30 ثانية.</p><div class="wm" id="wm"></div><div class="score" id="wms">النقاط: 0 · الوقت: 30</div><button class="btn primary" id="wmgo">ابدأ</button></div>
-<div class="card"><div class="icon">🍼</div><h3>من هو الصغير؟ (للأطفال)</h3><p class="muted" id="yq">—</p><div id="yo"></div><div class="score" id="ys">النقاط: 0</div></div>
-<div class="card"><div class="icon">✅</div><h3>صح أم خطأ؟ (للكبار)</h3><p class="muted" id="tq">—</p><button class="btn primary" data-tf="1">صح</button><button class="btn alt" data-tf="0">خطأ</button><div class="result" id="tr">—</div><div class="score" id="ts">النقاط: 0</div></div>
-<div class="card"><div class="icon">🔤</div><h3>رتّب الحروف (للكبار)</h3><p class="muted">رتّب الحروف لتكوّن اسم حيوان.</p><div class="kpi" id="sw" style="letter-spacing:.3em">—</div><input id="si" placeholder="اكتب الإجابة" style="width:100%"><button class="btn primary" id="sc">تحقق</button><button class="btn alt" id="sh2">تلميح</button><div class="result" id="sr">—</div><div class="score" id="ss">النقاط: 0</div></div>
-</div></div></section>
-<section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="https://kids.nationalgeographic.com/games"><b>National Geographic Kids</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://kids.sandiegozoo.org"><b>San Diego Zoo Kids</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://pbskids.org/games"><b>PBS Kids Games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.abcya.com"><b>ABCya</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.funbrain.com"><b>Funbrain</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://poki.com"><b>Poki</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.crazygames.com"><b>CrazyGames</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.google.com/search?q=ألعاب+حيوانات+مجانية"><b>بحث: ألعاب حيوانات مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><div class="my space-y-8"><section id="games"><div class="wrap"><div class="sectionHead"><div><h2>ألعاب الحيوانات المجانية</h2><p class="muted">ألعاب خفيفة للتسلية والتعليم، بدون تسجيل وبدون دفع.</p></div></div>
-<div class="gameGrid">
-<div class="card game"><div><div class="icon">🧠</div><h3>اختبار الحيوان</h3><p class="muted" id="quizQ">أي حيوان يُعد من المجترات؟</p><div id="quizOpts"></div></div><div class="score" id="quizScore">النقاط: 0</div></div>
-<div class="card game"><div><div class="icon">🃏</div><h3>ذاكرة الحيوانات</h3><p class="muted">اكشف البطاقات وطابق الأزواج.</p><div class="gameboard" id="memory"></div></div><button class="btn primary" id="resetMemory">لعبة جديدة</button></div>
-<div class="card game"><div><div class="icon">🐾</div><h3>من أنا؟</h3><p class="muted" id="whoHint">أعيش غالبًا في المزرعة وأنتج الحليب.</p><button class="btn primary" id="whoAnswer">أظهر الإجابة</button><div class="result" id="whoResult">؟</div></div><button class="btn alt" id="whoNext">لغز جديد</button></div>
+<div class="card game mg"><div><div class="icon">🃏</div><h3>ذاكرة الصور</h3><p class="muted">اقلب البطاقات وطابق صور الحيوانات بأقل حركات وأسرع وقت.</p>
+<div class="mg-bar"><select id="mmLevel" class="mg-sel" aria-label="المستوى"><option value="6">سهل · 6 أزواج</option><option value="8">متوسط · 8 أزواج</option></select><button class="btn primary" id="mmNew">لعبة جديدة</button></div>
+<div class="mg-board" id="mmBoard"></div></div><div class="score" id="mmScore">اختر المستوى وابدأ اللعب</div></div>
+<div class="card game mg"><div><div class="icon">🐇</div><h3>عدّاء الأرنب</h3><p class="muted">اقفز فوق الصبار والصخور والقنافذ — اضغط المسافة أو انقر الحقل للقفز.</p>
+<canvas id="rrCv" width="680" height="210" class="mg-cv"></canvas>
+<div class="mg-bar"><button class="btn primary" id="rrGo">ابدأ الجري</button></div></div><div class="score" id="rrScore">أفضل مسافة: 0 م</div></div>
+<div class="card game mg"><div><div class="icon">📸</div><h3>خمّن الحيوان</h3><p class="muted">صورة حقيقية وأربعة خيارات وعدّاد وقت — أجب بسرعة واجمع السلاسل.</p>
+<div class="mg-stage"><img id="pqImg" alt="صورة حيوان" style="display:none"><div id="pqIdle" class="mg-idle">🐾</div><div class="mg-timer"><i id="pqBar"></i></div></div>
+<div class="mg-opts" id="pqOpts"></div>
+<div class="mg-bar"><button class="btn primary" id="pqGo">ابدأ الاختبار</button></div></div><div class="score" id="pqScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🐍</div><h3>ثعبان المزرعة</h3><p class="muted">كُل التفاح والجزر لتطول، ولا تصطدم بالجدار أو بنفسك. أسهم الاتجاه أو الأسهم أدناه أو المسح على الحقل.</p>
+<canvas id="snCv" width="336" height="336" class="mg-cv"></canvas>
+<div class="mg-bar"><button class="btn primary" id="snGo">ابدأ اللعب</button></div>
+<div class="mg-pad"><button data-d="up" aria-label="أعلى">▲</button><span><button data-d="left" aria-label="يسار">◀</button><button data-d="down" aria-label="أسفل">▼</button><button data-d="right" aria-label="يمين">▶</button></span></div></div><div class="score" id="snScore">أفضل نتيجة: 0</div></div>
 </div>
-</div></section><section id="media"><div class="wrap"><div class="sectionHead"><div><h2>الوسائط والتعليم المرئي</h2><p class="muted">روابط بحث منظمة للصور والفيديوهات التعليمية.</p></div></div>
+</div></section></div><div class="my space-y-8"><section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="https://kids.nationalgeographic.com/games"><b>National Geographic Kids</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://kids.sandiegozoo.org"><b>San Diego Zoo Kids</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://pbskids.org/games"><b>PBS Kids Games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.abcya.com"><b>ABCya</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.funbrain.com"><b>Funbrain</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://poki.com"><b>Poki</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.crazygames.com"><b>CrazyGames</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.google.com/search?q=ألعاب+حيوانات+مجانية"><b>بحث: ألعاب حيوانات مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><section id="media"><div class="wrap"><div class="sectionHead"><div><h2>الوسائط والتعليم المرئي</h2><p class="muted">روابط بحث منظمة للصور والفيديوهات التعليمية.</p></div></div>
 <div class="grid">
 <a class="card" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=طب+بيطري+جراحة"><h3>🎬 الجراحة البيطرية</h3><p class="muted">فيديوهات وشروحات تعليمية.</p></a>
 <a class="card" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=تطعيم+الكلاب+والقطط"><h3>💉 التلقيح</h3><p class="muted">مصادر مرئية للتوعية.</p></a>
@@ -2100,19 +2130,7 @@ $('#googleBtn').onclick=()=>webOpen('https://www.google.com/search?q=');
 $('#youtubeBtn').onclick=()=>webOpen('https://www.youtube.com/results?search_query=');
 $('#aiDemo').onclick=()=>{const q=$('#aiq').value.trim();$('#aiResult').textContent=q?`تصنيف أولي للسؤال: ${q.includes('مرض')||q.includes('أعراض')?'أعراض/مرض':q.includes('دواء')||q.includes('جرعة')?'دواء — يحتاج مراجعة طبيب بيطري':q.includes('بحث')||q.includes('دراسة')?'بحث علمي':'استفسار بيطري عام'}\n\nيمكن ربط هذه الواجهة لاحقًا بنموذج ذكاء اصطناعي وقاعدة مصادر موثوقة.`:'اكتب سؤالًا أولًا.'};
 
-const quiz=[
-['أي حيوان يُعد من المجترات؟',['الأبقار','القطط','الدجاج'],'الأبقار'],
-['ما الغذاء الذي قد يكون سامًا للكلاب؟',['الشوكولاتة','الجزر','الأرز'],'الشوكولاتة'],
-['أي حيوان من الطيور؟',['الحصان','الدجاج','الأغنام'],'الدجاج'],
-['ما الإجراء الأساسي عند الاشتباه بمرض معدٍ في قطيع؟',['العزل والتقييم البيطري','زيادة الازدحام','إيقاف الماء'],'العزل والتقييم البيطري']
-];let qi=0,score=0;
-function renderQuiz(){const x=quiz[qi];$('#quizQ').textContent=x[0];$('#quizOpts').innerHTML=x[1].map(o=>`<button class="btn alt quizOpt">${o}</button>`).join('');$$('.quizOpt').forEach(b=>b.onclick=()=>{if(b.textContent===x[2])score++;qi=(qi+1)%quiz.length;$('#quizScore').textContent='النقاط: '+score;renderQuiz();});}renderQuiz();
 
-const animals=['🐕','🐈','🐄','🐑','🐓','🐎','🐇','🐪'];let first=null,lock=false;
-function newMemory(){const a=[...animals.slice(0,4),...animals.slice(0,4)].sort(()=>Math.random()-.5);$('#memory').innerHTML=a.map((x,i)=>`<button class="tile" data-v="${x}" data-i="${i}">❓</button>`).join('');first=null;lock=false;$$('.tile').forEach(t=>t.onclick=()=>{if(lock||t.classList.contains('done')||t===first)return;t.textContent=t.dataset.v;if(!first){first=t;return}if(first.dataset.v===t.dataset.v){first.classList.add('done');t.classList.add('done');first=null}else{lock=true;setTimeout(()=>{first.textContent='❓';t.textContent='❓';first=null;lock=false},650)}})}newMemory();$('#resetMemory').onclick=newMemory;
-
-const riddles=[['أعيش غالبًا في المزرعة وأنتج الحليب.','🐄 البقرة'],['أحب الجزر في الرسوم المتحركة وأقفز كثيرًا.','🐇 الأرنب'],['أُعرف بالوفاء وأستطيع حراسة المنزل.','🐕 الكلب'],['أطير ولدي ريش وأضع البيض.','🐓 الدجاجة']];
-let ri=0;function showR(){const x=riddles[ri];$('#whoHint').textContent=x[0];$('#whoResult').textContent='؟'}showR();$('#whoAnswer').onclick=()=>$('#whoResult').textContent=riddles[ri][1];$('#whoNext').onclick=()=>{ri=(ri+1)%riddles.length;showR()};
 
 $('#sendWA').onclick=()=>{const n=$('#cn').value.trim(),p=$('#cph').value.trim(),a=$('#ca').value.trim();const m=`السلام عليكم دكتور، أنا ${n}.\nهاتف: ${p}\nالاستشارة: ${a}`;window.open('https://wa.me/14152793963?text='+encodeURIComponent(m),'_blank','noopener')};
 
@@ -2225,29 +2243,7 @@ document.getElementById('exlang').onclick=e=>{const b=e.target.closest('[data-xl
 document.getElementById('exchips').onclick=e=>{const b=e.target.closest('.ex-chip');if(!b)return;const s=EXD()[b.dataset.i];body.classList.remove('hidden');body.dir=xl==='ar'?'rtl':'ltr';body.innerHTML='<h3 class="text-xl font-black">'+s[0]+'</h3><p class="mt-2 text-slate-300 leading-relaxed">📖 '+s[1]+'</p><div id="exq"></div>';quiz(s[2].map(q=>({t:q[0],o:q[1]})),EX[b.dataset.i][0],document.getElementById('exq'));body.scrollIntoView({behavior:'smooth'})};
 document.getElementById('exall').onclick=()=>{const all=[];EXD().forEach(s=>s[2].forEach(q=>all.push({s:s[0],t:q[0],o:q[1]})));body.classList.remove('hidden');body.dir=xl==='ar'?'rtl':'ltr';body.innerHTML='<h3 class="text-xl font-black">'+STR().allTitle+'</h3><div id="exq"></div>';quiz(sh(all).slice(0,10),null,document.getElementById('exq'));body.scrollIntoView({behavior:'smooth'})}})();
 </script>
-<script>
-(function(){const q=s=>document.querySelector(s),sh=a=>a.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
-// animal background floaters
-const F=["🐕", "🐈", "🐄", "🐑", "🐓", "🐎", "🐇", "🦜", "🐐", "🐖", "🐪", "🐘", "🦒", "🦓", "🦁", "🐅", "🐒", "🐊", "🐢", "🐍", "🐸", "🐟", "🐬", "🐋", "🦈", "🐙", "🦀", "🦋", "🐝", "🦉", "🦅", "🦆", "🦢", "🐧", "🦩", "🦔", "🦊", "🐺", "🐻", "🐼", "🦘", "🦥", "🦦", "🐿️"],fl=q('#fl');if(fl){fl.innerHTML='';F.forEach((a,i)=>{const s=document.createElement('span');s.textContent=a;s.style.left=(i*100/F.length)+'%';s.style.animationDuration=(20+i%7*4)+'s';s.style.animationDelay='-'+(i*2.3)+'s';fl.append(s)})}
-// whack
-let wt=null,ws=0,wl=30,wi=null;const wm=q('#wm');wm.innerHTML=[...Array(9)].map(()=>'<button></button>').join('');
-function wend(){clearInterval(wt);clearInterval(wi);wm.querySelectorAll('button').forEach(b=>b.textContent='');q('#wms').textContent='انتهى! نقاطك: '+ws+(ws>=20?' 🏆':ws>=10?' 👏':' 💪')}
-q('#wmgo').onclick=()=>{ws=0;wl=30;clearInterval(wt);clearInterval(wi);q('#wms').textContent='النقاط: 0 · الوقت: 30';wt=setInterval(()=>{wl--;q('#wms').textContent='النقاط: '+ws+' · الوقت: '+wl;if(wl<=0)wend()},1000);wi=setInterval(()=>{const bs=wm.querySelectorAll('button');bs.forEach(b=>b.textContent='');bs[Math.floor(Math.random()*9)].textContent=F[Math.floor(Math.random()*12)]},750)};
-wm.onclick=e=>{const b=e.target.closest('button');if(b&&b.textContent&&wl>0){ws++;b.textContent='⭐';q('#wms').textContent='النقاط: '+ws+' · الوقت: '+wl}};
-// young
-const Y=[['الخروف','الحمل'],['البقرة','العجل'],['الدجاجة','الكتكوت'],['الحصان','المهر'],['الكلب','الجرو'],['الماعز','الجدي'],['الناقة','الحوار'],['الأسد','الشبل'],['الضفدع','الشرغوف'],['القطة','الهريرة']];let yc=0,ya;
-function yn(){const c=Y[Math.floor(Math.random()*Y.length)];ya=c[1];q('#yq').textContent='ما اسم صغير: '+c[0]+'؟';q('#yo').innerHTML=sh([c[1]].concat(sh(Y.filter(x=>x[1]!=c[1])).slice(0,2).map(x=>x[1]))).map(o=>'<button class="btn alt quizOpt">'+o+'</button>').join('')}
-q('#yo').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.textContent==ya){yc++;b.textContent='✅ '+b.textContent}else{b.textContent='❌ الصحيح: '+ya;yc=Math.max(0,yc-1)}q('#ys').textContent='النقاط: '+yc;setTimeout(yn,900)};yn();
-// true/false
-const T=[['للأخطبوط ثلاثة قلوب.',1],['الخفافيش عمياء تمامًا.',0],['الزرافة لها سبع فقرات عنقية.',1],['يخزن الجمل الماء في سنامه.',0],['الدلفين من الثدييات.',1],['العنكبوت حشرة.',0],['الأبقار حيوانات مجترة.',1],['الدجاج يطير لمسافات بعيدة.',0],['الكلاب ترى الألوان بدرجة أقل من الإنسان.',1],['تنام القطط أقل من 4 ساعات يوميًا.',0]];let ti=0,tc=0;
-function tn(){ti=Math.floor(Math.random()*T.length);q('#tq').textContent=T[ti][0]}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-tf]');if(!b)return;const ok=(+b.dataset.tf)==T[ti][1];if(ok)tc++;q('#tr').textContent=ok?'✅ إجابة صحيحة':'❌ الصحيح: '+(T[ti][1]?'صح':'خطأ');q('#ts').textContent='النقاط: '+tc;tn()});tn();
-// scramble
-const W=['أسد','حصان','زرافة','دلفين','غزال','نعامة','سلحفاة','فيل','خروف','ثعلب'];let wd='',sc=0;
-function sn(){wd=W[Math.floor(Math.random()*W.length)];let s;do{s=sh(wd.split('')).join('')}while(s==wd);q('#sw').textContent=s.split('').join(' ');q('#si').value='';q('#sr').textContent='—'}
-q('#sc').onclick=()=>{if(q('#si').value.trim()==wd){sc++;q('#ss').textContent='النقاط: '+sc;q('#sr').textContent='🎉 صحيح!';setTimeout(sn,900)}else q('#sr').textContent='حاول مجددًا'};
-q('#sh2').onclick=()=>q('#sr').textContent='يبدأ بحرف: '+wd[0]+' · عدد الحروف: '+wd.length;sn();})();
-</script>
+
 <script>
 (function(){const q=s=>document.querySelector(s),POOL=["السعار مرض قاتل لكنه قابل للوقاية؛ تلقيح الكلاب بانتظام هو أنجح وسيلة لحماية الإنسان.", "شرب الماء النظيف بكميات كافية يقلل خطر حصى المسالك البولية في القطط.", "الفحص الدوري لأسنان الكلاب والقطط يكشف مرض اللثة مبكرًا قبل أن يؤثر في القلب والكلى.", "حليب الأبقار المبستر أو المغلي آمن من البروسيلا بخلاف الحليب الخام.", "الأمن الحيوي في المزرعة أرخص من علاج الأوبئة: تطهير، وعزل، وتقييد الزوار.", "سرسوب الساعات الأولى يمنح العجل أجسامه المضادة، وتأخيره يزيد المرض والنفوق.", "القراد ينقل أمراضًا للكلاب والمواشي؛ افحص الأذنين والإبط وبين الأصابع بعد النزهة.", "الإجهاد الحراري يقلل أكل الأبقار وحليبها؛ وفّر الظل والماء البارد والتهوية.", "تدوير المراعي يقطع دورة الديدان الداخلية ويقلل الحاجة إلى المضادات.", "الشوكولاتة الداكنة أخطر من الحليب على الكلاب؛ احفظها بعيدًا عن متناولها.", "الاستخدام العشوائي للمضادات الحيوية يخلق بكتيريا مقاومة تهدد الإنسان والحيوان.", "تقليم الأظافر وفحص الأقدام يمنع كثيرًا من العرج في الكلاب والمواشي.", "الدواجن تحتاج تهوية تخلص الأمونيا حتى مع برودة الجو.", "الخصي والتعقيم المبكر يقللان بعض الأورام والمشكلات السلوكية، بقرار من الطبيب.", "الأرنب يحتاج ألياف التبن يوميًا لأن أسنانه تنمو باستمرار.", "فحص الكيس العدري ومعالجة الكلاب دوريًا يحمي الإنسان والمواشي في مناطق الرعي.", "الوزن الزائد عند الكلاب يضاعف مشكلات المفاصل؛ راقب الغذاء والحركة.", "التطعيم الأول للجراء يبدأ عادة بين 6 و8 أسابيع ويُكمل حسب جدول الطبيب.", "سجل الأمراض والتلقيح لكل حيوان يوفر على الطبيب وقتًا ويحسّن القرار العلاجي.", "ارتفاع حرارة القطة فوق نحو 39.2°م يستدعي المتابعة وربما زيارة الطبيب.", "الطبيب البيطري ركن في الصحة الواحدة التي تحمي الإنسان والحيوان والبيئة معًا.", "الذكاء الاصطناعي يساعد في قراءة الأشعة، لكن القرار النهائي للطبيب.", "النظافة وغسل اليدين بعد لمس الحيوانات يقطعان انتقال كثير من الأمراض المشتركة.", "العناية بالحيوان لا تكتمل بلا رفق: الغذاء، الماء، المأوى، الرعاية الصحية، والأمان."],TOP=["الأمراض المشتركة", "تغذية الحيوان", "الوقاية والتلقيح", "الدواجن", "المجترات", "الحيوانات الأليفة", "تقنيات الطب البيطري الحديثة", "رفاه الحيوان", "مقاومة المضادات الحيوية", "الصحة الواحدة"];let feed=[],last=-1;try{feed=JSON.parse(localStorage.getItem('hrfeed')||'[]')}catch(e){}
 const hk=()=>Math.floor(Date.now()/36e5);
@@ -3962,6 +3958,153 @@ $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(
   b.addEventListener('click',function(e){e.stopPropagation();var willOpen=p.hidden;p.hidden=!willOpen;b.setAttribute('aria-expanded',String(willOpen));});
   document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target))close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+
+<script>
+/* ===== ألعاب حيوانات عصرية: ذاكرة الصور، عدّاء الأرنب، خمّن الحيوان، ثعبان المزرعة ===== */
+(function(){
+'use strict';
+const $=s=>document.querySelector(s), sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:+v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const ANIMALS=[
+ {img:'assets/animals/dog.webp',n:'كلب'},{img:'assets/animals/cat.webp',n:'قط'},
+ {img:'assets/animals/horse.webp',n:'حصان'},{img:'assets/animals/cow.webp',n:'بقرة'},
+ {img:'assets/animals/sheep.webp',n:'خروف'},{img:'assets/animals/hen.webp',n:'دجاجة'},
+ {img:'assets/daily/topic.webp',n:'كلب'},{img:'assets/daily/tip.webp',n:'جرو'}];
+/* ---------- 1) ذاكرة الصور ---------- */
+(function(){
+ const board=$('#mmBoard'),scoreEl=$('#mmScore'),sel=$('#mmLevel'),btn=$('#mmNew');if(!board)return;
+ let open=[],lock=false,moves=0,found=0,total=6,t0=null,timer=null;
+ function paint(){scoreEl.textContent='الحركات: '+moves+' · الأزواج: '+found+'/'+total+(t0?' · الوقت: '+Math.floor((Date.now()-t0)/1000)+' ث':'')}
+ function start(){
+  total=+sel.value;const pool=ANIMALS.slice(0,total===6?6:8);
+  const deck=sh(pool.concat(pool));open=[];lock=false;moves=0;found=0;t0=null;clearInterval(timer);timer=null;
+  board.style.gridTemplateColumns=total===6?'repeat(4,1fr)':'repeat(4,1fr)';
+  board.innerHTML=deck.map((a,i)=>'<button class="mg-card" data-i="'+i+'" data-n="'+a.n+'" aria-label="بطاقة"><span class="f fr">🐾</span><span class="f bk"><img src="'+a.img+'" alt=""></span></button>').join('');
+  paint();
+ }
+ board.onclick=e=>{
+  const c=e.target.closest('.mg-card');if(!c||lock||c.classList.contains('flip'))return;
+  if(!t0){t0=Date.now();timer=setInterval(paint,500)}
+  c.classList.add('flip');open.push(c);
+  if(open.length===2){moves++;const[x,y]=open;
+   if(x.dataset.n===y.dataset.n){x.classList.add('done');y.classList.add('done');open=[];found++;
+    if(found===total){clearInterval(timer);const sec=Math.floor((Date.now()-t0)/1000);
+     const key='mg_mm_best_'+total,best=store.get(key,1e9);if(moves<best)store.set(key,moves);
+     scoreEl.textContent='🏆 أكملتها في '+moves+' حركة و'+sec+' ثانية! أفضل نتيجة ('+total+' أزواج): '+Math.min(moves,best)+' حركة';}
+   }else{lock=true;setTimeout(()=>{x.classList.remove('flip');y.classList.remove('flip');open=[];lock=false},750)}
+  }
+  paint();
+ };
+ btn.onclick=start;sel.onchange=start;start();
+})();
+/* ---------- 2) عدّاء الأرنب ---------- */
+(function(){
+ const cv=$('#rrCv'),btn=$('#rrGo'),scoreEl=$('#rrScore');if(!cv)return;
+ const ctx=cv.getContext('2d'),W=cv.width,H=cv.height,GY=H-38;
+ let run=false,raf=null,t=0,dist=0,speed=5.2,y=0,vy=0,obs=[],lastSpawn=0;
+ const best0=store.get('mg_rr_best',0);scoreEl.textContent='أفضل مسافة: '+best0+' م';
+ function reset(){t=0;dist=0;speed=5.2;y=0;vy=0;obs=[];lastSpawn=0}
+ function spawn(){const kinds=['🌵','🪨','🦔','🌵','🪵'];obs.push({x:W+40,k:kinds[Math.floor(Math.random()*kinds.length)]})}
+ function draw(){
+  const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,'#aee3f7');g.addColorStop(1,'#e9f9ef');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='rgba(255,255,255,.85)';for(let i=0;i<4;i++){const cx=((i*230+90)-(t*.4)%(W+160)+(W+160))%(W+160)-80;ctx.beginPath();ctx.ellipse(cx,34+((i*37)%40),30,13,0,0,7);ctx.fill()}
+  ctx.fillStyle='#8fd0a0';ctx.beginPath();ctx.ellipse(W*.25,GY+6,240,42,0,Math.PI,0);ctx.ellipse(W*.8,GY+6,280,52,0,Math.PI,0);ctx.fill();
+  ctx.fillStyle='#6db784';ctx.fillRect(0,GY,W,H-GY);
+  ctx.fillStyle='rgba(0,0,0,.08)';for(let i=0;i<9;i++){const gx=((i*97)-(t*2.2)%97+97)%(W+40)-20;ctx.fillRect(gx,GY+16,26,4)}
+  ctx.font='44px serif';ctx.textAlign='center';
+  obs.forEach(o=>{ctx.fillText(o.k,o.x,GY+6)});
+  ctx.save();ctx.translate(92,GY-6+y);ctx.scale(-1,1);ctx.fillText('🐇',0,0);ctx.restore();
+  ctx.fillStyle='#0f5132';ctx.font='bold 17px system-ui';ctx.textAlign='right';ctx.fillText('المسافة: '+Math.floor(dist)+' م',W-12,26);
+  if(!run){ctx.fillStyle='rgba(6,40,30,.55)';ctx.fillRect(0,0,W,H);ctx.fillStyle='#fff';ctx.font='bold 22px system-ui';ctx.textAlign='center';ctx.fillText(dist>0?'💥 انتهت الجولة! اضغط «ابدأ الجري» للمحاولة مجددًا':'اضغط «ابدأ الجري» ثم اقفز بالمسافة أو النقر',W/2,H/2)}
+ }
+ function step(){
+  if(!run)return;t++;dist+=speed*.06;speed+=0.0016;
+  if(t-lastSpawn>Math.max(52,105-speed*4)&&Math.random()<.8){spawn();lastSpawn=t}
+  obs.forEach(o=>o.x-=speed);obs=obs.filter(o=>o.x>-50);
+  vy+=1.05;y+=vy;if(y>0){y=0;vy=0}
+  const hit=obs.some(o=>Math.abs(o.x-92)<36&&y>-26);
+  if(hit){run=false;const d=Math.floor(dist);if(d>store.get('mg_rr_best',0))store.set('mg_rr_best',d);
+   scoreEl.textContent='مسافتك: '+d+' م · أفضل مسافة: '+store.get('mg_rr_best',0)+' م';draw();return}
+  draw();raf=requestAnimationFrame(step);
+ }
+ function jump(){if(run&&y===0)vy=-16.5}
+ btn.onclick=()=>{if(run)return;reset();run=true;scoreEl.textContent='جارٍ الجري… اقفز!';cancelAnimationFrame(raf);step()};
+ cv.addEventListener('pointerdown',e=>{e.preventDefault();jump()});
+ document.addEventListener('keydown',e=>{if(e.code==='Space'&&cv.offsetParent){e.preventDefault();jump()}});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&run){run=false;draw()}});
+ draw();
+})();
+/* ---------- 3) خمّن الحيوان ---------- */
+(function(){
+ const img=$('#pqImg'),idle=$('#pqIdle'),opts=$('#pqOpts'),bar=$('#pqBar'),btn=$('#pqGo'),scoreEl=$('#pqScore');if(!img)return;
+ let round=0,score=0,streak=0,cur=null,timer=null,left=100,locked=true;
+ scoreEl.textContent='أفضل نتيجة: '+store.get('mg_pq_best',0);
+ const POOL=ANIMALS.slice(0,6);
+ function end(){locked=true;clearInterval(timer);bar.style.width='0%';
+  if(score>store.get('mg_pq_best',0))store.set('mg_pq_best',score);
+  scoreEl.textContent='🏁 انتهى الاختبار! نتيجتك: '+score+' · أفضل نتيجة: '+store.get('mg_pq_best',0);
+  btn.textContent='العب مجددًا';img.style.display='none';idle.style.display='grid';idle.textContent=score>=70?'🏆':score>=40?'👏':'💪';opts.innerHTML=''}
+ function next(){
+  if(round>=8)return end();
+  round++;cur=POOL[Math.floor(Math.random()*POOL.length)];
+  let prev=img.dataset.n;if(cur.n===prev&&POOL.length>1){cur=POOL[(POOL.indexOf(cur)+1)%POOL.length]}
+  img.dataset.n=cur.n;img.src=cur.img;img.style.display='block';idle.style.display='none';
+  const others=sh(POOL.filter(a=>a.n!==cur.n)).slice(0,3);
+  const choices=sh(others.concat([cur]));
+  opts.innerHTML=choices.map(a=>'<button data-n="'+a.n+'">'+a.n+'</button>').join('');
+  scoreEl.textContent='السؤال '+round+'/8 · النقاط: '+score+(streak>=2?' · 🔥 سلسلة '+streak:'');
+  locked=false;left=100;bar.style.width='100%';clearInterval(timer);
+  timer=setInterval(()=>{left-=2;bar.style.width=left+'%';if(left<=0){clearInterval(timer);answer(null)}},100);
+ }
+ function answer(n){
+  if(locked)return;locked=true;clearInterval(timer);
+  const right=cur.n;
+  opts.querySelectorAll('button').forEach(b=>{if(b.dataset.n===right)b.classList.add('ok');else if(b.dataset.n===n)b.classList.add('no');b.disabled=true});
+  if(n===right){streak++;score+=10+Math.round(left/10)+(streak>=3?5:0)}else streak=0;
+  scoreEl.textContent=(n===right?'✅ صحيح!':'❌ الصحيح: '+right)+' · النقاط: '+score;
+  setTimeout(next,950);
+ }
+ opts.onclick=e=>{const b=e.target.closest('button');if(b)answer(b.dataset.n)};
+ btn.onclick=()=>{round=0;score=0;streak=0;btn.textContent='إعادة';next()};
+})();
+/* ---------- 4) ثعبان المزرعة ---------- */
+(function(){
+ const cv=$('#snCv'),btn=$('#snGo'),scoreEl=$('#snScore');if(!cv)return;
+ const ctx=cv.getContext('2d'),N=16,CELL=cv.width/N;
+ let snake,dir,pending,food,score,timer=null,speed;
+ const best0=store.get('mg_sn_best',0);scoreEl.textContent='أفضل نتيجة: '+best0;
+ function place(){while(true){const f={x:Math.floor(Math.random()*N),y:Math.floor(Math.random()*N)};if(!snake.some(s=>s.x===f.x&&s.y===f.y))return f}}
+ function draw(){
+  ctx.fillStyle='#eef7ee';ctx.fillRect(0,0,cv.width,cv.height);
+  ctx.strokeStyle='rgba(30,90,50,.08)';for(let i=1;i<N;i++){ctx.beginPath();ctx.moveTo(i*CELL,0);ctx.lineTo(i*CELL,cv.height);ctx.stroke();ctx.beginPath();ctx.moveTo(0,i*CELL);ctx.lineTo(cv.width,i*CELL);ctx.stroke()}
+  ctx.font=(CELL+4)+'px serif';ctx.textAlign='center';ctx.fillText(Math.random()<.5?'🍎':'🍎',food.x*CELL+CELL/2,food.y*CELL+CELL/2+7);
+  snake.forEach((s,i)=>{ctx.fillStyle=i===0?'#15803d':'#22c55e';const p=i===0?1:2.5;
+   ctx.beginPath();ctx.roundRect(s.x*CELL+p,s.y*CELL+p,CELL-2*p,CELL-2*p,7);ctx.fill();
+   if(i===0){ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(s.x*CELL+CELL*.36,s.y*CELL+CELL*.38,2.4,0,7);ctx.arc(s.x*CELL+CELL*.64,s.y*CELL+CELL*.38,2.4,0,7);ctx.fill()}});
+ }
+ function tick(){
+  dir=pending;const h={x:snake[0].x+dir.x,y:snake[0].y+dir.y};
+  if(h.x<0||h.y<0||h.x>=N||h.y>=N||snake.some(s=>s.x===h.x&&s.y===h.y)){stop();return}
+  snake.unshift(h);
+  if(h.x===food.x&&h.y===food.y){score+=10;food=place();if(score%50===0&&speed>70){clearInterval(timer);speed-=14;timer=setInterval(tick,speed)}scoreEl.textContent='النقاط: '+score+' · أفضل نتيجة: '+Math.max(score,store.get('mg_sn_best',0))}
+  else snake.pop();
+  draw();
+ }
+ function stop(){clearInterval(timer);timer=null;if(score>store.get('mg_sn_best',0))store.set('mg_sn_best',score);
+  scoreEl.textContent='💥 انتهت اللعبة! نتيجتك: '+score+' · أفضل نتيجة: '+store.get('mg_sn_best',0);btn.textContent='العب مجددًا'}
+ function start(){snake=[{x:8,y:8},{x:7,y:8},{x:6,y:8}];dir={x:1,y:0};pending=dir;score=0;speed=150;food=place();
+  clearInterval(timer);timer=setInterval(tick,speed);scoreEl.textContent='النقاط: 0';draw()}
+ btn.onclick=start;
+ const D={up:{x:0,y:-1},down:{x:0,y:1},left:{x:-1,y:0},right:{x:1,y:0}};
+ function turn(d){if(!d)return;if(snake&&dir&&(d.x===-dir.x&&d.y===-dir.y))return;pending=d}
+ document.querySelectorAll('.mg-pad button').forEach(b=>b.onclick=()=>turn(D[b.dataset.d]));
+ document.addEventListener('keydown',e=>{if(!cv.offsetParent)return;const m={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'}[e.key];if(m){e.preventDefault();turn(D[m])}});
+ let tx=0,ty=0;cv.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+ cv.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)<24&&Math.abs(dy)<24)return;turn(Math.abs(dx)>Math.abs(dy)?(dx>0?D.right:D.left):(dy>0?D.down:D.up))},{passive:true});
+ snake=[{x:8,y:8},{x:7,y:8},{x:6,y:8}];food={x:12,y:8};draw();
+})();
 })();
 </script>
 </body>
