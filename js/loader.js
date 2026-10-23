@@ -7,7 +7,7 @@
     return d.innerHTML;
   }
   function load(file) {
-    return fetch(file + '?v=' + Date.now())
+    return fetch('json/' + file + '?v=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(function (d) {
         return (d.items || []).filter(function (i) {
@@ -58,7 +58,7 @@
   }
 
   function loadExtra() {
-    ['extra-articles.js', 'library-extra.js'].forEach(function (f) {
+    ['js/extra-articles.js', 'js/library-extra.js'].forEach(function (f) {
       var el = document.createElement('script');
       el.src = f + '?v=' + Date.now();
       document.body.appendChild(el);
