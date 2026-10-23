@@ -11,8 +11,11 @@
     window.VET_CSE_ID = "";
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VetAI Global × د. محجوبي | المنصة البيطرية الموحدة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="VetAI Global منصة عالمية للمعرفة البيطرية المدعومة بالذكاء الاصطناعي: أدوات سريرية تعليمية، أبحاث، بيانات، وتعلّم متعدد التخصصات.">
+    <meta name="theme-color" content="#05070b">
+    <meta name="color-scheme" content="dark light">
+    <meta property="og:title" content="VetAI Global — Veterinary Intelligence Without Borders"><meta property="og:description" content="المعرفة البيطرية والذكاء الاصطناعي والأبحاث والتعليم في منصة واحدة."><meta name="application-name" content="VetAI Global"><title>VetAI Global | الذكاء البيطري بلا حدود</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script>
@@ -818,6 +821,320 @@ table{max-width:100%}.vxp,.tool,.card{overflow-wrap:anywhere}
 #view-bio .bx-g>*,#view-bio .bx-pn>*,#view-bio .bx-det>*{min-width:0}#view-bio .bx-pn>div:last-child{overflow-x:auto}#view-bio canvas.bx-c{max-width:100%}
 #view-bio :is(.bx-b,.bx-st,.bx-tl):focus-visible{outline:2px solid var(--a1);outline-offset:3px}
 </style>
+<style id="vetai-deploy-hardening">
+/* VetAI Global deployment hardening — additive, legacy-safe */
+:root { color-scheme: dark; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+*, *::before, *::after { box-sizing: border-box; }
+[hidden], .hidden { display: none !important; }
+img, video, canvas, svg { max-width: 100%; }
+input, select, textarea, button { font: inherit; }
+button, [role="button"], a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--a1, #5eead4); outline-offset: 3px;
+}
+@media (max-width: 760px) {
+  body { overflow-wrap: anywhere; }
+  main { padding-left: max(12px, env(safe-area-inset-left)) !important;
+         padding-right: max(12px, env(safe-area-inset-right)) !important; }
+  .vh { grid-template-columns: minmax(0, 1fr) !important; gap: 20px !important; padding-top: 24px !important; }
+  .wm { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+</style>
+<style id="vg-redesign">
+/* ===== VetAI Global · international product redesign (additive) =====
+   The existing clinical tools and navigation are intentionally preserved. */
+:root{color-scheme:dark}
+#view-home .vg-global-intro{position:relative;isolation:isolate;overflow:hidden;margin:14px 0 28px;padding:clamp(24px,5vw,56px);border:1px solid rgba(94,234,212,.22);border-radius:30px;background:radial-gradient(ellipse at 82% 0%,rgba(45,212,191,.17),transparent 42%),radial-gradient(ellipse at 0% 100%,rgba(99,102,241,.20),transparent 48%),linear-gradient(135deg,rgba(10,20,32,.97),rgba(8,12,24,.94));box-shadow:0 28px 90px rgba(0,0,0,.24)}
+#view-home .vg-global-intro:after{content:"";position:absolute;z-index:-1;inset:0;background-image:linear-gradient(rgba(148,163,184,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.055) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(110deg,transparent,black 60%,transparent)}
+#view-home .vg-eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(94,234,212,.25);background:rgba(15,118,110,.13);color:#99f6e4;border-radius:999px;padding:7px 13px;font-size:12px;font-weight:800;letter-spacing:.02em}
+#view-home .vg-eyebrow i{width:7px;height:7px;border-radius:50%;background:#5eead4;box-shadow:0 0 15px #5eead4}
+#view-home .vg-global-intro h2{max-width:900px;margin:20px 0 14px;font-size:clamp(2rem,5.8vw,4.6rem);line-height:1.13;font-weight:950;letter-spacing:-.04em;color:#f8fafc}
+#view-home .vg-global-intro h2 span{background:linear-gradient(100deg,#5eead4,#93c5fd 55%,#c4b5fd);background-clip:text;-webkit-background-clip:text;color:transparent}
+#view-home .vg-global-intro .vg-lead{max-width:780px;color:#bdc9d9;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.95;margin:0}
+#view-home .vg-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+#view-home .vg-action{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:11px 17px;border:1px solid rgba(148,163,184,.24);border-radius:14px;background:rgba(255,255,255,.045);color:#e5eef8;font-weight:850;text-decoration:none;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+#view-home .vg-action:hover{transform:translateY(-2px);border-color:rgba(94,234,212,.55);background:rgba(94,234,212,.09)}
+#view-home .vg-action.primary{background:linear-gradient(110deg,#5eead4,#93c5fd);border-color:transparent;color:#05202a;box-shadow:0 10px 30px rgba(45,212,191,.15)}
+#view-home .vg-principles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:30px}
+#view-home .vg-principle{padding:15px;border:1px solid rgba(148,163,184,.14);border-radius:17px;background:rgba(255,255,255,.035);min-width:0}
+#view-home .vg-principle b{display:block;color:#f1f5f9;font-size:.94rem;margin-bottom:5px}
+#view-home .vg-principle span{display:block;color:#94a3b8;font-size:.78rem;line-height:1.7}
+#view-home .vg-principle .vg-icon{display:grid;place-items:center;width:36px;height:36px;margin-bottom:12px;border-radius:12px;color:#99f6e4;background:rgba(45,212,191,.10);font-size:18px}
+#view-home .vh .vh-main{border-radius:26px}
+#view-home .vh .vh-main h1{letter-spacing:-.035em}
+#view-home .vg-science-note{margin-top:16px;padding:12px 14px;border-inline-start:3px solid #fbbf24;border-radius:10px;background:rgba(251,191,36,.07);color:#cbd5e1;font-size:.82rem;line-height:1.8}
+@media(max-width:760px){#view-home .vg-principles{grid-template-columns:repeat(2,minmax(0,1fr))}#view-home .vg-global-intro{border-radius:22px;padding:24px 18px}#view-home .vg-global-intro h2{letter-spacing:-.025em}}
+@media(max-width:380px){#view-home .vg-principles{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#view-home .vg-action{transition:none}}
+
+/* Cinematic hero v2 — CSS-only depth, no WebGL dependency */
+#view-home .vg-cinematic{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);align-items:center;gap:clamp(20px,4vw,54px);padding:clamp(24px,4vw,54px);background:radial-gradient(ellipse at 83% 28%,rgba(14,165,233,.16),transparent 35%),radial-gradient(ellipse at 5% 95%,rgba(124,58,237,.18),transparent 42%),linear-gradient(135deg,#07101c 0%,#0b1222 55%,#08121b 100%);border-color:rgba(103,232,249,.24);box-shadow:0 32px 100px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.07)}
+#view-home .vg-cinematic:after{pointer-events:none;opacity:.42;background:linear-gradient(115deg,transparent 20%,rgba(148,163,184,.08) 50%,transparent 75%);background-size:200% 100%;animation:vg-sheen 12s linear infinite}
+#view-home .vg-cine-copy{position:relative;z-index:2;min-width:0}
+#view-home .vg-kicker{margin:23px 0 0;color:#67e8f9;font-size:.9rem;font-weight:850;letter-spacing:.04em}
+#view-home .vg-cinematic h2{font-size:clamp(2.45rem,5.1vw,5.15rem);line-height:1.13;max-width:760px;margin:10px 0 18px;letter-spacing:-.055em}
+#view-home .vg-cinematic h2 span{background:linear-gradient(105deg,#67e8f9 2%,#a5b4fc 47%,#e9d5ff 90%);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(103,232,249,.12))}
+#view-home .vg-cinematic .vg-lead{max-width:640px;font-size:clamp(1rem,1.35vw,1.13rem);color:#b8c6d8;line-height:2}
+#view-home .vg-cinematic .vg-eyebrow{background:rgba(8,145,178,.1);border-color:rgba(103,232,249,.28);color:#a5f3fc}
+#view-home .vg-eyebrow-divider{opacity:.42}
+#view-home .vg-cinematic .vg-action{border-radius:13px;min-height:50px;padding-inline:19px}
+#view-home .vg-cinematic .vg-action.primary{background:linear-gradient(110deg,#67e8f9,#a5b4fc 68%,#c4b5fd);box-shadow:0 12px 34px rgba(34,211,238,.17)}
+#view-home .vg-trustline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:22px;color:#8193aa;font-size:.75rem;line-height:1.8}
+#view-home .vg-live-dot,#view-home .vg-hud-dot{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#5eead4;box-shadow:0 0 14px #5eead4}
+#view-home .vg-trust-sep{color:#53657d}
+#view-home .vg-cine-stage{position:relative;isolation:isolate;min-width:0;aspect-ratio:1/1;max-width:610px;width:100%;margin-inline:auto;display:grid;place-items:center;perspective:1000px}
+#view-home .vg-stage-grid{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.13),transparent 62%),linear-gradient(rgba(125,211,252,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(125,211,252,.08) 1px,transparent 1px);background-size:auto,24px 24px,24px 24px;mask-image:radial-gradient(circle,#000 12%,transparent 70%);transform:rotateX(62deg) rotateZ(-20deg);animation:vg-grid-drift 18s linear infinite}
+#view-home .vg-core-glow{position:absolute;width:55%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.3),rgba(99,102,241,.13) 48%,transparent 72%);filter:blur(22px);animation:vg-glow 5s ease-in-out infinite alternate}
+#view-home .vg-animal-core{position:relative;z-index:2;width:48%;aspect-ratio:1;border-radius:50%;padding:5px;overflow:hidden;background:linear-gradient(145deg,rgba(165,243,252,.9),rgba(129,140,248,.14) 45%,rgba(192,132,252,.82));box-shadow:0 0 0 1px rgba(255,255,255,.12),0 0 45px rgba(34,211,238,.22),0 35px 80px rgba(0,0,0,.55);transform:translateZ(30px);animation:vg-float 7s ease-in-out infinite}
+#view-home .vg-animal-core img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;filter:saturate(.84) contrast(1.06);background:#111827}
+#view-home .vg-core-scan{position:absolute;inset:0;border-radius:50%;background:linear-gradient(180deg,transparent 35%,rgba(103,232,249,.22) 49%,transparent 52%);animation:vg-scan 5s ease-in-out infinite;pointer-events:none}
+#view-home .vg-orbit{position:absolute;border:1px solid rgba(125,211,252,.24);border-radius:50%;transform-style:preserve-3d;pointer-events:none}
+#view-home .vg-orbit-a{inset:13% 4%;transform:rotate(-26deg) rotateX(62deg);box-shadow:0 0 25px rgba(34,211,238,.06);animation:vg-orbit 22s linear infinite}
+#view-home .vg-orbit-b{inset:5% 17%;transform:rotate(43deg) rotateX(68deg);border-color:rgba(196,181,253,.36);animation:vg-orbit 27s linear infinite reverse}
+#view-home .vg-orbit-c{inset:18% 1%;transform:rotate(72deg) rotateX(70deg);border-style:dashed;border-color:rgba(103,232,249,.17);animation:vg-orbit 40s linear infinite}
+#view-home .vg-orbit-a:before,#view-home .vg-orbit-b:before,#view-home .vg-orbit-c:before{content:"";position:absolute;top:50%;left:-4px;width:8px;height:8px;border-radius:50%;background:#67e8f9;box-shadow:0 0 18px #67e8f9}
+#view-home .vg-orbit-b:before{background:#c4b5fd;box-shadow:0 0 18px #a78bfa}
+#view-home .vg-hud{position:absolute;z-index:4;display:flex;align-items:center;gap:9px;max-width:75%;padding:10px 12px;border:1px solid rgba(148,163,184,.22);border-radius:13px;background:rgba(6,14,27,.78);backdrop-filter:blur(14px);box-shadow:0 12px 32px rgba(0,0,0,.22);color:#dbeafe;font-size:.7rem}
+#view-home .vg-hud b{display:block;font-size:.72rem;color:#f1f5f9}#view-home .vg-hud small{display:block;color:#8397b1;font-size:.61rem;line-height:1.7}#view-home .vg-hud-top{top:8%;left:50%;transform:translateX(-50%);white-space:nowrap;letter-spacing:.12em;font-size:.58rem;color:#9fb2c9}#view-home .vg-hud-top b{color:#5eead4;font-size:.58rem}#view-home .vg-hud-left{left:0;top:37%}#view-home .vg-hud-right{right:0;top:57%}#view-home .vg-hud-bottom{left:50%;bottom:7%;transform:translateX(-50%);width:max-content;max-width:94%}#view-home .vg-hud-bottom small{font-size:.58rem}
+#view-home .vg-hud-symbol{display:grid;place-items:center;width:31px;height:31px;flex:0 0 31px;border-radius:9px;background:rgba(34,211,238,.12);color:#67e8f9;font-size:1.2rem}
+#view-home .vg-wave{display:flex;align-items:center;gap:3px;height:25px}#view-home .vg-wave i{width:3px;height:var(--h,9px);border-radius:5px;background:linear-gradient(#67e8f9,#818cf8);animation:vg-wave 1.1s ease-in-out infinite alternate}#view-home .vg-wave i:nth-child(2n){animation-delay:.2s}#view-home .vg-wave i:nth-child(3n){animation-delay:.45s}
+#view-home .vg-orb-label{position:absolute;z-index:3;color:#9fb2c9;font-size:.57rem;letter-spacing:.16em;opacity:.78}#view-home .vg-orb-label-a{top:27%;right:13%}#view-home .vg-orb-label-a span{color:#67e8f9}#view-home .vg-orb-label-b{bottom:26%;left:8%;font-size:.52rem}
+#view-home .vg-cine-footer{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(180px,1.5fr);gap:10px;padding-top:20px;border-top:1px solid rgba(148,163,184,.16)}
+#view-home .vg-cine-metric{display:flex;align-items:center;gap:12px;padding:5px 12px;border-inline-end:1px solid rgba(148,163,184,.13)}#view-home .vg-cine-metric b{font-size:1.2rem;color:#67e8f9;font-weight:900}#view-home .vg-cine-metric span{color:#9aabc0;font-size:.75rem}#view-home .vg-cine-note{display:flex;align-items:center;gap:9px;color:#aebed1;font-size:.72rem;line-height:1.8}#view-home .vg-cine-note span{color:#fbbf24}
+@keyframes vg-float{0%,100%{transform:translateY(0) translateZ(30px)}50%{transform:translateY(-9px) translateZ(30px)}}@keyframes vg-orbit{to{rotate:360deg}}@keyframes vg-grid-drift{to{background-position:0 24px,24px 0}}@keyframes vg-glow{to{transform:scale(1.12);opacity:.75}}@keyframes vg-scan{0%,100%{transform:translateY(-45%);opacity:.2}50%{transform:translateY(45%);opacity:.8}}@keyframes vg-wave{to{height:calc(var(--h,9px)*.35)}}@keyframes vg-sheen{to{background-position:-200% 0}}
+@media(max-width:900px){#view-home .vg-cinematic{grid-template-columns:minmax(0,1fr);gap:18px}#view-home .vg-cine-copy{max-width:760px}#view-home .vg-cine-stage{max-width:520px;grid-row:2}#view-home .vg-cine-footer{grid-template-columns:repeat(2,minmax(0,1fr))}#view-home .vg-cine-note{grid-column:1/-1;padding-top:6px}}
+@media(max-width:520px){#view-home .vg-cinematic{padding:24px 16px;border-radius:22px}#view-home .vg-cinematic h2{font-size:clamp(2.3rem,12vw,3.5rem)}#view-home .vg-trustline{font-size:.68rem}#view-home .vg-cine-stage{width:calc(100% + 4px);margin-inline:-2px}#view-home .vg-hud{padding:7px 8px;gap:6px}#view-home .vg-hud-left{left:-2%;top:35%}#view-home .vg-hud-right{right:-2%;top:58%}#view-home .vg-hud b{font-size:.63rem}#view-home .vg-hud small{font-size:.54rem}#view-home .vg-hud-top{font-size:.49rem}#view-home .vg-hud-bottom{bottom:5%}#view-home .vg-orb-label{font-size:.45rem}#view-home .vg-cine-footer{gap:7px}#view-home .vg-cine-metric{padding:6px;border:0;gap:8px}#view-home .vg-cine-metric span{font-size:.68rem}#view-home .vg-cine-note{font-size:.68rem}}
+@media(prefers-reduced-motion:reduce){#view-home .vg-cinematic:after,#view-home .vg-stage-grid,#view-home .vg-core-glow,#view-home .vg-animal-core,#view-home .vg-core-scan,#view-home .vg-orbit,#view-home .vg-wave i{animation:none!important}}
+</style>
+
+
+<style id="vetai-news-paragraph-upgrade">
+/* VetAI Global: accessible news strip, branch shortcuts and paragraph finder */
+.news-strip{display:flex!important;align-items:center;gap:10px!important;padding:8px 12px!important;border-radius:16px!important;overflow:hidden!important;white-space:nowrap;min-height:44px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.news-label{display:inline-flex;align-items:center;gap:8px;flex:none;color:var(--fg);font-weight:900;font-size:11px;padding:6px 10px;border:1px solid color-mix(in srgb,var(--a1) 40%,var(--bd));border-radius:10px;background:color-mix(in srgb,var(--a1) 12%,var(--card))}
+.news-pulse{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.12)}
+.news-track{min-width:0;flex:1;overflow:hidden;direction:rtl;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.news-strip #tkt{width:max-content;display:inline-flex;align-items:center;gap:18px;animation:vxmq 95s linear infinite}
+.news-strip #tkt a{display:inline-flex;align-items:center;gap:7px;margin:0!important;padding:6px 10px;border-radius:9px;text-decoration:none;color:var(--mut);font-size:12px;border:1px solid transparent}
+.news-strip #tkt a:before{content:'↗';color:var(--a1);font-weight:900}
+.news-strip #tkt a:hover{color:var(--fg);background:color-mix(in srgb,var(--a1) 9%,var(--card));border-color:var(--bd)}
+.news-pause{flex:none;width:29px;height:29px;border:1px solid var(--bd);border-radius:9px;background:var(--card2);color:var(--fg);cursor:pointer;font-weight:900}
+.news-strip.paused #tkt{animation-play-state:paused!important}
+.paragraph-finder{max-width:1160px;margin:12px auto 8px;padding:12px;display:grid;grid-template-columns:auto minmax(150px,.8fr) minmax(180px,1.3fr) auto auto;align-items:center;gap:12px;border:1px solid var(--bd);border-radius:20px;background:color-mix(in srgb,var(--card) 92%,transparent);box-shadow:0 14px 36px rgba(0,0,0,.10);backdrop-filter:blur(16px)}
+.pf-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--a1) 25%,var(--card)),color-mix(in srgb,var(--a2) 20%,var(--card)));font-size:30px;color:var(--a1)}
+.pf-copy{display:flex;flex-direction:column;gap:3px;min-width:0}.pf-copy strong{font-size:13px;color:var(--fg)}.pf-copy span{font-size:11px;color:var(--mut);line-height:1.5}
+.pf-input-wrap{min-width:0}.pf-input-wrap input{width:100%;min-height:42px;padding:10px 14px;border:1px solid var(--bd);border-radius:13px;background:var(--inp);color:var(--fg);font:inherit;outline:none}.pf-input-wrap input:focus{border-color:var(--a1);box-shadow:0 0 0 3px color-mix(in srgb,var(--a1) 18%,transparent)}
+.pf-count{font-size:11px;white-space:nowrap;color:var(--mut);font-variant-numeric:tabular-nums}.pf-actions{display:flex;gap:5px;align-items:center}.pf-actions button{border:1px solid var(--bd);background:var(--card2);color:var(--fg);border-radius:10px;padding:8px 10px;font:700 11px inherit;cursor:pointer;white-space:nowrap}.pf-actions button:hover:not(:disabled){border-color:var(--a1)}.pf-actions button:disabled{opacity:.4;cursor:not-allowed}
+.branch-explorer{max-width:1160px;margin:8px auto 20px;display:flex;align-items:center;gap:7px;overflow-x:auto;padding:5px 1px 10px;scrollbar-width:thin;scroll-snap-type:x proximity}
+.branch-title{flex:none;color:var(--mut);font-size:11px;font-weight:900;padding:0 5px}.branch-link{flex:none;scroll-snap-align:start;border:1px solid var(--bd);border-radius:999px;background:var(--card);color:var(--mut);padding:9px 13px;font:700 12px inherit;cursor:pointer;transition:transform .18s,border-color .18s,background .18s}.branch-link:hover{transform:translateY(-1px);border-color:var(--a1);color:var(--fg)}.branch-link.active{color:var(--on,#06131a);background:linear-gradient(110deg,var(--a1),var(--a2));border-color:transparent;box-shadow:0 6px 18px color-mix(in srgb,var(--a1) 18%,transparent)}
+.pf-hit{outline:2px solid var(--a1)!important;outline-offset:5px!important;border-radius:8px;animation:pfPulse 1.1s ease-in-out 2;scroll-margin-top:150px}
+@keyframes pfPulse{50%{box-shadow:0 0 0 7px color-mix(in srgb,var(--a1) 17%,transparent)}}
+@media(max-width:900px){.paragraph-finder{margin:10px 12px;grid-template-columns:auto 1fr auto}.pf-copy{grid-column:2}.pf-input-wrap{grid-column:1/-1;grid-row:2}.pf-count{grid-column:3;grid-row:1}.pf-actions{grid-column:1/-1;justify-content:flex-end}.branch-explorer{margin-inline:12px}.news-label{font-size:10px}.news-strip{gap:6px!important}}
+@media(max-width:520px){.paragraph-finder{padding:10px;border-radius:16px;gap:9px}.pf-icon{width:36px;height:36px}.pf-copy strong{font-size:12px}.pf-copy span{font-size:10px}.pf-count{font-size:10px}.pf-actions button{padding:8px 9px}.branch-link{padding:8px 11px;font-size:11px}.news-strip #tkt a{font-size:11px;padding:5px 7px}}
+@media(prefers-reduced-motion:reduce){.news-strip #tkt,.pf-hit{animation:none!important}.branch-link{transition:none}}
+</style>
+
+<style id="vx-final-layout">
+/* =====================================================================
+   VetAI · طبقة التنسيق النهائية (Layout Polish)
+   - تنظّم أعلى الصفحة: بسملة ← تنقّل ← أدوات ← بحث ← فروع
+   - ترتّب الصفحة الرئيسية بتسلسل منطقي وعناوين موحّدة
+   - إضافية بالكامل: لا تحذف أي محتوى أو وظيفة
+   ===================================================================== */
+:root{--vx-w:1200px;--vx-sec:clamp(34px,5vw,64px);--vx-pad:clamp(14px,3vw,24px)}
+
+/* ---------- 0) حاوية موحّدة العرض ---------- */
+html body main.max-w-7xl{max-width:var(--vx-w);padding-inline:var(--vx-pad);padding-top:clamp(12px,2vw,24px);padding-bottom:48px}
+html body #topline,
+html body .toolrow .tr,
+html body .paragraph-finder,
+html body .branch-explorer{max-width:var(--vx-w)}
+
+/* ---------- 1) الشريط العلوي: بسملة + حالة ---------- */
+html body #topline{padding-bottom:0}
+html body #topline .bsm2{font-size:clamp(14px,1.8vw,17px)!important;opacity:.85;margin-bottom:0!important}
+html body #topline .stt{font-size:11.5px;gap:2px 16px;padding:0 0 6px;opacity:.85}
+@media(max-width:640px){
+  html body #topline .stt>*:nth-child(3),html body #topline .stt>*:nth-child(4){display:none}
+}
+
+/* ---------- 2) التنقّل + شريط الأخبار (يتقلّص عند التمرير) ---------- */
+html body .bar{gap:6px}
+html body .bar>.news-strip{width:100%;max-width:var(--vx-w);min-height:38px;padding:5px 10px!important;border-radius:14px!important;box-shadow:none;
+  max-height:60px;transition:max-height .3s,opacity .25s,padding .3s,margin .3s,border-width .3s}
+html body.vx-scrolled .bar>.news-strip{max-height:0;opacity:0;padding-block:0!important;margin:0;border-width:0;min-height:0;overflow:hidden}
+html body .news-label{font-size:11px;padding:5px 9px}
+
+/* ---------- 3) صندوق الأدوات: صف واحد منظّم ---------- */
+html body .toolrow{padding-top:14px!important}
+html body .toolrow .tr{padding:10px;gap:10px;align-items:stretch;border:1px solid var(--bd);border-radius:22px;
+  background:color-mix(in srgb,var(--card) 92%,transparent);box-shadow:0 12px 34px -22px rgba(0,0,0,.35)}
+html body .toolrow .srch{flex:1 1 340px;min-width:0;display:flex;align-items:center}
+html body .toolrow .srch input.inp{width:100%;min-height:46px;border-radius:14px}
+html body .toolrow .srch input.inp{padding-right:44px!important;padding-left:150px!important}
+:root[dir=ltr] html body .toolrow .srch input.inp,html:is([dir=ltr]) body .toolrow .srch input.inp{padding-left:44px!important;padding-right:150px!important}
+html body #header-search-btn-injected,html body #header-g-btn-injected{position:absolute;top:50%;transform:translateY(-50%);margin:0;line-height:1.5;z-index:2;right:auto!important}
+html body #header-search-btn-injected{left:8px!important}
+html body #header-g-btn-injected{left:66px!important}
+html[dir=ltr] body #header-search-btn-injected{right:8px!important;left:auto!important}
+html[dir=ltr] body #header-g-btn-injected{right:66px!important;left:auto!important}
+html body .toolrow .vxi-open,html body .toolrow #lsel,html body .toolrow .seg{min-height:46px;align-self:center;border-radius:14px}
+html body .toolrow #lsel{padding-inline:12px;width:auto;min-width:110px}
+html body .toolrow .seg{display:inline-flex;overflow:hidden;border-radius:14px}
+html body .toolrow .seg button{min-height:44px;padding-inline:14px}
+/* حالة التفعيل في أزرار seg (تدعم كلاسات Tailwind المبدّلة بالجافاسكربت) */
+html body .seg button[class*="bg-blue-500"],html body .seg button[class*="bg-vetCyan"],html body .seg button.on,html body .seg button.active,html body .seg button[aria-pressed=true]{
+  background:linear-gradient(135deg,var(--a1),var(--a2))!important;color:var(--on,#04111a)!important;font-weight:700}
+html body .seg button[class*="bg-slate-900"]{background:transparent!important;color:var(--mut)!important}
+@media(max-width:760px){
+  html body .toolrow .tr{padding:8px;gap:8px}
+  html body .toolrow .srch{flex:1 1 100%}
+  html body .toolrow .vxi-open{flex:1 1 auto;justify-content:center}
+  html body .toolrow #lsel{flex:0 0 auto}
+  html body .toolrow .seg{flex:1 1 auto}
+  html body .toolrow .seg button{flex:1}
+  html body .toolrow .srch input.inp{padding-left:136px!important}
+  html body #header-g-btn-injected{left:58px!important}
+  html[dir=ltr] body .toolrow .srch input.inp{padding-left:44px!important;padding-right:136px!important}
+  html[dir=ltr] body #header-g-btn-injected{right:58px!important;left:auto!important}
+}
+
+html body .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+html body .paragraph-finder,html body .branch-explorer{width:calc(100% - 2*var(--vx-pad))}
+/* ---------- 4) البحث داخل الفقرات: شريط رفيع هادئ ---------- */
+html body .paragraph-finder{margin:10px auto 6px;box-sizing:border-box;padding:8px 10px;gap:10px;border-radius:16px;box-shadow:none;
+  grid-template-columns:auto minmax(120px,auto) minmax(180px,1fr) auto auto;background:transparent;border-style:dashed}
+html body .paragraph-finder .pf-icon{width:34px;height:34px;font-size:22px;border-radius:11px}
+html body .paragraph-finder .pf-copy span{display:none}
+html body .paragraph-finder .pf-copy strong{font-size:12.5px;color:var(--mut);font-weight:700}
+html body .paragraph-finder .pf-input-wrap input{min-height:38px;padding:7px 12px;border-radius:11px;font-size:13.5px}
+html body .paragraph-finder .pf-actions button{padding:7px 10px;border-radius:9px}
+@media(max-width:900px){
+  html body .paragraph-finder{margin:8px auto 4px;grid-template-columns:auto 1fr auto}
+  html body .paragraph-finder .pf-copy{grid-column:2}
+  html body .paragraph-finder .pf-input-wrap{grid-column:1/-1;grid-row:2}
+  html body .paragraph-finder .pf-count{grid-column:3;grid-row:1}
+  html body .paragraph-finder .pf-actions{grid-column:1/-1;justify-content:stretch}
+  html body .paragraph-finder .pf-actions button{flex:1}
+}
+
+html body .vxt button,html body .nw-chip,html body .hsc,html body .gsub a,html body .gsub button,html body #gtop a,html body #gtop button{white-space:nowrap;word-break:keep-all;overflow-wrap:normal}
+/* ---------- 5) الفروع (التصنيفات): تبويبات موحّدة الشكل ---------- */
+html body .branch-explorer{flex-wrap:nowrap;margin:6px auto 4px;padding:4px 2px 10px;gap:8px;align-items:center;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent);mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
+html body .branch-explorer .branch-title{font-size:11.5px;letter-spacing:.04em;color:var(--mut);padding-inline:6px 2px}
+html body .branch-explorer button{flex:none;white-space:nowrap;word-break:keep-all;overflow-wrap:normal;writing-mode:horizontal-tb;padding:8px 15px;font-size:13px;font-weight:700;border-radius:999px;background:var(--card);
+  color:var(--mut);border:1px solid var(--bd);box-shadow:none;line-height:1.4}
+html body .branch-explorer button:hover{color:var(--fg);border-color:var(--a1);background:color-mix(in srgb,var(--a1) 9%,var(--card))}
+html body .branch-explorer button.active,html body .branch-explorer button.branch-link.active{background:linear-gradient(110deg,var(--a1),var(--a2));color:var(--on,#04111a);border-color:transparent}
+@media(max-width:640px){html body .branch-explorer .branch-title{display:none}html body .branch-explorer button{padding:8px 13px;font-size:12.5px}}
+
+/* ---------- 6) الصفحة الرئيسية: تسلسل وإيقاع ثابت ---------- */
+html body #view-home{display:flex;flex-direction:column;gap:0}
+html body #view-home>*{margin:0 0 var(--vx-sec)!important;min-width:0}
+html body #view-home>.sh2{margin-bottom:18px!important}
+html body #view-home>*:last-child{margin-bottom:0!important}
+/* الترتيب: واجهة ← عيادة رقمية ← طوارئ ← أقسام المنصة ← مستويات ← محتوى حي ← مقالات ← محلي ← تعلّم ← ثقة */
+html body #view-home>:nth-child(1){order:1}
+html body #view-home>:nth-child(2){order:2}
+html body #view-home>:nth-child(3){order:3}
+html body #view-home>:nth-child(5){order:4}   /* أهم أقسام المنصة */
+html body #view-home>:nth-child(4){order:5}   /* ثلاثة مستويات */
+html body #view-home>:nth-child(6){order:6}
+html body #view-home>:nth-child(7){order:7}
+html body #view-home>:nth-child(8){order:8}
+html body #view-home>:nth-child(9){order:9}
+html body #view-home>:nth-child(10){order:10}
+html body #view-home>:nth-child(11){order:11}
+html body #view-home>:nth-child(12){order:12}
+html body #view-home>:nth-child(13){order:13}
+html body #view-home>:nth-child(14){order:14}
+html body #view-home>:nth-child(15){order:15}
+html body #view-home>:nth-child(16){order:16}
+
+/* عناوين الأقسام الموحّدة */
+html body .sh2{margin-bottom:20px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+html body .sh2 .eb{display:inline-flex;margin:0 0 4px;padding:4px 12px;font-size:12px;font-weight:800;letter-spacing:.02em;color:var(--a1);
+  background:color-mix(in srgb,var(--a1) 11%,transparent);border:1px solid color-mix(in srgb,var(--a1) 28%,transparent);border-radius:999px}
+html body .sh2 h2{font-size:clamp(22px,3vw,32px);line-height:1.3;font-weight:800;margin:0;letter-spacing:-.01em}
+html body .sh2 p{font-size:14.5px;color:var(--mut);margin:2px 0 0;max-width:62ch}
+html body .sh2::after{content:"";display:block;width:56px;height:3px;border-radius:3px;margin-top:12px;background:linear-gradient(90deg,var(--a1),var(--a2))}
+/* مساحة تنفّس قبل رأس القسم داخل الكتل المركّبة */
+html body #view-home .vr>.sh2{margin-bottom:22px}
+
+/* ---------- 7) الواجهة الرئيسية (الهيرو): أصغر وأهدأ ---------- */
+html body #view-home .vg-global-intro{margin:8px 0 0;padding:clamp(22px,3.4vw,40px);border-radius:28px}
+html body #view-home .vg-cine-stage{max-width:430px}
+html body #view-home .vg-global-intro h2{font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.2;margin:14px 0 10px}
+html body #view-home .vg-global-intro .vg-lead{font-size:clamp(.98rem,1.3vw,1.1rem);line-height:1.9}
+html body #view-home .vg-cine-footer{padding-top:16px}
+/* منطقة العيادة الرقمية: بدون الشريط الملوّن الذي يتجاوز الحاوية */
+html body #view-home .vh{padding:8px 0 0;gap:28px 44px;align-items:center}
+html body #view-home .vh::before{display:none}
+html body #view-home .vh .vh-main{padding:0}
+html body #view-home .vh h1{font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.3;margin:12px 0}
+html body #view-home .vh .stats{margin-top:24px}
+html body #view-home .vh .sp{padding-top:10px}
+html body #view-home .sp-h{margin-bottom:16px}
+html body #view-home .sp-h b{font-size:1.3rem}
+html body #view-home .sp-g{gap:14px}
+html body #view-home .sq{height:150px;border-radius:18px}
+html body #view-home .chart{max-width:520px;margin-inline:auto;width:100%}
+@media(max-width:900px){html body #view-home .vh{grid-template-columns:minmax(0,1fr);gap:24px}html body #view-home .sq{height:128px}}
+
+/* الطوارئ: شريط واضح ومتّزن */
+html body #view-home .emg{padding:14px 18px;gap:12px;align-items:center}
+
+/* ---------- 8) الشبكات والبطاقات: انتظام وتماثل ---------- */
+html body .bento{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+html body .bento .qa{height:100%;padding:22px 22px 20px;border-radius:20px;display:flex;flex-direction:column;gap:6px}
+html body .bento .qa .ib{margin-bottom:8px}
+html body .bento .qa .t{font-size:16.5px;margin:0}
+html body .bento .qa .d{font-size:13.5px}
+/* آخر بطاقة يتيمة تمتد لتكمل الصف */
+html body .bento>.qa:last-child:nth-child(3n+1){grid-column:1/-1}
+@media(max-width:900px){html body .bento{grid-template-columns:repeat(2,minmax(0,1fr))}html body .bento>.qa:last-child:nth-child(3n+1){grid-column:auto}html body .bento>.qa:last-child:nth-child(2n+1){grid-column:1/-1}}
+@media(max-width:520px){html body .bento{grid-template-columns:1fr;gap:12px}html body .bento .qa,html body .bento>.qa:last-child:nth-child(n){display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;column-gap:14px;row-gap:2px;align-items:center;padding:16px;grid-column:auto}html body .bento .qa .ib{grid-row:1/3;margin:0}html body .bento .qa .t{grid-column:2;align-self:end}html body .bento .qa .d{grid-column:2;align-self:start}}
+/* جديد ومحدّث: المحتوى الإخباري أعرض، واللوحات الجانبية ثابتة أثناء التمرير */
+@media(min-width:1024px){
+  html body #view-home>.grid.lg\:grid-cols-2{grid-template-columns:minmax(0,1fr) minmax(0,1.75fr);align-items:start;gap:24px}
+  html body #view-home>.grid.lg\:grid-cols-2>:first-child{position:sticky;top:96px}
+}
+/* البطاقة الأخيرة العريضة: أفقية */
+html body .bento>.qa:last-child:nth-child(3n+1){flex-direction:row;align-items:center;gap:16px}
+html body .bento>.qa:last-child:nth-child(3n+1) .ib{margin:0;flex:none}
+html body .tri{gap:16px}
+html body .tri .card{height:100%}
+html body #view-home .grid{gap:18px}
+html body #view-home .glass-panel{border-radius:22px}
+/* جديد اليوم: عنوان أنظف */
+html body #today{margin-top:6px}
+html body #today .nw-head{margin-bottom:12px}
+html body #today .nw-grid{gap:16px}
+
+/* ---------- 9) الهاتف: إيقاع عام ---------- */
+@media(max-width:640px){
+  :root{--vx-sec:34px}
+  html body main.max-w-7xl{padding-inline:14px}
+  html body .sh2 h2{font-size:22px}
+  html body #view-home .vg-global-intro{border-radius:22px;padding:22px 16px}
+  html body #view-home .vh h1{font-size:1.85rem}
+  html body #view-home .sp-g{gap:10px}
+}
+@media(prefers-reduced-motion:reduce){html body .bar>.news-strip{transition:none}}
+</style>
+<script>
+/* يطوي شريط الأخبار عند التمرير ليبقى الترويس خفيفًا */
+(function(){var t=false,on=false;function f(){t=false;var s=(window.scrollY||document.documentElement.scrollTop)>140;if(s!==on){on=s;document.body.classList.toggle('vx-scrolled',s)}}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});})();
+</script>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -862,7 +1179,7 @@ table{max-width:100%}.vxp,.tool,.card{overflow-wrap:anywhere}
  <div id="gtop"></div>
  <a class="btn p s cta" onclick="switchTab('ai-diagnostics')" role="button" tabindex="0"><svg class="i"><use href="#i-sp"/></svg>ابدأ الآن</a>
  <button class="ic" id="th2" aria-label="تبديل المظهر" title="تبديل المظهر"><svg class="i"><use href="#i-mo"/></svg></button>
-</div><div id="gsub" class="gsub hidden"></div><div class="mq" aria-label="شريط الأخبار"><div id="tkt"></div></div></div>
+</div><div id="gsub" class="gsub hidden"></div><div class="mq news-strip" aria-label="شريط الأخبار"><span class="news-label"><span class="news-pulse"></span> موجز VetAI</span><button type="button" id="newsPause" class="news-pause" aria-label="إيقاف حركة شريط الأخبار" title="إيقاف/تشغيل الأخبار">Ⅱ</button><div class="news-track"><div id="tkt"></div></div></div></div>
 
 <div class="toolrow"><div class="tr">
  <div class="srch"><svg class="i"><use href="#i-se"/></svg><input id="gs" autocomplete="off" placeholder="بحث شامل: مرض، سم، حيوان، موضوع..." class="inp"><div id="gsr" class="hidden absolute right-0 left-0 top-full mt-1 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl max-h-80 overflow-auto"></div></div>
@@ -873,17 +1190,55 @@ table{max-width:100%}.vxp,.tool,.card{overflow-wrap:anywhere}
  <input type="checkbox" id="mvt" hidden>
 </div></div>
 
+<div class="paragraph-finder" role="search" aria-label="البحث داخل فقرات الموقع">
+  <div class="pf-icon" aria-hidden="true">⌕</div>
+  <div class="pf-copy"><strong>ابحث داخل فقرات الموقع</strong><span>اكتب كلمة للعثور على فقرة أو عنوان، ثم انتقل مباشرةً إلى النتيجة.</span></div>
+  <label class="pf-input-wrap"><span class="sr-only">كلمة البحث داخل الفقرات</span><input id="paragraphQuery" type="search" placeholder="مثال: التهاب الضرع، التغذية، الأبحاث…" autocomplete="off"></label>
+  <span id="paragraphCount" class="pf-count" aria-live="polite">جاهز للبحث</span>
+  <div class="pf-actions"><button type="button" id="paragraphPrev" disabled>السابق</button><button type="button" id="paragraphNext" disabled>التالي ←</button><button type="button" id="paragraphClear">مسح</button></div>
+</div>
+<div id="branchExplorer" class="branch-explorer" aria-label="فروع المنصة"><span class="branch-title">الفروع</span><button data-branch="home" class="branch-link active">الرئيسية</button><button data-branch="ref" class="branch-link">المرجع والأمراض</button><button data-branch="knowledge" class="branch-link">المعرفة والموسوعة</button><button data-branch="exams" class="branch-link">التعلّم والاختبارات</button><button data-branch="ai-diagnostics" class="branch-link">الذكاء والتشخيص</button><button data-branch="services" class="branch-link">الخدمات</button><button data-branch="research" class="branch-link">الأبحاث</button><button data-branch="chat" class="branch-link">المساعد البيطري</button></div>
+
     <!-- Main Container -->
     <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
         <!-- VIEW 1: HOME -->
         <section id="view-home" class="space-y-12">
+<section class="vg-global-intro vr vg-cinematic" aria-labelledby="vg-global-title">
+  <div class="vg-cine-copy">
+    <span class="vg-eyebrow"><i aria-hidden="true"></i> VETAI GLOBAL <span class="vg-eyebrow-divider">/</span> VETERINARY INTELLIGENCE</span>
+    <p class="vg-kicker">من المعرفة إلى رعاية أفضل</p>
+    <h2 id="vg-global-title">مستقبل الطب البيطري<br><span>يبدأ بالذكاء.</span></h2>
+    <p class="vg-lead">منصة معرفية عالمية تجمع الطب البيطري والذكاء الاصطناعي والأبحاث والتعليم والبيانات — لتمنح الأطباء والطلاب والباحثين أدوات أوضح، ومسارات تعلّم أعمق، وقرارات أكثر مسؤولية.</p>
+    <div class="vg-actions">
+      <button class="vg-action primary" type="button" onclick="switchTab('ai-diagnostics')">✦ افتح مركز التقييم</button>
+      <button class="vg-action" type="button" onclick="switchTab('knowledge')">استكشف المعرفة <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="vg-trustline"><span class="vg-live-dot" aria-hidden="true"></span> معرفة بيطرية · بحث علمي · ذكاء اصطناعي مساعد <span class="vg-trust-sep">•</span> واجهة متعددة اللغات قابلة للتوسع</div>
+  </div>
+  <div class="vg-cine-stage" aria-label="تصوّر بصري ثلاثي الأبعاد للذكاء البيطري">
+    <div class="vg-stage-grid" aria-hidden="true"></div>
+    <div class="vg-orbit vg-orbit-a" aria-hidden="true"></div><div class="vg-orbit vg-orbit-b" aria-hidden="true"></div><div class="vg-orbit vg-orbit-c" aria-hidden="true"></div>
+    <div class="vg-core-glow" aria-hidden="true"></div>
+    <div class="vg-animal-core"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=85" alt="كلب ينظر إلى الكاميرا" width="450" height="450" fetchpriority="high"><span class="vg-core-scan" aria-hidden="true"></span></div>
+    <div class="vg-hud vg-hud-top"><span class="vg-hud-dot"></span><span>VETAI NEURAL CORE</span><b>ONLINE</b></div>
+    <div class="vg-hud vg-hud-left"><span class="vg-hud-symbol">⌬</span><span><b>تحليل متعدد المحاور</b><small>Clinical · Research · Learning</small></span></div>
+    <div class="vg-hud vg-hud-right"><span class="vg-hud-symbol">✳</span><span><b>ذكاء مساعد</b><small>Human-led decisions</small></span></div>
+    <div class="vg-hud vg-hud-bottom"><span class="vg-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span><b>Animal health intelligence</b><small>تصوّر واجهة — ليس نتيجة تشخيصية</small></span></div>
+    <div class="vg-orb-label vg-orb-label-a">AI <span>×</span> VET</div><div class="vg-orb-label vg-orb-label-b">GLOBAL RESEARCH</div>
+  </div>
+  <div class="vg-cine-footer">
+    <div class="vg-cine-metric"><b>01</b><span>مركز معرفة بيطرية</span></div><div class="vg-cine-metric"><b>02</b><span>أدوات تعليم وتقييم</span></div><div class="vg-cine-metric"><b>03</b><span>بوابة بحث وبيانات</span></div>
+    <div class="vg-cine-note"><span aria-hidden="true">✦</span> التقنية تدعم الطبيب — ولا تستبدل الفحص السريري.</div>
+  </div>
+</section>
+
 
 <div class="vh">
  <div class="vh-main vr">
   <span class="vh-eb"><i></i>عيادة بيطرية رقمية · إشراف د. محجوبي عبدالناصر</span>
   <h1>رعاية بيطرية بدقة الطبيب،<br><span class="g">في متناول كل مربٍّ</span></h1>
-  <p class="sub">افحص الأعراض، قارن العلامات الحيوية بمعدلاتها الطبيعية لكل نوع، وصنّف درجة الخطورة قبل أن تصل العيادة — مجانًا وبالعربية.</p>
+  <p class="sub">استكشف الأعراض والمراجع والأدوات التعليمية والبيانات البيطرية في مساحة واحدة. صُممت المنصة لدعم الأطباء والطلاب والباحثين والمربين، مع إبقاء القرار السريري للطبيب البيطري.</p>
   <div class="hsearch"><input id="hs" placeholder="ابحث عن مرض أو دواء أو تحليل أو سؤال..."><button id="hsb" class="btn p s" style="margin:0"><svg class="i"><use href="#i-sp"/></svg>ابحث</button></div>
   <div class="hchips"><button class="hsc">السعار</button><button class="hsc">الباروفيروس</button><button class="hsc">التهاب الضرع</button><button class="hsc">CBC</button><button class="hsc">مضاد حيوي</button></div>
   <div class="row"><a class="btn p" onclick="switchTab('ai-diagnostics')" role="button" tabindex="0"><svg class="i"><use href="#i-sp"/></svg>مُقيِّم الأعراض الذكي</a><a class="btn" onclick="switchTab('chat')" role="button" tabindex="0">اسأل بيطري-AI</a><a class="btn" onclick="switchTab('ref')" role="button" tabindex="0">المرجع السريري</a></div>
@@ -3206,6 +3561,32 @@ function tab(k){$('bx-t1').classList.toggle('on',k==1);$('bx-t2').classList.togg
 $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(1);
 })();
 </script>
+<script src="vetai-compat.js" defer></script>
+
+<script id="vetai-paragraph-finder-script">
+(function(){
+ const $=id=>document.getElementById(id);
+ const strip=document.querySelector('.news-strip'),pause=$('newsPause');
+ if(strip&&pause){pause.addEventListener('click',()=>{const stopped=strip.classList.toggle('paused');pause.textContent=stopped?'▶':'Ⅱ';pause.setAttribute('aria-label',stopped?'تشغيل حركة شريط الأخبار':'إيقاف حركة شريط الأخبار');});}
+ const q=$('paragraphQuery'),count=$('paragraphCount'),prev=$('paragraphPrev'),next=$('paragraphNext'),clear=$('paragraphClear');
+ let hits=[],idx=-1,last='';
+ const searchable=el=>!el.closest('script,style,nav,header,footer,.paragraph-finder,.branch-explorer,.news-strip,.toolrow')&&!el.closest('[hidden]')&&getComputedStyle(el).display!=='none';
+ function search(){const term=(q.value||'').trim().toLocaleLowerCase();document.querySelectorAll('.pf-hit').forEach(e=>e.classList.remove('pf-hit'));hits=[];idx=-1;last=term;
+  if(!term){count.textContent='جاهز للبحث';prev.disabled=next.disabled=true;return}
+  const seen=new Set();document.querySelectorAll('main p,main h1,main h2,main h3,main h4,main li,main summary,main .art,main .card,main article').forEach(el=>{
+   if(!searchable(el)||seen.has(el))return;const text=(el.innerText||el.textContent||'').trim();if(text.length>1&&text.toLocaleLowerCase().includes(term)){hits.push(el);seen.add(el);}
+  });
+  count.textContent=hits.length?('نتيجة '+hits.length+' · '+(idx+1)+'/'+hits.length):'لا توجد نتائج';prev.disabled=next.disabled=!hits.length;if(hits.length)go(0);
+ }
+ function go(n){if(!hits.length)return;hits.forEach(e=>e.classList.remove('pf-hit'));idx=(n+hits.length)%hits.length;const el=hits[idx];el.classList.add('pf-hit');el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});count.textContent='النتيجة '+(idx+1)+' من '+hits.length;prev.disabled=next.disabled=hits.length<2;setTimeout(()=>el.classList.remove('pf-hit'),2800)}
+ q&&q.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();if(last===(q.value||'').trim().toLocaleLowerCase()&&hits.length)go(idx+1);else search();}});
+ q&&q.addEventListener('change',search);prev&&prev.addEventListener('click',()=>go(idx-1));next&&next.addEventListener('click',()=>go(idx+1));clear&&clear.addEventListener('click',()=>{q.value='';search();q.focus()});
+ let timer; q&&q.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(search,180)});
+ document.querySelectorAll('[data-branch]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-branch]').forEach(x=>x.classList.toggle('active',x===b));const id=b.dataset.branch;if(id==='research'){const el=document.getElementById('research');if(el){el.scrollIntoView({behavior:'smooth',block:'start'});return}}if(typeof window.switchTab==='function')window.switchTab(id);else{const el=document.getElementById('view-'+id)||document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}}));
+ document.addEventListener('click',e=>{const b=e.target.closest('#gtop [data-g],#gsub [data-t]');if(!b)return;setTimeout(()=>{const id=b.dataset.g||b.dataset.t;document.querySelectorAll('[data-branch]').forEach(x=>x.classList.toggle('active',x.dataset.branch===id));},0)});
+})();
+</script>
+
 </body>
   
 </html>
