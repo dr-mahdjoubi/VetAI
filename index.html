@@ -1169,6 +1169,43 @@ section[id]{scroll-margin-top:190px}
   html body #gnav #gtop .gt{padding:0 11px;font-size:13px}
 }
 </style>
+
+<style>
+/* ============================================================
+   إعادة تنظيم صف الأدوات والبحث (Tools) — عرض وارتفاعات موحّدة
+   حقل البحث + تحليل الصورة + اللغة + المظهر + الجمهور
+   + باحث الفقرات + شريط الفروع — الهوية والألوان كما هي
+   ============================================================ */
+html body .toolrow .tr{width:calc(100% - 24px);max-width:1216px;margin-inline:auto;padding:10px;gap:10px;align-items:center;border-radius:22px}
+html body .toolrow .srch{height:46px;align-items:center}
+html body .toolrow .srch input.inp{height:46px;min-height:46px}
+html body .toolrow #vxi-open{height:46px;min-height:46px}
+html body .toolrow #lsel{height:46px;min-height:46px}
+html body .toolrow .seg{height:46px}
+html body .toolrow .seg button{display:inline-flex;align-items:center;justify-content:center;padding:0 14px}
+@media (max-width:1023px){
+  html body .toolrow .srch{flex:1 1 100%}
+  html body .toolrow #vxi-open{flex:1 1 auto;justify-content:center}
+  html body .toolrow .seg{flex:1 1 140px}
+  html body .toolrow .seg button{flex:1}
+}
+html body .paragraph-finder{width:calc(100% - 24px);max-width:1216px;margin:10px auto 0;padding:12px;gap:12px;border-radius:20px;grid-template-columns:40px minmax(150px,.8fr) minmax(200px,1.3fr) auto auto;align-items:center}
+html body .paragraph-finder .pf-icon{width:40px;height:40px;border-radius:12px}
+html body .paragraph-finder .pf-input-wrap input{height:44px}
+html body .paragraph-finder .pf-actions button{height:38px;display:inline-flex;align-items:center}
+@media (max-width:900px){
+  html body .paragraph-finder{padding:10px;gap:10px;grid-template-columns:40px 1fr auto;grid-template-areas:"icon copy count" "input input input" "actions actions actions"}
+  html body .paragraph-finder .pf-icon{grid-area:icon}
+  html body .paragraph-finder .pf-copy{grid-area:copy}
+  html body .paragraph-finder .pf-input-wrap{grid-area:input}
+  html body .paragraph-finder .pf-count{grid-area:count;justify-self:end}
+  html body .paragraph-finder .pf-actions{grid-area:actions;justify-self:end}
+}
+html body .branch-explorer{width:calc(100% - 24px);max-width:1216px;margin:10px auto 16px;padding:6px 2px;gap:8px;align-items:center}
+html body .branch-explorer .branch-title{display:none;flex:none}
+@media (min-width:1024px){html body .branch-explorer .branch-title{display:block}}
+html body .branch-explorer .branch-link{height:36px;display:inline-flex;align-items:center;padding:0 13px;font-size:12px}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
