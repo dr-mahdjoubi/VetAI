@@ -1197,7 +1197,7 @@ addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{p
   <span id="paragraphCount" class="pf-count" aria-live="polite">جاهز للبحث</span>
   <div class="pf-actions"><button type="button" id="paragraphPrev" disabled>السابق</button><button type="button" id="paragraphNext" disabled>التالي ←</button><button type="button" id="paragraphClear">مسح</button></div>
 </div>
-<div id="branchExplorer" class="branch-explorer" aria-label="فروع المنصة"><span class="branch-title">الفروع</span><button data-branch="home" class="branch-link active">الرئيسية</button><button data-branch="ref" class="branch-link">المرجع والأمراض</button><button data-branch="knowledge" class="branch-link">المعرفة والموسوعة</button><button data-branch="exams" class="branch-link">التعلّم والاختبارات</button><button data-branch="ai-diagnostics" class="branch-link">الذكاء والتشخيص</button><button data-branch="services" class="branch-link">الخدمات</button><button data-branch="research" class="branch-link">الأبحاث</button><button data-branch="chat" class="branch-link">المساعد البيطري</button></div>
+<div id="branchExplorer" class="branch-explorer" aria-label="فروع المنصة"><span class="branch-title">الفروع</span><button data-branch="home" class="branch-link active">الرئيسية</button><button data-branch="media" class="branch-link">الصور والفيديوهات</button><button data-branch="ref" class="branch-link">المرجع والأمراض</button><button data-branch="knowledge" class="branch-link">المعرفة والموسوعة</button><button data-branch="exams" class="branch-link">التعلّم والاختبارات</button><button data-branch="ai-diagnostics" class="branch-link">الذكاء والتشخيص</button><button data-branch="services" class="branch-link">الخدمات</button><button data-branch="research" class="branch-link">الأبحاث</button><button data-branch="chat" class="branch-link">المساعد البيطري</button></div>
 
     <!-- Main Container -->
     <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 space-y-12">
@@ -1431,7 +1431,35 @@ addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{p
 <div class="sh2 vr"><span class="eb">محليًا</span><h2>تخصصنا: صحة الحيوان في بيئتنا</h2><p>أمراض تهم المربين والأطباء في منطقتنا</p></div><div class="grid md:grid-cols-3 gap-4"><div id="homeLocal" class="md:col-span-2 grid sm:grid-cols-2 gap-3"></div><div class="rounded-2xl glass-panel p-5"><b>🗓️ رزنامة رعاية موسمية (عامة)</b><ul class="text-xs text-slate-300 mt-2 space-y-1.5 leading-relaxed"><li>🌱 <b>الربيع:</b> مكافحة الطفيليات وبدء الرعي وفحص القطيع.</li><li>☀️ <b>الصيف:</b> الإجهاد الحراري والحشرات الناقلة (كذبابة الرمل) وتوفير الماء والظل.</li><li>🍂 <b>الخريف:</b> التحضير للشتاء، الفحص قبل التزاوج، والتغذية.</li><li>❄️ <b>الشتاء:</b> المأوى والتهوية وتغذية الحوامل.</li></ul><p class="text-[10px] text-slate-500 mt-2">عامة؛ يحدد الطبيب وبرنامج الدولة المواعيد الدقيقة للتلقيح.</p></div></div><div class="sh2 vr"><span class="eb">مجتمع</span><h2>تعلّم وتفاعل</h2><p>مجتمع ودروس وألعاب</p></div><div class="grid md:grid-cols-3 gap-4"><button onclick="switchTab('chat')" class="text-right rounded-2xl glass-panel p-5 hover:border-vetCyan transition"><div class="ib"><svg class="i"><use href="#i-ms"/></svg></div><div class="font-black mt-2">المجتمع وبيطري-AI</div><p class="text-xs text-slate-400 mt-1">ناقش حالتك واطرح سؤالك وشارك الموقع.</p></button><button onclick="switchTab('exams')" class="text-right rounded-2xl glass-panel p-5 hover:border-vetCyan transition"><div class="ib"><svg class="i"><use href="#i-cp"/></svg></div><div class="font-black mt-2">دروس واختبارات</div><p class="text-xs text-slate-400 mt-1">راجع المواد العلمية واختبر نفسك.</p></button><button onclick="switchTab('fun')" class="text-right rounded-2xl glass-panel p-5 hover:border-vetCyan transition"><div class="ib"><svg class="i"><use href="#i-gm"/></svg></div><div class="font-black mt-2">ألعاب الحيوانات</div><p class="text-xs text-slate-400 mt-1">ألعاب ممتعة للكبار والصغار وروابط ألعاب مجانية.</p></button></div> 
 <div class="rounded-3xl glass-panel p-6 flex flex-wrap items-center justify-between gap-3"><div><h3 class="text-xl font-black">الجامعات والكليات البيطرية</h3><p class="text-xs text-slate-400 mt-1">كليات جزائرية ودولية مرتبة في أسفل الصفحة.</p></div><button onclick="showUni()" class="bg-vetCyan text-slate-900 font-black px-5 py-2.5 rounded-xl text-sm">استعرض الجامعات ↓</button></div> 
 <div class="sh2 vr"><span class="eb">الثقة</span><h2>لماذا تثق بالمنصة؟</h2></div><div class="grid md:grid-cols-3 gap-4"><div class="rounded-2xl glass-panel p-5"><div class="ib"><svg class="i"><use href="#i-gf"/></svg></div><b class="text-sm">مجانية وبلا إعلانات</b><p class="text-xs text-slate-400 mt-1 leading-relaxed">لا إعلانات ولا رعاية تجارية في المنصة.</p></div><div class="rounded-2xl glass-panel p-5"><div class="ib"><svg class="i"><use href="#i-bk"/></svg></div><b class="text-sm">مقارنة بمراجع معتمدة</b><p class="text-xs text-slate-400 mt-1 leading-relaxed">تُقارَن المعلومات بمراجع مثل WOAH وFAO ودليل ميرك، وتُعرض بنظام موحد.</p></div><div class="rounded-2xl glass-panel p-5"><div class="ib"><svg class="i"><use href="#i-al"/></svg></div><b class="text-sm">تعليمية لا تغني عن الطبيب</b><p class="text-xs text-slate-400 mt-1 leading-relaxed">المحتوى للتعلّم، ولا يغني عن الفحص السريري؛ وبلا جرعات دوائية. لم يخضع لتحكيم أقران رسمي.</p></div></div> 
+
+<div class="rounded-3xl glass-panel overflow-hidden flex flex-col md:flex-row" style="padding:0">
+<img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=900&q=80" alt="طبيب بيطري يفحص كلبًا" loading="lazy" style="width:100%;max-height:230px;object-fit:cover" class="md:w-2/5">
+<div class="p-6 flex flex-col justify-center gap-2">
+<span class="eb">جديد في المنصة</span>
+<h3 class="text-xl font-black">قسم الصور والفيديوهات والحيوانات ثلاثية الأبعاد 🐎</h3>
+<p class="text-sm text-slate-400 leading-relaxed">أدِر نماذج حيوانات ثلاثية الأبعاد بيدك، وتصفّح صورًا بيطرية مشروحة بقلم الطبيب، وشاهد فيديوهات تعليمية مختارة بعناية للمربي والطالب والطبيب.</p>
+<div><button onclick="switchTab('media')" class="bg-vetCyan text-slate-900 font-black px-5 py-2.5 rounded-xl text-sm">ادخل القسم ←</button></div>
+</div>
+</div>
 </section> 
+
+<!-- VIEW: MEDIA — photos, videos, 3D animals -->
+<section id="view-media" class="hidden space-y-10">
+<style>
+.mv3d{width:100%;height:250px;background:radial-gradient(120% 120% at 50% 0%,rgba(34,211,238,.14),rgba(2,6,23,.55));border-radius:14px}
+.mchip{padding:7px 14px;border-radius:999px;border:1px solid #1e293b;background:#0b1220;color:#cbd5e1;font-size:12px;font-weight:700;cursor:pointer}
+.mchip.on{background:#22d3ee;color:#0f172a;border-color:#22d3ee}
+.mph img{width:100%;height:190px;object-fit:cover;border-radius:12px;display:block}
+.vthumb{position:relative;cursor:pointer;border-radius:14px;overflow:hidden}
+.vthumb img{width:100%;height:180px;object-fit:cover;display:block}
+.vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,.35);font-size:42px;color:#fff}
+.vthumb iframe{width:100%;height:220px;border:0;display:block}
+</style>
+<div class="border-b border-slate-800 pb-6"><h2 class="text-2xl sm:text-3xl font-black text-vetCyan">الصور والفيديوهات والحيوانات ثلاثية الأبعاد</h2><p class="text-slate-400 text-sm mt-1">معرض مرئي تعليمي متكامل: نماذج ثلاثية الأبعاد تفاعلية تُدار باللمس أو الفأرة، وصور من عالم الحيوان بشرح بيطري، وفيديوهات مختارة بعناية للمربين والطلاب والأطباء.</p></div>
+<div><div class="sh2 vr"><span class="eb">تفاعلي</span><h2>حيوانات ثلاثية الأبعاد</h2><p>اسحب النموذج لتدويره، وقرّب بعجلة الفأرة أو بإصبعيك</p></div><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="mv3dGrid"></div></div>
+<div><div class="sh2 vr"><span class="eb">معرض</span><h2>صور بيطرية مشروحة</h2><p>كل صورة تحمل معلومة من الطبيب</p></div><div class="flex flex-wrap gap-2 mb-4" id="mvChips"></div><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="mvPhotos"></div></div>
+<div><div class="sh2 vr"><span class="eb">شاهد وتعلّم</span><h2>فيديوهات تعليمية مختارة</h2><p>اضغط على أي فيديو لمشاهدته هنا مباشرة</p></div><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="mvVideos"></div><p class="text-[11px] text-slate-500 mt-3">الفيديوهات من قنوات تعليمية على يوتيوب وتعود حقوقها لأصحابها؛ اختيارها هنا لغرض تعليمي فقط ولا تغني عن استشارة الطبيب البيطري.</p></div>
+</section>
  
         <!-- VIEW 2: AI DIAGNOSTICS ASSISTANT -->
         <section id="view-ai-diagnostics" class="hidden space-y-8">
@@ -1739,7 +1767,7 @@ addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{p
         }
 
         function switchTab(tabId) {
-            const tabs = ['catalog', 'home', 'ai-diagnostics', 'chat', 'knowledge', 'ref', 'drugs', 'dxlab', 'aim', 'bio', 'exams', 'library', 'services', 'fun', 'creator', 'about', 'legal'];
+            const tabs = ['catalog', 'home', 'media', 'ai-diagnostics', 'chat', 'knowledge', 'ref', 'drugs', 'dxlab', 'aim', 'bio', 'exams', 'library', 'services', 'fun', 'creator', 'about', 'legal'];
             tabs.forEach(t => {
                 const el = document.getElementById('view-' + t);
                 const btn = document.getElementById('btn-' + t);
@@ -3587,6 +3615,94 @@ $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(
 })();
 </script>
 
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<script>
+/* قسم الوسائط: نماذج ثلاثية الأبعاد + معرض صور + فيديوهات — يُبنى من data/gallery.json و data/media.json */
+(function(){
+  var M3D=[
+    {src:'https://threejs.org/examples/models/gltf/Horse.glb',anim:1,name:'الحصان',fact:'قلب الحصان يزن نحو ٤ كغ، وحوافره تنمو بمعدل ٦–٩ مم شهريًا — لهذا يحتاج تقليمًا كل ٦–٨ أسابيع.'},
+    {src:'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF-Binary/Fox.glb',anim:1,name:'الثعلب الأحمر',fact:'يسمع الثعلب فريسته تحت الثلج بفضل سمع يلتقط ترددات خافتة جدًا، فينقضّ بقفزة قوسية دقيقة.'},
+    {src:'https://threejs.org/examples/models/gltf/Parrot.glb',anim:1,name:'الببغاء',fact:'أقدام الببغاء زيجية (إصبعان للأمام وإصبعان للخلف) تمكّنه من الإمساك بالطعام ورفعه إلى منقاره كاليد.'},
+    {src:'https://threejs.org/examples/models/gltf/Flamingo.glb',anim:1,name:'الفلامنغو (النحام)',fact:'لونه الوردي يأتي من الكاروتينات في غذائه؛ فاقدُ اللونِ علامةٌ على نقص التغذية أو الإجهاد.'},
+    {src:'https://threejs.org/examples/models/gltf/Stork.glb',anim:1,name:'اللقلق الأبيض',fact:'زائر مهاجر يعبر سماء الجزائر بين أوروبا وإفريقيا، ويعود غالبًا إلى العش نفسه كل عام.'},
+    {src:'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF-Binary/Duck.glb',anim:0,name:'البطة',fact:'ريش البط مقاوم للماء بفضل غدة زيتية عند الذيل توزّع الزيت بمنقارها على كامل الجسم.'}
+  ];
+  var CATS={all:'الكل',pets:'حيوانات أليفة',livestock:'مواشٍ ومجترات',poultry:'دواجن',horses:'خيول',birds:'طيور',clinic:'العيادة'};
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+  function build3d(){
+    var g=document.getElementById('mv3dGrid');if(!g||g.dataset.done)return;g.dataset.done=1;
+    M3D.forEach(function(m){
+      var card=el('div','rounded-2xl glass-panel p-4');
+      var mv=document.createElement('model-viewer');
+      mv.setAttribute('src',m.src);mv.setAttribute('camera-controls','');mv.setAttribute('auto-rotate','');
+      if(m.anim)mv.setAttribute('autoplay','');
+      mv.setAttribute('shadow-intensity','1');mv.setAttribute('loading','lazy');mv.setAttribute('alt','نموذج ثلاثي الأبعاد: '+m.name);
+      mv.className='mv3d';
+      var h=el('div','font-black mt-3','🦴 '+m.name);
+      var p=el('p','text-xs text-slate-400 mt-1 leading-relaxed',m.fact);
+      var hint=el('p','text-[10px] text-slate-500 mt-2','اسحب للتدوير · قرّب للتكبير');
+      card.appendChild(mv);card.appendChild(h);card.appendChild(p);card.appendChild(hint);g.appendChild(card);
+    });
+  }
+  async function load(p){try{var r=await fetch(p,{cache:'no-store'});return r.ok?await r.json():{};}catch(e){return{};}}
+  async function buildPhotos(){
+    var box=document.getElementById('mvPhotos'),chips=document.getElementById('mvChips');
+    if(!box||box.dataset.done)return;box.dataset.done=1;
+    var photos=((await load('data/gallery.json')).photos||[]);
+    var present={all:1};photos.forEach(function(x){if(x.cat)present[x.cat]=1;});
+    Object.keys(CATS).forEach(function(k){
+      if(!present[k])return;
+      var b=el('button','mchip'+(k==='all'?' on':''),CATS[k]);b.type='button';b.dataset.f=k;
+      b.addEventListener('click',function(){
+        chips.querySelectorAll('.mchip').forEach(function(c){c.classList.toggle('on',c===b);});
+        box.querySelectorAll('.mph').forEach(function(card){card.style.display=(k==='all'||card.dataset.cat===k)?'':'none';});
+      });
+      chips.appendChild(b);
+    });
+    photos.forEach(function(x){
+      if(!x.image)return;
+      var card=el('figure','mph rounded-2xl glass-panel p-3');card.dataset.cat=x.cat||'all';
+      var img=document.createElement('img');img.src=x.image;img.alt=x.caption||'';img.loading='lazy';
+      var cap=el('figcaption','text-xs text-slate-300 mt-2 leading-relaxed',x.caption||'');
+      card.appendChild(img);card.appendChild(cap);box.appendChild(card);
+    });
+  }
+  async function buildVideos(){
+    var box=document.getElementById('mvVideos');if(!box||box.dataset.done)return;box.dataset.done=1;
+    var vids=((await load('data/media.json')).videos||[]);
+    vids.forEach(function(v){
+      var card=el('div','rounded-2xl glass-panel p-3');
+      var th=el('div','vthumb');
+      var img=document.createElement('img');img.src='https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg';img.alt=v.title||'';img.loading='lazy';
+      var play=el('div','vplay','▶');
+      th.appendChild(img);th.appendChild(play);
+      th.addEventListener('click',function(){
+        var f=document.createElement('iframe');
+        f.src='https://www.youtube-nocookie.com/embed/'+v.id+'?autoplay=1&rel=0';
+        f.setAttribute('allow','accelerometer; autoplay; encrypted-media; picture-in-picture');
+        f.setAttribute('allowfullscreen','');
+        th.innerHTML='';th.appendChild(f);
+      });
+      var h=el('div','font-black mt-3 text-sm',v.title||'');
+      var p=el('p','text-xs text-slate-400 mt-1 leading-relaxed',v.desc||'');
+      var tag=el('span','text-[10px] text-vetCyan font-bold',v.cat||'');
+      card.appendChild(th);card.appendChild(h);card.appendChild(p);card.appendChild(tag);box.appendChild(card);
+    });
+  }
+  var inited=false;
+  function viewVisible(){var s=document.getElementById('view-media');return !!s&&!s.classList.contains('hidden')&&s.getClientRects().length>0;}
+  function ensureInit(){if(inited||!viewVisible())return false;inited=true;build3d();buildPhotos();buildVideos();return true;}
+  function watch(){
+    if(ensureInit())return;
+    var s=document.getElementById('view-media');if(!s)return;
+    var mo=new MutationObserver(function(){if(ensureInit())mo.disconnect();});
+    mo.observe(s,{attributes:true,attributeFilter:['class','style']});
+    document.querySelectorAll('[data-branch="media"]').forEach(function(b){b.addEventListener('click',function(){setTimeout(ensureInit,150);});});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',watch);else watch();
+})();
+</script>
 </body>
   
 </html>
