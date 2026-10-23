@@ -1135,6 +1135,40 @@ html body #today .nw-grid{gap:16px}
 (function(){var t=false,on=false;function f(){t=false;var s=(window.scrollY||document.documentElement.scrollTop)>140;if(s!==on){on=s;document.body.classList.toggle('vx-scrolled',s)}}
 addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});})();
 </script>
+
+<style>
+/* ============================================================
+   إعادة تنظيم الهيدر (Header) — مقياس موحّد، بلا تداخل، تجاوب كامل
+   الشعار + التنقّل + زر الإجراء + زر المظهر + شريط الأخبار + التنقّل الفرعي
+   الهوية والألوان كما هي (تُستخدم متغيّرات الموقع نفسها var(--bd)/--card/--a1)
+   ============================================================ */
+html body #gnav{--hdr-w:1216px;--hdr-h:40px;gap:8px}
+html body #gnav .isl{width:100%;max-width:var(--hdr-w);margin-inline:auto;display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:8px 10px;border-radius:26px}
+html body #gnav .logo{flex:none;gap:10px;font-size:18px}
+html body #gnav .logo b{width:38px;height:38px;border-radius:12px;flex:none}
+html body #gnav .logo small{display:none}
+html body #gnav #gtop{order:5;flex:1 1 100%;min-width:0;display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;padding-block:2px}
+html body #gnav #gtop::-webkit-scrollbar{display:none}
+html body #gnav #gtop .gt{height:var(--hdr-h);display:inline-flex;align-items:center;padding:0 13px;font-size:13.5px;border-radius:99px;flex:none}
+html body #gnav .cta{display:inline-flex!important;flex:none;height:var(--hdr-h);min-height:var(--hdr-h);padding:0 18px;margin:0;font-size:13.5px;border-radius:99px;align-items:center}
+html body #gnav #th2{width:var(--hdr-h);height:var(--hdr-h);flex:none}
+html body #gnav .mq{width:100%;max-width:var(--hdr-w);margin-inline:auto;height:var(--hdr-h);min-height:var(--hdr-h);max-height:var(--hdr-h);border-radius:16px;padding:0 10px;font-size:12px}
+html body #gnav .gsub{width:100%;max-width:var(--hdr-w);margin-inline:auto;padding:5px;border-radius:99px;gap:4px}
+html body #gnav .gsub button,html body #gnav .gsub a{height:34px;display:inline-flex;align-items:center;padding:0 12px;font-size:12.5px;border-radius:99px;flex:none}
+section[id]{scroll-margin-top:190px}
+@media (min-width:1024px){
+  html body #gnav .isl{flex-wrap:nowrap;border-radius:99px;padding:8px 12px;gap:12px}
+  html body #gnav .logo small{display:block}
+  html body #gnav #gtop{order:0;flex:1 1 auto;justify-content:center;overflow:visible}
+  section[id]{scroll-margin-top:150px}
+}
+@media (max-width:640px){
+  html body #gnav .logo{font-size:16px}
+  html body #gnav .logo b{width:34px;height:34px;border-radius:11px}
+  html body #gnav .cta{padding:0 13px;font-size:12.5px}
+  html body #gnav #gtop .gt{padding:0 11px;font-size:13px}
+}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
