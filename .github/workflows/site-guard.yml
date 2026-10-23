@@ -1,0 +1,51 @@
+# VetAI Site Guard — فحص يومي تلقائي لصحة الموقع وسلامته
+# يكتب التقرير إلى data/manager-report.json (تقرأه لوحة المدير الخفية)،
+# ويفتح Issue تلقائيًا عند أي فشل. يُشغَّل يدويًا أيضًا من تبويب Actions.
+name: VetAI Site Guard
+
+on:
+  schedule:
+    - cron: '17 5 * * *'   # يوميًا ~05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run guard checks
+        id: guard
+        run: node tools/site-guard.mjs --out data/manager-report.json
+        continue-on-error: true
+
+      - name: Commit updated report
+        run: |
+          git config user.name 'vetai-site-guard'
+          git config user.email 'guard@vetai.local'
+          git add data/manager-report.json
+          if git diff --cached --quiet; then
+            echo 'التقرير لم يتغيّر.'
+          else
+            git commit -m 'chore(guard): تحديث تقرير المدير'
+            git push
+          fi
+
+      - name: Open issue on failure
+        if: steps.guard.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "🛡️ حارس الموقع: فشل في الفحص اليومي" \
+            --body "فشل فحص الحارس اليومي. التفاصيل الكاملة في ملف \`data/manager-report.json\` بأحدث commit، وسجلّ التشغيل في تبويب Actions. أغلق هذا البلاغ بعد معالجة السبب." \
+            --label guard \
+          || echo 'تعذّر فتح البلاغ (ربما يوجد بلاغ مفتوح مشابه).'
