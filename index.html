@@ -1313,6 +1313,14 @@ input::placeholder,textarea::placeholder{opacity:1}
 .mg-pad{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:10px}
 .mg-pad button{width:52px;height:44px;border-radius:12px;border:1px solid var(--bd);background:var(--inp);color:var(--fg);font-size:17px;cursor:pointer}
 .mg-pad span{display:flex;gap:6px}
+.gx-play{width:92px;height:92px;border-radius:50%;border:3px solid rgba(255,255,255,.65);background:rgba(255,255,255,.18);font-size:42px;cursor:pointer;color:#fff;line-height:1}
+.gx-play:active{transform:scale(.94)}
+.gx-emoji{font-size:60px;text-align:center;line-height:1.15;margin-top:4px}
+.gx-word{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center;min-height:64px;margin-top:10px;padding:8px;border:1.5px dashed var(--bd);border-radius:14px}
+.gx-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;min-height:52px}
+.gx-chip{min-width:46px;height:52px;padding:0 8px;border-radius:12px;border:1px solid var(--bd);background:var(--inp);color:var(--fg);font:inherit;font-size:22px;font-weight:800;cursor:pointer}
+.gx-chip.used{opacity:.22;pointer-events:none}
+.gx-word .gx-chip{background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border-color:transparent}
 </style>
 
 <style id="fbk-css">
@@ -2131,7 +2139,7 @@ html.perf-idle body #cv{display:none!important}
   <p class="small muted slb-note">ملاحظة: جميع الروابط الخارجية رسمية (جامعات وهيئات ترخيص ومستودعات جامعية) أو مفتوحة الوصول قانونيًا. الكتب بصيغة PDF كاملة بأغلفتها في القسم السابق مباشرة «كتب مجانية PDF»، وهذا القسم ينظمها أكاديميًا مع بقية الموارد.</p>
 </div>
 <div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
-<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">أربع ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
+<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">سبع ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
 <div class="gameGrid">
 <div class="card game mg"><div><div class="icon">🃏</div><h3>ذاكرة الصور</h3><p class="muted">اقلب البطاقات وطابق صور الحيوانات بأقل حركات وأسرع وقت.</p>
 <div class="mg-bar"><select id="mmLevel" class="mg-sel" aria-label="المستوى"><option value="6">سهل · 6 أزواج</option><option value="8">متوسط · 8 أزواج</option></select><button class="btn primary" id="mmNew">لعبة جديدة</button></div>
@@ -2147,6 +2155,19 @@ html.perf-idle body #cv{display:none!important}
 <canvas id="snCv" width="336" height="336" class="mg-cv"></canvas>
 <div class="mg-bar"><button class="btn primary" id="snGo">ابدأ اللعب</button></div>
 <div class="mg-pad"><button data-d="up" aria-label="أعلى">▲</button><span><button data-d="left" aria-label="يسار">◀</button><button data-d="down" aria-label="أسفل">▼</button><button data-d="right" aria-label="يمين">▶</button></span></div></div><div class="score" id="snScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🎧</div><h3>خمّن الصوت</h3><p class="muted">استمع إلى صوت الحيوان وخمّن صاحبه من أربعة خيارات قبل انتهاء الوقت — زر الصوت يعيد التشغيل.</p>
+<div class="mg-stage"><div class="mg-idle"><button class="gx-play" id="sdPlay" aria-label="تشغيل الصوت">🔊</button></div><div class="mg-timer"><i id="sdBar"></i></div></div>
+<div class="mg-opts" id="sdOpts"></div>
+<div class="mg-bar"><button class="btn primary" id="sdGo">ابدأ اللعب</button></div></div><div class="score" id="sdScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🥕</div><h3>الغذاء الصحيح</h3><p class="muted">صورة حيوان وأربعة أغذية — اختر غذاءه الأنسب، وتعلّم معلومة بيطرية سريعة مع كل إجابة.</p>
+<div class="mg-stage"><img id="fdImg" alt="صورة حيوان" style="display:none"><div id="fdIdle" class="mg-idle">🍽️</div><div class="mg-timer"><i id="fdBar"></i></div></div>
+<div class="mg-opts" id="fdOpts"></div>
+<div class="mg-bar"><button class="btn primary" id="fdGo">ابدأ اللعب</button></div></div><div class="score" id="fdScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🔤</div><h3>رتّب الحروف</h3><p class="muted">حروف مبعثرة واسم حيوان ينتظر ترتيبه — انقر الحروف بالترتيب الصحيح، وانقر حرفًا مرتّبًا لإعادته.</p>
+<div class="gx-emoji" id="scEmoji">🦁</div>
+<div class="gx-word" id="scWord"></div>
+<div class="gx-chips" id="scChips"></div>
+<div class="mg-bar"><button class="btn primary" id="scGo">ابدأ اللعب</button><button class="btn" id="scClear">مسح</button></div></div><div class="score" id="scScore">أفضل نتيجة: 0</div></div>
 </div>
 </div></section></div><div class="my space-y-8"><section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="https://kids.nationalgeographic.com/games"><b>National Geographic Kids</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://kids.sandiegozoo.org"><b>San Diego Zoo Kids</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://pbskids.org/games"><b>PBS Kids Games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.abcya.com"><b>ABCya</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.funbrain.com"><b>Funbrain</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://poki.com"><b>Poki</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.crazygames.com"><b>CrazyGames</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.google.com/search?q=ألعاب+حيوانات+مجانية"><b>بحث: ألعاب حيوانات مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><section id="media"><div class="wrap"><div class="sectionHead"><div><h2>الوسائط والتعليم المرئي</h2><p class="muted">روابط بحث منظمة للصور والفيديوهات التعليمية.</p></div></div>
 <div class="grid">
@@ -4331,7 +4352,7 @@ $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(
 </script>
 
 <script>
-/* ===== ألعاب حيوانات عصرية: ذاكرة الصور، عدّاء الأرنب، خمّن الحيوان، ثعبان المزرعة ===== */
+/* ===== ألعاب حيوانات عصرية: ذاكرة الصور، عدّاء الأرنب، خمّن الحيوان، ثعبان المزرعة، خمّن الصوت، الغذاء الصحيح، رتّب الحروف ===== */
 (function(){
 'use strict';
 const $=s=>document.querySelector(s), sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
@@ -4473,6 +4494,127 @@ const ANIMALS=[
  let tx=0,ty=0;cv.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
  cv.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)<24&&Math.abs(dy)<24)return;turn(Math.abs(dx)>Math.abs(dy)?(dx>0?D.right:D.left):(dy>0?D.down:D.up))},{passive:true});
  snake=[{x:8,y:8},{x:7,y:8},{x:6,y:8}];food={x:12,y:8};draw();
+})();
+/* ---------- 5) خمّن الصوت ---------- */
+(function(){
+ const play=$('#sdPlay'),opts=$('#sdOpts'),bar=$('#sdBar'),btn=$('#sdGo'),scoreEl=$('#sdScore');if(!play)return;
+ const SOUNDS=[
+  {n:'كلب',s:'https://upload.wikimedia.org/wikipedia/commons/a/a2/Barking_of_a_dog.ogg'},
+  {n:'قط',s:'https://upload.wikimedia.org/wikipedia/commons/6/62/Meow.ogg'},
+  {n:'حصان',s:'https://upload.wikimedia.org/wikipedia/commons/d/db/Wiehern.ogg'},
+  {n:'بقرة',s:'https://upload.wikimedia.org/wikipedia/commons/a/a5/Single_Cow_Moo.ogg'},
+  {n:'خروف',s:'https://upload.wikimedia.org/wikipedia/commons/1/13/Sheep_bleating.ogg'},
+  {n:'ديك',s:'https://upload.wikimedia.org/wikipedia/commons/c/c5/Rooster_crowing.ogg'}];
+ const au=new Audio();let round=0,score=0,streak=0,cur=null,timer=null,left=100,locked=true;
+ scoreEl.textContent='أفضل نتيجة: '+store.get('mg_sd_best',0);
+ function end(){locked=true;clearInterval(timer);bar.style.width='0%';au.pause();
+  if(score>store.get('mg_sd_best',0))store.set('mg_sd_best',score);
+  scoreEl.textContent='🏁 انتهت اللعبة! نتيجتك: '+score+' · أفضل نتيجة: '+store.get('mg_sd_best',0);
+  btn.textContent='العب مجددًا';opts.innerHTML='';play.textContent='🏆'}
+ function next(){
+  if(round>=8)return end();
+  round++;let nx=SOUNDS[Math.floor(Math.random()*SOUNDS.length)];
+  if(cur&&nx.n===cur.n)nx=SOUNDS[(SOUNDS.indexOf(nx)+1)%SOUNDS.length];
+  cur=nx;au.src=cur.s;play.textContent='🔊';
+  const others=sh(SOUNDS.filter(a=>a.n!==cur.n)).slice(0,3);
+  const choices=sh(others.concat([cur]));
+  opts.innerHTML=choices.map(a=>'<button data-n="'+a.n+'">'+a.n+'</button>').join('');
+  scoreEl.textContent='الجولة '+round+'/8 · النقاط: '+score+(streak>=2?' · 🔥 سلسلة '+streak:'');
+  locked=false;left=100;bar.style.width='100%';clearInterval(timer);
+  au.currentTime=0;au.play().catch(()=>{});
+  timer=setInterval(()=>{left-=2;bar.style.width=left+'%';if(left<=0){clearInterval(timer);answer(null)}},100);
+ }
+ function answer(n){
+  if(locked)return;locked=true;clearInterval(timer);au.pause();
+  const right=cur.n;
+  opts.querySelectorAll('button').forEach(b=>{if(b.dataset.n===right)b.classList.add('ok');else if(b.dataset.n===n)b.classList.add('no');b.disabled=true});
+  if(n===right){streak++;score+=10+Math.round(left/10)+(streak>=3?5:0)}else streak=0;
+  scoreEl.textContent=(n===right?'✅ صحيح! إنه الـ'+right:'❌ الصحيح: '+right)+' · النقاط: '+score;
+  setTimeout(next,1100);
+ }
+ play.onclick=()=>{if(cur&&round>0){au.currentTime=0;au.play().catch(()=>{})}};
+ opts.onclick=e=>{const b=e.target.closest('button');if(b)answer(b.dataset.n)};
+ btn.onclick=()=>{round=0;score=0;streak=0;btn.textContent='إعادة';next()};
+})();
+/* ---------- 6) الغذاء الصحيح ---------- */
+(function(){
+ const img=$('#fdImg'),idle=$('#fdIdle'),opts=$('#fdOpts'),bar=$('#fdBar'),btn=$('#fdGo'),scoreEl=$('#fdScore');if(!img)return;
+ const FOODS=[
+  {a:'كلب',f:'لحم مطبوخ',fact:'الكلب يحتاج بروتينًا حيوانيًا وغذاءً متوازنًا — والشوكولاتة سامة له.'},
+  {a:'قط',f:'سمك ولحم',fact:'القط آكل لحوم صارم يحتاج التورين الموجود في اللحوم والسمك.'},
+  {a:'حصان',f:'تبن وشوفان',fact:'الحصان يعتمد على الألياف: التبن والعشب أساس غذائه، والحبوب بحذر.'},
+  {a:'بقرة',f:'علف أخضر وتبن',fact:'البقرة حيوان مجترّ يعيش على الأعلاف الخضراء والتبن.'},
+  {a:'خروف',f:'عشب وبرسيم',fact:'الخروف يرعى العشب والبرسيم ويحتاج أملاحًا معدنية متاحة دائمًا.'},
+  {a:'دجاجة',f:'حبوب وبذور',fact:'الدجاج يلتقط الحبوب والبذور وينقّر طعامه طوال اليوم.'}];
+ const ALLF=FOODS.map(x=>x.f);
+ let round=0,score=0,streak=0,cur=null,timer=null,left=100,locked=true;
+ scoreEl.textContent='أفضل نتيجة: '+store.get('mg_fd_best',0);
+ function end(){locked=true;clearInterval(timer);bar.style.width='0%';
+  if(score>store.get('mg_fd_best',0))store.set('mg_fd_best',score);
+  scoreEl.textContent='🏁 انتهى الاختبار! نتيجتك: '+score+' · أفضل نتيجة: '+store.get('mg_fd_best',0);
+  btn.textContent='العب مجددًا';img.style.display='none';idle.style.display='grid';idle.textContent=score>=70?'🏆':score>=40?'👏':'💪';opts.innerHTML=''}
+ function next(){
+  if(round>=8)return end();
+  round++;let nx=FOODS[Math.floor(Math.random()*FOODS.length)];
+  if(cur&&nx.a===cur.a)nx=FOODS[(FOODS.indexOf(nx)+1)%FOODS.length];
+  cur=nx;const an=ANIMALS.find(a=>a.n===cur.a);
+  img.src=an.img;img.style.display='block';idle.style.display='none';
+  const others=sh(ALLF.filter(f=>f!==cur.f)).slice(0,3);
+  const choices=sh(others.concat([cur.f]));
+  opts.innerHTML=choices.map(f=>'<button data-f="'+f+'">'+f+'</button>').join('');
+  scoreEl.textContent='السؤال '+round+'/8 · ما الغذاء الأنسب لهذا الحيوان؟ · النقاط: '+score;
+  locked=false;left=100;bar.style.width='100%';clearInterval(timer);
+  timer=setInterval(()=>{left-=2;bar.style.width=left+'%';if(left<=0){clearInterval(timer);answer(null)}},100);
+ }
+ function answer(f){
+  if(locked)return;locked=true;clearInterval(timer);
+  const right=cur.f;
+  opts.querySelectorAll('button').forEach(b=>{if(b.dataset.f===right)b.classList.add('ok');else if(b.dataset.f===f)b.classList.add('no');b.disabled=true});
+  if(f===right){streak++;score+=10+Math.round(left/10)+(streak>=3?5:0)}else streak=0;
+  scoreEl.textContent=(f===right?'✅ صحيح! ':'❌ الصحيح: '+right+' · ')+cur.fact+' · النقاط: '+score;
+  setTimeout(next,1500);
+ }
+ opts.onclick=e=>{const b=e.target.closest('button');if(b)answer(b.dataset.f)};
+ btn.onclick=()=>{round=0;score=0;streak=0;btn.textContent='إعادة';next()};
+})();
+/* ---------- 7) رتّب الحروف ---------- */
+(function(){
+ const em=$('#scEmoji'),wordEl=$('#scWord'),chipsEl=$('#scChips'),btn=$('#scGo'),clr=$('#scClear'),scoreEl=$('#scScore');if(!em)return;
+ const WORDS=[{w:'كلب',e:'🐶'},{w:'قط',e:'🐱'},{w:'حصان',e:'🐴'},{w:'بقرة',e:'🐮'},{w:'خروف',e:'🐑'},{w:'دجاجة',e:'🐔'},{w:'أرنب',e:'🐰'},{w:'بطة',e:'🦆'},{w:'ماعز',e:'🐐'},{w:'فيل',e:'🐘'},{w:'جمل',e:'🐪'},{w:'ثعلب',e:'🦊'},{w:'ذئب',e:'🐺'},{w:'نحلة',e:'🐝'},{w:'سمكة',e:'🐟'},{w:'فراشة',e:'🦋'}];
+ let round=0,score=0,cur=null,picked=[],mistakes=0,playing=false;
+ scoreEl.textContent='أفضل نتيجة: '+store.get('mg_sc_best',0);
+ function render(){
+  wordEl.innerHTML=picked.length?picked.map((c,i)=>'<button class="gx-chip" data-p="'+i+'">'+c+'</button>').join(''):'<span class="muted" style="align-self:center">انقر الحروف بالترتيب…</span>';
+ }
+ function next(){
+  if(round>=6){playing=false;if(score>store.get('mg_sc_best',0))store.set('mg_sc_best',score);
+   scoreEl.textContent='🏁 انتهت اللعبة! نتيجتك: '+score+' · أفضل نتيجة: '+store.get('mg_sc_best',0);
+   em.textContent='🏆';wordEl.innerHTML='';chipsEl.innerHTML='';return}
+  round++;cur=WORDS[Math.floor(Math.random()*WORDS.length)];picked=[];mistakes=0;playing=true;
+  em.textContent=cur.e;
+  let letters=sh(cur.w.split(''));
+  if(letters.join('')===cur.w&&letters.length>1)letters.push(letters.shift());
+  chipsEl.innerHTML=letters.map((c,i)=>'<button class="gx-chip" data-i="'+i+'">'+c+'</button>').join('');
+  render();
+  scoreEl.textContent='الكلمة '+round+'/6 · النقاط: '+score+' · ما اسم هذا الحيوان؟';
+ }
+ function check(){
+  if(!cur||picked.length<cur.w.length)return;
+  if(picked.join('')===cur.w){const pts=Math.max(4,10-mistakes*2);score+=pts;playing=false;
+   scoreEl.textContent='✅ أحسنت! الحيوان هو: '+cur.w+' (+'+pts+') · النقاط: '+score;
+   setTimeout(next,1100);
+  }else{mistakes++;scoreEl.textContent='❌ ترتيب غير صحيح — أعد ترتيب الحروف وحاول مجددًا (أخطاء هذه الكلمة: '+mistakes+')'}
+ }
+ chipsEl.onclick=e=>{const b=e.target.closest('.gx-chip');if(!b||!playing||b.classList.contains('used'))return;
+  b.classList.add('used');picked.push(b.textContent);render();check()};
+ wordEl.onclick=e=>{const b=e.target.closest('.gx-chip');if(!b||!playing)return;
+  const c=picked.splice(+b.dataset.p,1)[0];
+  const cand=[...chipsEl.querySelectorAll('.gx-chip.used')].find(x=>x.textContent===c);
+  if(cand)cand.classList.remove('used');
+  render()};
+ clr.onclick=()=>{if(!playing)return;picked=[];chipsEl.querySelectorAll('.gx-chip').forEach(x=>x.classList.remove('used'));render()};
+ btn.onclick=()=>{round=0;score=0;btn.textContent='إعادة';next()};
+ render();
 })();
 })();
 </script>
