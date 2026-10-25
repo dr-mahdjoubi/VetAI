@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T05:40:05.723Z",
+  "generatedAt": "2026-10-25T05:38:37.824Z",
   "generator": "tools/site-guard.mjs",
   "base": "https://vetai.vcom.workers.dev",
   "overall": "ok",
@@ -15,25 +15,25 @@
       "id": "mirror",
       "label": "مرآة Cloudflare — الرئيسي",
       "status": "ok",
-      "detail": "HTTP 200 · 426ms · العنوان سليم"
+      "detail": "HTTP 200 · 205ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Render — drvet",
       "status": "ok",
-      "detail": "HTTP 200 · 441ms · العنوان سليم"
+      "detail": "HTTP 200 · 243ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Vercel",
       "status": "ok",
-      "detail": "HTTP 200 · 233ms · العنوان سليم"
+      "detail": "HTTP 200 · 78ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة GitHub Pages",
       "status": "ok",
-      "detail": "HTTP 200 · 382ms · العنوان سليم"
+      "detail": "HTTP 200 · 220ms · العنوان سليم"
     },
     {
       "id": "data",
@@ -75,7 +75,7 @@
       "id": "perf",
       "label": "أداء الصفحة الرئيسية",
       "status": "ok",
-      "detail": "1317KB · 98ms"
+      "detail": "1317KB · 87ms"
     },
     {
       "id": "links",
