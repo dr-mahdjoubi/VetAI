@@ -1477,6 +1477,28 @@ html.perf-idle body #cv{display:none!important}
 #homeArts>*{content-visibility:auto;contain-intrinsic-size:auto 260px}
 #homeLocal>*{content-visibility:auto;contain-intrinsic-size:auto 200px}
 </style>
+<style id="newgames-css">
+/* ===== أنماط الألعاب الجديدة (fx-) — تُضاف إلى أنماط الموقع دون تغيير أي نمط قائم ===== */
+.fx-case{font-size:1.05rem;line-height:1.9;min-height:3.6em;display:flex;align-items:center;justify-content:center;text-align:center;padding:.4rem .6rem}
+.fx-feed{min-height:2.6em;margin-top:.5rem;font-size:.95rem;line-height:1.8;text-align:center}
+.fx-feed:empty{min-height:0;margin-top:0}
+.fx-right{color:#1e9e57;font-weight:700}
+.fx-wrong{color:#d33f2e;font-weight:700}
+.fx-animal{font-size:1.25rem;font-weight:800;text-align:center;margin:.2rem 0 .4rem}
+.fx-note{font-size:.8rem;margin-top:.5rem}
+.fx-opt{display:block;width:100%;text-align:right;padding:.55rem .8rem;border:2px solid var(--line,#d8dee9);border-radius:.8rem;background:var(--card,#fff);font:inherit;cursor:pointer;transition:border-color .15s,background .15s}
+.fx-opt:hover{border-color:#7db3e8}
+.fx-opt:disabled{cursor:default;opacity:.92}
+.fx-opt.fx-right{border-color:#1e9e57;background:#e7f7ee;color:#146c3c}
+.fx-opt.fx-wrong{border-color:#d33f2e;background:#fdecea;color:#8f2318}
+.fx-chip{padding:.5rem .9rem;border:2px solid var(--line,#d8dee9);border-radius:2rem;background:var(--card,#fff);font:inherit;font-size:1.05rem;cursor:pointer;transition:border-color .15s,transform .1s}
+.fx-chip:hover{border-color:#7db3e8;transform:translateY(-1px)}
+.fx-chip.fx-used{opacity:.35;pointer-events:none}
+.fx-slot{display:inline-flex;align-items:center;justify-content:center;min-width:4.6rem;min-height:2.6rem;padding:.3rem .7rem;border:2px dashed #b9c4d4;border-radius:.8rem;font-size:1.05rem;vertical-align:middle}
+.fx-slot.fx-filled{border-style:solid;border-color:#7db3e8;background:#eef5fd}
+.fx-arrow{margin:0 .25rem;color:#8a97a8;font-weight:700;vertical-align:middle}
+
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1929,9 +1951,24 @@ html.perf-idle body #cv{display:none!important}
 </div></section></div></section><section id="view-library" class="hidden space-y-8"><div class="my space-y-8"><section id="library"><div class="wrap"><div class="sectionHead"><div><h2>المكتبة: مقالات بحثية وكتب مجانية</h2><p class="muted">اضغط على أي عنوان لقراءة الملخص.</p></div></div>
 <div class="grid"><a class="card" href="library-guide.html" style="grid-column:1/-1;display:block;text-decoration:none;color:inherit;border-color:#06b6d4"><h3>📚 الدليل المرجعي للأمراض البيطرية (3 مجلدات)</h3><p class="small muted">الكلاب والقطط · المجترات · الدواجن — Parvovirus، Distemper، حمى اللبن، BRD، Newcastle، Gumboro وغيرها. اضغط للفتح ←</p></a><div class="card" id="freeBooks" style="grid-column:1/-1"><h3>📚 كتب مجانية PDF — قابلة للتنزيل بأغلفتها الأصلية</h3><p class="small">كتب أكاديمية مفتوحة الوصول من جامعات وناشرين علميين، وكتب كلاسيكية من الملك العام — مجانية قانونيًا بكاملها. اختر التصنيف ثم اضغط «تنزيل PDF».</p><div class="fbk-filters" role="group" aria-label="تصنيفات الكتب"><button type="button" class="fbk-chip on" data-f="all">📚 الكل (11)</button><button type="button" class="fbk-chip" data-f="vet">🩺 الطب البيطري (4)</button><button type="button" class="fbk-chip" data-f="sci">🐄 علوم الحيوانات (2)</button><button type="button" class="fbk-chip" data-f="zoo">🦠 الأمراض المتنقلة (2)</button><button type="button" class="fbk-chip" data-f="alt">🌿 الطب البديل للحيوانات (3)</button></div><div class="fbk-grid"><article class="fbk" data-cat="vet"><img src="assets/books/birds-eye.jpg" alt="غلاف كتاب A Bird's-Eye View of Veterinary Medicine" loading="lazy"><div class="fbk-b"><h4>A Bird's-Eye View of Veterinary Medicine</h4><p class="fbk-meta">تحرير: Carlos C. Perez-Marin · IntechOpen · 2012 · 626 صفحة · 19.9 MB</p><p class="fbk-d">نظرة شاملة على الطب البيطري الحديث: صحة ورفاهية حيوانات المزرعة والحيوانات الأليفة والبرية، والصحة العامة، وأحدث تقنيات التشخيص والبحث العلمي.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/1667/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/1667" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/cattle.jpg" alt="غلاف كتاب Cattle Diseases — Molecular and Biochemical Approach" loading="lazy"><div class="fbk-b"><h4>Cattle Diseases — Molecular and Biochemical Approach</h4><p class="fbk-meta">تحرير: Kükürt &amp; Gelen · IntechOpen · 2023 · 3.0 MB</p><p class="fbk-d">أمراض الأبقار بمنهج جزيئي وكيميائي حيوي حديث: آليات حدوث الأمراض، والتشخيص المخبري والمناعي المتقدم، وأحدث ما توصلت إليه الأبحاث.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/12086/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/12086" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/histology.jpg" alt="غلاف كتاب Veterinary Histology" loading="lazy"><div class="fbk-b"><h4>Veterinary Histology</h4><p class="fbk-meta">Ryan Jennings &amp; Christopher Premanandan · جامعة ولاية أوهايو · 2023 · رخصة CC BY-NC</p><p class="fbk-d">مرجع التشريح المجهري (علم الأنسجة) للحيوانات الأليفة وحيوانات المزرعة والخنازير والجمال، بصور عالية الدقة مشروحة وأهداف تعلم ومسرد لكل جهاز من أجهزة الجسم.</p><a class="fbk-dl" href="https://batch.libretexts.org/print/Letter/Finished/med-10044/Full.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://ohiostate.pressbooks.pub/vethisto/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="vet"><img src="assets/books/preventive.png" alt="غلاف كتاب Veterinary Preventive Medicine" loading="lazy"><div class="fbk-b"><h4>Veterinary Preventive Medicine</h4><p class="fbk-meta">Margaret Root Kustritz · جامعة منيسوتا · 2022 · رخصة CC BY-NC</p><p class="fbk-d">أسس الطب الوقائي البيطري: حماية صحة الحيوان والإنسان وتعزيزها، والوقاية من الأمراض والإعاقة والوفاة، ومهارات المشاركة في تحديات الصحة العالمية.</p><a class="fbk-dl" href="https://open.lib.umn.edu/vetprevmed/open/download?type=print_pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://open.lib.umn.edu/vetprevmed/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="sci"><img src="assets/books/anatomy.jpg" alt="غلاف كتاب Anatomy and Physiology of Animals" loading="lazy"><div class="fbk-b"><h4>Anatomy and Physiology of Animals</h4><p class="fbk-meta">J. Ruth Lawson · كتاب جامعي مفتوح · رخصة CC BY-NC-SA · 18.1 MB</p><p class="fbk-d">تشريح جسم الحيوان ووظائف أعضائه جهازًا جهازًا، بأسلوب مبسط موجه لطلاب علوم الحيوان والتمريض البيطري، مع تمارين واختبارات ذاتية في نهاية الفصول.</p><a class="fbk-dl" href="https://upload.wikimedia.org/wikipedia/commons/c/c7/Anatomy_and_Physiology_of_Animals.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://commons.wikimedia.org/wiki/File:Anatomy_and_Physiology_of_Animals.pdf" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="sci"><img src="assets/books/nutrition.jpg" alt="غلاف كتاب A Guide to the Principles of Animal Nutrition" loading="lazy"><div class="fbk-b"><h4>A Guide to the Principles of Animal Nutrition</h4><p class="fbk-meta">Gita Cherian · جامعة ولاية أوريغون · 2020 · رخصة CC BY-NC</p><p class="fbk-d">مبادئ تغذية حيوانات الغذاء: العناصر الغذائية الستة وبناؤها وهضمها وتمثيلها، والطاقة الحيوية، وإضافات الأعلاف وتحليلها في المجترات والحيوانات أحادية المعدة.</p><a class="fbk-dl" href="https://open.oregonstate.education/animalnutrition/open/download?type=print_pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://open.oregonstate.education/animalnutrition/" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="zoo"><img src="assets/books/zoonosis.jpg" alt="غلاف كتاب Zoonosis" loading="lazy"><div class="fbk-b"><h4>Zoonosis</h4><p class="fbk-meta">نخبة من الباحثين · IntechOpen · 2012 · 11.3 MB</p><p class="fbk-d">الأمراض المشتركة بين الإنسان والحيوان (الأمراض المتنقلة): مصادرها وطرق انتقالها وتشخيصها والسيطرة عليها، من الجمرة الخبيثة وداء الكلب إلى الطفيليات المنقولة بالماء والغذاء.</p><a class="fbk-dl" href="https://mts.intechopen.com/storage/books/1668/authors_book/authors_book.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://www.intechopen.com/books/1668" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="zoo"><img src="assets/books/epidemiology.jpg" alt="غلاف كتاب Veterinary Epidemiology: Principles and Methods" loading="lazy"><div class="fbk-b"><h4>Veterinary Epidemiology: Principles and Methods</h4><p class="fbk-meta">S. Wayne Martin &amp; Alan H. Meek &amp; Preben Willeberg · مكتبات جامعة فرجينيا تك · رخصة CC BY-NC-ND · 6.9 MB</p><p class="fbk-d">المرجع الكلاسيكي في الوبائيات البيطرية: دراسة الأمراض في قطعان الحيوانات، والمسوحات والدراسات التحليلية والملاحظة، وإدارة صحة القطيع — أساس فهم انتشار الأمراض المتنقلة ومكافحتها.</p><a class="fbk-dl" href="https://trva-ind-media.s3.amazonaws.com/media/knowledgehub/Veterinary_Epidemiology_Principles_and_Methods_S._Wayne_Martin_Alan_H._Meek_Preben_Willeberg.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="http://hdl.handle.net/10919/72274" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/handbook.jpg" alt="غلاف كتاب Homœopathic Veterinary Hand-Book" loading="lazy"><div class="fbk-b"><h4>Homœopathic Veterinary Hand-Book</h4><p class="fbk-meta">من كلاسيكيات الهوميوباثي البيطري · 1879 · من الملك العام · 7.4 MB</p><p class="fbk-d">دليل عملي بلغة بسيطة للمربين: وصف أمراض الخيل والبقر والغنم والخنازير والكلاب وأعراضها وعلاجاتها المثلية (الهوميوباثي) كما مارسها الأطباء البيطريون في القرن التاسع عشر.</p><a class="fbk-dl" href="https://archive.org/download/homopathicveteri00john/homopathicveteri00john.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/homopathicveteri00john" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/guide.jpg" alt="غلاف كتاب Guide to Veterinary Homeopathy of the Horse and Cow" loading="lazy"><div class="fbk-b"><h4>Guide to Veterinary Homeopathy of the Horse and Cow</h4><p class="fbk-meta">S. N. Merriman · 1868 · من الملك العام · 2.4 MB</p><p class="fbk-d">دليل الهوميوباثي البيطري للخيل والبقر: الحمى والروماتيزم والتهابات الدماغ وغيرها، أعراضُ كل حالة وعلاجها المثلي خطوة بخطوة.</p><a class="fbk-dl" href="https://archive.org/download/guidetoveterinar00merr/guidetoveterinar00merr.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/guidetoveterinar00merr" target="_blank" rel="noopener">صفحة الكتاب</a></div></article><article class="fbk" data-cat="alt"><img src="assets/books/schafer.jpg" alt="غلاف كتاب New Manual of Homœopathic Veterinary Medicine" loading="lazy"><div class="fbk-b"><h4>New Manual of Homœopathic Veterinary Medicine</h4><p class="fbk-meta">Johann Christoph Schäfer · ترجمة Charles J. Hempel · 1882 · من الملك العام · 17.3 MB</p><p class="fbk-d">الدليل الشامل للطب البيطري المثلي: ترتيب سهل وشامل لأمراض الخيل والبقر والغنم والخنازير والكلاب وعلاجها بأبسط الطرق وأقلها كلفة — من أشهر مراجع الهوميوباثي البيطري الكلاسيكية.</p><a class="fbk-dl" href="https://archive.org/download/101303458.nlm.nih.gov/101303458.pdf" target="_blank" rel="noopener">⬇ تنزيل PDF</a><a class="fbk-src" href="https://archive.org/details/101303458.nlm.nih.gov" target="_blank" rel="noopener">صفحة الكتاب</a></div></article></div><p class="small muted" style="margin-top:12px">تنبيه: كتب «الطب البديل» هنا كلاسيكيات تاريخية من الملك العام تُنشر للاطلاع التاريخي والبحثي، ولا تُغني عن الطب البيطري الحديث المبني على الدليل العلمي.</p></div><section class="card" id="ownBooks" style="grid-column:1/-1">
 <h2 class="ownb-h">📚 مكتبتي البيطرية</h2>
-<p class="ownb-sub">مجموعة الكتب الخاصة بالدكتور محجوبي عبدالناصر — 33 كتابًا بصيغة PDF، منظمة أبجديًا وجاهزة للتنزيل المباشر مجانًا.</p>
+<p class="ownb-sub">مجموعة الكتب الخاصة بالدكتور محجوبي عبدالناصر — 36 كتابًا بصيغة PDF، منظمة أبجديًا وجاهزة للتنزيل المباشر مجانًا.</p>
 <input id="ownb-q" class="ownb-q" type="search" placeholder="🔎 ابحث عن كتاب بالاسم…" aria-label="بحث في مكتبتي البيطرية">
 <div class="ownb-grid" id="ownbGrid">
+<div class="ownb-card" data-t="good emergency management practice the essentials fao gemp animal health emergencies">
+<div class="ownb-ic">📗</div>
+<div class="ownb-t" dir="ltr">Good Emergency Management Practice: The Essentials (FAO, 3rd ed. 2021)</div>
+<div class="ownb-m"><span class="ownb-sz">PDF • 1.1 MB</span><a class="ownb-dl" href="https://openknowledge.fao.org/server/api/core/bitstreams/0924bbdd-1bfa-44a1-96cb-c15434accc18/content" target="_blank" rel="noopener">⬇ تنزيل</a></div>
+</div>
+<div class="ownb-card" data-t="manual for the management of operations during an animal health emergency fao 2022">
+<div class="ownb-ic">📗</div>
+<div class="ownb-t" dir="ltr">Manual for the Management of Operations During an Animal Health Emergency (FAO, 2022)</div>
+<div class="ownb-m"><span class="ownb-sz">PDF • 1.8 MB</span><a class="ownb-dl" href="https://openknowledge.fao.org/server/api/core/bitstreams/beb41c95-7e1a-44dc-98bc-522153c18b83/content" target="_blank" rel="noopener">⬇ تنزيل</a></div>
+</div>
+<div class="ownb-card" data-t="who expert consultation on rabies third report world health organization">
+<div class="ownb-ic">📗</div>
+<div class="ownb-t" dir="ltr">WHO Expert Consultation on Rabies: Third Report (WHO)</div>
+<div class="ownb-m"><span class="ownb-sz">PDF • 3.9 MB</span><a class="ownb-dl" href="https://iris.who.int/server/api/core/bitstreams/dc122df7-62bd-4ca4-bbb0-31c74cdc92d8/content" target="_blank" rel="noopener">⬇ تنزيل</a></div>
+</div>
 <div class="ownb-card" data-t="a textbook on veterinary surgery and radiology, by s.k nandi, somar halder &amp; mozammel hoque">
 <div class="ownb-ic">📕</div>
 <div class="ownb-t" dir="ltr">A Textbook On Veterinary Surgery and Radiology, by S.K Nandi, Somar Halder &amp; Mozammel Hoque</div>
@@ -2139,7 +2176,7 @@ html.perf-idle body #cv{display:none!important}
   <p class="small muted slb-note">ملاحظة: جميع الروابط الخارجية رسمية (جامعات وهيئات ترخيص ومستودعات جامعية) أو مفتوحة الوصول قانونيًا. الكتب بصيغة PDF كاملة بأغلفتها في القسم السابق مباشرة «كتب مجانية PDF»، وهذا القسم ينظمها أكاديميًا مع بقية الموارد.</p>
 </div>
 <div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
-<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">سبع ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
+<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">عشر ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
 <div class="gameGrid">
 <div class="card game mg"><div><div class="icon">🃏</div><h3>ذاكرة الصور</h3><p class="muted">اقلب البطاقات وطابق صور الحيوانات بأقل حركات وأسرع وقت.</p>
 <div class="mg-bar"><select id="mmLevel" class="mg-sel" aria-label="المستوى"><option value="6">سهل · 6 أزواج</option><option value="8">متوسط · 8 أزواج</option></select><button class="btn primary" id="mmNew">لعبة جديدة</button></div>
@@ -2168,6 +2205,22 @@ html.perf-idle body #cv{display:none!important}
 <div class="gx-word" id="scWord"></div>
 <div class="gx-chips" id="scChips"></div>
 <div class="mg-bar"><button class="btn primary" id="scGo">ابدأ اللعب</button><button class="btn" id="scClear">مسح</button></div></div><div class="score" id="scScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🩺</div><h3>المحقق البيطري</h3><p class="muted">حالة قصيرة من العيادة: اقرأ العلامات واختر التشخيص الأرجح من أربعة — وتعلّم معلومة مع كل إجابة.</p>
+<div class="mg-stage"><div class="fx-case" id="dvCase">اضغط «ابدأ التحقيق» لعرض أول حالة من عشر حالات.</div><div class="mg-timer"><i id="dvBar"></i></div></div>
+<div class="mg-opts" id="dvOpts"></div>
+<div class="fx-feed" id="dvFeed" aria-live="polite"></div>
+<div class="mg-bar"><button class="btn primary" id="dvGo">ابدأ التحقيق</button></div>
+<p class="muted fx-note">لعبة تعليمية عامة لتنمية التفكير السريري، ولا تغني أبدًا عن فحص الطبيب البيطري وتشخيصه.</p></div><div class="score" id="dvScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🌍</div><h3>أين يعيش؟</h3><p class="muted">يظهر حيوان، فاختر موطنه الطبيعي من أربعة — كل إجابة صحيحة متتالية ترفع سلسلتك ونقاطك.</p>
+<div class="mg-stage"><div class="gx-emoji" id="hbEmoji">🌍</div><div class="fx-animal" id="hbName">أين يعيش هذا الحيوان في الطبيعة؟</div><div class="mg-timer"><i id="hbBar"></i></div></div>
+<div class="mg-opts" id="hbOpts"></div>
+<div class="fx-feed" id="hbFeed" aria-live="polite"></div>
+<div class="mg-bar"><button class="btn primary" id="hbGo">ابدأ اللعب</button></div></div><div class="score" id="hbScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🔗</div><h3>سلسلة الغذاء</h3><p class="muted">أربع بطاقات مبعثرة: انقرها بالترتيب الصحيح من المنتِج إلى آكل اللحوم — وانقر بطاقة مرتّبة لإعادتها.</p>
+<div class="gx-word" id="fcSlots"><span class="fx-slot">؟</span><span class="fx-arrow">←</span><span class="fx-slot">؟</span><span class="fx-arrow">←</span><span class="fx-slot">؟</span><span class="fx-arrow">←</span><span class="fx-slot">؟</span></div>
+<div class="gx-chips" id="fcChips"></div>
+<div class="fx-feed" id="fcFeed" aria-live="polite"></div>
+<div class="mg-bar"><button class="btn primary" id="fcGo">ابدأ اللعب</button><button class="btn" id="fcClear">مسح</button></div></div><div class="score" id="fcScore">أفضل نتيجة: 0</div></div>
 </div>
 </div></section></div><div class="my space-y-8"><section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="https://kids.nationalgeographic.com/games"><b>National Geographic Kids</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://kids.sandiegozoo.org"><b>San Diego Zoo Kids</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://pbskids.org/games"><b>PBS Kids Games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.abcya.com"><b>ABCya</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.funbrain.com"><b>Funbrain</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://poki.com"><b>Poki</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.crazygames.com"><b>CrazyGames</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.google.com/search?q=ألعاب+حيوانات+مجانية"><b>بحث: ألعاب حيوانات مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><section id="media"><div class="wrap"><div class="sectionHead"><div><h2>الوسائط والتعليم المرئي</h2><p class="muted">روابط بحث منظمة للصور والفيديوهات التعليمية.</p></div></div>
 <div class="grid">
@@ -5118,6 +5171,271 @@ arm();
   window.addEventListener('load', inject);
   setTimeout(inject, 2500);
 })();
+</script>
+<script id="newgames-js">
+/* ===== ألعاب جديدة: المحقق البيطري، أين يعيش؟، سلسلة الغذاء ===== */
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  function sh(a) { return a.map(function (x) { return [Math.random(), x]; }).sort(function (p, q) { return p[0] - q[0]; }).map(function (x) { return x[1]; }); }
+  var store = {
+    get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : +v; } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  function timer(bar, secs, onEnd) {
+    var t0 = Date.now(), iv = setInterval(function () {
+      var left = secs - (Date.now() - t0) / 1000;
+      if (bar) bar.style.width = Math.max(0, left / secs * 100) + '%';
+      if (left <= 0) { clearInterval(iv); onEnd && onEnd(); }
+    }, 100);
+    if (bar) bar.style.width = '100%';
+    return { stop: function () { clearInterval(iv); }, left: function () { return Math.max(0, secs - (Date.now() - t0) / 1000); } };
+  }
+  function optBtn(text, fn) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'fx-opt'; b.textContent = text;
+    b.addEventListener('click', fn);
+    return b;
+  }
+
+  /* ---------- 1) المحقق البيطري ---------- */
+  (function () {
+    var box = $('#dvCase'), opts = $('#dvOpts'), feed = $('#dvFeed'), bar = $('#dvBar'), go = $('#dvGo'), scoreEl = $('#dvScore');
+    if (!box || !opts || !go || !scoreEl) return;
+    var CASES = [
+      { q: 'جرو عمره شهران غير ملقَّح: حمى وخمول وقيء، ثم إسهال دموي كريه الرائحة وجفاف شديد.', r: 'فيروس بارفو الكلاب', w: ['التواء المعدة', 'ديدان معوية بسيطة', 'التهاب الأذن'], why: 'البارفو يهاجم أمعاء الجراء غير الملقحة ونخاع عظمها، والإسهال الدموي مع الحمى علامته الأشهر — يحتاج سوائل وطبيبًا فورًا.' },
+      { q: 'قط ذكر يتردد على صندوق الرمل ويحاول التبول بلا نتيجة ويتألم، ومثانته ممتلئة ومؤلمة عند الجس.', r: 'انسداد مجرى البول', w: ['إمساك بسيط', 'كرات شعر', 'التهاب جلد'], why: 'انسداد الإحليل عند ذكور القطط طارئ يهدد الحياة خلال يوم أو يومين؛ أي قط ذكر يعجز عن التبول يجب أن يرى الطبيب فورًا.' },
+      { q: 'كلب من سلالة عملاقة بعد وجبة كبيرة ولعب نشط: تقيؤ متكرر بلا خروج شيء، وبطن منتفخ كالطبل، وقلق وسيلان لعاب.', r: 'التواء المعدة (GDV)', w: ['عسر هضم عابر', 'تسمم غذائي خفيف', 'سعال الكنيل'], why: 'التواء المعدة حالة جراحية طارئة تُقاس بالدقائق؛ الانتفاخ مع تقيؤ غير منتج عند السلالات الكبيرة علامة إنذار قصوى.' },
+      { q: 'قطة عمرها 12 سنة: تأكل بشراهة وتزداد نحولًا، تشرب وتتبول كثيرًا، ونشاطها زائد عن المعتاد.', r: 'فرط نشاط الغدة الدرقية', w: ['شيخوخة طبيعية فقط', 'ديدان معوية', 'حساسية غذاء'], why: 'نقص الوزن مع شهية مفرطة وعطش عند قطة مسنة يوجّه بقوة نحو فرط الدرقية، وفحص هرمون T4 يحسم التشخيص.' },
+      { q: 'بقرة حلوب بعد الولادة بأسبوع: حليب فيه خثرات، وربع ضرع متورم وساخن ومؤلم، وحرارتها مرتفعة.', r: 'التهاب الضرع', w: ['التهاب رحم', 'نقص الكالسيوم', 'التهاب الحافر'], why: 'تغيّر الحليب مع تورم ربع الضرع وسخونته هو الصورة الكلاسيكية لالتهاب الضرع، ويحتاج فحصًا وعلاجًا يقرره الطبيب.' },
+      { q: 'كلب يحكّ حواف أذنيه ومرفقيه وبطنه بلا توقف مع قشور وتساقط شعر، وكلاب البيت الأخرى بدأت تحكّ أيضًا.', r: 'الجرب القارمي (الساركوبتس)', w: ['حساسية موسمية', 'قشرة من الجفاف', 'فطريات جلدية'], why: 'الحكة الشديدة المعدية التي تبدأ من حواف الأذن والمرفقين توقّع الجرب القارمي، وتُعالج كل الحيوانات المخالطة معًا.' },
+      { q: 'قطيع دجاج: نفوق مفاجئ مرتفع خلال يومين، عرف أزرق ورأس متورم، وانهيار حاد في إنتاج البيض.', r: 'إنفلونزا الطيور شديدة الإمراض', w: ['نقص فيتامينات', 'إجهاد حراري', 'مرض ماريك'], why: 'النفوق الجماعي المفاجئ مع ازرقاق العرف اشتباه إنفلونزا طيور: يُبلَّغ عنه فورًا للسلطات البيطرية ولا يُنتظر.' },
+      { q: 'حصان بعد تغيير العلف فجأة: يتدحرج على الأرض، ينظر إلى خاصرته، يرفس بطنه، ولا إخراج منذ ساعات.', r: 'مغص (ألم بطني)', w: ['التهاب الحافر', 'إنفلونزا الخيول', 'اختناق المريء'], why: 'التدحرج والنظر إلى الخاصرة ورفس البطن علامات ألم بطني عند الحصان؛ تُمنع التغذية ويُستدعى الطبيب فورًا.' },
+      { q: 'كلب اعتاد الشرب والسباحة في بركة راكدة: حمى وقيء، عطش شديد، واصفرار بياض العين.', r: 'داء البريميات (الليبتوسبيروزس)', w: ['ضربة شمس', 'التهاب معدة عابر', 'داء الكلب'], why: 'المياه الراكدة الملوثة ببول القوارض تنقل البريميات التي تضرب الكلى والكبد — وقد تعدي الإنسان أيضًا.' },
+      { q: 'أبقار وأغنام: حمى، فقاعات في الفم وبين الأظلاف، سيلان لعاب غزير، عرج وانخفاض حاد في الحليب.', r: 'الحمى القلاعية', w: ['التهاب الجلد العقدي', 'التسمم باليوريا', 'التهاب الضرع'], why: 'فقاعات الفم والأظلاف مع العرج وسيلان اللعاب هي بصمة الحمى القلاعية — مرض واجب الإبلاغ مع وقف حركة الحيوانات فورًا.' },
+      { q: 'هررة صغيرة في مأوى مزدحم: عطاس متكرر، عيون دامعة ملتهبة، إفرازات أنفية وقلة شهية.', r: 'عدوى تنفسية علوية فيروسية', w: ['ربو القطط', 'داء السكري', 'ديدان القلب'], why: 'العطاس والتهاب العيون عند الهررة في الأماكن المزدحمة غالبًا عدوى فيروسية (هيربس/كاليسي) تنتقل بالرذاذ والتماس.' },
+      { q: 'كلب متوسط العمر: يشرب ويتبول كثيرًا، بطنه مترهل، وشعر جانبيه يتساقط بتناظر ودون حكة.', r: 'متلازمة كوشينغ (فرط الكورتيزول)', w: ['الجرب القارمي', 'عدوى فطرية', 'نقص تغذية'], why: 'العطش الزائد مع ترهل البطن وتساقط الشعر المتناظر دون حكة يوجّه نحو فرط الكورتيزول، ويُؤكَّد بفحوص هرمونية.' }
+    ];
+    var best = store.get('va_dv_best', 0), deck = [], round = 0, score = 0, tm = null, locked = false;
+    function showBest() { scoreEl.textContent = 'أفضل نتيجة: ' + best; }
+    showBest();
+    function endGame() {
+      if (score > best) { best = score; store.set('va_dv_best', best); }
+      box.textContent = 'انتهت الحالات العشر. أحسنت التحقيق أيها الطبيب!';
+      opts.innerHTML = '';
+      feed.innerHTML = '<span class="fx-right">نتيجتك النهائية: ' + score + ' نقطة</span>';
+      scoreEl.textContent = 'نتيجتك: ' + score + ' · أفضل نتيجة: ' + best;
+      go.textContent = 'تحقيق جديد';
+      if (bar) bar.style.width = '0%';
+    }
+    function next() {
+      if (round >= deck.length) { endGame(); return; }
+      locked = false;
+      var c = deck[round];
+      box.textContent = 'الحالة ' + (round + 1) + ' من ' + deck.length + ': ' + c.q;
+      feed.textContent = '';
+      opts.innerHTML = '';
+      var list = sh([c.r].concat(c.w));
+      list.forEach(function (t) {
+        opts.appendChild(optBtn(t, function () { answer(t, c, this); }));
+      });
+      if (tm) tm.stop();
+      tm = timer(bar, 15, function () { answer(null, c, null); });
+    }
+    function answer(picked, c, btn) {
+      if (locked) return;
+      locked = true;
+      if (tm) tm.stop();
+      var kids = opts.children;
+      for (var i = 0; i < kids.length; i++) {
+        kids[i].disabled = true;
+        if (kids[i].textContent === c.r) kids[i].classList.add('fx-right');
+        else if (kids[i] === btn) kids[i].classList.add('fx-wrong');
+      }
+      var ok = picked === c.r;
+      if (ok) score += 10 + Math.ceil(tm.left() / 3);
+      feed.innerHTML = (picked === null
+        ? '<span class="fx-wrong">انتهى الوقت!</span> التشخيص الأرجح: ' + c.r + '. '
+        : ok ? '<span class="fx-right">✅ تشخيص صائب!</span> ' : '<span class="fx-wrong">❌ ليست هذه.</span> التشخيص الأرجح: ' + c.r + '. ') + c.why;
+      scoreEl.textContent = 'النقاط: ' + score + ' · أفضل نتيجة: ' + best;
+      round++;
+      setTimeout(next, 3200);
+    }
+    go.addEventListener('click', function () {
+      deck = sh(CASES.slice()).slice(0, 10);
+      round = 0; score = 0;
+      go.textContent = 'إعادة البدء';
+      next();
+    });
+  })();
+
+  /* ---------- 2) أين يعيش؟ ---------- */
+  (function () {
+    var emoji = $('#hbEmoji'), name = $('#hbName'), opts = $('#hbOpts'), feed = $('#hbFeed'), bar = $('#hbBar'), go = $('#hbGo'), scoreEl = $('#hbScore');
+    if (!emoji || !opts || !go || !scoreEl) return;
+    var HAB = { 'المزرعة': '🚜', 'الصحراء': '🏜️', 'الغابة': '🌲', 'المناطق الجليدية': '🧊', 'المحيط': '🌊', 'الجبال': '🏔️', 'السافانا': '🌅', 'الأنهار والبحيرات': '🏞️' };
+    var ANIMALS = [
+      { e: '🐪', n: 'الجمل', h: 'الصحراء', f: 'يتحمّل العطش طويلًا، وسنامه يخزّن الدهن طاقةً لجسمه.' },
+      { e: '🦊', n: 'ثعلب الفنك', h: 'الصحراء', f: 'أذناه الكبيرتان تساعدانه على تبديد حرارة الجسم في الصحراء الحارة.' },
+      { e: '🐧', n: 'البطريق', h: 'المناطق الجليدية', f: 'لا يطير، لكنه سبّاح ماهر ويعيش في جماعات كبيرة على الجليد.' },
+      { e: '🐻‍❄️', n: 'الدب القطبي', h: 'المناطق الجليدية', f: 'فراؤه الكثيف وطبقة دهنه تحميانه من برد القطب الشمالي.' },
+      { e: '🐬', n: 'الدولفين', h: 'المحيط', f: 'يتنفس الهواء من فتحة أعلى رأسه ويصعد إلى السطح بانتظام.' },
+      { e: '🦅', n: 'النسر', h: 'الجبال', f: 'يبني عشه في المرتفعات الشاهقة ويحلّق فوق القمم بحثًا عن الغذاء.' },
+      { e: '🐸', n: 'الضفدع', h: 'الأنهار والبحيرات', f: 'يبدأ حياته شرغوفًا في الماء، ثم يعيش بين الماء واليابسة.' },
+      { e: '🐊', n: 'التمساح', h: 'الأنهار والبحيرات', f: 'يتربّص بفريسته عند ضفاف الأنهار شبه مغمور بالماء.' },
+      { e: '🐄', n: 'البقرة', h: 'المزرعة', f: 'حيوان أليف يربّيه الإنسان منذ آلاف السنين للحليب واللحم.' },
+      { e: '🦁', n: 'الأسد', h: 'السافانا', f: 'يعيش في سهول العشب الإفريقية ويصطاد ضمن مجموعات عائلية.' },
+      { e: '🦒', n: 'الزرافة', h: 'السافانا', f: 'رقبتها الطويلة توصلها إلى أوراق قمم الأشجار العالية.' },
+      { e: '🐒', n: 'القرد', h: 'الغابة', f: 'يقضي معظم وقته متسلّقًا الأشجار باحثًا عن الثمار.' },
+      { e: '🐺', n: 'الذئب', h: 'الغابة', f: 'يعيش ويصطاد في قطيع منظّم، ويتواصل بالعواء لمسافات بعيدة.' }
+    ];
+    var best = store.get('va_hb_best', 0), deck = [], round = 0, score = 0, streak = 0, tm = null, locked = false;
+    function showBest() { scoreEl.textContent = 'أفضل نتيجة: ' + best; }
+    showBest();
+    function endGame() {
+      if (score > best) { best = score; store.set('va_hb_best', best); }
+      emoji.textContent = '🏆';
+      name.textContent = 'انتهت الجولات العشر!';
+      opts.innerHTML = '';
+      feed.innerHTML = '<span class="fx-right">نتيجتك النهائية: ' + score + ' نقطة</span>';
+      scoreEl.textContent = 'نتيجتك: ' + score + ' · أفضل نتيجة: ' + best;
+      go.textContent = 'العب من جديد';
+      if (bar) bar.style.width = '0%';
+    }
+    function next() {
+      if (round >= deck.length) { endGame(); return; }
+      locked = false;
+      var a = deck[round];
+      emoji.textContent = a.e;
+      name.textContent = a.n + ' — أين يعيش في الطبيعة؟';
+      feed.textContent = '';
+      opts.innerHTML = '';
+      var others = sh(Object.keys(HAB).filter(function (h) { return h !== a.h; })).slice(0, 3);
+      sh([a.h].concat(others)).forEach(function (h) {
+        opts.appendChild(optBtn(HAB[h] + ' ' + h, function () { answer(h, a, this); }));
+      });
+      if (tm) tm.stop();
+      tm = timer(bar, 10, function () { answer(null, a, null); });
+    }
+    function answer(picked, a, btn) {
+      if (locked) return;
+      locked = true;
+      if (tm) tm.stop();
+      var kids = opts.children;
+      for (var i = 0; i < kids.length; i++) {
+        kids[i].disabled = true;
+        if (kids[i].textContent.indexOf(a.h) > -1) kids[i].classList.add('fx-right');
+        else if (kids[i] === btn) kids[i].classList.add('fx-wrong');
+      }
+      var ok = picked === a.h;
+      if (ok) { streak++; score += 10 + (streak > 1 ? (streak - 1) * 2 : 0); }
+      else streak = 0;
+      feed.innerHTML = (picked === null
+        ? '<span class="fx-wrong">انتهى الوقت!</span> '
+        : ok ? '<span class="fx-right">✅ صحيح!</span> ' : '<span class="fx-wrong">❌ ليس هذا موطنه.</span> ') +
+        'يعيش ' + a.n + ' في ' + a.h + '. ' + a.f + (ok && streak > 1 ? ' (سلسلة: ' + streak + ')' : '');
+      scoreEl.textContent = 'النقاط: ' + score + ' · أفضل نتيجة: ' + best;
+      round++;
+      setTimeout(next, 2600);
+    }
+    go.addEventListener('click', function () {
+      deck = sh(ANIMALS.slice()).slice(0, 10);
+      round = 0; score = 0; streak = 0;
+      go.textContent = 'إعادة البدء';
+      next();
+    });
+  })();
+
+  /* ---------- 3) سلسلة الغذاء ---------- */
+  (function () {
+    var slots = $('#fcSlots'), chips = $('#fcChips'), feed = $('#fcFeed'), go = $('#fcGo'), clear = $('#fcClear'), scoreEl = $('#fcScore');
+    if (!slots || !chips || !go || !scoreEl) return;
+    var CHAINS = [
+      { items: [['🌿', 'عشب'], ['🦗', 'جرادة'], ['🐸', 'ضفدع'], ['🐍', 'ثعبان']], f: 'يأكل الضفدع الجراد، ويأكل الثعبان الضفدع — هكذا تنتقل الطاقة من كائن إلى آخر.' },
+      { items: [['🥕', 'جزر'], ['🐰', 'أرنب'], ['🦊', 'ثعلب'], ['🐺', 'ذئب']], f: 'الأرنب آكل نبات، والثعلب يصيده، والذئب في أعلى هذه السلسلة.' },
+      { items: [['🍎', 'ثمار'], ['🐛', 'دودة'], ['🐦', 'عصفور'], ['🐱', 'قط']], f: 'تتغذى الدودة على الثمار، ويأكلها العصفور، وقد يصيد القط العصفور.' },
+      { items: [['🌱', 'طحالب'], ['🦐', 'روبيان'], ['🐟', 'سمكة'], ['🐬', 'دولفين']], f: 'سلسلة مائية: الطحالب تصنع الغذاء بضوء الشمس، والدولفين في قمتها.' },
+      { items: [['🥬', 'خس'], ['🐌', 'حلزون'], ['🐦', 'عصفور'], ['🦅', 'نسر']], f: 'النسر صياد قمّة لا يكاد يصيده أحد في هذه السلسلة.' },
+      { items: [['🌾', 'قمح'], ['🐭', 'فأر'], ['🐍', 'ثعبان'], ['🦉', 'بومة']], f: 'تخرج البومة ليلًا لتصيد الفئران التي تتغذى على الحبوب.' }
+    ];
+    var best = store.get('va_fc_best', 0), deck = [], round = 0, score = 0, placed = [], locked = false;
+    function showBest() { scoreEl.textContent = 'أفضل نتيجة: ' + best; }
+    showBest();
+    function renderSlots() {
+      slots.innerHTML = '';
+      for (var i = 0; i < 4; i++) {
+        (function (i) {
+          var sp = document.createElement('span');
+          sp.className = 'fx-slot' + (placed[i] != null ? ' fx-filled' : '');
+          sp.textContent = placed[i] != null ? deck[round].items[placed[i]][0] + ' ' + deck[round].items[placed[i]][1] : '؟';
+          if (placed[i] != null && !locked) sp.addEventListener('click', function () { unplace(i); });
+          slots.appendChild(sp);
+          if (i < 3) { var ar = document.createElement('span'); ar.className = 'fx-arrow'; ar.textContent = '←'; slots.appendChild(ar); }
+        })(i);
+      }
+    }
+    function renderChips() {
+      chips.innerHTML = '';
+      var order = chips._order || (chips._order = sh([0, 1, 2, 3]));
+      order.forEach(function (idx) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'fx-chip';
+        b.textContent = deck[round].items[idx][0] + ' ' + deck[round].items[idx][1];
+        if (placed.indexOf(idx) > -1) b.classList.add('fx-used');
+        b.addEventListener('click', function () { place(idx); });
+        chips.appendChild(b);
+      });
+    }
+    function place(idx) {
+      if (locked || placed.indexOf(idx) > -1 || placed.length >= 4) return;
+      placed.push(idx);
+      renderSlots(); renderChips();
+      if (placed.length === 4) check();
+    }
+    function unplace(i) {
+      if (locked) return;
+      placed = placed.slice(0, i);
+      renderSlots(); renderChips();
+    }
+    function check() {
+      locked = true;
+      var ok = placed.join(',') === '0,1,2,3';
+      var names = deck[round].items.map(function (it) { return it[0] + ' ' + it[1]; }).join(' ← ');
+      if (ok) { score += 20; feed.innerHTML = '<span class="fx-right">✅ سلسلة صحيحة!</span> ' + deck[round].f; }
+      else feed.innerHTML = '<span class="fx-wrong">❌ ليست بالترتيب الصحيح.</span> الترتيب الصحيح: ' + names + '. ' + deck[round].f;
+      scoreEl.textContent = 'النقاط: ' + score + ' · أفضل نتيجة: ' + best;
+      round++;
+      setTimeout(next, 3600);
+    }
+    function next() {
+      if (round >= deck.length) {
+        if (score > best) { best = score; store.set('va_fc_best', best); }
+        slots.innerHTML = '<span class="fx-filled fx-slot">🏆 انتهت السلاسل</span>';
+        chips.innerHTML = '';
+        feed.innerHTML = '<span class="fx-right">نتيجتك النهائية: ' + score + ' نقطة</span>';
+        scoreEl.textContent = 'نتيجتك: ' + score + ' · أفضل نتيجة: ' + best;
+        go.textContent = 'العب من جديد';
+        return;
+      }
+      placed = []; locked = false;
+      chips._order = sh([0, 1, 2, 3]);
+      feed.textContent = 'السلسلة ' + (round + 1) + ' من ' + deck.length + ': من يأكل من؟ ابدأ بالمنتِج.';
+      renderSlots(); renderChips();
+    }
+    go.addEventListener('click', function () {
+      deck = sh(CHAINS.slice()).slice(0, 5);
+      round = 0; score = 0;
+      go.textContent = 'إعادة البدء';
+      next();
+    });
+    if (clear) clear.addEventListener('click', function () {
+      if (locked || !deck.length) return;
+      placed = [];
+      renderSlots(); renderChips();
+    });
+  })();
+})();
+
 </script>
 </body>
   
