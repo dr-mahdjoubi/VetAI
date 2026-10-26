@@ -2496,7 +2496,7 @@ html.perf-idle body #cv{display:none!important}
 <p class="wp-fact">💡 سلالة طبيعية قوية التحمل: وفّر له نشاطًا ولعب صيد يوميًا، وفراؤه القصير سهل العناية جدًا.</p>
 <p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article></div>
 </div></section>
-<section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">عشر ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
+<section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">ثلاث عشرة لعبة حديثة بصور حقيقية وحركة سلسة — بينها ثلاث ألعاب متقدمة جديدة: فرز الطوارئ، ومختبر الأسرار، وتحدي الستين ثانية — تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
 <div class="gameGrid">
 <div class="card game mg"><div><div class="icon">🃏</div><h3>ذاكرة الصور</h3><p class="muted">اقلب البطاقات وطابق صور الحيوانات بأقل حركات وأسرع وقت.</p>
 <div class="mg-bar"><select id="mmLevel" class="mg-sel" aria-label="المستوى"><option value="6">سهل · 6 أزواج</option><option value="8">متوسط · 8 أزواج</option></select><button class="btn primary" id="mmNew">لعبة جديدة</button></div>
@@ -2541,6 +2541,23 @@ html.perf-idle body #cv{display:none!important}
 <div class="gx-chips" id="fcChips"></div>
 <div class="fx-feed" id="fcFeed" aria-live="polite"></div>
 <div class="mg-bar"><button class="btn primary" id="fcGo">ابدأ اللعب</button><button class="btn" id="fcClear">مسح</button></div></div><div class="score" id="fcScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🚨</div><h3>فرز الطوارئ — مدير العيادة</h3><p class="muted">ثمانية مرضى يصلون تباعًا: حدّد درجة الاستعجال أولًا، ثم أول إجراء صحيح — قراران لكل مريض، ووقت محدود، وسلسلة الإصابات المتتالية تضاعف نقاطك.</p>
+<div class="mg-stage"><div class="fx-case" id="tmCase">اضغط «ابدأ الفرز» لاستقبال أول مريض.</div><div class="mg-timer"><i id="tmBar"></i></div></div>
+<div class="mg-opts" id="tmOpts"></div>
+<div class="fx-feed" id="tmFeed" aria-live="polite"></div>
+<div class="mg-bar"><button class="btn primary" id="tmGo">ابدأ الفرز</button></div>
+<p class="muted fx-note">لعبة تعليمية لتنمية حسّ الفرز البيطري، ولا تغني عن تقييم الطبيب البيطري للحالة الحقيقية.</p></div><div class="score" id="tmScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">🔬</div><h3>مختبر الأسرار — التخمين بالأدلة</h3><p class="muted">حيوان غامض خلف الستار: اشترِ الأدلة بنقاطك (الحجم، الغذاء، النشاط، الموطن، صفة خاصة) ثم خمّن من أربعة — كل دليل يكلّفك، وكل تخمين خاطئ يكلّف أكثر.</p>
+<div class="mg-stage"><div class="gx-emoji" id="lbFace">🎭</div><div class="fx-case" id="lbClues">اضغط «ابدأ التحقيق» لفتح ملف الحيوان الغامض.</div></div>
+<div class="mg-opts" id="lbOpts"></div>
+<div class="fx-feed" id="lbFeed" aria-live="polite"></div>
+<div class="mg-bar"><button class="btn primary" id="lbGo">ابدأ التحقيق</button></div></div><div class="score" id="lbScore">أفضل نتيجة: 0</div></div>
+<div class="card game mg"><div><div class="icon">⚡</div><h3>تحدي الستين ثانية — صح أم خطأ؟</h3><p class="muted">عبارات سريعة عن الحيوانات: قرّر إن كانت صحيحة أم خاطئة قبل نفاد الدقيقة — الإجابة الصحيحة +10، والخاطئة تسرق 3 ثوانٍ من وقتك، والأسئلة تشتد صعوبة كلما تقدّمت.</p>
+<div class="mg-stage"><div class="fx-case" id="bzCase">اضغط «ابدأ التحدي» وانطلق.</div><div class="mg-timer"><i id="bzBar"></i></div></div>
+<div class="mg-opts" id="bzOpts"></div>
+<div class="fx-feed" id="bzFeed" aria-live="polite"></div>
+<div class="mg-bar"><button class="btn primary" id="bzGo">ابدأ التحدي</button></div></div><div class="score" id="bzScore">أفضل نتيجة: 0</div></div>
+
 </div>
 </div></section></div><div class="my space-y-8"><section><div class="wrap"><div class="tool"><h3>🌐 ألعاب حيوانات مجانية من مواقع أخرى</h3><p class="small">تُفتح في موقع آخر؛ محتواها وإعلاناتها مسؤولية تلك المواقع، ويُنصح بإشراف الكبار للأطفال.</p><a class="dl" target="_blank" rel="noopener" href="https://kids.nationalgeographic.com/games"><b>National Geographic Kids</b><span>ألعاب وحقائق عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://kids.sandiegozoo.org"><b>San Diego Zoo Kids</b><span>ألعاب ومقاطع عن الحيوانات</span></a><a class="dl" target="_blank" rel="noopener" href="https://pbskids.org/games"><b>PBS Kids Games</b><span>ألعاب تعليمية للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.abcya.com"><b>ABCya</b><span>ألعاب تعليمية مجانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.funbrain.com"><b>Funbrain</b><span>ألعاب وكتب للأطفال</span></a><a class="dl" target="_blank" rel="noopener" href="https://poki.com"><b>Poki</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.crazygames.com"><b>CrazyGames</b><span>ألعاب متنوعة مجانية (إعلانات)</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.google.com/search?q=ألعاب+حيوانات+مجانية"><b>بحث: ألعاب حيوانات مجانية</b><span>نتائج من الإنترنت</span></a></div></div></section></div><section id="media"><div class="wrap"><div class="sectionHead"><div><h2>الوسائط والتعليم المرئي</h2><p class="muted">روابط بحث منظمة للصور والفيديوهات التعليمية.</p></div></div>
 <div class="grid">
@@ -5756,6 +5773,253 @@ arm();
       placed = [];
       renderSlots(); renderChips();
     });
+  })();
+})();
+
+</script>
+<script id="advgames-js">
+/* ===== ألعاب متقدمة: فرز الطوارئ، مختبر الأسرار، تحدي الستين ثانية ===== */
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  function sh(a) { return a.map(function (x) { return [Math.random(), x]; }).sort(function (p, q) { return p[0] - q[0]; }).map(function (x) { return x[1]; }); }
+  function best(k) { try { return +localStorage.getItem(k) || 0; } catch (e) { return 0; } }
+  function setBest(k, v) { try { if (v > best(k)) localStorage.setItem(k, v); } catch (e) {} }
+  function optBtn(text, cls, fn) { var b = document.createElement('button'); b.type = 'button'; b.className = 'fx-opt' + (cls ? ' ' + cls : ''); b.textContent = text; b.addEventListener('click', fn); return b; }
+  function mkTimer(bar, secs, onEnd) {
+    var t0 = Date.now(), iv = setInterval(function () {
+      var left = secs - (Date.now() - t0) / 1000;
+      if (bar) bar.style.width = Math.max(0, left / secs * 100) + '%';
+      if (left <= 0) { clearInterval(iv); onEnd && onEnd(); }
+    }, 100);
+    if (bar) bar.style.width = '100%';
+    return { stop: function () { clearInterval(iv); }, left: function () { return Math.max(0, secs - (Date.now() - t0) / 1000); } };
+  }
+
+  /* ---------- 1) فرز الطوارئ — مدير العيادة ---------- */
+  (function () {
+    var box = $('#tmCase'), opts = $('#tmOpts'), feed = $('#tmFeed'), bar = $('#tmBar'), go = $('#tmGo'), scoreEl = $('#tmScore');
+    if (!box || !opts || !go || !scoreEl) return;
+    var URG = ['🔴 عاجل الآن', '🟠 يُراجَع اليوم', '🟢 روتيني'];
+    var CASES = [
+      { a: '🐕 كلب سلالة عملاقة', t: 'بعد وجبة كبيرة: تقيؤ متكرر لا يخرج معه شيء، بطن منتفخ كالطبل، قلق وسيلان لعاب.', u: 0, act: 'نقل فوري إلى الطبيب — حالة جراحية طارئة', bad: ['إعطاؤه وجبة خفيفة ومراقبته للغد', 'تدليك البطن لمساعدته على التجشؤ'], why: 'الانتفاخ مع تقيؤ غير مُنتج عند السلالات الكبيرة علامة التواء معدة — دقائق تصنع الفرق.' },
+      { a: '🐈 قط ذكر', t: 'يتردد على صندوق الرمل منذ ساعات ويحاول التبول بلا نتيجة ويتألم، ومثانته ممتلئة عند الجس.', u: 0, act: 'طبيب فورًا — انسداد بولي مهدد للحياة', bad: ['انتظار يومين ليرى إن تحسّن', 'تشجيعه على شرب الماء فقط'], why: 'انسداد مجرى البول عند ذكور القطط قد يقتل خلال يوم أو يومين إن لم يُفرَّغ.' },
+      { a: '🐄 بقرة حلوب', t: 'انتفاخ واضح في الخاصرة اليسرى، توقفت عن الاجترار والأكل، وتنفسها سريع.', u: 0, act: 'استدعاء الطبيب فورًا — انتفاخ كرش حاد', bad: ['تقديم علف مركز إضافي', 'تركها حتى صباح الغد'], why: 'انتفاخ الكرش الغازي الحاد يضغط على التنفس والقلب ويحتاج تدخلًا عاجلًا.' },
+      { a: '🐎 حصان', t: 'يتدحرج على الأرض، يعرق، وينظر إلى خاصرته ويرفس بطنه منذ ساعة.', u: 0, act: 'طبيب فورًا ومنعه من التدحرج بهدوء', bad: ['إعطاؤه علفًا لينشغل به', 'تركه يتدحرج حتى يهدأ وحده'], why: 'المغص عند الخيول قد يكون التواء أمعاء — التدحرج يفاقمه والوقت حاسم.' },
+      { a: '🐕 جرو عمره 3 أشهر', t: 'جاء لتلقي لقاحه الدوري: نشيط، يأكل ويلعب، وفحصه العام طبيعي.', u: 2, act: 'تلقيح حسب الجدول وتسجيل الموعد القادم', bad: ['تأجيل اللقاح شهرين بلا سبب', 'إعطاؤه حمّامًا بماء بارد قبل اللقاح'], why: 'التلقيح في موعده إجراء روتيني وقائي — الجرو سليم تمامًا.' },
+      { a: '🐈 قطة صغيرة', t: 'عطاس خفيف منذ يومين، لكنها تأكل وتلعب وعيناها صافيتان وحرارتها طبيعية.', u: 2, act: 'مراقبة منزلية وإعادة التقييم إن ساءت', bad: ['عزلها تمامًا ومنع الطعام عنها', 'نقلها لطوارئ منتصف الليل الآن'], why: 'عطاس خفيف مع نشاط وشهية طبيعيين يُراقَب منزليًا، ويُراجَع الطبيب إن ظهر خمول أو فقد شهية.' },
+      { a: '🐕 كلب متوسط العمر', t: 'يحكّ أذنه ويهز رأسه منذ ثلاثة أيام، وداخل الأذن أحمر وذو رائحة خفيفة، لكنه نشيط.', u: 1, act: 'حجز مراجعة اليوم لفحص الأذن وتنظيفها', bad: ['وضع زيت منزلي داخل الأذن', 'تجاهل الأمر لشهر كامل'], why: 'التهاب الأذن مؤلم ويتفاقم؛ يُفحَص في اليوم نفسه لكنه ليس طارئًا يهدد الحياة.' },
+      { a: '🐇 أرنب', t: 'توقف عن الأكل منذ 12 ساعة وبرازه صار صغيرًا قليلًا، وهو هادئ أكثر من المعتاد.', u: 1, act: 'مراجعة الطبيب اليوم — ركود هضمي محتمل', bad: ['الانتظار أسبوعًا لأنه «هادئ فقط»', 'إعطاؤه خبزًا وحلوى لفتح شهيته'], why: 'توقف الأرنب عن الأكل نصف يوم علامة جادة؛ جهازه الهضمي لا يحتمل الركود الطويل.' },
+      { a: '🐕 كلب فضولي', t: 'أكل قبل ساعتين كمية من الشوكولاتة الداكنة، وهو الآن مضطرب وقلبه سريع.', u: 0, act: 'الاتصال بالطبيب فورًا مع ذكر الكمية والوقت', bad: ['مراقبته حتى الصباح', 'إعطاؤه حليبًا «للتخفيف»'], why: 'الشوكولاتة سامة للكلاب والتدخل المبكر — خلال ساعات — يغيّر النتيجة.' },
+      { a: '🐐 ماعز', t: 'موعد تقليم الأظلاف الدوري؛ تمشي طبيعيًا وتأكل جيدًا ولا عرج.', u: 2, act: 'تقليم روتيني ضمن برنامج الرعاية الدورية', bad: ['تأجيل التقليم سنة كاملة', 'استدعاء طوارئ ليلية'], why: 'تقليم الأظلاف المنتظم وقاية روتينية لحيوان سليم لا يعرج.' }
+    ];
+    var queue = [], idx = 0, score = 0, streak = 0, tm = null, phase = 0, cur = null;
+    function showScore() { scoreEl.textContent = 'النقاط: ' + score + ' · أفضل نتيجة: ' + Math.max(best('va_tm_best'), score); }
+    function endRun() {
+      if (tm) tm.stop();
+      setBest('va_tm_best', score);
+      var grade = score >= 150 ? '🏆 مدير عيادة ممتاز!' : score >= 110 ? '👏 فرز دقيق وواعٍ' : score >= 70 ? '👍 بداية طيبة — واصل التدريب' : '📚 راجع علامات الطوارئ وحاول مجددًا';
+      box.textContent = 'انتهت المناوبة! نتيجتك: ' + score + ' نقطة — ' + grade;
+      opts.innerHTML = ''; feed.textContent = 'أفضل نتيجة محفوظة: ' + best('va_tm_best');
+      go.textContent = 'مناوبة جديدة'; showScore();
+    }
+    function timeoutPatient() {
+      feed.textContent = '⏰ انتهى الوقت! كان القرار الصحيح: ' + URG[cur.u] + ' — ' + cur.why;
+      streak = 0; idx++; setTimeout(next, 1400);
+    }
+    function next() {
+      if (idx >= queue.length) return endRun();
+      cur = queue[idx]; phase = 0;
+      box.textContent = 'مريض ' + (idx + 1) + '/' + queue.length + ' — ' + cur.a + ': ' + cur.t;
+      feed.textContent = 'الخطوة 1: ما درجة الاستعجال؟';
+      opts.innerHTML = '';
+      URG.forEach(function (u, ui) { opts.appendChild(optBtn(u, '', function () { pickUrg(ui); })); });
+      if (tm) tm.stop();
+      tm = mkTimer(bar, 20, timeoutPatient);
+      showScore();
+    }
+    function pickUrg(ui) {
+      if (phase !== 0) return; phase = 1;
+      var okU = ui === cur.u, tleft = tm.left();
+      if (okU) { score += 10 + Math.round(tleft / 4); feed.textContent = '✅ استعجال صحيح. الخطوة 2: ما أول إجراء؟'; }
+      else { streak = 0; feed.textContent = '❌ الصحيح: ' + URG[cur.u] + '. الخطوة 2: ما أول إجراء؟'; }
+      var acts = sh([cur.act].concat(cur.bad));
+      opts.innerHTML = '';
+      acts.forEach(function (a) { opts.appendChild(optBtn(a, '', function () { pickAct(a, okU); })); });
+    }
+    function pickAct(a, okU) {
+      if (phase !== 1) return; phase = 2;
+      if (tm) tm.stop();
+      var okA = a === cur.act;
+      if (okA) score += 10;
+      if (okU && okA) { streak++; if (streak >= 2) { score += 5; feed.textContent = '🔥 إجابة كاملة وسلسلة ×' + streak + '! +' + ' مكافأة سلسلة. ' + cur.why; } else feed.textContent = '✅ قراران صحيحان! ' + cur.why; }
+      else if (okA) feed.textContent = '✅ الإجراء صحيح. ' + cur.why;
+      else { streak = 0; feed.textContent = '❌ الإجراء الصحيح: «' + cur.act + '». ' + cur.why; }
+      idx++; showScore(); setTimeout(next, 1600);
+    }
+    go.addEventListener('click', function () {
+      queue = sh(CASES.slice()).slice(0, 8); idx = 0; score = 0; streak = 0;
+      go.textContent = 'إعادة الفرز'; next();
+    });
+    showScore();
+  })();
+
+  /* ---------- 2) مختبر الأسرار — التخمين بالأدلة ---------- */
+  (function () {
+    var face = $('#lbFace'), box = $('#lbClues'), opts = $('#lbOpts'), feed = $('#lbFeed'), go = $('#lbGo'), scoreEl = $('#lbScore');
+    if (!box || !opts || !go || !scoreEl) return;
+    var ANIMALS = [
+      { n: 'البطريق', e: '🐧', size: 'متوسط (حتى 120 سم)', food: 'لاحم: سمك وكريل', act: 'نهاري، سبّاح ماهر', home: 'سواحل القارة القطبية والجنوب البارد', trait: 'طائر لا يطير ويتكيف مع البرد القارس بريش كثيف ودهن' },
+      { n: 'الأخطبوط', e: '🐙', size: 'متوسط (أذرع حتى مترين)', food: 'لاحم: سلطعون وصدفيات', act: 'ليلي غالبًا، انفرادي', home: 'قيعان البحار والمحيطات', trait: 'ثمانية أذرع وثلاثة قلوب ويغيّر لون جلده للتمويه' },
+      { n: 'الكنغر', e: '🦘', size: 'كبير (حتى 160 سم)', food: 'عاشب: أعشاب وأوراق', act: 'نشط فجرًا ومساءً', home: 'سهول أستراليا', trait: 'يقفز بقدمين خلفيتين ضخمتين ويحمل صغيره في جراب' },
+      { n: 'الباندا العملاقة', e: '🐼', size: 'كبير (حتى 150 كغ)', food: 'عاشبة تقريبًا: خيزران', act: 'نهارية، انفرادية', home: 'غابات الخيزران الجبلية في الصين', trait: 'فراء أبيض وأسود وإبهام إضافي للإمساك بالخيزران' },
+      { n: 'الجمل', e: '🐪', size: 'كبير (حتى 600 كغ)', food: 'عاشب: نباتات صحراوية شوكية', act: 'نهاري، يتحمل العطش أسابيع', home: 'صحاري آسيا وأفريقيا', trait: 'سنام يخزن الدهن ورموش مزدوجة تحميه من الرمال' },
+      { n: 'البومة', e: '🦉', size: 'صغير إلى متوسط', food: 'لاحمة: قوارض وحشرات', act: 'ليلية بامتياز', home: 'كل القارات تقريبًا: غابات وصحارٍ', trait: 'تدير رأسها حتى 270 درجة وطيرانها صامت تمامًا' },
+      { n: 'سلحفاة البحر', e: '🐢', size: 'كبير (حتى 180 سم)', food: 'متنوع: قناديل وأعشاب بحرية', act: 'نهارية، مهاجرة لمسافات طويلة', home: 'البحار الدافئة حول العالم', trait: 'تعود الأنثى لشاطئ ولادتها نفسه لتضع بيضها' },
+      { n: 'الخفاش', e: '🦇', size: 'صغير (حتى 40 سم بأجنحته)', food: 'حشرات أو فواكه حسب النوع', act: 'ليلي، ينام معلقًا بالمقلوب', home: 'كهوف وأشجار في كل القارات عدا القطبية', trait: 'الثديي الوحيد القادر على الطيران الحقيقي ويصطاد بالصدى' },
+      { n: 'فرس النهر', e: '🦛', size: 'ضخم (حتى 1500 كغ)', food: 'عاشب: أعشاب قصيرة ليلًا', act: 'نهاري في الماء وليلي في الرعي', home: 'أنهار وبحيرات أفريقيا', trait: 'يقضي يومه مغمورًا ويفرز سائلًا ورديًا يقي جلده من الشمس' },
+      { n: 'الكسلان', e: '🦥', size: 'متوسط (حتى 8 كغ)', food: 'عاشب: أوراق وبراعم', act: 'بطيء جدًا، ينام حتى 15 ساعة', home: 'غابات أمريكا الوسطى والجنوبية المطيرة', trait: 'ينمو طحلب أخضر في فرائه فيمنحه تمويهًا بين الأغصان' },
+      { n: 'النحلة', e: '🐝', size: 'صغير جدًا (نحو 15 مم)', food: 'رحيق وحبوب لقاح', act: 'نهارية، اجتماعية في خلايا', home: 'كل القارات عدا القطبية', trait: 'ترقص بحركات دقيقة لتخبر رفيقاتها بمكان الأزهار' },
+      { n: 'الذئب', e: '🐺', size: 'كبير (حتى 50 كغ)', food: 'لاحم: فرائس كبيرة في قطيع', act: 'ليلي غالبًا، اجتماعي بصيد جماعي', home: 'غابات وسهوب النصف الشمالي', trait: 'يعوي للتواصل ولمّ شمل القطيع عبر مسافات بعيدة' },
+      { n: 'الأرنب البري', e: '🐇', size: 'صغير (حتى 5 كغ)', food: 'عاشب: أعشاب وخضار', act: 'نشط فجرًا وغسقًا', home: 'مروج وحقول حول العالم', trait: 'أذناه الطويلتان تسمعان المفترس من بعيد وقدماه للقفز السريع' },
+      { n: 'التمساح', e: '🐊', size: 'ضخم (حتى 5 أمتار)', food: 'لاحم: أسماك وثدييات', act: 'نهاري وليلي، كامن في الماء', home: 'أنهار ومستنقعات المناطق الدافئة', trait: 'من الزواحف القديمة؛ أنثاه تحرس بيضها وصغارها بعناية' }
+    ];
+    var CLUES = [['📏', 'الحجم', 'size'], ['🍽️', 'الغذاء', 'food'], ['🕐', 'النشاط', 'act'], ['🏠', 'الموطن', 'home'], ['✨', 'صفة خاصة', 'trait']];
+    var cur = null, pts = 0, used = {}, wrongs = 0, over = false;
+    function showScore() { scoreEl.textContent = 'النقاط المتبقية: ' + pts + ' · أفضل نتيجة: ' + Math.max(best('va_lb_best'), over ? pts : 0); }
+    function renderClues() {
+      var got = CLUES.filter(function (c) { return used[c[2]]; });
+      box.textContent = got.length ? got.map(function (c) { return c[1] + ': ' + cur[c[2]]; }).join(' · ') : 'لم تكشف أي دليل بعد — اشترِ دليلًا لتبدأ التضييق.';
+    }
+    function renderOpts() {
+      opts.innerHTML = '';
+      CLUES.forEach(function (c) {
+        if (used[c[2]]) return;
+        opts.appendChild(optBtn(c[0] + ' دليل ' + c[1] + ' (−10)', '', function () { buy(c); }));
+      });
+    }
+    function buy(c) {
+      if (over || used[c[2]]) return;
+      used[c[2]] = 1; pts = Math.max(0, pts - 10);
+      renderClues(); renderOpts(); showScore();
+      if (CLUES.every(function (x) { return used[x[2]]; })) offerGuess();
+      else feed.textContent = 'كشفت دليلًا. اشترِ المزيد أو خمّن عندما تثق.';
+      addGuessBtn();
+    }
+    function addGuessBtn() {
+      if (over) return;
+      if (!document.getElementById('lbGuessBtn')) {
+        var b = optBtn('🎯 أنا جاهز للتخمين', 'primary', offerGuess);
+        b.id = 'lbGuessBtn'; opts.appendChild(b);
+      }
+    }
+    function offerGuess() {
+      if (over) return;
+      var others = sh(ANIMALS.filter(function (a) { return a !== cur; })).slice(0, 3);
+      var choices = sh([cur].concat(others));
+      opts.innerHTML = '';
+      feed.textContent = 'ما الحيوان الغامض؟ التخمين الخاطئ يكلّف −25.';
+      choices.forEach(function (a) { opts.appendChild(optBtn(a.e + ' ' + a.n, '', function () { guess(a); })); });
+    }
+    function guess(a) {
+      if (over) return;
+      if (a === cur) {
+        over = true; setBest('va_lb_best', pts);
+        face.textContent = cur.e;
+        feed.textContent = '🏆 أحسنت! الحيوان هو «' + cur.n + '» — احتفظت بـ' + pts + ' نقطة.';
+        go.textContent = 'ملف جديد'; showScore(); return;
+      }
+      wrongs++; pts = Math.max(0, pts - 25);
+      feed.textContent = '❌ ليس «' + a.n + '» (−25).' + (wrongs >= 2 ? ' انتهت محاولاتك!' : ' حاول مجددًا أو اشترِ دليلًا آخر.');
+      if (wrongs >= 2) {
+        over = true; pts = Math.floor(pts / 4); setBest('va_lb_best', pts);
+        face.textContent = cur.e;
+        feed.textContent += ' الحيوان الصحيح: «' + cur.n + '». نتيجتك: ' + pts;
+        opts.innerHTML = ''; go.textContent = 'ملف جديد'; showScore(); return;
+      }
+      renderOpts(); addGuessBtn(); showScore();
+    }
+    go.addEventListener('click', function () {
+      cur = ANIMALS[Math.floor(Math.random() * ANIMALS.length)];
+      pts = 100; used = {}; wrongs = 0; over = false;
+      face.textContent = '🎭';
+      renderClues(); renderOpts(); showScore();
+      feed.textContent = 'بدأ التحقيق بـ100 نقطة. الأدلة الخمسة متاحة للشراء.';
+      go.textContent = 'ملف جديد';
+    });
+    showScore();
+  })();
+
+  /* ---------- 3) تحدي الستين ثانية — صح أم خطأ ---------- */
+  (function () {
+    var box = $('#bzCase'), opts = $('#bzOpts'), feed = $('#bzFeed'), bar = $('#bzBar'), go = $('#bzGo'), scoreEl = $('#bzScore');
+    if (!box || !opts || !go || !scoreEl) return;
+    var EASY = [
+      ['تستطيع القطط أن ترى في الظلام أفضل من البشر بكثير.', 1], ['قلب الكلب ينبض أسرع من قلب الإنسان عادة.', 1],
+      ['جميع الثعابين سامة وخطرة على الإنسان.', 0], ['تستطيع البقرة النوم وهي واقفة.', 1],
+      ['للأخطبوط ثلاثة قلوب.', 1], ['الخفاش أعمى تمامًا ويعتمد على الصدى فقط.', 0],
+      ['أسنان الأرنب لا تتوقف عن النمو طوال حياته.', 1], ['يستطيع الجمل تخزين الماء في سنامه.', 0],
+      ['الحصان يستطيع النوم واقفًا بفضل أربطة خاصة في ساقيه.', 1], ['السمك الذهبي ذاكرته ثلاث ثوانٍ فقط.', 0]
+    ];
+    var HARD = [
+      ['حرارة جسم القطة الطبيعية أعلى قليلًا من حرارة جسم الإنسان.', 1], ['يستطيع الكلب سماع ترددات فوق ما يسمعه الإنسان.', 1],
+      ['النعامة تدفن رأسها في الرمل عندما تخاف.', 0], ['للزرافة نفس عدد فقرات الرقبة عند الإنسان: سبع.', 1],
+      ['الحليب مفيد وضروري لكل القطط البالغة.', 0], ['يستطيع فرس النهر السباحة بمهارة رغم ضخامته.', 0],
+      ['لسان الزرافة طويل بما يكفي لتنظيف أذنيها.', 1], ['جميع القطط تحب الماء وتسبح بطبيعتها.', 0],
+      ['يستطيع الحصان التنفس من فمه عند التعب.', 0], ['جلد فرس النهر يفرز مادة وردية تعمل كواقٍ طبيعي من الشمس.', 1],
+      ['تنام الخيول مستلقية تمامًا طوال الليل.', 0], ['يمتلك الكلب حاسة شم أقوى من الإنسان بعشرات المرات.', 1],
+      ['يستطيع البطريق الطيران لمسافات قصيرة.', 0], ['تغيّر الحرباء لونها أساسًا للتعبير عن حالتها والتمويه.', 1],
+      ['الفيل هو الحيوان الوحيد الذي لا يستطيع القفز.', 1], ['تضع أنثى الأخطبوط بيضها ثم تموت بعد فقسها غالبًا.', 1],
+      ['تستطيع الكلاب أكل الشوكولاتة باعتدال دون ضرر.', 0], ['يبكي التمساح أحيانًا أثناء أكل فريسته فعلًا.', 1]
+    ];
+    var score = 0, correct = 0, asked = 0, streak = 0, tm = null, playing = false, deck = [], curQ = null, deadline = 0;
+    function showScore() { scoreEl.textContent = 'النقاط: ' + score + ' · أفضل نتيجة: ' + Math.max(best('va_bz_best'), score); }
+    function endGame(reason) {
+      playing = false; if (tm) tm.stop();
+      setBest('va_bz_best', score);
+      box.textContent = '⏱️ ' + reason + ' أجبت عن ' + asked + ' عبارة، منها ' + correct + ' صحيحة — نتيجتك ' + score + ' نقطة.';
+      opts.innerHTML = ''; feed.textContent = 'أفضل نتيجة محفوظة: ' + best('va_bz_best');
+      go.textContent = 'العب مجددًا'; showScore();
+    }
+    function nextQ() {
+      if (!playing) return;
+      if (!deck.length) deck = sh((asked < 5 ? EASY : HARD).slice());
+      curQ = deck.pop(); asked++;
+      box.textContent = curQ[0];
+      opts.innerHTML = '';
+      opts.appendChild(optBtn('✓ صحيحة', '', function () { answer(1); }));
+      opts.appendChild(optBtn('✗ خاطئة', '', function () { answer(0); }));
+    }
+    function answer(v) {
+      if (!playing || !curQ) return;
+      if (v === curQ[1]) {
+        correct++; streak++; score += 10;
+        if (streak % 5 === 0) { score += 10; feed.textContent = '🔥 سلسلة ' + streak + '! +10 مكافأة — واصل!'; }
+        else feed.textContent = '✅ صحيح! +10';
+      } else {
+        streak = 0; score = Math.max(0, score - 0);
+        deadline -= 3000;
+        feed.textContent = '❌ خطأ! العبارة ' + (curQ[1] ? 'صحيحة' : 'خاطئة') + ' — خسرت 3 ثوانٍ.';
+        if (Date.now() >= deadline) return endGame('انتهى الوقت تمامًا.');
+      }
+      showScore(); nextQ();
+    }
+    go.addEventListener('click', function () {
+      score = 0; correct = 0; asked = 0; streak = 0; deck = sh(EASY.slice()); playing = true;
+      deadline = Date.now() + 60000;
+      if (tm) tm.stop();
+      tm = (function () {
+        var iv = setInterval(function () {
+          var left = (deadline - Date.now()) / 1000;
+          if (bar) bar.style.width = Math.max(0, left / 60 * 100) + '%';
+          if (left <= 0) { clearInterval(iv); if (playing) endGame('انتهت الستون ثانية!'); }
+        }, 100);
+        return { stop: function () { clearInterval(iv); } };
+      })();
+      feed.textContent = 'انطلق! كل إجابة صحيحة +10، والخاطئة −3 ثوانٍ.';
+      go.textContent = 'إعادة التحدي'; showScore(); nextQ();
+    });
+    showScore();
   })();
 })();
 
