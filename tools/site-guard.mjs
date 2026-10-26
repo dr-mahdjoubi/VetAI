@@ -7,7 +7,7 @@
  *   node tools/site-guard.mjs [--base https://vetai.vcom.workers.dev] [--out data/manager-report.json]
  *
  * يفحص: المرايا الحية، ملفات البيانات (JSON) وبنيتها وأعدادها، خريطة الموقع،
- * ملف تحقق Google، الروابط الداخلية في الصفحة الرئيسية، وحجم/سرعة الصفحة.
+ * ملف تحقق Google، الروابط الداخلية في الصفحة الرئيسية، وحجم/سرعة الصفحة، ومحرك الذكاء الاصطناعي (حيًّا).
  * يكتب تقريرًا موحّدًا (manager-report.json) تقرأه لوحة المدير الخفية،
  * ويخرج برمز 1 عند وجود فشل (لتفتح GitHub Actions بلاغًا تلقائيًا).
  */
@@ -25,8 +25,8 @@ const UA = 'VetAI-SiteGuard/1.0 (+https://vetai.vcom.workers.dev)';
 /* القيم المرجعية المتوقعة — حدّثها عند أي نشر يغيّر المحتوى عمدًا */
 const EXPECTED = {
   titlePart: 'VetAI Global',
-  mediaCount: 40,
-  galleryCount: 34,
+  mediaCount: 50,
+  galleryCount: 44,
   verifyBody: 'google-site-verification: googlea35966b2c860f617.html',
   sitemapMustContain: 'drvet.onrender.com',
   homeMaxKB: 1800,
@@ -148,6 +148,41 @@ if (home) {
   if (broken.length === 0) add('links', 'الروابط الداخلية', 'ok', `فُحص ${list.length} مرجعًا داخليًا — لا كسور`);
   else add('links', 'الروابط الداخلية', 'fail', `مكسورة: ${broken.join(' · ')}`);
 }
+
+
+/* ---------- 6) محرك الذكاء الاصطناعي: التوجيه حي + إجابة فعلية ---------- */
+try {
+  const eng = await get(BASE + '/js/ai-engine.js');
+  const routingOk = eng.status === 200 && eng.body.includes('viaFree') && eng.body.includes('withTimeout(viaFree(question');
+  if (!routingOk) add('ai', 'محرك الذكاء — ملف التوجيه', 'fail', `HTTP ${eng.status} أو ترتيب المسارات تغيّر (المجاني أولًا مطلوب)`);
+  else {
+    let okProbe = false, lastStatus = 0, tries = 0;
+    while (!okProbe && tries < 2) {
+      tries++;
+      try {
+        const r = await fetch('https://text.pollinations.ai/openai', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', 'user-agent': UA },
+          body: JSON.stringify({ model: 'openai', messages: [{ role: 'user', content: 'أجب بكلمة واحدة: ما عاصمة الجزائر؟' }], temperature: 0.2 }),
+          signal: AbortSignal.timeout(45000),
+        });
+        lastStatus = r.status;
+        const j = await r.json().catch(() => null);
+        const txt = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+        okProbe = r.ok && !!txt && !!String(txt).trim();
+      } catch (e) { lastStatus = 0; }
+      if (!okProbe && tries < 2) await new Promise(res => setTimeout(res, 8000));
+    }
+    if (okProbe) add('ai', 'محرك الذكاء — إجابة حية', 'ok', `المسار المجاني يجيب فعليًا (بعد ${tries} محاولة)`);
+    else add('ai', 'محرك الذكاء — إجابة حية', 'fail', `المسار المجاني لا يجيب بعد محاولتين (آخر HTTP ${lastStatus}) — ميزات الذكاء ستسقط إلى المراجع`);
+  }
+} catch (e) { add('ai', 'محرك الذكاء — إجابة حية', 'fail', e.message); }
+try {
+  const r = await fetch('https://vetai-chat.dr-mahdjoubi.workers.dev/', { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(15000) });
+  const acao = r.headers.get('access-control-allow-origin') || '';
+  if (acao === '*' || acao.includes('vetai.vcom.workers.dev')) add('ai', 'الوسيط الاحتياطي vetai-chat', 'ok', `CORS يسمح بالنطاق الرسمي (${acao})`);
+  else add('ai', 'الوسيط الاحتياطي vetai-chat', 'warn', `CORS مقصور على «${acao || 'لا شيء'}» — الاحتياطي لا يعمل من النطاق الرسمي (غير حرج: لم يعد الأساسي)`);
+} catch (e) { add('ai', 'الوسيط الاحتياطي vetai-chat', 'warn', `تعذّر فحصه: ${e.message}`); }
 
 /* ---------- التقرير ---------- */
 const fails = checks.filter(c => c.status === 'fail').length;
