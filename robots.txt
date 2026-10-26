@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dr-mahdjoubi.github.io/VetAI/sitemap.xml
+Sitemap: https://drvet.onrender.com/sitemap.xml
