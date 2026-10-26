@@ -1,6 +1,32 @@
 {
   "runs": [
     {
+      "at": "2026-10-26T09:09:01Z",
+      "added": [
+        {
+          "title": "A comprehensive external Rabies Control Programme review in Sri Lanka. Report of a WHO mission, 8–15 September 2025 (WHO)",
+          "url": "https://iris.who.int/items/9c8d23a0-1d82-4e86-8940-f6a213a5bd51",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "A comprehensive integrated review of malaria, leishmaniasis, filariasis and dengue control programmes in Sri Lanka. Report of a WHO mission, 13–20 May 2024 (WHO)",
+          "url": "https://iris.who.int/items/20c26ffa-7fbd-4617-912f-fbd91fba8d49",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Target regimen profiles for long-acting injectables for tuberculosis prevention and treatment (WHO)",
+          "url": "https://iris.who.int/items/eb857d6c-254f-4722-956b-23be3a65517a",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 16,
+          "added": 3
+        }
+      }
+    },
+    {
       "at": "2026-10-26T06:15:11Z",
       "added": [
         {
@@ -62,6 +88,6 @@
       }
     }
   ],
-  "last_run": "2026-10-26T06:15:11Z",
-  "total_books": 31
+  "last_run": "2026-10-26T09:09:01Z",
+  "total_books": 32
 }
