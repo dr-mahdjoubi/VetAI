@@ -48,7 +48,7 @@ async function verifyUrl(url, titleFrag) {
 async function dspaceCandidates(base, itemBase, queries) {
   const out = [];
   for (const q of queries) {
-    const url = `${base}/server/api/discover/search/objects?query=${encodeURIComponent(q)}&size=6`;
+    const url = `${base}/server/api/discover/search/objects?query=${encodeURIComponent(q)}&size=6&sort=dc.date.issued,DESC`;
     const data = await getJson(url);
     const objects = data?._embedded?.searchResult?._embedded?.objects || [];
     for (const o of objects) {
@@ -61,6 +61,7 @@ async function dspaceCandidates(base, itemBase, queries) {
         const types = (md['dc.type'] || []).map(v => v.value || '');
         const issued = clean(md['dc.date.issued']?.[0]?.value).slice(0, 10);
         if (!title || title.length < 12) continue;
+        if (issued && parseInt(issued.slice(0, 4), 10) < 2015) continue;          // «بجديد»: منشورات حديثة فقط
         if (types.length && types.every(t => /journal/i.test(t))) continue;         // مقالات دوريات ليست كتبًا
         if (types.length && !types.some(t => /book|report|guideline|manual|publication|fact ?sheet|monograph/i.test(t))) continue;
         out.push({ title, url: `${itemBase}/items/${item.uuid}`, issued, via: base });
@@ -86,6 +87,7 @@ async function ncbiCandidates() {
     const m = (rec.bookinfo || '').match(/type="book"[^>]*>[\s\S]*?<Title>([\s\S]*?)<\/Title>/);
     const title = clean(m ? m[1] : '');
     if (!title || title.length < 12) continue;
+    if (rec.pubdate && parseInt(String(rec.pubdate).slice(0, 4), 10) < 2015) continue;
     byBook.set(rec.bookaccessionid, {
       title,
       url: `https://www.ncbi.nlm.nih.gov/books/${rec.bookaccessionid}/`,
