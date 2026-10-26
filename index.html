@@ -1530,6 +1530,37 @@ html.perf-idle body #cv{display:none!important}
 }
 @media (prefers-reduced-motion: reduce){#view-home .vg-animal-core img.vg-rot{transition:none}}
 </style>
+<style id="innov-css">
+/* ===== ابتكارات VetAI: بحث فوري + سؤال اليوم + استماع/مشاركة ===== */
+#va-qs{position:fixed;inset:0;z-index:200}
+#va-qs[hidden]{display:none}
+.va-qs-back{position:absolute;inset:0;background:rgba(2,6,23,.72);backdrop-filter:blur(3px)}
+.va-qs-box{position:relative;max-width:620px;margin:9vh auto 0;background:#0b1526;border:1px solid rgba(94,234,212,.35);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.5);overflow:hidden}
+.va-qs-head{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid rgba(148,163,184,.18);font-size:18px}
+.va-qs-head input{flex:1;background:transparent;border:0;outline:0;color:#f1f5f9;font:inherit;font-size:1rem}
+.va-qs-head kbd{font-size:.65rem;color:#94a3b8;border:1px solid rgba(148,163,184,.35);border-radius:6px;padding:2px 7px}
+#va-qs-list{max-height:46vh;overflow:auto;padding:8px}
+.va-qs-it{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;text-align:right;background:transparent;border:1px solid transparent;border-radius:12px;padding:11px 12px;color:#e2e8f0;cursor:pointer;font:inherit}
+.va-qs-it.on{background:rgba(34,211,238,.12);border-color:rgba(34,211,238,.4)}
+.va-qs-t{font-weight:700;font-size:.92rem}
+.va-qs-k{font-size:.7rem;color:#67e8f9;white-space:nowrap}
+.va-qs-hint{padding:16px;color:#94a3b8;font-size:.85rem;text-align:center}
+.va-qs-foot{padding:9px 16px;border-top:1px solid rgba(148,163,184,.15);color:#7d8ea6;font-size:.68rem}
+.va-flash{outline:3px solid #22d3ee!important;outline-offset:3px;transition:outline-color .3s}
+#va-quiz .va-qq{font-size:1.02rem;font-weight:800;line-height:1.9}
+#va-quiz .va-qopts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+@media(max-width:560px){#va-quiz .va-qopts{grid-template-columns:1fr}}
+#va-quiz .va-qopt{text-align:right;padding:11px 13px;border-radius:12px;border:1px solid rgba(148,163,184,.3);background:rgba(255,255,255,.03);color:#e2e8f0;font:inherit;font-size:.9rem;cursor:pointer}
+#va-quiz .va-qopt:hover{border-color:#22d3ee}
+#va-quiz .va-qopt.ok{background:#064e3b;border-color:#10b981;color:#d1fae5}
+#va-quiz .va-qopt.no{background:#4c0519;border-color:#f43f5e;color:#ffe4e6}
+#va-quiz .va-qwhy{margin-top:10px;font-size:.85rem;line-height:1.9;color:#a5f3fc}
+#va-quiz .va-qtop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#va-quiz .va-qstreak{font-size:.75rem;color:#fbbf24;font-weight:800}
+.va-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.va-act button{padding:8px 14px;border-radius:11px;border:1px solid rgba(148,163,184,.4);background:rgba(255,255,255,.04);color:#e2e8f0;font:inherit;font-size:.8rem;cursor:pointer}
+.va-act button:hover{border-color:#22d3ee}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -5736,6 +5767,7 @@ arm();
 /* مبدّل صورة الحيوان في لوحة البطل: كل 4.2 ثانية بذوبان ناعم، يعمل فقط أثناء ظهور اللوحة */
 (function(){'use strict';var imgs=document.querySelectorAll('#view-home .vg-animal-core img.vg-rot');if(imgs.length<2)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;var i=0,timer=null;function step(){imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');}function start(){if(!timer)timer=setInterval(step,4200);}function stop(){if(timer){clearInterval(timer);timer=null;}}if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)start();else stop();},{threshold:.12}).observe(imgs[0]);}else{start();}document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});})();
 </script>
+<script src="js/innovations.js"></script>
 </body>
   
 </html>
