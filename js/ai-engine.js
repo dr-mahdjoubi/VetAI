@@ -1,5 +1,6 @@
 // محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
-// ضع رابط الـ Worker هنا بعد إنشائه (يبدأ بـ https:// وينتهي بـ workers.dev)
+// إصلاح 2026-10-26: الـ Worker (vetai-chat) يحصر CORS في نطاق github.io القديم فيُحجب من النطاق الرسمي،
+// فصار المسار المجاني (pollinations) هو الأساسي — يعمل من أي نطاق وبلا مفتاح — والـ Worker احتياطيًا أخيرًا.
 var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
 
 (function () {
@@ -23,7 +24,7 @@ var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
       .then(function (d) { if (!d.answer) throw new Error('no answer'); return d.answer; });
   }
 
-  // بديل احتياطي مجاني بدون مفتاح (قد تتغير شروطه من مزوّده)
+  // المسار الأساسي: ذكاء مجاني بلا مفتاح، CORS مفتوح، يعمل من أي استضافة
   function viaFree(q, history, context) {
     var msgs = [{ role: 'system', content: SYSTEM }];
     (history || []).slice(-6).forEach(function (m) { msgs.push({ role: m.role, content: m.content }); });
@@ -31,28 +32,25 @@ var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
     return fetch('https://text.pollinations.ai/openai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'openai', messages: msgs })
-    }).then(function (r) { return r.json(); })
+      body: JSON.stringify({ model: 'openai', messages: msgs, temperature: 0.3 })
+    }).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
       .then(function (d) {
         var t = d.choices && d.choices[0] && d.choices[0].message.content;
         if (!t) throw new Error('no answer');
+        t = String(t).split('\n').filter(function (l) { return !/pollinations/i.test(l); }).join('\n').trim();
+        if (!t) throw new Error('empty');
         return t;
       });
   }
 
   window.VetAI_ask = function (question, history, context) {
     history = history || []; context = context || '';
-    var first = VETAI_WORKER_URL ? viaWorker : viaFree;
-    var second = null; // البديل المجاني الخارجي صار مدفوعاً، لذا نعتمد على الـ Worker فقط
-    return withTimeout(first(question, history, context), 25000).catch(function (e) {
-      if (second) return withTimeout(second(question, history, context), 25000);
-      throw e;
-    });
+    return withTimeout(viaFree(question, history, context), 30000)
+      .catch(function () { return withTimeout(viaWorker(question, history, context), 12000); });
   };
 })();
 
-
-// جسر التوافق: يجعل كل ميزات الموقع التي تستدعي claude.use('sample') تعمل عبر الـ Worker
+// جسر التوافق: يجعل كل ميزات الموقع التي تستدعي claude.use('sample') تعمل عبر المحرك
 (function () {
   if (window.claude && typeof window.claude.use === 'function') return; // داخل Claude: لا حاجة للجسر
   function toText(p) {
