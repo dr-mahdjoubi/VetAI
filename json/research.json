@@ -1,7 +1,103 @@
 {
   "section": "research",
-  "last_updated": "2026-10-23T00:00:00Z",
+  "last_updated": "2026-10-25T00:00:00Z",
   "items": [
+    {
+      "id": "mahdjoubi-vtri-2026",
+      "title_ar": "الذكاء الاصطناعي في الطب البيطري: من الدقة المخبرية إلى الجاهزية السريرية — بحث المؤسس ومؤشر VTRI",
+      "title_en": "Artificial Intelligence in Veterinary Medicine: From Laboratory Accuracy to Clinical Readiness — Secondary Analysis of 39 Deep-Learning Studies, a Real-World Benefit–Harm Appraisal, and the Veterinary Translational Readiness Index (VTRI)",
+      "summary_ar": "بحث مراجعة مع تحليل كمي ثانوي للدكتور محجوبي عبدالناصر (طبيب بيطري، كلية الطب البيطري، جامعة ابن خلدون، الجزائر) حلّل 39 دراسة تعلّم عميق في التشخيص البيطري (2013–2024): دقة مخبرية تراوحت بين 82.7٪ و99٪، بينما أظهرت التقييمات المستقلة لأدوات تجارية في الممارسة العامة حساسية بين 28٪ و78٪ فقط. يقترح البحث «مؤشر الجاهزية الترجمية البيطرية VTRI» (15 نقطة في خمسة مجالات) لقياس نضج الأدلة قبل اعتماد أدوات الذكاء الاصطناعي سريريًا، ويخلص إلى بقاء الاعتماد دعمًا لقرار الطبيب مع تحقق خارجي محلي، خاصة في المناطق محدودة الموارد. النص الكامل متاح للتنزيل بصيغة PDF من موقعنا.",
+      "summary_en": "A review with secondary quantitative analysis by Dr. Abdenasser Mahdjoubi (DVM, Ibn Khaldoun University, Algeria) of 39 deep-learning diagnostic studies (2013–2024): laboratory accuracy of 82.7–99% contrasted with independent real-world sensitivities of 28–78% for commercial tools. Proposes the VTRI readiness index (15 points, five domains) and clinician-supervised deployment with local validation. Full text downloadable as PDF.",
+      "source_name": "د. محجوبي عبدالناصر — بحث المؤسس",
+      "source_url": "books/mahdjoubi-ai-veterinary-medicine-vtri.pdf",
+      "category": "ai-research",
+      "published": "2026-10-25",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-42597169",
+      "title_ar": "تطبيقات الذكاء الاصطناعي في الصحة الرقمية البيطرية: مسح منهجي شامل",
+      "title_en": "AI applications in veterinary digital health: a systematic survey",
+      "summary_ar": "مسح منهجي وفق إطار PRISMA 2020 لبحوث 2013–2025 حول ذكاء الطب البيطري الرقمي: صنّف التطبيقات من الشبكات العصبية للأشعة إلى النماذج اللغوية الكبيرة للاستشارة السريرية، وخلص إلى تقدم واضح في الأشعة الآلية وعلم الخلية والتحليلات التنبؤية وإدارة صحة الماشية، مع بقاء التحقق الخارجي والتنظيم تحديات مركزية.",
+      "summary_en": "A PRISMA 2020 systematic survey (2013–2025) of AI in veterinary digital health — from radiography CNNs to LLM consultation — covering 22 included studies across imaging, prediction, wearables, livestock and decision support.",
+      "source_name": "Frontiers in Veterinary Science (2026) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42597169/",
+      "category": "ai-research",
+      "published": "2026-07-30",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-42848008",
+      "title_ar": "الذكاء الاصطناعي في علم الأمراض النسيجي البيطري: مفاهيم وتطبيقات وتبنٍّ سريري",
+      "title_en": "Artificial intelligence in veterinary diagnostic histopathology: Concepts, applications, and clinical implementation",
+      "summary_ar": "مراجعة استطلاعية ومسح لمختبرات تشخيصية حول دمج الذكاء الاصطناعي في علم الأمراض النسيجي البيطري: 34 دراسة منشورة حتى سبتمبر 2025، معظمها شبكات عصبية لمهام مثل عدّ الخلايا وقياس المساحات والتشخيص، مع بروز نماذج الأساس (Vision Transformers) والتعلم ذاتي الإشراف لتحسين التعميم وتقليل الحاجة إلى البيانات.",
+      "summary_en": "A scoping review (34 studies) plus a laboratory survey on AI in veterinary histopathology: mostly CNNs for cell quantification and diagnosis, with vision-transformer foundation models emerging.",
+      "source_name": "Veterinary Pathology (2026) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42848008/",
+      "category": "ai-research",
+      "published": "2026-10-08",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-38568777",
+      "title_ar": "إرشادات WSAVA العالمية 2024 لتلقيح الكلاب والقطط",
+      "title_en": "2024 guidelines for the vaccination of dogs and cats — Vaccination Guidelines Group (WSAVA)",
+      "summary_ar": "الإصدار الأحدث من إرشادات الجمعية العالمية لطب الحيوانات الصغيرة (WSAVA) لتلقيح الكلاب والقطط: تصنيف اللقاحات إلى أساسية وغير أساسية، وجداول التلقيح بحسب العمر ونمط الحياة والمخاطر الوبائية المحلية، ومرجع عملي يعتمد عليه الأطباء البيطريون حول العالم في برامج التحصين.",
+      "summary_en": "The WSAVA Vaccination Guidelines Group's 2024 update: core vs non-core vaccines and risk-based schedules for dogs and cats.",
+      "source_name": "Journal of Small Animal Practice (2024) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38568777/",
+      "category": "guidelines",
+      "published": "2024-05-01",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-42817832",
+      "title_ar": "مقاومة مضادات الميكروبات المرتبطة بالعمر في عزلات الإشريكية القولونية من الكلاب والقطط المرافقة",
+      "title_en": "Age-Associated Antimicrobial Resistance in Escherichia coli Isolates From Companion Dogs and Cats Linked to CTX-M genes",
+      "summary_ar": "دراسة يابانية (2021–2024) على 385 عزلة إشريكية قولونية من براز 218 كلبًا و167 قطًا زارت عيادات في طوكيو: ازدادت مقاومة السيفالوسبورينات من الجيل الثالث والفلوروكينولونات ازديادًا معنويًا مع تقدم عمر الحيوان، وأظهر التحليل الجينومي الكامل أن العزلات الحاملة لجينات CTX-M هي الأكثر ارتباطًا بهذه الزيادة — نتيجة مهمة من منظور «صحة واحدة» لقرب الحيوانات المرافقة من الإنسان.",
+      "summary_en": "Tokyo study (2021–2024): third-generation cephalosporin and fluoroquinolone resistance in 385 E. coli isolates from companion dogs and cats rose significantly with host age, driven by CTX-M-carrying isolates (whole-genome analysis).",
+      "source_name": "Microbiology and Immunology (2026) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42817832/",
+      "category": "one-health",
+      "published": "2026-10-01",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-42454871",
+      "title_ar": "داء الكلب عالميًا: عقد من التقدم نحو «صفر وفيات بحلول 2030»",
+      "title_en": "Global Perspectives on Rabies Prevention and Control: A Decade of World Rabies Day Themes and Progress toward Zero by 30",
+      "summary_ar": "مراجعة عالمية لجهود الوقاية من داء الكلب ومكافحته (2016–2025): المرض يقتل نحو 59,000 إنسان سنويًا، وحققت حملات تلقيح الكلاب الجماعية تغطية 70٪ في غينيا وانخفاضًا بنسبة 95٪ في الحالات البشرية بأمريكا اللاتينية، بينما تبقى فجوات الترصد ونقص اللقاحات عوائق أمام هدف منظمة الصحة العالمية «صفر وفيات بشرية بحلول 2030».",
+      "summary_en": "A 2016–2025 global review of rabies control: mass dog vaccination reached 70% coverage in Guinea and human cases fell 95% in Latin America, while surveillance gaps and vaccine shortages threaten the WHO 'Zero by 30' target.",
+      "source_name": "Iranian Biomedical Journal (2026) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42454871/",
+      "category": "one-health",
+      "published": "2026-03-01",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-41016798",
+      "title_ar": "التهاب الجلد العقدي في الأبقار: مراجعة شاملة للانتقال والوقاية",
+      "title_en": "Lumpy Skin Disease (review)",
+      "summary_ar": "مراجعة شاملة لمرض التهاب الجلد العقدي الفيروسي في الأبقار والجاموس: عقد جلدية وحمى وهبوط إنتاج الحليب وإجهاض، وينتقل أساسًا عبر الحشرات الماصة للدم (الذباب اللاسع والقراد)، وتبقى مكافحة النواقل واللقاحات الحية المضعفة ركيزتي الوقاية، بينما يواصل المرض انتشاره في آسيا منذ أول تفشٍّ في الصين عام 2019.",
+      "summary_en": "A comprehensive review of lumpy skin disease in cattle and buffalo: arthropod-borne transmission, vector control and live attenuated vaccines, and continued spread across Asia since 2019.",
+      "source_name": "Uirusu (2025) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/41016798/",
+      "category": "farm",
+      "published": "2025-01-01",
+      "status": "approved"
+    },
+    {
+      "id": "pubmed-42847707",
+      "title_ar": "لقاح mRNA ضد إنفلونزا H5 في عجول هولشتاين: استجابة مناعية وحماية واعدة",
+      "title_en": "H5 influenza virus mRNA-lipid nanoparticle (LNP) vaccination elicits adaptive immune responses in Holstein calves",
+      "summary_ar": "دراسة تجريبية استجابةً لانتشار إنفلونزا الطيور شديدة الإمراض H5N1 (النمط 2.3.4.4b) في أبقار الحليب الأمريكية منذ 2024: أحدث لقاح mRNA-LNP ضد H5، عند حقنه عضليًا في عجول هولشتاين، استجابة قوية بالأجسام المضادة والخلايا التائية CD8 ومنح حماية ضد العدوى — خطوة نحو لقاحات تحدّ من انتشار الفيروس في الأبقار.",
+      "summary_en": "An H5 mRNA-LNP vaccine given intramuscularly to Holstein calves induced robust antibody and CD8+ T-cell responses and protected against clade 2.3.4.4b H5N1 — a step toward limiting HPAI spread in dairy cattle.",
+      "source_name": "Journal of Virology (2026) — PubMed",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/42847707/",
+      "category": "farm",
+      "published": "2026-10-08",
+      "status": "approved"
+    },
     {
       "id": "2026-10-23-study-poultry",
       "title_ar": "دراسة مرجعية شاملة: الدواجن — الأمن الحيوي والإنتاج والاقتصاد والمستقبل",
@@ -37,18 +133,6 @@
       "category": "pets",
       "published": "2026-10-23",
       "status": "approved"
-    },
-    {
-      "id": "2026-10-10-001",
-      "title_ar": "عنوان بالعربية",
-      "title_en": "Title in English",
-      "summary_ar": "ملخص مكتوب بأسلوب أصلي في 2-3 جمل.",
-      "summary_en": "Original 2-3 sentence summary.",
-      "source_name": "اسم المصدر",
-      "source_url": "https://example.com/article",
-      "category": "animal-health",
-      "published": "2026-10-09",
-      "status": "pending_review"
     }
   ]
 }
