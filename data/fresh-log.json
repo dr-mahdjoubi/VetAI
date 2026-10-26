@@ -1,6 +1,32 @@
 {
   "runs": [
     {
+      "at": "2026-10-26T17:07:53Z",
+      "added": [
+        {
+          "title": "Cupping therapy: descriptive synthesis of training (WHO)",
+          "url": "https://iris.who.int/items/de67e00e-abda-4d95-8a11-620d435fab5a",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "WHO public health research agenda for influenza (WHO)",
+          "url": "https://iris.who.int/items/3c32c85f-47d0-4024-b614-5c8a7650a064",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "WHO Strategic and Technical Advisory Group on Antimicrobial Resistance (STAG-AMR): report of the fifth meeting, 24-25 June 2025 (WHO)",
+          "url": "https://iris.who.int/items/e93982d1-5347-4e11-9bc8-c5f8c2e56d86",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 16,
+          "added": 3
+        }
+      }
+    },
+    {
       "at": "2026-10-26T09:09:01Z",
       "added": [
         {
@@ -88,6 +114,6 @@
       }
     }
   ],
-  "last_run": "2026-10-26T09:09:01Z",
-  "total_books": 32
+  "last_run": "2026-10-26T17:07:53Z",
+  "total_books": 35
 }
