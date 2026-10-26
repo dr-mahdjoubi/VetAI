@@ -1,6 +1,6 @@
 {
   "section": "articles",
-  "last_updated": "2026-10-10T12:00:00Z",
+  "last_updated": "2026-10-25",
   "items": [
     {
       "id": "2026-10-10-001",
@@ -13,6 +13,42 @@
       "category": "animal-health",
       "published": "2026-10-09",
       "status": "pending_review"
+    },
+    {
+      "id": "2026-10-25-001",
+      "title_ar": "دليل الفاو لإدارة طوارئ صحة الحيوان: مرجع عملي يجب أن يعرفه كل ممارس",
+      "title_en": "FAO GEMP: a practical emergency reference every practitioner should know",
+      "summary_ar": "أصدرت منظمة الفاو الطبعة الثالثة من دليل ممارسات الإدارة الجيدة للطوارئ الصحية الحيوانية، وهو مرجع منهجي لبناء خطط الاستعداد والاستجابة والتعافي من تفشيات الأمراض العابرة للحدود. أضفناه إلى مكتبة الموقع كاملًا بصيغة PDF مجانًا.",
+      "summary_en": "FAO's third-edition GEMP essentials guide systematizes preparedness, response and recovery for animal health emergencies; now in the site library as a free PDF.",
+      "source_name": "FAO — Open Knowledge",
+      "source_url": "https://openknowledge.fao.org/items/51d6cda8-e3ba-4ccf-a83e-c2d151cf59ed",
+      "category": "animal-health",
+      "published": "2026-10-25",
+      "status": "approved"
+    },
+    {
+      "id": "2026-10-25-002",
+      "title_ar": "داء الكلب: لماذا يبقى تلقيح الحيوانات حجر الأساس في الوقاية؟",
+      "title_en": "Rabies: why animal vaccination remains the cornerstone of prevention",
+      "summary_ar": "يؤكد تقرير مشاورة خبراء منظمة الصحة العالمية أن داء الكلب قاتل بعد ظهور الأعراض لكنه قابل للوقاية الكاملة بالتلقيح المنتظم للكلاب والتعامل الفوري السليم مع العضات. أضفنا التقرير كاملًا وصحيفة حقائق المنظمة إلى مكتبة الموقع.",
+      "summary_en": "WHO's expert consultation confirms rabies is almost always fatal after symptoms yet fully preventable through dog vaccination and prompt bite care; the full report is now in the site library.",
+      "source_name": "WHO — منظمة الصحة العالمية",
+      "source_url": "https://www.who.int/news-room/fact-sheets/detail/rabies",
+      "category": "animal-health",
+      "published": "2026-10-25",
+      "status": "approved"
+    },
+    {
+      "id": "2026-10-25-003",
+      "title_ar": "التهاب الجلد العقدي في الأبقار: علامات يجب ألا يفوتها المربي",
+      "title_en": "Lumpy skin disease in cattle: signs no breeder should miss",
+      "summary_ar": "مرض فيروسي تنقله الحشرات يسبب عقدًا جلدية وحمى وهبوطًا في إنتاج الحليب عند الأبقار، والاكتشاف المبكر والعزل والإبلاغ البيطري الفوري هي مفاتيح الحد من انتشاره في القطيع. أضفنا مقالًا سريريًا مفصلًا عنه إلى المرجع السريري في الموقع.",
+      "summary_en": "An insect-borne viral disease causing skin nodules, fever and milk drop in cattle; early detection, isolation and prompt veterinary reporting limit spread. A detailed clinical entry was added to the site reference.",
+      "source_name": "FAO — بوابة الصحة الحيوانية",
+      "source_url": "https://www.fao.org/animal-health/en",
+      "category": "animal-health",
+      "published": "2026-10-25",
+      "status": "approved"
     }
   ]
 }
