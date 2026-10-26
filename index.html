@@ -1515,6 +1515,21 @@ html.perf-idle body #cv{display:none!important}
 .bid-hit{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border:1px solid rgba(148,163,184,.3);border-radius:10px;margin-top:6px}
 .bid-pct{font-weight:700;color:#38bdf8}
 </style>
+<style id="hero-compact-css">
+/* ===== لوحة البطل: أقصر + مبدّل صور الحيوانات (كلب ← قط ← حصان ← بقرة) ===== */
+#view-home .vg-animal-core img.vg-rot{position:absolute;top:5px;left:5px;width:calc(100% - 10px);height:calc(100% - 10px);opacity:0;transition:opacity 1.1s ease-in-out}
+#view-home .vg-animal-core img.vg-rot.on{opacity:1}
+@media (max-width:640px){
+  html body #view-home .vg-cine-stage{max-width:272px}
+  html body #view-home .vg-global-intro{padding:16px 14px}
+  html body #view-home .vg-cinematic{gap:12px}
+  html body #view-home .vg-cinematic h2{margin:6px 0 8px}
+  html body #view-home .vg-actions{margin-top:14px}
+  html body #view-home .vg-trustline{margin-top:14px}
+  html body #view-home .vg-cine-footer{padding-top:10px}
+}
+@media (prefers-reduced-motion: reduce){#view-home .vg-animal-core img.vg-rot{transition:none}}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1603,7 +1618,7 @@ html.perf-idle body #cv{display:none!important}
     <div class="vg-stage-grid" aria-hidden="true"></div>
     <div class="vg-orbit vg-orbit-a" aria-hidden="true"></div><div class="vg-orbit vg-orbit-b" aria-hidden="true"></div><div class="vg-orbit vg-orbit-c" aria-hidden="true"></div>
     <div class="vg-core-glow" aria-hidden="true"></div>
-    <div class="vg-animal-core"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=85" alt="كلب ينظر إلى الكاميرا" width="450" height="450" fetchpriority="high"><span class="vg-core-scan" aria-hidden="true"></span></div>
+    <div class="vg-animal-core"><img class="vg-rot on" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=85" alt="كلب" width="450" height="450" fetchpriority="high"><img class="vg-rot" src="assets/animals/cat.webp" alt="قط" width="450" height="450" loading="lazy"><img class="vg-rot" src="assets/animals/horse.webp" alt="حصان" width="450" height="450" loading="lazy"><img class="vg-rot" src="assets/animals/cow.webp" alt="بقرة" width="450" height="450" loading="lazy"><span class="vg-core-scan" aria-hidden="true"></span></div>
     <div class="vg-hud vg-hud-top"><span class="vg-hud-dot"></span><span>VETAI NEURAL CORE</span><b>ONLINE</b></div>
     <div class="vg-hud vg-hud-left"><span class="vg-hud-symbol">⌬</span><span><b>تحليل متعدد المحاور</b><small>Clinical · Research · Learning</small></span></div>
     <div class="vg-hud vg-hud-right"><span class="vg-hud-symbol">✳</span><span><b>ذكاء مساعد</b><small>Human-led decisions</small></span></div>
@@ -5714,6 +5729,10 @@ arm();
 
 </script>
 <script src="js/breed-id.js"></script>
+<script id="hero-rot-js">
+/* مبدّل صورة الحيوان في لوحة البطل: كل 4.2 ثانية بذوبان ناعم، يعمل فقط أثناء ظهور اللوحة */
+(function(){'use strict';var imgs=document.querySelectorAll('#view-home .vg-animal-core img.vg-rot');if(imgs.length<2)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;var i=0,timer=null;function step(){imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');}function start(){if(!timer)timer=setInterval(step,4200);}function stop(){if(timer){clearInterval(timer);timer=null;}}if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)start();else stop();},{threshold:.12}).observe(imgs[0]);}else{start();}document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});})();
+</script>
 </body>
   
 </html>
