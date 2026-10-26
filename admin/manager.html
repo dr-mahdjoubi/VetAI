@@ -77,7 +77,7 @@
     <div class="card">
       <h3 style="margin:0 0 10px">أوامر سريعة</h3>
       <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/dr-mahdjoubi/VetAI/actions/workflows/site-guard.yml">▶ تشغيل فحص الحارس الآن</a>
-      <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/dr-mahdjoubi/VetAI/actions/workflows/content-refresh.yml">▶ تحديث الأخبار الآن</a>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/dr-mahdjoubi/VetAI/actions/workflows/content-refresh.yml">▶ تحديث الأخبار والكتب الآن</a>
       <button class="btn" id="reload">↻ إعادة تحميل التقرير</button>
       <button class="btn" id="lock">قفل اللوحة</button>
       <p class="note">الأزرار تنقلك إلى GitHub Actions حيث تضغط «Run workflow» — هذه هي قناة الأوامر الآمنة لموقع ثابت (لا خادم خلفي).</p>
@@ -93,7 +93,12 @@
       <div id="changesBox"><p class="note">لا تغيّرات مرصودة في آخر تقرير.</p></div>
     </div>
 
-    <footer>VetAI Guard · التقرير يولّده tools/site-guard.mjs تلقائيًا (GitHub Actions يوميًا + طبقة وكيل Muse) · هذه الصفحة لا تجمع أي بيانات.</footer>
+    <div class="card">
+      <h3 style="margin:0 0 8px">📚 تجديد الكتب والمعلومات (كل 8 ساعات)</h3>
+      <div id="freshBox"><p class="note">جارٍ التحميل…</p></div>
+    </div>
+
+    <footer>VetAI Guard · التقرير يولّده tools/site-guard.mjs تلقائيًا (GitHub Actions يوميًا + طبقة وكيل Muse) · تجديد الأخبار والكتب كل 8 ساعات عبر content-refresh · هذه الصفحة لا تجمع أي بيانات.</footer>
   </div>
 </div>
 
@@ -136,6 +141,30 @@ async function loadReport() {
     $('#meta').textContent = 'تعذّر تحميل التقرير (' + e.message + ') — تأكد أن الحارس نشر data/manager-report.json.';
   }
 }
+const FRESH_URL = '../data/fresh-log.json';
+async function loadFresh() {
+  const box = $('#freshBox');
+  if (!box) return;
+  try {
+    const r = await fetch(FRESH_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const log = await r.json();
+    const runs = (log.runs || []).slice(0, 5);
+    if (!runs.length) { box.innerHTML = '<p class="note">لا تشغيلات مسجلة بعد.</p>'; return; }
+    box.innerHTML = runs.map(run => {
+      const when = new Date(run.at).toLocaleString('ar');
+      const added = (run.added || []).map(a =>
+        '<div class="chg">• <a href="' + a.url + '" target="_blank" rel="noopener">' + a.title + '</a> <span class="note">(' + a.source + ')</span></div>').join('');
+      const srcs = Object.entries(run.sources || {}).map(([n, s]) =>
+        n + ': ' + (s.error ? 'تخطٍّ — ' + s.error : 'وُجد ' + s.found + '، أُضيف ' + s.added)).join(' · ');
+      return '<div style="margin-bottom:10px"><div><strong>' + when + '</strong> — أُضيف ' + (run.added || []).length + ' كتاب/مرجع</div>'
+        + (added || '<div class="note">لا إضافات في هذا التشغيل.</div>')
+        + '<div class="note">' + srcs + '</div></div>';
+    }).join('') + '<p class="note">مجموع كتب المكتبة الآن: ' + (log.total_books ?? '—') + ' · الجلب من مصادر رسمية فقط (WHO IRIS · FAO · NCBI Bookshelf) مع تحقق فعلي من كل رابط.</p>';
+  } catch (e) {
+    box.innerHTML = '<p class="note">تعذّر تحميل سجل التجديد (' + e.message + ') — يُنشأ عند أول تشغيل لجالب الكتب.</p>';
+  }
+}
 async function tryEnter() {
   if (!HASH_IS_SET) { $('#setupBox').classList.remove('hidden'); return; }
   const h = await sha256($('#pw').value);
@@ -143,7 +172,7 @@ async function tryEnter() {
     sessionStorage.setItem('vetai-guard-ok', '1');
     $('#gate').classList.add('hidden');
     $('#panel').classList.remove('hidden');
-    loadReport();
+    loadReport(); loadFresh();
   } else {
     $('#pw').value = '';
     $('#pw').placeholder = 'عبارة غير صحيحة — حاول مجددًا';
@@ -151,13 +180,13 @@ async function tryEnter() {
 }
 $('#enter').onclick = tryEnter;
 $('#pw').addEventListener('keydown', e => { if (e.key === 'Enter') tryEnter(); });
-$('#reload').onclick = loadReport;
+$('#reload').onclick = () => { loadReport(); loadFresh(); };
 $('#lock').onclick = () => { sessionStorage.removeItem('vetai-guard-ok'); location.reload(); };
 if (!HASH_IS_SET) $('#setupBox').classList.remove('hidden');
 if (sessionStorage.getItem('vetai-guard-ok') === '1' && HASH_IS_SET) {
   $('#gate').classList.add('hidden');
   $('#panel').classList.remove('hidden');
-  loadReport();
+  loadReport(); loadFresh();
 }
 </script>
 </body>
