@@ -43,9 +43,11 @@ var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
       });
   }
 
+  function delay(ms) { return new Promise(function (res) { setTimeout(res, ms); }); }
   window.VetAI_ask = function (question, history, context) {
     history = history || []; context = context || '';
     return withTimeout(viaFree(question, history, context), 30000)
+      .catch(function () { return delay(2500).then(function () { return withTimeout(viaFree(question, history, context), 30000); }); })
       .catch(function () { return withTimeout(viaWorker(question, history, context), 12000); });
   };
 })();
