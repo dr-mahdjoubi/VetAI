@@ -1,0 +1,32 @@
+{
+  "runs": [
+    {
+      "at": "2026-10-26T06:07:06Z",
+      "added": [
+        {
+          "title": "Rabies awareness (WHO)",
+          "url": "https://iris.who.int/items/72a237ac-d277-49f2-b186-d8e289b42b12",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Les zoonoses (WHO)",
+          "url": "https://iris.who.int/items/33d3e7cf-2ee9-45ba-8cdd-400cf5f79d13",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Guidelines on the hygienic disposal and rendering of dead animals and animal wastes to protect human and animal health (WHO)",
+          "url": "https://iris.who.int/items/0ecf155a-781d-4c87-ab40-bfb1dffbcc91",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 5,
+          "added": 3
+        }
+      }
+    }
+  ],
+  "last_run": "2026-10-26T06:07:06Z",
+  "total_books": 28
+}
