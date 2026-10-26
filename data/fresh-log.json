@@ -1,6 +1,41 @@
 {
   "runs": [
     {
+      "at": "2026-10-26T06:15:11Z",
+      "added": [
+        {
+          "title": "World directory of schools for animal health assistants, 1971 (WHO)",
+          "url": "https://iris.who.int/items/214a6fd3-c860-42c0-9f3a-f6f7147e1e11",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "World directory of veterinary schools, 1971 (WHO)",
+          "url": "https://iris.who.int/items/5f621e5e-a0b0-4f37-9e32-b8442175a905",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "2026 Watch List: Regenerative Medicine: Health Technologies (NCBI Bookshelf)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517/",
+          "source": "NCBI Bookshelf"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 5,
+          "added": 2
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 14,
+          "added": 1
+        }
+      }
+    },
+    {
       "at": "2026-10-26T06:07:06Z",
       "added": [
         {
@@ -27,6 +62,6 @@
       }
     }
   ],
-  "last_run": "2026-10-26T06:07:06Z",
-  "total_books": 28
+  "last_run": "2026-10-26T06:15:11Z",
+  "total_books": 31
 }
