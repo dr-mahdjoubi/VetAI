@@ -1,11 +1,15 @@
-# VetAI Content Refresh — تحديث تلقائي لشريط الأخبار من خلاصات RSS موثوقة
-# يضيف الجديد إلى json/news.json ويلتزم به؛ النشر التلقائي عند GitHub
-# يدفع التحديث إلى كل المرايا (Cloudflare/Vercel/Render/Pages).
+# VetAI Content Refresh — تجديد تلقائي للأخبار والكتب والمعلومات البيطرية
+# كل 8 ساعات: يجدد شريط الأخبار من خلاصات RSS موثوقة (refresh-news.mjs)،
+# ويجلب أحدث الكتب والمنشورات البيطرية مفتوحة الوصول من مصادر رسمية
+# (WHO IRIS · FAO Open Knowledge · NCBI Bookshelf) إلى مكتبة الموقع (fetch-books.mjs)،
+# ويلتزم بالتغييرات؛ النشر التلقائي عند GitHub يدفعها إلى كل المرايا
+# (Cloudflare/Vercel/Render/Pages). بأمر المالك 2026-10-25: للمدير كل
+# الصلاحيات المطلوبة لجلب الكتب والمعلومات البيطرية وتجديدها.
 name: VetAI Content Refresh
 
 on:
   schedule:
-    - cron: '23 6 * * *'   # يوميًا ~06:23 UTC
+    - cron: '23 */8 * * *'   # كل 8 ساعات (~06:23 / 14:23 / 22:23 UTC)
   workflow_dispatch:
 
 permissions:
@@ -24,14 +28,17 @@ jobs:
       - name: Refresh news from RSS feeds
         run: node tools/refresh-news.mjs --file json/news.json --max-new 5
 
+      - name: Fetch new open-access veterinary books
+        run: node tools/fetch-books.mjs --file json/resources.json --log data/fresh-log.json --max-new 3
+
       - name: Commit if changed
         run: |
           git config user.name 'vetai-content-bot'
           git config user.email 'content@vetai.local'
-          git add json/news.json
+          git add json/news.json json/resources.json data/fresh-log.json
           if git diff --cached --quiet; then
-            echo 'لا جديد اليوم.'
+            echo 'لا جديد في هذا التشغيل.'
           else
-            git commit -m 'chore(news): تحديث تلقائي لشريط الأخبار'
+            git commit -m 'chore(content): تجديد تلقائي — أخبار وكتب بيطرية جديدة'
             git push
           fi
