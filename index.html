@@ -1499,6 +1499,22 @@ html.perf-idle body #cv{display:none!important}
 .fx-arrow{margin:0 .25rem;color:#8a97a8;font-weight:700;vertical-align:middle}
 
 </style>
+<style id="wp-css">
+.wp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.wp-card{overflow:hidden;padding:0}
+.wp-img{width:100%;height:185px;object-fit:cover;display:block}
+.wp-body{padding:14px 16px}
+.wp-body h3{margin:0 0 6px;font-size:1.06rem}
+.wp-meta{color:var(--muted,#8fa3b8);font-size:.85rem;margin:0 0 8px}
+.wp-fact{background:rgba(56,189,248,.08);border-radius:10px;padding:8px 10px;font-size:.92rem}
+.wp-src,.wp-note{font-size:.75rem;color:var(--muted,#8fa3b8);margin-top:8px}
+.brd-specs{font-size:.9rem;opacity:.92}
+.wp-h3{margin:24px 0 12px;font-size:1.25rem}
+.wp-search{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(148,163,184,.35);background:transparent;color:inherit;margin:4px 0 6px}
+.bid-img{display:none;max-width:320px;width:100%;border-radius:12px;margin-top:12px}
+.bid-hit{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border:1px solid rgba(148,163,184,.3);border-radius:10px;margin-top:6px}
+.bid-pct{font-weight:700;color:#38bdf8}
+</style>
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -1636,6 +1652,7 @@ html.perf-idle body #cv{display:none!important}
   <button onclick="switchTab('drugs')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-pl"/></svg></div><span class="t">الأدوية والعلاجات</span><span class="d">فئات الأدوية والاستخدام الآمن</span></button>
   <button onclick="switchTab('dxlab')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-fl"/></svg></div><span class="t">الأمراض والتحاليل</span><span class="d">فهرس الأمراض وأنواع التحاليل</span></button><button onclick="switchTab('bio')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-vl"/></svg></div><span class="t">المختبر الصوتي الحيوي</span><span class="d">تحليل صوتي حي ومصفوفة VTRI</span></button>
   <button onclick="switchTab('exams')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-cl"/></svg></div><span class="t">الدروس والاختبارات</span><span class="d">18 مادة بيطرية مع أسئلة</span></button>
+  <button onclick="switchTab('pets')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><span style="font-size:26px">🐾</span></div><span class="t">لأصحاب الكلاب والقطط</span><span class="d">فصائل بالصور + اعرف فصيلة حيوانك من صورته</span></button>
   <button onclick="switchTab('library')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-lb"/></svg></div><span class="t">المكتبة والكتب</span><span class="d">أكثر من 25 بوابة بحثية مجانية</span></button>
   <button onclick="switchTab('knowledge')" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-gl"/></svg></div><span class="t">الموسوعة والعلوم</span><span class="d">مقالات وعلوم بيطرية حديثة</span></button>
   <button onclick="showUni()" class="card qa"><svg class="i go"><use href="#i-ar"/></svg><div class="ib"><svg class="i"><use href="#i-un"/></svg></div><span class="t">دليل الجامعات البيطرية</span><span class="d">كليات الطب البيطري في الجزائر والعالم</span></button>
@@ -2176,7 +2193,266 @@ html.perf-idle body #cv{display:none!important}
   <p class="small muted slb-note">ملاحظة: جميع الروابط الخارجية رسمية (جامعات وهيئات ترخيص ومستودعات جامعية) أو مفتوحة الوصول قانونيًا. الكتب بصيغة PDF كاملة بأغلفتها في القسم السابق مباشرة «كتب مجانية PDF»، وهذا القسم ينظمها أكاديميًا مع بقية الموارد.</p>
 </div>
 <div class="card" id="myLib" style="grid-column:1/-1"><h3>🗂️ مكتبة د. محجوبي (كتب · مقالات · امتحانات · صور)</h3><div id="myLibEmpty" class="small muted">سيتم نشر الكتب والمقالات والامتحانات هنا قريبًا.</div><div id="myBooks"></div><div id="myArticles"></div><div id="myExams"></div><div id="myGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:10px"></div></div><div class="card"><h3>🔬 مقالات بحثية مبسطة</h3><div id="resArts"></div></div><div class="card"><h3>📖 كتب ومصادر مجانية</h3><p class="small">روابط لمكتبات مفتوحة. وكتب د. محجوبي الخاصة في الصندوق أعلاه.</p><a class="bk" target="_blank" rel="noopener" href="https://www.merckvetmanual.com">دليل ميرك البيطري (مجاني على الإنترنت)</a><a class="bk" target="_blank" rel="noopener" href="https://www.fao.org/publications">منشورات الفاو: الصحة الحيوانية والثروة الحيوانية</a><a class="bk" target="_blank" rel="noopener" href="https://www.woah.org">المنظمة العالمية للصحة الحيوانية (WOAH)</a><a class="bk" target="_blank" rel="noopener" href="https://openlibrary.org/search?q=veterinary">Open Library: كتب بيطرية للاستعارة</a><a class="bk" target="_blank" rel="noopener" href="https://archive.org/search?query=veterinary">Internet Archive: كتب قديمة ومتاحة</a><a class="bk" target="_blank" rel="noopener" href="https://pmc.ncbi.nlm.nih.gov">PubMed Central: أبحاث مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://doaj.org">DOAJ: مجلات علمية مفتوحة</a><a class="bk" target="_blank" rel="noopener" href="https://scholar.google.com">Google Scholar</a></div>
-<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div></section><section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">عشر ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
+<div class="tool"><h3>🌡️ الحرارة الطبيعية للحيوان</h3><select id="spSel"><option value="">اختر النوع</option><option value="37.5–39.2°م (كلب)">كلب</option><option value="38.1–39.2°م (قط)">قط</option><option value="38.0–39.3°م (بقرة)">بقرة</option><option value="38.5–40.0°م (غنم)">غنم</option><option value="38.5–40.5°م (ماعز)">ماعز</option><option value="37.5–38.5°م (حصان)">حصان</option><option value="40.6–43.0°م (دجاج)">دجاج</option></select><div class="result" id="spRes">—</div><p class="small">قيم تقريبية مقيسة شرجيًا؛ الارتفاع الواضح يستدعي طبيبًا.</p></div></div></div></section></div><div class="my"><div class="tool" style="margin-top:14px"><h3>📰 مجلات وجرائد بيطرية</h3><h3 style="margin-top:12px">📰 مجلات علمية</h3><a class="dl" target="_blank" rel="noopener" href="https://veterinaryrecord.bmj.com"><b>Veterinary Record</b><span>مجلة البيطرة البريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://avmajournals.avma.org"><b>JAVMA</b><span>مجلة الجمعية الأمريكية للطب البيطري</span></a><a class="dl" target="_blank" rel="noopener" href="https://veterinaryresearch.biomedcentral.com"><b>Veterinary Research</b><span>أبحاث مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://actavetscand.biomedcentral.com"><b>Acta Veterinaria Scandinavica</b><span>أبحاث بيطرية مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://irishvetjournal.biomedcentral.com"><b>Irish Veterinary Journal</b><span>مجلة مفتوحة</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/vetsci"><b>Veterinary Sciences (MDPI)</b><span>مقالات مفتوحة الوصول</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.mdpi.com/journal/animals"><b>Animals (MDPI)</b><span>علوم الحيوان ورفاهه</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/preventive-veterinary-medicine"><b>Preventive Veterinary Medicine</b><span>الطب الوقائي والوبائيات</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.sciencedirect.com/journal/veterinary-parasitology"><b>Veterinary Parasitology</b><span>الطفيليات البيطرية</span></a><h3 style="margin-top:12px">🗞️ جرائد وأخبار بيطرية</h3><a class="dl" target="_blank" rel="noopener" href="https://www.dvm360.com"><b>DVM360</b><span>أخبار وموارد العيادات</span></a><a class="dl" target="_blank" rel="noopener" href="https://news.vin.com"><b>VIN News</b><span>أخبار المهنة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.avma.org/news"><b>AVMA News</b><span>أخبار الجمعية الأمريكية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.vettimes.co.uk"><b>Vet Times</b><span>صحيفة بيطرية بريطانية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.veterinarypracticenews.com"><b>Veterinary Practice News</b><span>أخبار الممارسة البيطرية</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thepoultrysite.com"><b>The Poultry Site</b><span>أخبار الدواجن</span></a><a class="dl" target="_blank" rel="noopener" href="https://www.thecattlesite.com"><b>The Cattle Site</b><span>أخبار الأبقار</span></a></div></div><section id="wonders" style="margin-top:30px"><div class="wrap"><div class="sectionHead"><div><h2>🐾 غرائب وعجائب الحيوانات</h2><p class="muted">قصص حقيقية موثّقة من التاريخ — حيوانات صنعت أحداثًا لا تُنسى.</p></div></div><div class="wp-grid"><article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Faithful%20Dog%20Hachiko%20Photo.png?width=1024" alt="هاتشيكو — كلب أكيتا ياباني" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🐕 هاتشيكو: الكلب الذي انتظر صاحبه عشر سنوات</h3>
+<p class="wp-meta">هاتشيكو — كلب أكيتا ياباني · طوكيو، اليابان، 1924–1935</p>
+<p>كان هاتشيكو كلبًا من سلالة أكيتا يرافق صاحبه الأستاذ الجامعي هيديسابورو أوينو كل صباح إلى محطة شيبويا في طوكيو، ويعود إلى المحطة مساءً لاستقباله. وفي مايو 1925 توفي الأستاذ فجأة أثناء عمله ولم يعد أبدًا، لكن هاتشيكو واصل الذهاب إلى المحطة كل يوم في موعد القطار نفسه لما يقارب عشر سنوات كاملة. ذاع صيته في الصحف اليابانية بوصفه رمزًا للوفاء، وظل على عادته حتى وفاته في 8 مارس 1935 قرب المحطة التي انتظر فيها كل تلك السنين.</p>
+<p class="wp-fact">⭐ أُقيم له تمثال برونزي أمام محطة شيبويا عام 1934 وهو ما زال حيًّا، وما زال التمثال أشهر نقطة لقاء في طوكيو حتى اليوم.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — Public domain</p></div></article>
+<article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Balto%201925.jpg?width=1024" alt="بالتو — كلب زلاجة سيبيري (هاسكي)" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🛷 بالتو: كلب الزلاجة الذي أنقذ مدينة من الدفتيريا</h3>
+<p class="wp-meta">بالتو — كلب زلاجة سيبيري (هاسكي) · ألاسكا، الولايات المتحدة، 1925</p>
+<p>في شتاء 1925 تفشّى وباء الدفتيريا القاتل في مدينة نوم المعزولة في ألاسكا، وكان المصل المضاد موجودًا على بُعد أكثر من ألف كيلومتر، في ظل عاصفة قطبية تمنع الطيران. نُقل المصل بسباق تتابع شارك فيه نحو عشرين سائق زلاجة وأكثر من مئة وخمسين كلبًا، وقاد بالتو الفريق في المرحلة الأخيرة والأخطر عبر العاصفة، فأوصل المصل إلى نوم فجر الثاني من فبراير. غطّت الصحف العالمية البطولة، وصار بالتو أشهر كلب زلاجة في العالم.</p>
+<p class="wp-fact">⭐ قطع سباق التتابع كاملًا مسافة 1085 كيلومترًا في خمسة أيام ونصف فقط، وهو إنجاز ما زال يُحتفى به سنويًّا في سباق «إيديتارود» الشهير.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — Public domain</p></div></article>
+<article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cher%20Ami.jpg?width=1024" alt="شير آمي — حمامة زاجلة" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🕊️ شير آمي: الحمامة التي أنقذت كتيبة كاملة</h3>
+<p class="wp-meta">شير آمي — حمامة زاجلة · غابة أرغون، فرنسا، 1918</p>
+<p>في أكتوبر 1918، خلال الحرب العالمية الأولى، حوصرت كتيبة أمريكية من الفرقة السابعة والسبعين في غابة أرغون بفرنسا، وانقطعت عنها الإمدادات، بل تعرضت لنيران صديقة خطأً. أرسل قائدها الرائد تشارلز ويتلسي آخر حمامة زاجلة لديه، شير آمي، تحمل رسالة تطلب وقف القصف. أُصيبت الحمامة في صدرها وفقدت إحدى ساقيها أثناء الطيران، لكنها أكملت مهمتها وقطعت نحو أربعين كيلومترًا، فوصلت الرسالة وتوقف القصف، ونُسب إليها إنقاذ نحو مئة وأربعة وتسعين جنديًّا.</p>
+<p class="wp-fact">⭐ منحتها فرنسا وسام «صليب الحرب» تقديرًا لبطولتها، وجسدها المحنّط معروض حتى اليوم في المتحف الوطني للتاريخ الأمريكي بواشنطن.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — Public domain</p></div></article>
+<article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Wojtek%2C%20the%20soldier%20bear.jpg?width=1024" alt="فويتيك — دب بني سوري" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🐻 فويتيك: الدب الذي صار جنديًّا رسميًّا في الجيش</h3>
+<p class="wp-meta">فويتيك — دب بني سوري · إيران وإيطاليا، 1942–1944</p>
+<p>في عام 1942 اشترى جنود بولنديون في إيران دبًّا صغيرًا يتيمًا من صبي محلي، وربّوه في وحدتهم حتى كبر وصار فردًا منها. سُمّي فويتيك، وانضم رسميًّا إلى الجيش البولندي برقم عسكري ورتبة، حتى يتمكن من التنقل مع الوحدة والحصول على حصته من الطعام. وفي معركة مونتي كاسينو في إيطاليا عام 1944، ساعد الجنود في حمل صناديق ذخيرة المدفعية الثقيلة، فصارت صورته وهو يحمل قذيفة شعارًا رسميًّا لوحدته.</p>
+<p class="wp-fact">⭐ رُقّي فويتيك إلى رتبة عريف، وبعد الحرب عاش بقية حياته في حديقة حيوان إدنبرة في اسكتلندا حتى وفاته عام 1963.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC0</p></div></article>
+<article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Laika%20in%201957.jpg?width=1024" alt="لايكا — كلبة فضاء سوفيتية" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🚀 لايكا: أول كائن حي يدور حول الأرض</h3>
+<p class="wp-meta">لايكا — كلبة فضاء سوفيتية · موسكو وبايكونور، 1957</p>
+<p>كانت لايكا كلبة ضالّة جُمعت من شوارع موسكو واختيرت لهدوئها وقدرتها على التحمل، فدُرّبت على البقاء في كبسولات ضيقة وعلى تحمّل اهتزازات الإطلاق. وفي الثالث من نوفمبر 1957 انطلقت على متن القمر الصناعي «سبوتنيك 2» لتصبح أول كائن حي يصل إلى مدار حول الأرض، مثبتةً أن الكائنات الحية تستطيع تحمّل الانطلاق إلى الفضاء. لم تكن عودتها ممكنة بتقنية ذلك الزمن، فماتت بعد ساعات من الإطلاق، وبقيت قصتها رمزًا مؤثرًا لتضحيات الحيوانات في سبيل العلم.</p>
+<p class="wp-fact">⭐ في عام 2008 كُشف عن تمثال للايكا قرب معهد أبحاث الطب العسكري في موسكو، تظهر فيه واقفة فوق نموذج لصاروخ فضائي.</p><p class="wp-note">الصورة من تدريبات كلاب الفضاء السوفيتية عام 1957.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY 4.0</p></div></article>
+<article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Able%20Seacat%20Simon.jpg?width=1024" alt="سايمون — قط سفينة حربية بريطانية" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🐈 سايمون: قط السفينة الحربية الحاصل على ميدالية البطولة</h3>
+<p class="wp-meta">سايمون — قط سفينة حربية بريطانية · نهر اليانغتسي، الصين، 1949</p>
+<p>كان سايمون قطًّا يعيش على متن الفرقاطة البريطانية «أميثيست»، مهمته مطاردة الجرذان وحماية مخزون الطعام ورفع معنويات الطاقم. وفي أبريل 1949 تعرضت السفينة لقصف عنيف أثناء حادثة اليانغتسي الشهيرة، فأُصيب سايمون بشظايا، لكنه عاد بعد تعافيه إلى مطاردة الجرذان التي تكاثرت خلال الحصار الذي استمر مئة وواحد يوم. وحين عادت السفينة إلى بريطانيا استُقبل سايمون بطلًا، وكتب له الأطفال من أنحاء البلاد.</p>
+<p class="wp-fact">⭐ سايمون هو القط الوحيد في التاريخ الحاصل على ميدالية ديكين، وهي أعلى وسام بريطاني لبطولة الحيوانات في الحرب.</p><p class="wp-note">الصورة لقطط سفينة حربية بريطانية من الحقبة نفسها — صورة سايمون الأصلية محفوظة في متحف وغير حرة النشر.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article>
+<article class="card wp-card">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/CleverHans.jpg?width=1024" alt="هانز الذكي — حصان ألماني" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>🐴 هانز الذكي: الحصان الذي علّم العلماء درسًا لا يُنسى</h3>
+<p class="wp-meta">هانز الذكي — حصان ألماني · برلين، ألمانيا، 1904–1907</p>
+<p>اشتهر الحصان هانز في برلين مطلع القرن العشرين بقدرته الظاهرة على إجراء العمليات الحسابية وضرب الأرض بحافره بعدد الإجابة الصحيحة، وجذبت عروضه جمهورًا كبيرًا من العلماء والمتفرجين. شكّلت السلطات لجنة علمية للتحقق، فتبيّن أنها ظاهرة حقيقية لكن بتفسير مختلف: كان هانز يقرأ تغيّرات لا إرادية بالكاد تُرى في ملامح السائل وتوتر جسده، فيتوقف عن الضرب عند الإجابة الصحيحة. لم يكن هانز يحسب، لكنه كان مراقبًا فائق الحساسية للبشر.</p>
+<p class="wp-fact">⭐ دخلت الظاهرة كتب علم النفس باسم «تأثير هانز الذكي»، وما زالت قاعدة أساسية عند تصميم تجارب سلوك الحيوان حتى اليوم: إخفاء الإجابة عن كل من يراه الحيوان.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — Public domain</p></div></article></div></div></section>
+</section><section id="view-pets" class="hidden space-y-8"><div class="wrap">
+<div class="sectionHead"><div><h2>🐶🐱 لأصحاب الكلاب والقطط</h2>
+<p class="muted">فصائل الكلاب والقطط بالصور والأسماء والمواصفات — وأداة ذكية لتتعرّف فصيلة حيوانك من صورته.</p></div></div>
+
+<div class="card" id="breedIdCard" style="margin-bottom:22px">
+<h3 style="margin-top:0">📸 اعرف فصيلة كلبك أو قطك من الصورة</h3>
+<p class="muted">ارفع صورة واضحة لحيوانك وسيحلّلها نموذج ذكاء اصطناعي يعمل داخل متصفحك مباشرة — صورتك لا تغادر جهازك أبدًا.</p>
+<input type="file" id="bidFile" accept="image/*">
+<img id="bidImg" class="bid-img" alt="صورة الحيوان المرفوعة">
+<div style="margin-top:10px"><button class="btn primary" id="bidGo" type="button">حلّل الصورة</button></div>
+<p id="bidStatus" class="muted" aria-live="polite"></p>
+<div id="bidResults"></div>
+</div>
+
+<input id="brdSearch" class="wp-search" type="search" placeholder="🔎 ابحث عن فصيلة… (لابرادور، سلوقي، سيامي، شيرازي)">
+<h3 class="wp-h3">🐶 فصائل الكلاب</h3>
+<div class="wp-grid"><article class="card wp-card brd-card" data-t="لابرادور ريتريفر labrador retriever">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_a_labrador_retriever.jpg?width=800" alt="لابرادور ريتريفر" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>لابرادور ريتريفر</h3>
+<p class="wp-meta">Labrador Retriever · الأصل: كندا</p>
+<p class="brd-specs">الحجم: كبير · الوزن: 25–36 كغ · العمر المتوقع: 10–12 سنة</p>
+<p><strong>الطبع:</strong> ودود، نشيط، ذكي — ممتاز مع العائلات والأطفال</p>
+<p class="wp-fact">💡 يحتاج إلى تمرين يومي وسباحة إن أمكن، وانتبه لوزنه لأنه يميل إلى السمنة وحب الأكل.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC0</p></div></article>
+<article class="card wp-card brd-card" data-t="الراعي الألماني german shepherd">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stray_German_Shepherd_Dog.jpg?width=800" alt="الراعي الألماني" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>الراعي الألماني</h3>
+<p class="wp-meta">German Shepherd · الأصل: ألمانيا</p>
+<p class="brd-specs">الحجم: كبير · الوزن: 22–40 كغ · العمر المتوقع: 9–13 سنة</p>
+<p><strong>الطبع:</strong> وفي، ذكي، شجاع — من أفضل كلاب الحراسة والخدمة</p>
+<p class="wp-fact">💡 يحتاج إلى تدريب مبكر ونشاط ذهني وجسدي يومي، وراقب صحة الوركين والمفاصل عند الطبيب البيطري.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="المسترد الذهبي golden retriever">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Retrievers_Dog_Show_Ooty_May25_A7CR_05589.jpg?width=800" alt="المسترد الذهبي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>المسترد الذهبي</h3>
+<p class="wp-meta">Golden Retriever · الأصل: اسكتلندا</p>
+<p class="brd-specs">الحجم: كبير · الوزن: 25–34 كغ · العمر المتوقع: 10–12 سنة</p>
+<p><strong>الطبع:</strong> لطيف، صبور، محب للناس — مثالي للعائلات والمبتدئين</p>
+<p class="wp-fact">💡 مشّط فراءه الكثيف أسبوعيًا، ووفّر له اللعب والسباحة، وانتبه لنظافة أذنيه بعد البلل.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="البلدوغ الفرنسي french bulldog">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B8%D0%B5_%D0%B1%D1%83%D0%BB%D1%8C%D0%B4%D0%BE%D0%B3%D0%B8_2013-09-02_11-36.JPG?width=800" alt="البلدوغ الفرنسي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>البلدوغ الفرنسي</h3>
+<p class="wp-meta">French Bulldog · الأصل: فرنسا</p>
+<p class="brd-specs">الحجم: صغير · الوزن: 8–14 كغ · العمر المتوقع: 10–14 سنة</p>
+<p><strong>الطبع:</strong> مرح، هادئ، عاطفي — رفيق شقق ممتاز</p>
+<p class="wp-fact">💡 تجنّب الحر والجهد الشديد بسبب أنفه القصير وصعوبة تنفسه، ونظّف ثنيات وجهه بانتظام.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article>
+<article class="card wp-card brd-card" data-t="البودل poodle">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Red_Standard_Poodle_Abigail_by_Don_Ramey_Logan.jpg?width=800" alt="البودل" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>البودل</h3>
+<p class="wp-meta">Poodle · الأصل: ألمانيا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 20–32 كغ · العمر المتوقع: 12–15 سنة</p>
+<p><strong>الطبع:</strong> ذكي جدًا، نشيط، أنيق — من أسهل السلالات تدريبًا</p>
+<p class="wp-fact">💡 فراؤه لا يتساقط تقريبًا لكنه يحتاج قصًا وتمشيطًا منتظمًا، ووفّر له ألعاب ذكاء يومية.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article>
+<article class="card wp-card brd-card" data-t="البيغل beagle">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Beagle_sleeping_in_Hautmont_%28DSC07212%29.jpg?width=800" alt="البيغل" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>البيغل</h3>
+<p class="wp-meta">Beagle · الأصل: إنجلترا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 9–11 كغ · العمر المتوقع: 12–15 سنة</p>
+<p><strong>الطبع:</strong> فضولي، مرح، اجتماعي — كلب صيد بحاسة شم قوية</p>
+<p class="wp-fact">💡 امشِ به مقيدًا دائمًا لأنه يتبع الروائح، ودرّبه بصبر وانتبه لوزنه لأنه شره في الأكل.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="الدشهند (كلب النقانق) dachshund">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Teckel_-_39.jpg?width=800" alt="الدشهند (كلب النقانق)" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>الدشهند (كلب النقانق)</h3>
+<p class="wp-meta">Dachshund · الأصل: ألمانيا</p>
+<p class="brd-specs">الحجم: صغير · الوزن: 7–14 كغ · العمر المتوقع: 12–16 سنة</p>
+<p><strong>الطبع:</strong> شجاع، عنيد، مرح — رغم صغر حجمه شخصيته كبيرة</p>
+<p class="wp-fact">💡 احمِ ظهره الطويل: امنع قفزه من الأماكن العالية وحافظ على وزنه مثاليًا لتجنب مشكلات العمود الفقري.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="الهاسكي السيبيري siberian husky">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Werfenweng_2018_Kat_B1_Philip_BOTT-8667.jpg?width=800" alt="الهاسكي السيبيري" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>الهاسكي السيبيري</h3>
+<p class="wp-meta">Siberian Husky · الأصل: سيبيريا، روسيا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 16–27 كغ · العمر المتوقع: 12–15 سنة</p>
+<p><strong>الطبع:</strong> نشيط، مستقل، ودود — كلب زلاجات يحب البرد والجري</p>
+<p class="wp-fact">💡 يحتاج جريًا يوميًا طويلًا وسورًا آمنًا لأنه بارع في الهروب، ومشّط فراءه الكثيف في موسم التساقط.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="بوردر كولي border collie">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Border_Collie_with_Heterochromia.jpg?width=800" alt="بوردر كولي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>بوردر كولي</h3>
+<p class="wp-meta">Border Collie · الأصل: المملكة المتحدة (حدود اسكتلندا وإنجلترا)</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 14–20 كغ · العمر المتوقع: 12–15 سنة</p>
+<p><strong>الطبع:</strong> الأذكى بين الكلاب، عامل لا يكلّ — يحتاج مهمة دائمًا</p>
+<p class="wp-fact">💡 لا يناسب الكسل: وفّر له تدريبًا وألعاب ذكاء ونشاطًا يوميًا مكثفًا وإلا ابتكر مشكلاته بنفسه.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="كورجي بيمبروك الويلزي pembroke welsh corgi">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pembroke_Welsh_Corgi_Tank.jpg?width=800" alt="كورجي بيمبروك الويلزي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>كورجي بيمبروك الويلزي</h3>
+<p class="wp-meta">Pembroke Welsh Corgi · الأصل: ويلز</p>
+<p class="brd-specs">الحجم: صغير · الوزن: 10–14 كغ · العمر المتوقع: 12–15 سنة</p>
+<p><strong>الطبع:</strong> ذكي، جريء، مرح — كلب رعي قصير الأرجل قوي الشخصية</p>
+<p class="wp-fact">💡 راقب وزنه لأن ظهره الطويل لا يحتمل السمنة، ودرّبه بحزم لطيف فهو يميل للقيادة والعناد.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="شي تزو shih tzu">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shih_Tzu_%28Dog_Walk%29.jpg?width=800" alt="شي تزو" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>شي تزو</h3>
+<p class="wp-meta">Shih Tzu · الأصل: الصين</p>
+<p class="brd-specs">الحجم: صغير · الوزن: 4–7 كغ · العمر المتوقع: 10–16 سنة</p>
+<p><strong>الطبع:</strong> عاطفي، هادئ، اجتماعي — كلب حضن ورفقة بامتياز</p>
+<p class="wp-fact">💡 فراؤه الطويل يحتاج تمشيطًا يوميًا وتنظيفًا حول العينين، وتجنّب تعريضه للحر الشديد.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="السلوقي العربي saluki">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Head_Back_Saluki_Dog_Show_2026_Ooty_May26_A7CR_10804.jpg?width=800" alt="السلوقي العربي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>السلوقي العربي</h3>
+<p class="wp-meta">Saluki · الأصل: شبه الجزيرة العربية والشرق الأوسط</p>
+<p class="brd-specs">الحجم: كبير · الوزن: 18–27 كغ · العمر المتوقع: 12–14 سنة</p>
+<p><strong>الطبع:</strong> هادئ، نبيل، مستقل — أقدم كلاب الصيد العربية وأسرعها تقريبًا</p>
+<p class="wp-fact">💡 يحتاج مساحات آمنة للعدو السريع وجلسات جري منتظمة، وهو حساس بطبعه فيُدرَّب برفق ودون قسوة.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article></div>
+<h3 class="wp-h3">🐱 فصائل القطط</h3>
+<div class="wp-grid"><article class="card wp-card brd-card" data-t="القط الفارسي (الشيرازي) persian cat">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Persian_in_Cat_Cafe.jpg?width=800" alt="القط الفارسي (الشيرازي)" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>القط الفارسي (الشيرازي)</h3>
+<p class="wp-meta">Persian Cat · الأصل: إيران (فارس)</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–6 كغ · العمر المتوقع: 12–17 سنة</p>
+<p><strong>الطبع:</strong> هادئ، رقيق، محب للروتين — قط منزلي مثالي</p>
+<p class="wp-fact">💡 مشّط فراءه الطويل يوميًا كي لا يتشابك، ونظّف عينيه بانتظام، وراقب كليتيه بفحوص دورية.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 2.0</p></div></article>
+<article class="card wp-card brd-card" data-t="القط السيامي siamese cat">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Siamese_cat%2C_chocolate_point.jpg?width=800" alt="القط السيامي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>القط السيامي</h3>
+<p class="wp-meta">Siamese Cat · الأصل: تايلاند</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–6 كغ · العمر المتوقع: 15–20 سنة</p>
+<p><strong>الطبع:</strong> ثرثار، ذكي، اجتماعي جدًا — يرتبط بصاحبه بقوة</p>
+<p class="wp-fact">💡 لا يحب الوحدة: وفّر له رفقة ولعبًا تفاعليًا يوميًا، وفراؤه القصير سهل العناية بتمشيط أسبوعي.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="مين كون maine coon">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Maine_Coon_Meowing.jpg?width=800" alt="مين كون" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>مين كون</h3>
+<p class="wp-meta">Maine Coon · الأصل: الولايات المتحدة (ولاية مين)</p>
+<p class="brd-specs">الحجم: كبير · الوزن: 4–8 كغ · العمر المتوقع: 12–15 سنة</p>
+<p><strong>الطبع:</strong> عملاق لطيف، هادئ وواثق — ودود مع الأطفال والكلاب</p>
+<p class="wp-fact">💡 مشّط فراءه الكثيف مرتين أسبوعيًا، ووفّر له شجرة تسلق قوية تناسب حجمه الكبير ووزنه.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="القط البريطاني قصير الشعر british shorthair">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sitzende_graue_Mieze_20201026_DSC5103.jpg?width=800" alt="القط البريطاني قصير الشعر" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>القط البريطاني قصير الشعر</h3>
+<p class="wp-meta">British Shorthair · الأصل: المملكة المتحدة</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 4–8 كغ · العمر المتوقع: 14–20 سنة</p>
+<p><strong>الطبع:</strong> هادئ، مستقل، متوازن — رفيق راقٍ قليل المطالب</p>
+<p class="wp-fact">💡 يميل إلى السمنة: اضبط حصص طعامه وشجّعه على اللعب اليومي، ومشّط فراءه الكثيف أسبوعيًا.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="قط البنغال bengal cat">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bengal_-_20150311_14h56_%2810000%29.jpg?width=800" alt="قط البنغال" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>قط البنغال</h3>
+<p class="wp-meta">Bengal Cat · الأصل: الولايات المتحدة</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 4–7 كغ · العمر المتوقع: 12–16 سنة</p>
+<p><strong>الطبع:</strong> نشيط، فضولي، ذكي — فراء مرقّط كالنمر وطاقة عالية</p>
+<p class="wp-fact">💡 يحتاج لعبًا وتسلقًا وتحفيزًا ذهنيًا يوميًا، وكثير منها يحب الماء فلا تتفاجأ بفضوله حوله.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="قط سفينكس (أبو الهول) sphynx cat">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cat_Sphynx._Kittens._img_20.jpg?width=800" alt="قط سفينكس (أبو الهول)" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>قط سفينكس (أبو الهول)</h3>
+<p class="wp-meta">Sphynx Cat · الأصل: كندا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–6 كغ · العمر المتوقع: 9–13 سنة</p>
+<p><strong>الطبع:</strong> عاطفي، اجتماعي، مرح — يلازم صاحبه كالظل</p>
+<p class="wp-fact">💡 بلا فراء: حمّمه بانتظام لإزالة زيوت الجلد، واحمِه من البرد والشمس المباشرة داخل المنزل.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="راغدول ragdoll">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ragdoll_cat_resting_%28July_30%2C_2022%29.jpg?width=800" alt="راغدول" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>راغدول</h3>
+<p class="wp-meta">Ragdoll · الأصل: الولايات المتحدة</p>
+<p class="brd-specs">الحجم: كبير · الوزن: 4–9 كغ · العمر المتوقع: 12–17 سنة</p>
+<p><strong>الطبع:</strong> مسترخٍ، حنون، هادئ — يسترخي بين الذراعين كدمية قماش</p>
+<p class="wp-fact">💡 فراؤه الحريري نصف الطويل يحتاج تمشيطًا أسبوعيًا، وهو قط منزلي تمامًا لا يُترك خارجًا وحده.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC0</p></div></article>
+<article class="card wp-card brd-card" data-t="القط الاسكتلندي مطوي الأذن scottish fold">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Scottish_Fold_cat_%28blue%29.jpg?width=800" alt="القط الاسكتلندي مطوي الأذن" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>القط الاسكتلندي مطوي الأذن</h3>
+<p class="wp-meta">Scottish Fold · الأصل: اسكتلندا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–6 كغ · العمر المتوقع: 11–15 سنة</p>
+<p><strong>الطبع:</strong> هادئ، لطيف، متكيّف — ملامحه البومية تأسر القلوب</p>
+<p class="wp-fact">💡 راقب مفاصله عند الطبيب البيطري بانتظام لأن السلالة عرضة لمشكلات غضروفية، واعتنِ بأذنيه المطويتين بتنظيف لطيف.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article>
+<article class="card wp-card brd-card" data-t="القط الحبشي abyssinian cat">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Abyssinian_cat_-_Patricia.jpg?width=800" alt="القط الحبشي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>القط الحبشي</h3>
+<p class="wp-meta">Abyssinian Cat · الأصل: إثيوبيا (الحبشة)</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–5 كغ · العمر المتوقع: 9–15 سنة</p>
+<p><strong>الطبع:</strong> نشيط، ذكي، فضولي — من أقدم السلالات وأكثرها حبًا للعب</p>
+<p class="wp-fact">💡 وفّر له أماكن تسلق عالية وألعابًا تفاعلية يومية، وفراؤه القصير لا يحتاج إلا تمشيطًا أسبوعيًا.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="الأزرق الروسي russian blue">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Russian_Blue_AB.jpg?width=800" alt="الأزرق الروسي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>الأزرق الروسي</h3>
+<p class="wp-meta">Russian Blue · الأصل: روسيا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–7 كغ · العمر المتوقع: 15–20 سنة</p>
+<p><strong>الطبع:</strong> هادئ، خجول مع الغرباء، وفيّ لأسرته — فراء فضي مخملي</p>
+<p class="wp-fact">💡 يحب الروتين والهدوء: ثبّت مواعيد إطعامه ولعبه، ومشّط فراءه المزدوج مرة أسبوعيًا.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 4.0</p></div></article>
+<article class="card wp-card brd-card" data-t="الأنجورا التركي turkish angora">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Turkish_angora-cat.JPG?width=800" alt="الأنجورا التركي" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>الأنجورا التركي</h3>
+<p class="wp-meta">Turkish Angora · الأصل: تركيا</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 2.5–5 كغ · العمر المتوقع: 12–18 سنة</p>
+<p><strong>الطبع:</strong> رشيق، ذكي، مرح — فراء أبيض حريري وعشق للمرتفعات</p>
+<p class="wp-fact">💡 مشّط فراءه الحريري مرتين أسبوعيًا، واعلم أن الأنجورا الأبيض ذا العينين الزرقاوين قد يولد أصمّ فيُفحص سمعه صغيرًا.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article>
+<article class="card wp-card brd-card" data-t="الماو العربي (القط العربي) arabian mau">
+<img class="wp-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Arabian_Mau_Cat.jpg?width=800" alt="الماو العربي (القط العربي)" loading="lazy" referrerpolicy="no-referrer">
+<div class="wp-body"><h3>الماو العربي (القط العربي)</h3>
+<p class="wp-meta">Arabian Mau · الأصل: شبه الجزيرة العربية</p>
+<p class="brd-specs">الحجم: متوسط · الوزن: 3–6 كغ · العمر المتوقع: 12–14 سنة</p>
+<p><strong>الطبع:</strong> قوي، مستقل، صياد ماهر — قط صحراوي متأقلم مع الحر</p>
+<p class="wp-fact">💡 سلالة طبيعية قوية التحمل: وفّر له نشاطًا ولعب صيد يوميًا، وفراؤه القصير سهل العناية جدًا.</p>
+<p class="wp-src">الصورة: Wikimedia Commons — CC BY-SA 3.0</p></div></article></div>
+</div></section>
+<section id="view-fun" class="hidden space-y-8"><div class="my space-y-8"><section><div class="wrap"><div class="sectionHead"><div><h2>🎮 ألعاب حيوانات عصرية</h2><p class="muted">عشر ألعاب حديثة بصور حقيقية وحركة سلسة، تعمل باللمس ولوحة المفاتيح، وتحفظ أفضل نتائجك على جهازك.</p></div></div>
 <div class="gameGrid">
 <div class="card game mg"><div><div class="icon">🃏</div><h3>ذاكرة الصور</h3><p class="muted">اقلب البطاقات وطابق صور الحيوانات بأقل حركات وأسرع وقت.</p>
 <div class="mg-bar"><select id="mmLevel" class="mg-sel" aria-label="المستوى"><option value="6">سهل · 6 أزواج</option><option value="8">متوسط · 8 أزواج</option></select><button class="btn primary" id="mmNew">لعبة جديدة</button></div>
@@ -2306,7 +2582,7 @@ html.perf-idle body #cv{display:none!important}
  <div class="cols">
   <div><div class="brand"><b><img src="assets/logo/logo-mark.webp" alt="شعار VetAI Global" width="38" height="38" decoding="async"></b><span class="g">VetAI</span></div><p style="max-width:340px">منصة بيطرية عربية مجانية بإشراف د. محجوبي عبدالناصر: مرجع سريري، أدوات ذكية، دروس واختبارات ومكتبة علمية.</p><p style="margin-top:12px" class="live">المنصة تعمل (Online)</p></div>
   <div><h4>المنصة</h4><a onclick="switchTab('home')">الرئيسية</a><a onclick="switchTab('ai-diagnostics')">مُقيِّم الأعراض الذكي</a><a onclick="switchTab('ref')">المرجع السريري</a><a onclick="switchTab('services')">الخدمات</a></div>
-  <div><h4>تعلّم</h4><a onclick="switchTab('exams')">الدروس والاختبارات</a><a onclick="switchTab('library')">المكتبة والكتب</a><a onclick="switchTab('chat')">المجتمع</a><a onclick="switchTab('fun')">ألعاب ووسائط</a></div>
+  <div><h4>تعلّم</h4><a onclick="switchTab('exams')">الدروس والاختبارات</a><a onclick="switchTab('library')">المكتبة والكتب</a><a onclick="switchTab('pets')">أصحاب الكلاب والقطط</a><a onclick="switchTab('chat')">المجتمع</a><a onclick="switchTab('fun')">ألعاب ووسائط</a></div>
   <div><h4>عنّا</h4><a onclick="switchTab('creator')">المؤسس والتواصل</a><a onclick="switchTab('about')">عن المنصة</a><a onclick="switchTab('legal')">الخصوصية والشروط</a><a href="tel:+14152793963"><bdi dir="ltr">+1 (415) 279-3963</bdi></a><a href="https://www.facebook.com/profile.php?id=61580238681634&amp;mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">فيسبوك</a></div>
  </div>
  <div class="bot"><span>© 2026 VetAI · إشراف وتصميم: د. محجوبي عبدالناصر</span><span>المحتوى تعليمي ولا يغني عن الفحص السريري للطبيب البيطري.</span></div>
@@ -5437,6 +5713,7 @@ arm();
 })();
 
 </script>
+<script src="js/breed-id.js"></script>
 </body>
   
 </html>
