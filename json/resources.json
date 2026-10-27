@@ -1,240 +1,265 @@
 {
-  "books": [
+ "books": [
+  {
+   "title": "الطب الوقائي البيطري (جامعة مينيسوتا): كتاب مفتوح",
+   "url": "https://pressbooks.umn.edu/vetprevmed/"
+  },
+  {
+   "title": "علم الأنسجة البيطري: كتاب مفتوح",
+   "url": "https://open.umn.edu/opentextbooks/textbooks/veterinary-histology"
+  },
+  {
+   "title": "تشريح ووظائف أعضاء الحيوانات: كتاب مفتوح",
+   "url": "https://open.umn.edu/opentextbooks/textbooks/anatomy-and-physiology-of-animals"
+  },
+  {
+   "title": "جراحة الحيوانات الكبيرة: ملاحظات تكميلية مجانية",
+   "url": "https://open.lib.umn.edu/largeanimalsurgery/"
+  },
+  {
+   "title": "أمراض الخنازير: كتاب مفتوح",
+   "url": "https://open.lib.umn.edu/swinedisease/"
+  },
+  {
+   "title": "الوبائيات البيطرية (Martin وMeek وWilleberg): تحميل مجاني",
+   "url": "https://vtechworks.lib.vt.edu/handle/10919/72274"
+  },
+  {
+   "title": "IntechOpen: مئات الكتب المفتوحة في الطب البيطري",
+   "url": "https://www.intechopen.com/search?term=veterinary%20medicine"
+  },
+  {
+   "title": "eClinPath: كتاب الباثولوجيا السريرية (جامعة كورنيل)",
+   "url": "https://eclinpath.com"
+  },
+  {
+   "title": "WikiVet: موسوعة بيطرية تعاونية",
+   "url": "https://en.wikivet.net/Veterinary_Education_Online"
+  },
+  {
+   "title": "OER Commons: موارد تعليمية بيطرية مفتوحة",
+   "url": "https://www.oercommons.org/browse?f.keyword=veterinary-medicine"
+  },
+  {
+   "title": "إرشادات WSAVA العالمية: التلقيح والألم والتغذية (مجانية)",
+   "url": "https://wsava.org/Global-Guidelines/"
+  },
+  {
+   "title": "WOAH: بوابة الأمراض الحيوانية",
+   "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/animal-diseases/"
+  },
+  {
+   "title": "WAHIS: بلاغات الأوبئة الحيوانية في العالم",
+   "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/disease-data-collection/"
+  },
+  {
+   "title": "جامعة كورنيل: عرض تعليمي لتشريح الجثث (Necropsy)",
+   "url": "https://secure.vet.cornell.edu/nst/"
+  },
+  {
+   "title": "LafeberVet: موارد الحيوانات الغريبة",
+   "url": "https://lafeber.com/vet/"
+  },
+  {
+   "title": "vetFOAMed: فهرس موارد بيطرية مفتوحة",
+   "url": "https://www.vetfoamed.com/"
+  },
+  {
+   "title": "BestBETs for Vets: قرارات سريرية مبنية على الدليل",
+   "url": "https://bestbetsforvets.org"
+  },
+  {
+   "title": "AfriVIP: مكتبة مفتوحة للتكوين البيطري في إفريقيا (بالفرنسية)",
+   "url": "https://www.africavet.com/afrivip-la-bibliotheque-ouverte-qui-change-la-formation-veterinaire-en-afrique/"
+  },
+  {
+   "title": "Veterinary Partner: معلومات موثوقة لأصحاب الحيوانات",
+   "url": "https://veterinarypartner.vin.com"
+  },
+  {
+   "title": "دليل ميرك البيطري (Merck Veterinary Manual): المرجع البيطري الشامل",
+   "url": "https://www.merckvetmanual.com/"
+  },
+  {
+   "title": "ممارسات الإدارة الجيدة للطوارئ: الأساسيات — دليل الاستعداد لطوارئ صحة الحيوان (FAO، الطبعة الثالثة 2021)",
+   "url": "https://openknowledge.fao.org/items/51d6cda8-e3ba-4ccf-a83e-c2d151cf59ed"
+  },
+  {
+   "title": "دليل إدارة العمليات أثناء طوارئ صحة الحيوان (FAO، 2022)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/cc0068en"
+  },
+  {
+   "title": "تقرير مشاورة خبراء منظمة الصحة العالمية حول داء الكلب (WHO)",
+   "url": "https://iris.who.int/items/058787ac-d0f7-4aac-9622-8896ff60907b"
+  },
+  {
+   "title": "داء الكلب: صحيفة حقائق منظمة الصحة العالمية (WHO)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/rabies"
+  },
+  {
+   "title": "بوابة الصحة الحيوانية — منظمة الأغذية والزراعة للأمم المتحدة (FAO)",
+   "url": "https://www.fao.org/animal-health/en"
+  },
+  {
+   "title": "Rabies awareness (WHO)",
+   "url": "https://iris.who.int/items/72a237ac-d277-49f2-b186-d8e289b42b12"
+  },
+  {
+   "title": "Les zoonoses (WHO)",
+   "url": "https://iris.who.int/items/33d3e7cf-2ee9-45ba-8cdd-400cf5f79d13"
+  },
+  {
+   "title": "Guidelines on the hygienic disposal and rendering of dead animals and animal wastes to protect human and animal health (WHO)",
+   "url": "https://iris.who.int/items/0ecf155a-781d-4c87-ab40-bfb1dffbcc91"
+  },
+  {
+   "title": "2026 Watch List: Regenerative Medicine: Health Technologies (NCBI Bookshelf)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517/"
+  },
+  {
+   "title": "A comprehensive external Rabies Control Programme review in Sri Lanka. Report of a WHO mission, 8–15 September 2025 (WHO)",
+   "url": "https://iris.who.int/items/9c8d23a0-1d82-4e86-8940-f6a213a5bd51"
+  },
+  {
+   "title": "A comprehensive integrated review of malaria, leishmaniasis, filariasis and dengue control programmes in Sri Lanka. Report of a WHO mission, 13–20 May 2024 (WHO)",
+   "url": "https://iris.who.int/items/20c26ffa-7fbd-4617-912f-fbd91fba8d49"
+  },
+  {
+   "title": "Target regimen profiles for long-acting injectables for tuberculosis prevention and treatment (WHO)",
+   "url": "https://iris.who.int/items/eb857d6c-254f-4722-956b-23be3a65517a"
+  },
+  {
+   "title": "Cupping therapy: descriptive synthesis of training (WHO)",
+   "url": "https://iris.who.int/items/de67e00e-abda-4d95-8a11-620d435fab5a"
+  },
+  {
+   "title": "WHO public health research agenda for influenza (WHO)",
+   "url": "https://iris.who.int/items/3c32c85f-47d0-4024-b614-5c8a7650a064"
+  },
+  {
+   "title": "WHO Strategic and Technical Advisory Group on Antimicrobial Resistance (STAG-AMR): report of the fifth meeting, 24-25 June 2025 (WHO)",
+   "url": "https://iris.who.int/items/e93982d1-5347-4e11-9bc8-c5f8c2e56d86"
+  },
+  {
+   "title": "دليل ميرك البيطري الكامل (Merck Veterinary Manual): المرجع البيطري الأشهر عالميًا — مجاني بالكامل",
+   "url": "https://www.merckvetmanual.com"
+  },
+  {
+   "title": "مدونة صحة الحيوان الأرضي (WOAH): المعايير الدولية الرسمية لصحة الحيوان وتجارته",
+   "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-code-online-access/"
+  },
+  {
+   "title": "الدليل الأرضي للاختبارات التشخيصية واللقاحات للحيوانات (WOAH Manual)",
+   "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-manual-online-access/"
+  },
+  {
+   "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي «الناغانا» في جنوب أفريقيا (NCBI Bookshelf، 2025)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK625264/"
+  },
+  {
+   "title": "معدات الوقاية الشخصية من إنفلونزا الطيور A(H5N1) في المزارع عالية الخطورة (NCBI Bookshelf، 2026)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK622800/"
+  },
+  {
+   "title": "WHO pandemic influenza vaccine response: operational plan (WHO)",
+   "url": "https://iris.who.int/items/8231b0b9-626c-426d-b731-a81ca920a7d5"
+  },
+  {
+   "title": "Operational and implementation research for strengthening health emergency capacities: a research agenda for evidence-based practice (WHO)",
+   "url": "https://iris.who.int/items/bc35896d-f348-4edc-b60f-80ca40be1c62"
+  },
+  {
+   "title": "Philippines–WHO country cooperation strategy 2025–2028 (WHO)",
+   "url": "https://iris.who.int/items/aeaba889-7ffb-43ce-bc3d-19ae21d42a28"
+  },
+  {
+   "title": "إرشادات ABCD الأوروبية لأمراض القطط المعدية: وقاية وتشخيص وإدارة",
+   "url": "https://www.abcdcatsvets.org",
+   "desc": "إرشادات مجانية من المجلس الاستشاري الأوروبي لأمراض القطط، تُحدَّث دوريًا وتغطي أهم الأمراض الفيروسية والبكتيرية للقطط."
+  },
+  {
+   "title": "مكتبة إرشادات AAHA: الجمعية الأمريكية لمستشفيات الحيوانات",
+   "url": "https://www.aaha.org",
+   "desc": "إرشادات سريرية مجانية في التلقيح وطب الأسنان وإدارة الألم والتغذية ورعاية مراحل العمر للكلاب والقطط."
+  },
+  {
+   "title": "IVIS: الخدمة المعلوماتية البيطرية الدولية — كتب ومحاضر مؤتمرات",
+   "url": "https://www.ivis.org",
+   "desc": "مكتبة بيطرية ضخمة بكتب ومحاضر مؤتمرات عالمية؛ التسجيل مجاني للأطباء والطلاب."
+  },
+  {
+   "title": "دليل الأدوية البيطرية البريطاني NOAH Compendium",
+   "url": "https://www.noahcompendium.co.uk",
+   "desc": "المرجع الرسمي البريطاني لبيانات الأدوية البيطرية المرخصة: دواعي الاستعمال وفترات السحب والتحذيرات."
+  },
+  {
+   "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي (الناغانا) — كتاب مفتوح 2025",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK5930434/",
+   "desc": "كتاب بحثي مفتوح الوصول (NCBI Bookshelf) حول بيولوجيا ذبابة تسي تسي ومكافحة الناغانا في إفريقيا."
+  }
+ ],
+ "journals": [
+  {
+   "title": "Egyptian Journal of Veterinary Sciences",
+   "desc": "مجلة مصرية مفتوحة الوصول",
+   "url": "https://ejvs.journals.ekb.eg"
+  },
+  {
+   "title": "Journal of the Egyptian Veterinary Medical Association",
+   "desc": "مجلة مفتوحة الوصول لجمعية الأطباء البيطريين المصرية",
+   "url": "https://jevma.journals.ekb.eg"
+  },
+  {
+   "title": "ASJP: المنصة الجزائرية للمجلات العلمية",
+   "desc": "مجلات جزائرية محكمة؛ ابحث فيها عن: بيطري",
+   "url": "https://asjp.cerist.dz"
+  }
+ ],
+ "communities": [
+  {
+   "group": "🇩🇿 الجزائر والعالم العربي",
+   "items": [
     {
-      "title": "الطب الوقائي البيطري (جامعة مينيسوتا): كتاب مفتوح",
-      "url": "https://pressbooks.umn.edu/vetprevmed/"
+     "title": "المدرسة الوطنية العليا للبيطرة (ENSV)",
+     "desc": "التكوين والخدمات والإعلانات الرسمية للمدرسة",
+     "url": "https://www.ensv.dz"
     },
     {
-      "title": "علم الأنسجة البيطري: كتاب مفتوح",
-      "url": "https://open.umn.edu/opentextbooks/textbooks/veterinary-histology"
+     "title": "مجتمع الأطباء البيطريين (Vets Community)",
+     "desc": "منصة عربية مجانية تعليمية واجتماعية للأطباء والطلبة",
+     "url": "https://vets-community.com/"
     },
     {
-      "title": "تشريح ووظائف أعضاء الحيوانات: كتاب مفتوح",
-      "url": "https://open.umn.edu/opentextbooks/textbooks/anatomy-and-physiology-of-animals"
+     "title": "المعهد الوطني للطب البيطري (INMV)",
+     "desc": "ابحث عن موقعه الرسمي ونشراته",
+     "url": "https://www.google.com/search?q=INMV+Institut+National+de+la+M%C3%A9decine+V%C3%A9t%C3%A9rinaire+Alg%C3%A9rie"
     },
     {
-      "title": "جراحة الحيوانات الكبيرة: ملاحظات تكميلية مجانية",
-      "url": "https://open.lib.umn.edu/largeanimalsurgery/"
+     "title": "مديرية المصالح البيطرية (وزارة الفلاحة)",
+     "desc": "ابحث عن القوانين والإعلانات الرسمية",
+     "url": "https://www.google.com/search?q=Direction+des+Services+V%C3%A9t%C3%A9rinaires+Alg%C3%A9rie"
     },
     {
-      "title": "أمراض الخنازير: كتاب مفتوح",
-      "url": "https://open.lib.umn.edu/swinedisease/"
-    },
-    {
-      "title": "الوبائيات البيطرية (Martin وMeek وWilleberg): تحميل مجاني",
-      "url": "https://vtechworks.lib.vt.edu/handle/10919/72274"
-    },
-    {
-      "title": "IntechOpen: مئات الكتب المفتوحة في الطب البيطري",
-      "url": "https://www.intechopen.com/search?term=veterinary%20medicine"
-    },
-    {
-      "title": "eClinPath: كتاب الباثولوجيا السريرية (جامعة كورنيل)",
-      "url": "https://eclinpath.com"
-    },
-    {
-      "title": "WikiVet: موسوعة بيطرية تعاونية",
-      "url": "https://en.wikivet.net/Veterinary_Education_Online"
-    },
-    {
-      "title": "OER Commons: موارد تعليمية بيطرية مفتوحة",
-      "url": "https://www.oercommons.org/browse?f.keyword=veterinary-medicine"
-    },
-    {
-      "title": "إرشادات WSAVA العالمية: التلقيح والألم والتغذية (مجانية)",
-      "url": "https://wsava.org/Global-Guidelines/"
-    },
-    {
-      "title": "WOAH: بوابة الأمراض الحيوانية",
-      "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/animal-diseases/"
-    },
-    {
-      "title": "WAHIS: بلاغات الأوبئة الحيوانية في العالم",
-      "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/disease-data-collection/"
-    },
-    {
-      "title": "جامعة كورنيل: عرض تعليمي لتشريح الجثث (Necropsy)",
-      "url": "https://secure.vet.cornell.edu/nst/"
-    },
-    {
-      "title": "LafeberVet: موارد الحيوانات الغريبة",
-      "url": "https://lafeber.com/vet/"
-    },
-    {
-      "title": "vetFOAMed: فهرس موارد بيطرية مفتوحة",
-      "url": "https://www.vetfoamed.com/"
-    },
-    {
-      "title": "BestBETs for Vets: قرارات سريرية مبنية على الدليل",
-      "url": "https://bestbetsforvets.org"
-    },
-    {
-      "title": "AfriVIP: مكتبة مفتوحة للتكوين البيطري في إفريقيا (بالفرنسية)",
-      "url": "https://www.africavet.com/afrivip-la-bibliotheque-ouverte-qui-change-la-formation-veterinaire-en-afrique/"
-    },
-    {
-      "title": "Veterinary Partner: معلومات موثوقة لأصحاب الحيوانات",
-      "url": "https://veterinarypartner.vin.com"
-    },
-    {
-      "title": "دليل ميرك البيطري (Merck Veterinary Manual): المرجع البيطري الشامل",
-      "url": "https://www.merckvetmanual.com/"
-    },
-    {
-      "title": "ممارسات الإدارة الجيدة للطوارئ: الأساسيات — دليل الاستعداد لطوارئ صحة الحيوان (FAO، الطبعة الثالثة 2021)",
-      "url": "https://openknowledge.fao.org/items/51d6cda8-e3ba-4ccf-a83e-c2d151cf59ed"
-    },
-    {
-      "title": "دليل إدارة العمليات أثناء طوارئ صحة الحيوان (FAO، 2022)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/cc0068en"
-    },
-    {
-      "title": "تقرير مشاورة خبراء منظمة الصحة العالمية حول داء الكلب (WHO)",
-      "url": "https://iris.who.int/items/058787ac-d0f7-4aac-9622-8896ff60907b"
-    },
-    {
-      "title": "داء الكلب: صحيفة حقائق منظمة الصحة العالمية (WHO)",
-      "url": "https://www.who.int/news-room/fact-sheets/detail/rabies"
-    },
-    {
-      "title": "بوابة الصحة الحيوانية — منظمة الأغذية والزراعة للأمم المتحدة (FAO)",
-      "url": "https://www.fao.org/animal-health/en"
-    },
-    {
-      "title": "Rabies awareness (WHO)",
-      "url": "https://iris.who.int/items/72a237ac-d277-49f2-b186-d8e289b42b12"
-    },
-    {
-      "title": "Les zoonoses (WHO)",
-      "url": "https://iris.who.int/items/33d3e7cf-2ee9-45ba-8cdd-400cf5f79d13"
-    },
-    {
-      "title": "Guidelines on the hygienic disposal and rendering of dead animals and animal wastes to protect human and animal health (WHO)",
-      "url": "https://iris.who.int/items/0ecf155a-781d-4c87-ab40-bfb1dffbcc91"
-    },
-    {
-      "title": "2026 Watch List: Regenerative Medicine: Health Technologies (NCBI Bookshelf)",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517/"
-    },
-    {
-      "title": "A comprehensive external Rabies Control Programme review in Sri Lanka. Report of a WHO mission, 8–15 September 2025 (WHO)",
-      "url": "https://iris.who.int/items/9c8d23a0-1d82-4e86-8940-f6a213a5bd51"
-    },
-    {
-      "title": "A comprehensive integrated review of malaria, leishmaniasis, filariasis and dengue control programmes in Sri Lanka. Report of a WHO mission, 13–20 May 2024 (WHO)",
-      "url": "https://iris.who.int/items/20c26ffa-7fbd-4617-912f-fbd91fba8d49"
-    },
-    {
-      "title": "Target regimen profiles for long-acting injectables for tuberculosis prevention and treatment (WHO)",
-      "url": "https://iris.who.int/items/eb857d6c-254f-4722-956b-23be3a65517a"
-    },
-    {
-      "title": "Cupping therapy: descriptive synthesis of training (WHO)",
-      "url": "https://iris.who.int/items/de67e00e-abda-4d95-8a11-620d435fab5a"
-    },
-    {
-      "title": "WHO public health research agenda for influenza (WHO)",
-      "url": "https://iris.who.int/items/3c32c85f-47d0-4024-b614-5c8a7650a064"
-    },
-    {
-      "title": "WHO Strategic and Technical Advisory Group on Antimicrobial Resistance (STAG-AMR): report of the fifth meeting, 24-25 June 2025 (WHO)",
-      "url": "https://iris.who.int/items/e93982d1-5347-4e11-9bc8-c5f8c2e56d86"
-    },
-    {
-      "title": "دليل ميرك البيطري الكامل (Merck Veterinary Manual): المرجع البيطري الأشهر عالميًا — مجاني بالكامل",
-      "url": "https://www.merckvetmanual.com"
-    },
-    {
-      "title": "مدونة صحة الحيوان الأرضي (WOAH): المعايير الدولية الرسمية لصحة الحيوان وتجارته",
-      "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-code-online-access/"
-    },
-    {
-      "title": "الدليل الأرضي للاختبارات التشخيصية واللقاحات للحيوانات (WOAH Manual)",
-      "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-manual-online-access/"
-    },
-    {
-      "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي «الناغانا» في جنوب أفريقيا (NCBI Bookshelf، 2025)",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK625264/"
-    },
-    {
-      "title": "معدات الوقاية الشخصية من إنفلونزا الطيور A(H5N1) في المزارع عالية الخطورة (NCBI Bookshelf، 2026)",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK622800/"
-    },
-    {
-      "title": "WHO pandemic influenza vaccine response: operational plan (WHO)",
-      "url": "https://iris.who.int/items/8231b0b9-626c-426d-b731-a81ca920a7d5"
-    },
-    {
-      "title": "Operational and implementation research for strengthening health emergency capacities: a research agenda for evidence-based practice (WHO)",
-      "url": "https://iris.who.int/items/bc35896d-f348-4edc-b60f-80ca40be1c62"
-    },
-    {
-      "title": "Philippines–WHO country cooperation strategy 2025–2028 (WHO)",
-      "url": "https://iris.who.int/items/aeaba889-7ffb-43ce-bc3d-19ae21d42a28"
+     "title": "الجمعية الوطنية للأطباء البيطريين الجزائريين",
+     "desc": "ابحث عن صفحاتها الرسمية وأنشطتها",
+     "url": "https://www.google.com/search?q=%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9+%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D8%A1+%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D9%8A%D9%86+%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D9%8A%D9%86"
     }
-  ],
-  "journals": [
+   ]
+  },
+  {
+   "group": "🌍 دوليًا",
+   "items": [
     {
-      "title": "Egyptian Journal of Veterinary Sciences",
-      "desc": "مجلة مصرية مفتوحة الوصول",
-      "url": "https://ejvs.journals.ekb.eg"
+     "title": "VIN: شبكة المعلومات البيطرية",
+     "desc": "أكبر مجتمع بيطري إلكتروني، ومجاني لطلبة الطب البيطري",
+     "url": "https://www.vin.com"
     },
     {
-      "title": "Journal of the Egyptian Veterinary Medical Association",
-      "desc": "مجلة مفتوحة الوصول لجمعية الأطباء البيطريين المصرية",
-      "url": "https://jevma.journals.ekb.eg"
-    },
-    {
-      "title": "ASJP: المنصة الجزائرية للمجلات العلمية",
-      "desc": "مجلات جزائرية محكمة؛ ابحث فيها عن: بيطري",
-      "url": "https://asjp.cerist.dz"
+     "title": "Reddit r/AskVet",
+     "desc": "نقاش مفتوح حول صحة الحيوانات؛ للاستئناس فقط ولا يغني عن الفحص",
+     "url": "https://www.reddit.com/r/AskVet/"
     }
-  ],
-  "communities": [
-    {
-      "group": "🇩🇿 الجزائر والعالم العربي",
-      "items": [
-        {
-          "title": "المدرسة الوطنية العليا للبيطرة (ENSV)",
-          "desc": "التكوين والخدمات والإعلانات الرسمية للمدرسة",
-          "url": "https://www.ensv.dz"
-        },
-        {
-          "title": "مجتمع الأطباء البيطريين (Vets Community)",
-          "desc": "منصة عربية مجانية تعليمية واجتماعية للأطباء والطلبة",
-          "url": "https://vets-community.com/"
-        },
-        {
-          "title": "المعهد الوطني للطب البيطري (INMV)",
-          "desc": "ابحث عن موقعه الرسمي ونشراته",
-          "url": "https://www.google.com/search?q=INMV+Institut+National+de+la+M%C3%A9decine+V%C3%A9t%C3%A9rinaire+Alg%C3%A9rie"
-        },
-        {
-          "title": "مديرية المصالح البيطرية (وزارة الفلاحة)",
-          "desc": "ابحث عن القوانين والإعلانات الرسمية",
-          "url": "https://www.google.com/search?q=Direction+des+Services+V%C3%A9t%C3%A9rinaires+Alg%C3%A9rie"
-        },
-        {
-          "title": "الجمعية الوطنية للأطباء البيطريين الجزائريين",
-          "desc": "ابحث عن صفحاتها الرسمية وأنشطتها",
-          "url": "https://www.google.com/search?q=%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9+%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D8%A1+%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D9%8A%D9%86+%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D9%8A%D9%86"
-        }
-      ]
-    },
-    {
-      "group": "🌍 دوليًا",
-      "items": [
-        {
-          "title": "VIN: شبكة المعلومات البيطرية",
-          "desc": "أكبر مجتمع بيطري إلكتروني، ومجاني لطلبة الطب البيطري",
-          "url": "https://www.vin.com"
-        },
-        {
-          "title": "Reddit r/AskVet",
-          "desc": "نقاش مفتوح حول صحة الحيوانات؛ للاستئناس فقط ولا يغني عن الفحص",
-          "url": "https://www.reddit.com/r/AskVet/"
-        }
-      ]
-    }
-  ]
+   ]
+  }
+ ]
 }
