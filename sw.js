@@ -1,6 +1,7 @@
 // غيّر هذا الرقم عند كل نشر جديد
-const CACHE = 'vetai-v30';
-
+const CACHE = 'vetai-v31';
+const CORE = ['css/proactive-assistant.css', 'js/proactive-assistant.js'];
+self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE))));
 self.addEventListener('install', () => self.skipWaiting());
 
 self.addEventListener('activate', e => e.waitUntil(
