@@ -59,22 +59,56 @@
 
   /* بناء قائمة الأقسام من عناوين الواجهة الظاهرة حاليًا */
   var headingSeq = 0;
+  function isShown(el) {
+    if (!el || !el.getClientRects().length) return false;
+    var cs = getComputedStyle(el);
+    return cs.display !== 'none' && cs.visibility !== 'hidden';
+  }
   function collectHeadings() {
-    var views = document.querySelectorAll('[id^="view-"]');
-    var scope = document.body;
-    views.forEach(function (v) {
-      if (v.offsetParent !== null || getComputedStyle(v).display !== 'none') {
-        if (v.querySelectorAll('h2, h3').length) scope = v;
-      }
+    /* النطاق = أول واجهة ظاهرة فعليًا على الشاشة (لا آخر واجهة في ترتيب الصفحة) */
+    var scope = null;
+    document.querySelectorAll('[id^="view-"]').forEach(function (v) {
+      if (!scope && isShown(v) && v.querySelectorAll('h2, h3').length) scope = v;
     });
+    if (!scope) scope = document.body;
     var list = [];
     scope.querySelectorAll('h2, h3').forEach(function (hd) {
+      if (!isShown(hd)) return;
       var txt = (hd.textContent || '').trim().replace(/\s+/g, ' ');
       if (txt.length < 3 || txt.length > 80) return;
       if (!hd.id) { headingSeq++; hd.id = 'un-sec-' + headingSeq; }
       list.push({ id: hd.id, text: txt, level: hd.tagName });
     });
     return list.slice(0, 24);
+  }
+  /* تمرير مضمون عبر كل المتصفحات: نحسب الموضع يدويًا ونمرّر نافذة الصفحة
+     وأي حاوية قابلة للتمرير فوق العنوان، مع قفزة فورية احتياطية عند الحاجة */
+  function scrollToHeading(t) {
+    if (!t) return;
+    var offset = 84;
+    function attempt() {
+      var r = t.getBoundingClientRect();
+      var y = r.top + (window.scrollY || window.pageYOffset || 0) - offset;
+      var p = t.parentElement;
+      while (p && p !== document.body) {
+        var cs = getComputedStyle(p);
+        if ((cs.overflowY === 'auto' || cs.overflowY === 'scroll') && p.scrollHeight > p.clientHeight) {
+          p.scrollTop += r.top - p.getBoundingClientRect().top - offset;
+          r = t.getBoundingClientRect();
+          y = r.top + (window.scrollY || window.pageYOffset || 0) - offset;
+        }
+        p = p.parentElement;
+      }
+      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+    }
+    attempt();
+    setTimeout(function () {
+      var r2 = t.getBoundingClientRect();
+      if (r2.top < -40 || r2.top > window.innerHeight) {
+        var y2 = r2.top + (window.scrollY || window.pageYOffset || 0) - offset;
+        window.scrollTo(0, Math.max(0, y2));
+      }
+    }, 650);
   }
   function renderPanel() {
     panel.innerHTML = '';
@@ -88,8 +122,8 @@
       b.type = 'button';
       b.addEventListener('click', function () {
         var t = document.getElementById(it.id);
-        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
         panel.classList.add('un-hidden');
+        if (t) setTimeout(function () { scrollToHeading(t); }, 60);
       });
       panel.appendChild(b);
     });
