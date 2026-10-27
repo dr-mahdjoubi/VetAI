@@ -1,532 +1,1010 @@
 {
-  "books": [
-    {
-      "title": "الطب الوقائي البيطري (جامعة مينيسوتا): كتاب مفتوح",
-      "url": "https://pressbooks.umn.edu/vetprevmed/"
-    },
-    {
-      "title": "الدليل العالمي لتلقيح الكلاب والقطط — WSAVA 2024 (PDF كامل)",
-      "url": "books/wsava-vaccination-guidelines-2024-fr.pdf",
-      "desc": "إرشادات الجمعية العالمية لطب الحيوانات الصغيرة (WSAVA) لتلقيح الكلاب والقطط — Squires وآخرون، 2024: اللقاحات الأساسية وغير الأساسية، جداول التلقيح حسب العمر، ومدة المناعة. النسخة الفرنسية الكاملة مستضافة على المنصة في قسم الطب الوقائي والتلقيحات."
-    },
-    {
-      "title": "علم الأنسجة البيطري: كتاب مفتوح",
-      "url": "https://open.umn.edu/opentextbooks/textbooks/veterinary-histology"
-    },
-    {
-      "title": "تشريح ووظائف أعضاء الحيوانات: كتاب مفتوح",
-      "url": "https://open.umn.edu/opentextbooks/textbooks/anatomy-and-physiology-of-animals"
-    },
-    {
-      "title": "جراحة الحيوانات الكبيرة: ملاحظات تكميلية مجانية",
-      "url": "https://open.lib.umn.edu/largeanimalsurgery/"
-    },
-    {
-      "title": "أمراض الخنازير: كتاب مفتوح",
-      "url": "https://open.lib.umn.edu/swinedisease/"
-    },
-    {
-      "title": "الوبائيات البيطرية (Martin وMeek وWilleberg): تحميل مجاني",
-      "url": "https://vtechworks.lib.vt.edu/handle/10919/72274"
-    },
-    {
-      "title": "IntechOpen: مئات الكتب المفتوحة في الطب البيطري",
-      "url": "https://www.intechopen.com/search?term=veterinary%20medicine"
-    },
-    {
-      "title": "eClinPath: كتاب الباثولوجيا السريرية (جامعة كورنيل)",
-      "url": "https://eclinpath.com"
-    },
-    {
-      "title": "WikiVet: موسوعة بيطرية تعاونية",
-      "url": "https://en.wikivet.net/Veterinary_Education_Online"
-    },
-    {
-      "title": "OER Commons: موارد تعليمية بيطرية مفتوحة",
-      "url": "https://www.oercommons.org/browse?f.keyword=veterinary-medicine"
-    },
-    {
-      "title": "إرشادات WSAVA العالمية: التلقيح والألم والتغذية (مجانية)",
-      "url": "https://wsava.org/Global-Guidelines/"
-    },
-    {
-      "title": "WOAH: بوابة الأمراض الحيوانية",
-      "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/animal-diseases/"
-    },
-    {
-      "title": "WAHIS: بلاغات الأوبئة الحيوانية في العالم",
-      "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/disease-data-collection/"
-    },
-    {
-      "title": "جامعة كورنيل: عرض تعليمي لتشريح الجثث (Necropsy)",
-      "url": "https://secure.vet.cornell.edu/nst/"
-    },
-    {
-      "title": "LafeberVet: موارد الحيوانات الغريبة",
-      "url": "https://lafeber.com/vet/"
-    },
-    {
-      "title": "vetFOAMed: فهرس موارد بيطرية مفتوحة",
-      "url": "https://www.vetfoamed.com/"
-    },
-    {
-      "title": "BestBETs for Vets: قرارات سريرية مبنية على الدليل",
-      "url": "https://bestbetsforvets.org"
-    },
-    {
-      "title": "AfriVIP: مكتبة مفتوحة للتكوين البيطري في إفريقيا (بالفرنسية)",
-      "url": "https://www.africavet.com/afrivip-la-bibliotheque-ouverte-qui-change-la-formation-veterinaire-en-afrique/"
-    },
-    {
-      "title": "Veterinary Partner: معلومات موثوقة لأصحاب الحيوانات",
-      "url": "https://veterinarypartner.vin.com"
-    },
-    {
-      "title": "دليل ميرك البيطري (Merck Veterinary Manual): المرجع البيطري الشامل",
-      "url": "https://www.merckvetmanual.com/"
-    },
-    {
-      "title": "ممارسات الإدارة الجيدة للطوارئ: الأساسيات — دليل الاستعداد لطوارئ صحة الحيوان (FAO، الطبعة الثالثة 2021)",
-      "url": "https://openknowledge.fao.org/items/51d6cda8-e3ba-4ccf-a83e-c2d151cf59ed"
-    },
-    {
-      "title": "دليل إدارة العمليات أثناء طوارئ صحة الحيوان (FAO، 2022)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/cc0068en"
-    },
-    {
-      "title": "تقرير مشاورة خبراء منظمة الصحة العالمية حول داء الكلب (WHO)",
-      "url": "https://iris.who.int/items/058787ac-d0f7-4aac-9622-8896ff60907b"
-    },
-    {
-      "title": "داء الكلب: صحيفة حقائق منظمة الصحة العالمية (WHO)",
-      "url": "https://www.who.int/news-room/fact-sheets/detail/rabies"
-    },
-    {
-      "title": "بوابة الصحة الحيوانية — منظمة الأغذية والزراعة للأمم المتحدة (FAO)",
-      "url": "https://www.fao.org/animal-health/en"
-    },
-    {
-      "title": "Rabies awareness (WHO)",
-      "url": "https://iris.who.int/items/72a237ac-d277-49f2-b186-d8e289b42b12"
-    },
-    {
-      "title": "Les zoonoses (WHO)",
-      "url": "https://iris.who.int/items/33d3e7cf-2ee9-45ba-8cdd-400cf5f79d13"
-    },
-    {
-      "title": "Guidelines on the hygienic disposal and rendering of dead animals and animal wastes to protect human and animal health (WHO)",
-      "url": "https://iris.who.int/items/0ecf155a-781d-4c87-ab40-bfb1dffbcc91"
-    },
-    {
-      "title": "2026 Watch List: Regenerative Medicine: Health Technologies (NCBI Bookshelf)",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517/"
-    },
-    {
-      "title": "A comprehensive external Rabies Control Programme review in Sri Lanka. Report of a WHO mission, 8–15 September 2025 (WHO)",
-      "url": "https://iris.who.int/items/9c8d23a0-1d82-4e86-8940-f6a213a5bd51"
-    },
-    {
-      "title": "A comprehensive integrated review of malaria, leishmaniasis, filariasis and dengue control programmes in Sri Lanka. Report of a WHO mission, 13–20 May 2024 (WHO)",
-      "url": "https://iris.who.int/items/20c26ffa-7fbd-4617-912f-fbd91fba8d49"
-    },
-    {
-      "title": "Target regimen profiles for long-acting injectables for tuberculosis prevention and treatment (WHO)",
-      "url": "https://iris.who.int/items/eb857d6c-254f-4722-956b-23be3a65517a"
-    },
-    {
-      "title": "Cupping therapy: descriptive synthesis of training (WHO)",
-      "url": "https://iris.who.int/items/de67e00e-abda-4d95-8a11-620d435fab5a"
-    },
-    {
-      "title": "WHO public health research agenda for influenza (WHO)",
-      "url": "https://iris.who.int/items/3c32c85f-47d0-4024-b614-5c8a7650a064"
-    },
-    {
-      "title": "WHO Strategic and Technical Advisory Group on Antimicrobial Resistance (STAG-AMR): report of the fifth meeting, 24-25 June 2025 (WHO)",
-      "url": "https://iris.who.int/items/e93982d1-5347-4e11-9bc8-c5f8c2e56d86"
-    },
-    {
-      "title": "دليل ميرك البيطري الكامل (Merck Veterinary Manual): المرجع البيطري الأشهر عالميًا — مجاني بالكامل",
-      "url": "https://www.merckvetmanual.com"
-    },
-    {
-      "title": "مدونة صحة الحيوان الأرضي (WOAH): المعايير الدولية الرسمية لصحة الحيوان وتجارته",
-      "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-code-online-access/"
-    },
-    {
-      "title": "الدليل الأرضي للاختبارات التشخيصية واللقاحات للحيوانات (WOAH Manual)",
-      "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-manual-online-access/"
-    },
-    {
-      "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي «الناغانا» في جنوب أفريقيا (NCBI Bookshelf، 2025)",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK625264/"
-    },
-    {
-      "title": "معدات الوقاية الشخصية من إنفلونزا الطيور A(H5N1) في المزارع عالية الخطورة (NCBI Bookshelf، 2026)",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK622800/"
-    },
-    {
-      "title": "WHO pandemic influenza vaccine response: operational plan (WHO)",
-      "url": "https://iris.who.int/items/8231b0b9-626c-426d-b731-a81ca920a7d5"
-    },
-    {
-      "title": "Operational and implementation research for strengthening health emergency capacities: a research agenda for evidence-based practice (WHO)",
-      "url": "https://iris.who.int/items/bc35896d-f348-4edc-b60f-80ca40be1c62"
-    },
-    {
-      "title": "Philippines–WHO country cooperation strategy 2025–2028 (WHO)",
-      "url": "https://iris.who.int/items/aeaba889-7ffb-43ce-bc3d-19ae21d42a28"
-    },
-    {
-      "title": "إرشادات ABCD الأوروبية لأمراض القطط المعدية: وقاية وتشخيص وإدارة",
-      "url": "https://www.abcdcatsvets.org",
-      "desc": "إرشادات مجانية من المجلس الاستشاري الأوروبي لأمراض القطط، تُحدَّث دوريًا وتغطي أهم الأمراض الفيروسية والبكتيرية للقطط."
-    },
-    {
-      "title": "مكتبة إرشادات AAHA: الجمعية الأمريكية لمستشفيات الحيوانات",
-      "url": "https://www.aaha.org",
-      "desc": "إرشادات سريرية مجانية في التلقيح وطب الأسنان وإدارة الألم والتغذية ورعاية مراحل العمر للكلاب والقطط."
-    },
-    {
-      "title": "IVIS: الخدمة المعلوماتية البيطرية الدولية — كتب ومحاضر مؤتمرات",
-      "url": "https://www.ivis.org",
-      "desc": "مكتبة بيطرية ضخمة بكتب ومحاضر مؤتمرات عالمية؛ التسجيل مجاني للأطباء والطلاب."
-    },
-    {
-      "title": "دليل الأدوية البيطرية البريطاني NOAH Compendium",
-      "url": "https://www.noahcompendium.co.uk",
-      "desc": "المرجع الرسمي البريطاني لبيانات الأدوية البيطرية المرخصة: دواعي الاستعمال وفترات السحب والتحذيرات."
-    },
-    {
-      "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي (الناغانا) — كتاب مفتوح 2025",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK5930434/",
-      "desc": "كتاب بحثي مفتوح الوصول (NCBI Bookshelf) حول بيولوجيا ذبابة تسي تسي ومكافحة الناغانا في إفريقيا."
-    },
-    {
-      "title": "مقدمة في مبادئ علم الأدوية البيطري (جامعة ولاية أوريغون) (بالإنجليزية)",
-      "url": "https://open.oregonstate.education/veterinarypharmacology/",
-      "desc": "كتاب مفتوح في علم الأدوية البيطري يعرض الديناميكية والحركية الدوائية ثم يطبقهما على علم الأدوية السريري وحساب الجرعات والسمّية."
-    },
-    {
-      "title": "مبادئ تغذية الحيوان (جامعة ولاية أوريغون) (بالإنجليزية)",
-      "url": "https://open.oregonstate.education/animalnutrition/",
-      "desc": "كتاب مفتوح يغطي العناصر الغذائية الأساسية الستة وهضمها وأيضها في الحيوانات أحادية المعدة والمجترات، مع إضافات الأعلاف وتقييم الاستفادة من الغذاء."
-    },
-    {
-      "title": "الجهاز اللمفاوي عند الكلب (هيرمان باوم، جامعة ساسكاتشوان) (بالإنجليزية)",
-      "url": "https://openpress.usask.ca/k9lymphaticsystem/",
-      "desc": "ترجمة إنجليزية محرّرة لعمل التشريح البيطري الكلاسيكي لهيرمان باوم (1918) حول مواقع العقد اللمفاوية ومسارات التصريف اللمفاوي عند الكلب، مع ملاحظات سريرية وأدوات تعلّم تفاعلية."
-    },
-    {
-      "title": "موسوعة المهارات السريرية البيطرية (جامعة مينيسوتا) (بالإنجليزية)",
-      "url": "https://open.lib.umn.edu/clinicalskills/",
-      "desc": "مرجع مفتوح من جامعة مينيسوتا يجمع معلومات وروابط عملية لصقل المهارات السريرية البيطرية ومراجعة الإجراءات قبل تنفيذها واختبار المعرفة."
-    },
-    {
-      "title": "دليل العلاج بالمضادات الحيوية عند الخنازير (جامعة مينيسوتا) (بالإنجليزية)",
-      "url": "https://open.lib.umn.edu/swinedrugs/",
-      "desc": "كتاب إلكتروني تفاعلي مفتوح يراجع عائلات المضادات الحيوية المستخدمة في طب الخنازير من حيث آلية العمل والطيف والامتصاص والتوزيع والإخراج والآثار الجانبية."
-    },
-    {
-      "title": "الحشرات والعثّ والقراد الطفيلية: أجناس ذات أهمية طبية وبيطرية (ويكي الكتب) (بالإنجليزية)",
-      "url": "https://en.wikibooks.org/wiki/Parasitic_Insects,_Mites_and_Ticks:_Genera_of_Medical_and_Veterinary_Importance",
-      "desc": "كتاب مفتوح مكتمل من ويكي الكتب يقدّم بالصور أجناس الحشرات والعثّ والقراد التي تسبب أمراض الإنسان والحيوانات الأليفة أو تنقل الميكروبات الممرضة، للمساعدة في التعرف عليها مخبريًا وسريريًا."
-    },
-    {
-      "title": "تغذية الخيول (ويكي الكتب) (بالإنجليزية)",
-      "url": "https://en.wikibooks.org/wiki/Equine_Nutrition",
-      "desc": "كتاب مفتوح من ويكي الكتب يغطي تشريح وفسيولوجيا الجهاز الهضمي عند الحصان وكيمياء الأعلاف وتقييمها واحتياجات العناصر الغذائية والتغذية السريرية وصحة الأمعاء."
-    },
-    {
-      "title": "المختبر التشخيصي البيطري السريري (LibreTexts) (بالإنجليزية)",
-      "url": "https://med.libretexts.org/Bookshelves/Veterinary_Medicine/Clinical_Veterinary_Diagnostic_Laboratory_(Burton_and_Lalande)",
-      "desc": "كتاب مخبري مفتوح على مكتبة LibreTexts يرشد طالب الطب البيطري عبر إجراءات الفحوص التشخيصية بجانب المريض مثل فحص البراز وتحليل البول وأمراض الدم وزرع الميكروبات والحساسية وكشط الجلد."
-    },
-    {
-      "title": "دليل رعاية واستخدام حيوانات المختبر — الطبعة الثامنة (NCBI Bookshelf) (بالإنجليزية)",
-      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK54049/",
-      "desc": "الدليل المرجعي للأكاديميات الوطنية الأمريكية على رف كتب NCBI حول الرعاية الإنسانية لحيوانات المختبر وإيوائها وبرامج الرعاية البيطرية وأخلاقيات استخدام الحيوان في البحث."
-    },
-    {
-      "title": "نظام كونسلتنت لدعم التشخيص البيطري (جامعة كورنيل) (بالإنجليزية)",
-      "url": "http://consultant.vet.cornell.edu/consult.asp",
-      "desc": "نظام مجاني من كلية الطب البيطري بجامعة كورنيل يقترح التشخيصات التفريقية انطلاقًا من العلامات السريرية، مع نبذة عن كل تشخيص والأنواع المصابة ومراجع حديثة."
-    },
-    {
-      "title": "تشريح الأطراف عند الخيول والأبقار (جامعة ولاية آيوا) (بالإنجليزية)",
-      "url": "https://apps.cvm.iastate.edu/limbanatomy/",
-      "desc": "أطلس إلكتروني مجاني من كلية الطب البيطري بجامعة ولاية آيوا يعرض صورًا تفصيلية لتشريح أطراف الخيول والأبقار لدعم دراسة التشريح التطبيقي."
-    },
-    {
-      "title": "أطلس تشريح التصوير الشعاعي للحيوانات الأليفة (جامعة إلينوي) (بالإنجليزية)",
-      "url": "https://vetmed.illinois.edu/imaging_anatomy/",
-      "desc": "أطلس مجاني من كلية الطب البيطري بجامعة إلينوي لتشريح التصوير الطبيعي عند الحيوانات الأليفة بصور شعاعية تفاعلية، صُمم لمساعدة الطلاب في بدء دراسة التشخيص بالتصوير."
-    },
-    {
-      "title": "المتحف الإلكتروني للتشريح البيطري OVAM (بالإنجليزية)",
-      "url": "http://www.onlineveterinaryanatomy.net/",
-      "desc": "متحف افتراضي مجاني يجمع موارد التشريح البيطري من كليات بيطرية شريكة، منظمة حسب النوع الحيواني والجهاز والمنطقة التشريحية."
-    },
-    {
-      "title": "كتاب أمراض الأبقار: مقاربة جزيئية وكيميائية حيوية — IntechOpen (بالإنجليزية)",
-      "url": "https://doi.org/10.5772/intechopen.104145",
-      "desc": "كتاب مفتوح الوصول من سلسلة الطب والعلوم البيطرية لدى IntechOpen يتناول أمراض الأبقار من منظور الجزيئات والكيمياء الحيوية والتشخيص الحديث."
-    },
-    {
-      "title": "كتاب مستجدات التشريح ووظائف الأعضاء البيطرية — IntechOpen (بالإنجليزية)",
-      "url": "https://doi.org/10.5772/intechopen.94630",
-      "desc": "كتاب مفتوح الوصول يعرض أحدث المستجدات في التشريح البيطري ووظائف أعضاء الحيوانات الأليفة وحيوانات المزرعة."
-    },
-    {
-      "title": "كتاب آفاق جديدة في علم التوالد البيطري Theriogenology — IntechOpen (بالإنجليزية)",
-      "url": "https://doi.org/10.5772/intechopen.74197",
-      "desc": "كتاب مفتوح الوصول حول تناسل الحيوانات والطب التناسلي في الحيوانات الأليفة وحيوانات الإنتاج، وهو المجلد الأول من سلسلة الطب والعلوم البيطرية."
-    },
-    {
-      "title": "كتاب أحدث ما توصل إليه العلم في داء الكيسات المذنّبة والعصبية — IntechOpen (بالإنجليزية)",
-      "url": "https://doi.org/10.5772/intechopen.91540",
-      "desc": "كتاب مفتوح الوصول عن داء الكيسات المذنّبة وداء الكيسات العصبية بوصفهما مشكلة صحية وبيطرية مشتركة، يشمل الوبائيات والتشخيص والعلاج والتلقيح."
-    },
-    {
-      "title": "دليل الفاو لتشخيص عدوى فيروس نيباه في الحيوانات (بالإنجليزية)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/AC449E",
-      "desc": "دليل عملي من منظمة الفاو لتشخيص فيروس نيباه في الحيوانات والتعامل الآمن معه ميدانيًا ومختبريًا وإجراءات مكافحته واستئصاله."
-    },
-    {
-      "title": "دليل الفاو التدريبي: إدارة اعتلالات الدماغ الإسفنجية المعدية في إنتاج اللحوم (بالإنجليزية)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/a1002e",
-      "desc": "دليل تدريبي من منظمة الفاو حول بناء القدرات لمراقبة مرض جنون البقر وبقية الأمراض المشتركة والوقاية منها وإدارة مخاطرها في سلسلة إنتاج اللحوم."
-    },
-    {
-      "title": "دليل الفاو للعاملين في الرعاية الصحية الأولية للحيوان (بالإنجليزية)",
-      "url": "http://openknowledge.fao.org/items/a2c8ffef-840e-415c-94b1-c985a6dcfa42",
-      "desc": "دليل شامل من منظمة الفاو لتقديم خدمات الصحة والإنتاج الحيواني الأساسية على مستوى المجتمعات الريفية ومربي الثروة الحيوانية."
-    },
-    {
-      "title": "دليل الفاو: الاستعداد لإنفلونزا الطيور شديدة الإمراض (بالإنجليزية)",
-      "url": "https://openknowledge.fao.org/server/api/core/bitstreams/6f79f597-d7a0-4f57-be15-376f0d427371/content",
-      "desc": "دليل سلسلة الإنتاج وصحة الحيوان بالفاو حول الكشف المبكر عن إنفلونزا الطيور شديدة الإمراض والاستجابة السريعة واستراتيجيات المكافحة والأمن الحيوي."
-    },
-    {
-      "title": "الموضوعات البحثية في العلوم البيطرية — Frontiers in Veterinary Science (بالإنجليزية)",
-      "url": "https://www.frontiersin.org/journals/veterinary-science/research-topics",
-      "desc": "صفحة الموضوعات البحثية المفتوحة في مجلة Frontiers in Veterinary Science وتجمع أحدث الأبحاث المحكمة في فروع الطب البيطري وعلوم الحيوان."
-    },
-    {
-      "title": "قائمة مجلات الطب البيطري في أرشيف PubMed Central (بالإنجليزية)",
-      "url": "https://pmc.ncbi.nlm.nih.gov/journals/?term=veterinary",
-      "desc": "قائمة المجلات البيطرية المؤرشفة بنصوصها الكاملة مجانًا في PubMed Central مثل BMC Veterinary Research وFrontiers in Veterinary Science والمجلة الإيرانية للبحوث البيطرية."
-    },
-    {
-      "title": "أطروحات الطب البيطري بجامعة غلاسكو — Enlighten Theses (بالإنجليزية)",
-      "url": "https://theses.gla.ac.uk/view/subjects/SF600.html",
-      "desc": "مجموعة تضم مئات أطروحات الماجستير والدكتوراه في الطب البيطري (SF600) من جامعة غلاسكو متاحة للتصفح والقراءة ضمن مستودع Enlighten."
-    },
-    {
-      "title": "مركز OhioLINK للأطروحات والرسائل الجامعية الإلكترونية (بالإنجليزية)",
-      "url": "https://www.ohiolink.edu/content/ohiolink_electronic_theses_and_dissertations",
-      "desc": "قاعدة مفتوحة تضم عشرات آلاف رسائل الماجستير والدكتوراه من جامعات ولاية أوهايو، ومنها أطروحات كلية الطب البيطري بجامعة ولاية أوهايو، قابلة للبحث والتحميل."
-    },
-    {
-      "title": "دليل مراقبة إنفلونزا الطيور شديدة الإمراض لدى الطيور البرية — دليل منظمة الفاو لصحة الحيوان (بالفرنسية)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/a0960f",
-      "desc": "دليل ميداني من منظمة الفاو (سلسلة الإنتاج والصحة الحيوانية رقم 4) حول مراقبة إنفلونزا الطيور لدى الطيور البرية وأخذ العينات والتشخيص والتعقيم والحماية الشخصية."
-    },
-    {
-      "title": "منهجية الإدارة الجيدة لطوارئ صحة الحيوان: الأساسيات — دليل الفاو GEMP، الطبعة الثانية 2022 (بالفرنسية)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/cb3833fr",
-      "desc": "الدليل الدولي المرجعي للفاو للاستعداد لطوارئ صحة الحيوان وإدارتها وفق نهج «صحة واحدة»، وهو النسخة الفرنسية من دليل GEMP ضمن سلسلة الإنتاج والصحة الحيوانية رقم 25."
-    },
-    {
-      "title": "دليل إدارة العمليات أثناء طوارئ صحة الحيوان — منظمة الفاو 2022 (بالفرنسية)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/cc0068fr",
-      "desc": "دليل عملي من الفاو (سلسلة الإنتاج والصحة الحيوانية رقم 27) يشرح بأمثلة ونماذج كيفية تنظيم وإدارة عمليات الاستجابة أثناء الطوارئ الوبائية الحيوانية على المستويات المحلية والوطنية والدولية."
-    },
-    {
-      "title": "الممارسات الجيدة لصناعة اللحوم — دليل الفاو لفحص اللحوم ونظافتها (بالفرنسية)",
-      "url": "https://www.fao.org/4/y5454f/y5454f00.pdf",
-      "desc": "دليل شامل من الفاو يغطي فحص اللحوم قبل الذبح وبعده، نظافة المسالخ، تتبع المنتجات، ونظام تحليل المخاطر ونقاط التحكم الحرجة HACCP في صناعة اللحوم."
-    },
-    {
-      "title": "دليل عمليات تفتيش الأغذية القائمة على تحليل المخاطر — منظمة الفاو (بالفرنسية)",
-      "url": "https://openknowledge.fao.org/handle/20.500.14283/I0096F",
-      "desc": "دليل الفاو (دراسات التغذية رقم 89) الذي يقدّم منهجية التفتيش الغذائي المبني على تحليل المخاطر في الإنتاج الأولي وتحويل الأغذية وشهادات التصدير."
-    },
-    {
-      "title": "رفاهية حيوانات التربية: تحسين رفاهية الحيوان — إصدارات Quæ وINRAE، وصول مفتوح 2022 (بالفرنسية)",
-      "url": "https://www.quae-open.com/produit/184/9782759234615/le-bien-etre-des-animaux-d-elevage",
-      "desc": "كتاب مفتوح الوصول من إصدارات Quæ يعرض سبل تحسين رفاهية حيوانات التربية عبر البيئة والعلاقة بين الإنسان والحيوان وإدارة الألم والوراثة وظروف النقل والذبح."
-    },
-    {
-      "title": "مجموعة مذكرات الأمراض المعدية الجامعية — المدارس الوطنية البيطرية الفرنسية الأربع (بالفرنسية)",
-      "url": "https://eve.vet-alfort.fr/course/view.php?id=280",
-      "desc": "صفحة تجمع كل المذكرات الجامعية (polycopiés) الحرة الوصول التي يحرّرها أساتذة الأمراض المعدية في المدارس البيطرية الفرنسية الأربع حول الأمراض الخاضعة للتنظيم والأخطار الصحية حسب الأنواع الحيوانية."
-    },
-    {
-      "title": "داء البروسيلات الحيواني — مذكرة جامعية للمدارس البيطرية الفرنسية 2025 (بالفرنسية)",
-      "url": "https://eve.vet-alfort.fr/pluginfile.php/117164/mod_resource/content/1/Brucellose_2025_ENVF_PDF.pdf",
-      "desc": "مذكرة جامعية كاملة (59 صفحة) من وحدات الأمراض المعدية بالمدارس البيطرية الفرنسية حول داء البروسيلات: الوبائيات والتشخيص وخطط الوقاية في قطعان الألبان واللحوم واللقاحات."
-    },
-    {
-      "title": "الأمراض الخاضعة للتنظيم لدى المجترات — مذكرة المدارس البيطرية الفرنسية (بالفرنسية)",
-      "url": "https://eve.vet-alfort.fr/mod/resource/view.php?id=97506",
-      "desc": "مذكرة جامعية محدّثة من أساتذة الأمراض المعدية بالمدارس البيطرية الفرنسية الأربع تتناول الأمراض الخاضعة للتنظيم لدى المجترات عدا الحمى القلاعية وداء الكلب والبروسيلات والسل."
-    },
-    {
-      "title": "الأمراض الخاضعة للتنظيم لدى الخيول — مذكرة المدارس البيطرية الفرنسية (بالفرنسية)",
-      "url": "https://eve.vet-alfort.fr/mod/resource/view.php?id=97505",
-      "desc": "مذكرة جامعية (67 صفحة) من وحدات الأمراض المعدية بالمدارس البيطرية الفرنسية حول الأمراض الخاضعة للتنظيم لدى الخيول وتشريعاتها الصحية وإجراءات مكافحتها."
-    },
-    {
-      "title": "الأمراض الحيوانية الناشئة — كتيّب الوكالة الفيدرالية البلجيكية لسلامة السلسلة الغذائية AFSCA للأطباء البيطريين (بالفرنسية)",
-      "url": "https://favv-afsca.be/sites/default/files/2023-11/MAE_VT_Fr_2019_07_15_scherm.pdf",
-      "desc": "كتيّب رسمي من وكالة AFSCA البلجيكية موجّه للأطباء البيطريين حول الأمراض الحيوانية الناشئة والمناوبة كالحمى القلاعية وإنفلونزا الطيور والطاعون البقري الصغير والأمراض المنقولة بالنواقل."
-    },
-    {
-      "title": "المدونة الصحية للحيوانات البرية — المنظمة العالمية لصحة الحيوان WOAH، النسخة الفرنسية الرسمية على الإنترنت (بالفرنسية)",
-      "url": "https://www.woah.org/fileadmin/Home/fr/Health_standards/tahc/2018/fr_guide.htm",
-      "desc": "دليل استخدام المدونة الصحية للحيوانات البرية للمنظمة العالمية لصحة الحيوان (WOAH) بالفرنسية، وهي المرجع الدولي الرسمي لمعايير صحة الحيوان والتجارة الدولية بالحيوانات ومنتجاتها."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — البوابة المشتركة للمدارس الوطنية البيطرية الفرنسية الأربع على مستودع DUMAS (بالفرنسية)",
-      "url": "https://dumas.ccsd.cnrs.fr/",
-      "desc": "المستودع الجامعي الفرنسي للمذكرات بعد المناقشة، ويضم منذ 2022 بوابة مشتركة لمذكرات التخرج البيطرية لمدارس ألفور وليون ونانت وتولوز بنصوص كاملة مجانية تفيد الطلبة البيطريين الباحثين عن نماذج مذكرات ومراجع حديثة."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — المدرسة الوطنية البيطرية بتولوز ENVT على DUMAS (بالفرنسية)",
-      "url": "https://dumas.ccsd.cnrs.fr/MEM-UNIV-TOULOUSE/dumas-04846525v1",
-      "desc": "سجل مذكرة تخرج بيطرية من جامعة تولوز (2024) حول الشوائب الخضراء في مسحات دم الكلاب والقطط ودلالاتها السريرية والمرضية، مع ملف PDF كامل يفيد طلبة الطب البيطري في علم الدم والتشخيص المخبري."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — المدرسة الوطنية البيطرية بألفور ENVA على بوابة HAL (بالفرنسية)",
-      "url": "https://enva.hal.science/",
-      "desc": "البوابة المؤسسية للمدرسة الوطنية البيطرية بألفور (أقدم مدرسة بيطرية بفرنسا، 1766) على الأرشيف المفتوح HAL، وتنشر أبحاث المدرسة ومذكراتها في الأمراض الحيوانية والأمراض المشتركة والصحة العامة لفائدة الطلبة والباحثين."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — معهد VetAgro Sup ليون على بوابة HAL (بالفرنسية)",
-      "url": "https://vetagro-sup.hal.science/",
-      "desc": "بوابة المنشورات العلمية لمعهد VetAgro Sup بليون (المدرسة الوطنية البيطرية سابقًا) على HAL، وتتيح مذكرات وأبحاث الصحة الحيوانية والصحة العامة البيطرية بنهج الصحة الواحدة لفائدة طلبة الطب البيطري والمهندسين الزراعيين."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — Oniris VetAgroBio نانت على بوابة HAL (بالفرنسية)",
-      "url": "https://oniris.hal.science/",
-      "desc": "البوابة المؤسسية لمدرسة Oniris البيطرية بنانت على HAL منذ 2023، وتنشر مذكرات التخرج البيطرية وأبحاث صحة الحيوان وسلامة الغذاء بنصوص واسعة الانتشار تفيد الطلبة البيطريين في فرنسا وخارجها."
-    },
-    {
-      "title": "مستودع MatheO بجامعة لياج — بوابة مذكرات كلية الطب البيطري (بالفرنسية)",
-      "url": "https://matheo.uliege.be/",
-      "desc": "المستودع المؤسسي لجامعة لياج: مذكرات وأطروحات كلية الطب البيطري متاحة كاملة للتحميل في الطب الحيواني والإنتاج الحيواني وسلامة الغذاء."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — محرك بحث الأطروحات الفرنسية theses.fr (بالفرنسية)",
-      "url": "https://theses.fr/",
-      "desc": "المحرك الوطني الفرنسي للأطروحات (أكثر من 487 ألف أطروحة مناقشة) التابع لوكالة ABES، ويتيح البحث في أطروحات الدكتوراه البيطرية الفرنسية والوصول إلى نصوص كثير منها لفائدة طلبة الدكتوراه والباحثين."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — أرشيف HAL Thèses للأطروحات عبر الإنترنت TEL (بالفرنسية)",
-      "url": "https://theses.hal.science/",
-      "desc": "خادم HAL Thèses (TEL) المخصص للإيداع الذاتي المجاني لأطروحات الدكتوراه والتأهيل الجامعي، ويضم أطروحات في الطب البيطري وعلوم الحيوان من الجامعات الفرنسية والفرانكوفونية لفائدة الباحثين وطلبة الدراسات العليا."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — الأرشيف العلمي المفتوح HAL (بالفرنسية)",
-      "url": "https://hal.science/",
-      "desc": "الأرشيف الفرنسي المفتوح للعلوم (أكثر من 1.7 مليون وثيقة علمية) ويستضيف بوابات المدارس البيطرية ومستودع DUMAS، فيتيح البحث الحر في مذكرات وأبحاث الطب البيطري وصحة الحيوان لفائدة الطلبة والمهنيين."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — كلية الطب البيطري بجامعة لييج على MatheO: مذكرة الكيتونيمية عند البقرة الحلوب (بالفرنسية)",
-      "url": "https://matheo.uliege.be/handle/2268.2/20780?locale=en",
-      "desc": "مذكرة ماستر في الطب البيطري من جامعة لييج البلجيكية (2024، بالفرنسية) حول أحدث المعارف في كيتونيمية (أسيتونيمية) البقرة الحلوب ومقارنتها عند الأغنام والإنسان، مع ملف كامل من 51 صفحة يفيد طلبة طب الحيوانات المنتجة."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — كلية الطب البيطري بجامعة لييج على MatheO: مذكرة الحفظ الحيوي ضد الليستيريا في الأجبان (بالفرنسية)",
-      "url": "https://matheo.uliege.be/handle/2268.2/23191?locale=fr",
-      "desc": "مذكرة ماستر في الطب البيطري من جامعة لييج (2025، بالفرنسية) حول تقييم ضبط نمو بكتيريا Listeria monocytogenes بالحفظ الحيوي في نموذج جبن طري، وتفيد طلبة سلامة الأغذية والصحة العامة البيطرية ومراقبة المنتجات الحيوانية."
-    },
-    {
-      "title": "بحث DUMAS في المذكرات البيطرية — المدارس البيطرية الفرنسية الأربع (بالفرنسية)",
-      "url": "https://dumas.ccsd.cnrs.fr/search/index?q=v%C3%A9t%C3%A9rinaire",
-      "desc": "محرك بحث بوابة DUMAS في مذكرات التخرج البيطرية للمدارس الأربع (ألفور وليون ونانت وتولوز): آلاف المذكرات كاملة النص قابلة للتحميل."
-    },
-    {
-      "title": "مذكرات التخرج البيطرية — مستودع Papyrus لجامعة مونتريال وكلية الطب البيطري بسان هياسينت (بالفرنسية)",
-      "url": "https://papyrus.bib.umontreal.ca/",
-      "desc": "المستودع المؤسسي لجامعة مونتريال الكندية الناطقة بالفرنسية، ويتيح بالنص الكامل والمجاني مذكرات وأطروحات كلية الطب البيطري بسان هياسينت في العلوم السريرية والوبائيات وسلامة الأغذية لفائدة الطلبة الفرانكوفونيين."
-    },
-    {
-      "title": "Global report on neglected tropical diseases 2026: mid-term evaluation of the road map implementation (WHO)",
-      "url": "https://iris.who.int/items/68e50121-216f-4cef-9b94-e0302e6ec80b"
-    },
-    {
-      "title": "WHO Egypt annual report 2025 (WHO)",
-      "url": "https://iris.who.int/items/ee541897-29ec-4798-8ab0-6fa0556855e4"
-    },
-    {
-      "title": "Surveillance, case investigation and contact tracing in filovirus disease outbreaks (WHO)",
-      "url": "https://iris.who.int/items/60db256e-4fec-4d0b-af20-933e9bf41488"
+ "books": [
+  {
+   "title": "الطب الوقائي البيطري (جامعة مينيسوتا): كتاب مفتوح",
+   "url": "https://pressbooks.umn.edu/vetprevmed/"
+  },
+  {
+   "title": "الدليل العالمي لتلقيح الكلاب والقطط — WSAVA 2024 (PDF كامل)",
+   "url": "books/wsava-vaccination-guidelines-2024-fr.pdf",
+   "desc": "إرشادات الجمعية العالمية لطب الحيوانات الصغيرة (WSAVA) لتلقيح الكلاب والقطط — Squires وآخرون، 2024: اللقاحات الأساسية وغير الأساسية، جداول التلقيح حسب العمر، ومدة المناعة. النسخة الفرنسية الكاملة مستضافة على المنصة في قسم الطب الوقائي والتلقيحات."
+  },
+  {
+   "title": "علم الأنسجة البيطري: كتاب مفتوح",
+   "url": "https://open.umn.edu/opentextbooks/textbooks/veterinary-histology"
+  },
+  {
+   "title": "تشريح ووظائف أعضاء الحيوانات: كتاب مفتوح",
+   "url": "https://open.umn.edu/opentextbooks/textbooks/anatomy-and-physiology-of-animals"
+  },
+  {
+   "title": "جراحة الحيوانات الكبيرة: ملاحظات تكميلية مجانية",
+   "url": "https://open.lib.umn.edu/largeanimalsurgery/"
+  },
+  {
+   "title": "أمراض الخنازير: كتاب مفتوح",
+   "url": "https://open.lib.umn.edu/swinedisease/"
+  },
+  {
+   "title": "الوبائيات البيطرية (Martin وMeek وWilleberg): تحميل مجاني",
+   "url": "https://vtechworks.lib.vt.edu/handle/10919/72274"
+  },
+  {
+   "title": "IntechOpen: مئات الكتب المفتوحة في الطب البيطري",
+   "url": "https://www.intechopen.com/search?term=veterinary%20medicine"
+  },
+  {
+   "title": "eClinPath: كتاب الباثولوجيا السريرية (جامعة كورنيل)",
+   "url": "https://eclinpath.com"
+  },
+  {
+   "title": "WikiVet: موسوعة بيطرية تعاونية",
+   "url": "https://en.wikivet.net/Veterinary_Education_Online"
+  },
+  {
+   "title": "OER Commons: موارد تعليمية بيطرية مفتوحة",
+   "url": "https://www.oercommons.org/browse?f.keyword=veterinary-medicine"
+  },
+  {
+   "title": "إرشادات WSAVA العالمية: التلقيح والألم والتغذية (مجانية)",
+   "url": "https://wsava.org/Global-Guidelines/"
+  },
+  {
+   "title": "WOAH: بوابة الأمراض الحيوانية",
+   "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/animal-diseases/"
+  },
+  {
+   "title": "WAHIS: بلاغات الأوبئة الحيوانية في العالم",
+   "url": "https://www.woah.org/en/what-we-do/animal-health-and-welfare/disease-data-collection/"
+  },
+  {
+   "title": "جامعة كورنيل: عرض تعليمي لتشريح الجثث (Necropsy)",
+   "url": "https://secure.vet.cornell.edu/nst/"
+  },
+  {
+   "title": "LafeberVet: موارد الحيوانات الغريبة",
+   "url": "https://lafeber.com/vet/"
+  },
+  {
+   "title": "vetFOAMed: فهرس موارد بيطرية مفتوحة",
+   "url": "https://www.vetfoamed.com/"
+  },
+  {
+   "title": "BestBETs for Vets: قرارات سريرية مبنية على الدليل",
+   "url": "https://bestbetsforvets.org"
+  },
+  {
+   "title": "AfriVIP: مكتبة مفتوحة للتكوين البيطري في إفريقيا (بالفرنسية)",
+   "url": "https://www.africavet.com/afrivip-la-bibliotheque-ouverte-qui-change-la-formation-veterinaire-en-afrique/"
+  },
+  {
+   "title": "Veterinary Partner: معلومات موثوقة لأصحاب الحيوانات",
+   "url": "https://veterinarypartner.vin.com"
+  },
+  {
+   "title": "دليل ميرك البيطري (Merck Veterinary Manual): المرجع البيطري الشامل",
+   "url": "https://www.merckvetmanual.com/"
+  },
+  {
+   "title": "ممارسات الإدارة الجيدة للطوارئ: الأساسيات — دليل الاستعداد لطوارئ صحة الحيوان (FAO، الطبعة الثالثة 2021)",
+   "url": "https://openknowledge.fao.org/items/51d6cda8-e3ba-4ccf-a83e-c2d151cf59ed"
+  },
+  {
+   "title": "دليل إدارة العمليات أثناء طوارئ صحة الحيوان (FAO، 2022)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/cc0068en"
+  },
+  {
+   "title": "تقرير مشاورة خبراء منظمة الصحة العالمية حول داء الكلب (WHO)",
+   "url": "https://iris.who.int/items/058787ac-d0f7-4aac-9622-8896ff60907b"
+  },
+  {
+   "title": "داء الكلب: صحيفة حقائق منظمة الصحة العالمية (WHO)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/rabies"
+  },
+  {
+   "title": "بوابة الصحة الحيوانية — منظمة الأغذية والزراعة للأمم المتحدة (FAO)",
+   "url": "https://www.fao.org/animal-health/en"
+  },
+  {
+   "title": "Rabies awareness (WHO)",
+   "url": "https://iris.who.int/items/72a237ac-d277-49f2-b186-d8e289b42b12"
+  },
+  {
+   "title": "Les zoonoses (WHO)",
+   "url": "https://iris.who.int/items/33d3e7cf-2ee9-45ba-8cdd-400cf5f79d13"
+  },
+  {
+   "title": "Guidelines on the hygienic disposal and rendering of dead animals and animal wastes to protect human and animal health (WHO)",
+   "url": "https://iris.who.int/items/0ecf155a-781d-4c87-ab40-bfb1dffbcc91"
+  },
+  {
+   "title": "2026 Watch List: Regenerative Medicine: Health Technologies (NCBI Bookshelf)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517/"
+  },
+  {
+   "title": "A comprehensive external Rabies Control Programme review in Sri Lanka. Report of a WHO mission, 8–15 September 2025 (WHO)",
+   "url": "https://iris.who.int/items/9c8d23a0-1d82-4e86-8940-f6a213a5bd51"
+  },
+  {
+   "title": "A comprehensive integrated review of malaria, leishmaniasis, filariasis and dengue control programmes in Sri Lanka. Report of a WHO mission, 13–20 May 2024 (WHO)",
+   "url": "https://iris.who.int/items/20c26ffa-7fbd-4617-912f-fbd91fba8d49"
+  },
+  {
+   "title": "Target regimen profiles for long-acting injectables for tuberculosis prevention and treatment (WHO)",
+   "url": "https://iris.who.int/items/eb857d6c-254f-4722-956b-23be3a65517a"
+  },
+  {
+   "title": "Cupping therapy: descriptive synthesis of training (WHO)",
+   "url": "https://iris.who.int/items/de67e00e-abda-4d95-8a11-620d435fab5a"
+  },
+  {
+   "title": "WHO public health research agenda for influenza (WHO)",
+   "url": "https://iris.who.int/items/3c32c85f-47d0-4024-b614-5c8a7650a064"
+  },
+  {
+   "title": "WHO Strategic and Technical Advisory Group on Antimicrobial Resistance (STAG-AMR): report of the fifth meeting, 24-25 June 2025 (WHO)",
+   "url": "https://iris.who.int/items/e93982d1-5347-4e11-9bc8-c5f8c2e56d86"
+  },
+  {
+   "title": "دليل ميرك البيطري الكامل (Merck Veterinary Manual): المرجع البيطري الأشهر عالميًا — مجاني بالكامل",
+   "url": "https://www.merckvetmanual.com"
+  },
+  {
+   "title": "مدونة صحة الحيوان الأرضي (WOAH): المعايير الدولية الرسمية لصحة الحيوان وتجارته",
+   "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-code-online-access/"
+  },
+  {
+   "title": "الدليل الأرضي للاختبارات التشخيصية واللقاحات للحيوانات (WOAH Manual)",
+   "url": "https://www.woah.org/en/what-we-do/standards/codes-and-manuals/terrestrial-manual-online-access/"
+  },
+  {
+   "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي «الناغانا» في جنوب أفريقيا (NCBI Bookshelf، 2025)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK625264/"
+  },
+  {
+   "title": "معدات الوقاية الشخصية من إنفلونزا الطيور A(H5N1) في المزارع عالية الخطورة (NCBI Bookshelf، 2026)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK622800/"
+  },
+  {
+   "title": "WHO pandemic influenza vaccine response: operational plan (WHO)",
+   "url": "https://iris.who.int/items/8231b0b9-626c-426d-b731-a81ca920a7d5"
+  },
+  {
+   "title": "Operational and implementation research for strengthening health emergency capacities: a research agenda for evidence-based practice (WHO)",
+   "url": "https://iris.who.int/items/bc35896d-f348-4edc-b60f-80ca40be1c62"
+  },
+  {
+   "title": "Philippines–WHO country cooperation strategy 2025–2028 (WHO)",
+   "url": "https://iris.who.int/items/aeaba889-7ffb-43ce-bc3d-19ae21d42a28"
+  },
+  {
+   "title": "إرشادات ABCD الأوروبية لأمراض القطط المعدية: وقاية وتشخيص وإدارة",
+   "url": "https://www.abcdcatsvets.org",
+   "desc": "إرشادات مجانية من المجلس الاستشاري الأوروبي لأمراض القطط، تُحدَّث دوريًا وتغطي أهم الأمراض الفيروسية والبكتيرية للقطط."
+  },
+  {
+   "title": "مكتبة إرشادات AAHA: الجمعية الأمريكية لمستشفيات الحيوانات",
+   "url": "https://www.aaha.org",
+   "desc": "إرشادات سريرية مجانية في التلقيح وطب الأسنان وإدارة الألم والتغذية ورعاية مراحل العمر للكلاب والقطط."
+  },
+  {
+   "title": "IVIS: الخدمة المعلوماتية البيطرية الدولية — كتب ومحاضر مؤتمرات",
+   "url": "https://www.ivis.org",
+   "desc": "مكتبة بيطرية ضخمة بكتب ومحاضر مؤتمرات عالمية؛ التسجيل مجاني للأطباء والطلاب."
+  },
+  {
+   "title": "دليل الأدوية البيطرية البريطاني NOAH Compendium",
+   "url": "https://www.noahcompendium.co.uk",
+   "desc": "المرجع الرسمي البريطاني لبيانات الأدوية البيطرية المرخصة: دواعي الاستعمال وفترات السحب والتحذيرات."
+  },
+  {
+   "title": "ذبابة تسي تسي وداء المثقبيات الحيواني الأفريقي (الناغانا) — كتاب مفتوح 2025",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK5930434/",
+   "desc": "كتاب بحثي مفتوح الوصول (NCBI Bookshelf) حول بيولوجيا ذبابة تسي تسي ومكافحة الناغانا في إفريقيا."
+  },
+  {
+   "title": "مقدمة في مبادئ علم الأدوية البيطري (جامعة ولاية أوريغون) (بالإنجليزية)",
+   "url": "https://open.oregonstate.education/veterinarypharmacology/",
+   "desc": "كتاب مفتوح في علم الأدوية البيطري يعرض الديناميكية والحركية الدوائية ثم يطبقهما على علم الأدوية السريري وحساب الجرعات والسمّية."
+  },
+  {
+   "title": "مبادئ تغذية الحيوان (جامعة ولاية أوريغون) (بالإنجليزية)",
+   "url": "https://open.oregonstate.education/animalnutrition/",
+   "desc": "كتاب مفتوح يغطي العناصر الغذائية الأساسية الستة وهضمها وأيضها في الحيوانات أحادية المعدة والمجترات، مع إضافات الأعلاف وتقييم الاستفادة من الغذاء."
+  },
+  {
+   "title": "الجهاز اللمفاوي عند الكلب (هيرمان باوم، جامعة ساسكاتشوان) (بالإنجليزية)",
+   "url": "https://openpress.usask.ca/k9lymphaticsystem/",
+   "desc": "ترجمة إنجليزية محرّرة لعمل التشريح البيطري الكلاسيكي لهيرمان باوم (1918) حول مواقع العقد اللمفاوية ومسارات التصريف اللمفاوي عند الكلب، مع ملاحظات سريرية وأدوات تعلّم تفاعلية."
+  },
+  {
+   "title": "موسوعة المهارات السريرية البيطرية (جامعة مينيسوتا) (بالإنجليزية)",
+   "url": "https://open.lib.umn.edu/clinicalskills/",
+   "desc": "مرجع مفتوح من جامعة مينيسوتا يجمع معلومات وروابط عملية لصقل المهارات السريرية البيطرية ومراجعة الإجراءات قبل تنفيذها واختبار المعرفة."
+  },
+  {
+   "title": "دليل العلاج بالمضادات الحيوية عند الخنازير (جامعة مينيسوتا) (بالإنجليزية)",
+   "url": "https://open.lib.umn.edu/swinedrugs/",
+   "desc": "كتاب إلكتروني تفاعلي مفتوح يراجع عائلات المضادات الحيوية المستخدمة في طب الخنازير من حيث آلية العمل والطيف والامتصاص والتوزيع والإخراج والآثار الجانبية."
+  },
+  {
+   "title": "الحشرات والعثّ والقراد الطفيلية: أجناس ذات أهمية طبية وبيطرية (ويكي الكتب) (بالإنجليزية)",
+   "url": "https://en.wikibooks.org/wiki/Parasitic_Insects,_Mites_and_Ticks:_Genera_of_Medical_and_Veterinary_Importance",
+   "desc": "كتاب مفتوح مكتمل من ويكي الكتب يقدّم بالصور أجناس الحشرات والعثّ والقراد التي تسبب أمراض الإنسان والحيوانات الأليفة أو تنقل الميكروبات الممرضة، للمساعدة في التعرف عليها مخبريًا وسريريًا."
+  },
+  {
+   "title": "تغذية الخيول (ويكي الكتب) (بالإنجليزية)",
+   "url": "https://en.wikibooks.org/wiki/Equine_Nutrition",
+   "desc": "كتاب مفتوح من ويكي الكتب يغطي تشريح وفسيولوجيا الجهاز الهضمي عند الحصان وكيمياء الأعلاف وتقييمها واحتياجات العناصر الغذائية والتغذية السريرية وصحة الأمعاء."
+  },
+  {
+   "title": "المختبر التشخيصي البيطري السريري (LibreTexts) (بالإنجليزية)",
+   "url": "https://med.libretexts.org/Bookshelves/Veterinary_Medicine/Clinical_Veterinary_Diagnostic_Laboratory_(Burton_and_Lalande)",
+   "desc": "كتاب مخبري مفتوح على مكتبة LibreTexts يرشد طالب الطب البيطري عبر إجراءات الفحوص التشخيصية بجانب المريض مثل فحص البراز وتحليل البول وأمراض الدم وزرع الميكروبات والحساسية وكشط الجلد."
+  },
+  {
+   "title": "دليل رعاية واستخدام حيوانات المختبر — الطبعة الثامنة (NCBI Bookshelf) (بالإنجليزية)",
+   "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK54049/",
+   "desc": "الدليل المرجعي للأكاديميات الوطنية الأمريكية على رف كتب NCBI حول الرعاية الإنسانية لحيوانات المختبر وإيوائها وبرامج الرعاية البيطرية وأخلاقيات استخدام الحيوان في البحث."
+  },
+  {
+   "title": "نظام كونسلتنت لدعم التشخيص البيطري (جامعة كورنيل) (بالإنجليزية)",
+   "url": "http://consultant.vet.cornell.edu/consult.asp",
+   "desc": "نظام مجاني من كلية الطب البيطري بجامعة كورنيل يقترح التشخيصات التفريقية انطلاقًا من العلامات السريرية، مع نبذة عن كل تشخيص والأنواع المصابة ومراجع حديثة."
+  },
+  {
+   "title": "تشريح الأطراف عند الخيول والأبقار (جامعة ولاية آيوا) (بالإنجليزية)",
+   "url": "https://apps.cvm.iastate.edu/limbanatomy/",
+   "desc": "أطلس إلكتروني مجاني من كلية الطب البيطري بجامعة ولاية آيوا يعرض صورًا تفصيلية لتشريح أطراف الخيول والأبقار لدعم دراسة التشريح التطبيقي."
+  },
+  {
+   "title": "أطلس تشريح التصوير الشعاعي للحيوانات الأليفة (جامعة إلينوي) (بالإنجليزية)",
+   "url": "https://vetmed.illinois.edu/imaging_anatomy/",
+   "desc": "أطلس مجاني من كلية الطب البيطري بجامعة إلينوي لتشريح التصوير الطبيعي عند الحيوانات الأليفة بصور شعاعية تفاعلية، صُمم لمساعدة الطلاب في بدء دراسة التشخيص بالتصوير."
+  },
+  {
+   "title": "المتحف الإلكتروني للتشريح البيطري OVAM (بالإنجليزية)",
+   "url": "http://www.onlineveterinaryanatomy.net/",
+   "desc": "متحف افتراضي مجاني يجمع موارد التشريح البيطري من كليات بيطرية شريكة، منظمة حسب النوع الحيواني والجهاز والمنطقة التشريحية."
+  },
+  {
+   "title": "كتاب أمراض الأبقار: مقاربة جزيئية وكيميائية حيوية — IntechOpen (بالإنجليزية)",
+   "url": "https://doi.org/10.5772/intechopen.104145",
+   "desc": "كتاب مفتوح الوصول من سلسلة الطب والعلوم البيطرية لدى IntechOpen يتناول أمراض الأبقار من منظور الجزيئات والكيمياء الحيوية والتشخيص الحديث."
+  },
+  {
+   "title": "كتاب مستجدات التشريح ووظائف الأعضاء البيطرية — IntechOpen (بالإنجليزية)",
+   "url": "https://doi.org/10.5772/intechopen.94630",
+   "desc": "كتاب مفتوح الوصول يعرض أحدث المستجدات في التشريح البيطري ووظائف أعضاء الحيوانات الأليفة وحيوانات المزرعة."
+  },
+  {
+   "title": "كتاب آفاق جديدة في علم التوالد البيطري Theriogenology — IntechOpen (بالإنجليزية)",
+   "url": "https://doi.org/10.5772/intechopen.74197",
+   "desc": "كتاب مفتوح الوصول حول تناسل الحيوانات والطب التناسلي في الحيوانات الأليفة وحيوانات الإنتاج، وهو المجلد الأول من سلسلة الطب والعلوم البيطرية."
+  },
+  {
+   "title": "كتاب أحدث ما توصل إليه العلم في داء الكيسات المذنّبة والعصبية — IntechOpen (بالإنجليزية)",
+   "url": "https://doi.org/10.5772/intechopen.91540",
+   "desc": "كتاب مفتوح الوصول عن داء الكيسات المذنّبة وداء الكيسات العصبية بوصفهما مشكلة صحية وبيطرية مشتركة، يشمل الوبائيات والتشخيص والعلاج والتلقيح."
+  },
+  {
+   "title": "دليل الفاو لتشخيص عدوى فيروس نيباه في الحيوانات (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/AC449E",
+   "desc": "دليل عملي من منظمة الفاو لتشخيص فيروس نيباه في الحيوانات والتعامل الآمن معه ميدانيًا ومختبريًا وإجراءات مكافحته واستئصاله."
+  },
+  {
+   "title": "دليل الفاو التدريبي: إدارة اعتلالات الدماغ الإسفنجية المعدية في إنتاج اللحوم (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/a1002e",
+   "desc": "دليل تدريبي من منظمة الفاو حول بناء القدرات لمراقبة مرض جنون البقر وبقية الأمراض المشتركة والوقاية منها وإدارة مخاطرها في سلسلة إنتاج اللحوم."
+  },
+  {
+   "title": "دليل الفاو للعاملين في الرعاية الصحية الأولية للحيوان (بالإنجليزية)",
+   "url": "http://openknowledge.fao.org/items/a2c8ffef-840e-415c-94b1-c985a6dcfa42",
+   "desc": "دليل شامل من منظمة الفاو لتقديم خدمات الصحة والإنتاج الحيواني الأساسية على مستوى المجتمعات الريفية ومربي الثروة الحيوانية."
+  },
+  {
+   "title": "دليل الفاو: الاستعداد لإنفلونزا الطيور شديدة الإمراض (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/server/api/core/bitstreams/6f79f597-d7a0-4f57-be15-376f0d427371/content",
+   "desc": "دليل سلسلة الإنتاج وصحة الحيوان بالفاو حول الكشف المبكر عن إنفلونزا الطيور شديدة الإمراض والاستجابة السريعة واستراتيجيات المكافحة والأمن الحيوي."
+  },
+  {
+   "title": "الموضوعات البحثية في العلوم البيطرية — Frontiers in Veterinary Science (بالإنجليزية)",
+   "url": "https://www.frontiersin.org/journals/veterinary-science/research-topics",
+   "desc": "صفحة الموضوعات البحثية المفتوحة في مجلة Frontiers in Veterinary Science وتجمع أحدث الأبحاث المحكمة في فروع الطب البيطري وعلوم الحيوان."
+  },
+  {
+   "title": "قائمة مجلات الطب البيطري في أرشيف PubMed Central (بالإنجليزية)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/journals/?term=veterinary",
+   "desc": "قائمة المجلات البيطرية المؤرشفة بنصوصها الكاملة مجانًا في PubMed Central مثل BMC Veterinary Research وFrontiers in Veterinary Science والمجلة الإيرانية للبحوث البيطرية."
+  },
+  {
+   "title": "أطروحات الطب البيطري بجامعة غلاسكو — Enlighten Theses (بالإنجليزية)",
+   "url": "https://theses.gla.ac.uk/view/subjects/SF600.html",
+   "desc": "مجموعة تضم مئات أطروحات الماجستير والدكتوراه في الطب البيطري (SF600) من جامعة غلاسكو متاحة للتصفح والقراءة ضمن مستودع Enlighten."
+  },
+  {
+   "title": "مركز OhioLINK للأطروحات والرسائل الجامعية الإلكترونية (بالإنجليزية)",
+   "url": "https://www.ohiolink.edu/content/ohiolink_electronic_theses_and_dissertations",
+   "desc": "قاعدة مفتوحة تضم عشرات آلاف رسائل الماجستير والدكتوراه من جامعات ولاية أوهايو، ومنها أطروحات كلية الطب البيطري بجامعة ولاية أوهايو، قابلة للبحث والتحميل."
+  },
+  {
+   "title": "دليل مراقبة إنفلونزا الطيور شديدة الإمراض لدى الطيور البرية — دليل منظمة الفاو لصحة الحيوان (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/a0960f",
+   "desc": "دليل ميداني من منظمة الفاو (سلسلة الإنتاج والصحة الحيوانية رقم 4) حول مراقبة إنفلونزا الطيور لدى الطيور البرية وأخذ العينات والتشخيص والتعقيم والحماية الشخصية."
+  },
+  {
+   "title": "منهجية الإدارة الجيدة لطوارئ صحة الحيوان: الأساسيات — دليل الفاو GEMP، الطبعة الثانية 2022 (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/cb3833fr",
+   "desc": "الدليل الدولي المرجعي للفاو للاستعداد لطوارئ صحة الحيوان وإدارتها وفق نهج «صحة واحدة»، وهو النسخة الفرنسية من دليل GEMP ضمن سلسلة الإنتاج والصحة الحيوانية رقم 25."
+  },
+  {
+   "title": "دليل إدارة العمليات أثناء طوارئ صحة الحيوان — منظمة الفاو 2022 (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/cc0068fr",
+   "desc": "دليل عملي من الفاو (سلسلة الإنتاج والصحة الحيوانية رقم 27) يشرح بأمثلة ونماذج كيفية تنظيم وإدارة عمليات الاستجابة أثناء الطوارئ الوبائية الحيوانية على المستويات المحلية والوطنية والدولية."
+  },
+  {
+   "title": "الممارسات الجيدة لصناعة اللحوم — دليل الفاو لفحص اللحوم ونظافتها (بالفرنسية)",
+   "url": "https://www.fao.org/4/y5454f/y5454f00.pdf",
+   "desc": "دليل شامل من الفاو يغطي فحص اللحوم قبل الذبح وبعده، نظافة المسالخ، تتبع المنتجات، ونظام تحليل المخاطر ونقاط التحكم الحرجة HACCP في صناعة اللحوم."
+  },
+  {
+   "title": "دليل عمليات تفتيش الأغذية القائمة على تحليل المخاطر — منظمة الفاو (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/I0096F",
+   "desc": "دليل الفاو (دراسات التغذية رقم 89) الذي يقدّم منهجية التفتيش الغذائي المبني على تحليل المخاطر في الإنتاج الأولي وتحويل الأغذية وشهادات التصدير."
+  },
+  {
+   "title": "رفاهية حيوانات التربية: تحسين رفاهية الحيوان — إصدارات Quæ وINRAE، وصول مفتوح 2022 (بالفرنسية)",
+   "url": "https://www.quae-open.com/produit/184/9782759234615/le-bien-etre-des-animaux-d-elevage",
+   "desc": "كتاب مفتوح الوصول من إصدارات Quæ يعرض سبل تحسين رفاهية حيوانات التربية عبر البيئة والعلاقة بين الإنسان والحيوان وإدارة الألم والوراثة وظروف النقل والذبح."
+  },
+  {
+   "title": "مجموعة مذكرات الأمراض المعدية الجامعية — المدارس الوطنية البيطرية الفرنسية الأربع (بالفرنسية)",
+   "url": "https://eve.vet-alfort.fr/course/view.php?id=280",
+   "desc": "صفحة تجمع كل المذكرات الجامعية (polycopiés) الحرة الوصول التي يحرّرها أساتذة الأمراض المعدية في المدارس البيطرية الفرنسية الأربع حول الأمراض الخاضعة للتنظيم والأخطار الصحية حسب الأنواع الحيوانية."
+  },
+  {
+   "title": "داء البروسيلات الحيواني — مذكرة جامعية للمدارس البيطرية الفرنسية 2025 (بالفرنسية)",
+   "url": "https://eve.vet-alfort.fr/pluginfile.php/117164/mod_resource/content/1/Brucellose_2025_ENVF_PDF.pdf",
+   "desc": "مذكرة جامعية كاملة (59 صفحة) من وحدات الأمراض المعدية بالمدارس البيطرية الفرنسية حول داء البروسيلات: الوبائيات والتشخيص وخطط الوقاية في قطعان الألبان واللحوم واللقاحات."
+  },
+  {
+   "title": "الأمراض الخاضعة للتنظيم لدى المجترات — مذكرة المدارس البيطرية الفرنسية (بالفرنسية)",
+   "url": "https://eve.vet-alfort.fr/mod/resource/view.php?id=97506",
+   "desc": "مذكرة جامعية محدّثة من أساتذة الأمراض المعدية بالمدارس البيطرية الفرنسية الأربع تتناول الأمراض الخاضعة للتنظيم لدى المجترات عدا الحمى القلاعية وداء الكلب والبروسيلات والسل."
+  },
+  {
+   "title": "الأمراض الخاضعة للتنظيم لدى الخيول — مذكرة المدارس البيطرية الفرنسية (بالفرنسية)",
+   "url": "https://eve.vet-alfort.fr/mod/resource/view.php?id=97505",
+   "desc": "مذكرة جامعية (67 صفحة) من وحدات الأمراض المعدية بالمدارس البيطرية الفرنسية حول الأمراض الخاضعة للتنظيم لدى الخيول وتشريعاتها الصحية وإجراءات مكافحتها."
+  },
+  {
+   "title": "الأمراض الحيوانية الناشئة — كتيّب الوكالة الفيدرالية البلجيكية لسلامة السلسلة الغذائية AFSCA للأطباء البيطريين (بالفرنسية)",
+   "url": "https://favv-afsca.be/sites/default/files/2023-11/MAE_VT_Fr_2019_07_15_scherm.pdf",
+   "desc": "كتيّب رسمي من وكالة AFSCA البلجيكية موجّه للأطباء البيطريين حول الأمراض الحيوانية الناشئة والمناوبة كالحمى القلاعية وإنفلونزا الطيور والطاعون البقري الصغير والأمراض المنقولة بالنواقل."
+  },
+  {
+   "title": "المدونة الصحية للحيوانات البرية — المنظمة العالمية لصحة الحيوان WOAH، النسخة الفرنسية الرسمية على الإنترنت (بالفرنسية)",
+   "url": "https://www.woah.org/fileadmin/Home/fr/Health_standards/tahc/2018/fr_guide.htm",
+   "desc": "دليل استخدام المدونة الصحية للحيوانات البرية للمنظمة العالمية لصحة الحيوان (WOAH) بالفرنسية، وهي المرجع الدولي الرسمي لمعايير صحة الحيوان والتجارة الدولية بالحيوانات ومنتجاتها."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — البوابة المشتركة للمدارس الوطنية البيطرية الفرنسية الأربع على مستودع DUMAS (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/",
+   "desc": "المستودع الجامعي الفرنسي للمذكرات بعد المناقشة، ويضم منذ 2022 بوابة مشتركة لمذكرات التخرج البيطرية لمدارس ألفور وليون ونانت وتولوز بنصوص كاملة مجانية تفيد الطلبة البيطريين الباحثين عن نماذج مذكرات ومراجع حديثة."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — المدرسة الوطنية البيطرية بتولوز ENVT على DUMAS (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/MEM-UNIV-TOULOUSE/dumas-04846525v1",
+   "desc": "سجل مذكرة تخرج بيطرية من جامعة تولوز (2024) حول الشوائب الخضراء في مسحات دم الكلاب والقطط ودلالاتها السريرية والمرضية، مع ملف PDF كامل يفيد طلبة الطب البيطري في علم الدم والتشخيص المخبري."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — المدرسة الوطنية البيطرية بألفور ENVA على بوابة HAL (بالفرنسية)",
+   "url": "https://enva.hal.science/",
+   "desc": "البوابة المؤسسية للمدرسة الوطنية البيطرية بألفور (أقدم مدرسة بيطرية بفرنسا، 1766) على الأرشيف المفتوح HAL، وتنشر أبحاث المدرسة ومذكراتها في الأمراض الحيوانية والأمراض المشتركة والصحة العامة لفائدة الطلبة والباحثين."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — معهد VetAgro Sup ليون على بوابة HAL (بالفرنسية)",
+   "url": "https://vetagro-sup.hal.science/",
+   "desc": "بوابة المنشورات العلمية لمعهد VetAgro Sup بليون (المدرسة الوطنية البيطرية سابقًا) على HAL، وتتيح مذكرات وأبحاث الصحة الحيوانية والصحة العامة البيطرية بنهج الصحة الواحدة لفائدة طلبة الطب البيطري والمهندسين الزراعيين."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — Oniris VetAgroBio نانت على بوابة HAL (بالفرنسية)",
+   "url": "https://oniris.hal.science/",
+   "desc": "البوابة المؤسسية لمدرسة Oniris البيطرية بنانت على HAL منذ 2023، وتنشر مذكرات التخرج البيطرية وأبحاث صحة الحيوان وسلامة الغذاء بنصوص واسعة الانتشار تفيد الطلبة البيطريين في فرنسا وخارجها."
+  },
+  {
+   "title": "مستودع MatheO بجامعة لياج — بوابة مذكرات كلية الطب البيطري (بالفرنسية)",
+   "url": "https://matheo.uliege.be/",
+   "desc": "المستودع المؤسسي لجامعة لياج: مذكرات وأطروحات كلية الطب البيطري متاحة كاملة للتحميل في الطب الحيواني والإنتاج الحيواني وسلامة الغذاء."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — محرك بحث الأطروحات الفرنسية theses.fr (بالفرنسية)",
+   "url": "https://theses.fr/",
+   "desc": "المحرك الوطني الفرنسي للأطروحات (أكثر من 487 ألف أطروحة مناقشة) التابع لوكالة ABES، ويتيح البحث في أطروحات الدكتوراه البيطرية الفرنسية والوصول إلى نصوص كثير منها لفائدة طلبة الدكتوراه والباحثين."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — أرشيف HAL Thèses للأطروحات عبر الإنترنت TEL (بالفرنسية)",
+   "url": "https://theses.hal.science/",
+   "desc": "خادم HAL Thèses (TEL) المخصص للإيداع الذاتي المجاني لأطروحات الدكتوراه والتأهيل الجامعي، ويضم أطروحات في الطب البيطري وعلوم الحيوان من الجامعات الفرنسية والفرانكوفونية لفائدة الباحثين وطلبة الدراسات العليا."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — الأرشيف العلمي المفتوح HAL (بالفرنسية)",
+   "url": "https://hal.science/",
+   "desc": "الأرشيف الفرنسي المفتوح للعلوم (أكثر من 1.7 مليون وثيقة علمية) ويستضيف بوابات المدارس البيطرية ومستودع DUMAS، فيتيح البحث الحر في مذكرات وأبحاث الطب البيطري وصحة الحيوان لفائدة الطلبة والمهنيين."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — كلية الطب البيطري بجامعة لييج على MatheO: مذكرة الكيتونيمية عند البقرة الحلوب (بالفرنسية)",
+   "url": "https://matheo.uliege.be/handle/2268.2/20780?locale=en",
+   "desc": "مذكرة ماستر في الطب البيطري من جامعة لييج البلجيكية (2024، بالفرنسية) حول أحدث المعارف في كيتونيمية (أسيتونيمية) البقرة الحلوب ومقارنتها عند الأغنام والإنسان، مع ملف كامل من 51 صفحة يفيد طلبة طب الحيوانات المنتجة."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — كلية الطب البيطري بجامعة لييج على MatheO: مذكرة الحفظ الحيوي ضد الليستيريا في الأجبان (بالفرنسية)",
+   "url": "https://matheo.uliege.be/handle/2268.2/23191?locale=fr",
+   "desc": "مذكرة ماستر في الطب البيطري من جامعة لييج (2025، بالفرنسية) حول تقييم ضبط نمو بكتيريا Listeria monocytogenes بالحفظ الحيوي في نموذج جبن طري، وتفيد طلبة سلامة الأغذية والصحة العامة البيطرية ومراقبة المنتجات الحيوانية."
+  },
+  {
+   "title": "بحث DUMAS في المذكرات البيطرية — المدارس البيطرية الفرنسية الأربع (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/search/index?q=v%C3%A9t%C3%A9rinaire",
+   "desc": "محرك بحث بوابة DUMAS في مذكرات التخرج البيطرية للمدارس الأربع (ألفور وليون ونانت وتولوز): آلاف المذكرات كاملة النص قابلة للتحميل."
+  },
+  {
+   "title": "مذكرات التخرج البيطرية — مستودع Papyrus لجامعة مونتريال وكلية الطب البيطري بسان هياسينت (بالفرنسية)",
+   "url": "https://papyrus.bib.umontreal.ca/",
+   "desc": "المستودع المؤسسي لجامعة مونتريال الكندية الناطقة بالفرنسية، ويتيح بالنص الكامل والمجاني مذكرات وأطروحات كلية الطب البيطري بسان هياسينت في العلوم السريرية والوبائيات وسلامة الأغذية لفائدة الطلبة الفرانكوفونيين."
+  },
+  {
+   "title": "مجلة الطب البيطري المفتوحة Open Veterinary Journal: مجلة بحثية دولية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.openveterinaryjournal.com/",
+   "desc": "مجلة دولية محكّمة تصدر عن كلية الطب البيطري بجامعة طرابلس وتنشر أبحاثًا ومراجعات وتقارير حالات في جميع فروع العلوم البيطرية بنصوص كاملة مجانية."
+  },
+  {
+   "title": "مجلة Veterinary World: مجلة بيطرية دولية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.veterinaryworld.org/",
+   "desc": "مجلة محكّمة مفتوحة الوصول تنشر أبحاث الطب البيطري وعلوم الحيوان من جميع أنحاء العالم مع إتاحة النصوص الكاملة مجانًا منذ عام 2008."
+  },
+  {
+   "title": "مجلة BMC Veterinary Research: أبحاث بيطرية محكّمة مفتوحة الوصول من BioMed Central (بالإنجليزية)",
+   "url": "https://link.springer.com/journal/12917",
+   "desc": "مجلة رائدة في الأبحاث البيطرية منذ عام 2005 تغطي الوبائيات والتشخيص والوقاية والعلاج لأمراض الحيوانات الأليفة وحيوانات المزرعة والحيوانات البرية بنصوص مجانية."
+  },
+  {
+   "title": "مجلة Frontiers in Veterinary Science: منصة أبحاث بيطرية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.frontiersin.org/journals/veterinary-science",
+   "desc": "مجلة مفتوحة الوصول واسعة التخصصات تضم أكثر من عشرين قسمًا من التخدير والجراحة إلى الوبائيات والصحة الواحدة، ومفهرسة في PubMed Central وScopus."
+  },
+  {
+   "title": "مجلة Veterinary Sciences من MDPI: مجلة علمية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.mdpi.com/journal/vetsci",
+   "desc": "مجلة دولية محكّمة تصدر شهريًا عن MDPI وتنشر أبحاثًا في جميع مجالات العلوم البيطرية من التشريح والأدوية إلى الجراحة والطفيليات بنصوص كاملة مجانية."
+  },
+  {
+   "title": "مجلة Veterinary Research: مجلة المعهد الفرنسي INRAE للأمراض المعدية البيطرية (بالإنجليزية)",
+   "url": "https://veterinaryresearch.biomedcentral.com/",
+   "desc": "المجلة الرسمية للمعهد الوطني الفرنسي INRAE، متخصصة في الأمراض المعدية وتفاعلات العائل والممرض والأمراض حيوانية المنشأ الناشئة، بنشر مفتوح الوصول."
+  },
+  {
+   "title": "مجلة Onderstepoort Journal of Veterinary Research: أبحاث أمراض الحيوان في إفريقيا (بالإنجليزية)",
+   "url": "https://ojvr.org/index.php/ojvr",
+   "desc": "المجلة الرسمية لمعهد أوندرستيبورت بجنوب إفريقيا، تنشر منذ عام 1908 أبحاثًا مفتوحة الوصول حول الأمراض المعدية والطفيلية ونواقلها لدى الثروة الحيوانية والحياة البرية في إفريقيا."
+  },
+  {
+   "title": "المجلة العلمية والتقنية للمنظمة العالمية لصحة الحيوان WOAH — Scientific and Technical Review (بالإنجليزية)",
+   "url": "https://www.woah.org/en/publications-and-documentation/scientific-and-technical-review-free-access/overview/",
+   "desc": "المجلة المحكّمة الرسمية للمنظمة العالمية لصحة الحيوان، تصدر بأعداد موضوعاتية حول أولويات الصحة الحيوانية العالمية وتتاح كاملة بالمجان ودون رسوم نشر على المؤلفين."
+  },
+  {
+   "title": "كتاب وراثة الكلاب وصحتها وطبها Canine Genetics, Health and Medicine — IntechOpen (بالإنجليزية)",
+   "url": "https://doi.org/10.5772/intechopen.92513",
+   "desc": "كتاب مفتوح الوصول من IntechOpen (2021) يغطي أحدث تطورات طب الكلاب من الوراثة والميكروبيوم إلى التشخيص والجراحة والرعاية الحرجة والابتكارات العلاجية."
+  },
+  {
+   "title": "دليل الفاو: الممارسات الجيدة للأمن الحيوي في قطاع الخنازير (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/I1435E",
+   "desc": "دليل منظمة الفاو لإنتاج وصحة الحيوان (رقم 169، 2010) يشرح مبادئ وتدابير الأمن الحيوي في مزارع الخنازير وسلاسل إنتاجها وتسويقها للوقاية من الأمراض العابرة للحدود."
+  },
+  {
+   "title": "مجلة تربية الحيوان والطب البيطري في البلدان المدارية – CIRAD (بالفرنسية)",
+   "url": "https://revues.cirad.fr/index.php/REMVT",
+   "desc": "مجلة علمية مفتوحة الوصول يصدرها مركز سيراد الفرنسي منذ عام 1947، تنشر أبحاث صحة الحيوان وإنتاجه في البلدان الحارة وكل مقالاتها متاحة مجانا."
+  },
+  {
+   "title": "نشرة أكاديمية الطب البيطري في فرنسا – الأرشيف الكامل على منصة Persée (بالفرنسية)",
+   "url": "https://www.persee.fr/collection/bavf",
+   "desc": "أرشيف مفتوح يضم أعداد نشرة أكاديمية الطب البيطري الفرنسية من عام 1877 إلى 2023 مع أكثر من عشرة آلاف وثيقة بيطرية متاحة مجانا."
+  },
+  {
+   "title": "النشرة الوبائية: صحة الحيوان والتغذية – ANSES (بالفرنسية)",
+   "url": "https://be.anses.fr/",
+   "desc": "نشرة رسمية فرنسية لرصد الأوبئة الحيوانية وسلامة الأغذية تصدرها وكالة أنسيس للسلامة الصحية، وأرشيفها الكامل منذ العدد الأول عام 2001 متاح مجانا."
+  },
+  {
+   "title": "مجلة الإنتاج الحيواني – INRAE Productions Animales (بالفرنسية)",
+   "url": "https://productions-animales.org/",
+   "desc": "مجلة علمية فرنسية مفتوحة الوصول في علوم الإنتاج الحيواني يصدرها المعهد الوطني إنراي، وتضم أكثر من 1400 مقال منذ عام 1988 في التغذية والتربية والرفق بالحيوان."
+  },
+  {
+   "title": "الاستراتيجية الإقليمية لمكافحة حمى الخنازير الأفريقية في أفريقيا – FAO (بالفرنسية)",
+   "url": "http://openknowledge.fao.org/items/1e744802-8237-49e9-bb05-e7ea9f45f425",
+   "desc": "وثيقة استراتيجية من منظمة الفاو والمكتب الأفريقي للموارد الحيوانية (2017) لتنسيق مراقبة حمى الخنازير الأفريقية ومكافحتها والوقاية منها في القارة الأفريقية."
+  },
+  {
+   "title": "نشرة الرصد الصحي الدولي الأسبوعية لصحة الحيوان – منصة ESA (بالفرنسية)",
+   "url": "https://www.plateforme-esa.fr/fr/bulletin-hebdomadaire-de-veille-sanitaire-internationale",
+   "desc": "نشرة أسبوعية رسمية تصدر كل ثلاثاء عن المنصة الفرنسية لوبائيات صحة الحيوان، تلخص الإشعارات الدولية والإنذارات والتقارير الصحية الحيوانية حول العالم."
+  },
+  {
+   "title": "كتاب: معهد تربية المواشي الفرنسي من زمن التحديث إلى زمن التحولات – منشورات Quæ (بالفرنسية)",
+   "url": "https://www.quae-open.com/produit/208/9782759236183/l-institut-de-l-elevage",
+   "desc": "كتاب مفتوح الوصول من منشورات كواي (2022) يوثق تاريخ معهد تربية المواشي الفرنسي وتحولات قطاع الإنتاج الحيواني وسياساته، ويتاح مجانا بصيغتي PDF وePub."
+  },
+  {
+   "title": "مجلة اللحوم والمنتجات اللحمية – Viandes & Produits Carnés (بالفرنسية)",
+   "url": "https://www.viandesetproduitscarnes.com/",
+   "desc": "المجلة العلمية الفرنسية المتخصصة في علوم اللحوم والمنتجات اللحمية وسلامتها وجودتها، ومقالاتها وأرشيفها الكامل متاحان مجانا فور النشر."
+  },
+  {
+   "title": "الدليل الميداني للفاو: التعرف على حمى الخنازير الأفريقية (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/items/f2a577b7-ea8b-4f50-ac1d-511fc57f99f0",
+   "desc": "الدليل الميداني رقم 9 من سلسلة أدلة الفاو لصحة الحيوان (2002) لمساعدة الأطباء البيطريين والفنيين على التعرف المبكر على حمى الخنازير الأفريقية وتشخيصها التفريقي في الميدان."
+  },
+  {
+   "title": "دليل الممارسات الجيدة للأمن الحيوي في تربية الأبقار – GDS France (بالفرنسية)",
+   "url": "https://www.gdsfrance.org/bonnes-pratiques-de-biosecurite-en-elevage-bovin/",
+   "desc": "دليل عملي من تجمعات الدفاع الصحي الفرنسية يضم إجراءات الأمن الحيوي وبطاقات تطبيقية وشبكة تقييم ذاتي وبرنامجا تعليميا مجانيا لحماية مزارع الأبقار من الأمراض."
+  },
+  {
+   "title": "التلقيح ضد الحمى القلاعية والمتابعة ما بعد التلقيح: خطوط توجيهية للفاو والمنظمة العالمية لصحة الحيوان (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/items/7e147b33-59a5-43c8-b3f4-b1e61c1d0162",
+   "desc": "دليل مشترك بين الفاو والمنظمة العالمية لصحة الحيوان (2020، 88 صفحة) يشرح كيفية تصميم برامج التلقيح ضد الحمى القلاعية وتقييم فعاليتها ومتابعتها ضمن المقاربة التدريجية لمكافحة المرض."
+  },
+  {
+   "title": "دليل تدريبي حول مراقبة أمراض الحيوانات البرية والإبلاغ الدولي عنها: المنظمة العالمية لصحة الحيوان WOAH (بالفرنسية)",
+   "url": "https://www.woah.org/app/uploads/2021/03/f-training-manual-wildlife-2.pdf",
+   "desc": "دليل تكويني رسمي من المنظمة العالمية لصحة الحيوان يعلّم الأطباء البيطريين كيفية رصد أمراض الحياة البرية واكتشافها والإبلاغ عنها وفق المعايير الدولية."
+  },
+  {
+   "title": "العناية اليومية بالخيول: دليل الرعاية الروتينية والوقاية: موسوعة إكويبيديا للمعهد الفرنسي للفرس والفروسية IFCE (بالفرنسية)",
+   "url": "https://equipedia.ifce.fr/sante-et-bien-etre-animal/soin-prevention-et-medication/soin/soins-courants",
+   "desc": "بطاقة مرجعية من موسوعة إكويبيديا التابعة للمعهد الفرنسي للفرس والفروسية تلخّص أعمال العناية اليومية بالحصان من التنظيف والعناية بالحوافر إلى مراقبة حالته الصحية العامة."
+  },
+  {
+   "title": "مقاومة المضادات الحيوية في صحة الحيوان: حصيلة 2024: وكالة ANSES الفرنسية (بالفرنسية)",
+   "url": "https://www.anses.fr/fr/content/antibioresistance-en-sante-animale-bilan-2024",
+   "desc": "صفحة الوكالة الفرنسية للسلامة الصحية ANSES التي تعرض حصيلة 2024 لشبكة مراقبة مقاومة البكتيريا للمضادات الحيوية لدى الحيوانات وبيانات مبيعات الأدوية البيطرية المضادة للميكروبات."
+  },
+  {
+   "title": "الممارسات الجيدة في تربية النحل والوقاية من أمراض المناحل: منظمة الفاو TECA (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/items/a4276be3-53dd-4d9e-a0d9-d20179ba9b63",
+   "desc": "ورقة تقنية من منصة TECA التابعة للفاو (2016) تجمع الممارسات الجيدة في تربية النحل بما فيها الوقاية من أهم أمراض النحل ومكافحتها في المنحل."
+  },
+  {
+   "title": "برنامج FAO العالمي لاستئصال طاعون المجترات الصغيرة PPR (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/i6316fr",
+   "desc": "وثيقة البرنامج العالمي لاستئصال طاعون المجترات الصغيرة: الاستراتيجية والمراقبة والتلقيح لحماية ملايين المجترات الصغيرة وسبل عيش مربيها."
+  },
+  {
+   "title": "إعداد خطط التدخل ضد حمى الخنازير الأفريقية: دليل الفاو لخطط الطوارئ الصحية (بالفرنسية)",
+   "url": "https://www.fao.org/publications/card/fr/c/9fe26c68-5767-5e5f-8df8-6a308d18d27f/",
+   "desc": "دليل الفاو (2011، 92 صفحة) الذي يشرح طبيعة حمى الخنازير الأفريقية ومبادئ إعداد خطط التدخل الوطنية للوقاية من المرض واكتشافه والقضاء عليه في غياب لقاح فعال."
+  },
+  {
+   "title": "طاعون المجترات الصغيرة في المغرب — دراسة FAO (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/AJ120F",
+   "desc": "دراسة FAO عن طاعون المجترات الصغيرة في المغرب: الوضع الوبائي وخطر الامتداد إلى جنوب أوروبا وتدابير المكافحة في السياق المغاربي."
+  },
+  {
+   "title": "الأمراض الحيوانية الواجب الإبلاغ عنها — حكومة كيبيك (بالفرنسية)",
+   "url": "https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/sante-animale/maladies-animales/maladies-animales-declaration",
+   "desc": "الصفحة الرسمية لحكومة كيبيك: قوائم الأمراض الحيوانية المعدية والطفيلية الواجب التصريح بها وسير الإبلاغ للمربين والأطباء البيطريين."
+  },
+  {
+   "title": "مراقبة حمى وادي رفت: دليل الفاو للترصد الوبائي (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/server/api/core/bitstreams/ab95dc4f-faa6-441d-8f9c-078c0cebac7a/content",
+   "desc": "دليل الفاو لمراقبة حمى وادي رفت الذي يدمج الترصد الوبائي بأنظمة الاستجابة ويشرح طبيعة هذا المرض الفيروسي المنقول بالنواقل وأعراضه عند المجترات وخطورته كمرض مشترك بين الحيوان والإنسان."
+  },
+  {
+   "title": "دليل الممارسات الجيدة في تربية الأبقار الحلوب: منظمة الفاو والفدرالية الدولية للألبان FIL (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/Y5224F",
+   "desc": "الدليل العملي المشترك بين الفاو والفدرالية الدولية للألبان (2004) حول الممارسات الجيدة في مزارع الألبان في مجالات صحة الحيوان ونظافة الحلب والتغذية ورفاهية الحيوان والبيئة."
+  },
+  {
+   "title": "الأمن الحيوي في مزارع عجول التسمين SECURIVO: بطاقات تقنية من معهد تربية المواشي IDELE (بالفرنسية)",
+   "url": "https://idele.fr/detail-dossier/securivo-les-fiches",
+   "desc": "عشر بطاقات تقنية مصوّرة من معهد IDELE الفرنسي تساعد مربي عجول التسمين على تحسين الأمن الحيوي في مزارعهم من تنظيم المداخل الصحية إلى إدارة الحيوانات المريضة والنفوق والتطهير."
+  },
+  {
+   "title": "الخطة الوطنية للتدخل الصحي الطارئ في صحة الحيوان PNISU: وزارة الفلاحة الفرنسية (بالفرنسية)",
+   "url": "https://Agriculture.gouv.fr/nouveau-plan-national-dintervention-sanitaire-pnisu-en-sante-animale",
+   "desc": "الصفحة الرسمية لوزارة الفلاحة الفرنسية التي تعرض الخطة الوطنية للتدخل الصحي الطارئ والتدابير المطبقة عند الاشتباه في مرض حيواني خطير أو تأكيده من المراقبة إلى التطهير والتعويض."
+  },
+  {
+   "title": "بطاقات تقنية في صحة الأغنام والأمن الحيوي ورفاهية الحيوان: مركز CRAAQ وشبكة Agri-Réseau الكندية (بالفرنسية)",
+   "url": "https://www.agrireseau.net/documents/96594/fiches-techniques-en-lien-avec-la-sante-la-biosecurite-et-le-bien-etre-animal-en-production-ovine?sort=8",
+   "desc": "مجموعة بطاقات تقنية كندية بالفرنسية مخصصة لمربي الأغنام تشمل قواعد الأمن الحيوي للمزارع والزوار والوقاية من الأمراض المشتركة والاستعمال الرشيد للأدوية وتجهيز عدة الولادة."
+  },
+  {
+   "title": "أمراض الخيول: فهم الأساسيات لحماية أفضل: شبكة RESPE الفرنسية للترصد الوبائي في أمراض الخيول (بالفرنسية)",
+   "url": "https://respe.net/maladies-equines-comprendre-les-bases-pour-mieux-proteger-les-chevaux/",
+   "desc": "صفحة مرجعية من الشبكة الفرنسية للترصد الوبائي في أمراض الخيول RESPE تشرح ما هو المرض عند الحصان وطرق انتقال الأمراض المعدية وأشكال تطورها بما يعزز الوقاية والمراقبة الصحية."
+  },
+  {
+   "title": "الدليل التقني لمربي الأرانب في بنين: منظمة الفاو والمركز الجامعي لبحث وتربية الأرانب CECURI (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/server/api/core/bitstreams/934a0569-2f86-4d53-a9f6-7a3f91cc9f62/content",
+   "desc": "دليل تقني كامل أعدته الفاو مع المركز الجامعي لأبحاث الأرانب ببنين لتأهيل مربي الأرانب في تقنيات التربية والتغذية ومكافحة الأمراض والتسيير التقني والاقتصادي للمزرعة."
+  },
+  {
+   "title": "المعيار الوطني للأمن الحيوي لقطاع الخيول: الوكالة الكندية لفحص الأغذية ACIA (بالفرنسية)",
+   "url": "https://inspection.canada.ca/fr/sante-animaux/animaux-terrestres/biosecurite/normes-principes/secteur-equin",
+   "desc": "المعيار الوطني الكندي الرسمي للأمن الحيوي في مزارع الخيول ومواقع تجمعها ويتضمن برنامجًا وقائيًا لإدارة صحة الخيول ومنع انتشار الأمراض المعدية فيها."
+  },
+  {
+   "title": "كتاب صحة واحدة One Health: نظرية وممارسة مقاربات الصحة المتكاملة: منشورات Quæ على منصة OpenEdition Books (بالفرنسية)",
+   "url": "https://books.openedition.org/quae/35895?lang=it&mobile=1",
+   "desc": "كتاب مرجعي بالفرنسية في وصول حر كامل على OpenEdition Books يعرض نظرية مقاربة «صحة واحدة» وتطبيقاتها المشتركة بين صحة الإنسان والحيوان في مكافحة الأمراض المشتركة كالبروسيلات والسل البقري وداء الكلب."
+  },
+  {
+   "title": "دليل الممارسات الجيدة في تربية الخنازير ونقلها وتسويقها وذبحها: منظمة الفاو، طوغو (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/items/88dbb470-84a8-4777-82e0-3abf63e5f478",
+   "desc": "دليل الفاو (2022، 50 صفحة) الموجه لرفع مستوى مربي الخنازير في طوغو في سياق تفشي حمى الخنازير الأفريقية، ويغطي التربية والنقل والتسويق والذبح وفق ممارسات جيدة وآمنة."
+  },
+  {
+   "title": "الدليل التقني للممارسات الجيدة في تربية الإبل العضوية: منظمة الفاو، تونس (بالفرنسية)",
+   "url": "https://openknowledge.fao.org/items/ab08b756-b1ef-4ef8-a1ab-a6e2e253c299",
+   "desc": "دليل تقني من الفاو (2026، 40 صفحة) حول الممارسات الجيدة في تربية الإبل بنظام عضوي في تونس من الرعي الصحراوي الواسع إلى إنتاج حليب النوق وتسمين صغار الإبل."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (تولوز): الجراحة العلاجية للفتق الحجابي الصدفي عند الكلب والقط (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04562326v1",
+   "desc": "دراسة استرجاعية لـ32 حالة فتق حجابي ناتج عن صدمة عولجت جراحيًا في المدرسة الوطنية البيطرية بتولوز، مع تحليل عوامل الخطر ومعدل البقاء، والنص الكامل متاح بصيغة PDF."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (ألفور): علاج ورم الأذن الدموي عند الكلب بالتصريف الشفطي (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/MEM-ENVF/dumas-04920806v1",
+   "desc": "مقارنة بين تقنيات علاج الورم الدموي الأذني عند الكلب ومناقشة آليته المرضية واقتراح تسميته «سيروما أذنية» بدل ورم دموي، مع النص الكامل PDF."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (ألفور): قرحة القرنية ذات الحواف المنفصلة عند الكلب — طب العيون (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/MEM-ENVF/dumas-05507718v1",
+   "desc": "دراسة استرجاعية لحالات قرحة القرنية صعبة الالتئام عند 142 كلبًا في مستشفى ألفور الجامعي بين 2019 و2024، ومقارنة تقنيات التنضير والعدسات والجراحة ونسب الشفاء."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية: الفلورا الميكروبية لأذن القطط السليمة والمصابة بالحساسية أو بأمراض جهازية — طب الجلد (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04551309",
+   "desc": "دراسة تجريبية في طب الجلد البيطري تقارن الفلورا البكتيرية والفطرية لأذن القطط السليمة والمصابة بالحساسية أو بأمراض جهازية وأثر العلاج بالكورتيكويدات فيها."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية: الانسداد البولي عند القطط في الطوارئ واضطرابات نظم القلب (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04554758",
+   "desc": "دراسة استباقية على 47 قطة مصابة بانسداد مجرى البول عند دخول الطوارئ، تربط بين فرط البوتاسيوم والحموضة واضطرابات تخطيط القلب وآفات عضلة القلب."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية: العلاج باليود المشع عن طريق الفم لفرط نشاط الغدة الدرقية عند القطط (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04821574",
+   "desc": "دراسة استرجاعية لـ132 قطة مصابة بفرط الدرقية عولجت باليود-131 فمويًا في عيادة Micen Vet، مع تقييم الفعالية والتحمل ومعدلات البقاء حتى ثلاث سنوات."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (ألفور): قياس ضغط الدم في المنزل عند القطط وتأثير «المعطف الأبيض» — طب القلب (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/MEM-ENVF/dumas-05340964v1",
+   "desc": "دراسة تتحقق من جدوى وموثوقية قياس المالك لضغط دم قطته في المنزل مقارنة بالقياس في المستشفى الجامعي البيطري، وتوثّق ارتفاع الضغط المرتبط ببيئة العيادة."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (ألفور): استخدام الداربيبويتين لعلاج فقر الدم عند القطط — طب داخلي (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04782060v1",
+   "desc": "مراجعة للأدلة العلمية ودراسة استرجاعية لقطط عولجت في مستشفى ألفور الجامعي من فقر دم كلوي أو التهابي المنشأ، لتحديد العوامل المنبئة بالاستجابة للعلاج والآثار الجانبية."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (تولوز): الإجراءات العلاجية العملية لأصحاب الحيوانات الأليفة الجديدة NAC (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04734821",
+   "desc": "أطروحة أنجزت مكتبة من 35 فيديو تعليميًا لتعليم أصحاب الثدييات الصغيرة والطيور والزواحف إجراءات الرعاية العلاجية الأساسية وتحسين الالتزام بالعلاج."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (تولوز): تحاليل الدم في طب الأبقار من بيانات 2007–2023 (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/MEM-ENVF/dumas-04822721v1",
+   "desc": "تحليل استرجاعي لبيانات علم الدم البقري المجمعة في عيادة الأبقار بالمدرسة الوطنية البيطرية بتولوز، يوضح التغيرات الفسيولوجية والمرضية لخلايا الدم بحسب العمر والسلالة ونوع الإنتاج."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (ألفور): نموذج محاكاة تعليمي لعلاج تدلي الرحم عند البقرة — التوالد البقري (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04814011v1",
+   "desc": "تصميم نموذجَي محاكاة في قاعة VetSims بالمدرسة الوطنية البيطرية بألفور لتدريب الطلاب على ردّ تدلي الرحم عند البقرة وخياطة بونر الاحتجازية قبل الممارسة السريرية."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية: وفيات الأبقار في مزارع الإنتاج الفرنسية — إحصاءات وخرائط وبائية (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04551265v1",
+   "desc": "دراسة وبائية وصفية وتحليل خريطي لوفيات الأبقار في مزارع التربية الفرنسية خلال عامي 2005 و2006 اعتمادًا على قواعد البيانات الوطنية."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية (تولوز): الانتشار المصلي لداء النيوسبورا عند كلاب منطقة تولوز — طفيليات (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/MEM-ENVF/dumas-05241634v1",
+   "desc": "دراسة مصلية على أكثر من 500 كلب لتقدير انتشار طفيلي Neospora caninum المسؤول عن إجهاض الأبقار والاضطرابات العصبية عند الكلاب، باستعمال اختبار ELISA التنافسي."
+  },
+  {
+   "title": "مذكرة تخرج بيطرية: تقنيات التكاثر الحيوية ورفاهية الحيوان — الممارسات العالمية (بالفرنسية)",
+   "url": "https://dumas.ccsd.cnrs.fr/dumas-04963912",
+   "desc": "أطروحة حديثة (2025) تستعرض ممارسات نقل الأجنة وسحب البويضات في تربية الحيوانات حول العالم وتصورات الممارسين لأثرها في رفاهية الحيوان."
+  },
+  {
+   "title": "مذكرة ماستر بيطرية (جامعة لياج): الميكوبلازما الدموية عند القطط المتبرعة بالدم (بالفرنسية)",
+   "url": "https://matheo.uliege.be/handle/2268.2/17618?locale=fr",
+   "desc": "مذكرة من كلية الطب البيطري بجامعة لياج تقدّر انتشار الحمل عديم الأعراض للميكوبلازما الدموية عند القطط المتبرعة بالدم في بنك دم الحيوانات بالبنلوكس وعوامل خطره."
+  },
+  {
+   "title": "مذكرة ماستر بيطرية (جامعة لياج): سكن الأبقار الحلوب وانتشار مرض مورتلارو وشدته (بالفرنسية)",
+   "url": "http://hdl.handle.net/2268.2/12012",
+   "desc": "دراسة ميدانية في عشر مزارع بلجيكية تقارن انتشار التهاب الجلد الإصبعي (مرض مورتلارو) وشدته لدى الأبقار الحلوب بين حظائر القوابض والحظائر ذات الأرضية المغطاة بالقش."
+  },
+  {
+   "title": "مذكرة ماستر بيطرية (جامعة لياج): مقاومة المضادات الحيوية في تربية الخنازير وبدائلها (بالفرنسية)",
+   "url": "http://hdl.handle.net/2268.2/18019",
+   "desc": "مذكرة من كلية الطب البيطري بجامعة لياج حول أسباب ظهور مقاومة المضادات الحيوية في مزارع الخنازير وعواقبها الصحية والاقتصادية والبدائل الممكنة لاستعمال المضادات."
+  },
+  {
+   "title": "مركز التوثيق والمعلومات بالمدرسة المشتركة لعلوم وطب البيطرة بداكار EISMV — صندوق الأطروحات (بالفرنسية)",
+   "url": "https://www.eismv.org/sid/",
+   "desc": "صفحة مركز المعلومات والتوثيق بالمدرسة في داكار تعرض صندوقه المتخصص في الصحة والإنتاج الحيواني الذي يضم نحو 7600 أطروحة بيطرية من دول غرب إفريقيا الفرنكوفونية."
+  },
+  {
+   "title": "مركز التوثيق الزراعي بمعهد الحسن الثاني للزراعة والبيطرة بالرباط — مذكرات وأطروحات (بالفرنسية)",
+   "url": "https://iav.ac.ma/fr/recherche",
+   "desc": "صفحة مركز التوثيق بالمعهد في الرباط تعرض مجموعته التي تضم أكثر من 9000 أطروحة ومذكرة في ست شعب منها الطب البيطري، مع خدمات البحث الببليوغرافي للمستخدمين."
+  },
+  {
+   "title": "المجلة النيجيرية للطب البيطري (Nigerian Veterinary Journal): مجلة علمية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.ajol.info/index.php/nvj",
+   "desc": "مجلة الجمعية الطبية البيطرية النيجيرية المحكّمة والمفتوحة الوصول على منصة AJOL، تنشر أبحاث صحة وإنتاج الحيوان منذ عام 1971."
+  },
+  {
+   "title": "مجلة سوكوتو للعلوم البيطرية (Sokoto Journal of Veterinary Sciences): مجلة علمية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.ajol.info/index.php/sokjvs",
+   "desc": "مجلة محكّمة مفتوحة الوصول على منصة AJOL تنشر أبحاث صحة الثروة الحيوانية والأمراض المشتركة والطب الوقائي مع مقالات كاملة بصيغة PDF."
+  },
+  {
+   "title": "المجلة الإثيوبية للطب البيطري (Ethiopian Veterinary Journal): مجلة علمية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.ajol.info/index.php/evj",
+   "desc": "مجلة الجمعية البيطرية الإثيوبية المحكّمة والمفتوحة الوصول على منصة AJOL، تغطي صحة الحيوان وإنتاجه على المستويين الوطني والإقليمي."
+  },
+  {
+   "title": "مجلة الجمعية البيطرية لجنوب إفريقيا (Journal of the South African Veterinary Association): مجلة علمية مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://www.jsava.co.za/index.php/jsava/about",
+   "desc": "المجلة الرسمية للجمعية البيطرية لجنوب إفريقيا، مفتوحة الوصول بالكامل وتنشر الأبحاث السريرية والإنتاجية في الطب البيطري."
+  },
+  {
+   "title": "دليل الفاو: تربية المجترات الصغيرة على بدائل الحليب والأعلاف البادئة (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/i2439e",
+   "desc": "دليل منظمة الفاو لصحة الحيوان وإنتاجه حول تربية العجول والحملان والجداء النامية على بدائل الحليب والأعلاف البادئة."
+  },
+  {
+   "title": "دليل الفاو المخبري لتشخيص الإجهاضات المعدية عند المجترات الصغيرة (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/AI497E",
+   "desc": "دليل مخبري من منظمة الفاو يشرح طرق تشخيص الإجهاضات المعدية لدى الأغنام والماعز وأخذ العينات وتحليلها."
+  },
+  {
+   "title": "دليل الفاو لتربية الألبان على نطاق صغير (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/T1265E",
+   "desc": "دليل عملي من منظمة الفاو لإدارة مزارع الألبان الصغيرة في المناطق الريفية: التغذية والتربية والصحة وإنتاج الحليب."
+  },
+  {
+   "title": "إنتاج المجترات الصغيرة في البلدان النامية — دراسة فنية للفاو (FAO Animal Production and Health Paper) (بالإنجليزية)",
+   "url": "https://openknowledge.fao.org/handle/20.500.14283/AH221E",
+   "desc": "دراسة فنية شاملة من منظمة الفاو (242 صفحة) حول نظم إنتاج الأغنام والماعز وتحسينها في البلدان النامية."
+  },
+  {
+   "title": "كتاب المهارات السريرية للحيوانات الصغيرة — جامعة غويلف (Clinical Medicine 1: Small Animal Clinical Skills) (بالإنجليزية)",
+   "url": "https://books.lib.uoguelph.ca/vetm3430/front-matter/introduction/",
+   "desc": "كتاب جامعي مفتوح من جامعة غويلف الكندية لتدريب طلاب الطب البيطري على المهارات السريرية العملية مع الكلاب والقطط."
+  },
+  {
+   "title": "الدليل المخبري للطب السريري للحيوانات الكبيرة — جامعة غويلف (Clinical Medicine 1 Lab Manual: Large Animal) (بالإنجليزية)",
+   "url": "https://books.lib.uoguelph.ca/clinical-medicine-lab-manual-large/?p=91",
+   "desc": "دليل مخبري مفتوح من جامعة غويلف لمهارات التعامل والفحص السريري مع الأبقار والخيول والحيوانات الكبيرة."
+  },
+  {
+   "title": "دمج الطب البيطري مع أنظمة الملاجئ — كتاب جامعة فلوريدا المفتوح في طب الملاجئ (بالإنجليزية)",
+   "url": "https://ufl.pb.unizin.org/integratingveterinarymedicinewithsheltersystems/?p=18",
+   "desc": "كتاب مفتوح من جامعة فلوريدا يشرح طب الملاجئ بأسلوب الحالات: الرعاية الصحية والسلوكية وإدارة أعداد الكلاب والقطط المشردة."
+  },
+  {
+   "title": "كتاب بيئة الأمراض الحيوانية المنشأ المنقولة بالطيور وتحدياتها الجديدة — IntechOpen (بالإنجليزية)",
+   "url": "http://www.intechopen.com/books/1004210",
+   "desc": "كتاب مفتوح الوصول من IntechOpen (2025) حول إيكولوجيا الأمراض المشتركة المرتبطة بالطيور وتحدياتها الصحية الناشئة."
+  },
+  {
+   "title": "كتاب الطفيليات والأمراض الطفيلية — IntechOpen (بالإنجليزية)",
+   "url": "https://www.Intechopen.com/books/6979",
+   "desc": "كتاب مفتوح الوصول من IntechOpen يجمع فصولًا حديثة حول الطفيليات والأمراض الطفيلية التي تصيب الحيوان والإنسان."
+  },
+  {
+   "title": "كتاب تربية الدواجن: آفاق وتطبيقات جديدة — IntechOpen (بالإنجليزية)",
+   "url": "https://www.intechopen.com/books/12151",
+   "desc": "كتاب مفتوح الوصول من IntechOpen حول أحدث آفاق تربية الدواجن وتطبيقاتها في الإنتاج والصحة وسلامة سلسلة لحوم الدجاج."
+  },
+  {
+   "title": "كتاب الدواجن: تعلّم متقدم — IntechOpen (بالإنجليزية)",
+   "url": "https://www.Intechopen.com/books/8470",
+   "desc": "كتاب مفتوح الوصول من IntechOpen يقدّم معلومات متقدمة في إنتاج الدواجن للمربين والباحثين والطلاب ومديري المزارع."
+  },
+  {
+   "title": "كتاب علم الماعز (Goat Science) — IntechOpen (بالإنجليزية)",
+   "url": "https://www.Intechopen.com/books/5987",
+   "desc": "كتاب مفتوح الوصول من IntechOpen في 18 فصلًا حول وراثة الماعز وتغذيته وتكاثره وصحته وإنتاج الحليب واللحوم."
+  },
+  {
+   "title": "كتاب علم الماعز: البيئة والصحة والاقتصاد — IntechOpen (بالإنجليزية)",
+   "url": "https://www.Intechopen.com/books/9706",
+   "desc": "مجلد مفتوح الوصول من IntechOpen في 22 فصلًا يقدم نظرة شاملة على تربية الماعز: التكاثر ونظم الإنتاج والأمراض والاقتصاد."
+  },
+  {
+   "title": "كتاب التكاثر الحيواني في الطب البيطري — IntechOpen (بالإنجليزية)",
+   "url": "https://www.Intechopen.com/books/8545",
+   "desc": "كتاب مفتوح الوصول من IntechOpen حول فسيولوجيا التكاثر وإدارته سريريًا لدى الأفراس والخنازير والمجترات الصغيرة والأبقار."
+  },
+  {
+   "title": "كتاب التكاثر الحيواني (Animal Reproduction) — IntechOpen (بالإنجليزية)",
+   "url": "https://www.intechopen.com/books/10664",
+   "desc": "كتاب مفتوح الوصول من IntechOpen (2022) يتناول بيولوجيا التكاثر وتقنياته لدى الحيوانات بوصفه ركيزة إنتاج الغذاء الحيواني."
+  },
+  {
+   "title": "إرشادات WSAVA العالمية لتغذية الحيوانات الأليفة (بالإنجليزية)",
+   "url": "https://wsava.org/global-guidelines/global-nutrition-guidelines/",
+   "desc": "صفحة الإرشادات الغذائية العالمية للجمعية العالمية لطب الحيوانات الصغيرة WSAVA مع أدوات تقييم التغذية واختيار الطعام للكلاب والقطط."
+  },
+  {
+   "title": "أطروحات كلية العلوم البيطرية بجامعة بريتوريا — أوندرستيبورت (بالإنجليزية)",
+   "url": "https://repository.up.ac.za/collections/08835fa7-69dc-425c-aaff-7b0f9249fc5f",
+   "desc": "مجموعة تضم مئات رسائل الماجستير وأطروحات الدكتوراه من كلية العلوم البيطرية في أوندرستيبورت بجنوب أفريقيا، متاحة بنصوص كاملة مجانًا في مستودع جامعة بريتوريا."
+  },
+  {
+   "title": "أطروحات كلية الطب البيطري بجامعة ميزوري (بالإنجليزية)",
+   "url": "https://mospace.umsystem.edu/collections/8a81105c-4b31-4bd4-885a-2c144bd1aa0e",
+   "desc": "أطروحات ورسائل قسم الطب والجراحة البيطرية بكلية الطب البيطري في جامعة ميزوري–كولومبيا، محفوظة في مستودع الجامعة الرقمي ومتاحة للقراءة والتحميل مجانًا."
+  },
+  {
+   "title": "أطروحات مدرسة ديك الملكية للدراسات البيطرية بجامعة إدنبرة (بالإنجليزية)",
+   "url": "https://era.ed.ac.uk/handle/1842/1516",
+   "desc": "مجموعة أطروحات الدكتوراه ورسائل الماجستير الخاصة بالمدرسة الملكية (ديك) للدراسات البيطرية في أرشيف أبحاث جامعة إدنبرة المفتوح."
+  },
+  {
+   "title": "مستودع أطروحات جامعة غويلف — كلية أونتاريو البيطرية (بالإنجليزية)",
+   "url": "https://atrium.lib.uoguelph.ca/",
+   "desc": "مستودع Atrium المؤسسي لجامعة غويلف: أطروحات وأبحاث كلية أونتاريو البيطرية (OVC) وغيرها في الطب البيطري وعلوم الحيوان، بنصوص كاملة."
+  },
+  {
+   "title": "الأطروحات والرسائل التراثية بجامعة ولاية آيوا — الطب البيطري (بالإنجليزية)",
+   "url": "https://lib.dr.iastate.edu/rtd",
+   "desc": "أرشيف الأطروحات والرسائل الجامعية القديمة بجامعة ولاية آيوا، ويضم مئات رسائل كلية الطب البيطري ضمن مكتبة الطب البيطري الرقمية المفتوحة."
+  },
+  {
+   "title": "أطروحات جامعة ولاية كانساس الإلكترونية K-REx (بالإنجليزية)",
+   "url": "https://hdl.handle.net/2097/4",
+   "desc": "المجموعة الرئيسية للأطروحات والرسائل والتقارير الإلكترونية بجامعة ولاية كانساس منذ عام 2004، وتشمل أطروحات طلاب كلية الطب البيطري بنصوص كاملة."
+  },
+  {
+   "title": "أطروحات ورسائل جامعة كورنيل — تشمل كلية الطب البيطري (بالإنجليزية)",
+   "url": "https://ecommons.cornell.edu/collections/5893a6ea-7af3-41d7-abc6-04bcd26ab5df",
+   "desc": "مجموعة أطروحات الدراسات العليا بجامعة كورنيل في مستودع eCommons، وتضم أكثر من 12 ألف أطروحة بينها أطروحات كلية الطب البيطري الشهيرة."
+  },
+  {
+   "title": "مستودع جامعة ماكيريري — مجتمع كلية الطب البيطري (بالإنجليزية)",
+   "url": "https://makir.mak.ac.ug/communities/ac68f664-cd3e-47aa-8621-521536d4ce86",
+   "desc": "صفحة مجتمع كلية الطب البيطري وموارد الحيوان والأمن الحيوي بجامعة ماكيريري الأوغندية، وتضم المشاركات الأكاديمية والرسائل الجامعية للكلية."
+  },
+  {
+   "title": "مستودع جامعة نيروبي — كلية الزراعة والعلوم البيطرية (بالإنجليزية)",
+   "url": "https://erepository.uonbi.ac.ke/handle/11295/13920",
+   "desc": "مجتمع كلية الزراعة والعلوم البيطرية في مستودع جامعة نيروبي الإلكتروني، ويضم عددًا كبيرًا من رسائل الماجستير والدكتوراه البيطرية الكينية."
+  },
+  {
+   "title": "مستودع جامعة إبادان — مجتمع كلية الطب البيطري (بالإنجليزية)",
+   "url": "https://repository.ui.edu.ng/communities/b049a538-7dee-427e-8ad9-35955a94bd76",
+   "desc": "مجتمع كلية الطب البيطري بجامعة إبادان النيجيرية في مستودع الجامعة، ويضم أكثر من 700 عمل علمي ورسالة بنصوص كاملة مفتوحة."
+  },
+  {
+   "title": "مستودع IDEALS بجامعة إلينوي — أطروحات الطب البيطري (بالإنجليزية)",
+   "url": "https://www.ideals.illinois.edu/",
+   "desc": "المستودع الرقمي لجامعة إلينوي في أوربانا-شامبين: أطروحات وأبحاث كلية الطب البيطري والعلوم الحيوانية بنصوص كاملة مفتوحة."
+  },
+  {
+   "title": "أطروحات جامعة أديس أبابا — كلية الطب البيطري والزراعة (بالإنجليزية)",
+   "url": "https://etd.aau.edu.et/communities/e798fb90-ad39-4c46-ab39-1836dccce354",
+   "desc": "مجتمع كلية الطب البيطري والزراعة في مستودع الأطروحات الإلكترونية بجامعة أديس أبابا، ويضم رسائل ماجستير بيطرية إثيوبية حديثة مكتوبة بالإنجليزية."
+  },
+  {
+   "title": "أطروحات كلية العلوم البيطرية بجامعة زيمبابوي (بالإنجليزية)",
+   "url": "https://ir.uz.ac.zw/xmlui/handle/10646/771",
+   "desc": "مجموعة الأطروحات الإلكترونية للدراسات العليا بكلية العلوم البيطرية في جامعة زيمبابوي، وتغطي أبحاث الماشية والحياة البرية والأمراض الحيوانية المشتركة."
+  },
+  {
+   "title": "أبحاث مدرسة الطب البيطري بجامعة ناميبيا (بالإنجليزية)",
+   "url": "https://repository.unam.edu.na/collections/11905eb6-7d8a-41d6-88f2-1e0d4df5e10d",
+   "desc": "مجموعة المقالات البحثية المنشورة لباحثي مدرسة الطب البيطري بجامعة ناميبيا في مستودع الجامعة، وتضم عشرات الدراسات الحديثة مفتوحة الوصول."
+  },
+  {
+   "title": "مستودع كريشي كوش الوطني للأطروحات الزراعية والبيطرية — الهند (بالإنجليزية)",
+   "url": "https://krishikosh.egranth.ac.in/",
+   "desc": "المستودع الرقمي الوطني التابع للمجلس الهندي للبحوث الزراعية، ويجمع أطروحات كليات العلوم البيطرية وتربية الحيوان في الجامعات الهندية بنصوص كاملة."
+  },
+  {
+   "title": "ببليوغرافيا أبحاث جامعة غنت — العلوم البيطرية (بالإنجليزية)",
+   "url": "https://biblio.ugent.be/publication?limit=15&start=0&subject=Veterinary+Sciences",
+   "desc": "قائمة منشورات العلوم البيطرية في الببليوغرافيا الأكاديمية لجامعة غنت البلجيكية، وتشمل مقالات محكّمة وأطروحات دكتوراه لكلية الطب البيطري مع روابط الوصول المفتوح حيثما توفرت."
+  },
+  {
+   "title": "مستودع VTechWorks بجامعة فرجينيا تك — أطروحات بيطرية (بالإنجليزية)",
+   "url": "https://vtechworks.lib.vt.edu/",
+   "desc": "المستودع المؤسسي لفرجينيا تك: أطروحات كلية فرجينيا-ماريلاند للطب البيطري وأبحاث الخريجين في الصحة الحيوانية والطب الحيوي."
+  },
+  {
+   "title": "بوابة الأطروحات والرسائل مفتوحة الوصول OATD (بالإنجليزية)",
+   "url": "https://oatd.org/",
+   "desc": "بوابة دولية تجمع أكثر من سبعة ملايين أطروحة ورسالة مفتوحة الوصول من أكثر من 1100 مؤسسة حول العالم، ويمكن البحث فيها عن الأطروحات البيطرية بالنص الكامل."
+  },
+  {
+   "title": "محرك CORE للأبحاث والأطروحات مفتوحة الوصول (بالإنجليزية)",
+   "url": "https://core.ac.uk/",
+   "desc": "أكبر مجمّع عالمي للأبحاث مفتوحة الوصول، يتيح البحث في مئات الملايين من الأوراق والأطروحات الجامعية ومنها أطروحات الطب البيطري بنصوص كاملة."
+  }
+ ],
+ "journals": [
+  {
+   "title": "Egyptian Journal of Veterinary Sciences",
+   "desc": "مجلة مصرية مفتوحة الوصول",
+   "url": "https://ejvs.journals.ekb.eg"
+  },
+  {
+   "title": "Journal of the Egyptian Veterinary Medical Association",
+   "desc": "مجلة مفتوحة الوصول لجمعية الأطباء البيطريين المصرية",
+   "url": "https://jevma.journals.ekb.eg"
+  },
+  {
+   "title": "ASJP: المنصة الجزائرية للمجلات العلمية",
+   "desc": "مجلات جزائرية محكمة؛ ابحث فيها عن: بيطري",
+   "url": "https://asjp.cerist.dz"
+  }
+ ],
+ "communities": [
+  {
+   "group": "🇩🇿 الجزائر والعالم العربي",
+   "items": [
+    {
+     "title": "المدرسة الوطنية العليا للبيطرة (ENSV)",
+     "desc": "التكوين والخدمات والإعلانات الرسمية للمدرسة",
+     "url": "https://www.ensv.dz"
+    },
+    {
+     "title": "مجتمع الأطباء البيطريين (Vets Community)",
+     "desc": "منصة عربية مجانية تعليمية واجتماعية للأطباء والطلبة",
+     "url": "https://vets-community.com/"
+    },
+    {
+     "title": "المعهد الوطني للطب البيطري (INMV)",
+     "desc": "ابحث عن موقعه الرسمي ونشراته",
+     "url": "https://www.google.com/search?q=INMV+Institut+National+de+la+M%C3%A9decine+V%C3%A9t%C3%A9rinaire+Alg%C3%A9rie"
+    },
+    {
+     "title": "مديرية المصالح البيطرية (وزارة الفلاحة)",
+     "desc": "ابحث عن القوانين والإعلانات الرسمية",
+     "url": "https://www.google.com/search?q=Direction+des+Services+V%C3%A9t%C3%A9rinaires+Alg%C3%A9rie"
+    },
+    {
+     "title": "الجمعية الوطنية للأطباء البيطريين الجزائريين",
+     "desc": "ابحث عن صفحاتها الرسمية وأنشطتها",
+     "url": "https://www.google.com/search?q=%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9+%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D8%A1+%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D9%8A%D9%86+%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D9%8A%D9%86"
     }
-  ],
-  "journals": [
+   ]
+  },
+  {
+   "group": "🌍 دوليًا",
+   "items": [
     {
-      "title": "Egyptian Journal of Veterinary Sciences",
-      "desc": "مجلة مصرية مفتوحة الوصول",
-      "url": "https://ejvs.journals.ekb.eg"
+     "title": "VIN: شبكة المعلومات البيطرية",
+     "desc": "أكبر مجتمع بيطري إلكتروني، ومجاني لطلبة الطب البيطري",
+     "url": "https://www.vin.com"
     },
     {
-      "title": "Journal of the Egyptian Veterinary Medical Association",
-      "desc": "مجلة مفتوحة الوصول لجمعية الأطباء البيطريين المصرية",
-      "url": "https://jevma.journals.ekb.eg"
-    },
-    {
-      "title": "ASJP: المنصة الجزائرية للمجلات العلمية",
-      "desc": "مجلات جزائرية محكمة؛ ابحث فيها عن: بيطري",
-      "url": "https://asjp.cerist.dz"
+     "title": "Reddit r/AskVet",
+     "desc": "نقاش مفتوح حول صحة الحيوانات؛ للاستئناس فقط ولا يغني عن الفحص",
+     "url": "https://www.reddit.com/r/AskVet/"
     }
-  ],
-  "communities": [
-    {
-      "group": "🇩🇿 الجزائر والعالم العربي",
-      "items": [
-        {
-          "title": "المدرسة الوطنية العليا للبيطرة (ENSV)",
-          "desc": "التكوين والخدمات والإعلانات الرسمية للمدرسة",
-          "url": "https://www.ensv.dz"
-        },
-        {
-          "title": "مجتمع الأطباء البيطريين (Vets Community)",
-          "desc": "منصة عربية مجانية تعليمية واجتماعية للأطباء والطلبة",
-          "url": "https://vets-community.com/"
-        },
-        {
-          "title": "المعهد الوطني للطب البيطري (INMV)",
-          "desc": "ابحث عن موقعه الرسمي ونشراته",
-          "url": "https://www.google.com/search?q=INMV+Institut+National+de+la+M%C3%A9decine+V%C3%A9t%C3%A9rinaire+Alg%C3%A9rie"
-        },
-        {
-          "title": "مديرية المصالح البيطرية (وزارة الفلاحة)",
-          "desc": "ابحث عن القوانين والإعلانات الرسمية",
-          "url": "https://www.google.com/search?q=Direction+des+Services+V%C3%A9t%C3%A9rinaires+Alg%C3%A9rie"
-        },
-        {
-          "title": "الجمعية الوطنية للأطباء البيطريين الجزائريين",
-          "desc": "ابحث عن صفحاتها الرسمية وأنشطتها",
-          "url": "https://www.google.com/search?q=%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%8A%D8%A9+%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9+%D9%84%D9%84%D8%A3%D8%B7%D8%A8%D8%A7%D8%A1+%D8%A7%D9%84%D8%A8%D9%8A%D8%B7%D8%B1%D9%8A%D9%8A%D9%86+%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D9%8A%D9%86"
-        }
-      ]
-    },
-    {
-      "group": "🌍 دوليًا",
-      "items": [
-        {
-          "title": "VIN: شبكة المعلومات البيطرية",
-          "desc": "أكبر مجتمع بيطري إلكتروني، ومجاني لطلبة الطب البيطري",
-          "url": "https://www.vin.com"
-        },
-        {
-          "title": "Reddit r/AskVet",
-          "desc": "نقاش مفتوح حول صحة الحيوانات؛ للاستئناس فقط ولا يغني عن الفحص",
-          "url": "https://www.reddit.com/r/AskVet/"
-        }
-      ]
-    }
-  ]
+   ]
+  }
+ ]
 }
