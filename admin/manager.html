@@ -52,9 +52,14 @@
   <div id="gate" class="gate card">
     <header><span class="logo">🛡️</span><h1>لوحة المدير الخفية</h1></header>
     <p class="sub">هذه اللوحة لمالك الموقع فقط. أدخل عبارة المرور لعرض تقارير «المدير الافتراضي» (حارس الموقع ومحرّك المحتوى).</p>
-    <div id="setupBox" class="hidden">
-      <p class="note">⚠️ لم تُضبط عبارة مرور بعد. احسب بصمة عبارتك ثم ضعها في ثابت <code>OWNER_HASH</code> أعلى سكربت هذه الصفحة:</p>
-      <p class="note"><code>printf %s 'عبارتك' | sha256sum</code></p>
+    <div id="lockedBox" class="hidden">
+      <p class="note">🔒 هذه اللوحة مقفلة حاليًا بقرار أمني (Fail-Closed): لم تُفعَّل عبارة مرور بعد، لذلك لا تُعرض أي تقارير ولا تُقبل أي محاولة دخول عبر الويب.</p>
+    </div>
+    <div id="localSetup" class="hidden">
+      <p class="note">🛠️ وضع الإعداد المحلي — يظهر فقط عند فتح هذا الملف محليًا على جهاز المالك (file://)، ولا يظهر أبدًا على الويب: اكتب عبارة المرور لحساب بصمتها SHA-256 هنا؛ العبارة لا تغادر جهازك مطلقًا. انسخ البصمة وحدها وضعها في ثابت <code>OWNER_HASH</code> أعلى سكربت الصفحة ثم أعد نشر الملف.</p>
+      <input type="password" id="setupPw" placeholder="عبارة المرور الجديدة (محلي فقط)" autocomplete="new-password">
+      <button class="btn" id="calcHash" style="width:100%">حساب البصمة</button>
+      <p class="note" id="hashOut" style="word-break:break-all;direction:ltr;text-align:left"></p>
     </div>
     <input type="password" id="pw" placeholder="عبارة المرور" autocomplete="current-password">
     <button class="btn primary" id="enter" style="width:100%">دخول</button>
@@ -104,7 +109,7 @@
 
 <script>
 'use strict';
-/* ضع هنا بصمة SHA-256 لعبارة مرورك (انظر MANAGER.md). اتركها كما هي لعرض وضع الإعداد. */
+/* ضع هنا بصمة SHA-256 لعبارة مرورك (انظر MANAGER.md). ما دامت غير مضبوطة تبقى اللوحة مقفلة كليًا (Fail-Closed) ولا تُعرض أي تقارير. */
 const OWNER_HASH = 'PUT_YOUR_SHA256_HASH_HERE';
 const HASH_IS_SET = /^[a-f0-9]{64}$/.test(OWNER_HASH);
 const REPORT_URL = '../data/manager-report.json';
@@ -165,24 +170,80 @@ async function loadFresh() {
     box.innerHTML = '<p class="note">تعذّر تحميل سجل التجديد (' + e.message + ') — يُنشأ عند أول تشغيل لجالب الكتب.</p>';
   }
 }
+/* مقارنة بزمن ثابت حتى لا تتسرب البصمة عبر توقيت الاستجابة */
+function constantTimeEqual(a, b) {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return diff === 0;
+}
+/* تقييد المحاولات: بعد 5 محاولات فاشلة يبدأ قفل تصاعدي (30 ثانية ثم يتضاعف حتى 15 دقيقة) */
+const FAIL_KEY = 'vetai-guard-fails';
+const LOCK_KEY = 'vetai-guard-lockuntil';
+function guardLockRemainingMs() {
+  const until = parseInt(sessionStorage.getItem(LOCK_KEY) || '0', 10);
+  return Math.max(0, until - Date.now());
+}
+function registerFailedAttempt() {
+  const fails = parseInt(sessionStorage.getItem(FAIL_KEY) || '0', 10) + 1;
+  sessionStorage.setItem(FAIL_KEY, String(fails));
+  if (fails >= 5) {
+    const secs = Math.min(30 * Math.pow(2, fails - 5), 900);
+    sessionStorage.setItem(LOCK_KEY, String(Date.now() + secs * 1000));
+    return secs;
+  }
+  return 0;
+}
+function clearFailedAttempts() {
+  sessionStorage.removeItem(FAIL_KEY);
+  sessionStorage.removeItem(LOCK_KEY);
+}
 async function tryEnter() {
-  if (!HASH_IS_SET) { $('#setupBox').classList.remove('hidden'); return; }
+  /* Fail-Closed: بلا بصمة مضبوطة لا يوجد دخول إطلاقًا ولا تُجلب أي تقارير */
+  if (!HASH_IS_SET) return;
+  const remain = guardLockRemainingMs();
+  if (remain > 0) {
+    $('#pw').value = '';
+    $('#pw').placeholder = 'محاولات كثيرة فاشلة — انتظر ' + Math.ceil(remain / 1000) + ' ثانية';
+    return;
+  }
   const h = await sha256($('#pw').value);
-  if (h === OWNER_HASH) {
+  if (constantTimeEqual(h, OWNER_HASH)) {
+    clearFailedAttempts();
     sessionStorage.setItem('vetai-guard-ok', '1');
     $('#gate').classList.add('hidden');
     $('#panel').classList.remove('hidden');
     loadReport(); loadFresh();
   } else {
+    const lockedSecs = registerFailedAttempt();
     $('#pw').value = '';
-    $('#pw').placeholder = 'عبارة غير صحيحة — حاول مجددًا';
+    $('#pw').placeholder = lockedSecs > 0
+      ? 'عبارة غير صحيحة — قُفلت البوابة ' + lockedSecs + ' ثانية'
+      : 'عبارة غير صحيحة — حاول مجددًا';
   }
 }
 $('#enter').onclick = tryEnter;
 $('#pw').addEventListener('keydown', e => { if (e.key === 'Enter') tryEnter(); });
 $('#reload').onclick = () => { loadReport(); loadFresh(); };
 $('#lock').onclick = () => { sessionStorage.removeItem('vetai-guard-ok'); location.reload(); };
-if (!HASH_IS_SET) $('#setupBox').classList.remove('hidden');
+if (!HASH_IS_SET) {
+  /* الوضع المقفل: تعطيل حقل الدخول وزرّه، وإخفاء أي تعليمات إعداد عن الويب */
+  $('#lockedBox').classList.remove('hidden');
+  $('#pw').disabled = true;
+  $('#pw').placeholder = 'الدخول معطّل حتى تفعيل عبارة المرور';
+  const enterBtn = $('#enter');
+  enterBtn.disabled = true;
+  enterBtn.textContent = '🔒 اللوحة مقفلة';
+  /* أداة الإعداد تظهر محليًا فقط على جهاز المالك */
+  if (location.protocol === 'file:') {
+    $('#localSetup').classList.remove('hidden');
+    $('#calcHash').onclick = async () => {
+      const v = $('#setupPw').value;
+      if (!v) { $('#hashOut').textContent = 'اكتب العبارة أولًا.'; return; }
+      $('#hashOut').textContent = 'OWNER_HASH = ' + (await sha256(v));
+    };
+  }
+}
 if (sessionStorage.getItem('vetai-guard-ok') === '1' && HASH_IS_SET) {
   $('#gate').classList.add('hidden');
   $('#panel').classList.remove('hidden');
