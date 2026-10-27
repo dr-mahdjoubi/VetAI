@@ -26,7 +26,7 @@
     <meta property="og:title" content="VetAI Global — Veterinary Intelligence Without Borders"><meta property="og:description" content="المعرفة البيطرية والذكاء الاصطناعي والأبحاث والتعليم في منصة واحدة."><meta name="application-name" content="VetAI Global"><title>VetAI Global | الذكاء البيطري بلا حدود</title>
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/vetai-tw.css">
-    <link rel="stylesheet" href="css/proactive-assistant.css">
+    <link rel="stylesheet" href="css/proactive-assistant.css"> <link rel="preload" as="image" href="assets/animals/hero-dog.webp" fetchpriority="high"> <link rel="stylesheet" href="css/ux-nav.css"> <link rel="stylesheet" href="css/consult-pricing.css">
     <style>
 /* VX: fonts loaded via <link> below */
         body { font-family: 'Cairo', sans-serif; background-color: #070a13; color: #f8fafc; }
@@ -1631,7 +1631,7 @@ html.perf-idle body #cv{display:none!important}
     <div class="vg-stage-grid" aria-hidden="true"></div>
     <div class="vg-orbit vg-orbit-a" aria-hidden="true"></div><div class="vg-orbit vg-orbit-b" aria-hidden="true"></div><div class="vg-orbit vg-orbit-c" aria-hidden="true"></div>
     <div class="vg-core-glow" aria-hidden="true"></div>
-    <div class="vg-animal-core"><img class="vg-rot on" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=85" alt="كلب" width="450" height="450" fetchpriority="high"><img class="vg-rot" src="assets/animals/cat.webp" alt="قط" width="450" height="450" loading="lazy"><img class="vg-rot" src="assets/animals/horse.webp" alt="حصان" width="450" height="450" loading="lazy"><img class="vg-rot" src="assets/animals/cow.webp" alt="بقرة" width="450" height="450" loading="lazy"><span class="vg-core-scan" aria-hidden="true"></span></div>
+    <div class="vg-animal-core"><img class="vg-rot on" src="assets/animals/hero-dog.webp" alt="كلب" width="450" height="450" fetchpriority="high"><img class="vg-rot" src="assets/animals/cat.webp" alt="قط" width="450" height="450" loading="lazy"><img class="vg-rot" src="assets/animals/horse.webp" alt="حصان" width="450" height="450" loading="lazy"><img class="vg-rot" src="assets/animals/cow.webp" alt="بقرة" width="450" height="450" loading="lazy"><span class="vg-core-scan" aria-hidden="true"></span></div>
     <div class="vg-hud vg-hud-top"><span class="vg-hud-dot"></span><span>VETAI NEURAL CORE</span><b>ONLINE</b></div>
     <div class="vg-hud vg-hud-left"><span class="vg-hud-symbol">⌬</span><span><b>تحليل متعدد المحاور</b><small>Clinical · Research · Learning</small></span></div>
     <div class="vg-hud vg-hud-right"><span class="vg-hud-symbol">✳</span><span><b>ذكاء مساعد</b><small>Human-led decisions</small></span></div>
@@ -1653,7 +1653,7 @@ html.perf-idle body #cv{display:none!important}
   <p class="sub">استكشف الأعراض والمراجع والأدوات التعليمية والبيانات البيطرية في مساحة واحدة. صُممت المنصة لدعم الأطباء والطلاب والباحثين والمربين، مع إبقاء القرار السريري للطبيب البيطري.</p>
   <div class="hchips"><button class="hsc">السعار</button><button class="hsc">الباروفيروس</button><button class="hsc">التهاب الضرع</button><button class="hsc">CBC</button><button class="hsc">مضاد حيوي</button></div>
   <div class="row"><a class="btn p" onclick="switchTab('ai-diagnostics')" role="button" tabindex="0"><svg class="i"><use href="#i-sp"/></svg>مُقيِّم الأعراض الذكي</a><a class="btn" onclick="switchTab('chat')" role="button" tabindex="0">اسأل بيطري-AI</a><a class="btn" onclick="switchTab('ref')" role="button" tabindex="0">المرجع السريري</a></div>
-  <div class="stats"><div><b class="g">103</b><span>مقالًا مفصلًا</span></div><div><b class="g">101</b><span>مرضًا في الفهرس</span></div><div><b class="g">1200+</b><span>موضوع عند الطلب</span></div><div><b class="g">28</b><span>مادة للاختبار</span></div></div>
+  <div class="stats"><div><b class="g">111</b><span>مقالًا مفصلًا</span></div><div><b class="g">101</b><span>مرضًا في الفهرس</span></div><div><b class="g">50</b><span>كتابًا ومرجعًا في المكتبة</span></div><div><b class="g">28</b><span>مادة للاختبار</span></div></div>
  </div>
  <div class="chart vr" aria-hidden="true">
   <div class="ch-h"><img class="am-img" data-ai="dog" alt="" width="640" height="480" loading="lazy" decoding="async"><div><b>سجل المريض · #VA-2481</b><small>كلب لابرادور ريتريفر · ذكر · 4 سنوات · 32 كغ</small></div></div>
@@ -1984,11 +1984,11 @@ html.perf-idle body #cv{display:none!important}
 <div class="card know" data-cat="research" data-text="مصطلحات تشخيص مختبر علم بحث طلاب"><h3>🎓 بطاقات للطلاب</h3><p class="muted">مصطلحات وأسئلة مراجعة يمكن تحويلها إلى بنك أسئلة أكاديمي متكامل.</p></div>
 </div>
 <div class="notice" style="margin-top:15px">⚠️ المعلومات التثقيفية لا تُغني عن الفحص السريري، ولا ينبغي اعتماد جرعات أو علاج لحالة فردية دون طبيب بيطري.</div>
-</div></section><div id="slot"></div><div class="my"><div class="card" style="margin-top:14px"><h3>📝 مقالات بيطرية جديدة</h3><details class="art"><summary>🐄 الجلد العقدي</summary><p class="muted">فيروس جدري ينتقل بالحشرات الماصة للدم ويسبب حمى وعقدًا جلدية وانخفاض الإنتاج. تقوم المكافحة على التلقيح ومقاومة الحشرات وتقييد حركة الحيوانات والإبلاغ المبكر.</p></details><details class="art"><summary>🐕 الليشمانيا الكلبية</summary><p class="muted">تنقلها ذبابة الرمل، ومن أعراضها تساقط الشعر حول العينين وتقشر الجلد وفقدان الوزن. الوقاية بالطاردات ومنع تعرض الكلب وقت نشاط الذبابة، والتشخيص والعلاج بإشراف الطبيب.</p></details><details class="art"><summary>🐓 الإنفلونزا الطيرية</summary><p class="muted">مرض فيروسي خطير في الدواجن قد يسبب نفوقًا مفاجئًا. الأمن الحيوي وعزل الطيور وإبلاغ السلطات البيطرية عند الشك هي خط الدفاع الأول.</p></details><details class="art"><summary>🐑 طاعون المجترات الصغيرة</summary><p class="muted">يصيب الغنم والماعز بحمى وإسهال والتهاب رئوي ونسبة نفوق عالية، وهناك برنامج دولي يستهدف استئصاله بحلول 2030 عبر التلقيح والمراقبة.</p></details><details class="art"><summary>🦠 الباروفيروس</summary><p class="muted">التهاب معوي فيروسي شديد في الجراء يسبب قيئًا وإسهالًا دمويًا. الحماية بالتلقيح في موعده وتجنب اختلاط الجراء غير الملقحة، وهو طارئ يستدعي الطبيب فورًا.</p></details><details class="art"><summary>☀️ الإجهاد الحراري للأبقار</summary><p class="muted">ارتفاع الحرارة والرطوبة يقلل الأكل والحليب والخصوبة. التظليل والتهوية والماء البارد وتقليل الازدحام وتعديل أوقات التغذية من أهم الحلول.</p></details><details class="art"><summary>🦷 صحة الأسنان</summary><p class="muted">مرض اللثة من أكثر الأمراض شيوعًا في الكلاب والقطط، ورائحة الفم الكريهة والسرعة في الأكل إشارات مبكرة. التنظيف الدوري وفحص الأسنان يحميان القلب والكلى من انتشار العدوى.</p></details><details class="art"><summary>🧫 الكيس العدري</summary><p class="muted">ينتقل من الكلاب المصابة بدودة المشوكة إلى الإنسان والمواشي. معالجة الكلاب دوريًا ومنع تغذيتها بأحشاء نيئة وغسل اليدين يقطع دورة المرض.</p></details></div></div></div><div class="my space-y-8"><section id="research"><div class="wrap"><div class="sectionHead"><div><h2>مركز الأبحاث والمراجع</h2><p class="muted">قسم مخصص للأعمال العلمية مع بنية جاهزة للتوسع.</p></div></div>
+</div></section><div id="slot"></div><div class="my"><div class="card" style="margin-top:14px"><h3>📝 مقالات بيطرية جديدة</h3><details class="art"><summary>🐄 الجلد العقدي</summary><p class="muted">فيروس جدري ينتقل بالحشرات الماصة للدم ويسبب حمى وعقدًا جلدية وانخفاض الإنتاج. تقوم المكافحة على التلقيح ومقاومة الحشرات وتقييد حركة الحيوانات والإبلاغ المبكر.</p></details><details class="art"><summary>🐕 الليشمانيا الكلبية</summary><p class="muted">تنقلها ذبابة الرمل، ومن أعراضها تساقط الشعر حول العينين وتقشر الجلد وفقدان الوزن. الوقاية بالطاردات ومنع تعرض الكلب وقت نشاط الذبابة، والتشخيص والعلاج بإشراف الطبيب.</p></details><details class="art"><summary>🐓 الإنفلونزا الطيرية</summary><p class="muted">مرض فيروسي خطير في الدواجن قد يسبب نفوقًا مفاجئًا. الأمن الحيوي وعزل الطيور وإبلاغ السلطات البيطرية عند الشك هي خط الدفاع الأول.</p></details><details class="art"><summary>🐑 طاعون المجترات الصغيرة</summary><p class="muted">يصيب الغنم والماعز بحمى وإسهال والتهاب رئوي ونسبة نفوق عالية، وهناك برنامج دولي يستهدف استئصاله بحلول 2030 عبر التلقيح والمراقبة.</p></details><details class="art"><summary>🦠 الباروفيروس</summary><p class="muted">التهاب معوي فيروسي شديد في الجراء يسبب قيئًا وإسهالًا دمويًا. الحماية بالتلقيح في موعده وتجنب اختلاط الجراء غير الملقحة، وهو طارئ يستدعي الطبيب فورًا.</p></details><details class="art"><summary>☀️ الإجهاد الحراري للأبقار</summary><p class="muted">ارتفاع الحرارة والرطوبة يقلل الأكل والحليب والخصوبة. التظليل والتهوية والماء البارد وتقليل الازدحام وتعديل أوقات التغذية من أهم الحلول.</p></details><details class="art"><summary>🦷 صحة الأسنان</summary><p class="muted">مرض اللثة من أكثر الأمراض شيوعًا في الكلاب والقطط، ورائحة الفم الكريهة والسرعة في الأكل إشارات مبكرة. التنظيف الدوري وفحص الأسنان يحميان القلب والكلى من انتشار العدوى.</p></details><details class="art"><summary>🧫 الكيس العدري</summary><p class="muted">ينتقل من الكلاب المصابة بدودة المشوكة إلى الإنسان والمواشي. معالجة الكلاب دوريًا ومنع تغذيتها بأحشاء نيئة وغسل اليدين يقطع دورة المرض.</p></details></div></div></div><div class="my space-y-8"><section id="research"><div class="wrap"><div class="sectionHead"><div><h2>مركز الأبحاث والمراجع</h2><p class="muted">أحد عشر عملًا علميًا منشورًا وموثقًا، تتصدرها مخطوطة المنصة البحثية الأصلية في الذكاء الاصطناعي البيطري.</p></div></div>
 <div class="grid">
-<div class="card"><h3>🔬 الأبحاث والمنشورات</h3><p class="muted">مكان منظم لإضافة عنوان البحث، الملخص، المؤلفين، الكلمات المفتاحية، PDF، DOI وروابط النشر.</p></div>
+<div class="card"><h3>🔬 الأبحاث والمنشورات</h3><p class="muted">كل عمل منشور بعنوانه وملخصه ومؤلفيه وكلماته المفتاحية وروابط نشره الرسمية — ابدأ بمخطوطة VTRI للمنصة ثم دراسات PubMed الموثقة.</p></div>
 <div class="card"><h3>📖 مراجعات علمية</h3><p class="muted">مقالات مراجعة مبسطة حول الأمراض، اللقاحات، الأدوية، الرفق بالحيوان والطب الوقائي.</p></div>
-<div class="card"><h3>📊 بيانات ورسوم</h3><p class="muted">قسم مستقبلي لعرض الجداول والرسوم والبيانات البحثية بصورة تفاعلية.</p></div>
+<div class="card"><h3>📊 بيانات ورسوم</h3><p class="muted">جداول ورسوم حقيقية داخل الدراسات الثلاث المنشورة للفروع (الأليفة والمواشي والدواجن) بمصادر WOAH وFAO وWSAVA.</p></div>
 <div class="card"><h3>🤝 تعاون أكاديمي</h3><p class="muted">نموذج للتواصل مع الباحثين والطلبة والجامعات والمختبرات.</p></div>
 </div>
 </div></section></div></section><section id="view-library" class="hidden space-y-8"><div class="my space-y-8"><section id="library"><div class="wrap"><div class="sectionHead"><div><h2>المكتبة: مقالات بحثية وكتب مجانية</h2><p class="muted">اضغط على أي عنوان لقراءة الملخص.</p></div></div>
@@ -4679,7 +4679,7 @@ $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(
 </script>
 
 
-<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+
 <script>
 /* قسم الوسائط: نماذج ثلاثية الأبعاد + معرض صور + فيديوهات — يُبنى من data/gallery.json و data/media.json */
 (function(){
@@ -6139,13 +6139,13 @@ arm();
 })();
 
 </script>
-<script src="js/breed-id.js"></script>
+
 <script id="hero-rot-js">
 /* مبدّل صورة الحيوان في لوحة البطل: كل 4.2 ثانية بذوبان ناعم، يعمل فقط أثناء ظهور اللوحة */
 (function(){'use strict';var imgs=document.querySelectorAll('#view-home .vg-animal-core img.vg-rot');if(imgs.length<2)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;var i=0,timer=null;function step(){imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');}function start(){if(!timer)timer=setInterval(step,4200);}function stop(){if(timer){clearInterval(timer);timer=null;}}if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)start();else stop();},{threshold:.12}).observe(imgs[0]);}else{start();}document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});})();
 </script>
-<script src="js/innovations.js"></script>
-<script src="js/proactive-assistant.js" defer></script>
+
+<script src="js/proactive-assistant.js" defer></script><script src="js/lazy-views.js" defer></script> <script src="js/ux-nav.js" defer></script> <script src="js/consult-pricing.js" defer></script>
 </body>
   
 </html>
