@@ -1,0 +1,42 @@
+/* VetAI UX Nav — أنماط ملاح تجربة الاستخدام (أصناف un- فقط، لا تعارض مع الموقع) */
+.un-progress {
+  position: fixed; top: 0; inset-inline: 0; height: 3px;
+  z-index: 9995; background: transparent; pointer-events: none;
+}
+.un-progress-fill {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, #0ea5b7, #10b981);
+  transition: width .08s linear;
+}
+.un-stack {
+  position: fixed; inset-inline-start: 14px; bottom: 16px;
+  z-index: 9989; display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
+  font-family: system-ui, 'Segoe UI', Tahoma, sans-serif;
+}
+.un-btn {
+  border: 1px solid rgba(14, 165, 183, .5);
+  background: rgba(10, 25, 38, .92); color: #e8f4f8;
+  border-radius: 999px; padding: 9px 15px;
+  font: 700 13.5px system-ui, 'Segoe UI', Tahoma, sans-serif;
+  cursor: pointer; box-shadow: 0 6px 18px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(4px);
+}
+.un-btn:active { transform: scale(.96); }
+.un-hidden { display: none !important; }
+.un-panel {
+  max-height: 52vh; overflow-y: auto; width: min(300px, 78vw);
+  background: rgba(10, 25, 38, .97); border: 1px solid #1e3a4c; border-radius: 14px;
+  padding: 8px; box-shadow: 0 16px 40px rgba(0, 0, 0, .4);
+}
+.un-item {
+  display: block; width: 100%; text-align: start;
+  background: transparent; border: none; border-radius: 9px;
+  color: #e8f4f8; padding: 8px 10px; cursor: pointer;
+  font: 600 13.5px/1.6 system-ui, 'Segoe UI', Tahoma, sans-serif;
+}
+.un-item:hover { background: rgba(14, 165, 183, .18); }
+.un-item.un-sub { padding-inline-start: 22px; color: #9db8c4; font-weight: 500; }
+.un-empty { color: #9db8c4; font-size: 13px; padding: 8px 10px; }
+@media (prefers-reduced-motion: reduce) {
+  .un-progress-fill { transition: none; }
+}
