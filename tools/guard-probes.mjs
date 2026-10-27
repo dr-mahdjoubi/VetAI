@@ -48,7 +48,7 @@ async function probePol(model) {
   return ok;
 }
 async function probeWorker(origin) {
-  const { ms, v, err } = await timed(() => fetchTO('https://vetai-chat.dr-mahdjoubi.workers.dev', {
+  const { ms, v, err } = await timed(() => fetchTO('https://vetai-chat.vcom.workers.dev', {
     method: 'POST', headers: { 'Content-Type': 'application/json', Origin: origin },
     body: JSON.stringify({ question: 'ping', history: [], context: '' })
   }).then(async r => ({ status: r.status, acao: r.headers.get('access-control-allow-origin'), body: await r.text() })));
