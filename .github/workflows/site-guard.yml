@@ -27,20 +27,25 @@ jobs:
         run: node tools/site-guard.mjs --out data/manager-report.json
         continue-on-error: true
 
+      - name: Run supervisor probes and rebuild search index
+        id: probes
+        run: node tools/guard-probes.mjs --base https://drvet.onrender.com --min-books 987 --build-index js/search-index.json --out data/supervisor-report.json
+        continue-on-error: true
+
       - name: Commit updated report
         run: |
           git config user.name 'vetai-site-guard'
           git config user.email 'guard@vetai.local'
-          git add data/manager-report.json
+          git add data/manager-report.json data/supervisor-report.json js/search-index.json
           if git diff --cached --quiet; then
             echo 'التقرير لم يتغيّر.'
           else
-            git commit -m 'chore(guard): تحديث تقرير المدير'
+            git commit -m 'chore(guard): تحديث تقرير المدير وفهرس البحث'
             git push
           fi
 
       - name: Open issue on failure
-        if: steps.guard.outcome == 'failure'
+        if: steps.guard.outcome == 'failure' || steps.probes.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
