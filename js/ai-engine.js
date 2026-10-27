@@ -1,6 +1,9 @@
 // محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
 // إصلاح 2026-10-26: الـ Worker (vetai-chat) يحصر CORS في نطاق github.io القديم فيُحجب من النطاق الرسمي،
 // فصار المسار المجاني (pollinations) هو الأساسي — يعمل من أي نطاق وبلا مفتاح — والـ Worker احتياطيًا أخيرًا.
+// إصلاح 2026-10-27: نموذج openai كان يرد في ~29 ثانية فيلامس مهلة 30 ثانية ويسقط على الهواتف.
+// صار الطلب سباقًا متوازيًا بين openai-fast و openai (أول نجاح يفوز) مع جولة ثانية عند الفشل،
+// لأن زمن رد الخدمة المجانية متقلب جدًا (من ثانية واحدة إلى ~30 ثانية).
 var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
 
 (function () {
@@ -25,14 +28,14 @@ var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
   }
 
   // المسار الأساسي: ذكاء مجاني بلا مفتاح، CORS مفتوح، يعمل من أي استضافة
-  function viaFree(q, history, context) {
+  function viaFree(q, history, context, model) {
     var msgs = [{ role: 'system', content: SYSTEM }];
     (history || []).slice(-6).forEach(function (m) { msgs.push({ role: m.role, content: m.content }); });
     msgs.push({ role: 'user', content: context ? 'معلومات مساعدة:\n' + context + '\n\nالسؤال: ' + q : q });
     return fetch('https://text.pollinations.ai/openai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: 'openai', messages: msgs, temperature: 0.3 })
+      body: JSON.stringify({ model: model || 'openai-fast', messages: msgs, temperature: 0.3 })
     }).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
       .then(function (d) {
         var t = d.choices && d.choices[0] && d.choices[0].message.content;
@@ -44,10 +47,22 @@ var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
   }
 
   function delay(ms) { return new Promise(function (res) { setTimeout(res, ms); }); }
+
+  // سباق متوازٍ بين النموذجين: أول إجابة ناجحة تفوز، والفشل لا يُعلن إلا بسقوط الاثنين
+  function raceFree(q, history, context) {
+    return new Promise(function (resolve, reject) {
+      var done = false, fails = 0;
+      function ok(t) { if (!done) { done = true; resolve(t); } }
+      function bad() { fails++; if (fails === 2 && !done) { done = true; reject(new Error('both models failed')); } }
+      withTimeout(viaFree(q, history, context, 'openai-fast'), 30000).then(ok, bad);
+      withTimeout(viaFree(q, history, context, 'openai'), 45000).then(ok, bad);
+    });
+  }
+
   window.VetAI_ask = function (question, history, context) {
     history = history || []; context = context || '';
-    return withTimeout(viaFree(question, history, context), 30000)
-      .catch(function () { return delay(2500).then(function () { return withTimeout(viaFree(question, history, context), 30000); }); })
+    return raceFree(question, history, context)
+      .catch(function () { return delay(1500).then(function () { return raceFree(question, history, context); }); })
       .catch(function () { return withTimeout(viaWorker(question, history, context), 12000); });
   };
 })();
