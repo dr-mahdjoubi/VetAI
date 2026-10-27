@@ -25,8 +25,8 @@ const UA = 'VetAI-SiteGuard/1.0 (+https://vetai.vcom.workers.dev)';
 /* القيم المرجعية المتوقعة — حدّثها عند أي نشر يغيّر المحتوى عمدًا */
 const EXPECTED = {
   titlePart: 'VetAI Global',
-  mediaCount: 50,
-  galleryCount: 44,
+  mediaCount: 53,
+  galleryCount: 53,
   verifyBody: 'google-site-verification: googlea35966b2c860f617.html',
   sitemapMustContain: 'drvet.onrender.com',
   homeMaxKB: 1800,
