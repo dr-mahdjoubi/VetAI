@@ -26,7 +26,7 @@
     'أجب بلغة المستخدم بوضوح ودقة وباختصار منظم. إجاباتك تعليمية ولا تغني عن الطبيب البيطري. ' +
     'لا تخترع مصادر. إن لم تكن متأكداً فقل ذلك.';
 
-  var WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
+  var WORKER_URL = 'https://vetai-chat.vcom.workers.dev';
   var POL_URL = 'https://text.pollinations.ai/openai';
 
   function now() { return Date.now(); }
