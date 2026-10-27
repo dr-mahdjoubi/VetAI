@@ -1,10 +1,10 @@
 // محرك الذكاء الاصطناعي للمساعد. لا يغيّر أي تصميم، فقط يوفّر الدالة: VetAI_ask(question, history, context)
-// إصلاح 2026-10-26: الـ Worker (vetai-chat) يحصر CORS في نطاق github.io القديم فيُحجب من النطاق الرسمي،
-// فصار المسار المجاني (pollinations) هو الأساسي — يعمل من أي نطاق وبلا مفتاح — والـ Worker احتياطيًا أخيرًا.
+// إصلاح 2026-10-27: خدمة vetai-chat الأصلية في حساب Cloudflare آخر لا نملك تعديله، فاستُبدلت بخدمة
+// بديلة في حساب المالك (vetai-chat.vcom.workers.dev) تسمح بكل نطاقات الإنتاج؛ والمسار المجاني هو الأساسي.
 // إصلاح 2026-10-27: نموذج openai كان يرد في ~29 ثانية فيلامس مهلة 30 ثانية ويسقط على الهواتف.
 // صار الطلب سباقًا متوازيًا بين openai-fast و openai (أول نجاح يفوز) مع جولة ثانية عند الفشل،
 // لأن زمن رد الخدمة المجانية متقلب جدًا (من ثانية واحدة إلى ~30 ثانية).
-var VETAI_WORKER_URL = 'https://vetai-chat.dr-mahdjoubi.workers.dev';
+var VETAI_WORKER_URL = 'https://vetai-chat.vcom.workers.dev';
 
 (function () {
   var SYSTEM = 'أنت "بيطري-AI"، مساعد في منصة VetAI Global Intelligence للطب البيطري. ' +
