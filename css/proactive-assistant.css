@@ -4,15 +4,16 @@
 
 .pa-fab {
   position: fixed;
-  inset-inline-end: 16px;
-  bottom: 92px;
+  inset-inline-end: 14px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  height: 44px;
   z-index: 9990;
   display: flex;
   align-items: center;
   gap: 8px;
   border: none;
   border-radius: 999px;
-  padding: 12px 18px;
+  padding: 0 18px;
   background: linear-gradient(135deg, #0ea5b7, #10b981);
   color: #fff;
   font: 800 15px/1.2 system-ui, 'Segoe UI', Tahoma, sans-serif;
@@ -164,7 +165,7 @@
 .pa-disclaimer { padding: 0 14px 10px; font-size: 11px; color: #9db8c4; line-height: 1.7; background: rgba(16, 34, 47, .9); }
 
 @media (max-width: 520px) {
-  .pa-fab { bottom: 84px; inset-inline-end: 12px; padding: 11px 15px; font-size: 14px; }
+  .pa-fab { bottom: calc(16px + env(safe-area-inset-bottom, 0px)); inset-inline-end: 14px; padding: 0 15px; font-size: 14px; }
   .pa-panel { inset-inline-end: 0; bottom: 0; width: 100vw; height: 100dvh; border-radius: 0; }
 }
 @media (prefers-reduced-motion: reduce) {

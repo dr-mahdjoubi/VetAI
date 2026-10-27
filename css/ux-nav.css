@@ -14,6 +14,7 @@
   font-family: system-ui, 'Segoe UI', Tahoma, sans-serif;
 }
 .un-btn {
+  min-height: 44px; display: inline-flex; align-items: center; justify-content: center;
   border: 1px solid rgba(14, 165, 183, .5);
   background: rgba(10, 25, 38, .92); color: #e8f4f8;
   border-radius: 999px; padding: 9px 15px;

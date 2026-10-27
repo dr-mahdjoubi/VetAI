@@ -6,8 +6,8 @@
 .aud-ov.on .aud-dlg{transform:none}
 @media(min-width:720px){.aud-ov{align-items:center;padding:24px}.aud-dlg{border-radius:24px;max-height:86dvh;padding:22px}}
 .aud-hd{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
-.aud-seg,.aud-sub{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;min-width:0}
-.aud-seg button,.aud-sub button{flex:none;padding:7px 14px;border-radius:99px;border:1px solid var(--bd,#1e293b);background:transparent;color:var(--mut,#94a3b8);font:600 13px inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.aud-seg,.aud-sub{display:flex;gap:6px;flex-wrap:wrap;min-width:0}
+.aud-seg button,.aud-sub button{flex:1 1 30%;max-inline-size:calc(33.333% - 4px);display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:40px;padding:7px 10px;border-radius:14px;border:1px solid var(--bd,#1e293b);background:transparent;color:var(--mut,#94a3b8);font:600 13px/1.4 inherit;font-family:inherit;cursor:pointer;white-space:normal;overflow-wrap:anywhere}
 .aud-seg button[aria-selected=true],.aud-sub button[aria-selected=true]{background:var(--a1,#06b6d4);color:#04121a;border-color:transparent}
 .aud-x{flex:none;inline-size:38px;block-size:38px;border-radius:50%;border:1px solid var(--bd,#1e293b);background:transparent;color:inherit;font-size:16px;cursor:pointer}
 .aud-x:hover{background:rgba(244,63,94,.18);border-color:#f43f5e}
@@ -27,8 +27,8 @@
 .aud-links{list-style:none!important;padding:0!important}.aud-links a{color:var(--a1,#06b6d4);text-decoration:underline}
 @media(prefers-reduced-motion:reduce){.aud-ov,.aud-dlg,.aud-body.in{transition:none;animation:none}}
 
-.aud-chips{display:flex;gap:6px;overflow-x:auto;padding-block:2px 12px;scrollbar-width:thin}
-.aud-chip{flex:none;padding:6px 12px;border-radius:10px;border:1px solid var(--bd,#1e293b);background:transparent;color:var(--fg,#f8fafc);font:600 12.5px inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.aud-chips{display:flex;gap:6px;flex-wrap:wrap;padding-block:2px 12px}
+.aud-chip{flex:1 1 30%;max-inline-size:calc(33.333% - 4px);display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:40px;padding:6px 8px;border-radius:10px;border:1px solid var(--bd,#1e293b);background:transparent;color:var(--fg,#f8fafc);font:600 12.5px/1.35 inherit;font-family:inherit;cursor:pointer;white-space:normal;overflow-wrap:anywhere}
 .aud-chip[aria-pressed=true]{background:var(--a1,#06b6d4);color:#04121a;border-color:transparent}
 .aud-meta{margin:0 0 6px;color:var(--mut,#94a3b8);font-size:13px}
 .aud-body table th[scope=row]{white-space:nowrap;min-inline-size:9rem}
