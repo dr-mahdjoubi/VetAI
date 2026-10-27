@@ -12,9 +12,11 @@
   var WHATSAPP_URL = 'https://wa.me/14152793963';
   var NEWS_URL = 'json/news.json';
   var MANIFEST_URL = 'articles/manifest.json';
+  var INDEX_URL = 'js/search-index.json';
   var DISMISS_KEY = 'vetai-pa-dismissed';
   var HISTORY = [];
   var manifestCache = null;
+  var indexCache = null;
 
   var EMERGENCY_WORDS = ['نزيف', 'نزف', 'تشنج', 'تشنجات', 'سم', 'تسمم', 'مبيد', 'صعوبة تنفس', 'لا يتنفس', 'اختناق', 'كسر', 'حادث', 'إغماء', 'انهيار', 'نفاخ', 'انتفاخ بطن', 'احتباس بول', 'ولادة متعسرة', 'عسر ولادة', 'ضربة شمس', 'عضة', 'لدغة', 'جروح عميقة', 'قيء دم', 'إسهال دموي'];
   var TIPS = [
@@ -205,7 +207,35 @@
       .then(function (r) { if (!r.ok) throw new Error('http'); return r.json(); })
       .then(function (m) { manifestCache = m; return m; });
   }
+  function loadIndex() {
+    if (indexCache) return Promise.resolve(indexCache);
+    return fetch(INDEX_URL, { cache: 'force-cache' })
+      .then(function (r) { if (!r.ok) throw new Error('http'); return r.json(); })
+      .then(function (ix) { indexCache = ix; return ix; });
+  }
+  function searchViaIndex(q) {
+    return loadIndex().then(function (ix) {
+      if (!ix || !ix.docs || !ix.inv) throw new Error('bad index');
+      var toks = q.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(function (w) { return w.length >= 2 && w.length <= 40; });
+      if (!toks.length) return [];
+      var score = {};
+      toks.forEach(function (t) {
+        (ix.inv[t] || []).forEach(function (id) { score[id] = (score[id] || 0) + 1; });
+      });
+      return Object.keys(score).map(Number).filter(function (id) {
+        return ix.docs[id] && ix.docs[id].k === 'article';
+      }).sort(function (a, b) { return score[b] - score[a] || a - b; }).slice(0, 5)
+        .map(function (id) { return { title: ix.docs[id].t, href: ix.docs[id].u }; });
+    });
+  }
   function searchArticles(q) {
+    // الفهرس المسبق أولًا (بحث مقلوب سريع)، والمانيفست هو الاحتياطي عند الفشل أو غياب النتائج
+    return searchViaIndex(q).then(function (hits) {
+      if (hits && hits.length) return hits;
+      return searchArticlesManifest(q);
+    }).catch(function () { return searchArticlesManifest(q); });
+  }
+  function searchArticlesManifest(q) {
     return loadManifest().then(function (m) {
       var entries = [];
       if (Array.isArray(m)) entries = m.map(function (x) { return { title: x.title || x.t || '', slug: x.slug || x.file || x.s || '' }; });
