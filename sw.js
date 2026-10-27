@@ -1,6 +1,6 @@
 // غيّر هذا الرقم عند كل نشر جديد
-const CACHE = 'vetai-v31';
-const CORE = ['css/proactive-assistant.css', 'js/proactive-assistant.js'];
+const CACHE = 'vetai-v32';
+const CORE = ['css/proactive-assistant.css', 'js/proactive-assistant.js', 'assets/animals/hero-dog.webp', 'js/lazy-views.js', 'js/ux-nav.js', 'css/ux-nav.css', 'css/consult-pricing.css', 'js/consult-pricing.js'];
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE))));
 self.addEventListener('install', () => self.skipWaiting());
 
