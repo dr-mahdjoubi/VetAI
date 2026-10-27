@@ -1,0 +1,41 @@
+# VetAI Articles Generator — يولّد صفحات مستقلة قابلة للفهرسة لمقالات المرجع السريري
+# عند أي تغيير في مصادر المقالات (index.html أو js/extra-articles.js) أو في المولّد نفسه:
+# يعيد توليد articles/*.html وفهرس المقالات وخريطة الموقع ويلتزم بها تلقائيًا.
+name: VetAI Articles Generator
+
+on:
+  push:
+    paths:
+      - 'index.html'
+      - 'js/extra-articles.js'
+      - 'tools/gen-articles.mjs'
+      - '.github/workflows/articles.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate standalone article pages
+        run: node tools/gen-articles.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'vetai-content-bot'
+          git config user.email 'content@vetai.local'
+          git add articles sitemap.xml
+          if git diff --cached --quiet; then
+            echo 'لا جديد في هذا التشغيل.'
+          else
+            git commit -m 'chore(articles): توليد صفحات المقالات المستقلة وخريطة الموقع'
+            git push
+          fi
