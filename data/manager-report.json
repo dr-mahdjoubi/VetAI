@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-26T05:43:21.235Z",
+  "generatedAt": "2026-10-27T05:40:53.496Z",
   "generator": "tools/site-guard.mjs",
   "base": "https://vetai.vcom.workers.dev",
-  "overall": "ok",
+  "overall": "warn",
   "counts": {
-    "فيديوهات الوسائط": 40,
-    "صور المعرض": 34,
+    "فيديوهات الوسائط": 50,
+    "صور المعرض": 44,
     "بيانات الأنواع": 8,
     "شريط الأخبار": 11
   },
@@ -15,13 +15,13 @@
       "id": "mirror",
       "label": "مرآة Cloudflare — الرئيسي",
       "status": "ok",
-      "detail": "HTTP 200 · 320ms · العنوان سليم"
+      "detail": "HTTP 200 · 272ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Render — drvet",
       "status": "ok",
-      "detail": "HTTP 200 · 173ms · العنوان سليم"
+      "detail": "HTTP 200 · 301ms · العنوان سليم"
     },
     {
       "id": "mirror",
@@ -33,19 +33,19 @@
       "id": "mirror",
       "label": "مرآة GitHub Pages",
       "status": "ok",
-      "detail": "HTTP 200 · 338ms · العنوان سليم"
+      "detail": "HTTP 200 · 123ms · العنوان سليم"
     },
     {
       "id": "data",
       "label": "فيديوهات الوسائط",
       "status": "ok",
-      "detail": "40 عنصرًا"
+      "detail": "50 عنصرًا"
     },
     {
       "id": "data",
       "label": "صور المعرض",
       "status": "ok",
-      "detail": "34 عنصرًا"
+      "detail": "44 عنصرًا"
     },
     {
       "id": "data",
@@ -75,13 +75,25 @@
       "id": "perf",
       "label": "أداء الصفحة الرئيسية",
       "status": "ok",
-      "detail": "1317KB · 100ms"
+      "detail": "1442KB · 95ms"
     },
     {
       "id": "links",
       "label": "الروابط الداخلية",
       "status": "ok",
-      "detail": "فُحص 44 مرجعًا داخليًا — لا كسور"
+      "detail": "فُحص 53 مرجعًا داخليًا — لا كسور"
+    },
+    {
+      "id": "ai",
+      "label": "محرك الذكاء — إجابة حية",
+      "status": "ok",
+      "detail": "المسار المجاني يجيب فعليًا (بعد 1 محاولة)"
+    },
+    {
+      "id": "ai",
+      "label": "الوسيط الاحتياطي vetai-chat",
+      "status": "warn",
+      "detail": "CORS مقصور على «https://dr-mahdjoubi.github.io» — الاحتياطي لا يعمل من النطاق الرسمي (غير حرج: لم يعد الأساسي)"
     }
   ]
 }
