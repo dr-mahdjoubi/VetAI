@@ -878,7 +878,7 @@ textarea:focus-visible, [tabindex]:focus-visible {
 #view-home .vg-orb-label{position:absolute;z-index:3;color:#9fb2c9;font-size:.57rem;letter-spacing:.16em;opacity:.78}#view-home .vg-orb-label-a{top:27%;right:13%}#view-home .vg-orb-label-a span{color:#67e8f9}#view-home .vg-orb-label-b{bottom:26%;left:8%;font-size:.52rem}
 #view-home .vg-cine-footer{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(180px,1.5fr);gap:10px;padding-top:20px;border-top:1px solid rgba(148,163,184,.16)}
 #view-home .vg-cine-metric{display:flex;align-items:center;gap:12px;padding:5px 12px;border-inline-end:1px solid rgba(148,163,184,.13)}#view-home .vg-cine-metric b{font-size:1.2rem;color:#67e8f9;font-weight:900}#view-home .vg-cine-metric span{color:#9aabc0;font-size:.75rem}#view-home .vg-cine-note{display:flex;align-items:center;gap:9px;color:#aebed1;font-size:.72rem;line-height:1.8}#view-home .vg-cine-note span{color:#fbbf24}
-@keyframes vg-float{0%,100%{transform:translateY(0) translateZ(30px)}50%{transform:translateY(-9px) translateZ(30px)}}@keyframes vg-orbit{to{rotate:360deg}}@keyframes vg-grid-drift{to{background-position:0 24px,24px 0}}@keyframes vg-glow{to{transform:scale(1.12);opacity:.75}}@keyframes vg-scan{0%,100%{transform:translateY(-45%);opacity:.2}50%{transform:translateY(45%);opacity:.8}}@keyframes vg-wave{to{height:calc(var(--h,9px)*.35)}}@keyframes vg-sheen{to{background-position:-200% 0}}
+@keyframes vg-float{0%,100%{transform:translateY(0) translateZ(30px)}50%{transform:translateY(-9px) translateZ(30px)}}@keyframes vg-orbit{to{rotate:360deg}}@keyframes vg-grid-drift{to{background-position:0 24px,24px 0}}@keyframes vg-glow{to{transform:scale(1.12);opacity:.75}}@keyframes vg-scan{0%,100%{transform:translateY(-45%);opacity:.2}50%{transform:translateY(45%);opacity:.8}}@keyframes vg-wave{to{transform:scaleY(.35)}}@keyframes vg-sheen{to{background-position:-200% 0}}
 @media(max-width:900px){#view-home .vg-cinematic{grid-template-columns:minmax(0,1fr);gap:18px}#view-home .vg-cine-copy{max-width:760px}#view-home .vg-cine-stage{max-width:520px;grid-row:2}#view-home .vg-cine-footer{grid-template-columns:repeat(2,minmax(0,1fr))}#view-home .vg-cine-note{grid-column:1/-1;padding-top:6px}}
 @media(max-width:520px){#view-home .vg-cinematic{padding:24px 16px;border-radius:22px}#view-home .vg-cinematic h2{font-size:clamp(2.3rem,12vw,3.5rem)}#view-home .vg-trustline{font-size:.68rem}#view-home .vg-cine-stage{width:calc(100% + 4px);margin-inline:-2px}#view-home .vg-hud{padding:7px 8px;gap:6px}#view-home .vg-hud-left{left:-2%;top:35%}#view-home .vg-hud-right{right:-2%;top:58%}#view-home .vg-hud b{font-size:.63rem}#view-home .vg-hud small{font-size:.54rem}#view-home .vg-hud-top{font-size:.49rem}#view-home .vg-hud-bottom{bottom:5%}#view-home .vg-orb-label{font-size:.45rem}#view-home .vg-cine-footer{gap:7px}#view-home .vg-cine-metric{padding:6px;border:0;gap:8px}#view-home .vg-cine-metric span{font-size:.68rem}#view-home .vg-cine-note{font-size:.68rem}}
 @media(prefers-reduced-motion:reduce){#view-home .vg-cinematic:after,#view-home .vg-stage-grid,#view-home .vg-core-glow,#view-home .vg-animal-core,#view-home .vg-core-scan,#view-home .vg-orbit,#view-home .vg-wave i{animation:none!important}}
@@ -1416,8 +1416,8 @@ html body .text-6xl{font-size:2.7rem!important;line-height:1.2!important}
 </style>
 <style id="perf-css">
 html.perf-lite body .glass-panel,html.perf-lite body .card,html.perf-lite body .isl,html.perf-lite body .gsub,html.perf-lite body .hsearch,html.perf-lite body .paragraph-finder,html.perf-lite body #gnav .setpanel,html.perf-lite body #view-home .vg-hud,html.perf-lite body #view-bio .bx-card{backdrop-filter:blur(8px) saturate(1.25)!important;-webkit-backdrop-filter:blur(8px) saturate(1.25)!important}
-html.perf-lite body .aur i{filter:blur(60px)!important}
-html.perf-idle body .aur i,html.perf-idle body #tkt{animation-play-state:paused!important}
+html.perf-lite body .aur i{filter:blur(60px)!important} html.perf-lite body #view-home .vg-cinematic:after,html.perf-lite body #view-home .vg-stage-grid,html.perf-lite body #view-home .vg-wave i{animation:none!important}
+html.perf-idle body .aur i,html.perf-idle body #tkt,html.perf-idle body #view-home .vg-cinematic:after,html.perf-idle body #view-home .vg-stage-grid,html.perf-idle body #view-home .vg-wave i,html.perf-idle body #view-home .vg-orbit,html.perf-idle body #view-home .vg-core-scan,html.perf-idle body #view-home .vg-animal-core,html.perf-idle body #view-home .vg-core-glow{animation-play-state:paused!important}
 html.perf-idle body #cv{display:none!important}
 @media (prefers-reduced-motion: reduce){html body .aur i,html body #tkt{animation:none!important}}
 </style>
@@ -2865,7 +2865,7 @@ html.perf-idle body #cv{display:none!important}
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 function tick(){const n=new Date();$('#clock').textContent=n.toLocaleTimeString('ar-DZ',{hour:'2-digit',minute:'2-digit'})+' · '+n.toLocaleDateString('ar-DZ',{weekday:'long',day:'numeric',month:'long'});}
-setInterval(tick,1000);tick();
+tick();(function __clk(){setTimeout(function(){tick();__clk()},60050-(Date.now()%60000))})();
 
 const knowledgeInput=$('#knowledgeSearch');
 function filterKnowledge(cat='all'){
@@ -2956,7 +2956,7 @@ function sv(){try{localStorage.setItem(MK,JSON.stringify(H.slice(-20)))}catch(e)
 async function ask(q){add(q,'u');H.push({t:q,r:'u'});const b=add('…','b');let sm=null;try{sm=window.claude&&await claude.use('sample')}catch(e){}
 let out=null;if(sm){try{const ctx=H.slice(-7,-1).map(m=>(m.r=='u'?'المستخدم: ':'بيطري-AI: ')+m.t).join('\n');const r=await sm([{role:'user',content:'أنت «بيطري-AI»، المساعد الرسمي لمنصة الدكتور محجوبي عبدالناصر البيطرية. أجب عن أي سؤال في أي موضوع، بلغة السائل وبدقة ووضوح ودون اختلاق، وإن لم تكن متأكدًا فاذكر ذلك. للأسئلة الطبية والبيطرية لا تعطِ جرعات علاجية محددة وانصح بالطبيب في الحالات الطارئة.\nالمحادثة السابقة:\n'+ctx+'\nالسؤال: '+q}],{cache:false,onText:({text})=>{b.textContent=text}});out=r.text}catch(e){}}
 if(!out)out=local(q);b.textContent=out;H.push({t:out,r:'b'});sv()}
-addEventListener('scroll',()=>{const h=document.documentElement;$('#pg').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+addEventListener('scroll',()=>{if(window.__pgT)return;window.__pgT=true;requestAnimationFrame(()=>{window.__pgT=false;const h=document.documentElement;const pg=$('#pg');if(pg)pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'})},{passive:true});
 $('#up').onclick=()=>scrollTo({top:0,behavior:'smooth'});
 
 document.addEventListener('click',e=>{const a=e.target.closest('[data-go]');if(!a)return;e.preventDefault();go2(a.dataset.go.replace('#',''))});
@@ -4357,7 +4357,7 @@ document.addEventListener("DOMContentLoaded", function() {
  if(th){th.onclick=()=>{const o=['calm','dark','light'],c=document.body.dataset.theme||'dark',n=o[(o.indexOf(c)+1)%3],b=document.querySelector('#thm [data-t="'+n+'"]');b&&b.click();icon()}}
  new MutationObserver(icon).observe(document.body,{attributes:true,attributeFilter:['data-theme']});icon();
  /* card spotlight */
- addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.card,.glass-panel,.tool');if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});
+ addEventListener('pointermove',e=>{window.__pmE=e;if(window.__pmT)return;window.__pmT=true;requestAnimationFrame(()=>{window.__pmT=false;const ev=window.__pmE;if(!ev||!ev.target.closest)return;const c=ev.target.closest('.card,.glass-panel,.tool');if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty('--mx',(ev.clientX-r.left)+'px');c.style.setProperty('--my',(ev.clientY-r.top)+'px')})},{passive:true});
  /* reveal on scroll (home only) */
  const rv=[...document.querySelectorAll('.vr')];
  if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vin');io.unobserve(x.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});rv.forEach(e=>io.observe(e))}else rv.forEach(e=>e.classList.add('vin'));
@@ -4365,17 +4365,18 @@ document.addEventListener("DOMContentLoaded", function() {
  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('a[role=button],a.logo,.vf a[onclick]')){e.preventDefault();e.target.click()}});
  /* particle network */
  const cv=$('#cv');if(!cv||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
- const x=cv.getContext('2d');let W,H,P=[],run=true;const DPR=Math.min(devicePixelRatio||1,1.5);
+ const x=cv.getContext('2d');let W,H,P=[],run=true;const DPR=Math.min(devicePixelRatio||1,1.25);
  function rs(){W=cv.width=innerWidth*DPR;H=cv.height=innerHeight*DPR;const n=Math.round(Math.min(70,innerWidth/18));P=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25*DPR,vy:(Math.random()-.5)*.25*DPR}))}
  rs();addEventListener('resize',rs);
- document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)loop()});
+ document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)kick()});
  function col(){return getComputedStyle(document.body).getPropertyValue('--a1').trim()||'#5eead4'}
  let c=col();new MutationObserver(()=>c=col()).observe(document.body,{attributes:true,attributeFilter:['data-theme']});
- function loop(){if(!run)return;const _n=performance.now();if(_n-(loop._t||0)<33){requestAnimationFrame(loop);return}loop._t=_n;x.clearRect(0,0,W,H);x.fillStyle=c;x.strokeStyle=c;
+ function loop(){if(!run){loop._on=false;return}if(document.documentElement.classList.contains('perf-idle')){setTimeout(loop,900);return}const _n=performance.now();if(_n-(loop._t||0)<33){requestAnimationFrame(loop);return}loop._t=_n;x.clearRect(0,0,W,H);x.fillStyle=c;x.strokeStyle=c;
   for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.globalAlpha=.7;x.beginPath();x.arc(p.x,p.y,1.4*DPR,0,7);x.fill()}
   const L=150*DPR;for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=Math.hypot(dx,dy);if(d<L){x.globalAlpha=(1-d/L)*.35;x.lineWidth=DPR*.7;x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
   requestAnimationFrame(loop)}
- loop();
+ function kick(){if(!loop._on){loop._on=true;loop()}}
+ kick();
 })();
 </script>
 <script>
@@ -4614,7 +4615,8 @@ $('bx-mic').onclick=function(){if(an)return stopMic();
  .catch(function(){$('bx-nt').textContent='تعذّر الوصول للميكروفون. اسمح بالإذن من إعدادات المتصفح ثم أعد المحاولة.'})};
 function simSpec(){var p=P[cur],s=[];for(var i=0;i<N;i++){var v=0;p.h.forEach(function(h){v+=Math.exp(-Math.pow(i-h*p.k,2)/2)/h});s.push(Math.min(1,v*(.8+.2*Math.sin(t*4+i))*(.9+.3*Math.pow(Math.sin(t*p.r*2.4),2))))}return s}
 function vis(){var v=$('view-bio');return v&&!v.classList.contains('hidden')}
-function frame(){requestAnimationFrame(frame);if(!vis()){if(an)stopMic();return}
+var bxOn=false;
+function frame(){if(!bxOn)return;requestAnimationFrame(frame);if(!vis()){if(an)stopMic();return}
  sz(wv);sz(sp);var W=wv.width,H=wv.height,spec,f0,cen,rms=0,x;
  wc.clearRect(0,0,W,H);var g=wc.createLinearGradient(0,0,W,0);g.addColorStop(0,'#22d3ee');g.addColorStop(1,'#34d399');wc.strokeStyle=g;wc.lineWidth=2*(devicePixelRatio||1);wc.beginPath();
  if(an){an.a.getByteTimeDomainData(tb);an.a.getByteFrequencyData(buf);for(x=0;x<W;x++){var v=(tb[Math.floor(x/W*tb.length)]-128)/128;rms+=v*v;wc.lineTo(x,H/2+v*H*.45)}rms=Math.sqrt(rms/W);
@@ -4626,7 +4628,9 @@ function frame(){requestAnimationFrame(frame);if(!vis()){if(an)stopMic();return}
  for(var k=0;k<N;k++){var s=spec[k];sc.fillStyle='hsl('+(230-s*190)+',90%,'+(8+s*58)+'%)';sc.fillRect(w2-cw,h2-(k+1)*h2/N,cw,h2/N+1)}
  $('bx-f0').textContent=f0?f0.toFixed(1)+' Hz':'—';$('bx-cen').textContent=cen?cen.toFixed(0)+' Hz':'—';$('bx-rms').textContent=rms.toFixed(3);
  if(!R)t+=.012}
-pick('cat');frame();
+pick('cat');
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){if(es[0].isIntersecting&&!document.hidden){if(!bxOn){bxOn=true;frame()}}else{bxOn=false}},{threshold:.05}).observe(wv);}else{bxOn=true;frame()}
+document.addEventListener('visibilitychange',function(){if(document.hidden){bxOn=false}else if(vis()&&!bxOn){bxOn=true;frame()}});
 var L=[['VTRI-1','إشارة استكشافية','نموذج أظهر إشارة مفيدة على بيانات صغيرة أو من مركز واحد. لا يصلح للقرار السريري بعد.','عينة أكبر وتوصيف للتحيّزات وظروف التسجيل.'],
 ['VTRI-2','صلاحية تحليلية','النتيجة نفسها تتكرر عبر أجهزة تسجيل وبيئات مختلفة.','اختبار تكرارية وتباين بين الأجهزة والمشغّلين.'],
 ['VTRI-3','صلاحية سريرية','النتيجة مرتبطة بمعيار مرجعي موثّق عند نوع حيواني محدد.','مقارنة بالمعيار الذهبي مع حساسية ونوعية معلنتين.'],
