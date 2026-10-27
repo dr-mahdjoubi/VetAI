@@ -1,6 +1,32 @@
 {
   "runs": [
     {
+      "at": "2026-10-27T17:09:01Z",
+      "added": [
+        {
+          "title": "Global report on neglected tropical diseases 2026: mid-term evaluation of the road map implementation (WHO)",
+          "url": "https://iris.who.int/items/68e50121-216f-4cef-9b94-e0302e6ec80b",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "WHO Egypt annual report 2025 (WHO)",
+          "url": "https://iris.who.int/items/ee541897-29ec-4798-8ab0-6fa0556855e4",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Surveillance, case investigation and contact tracing in filovirus disease outbreaks (WHO)",
+          "url": "https://iris.who.int/items/60db256e-4fec-4d0b-af20-933e9bf41488",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 18,
+          "added": 3
+        }
+      }
+    },
+    {
       "at": "2026-10-27T09:06:02Z",
       "added": [
         {
@@ -166,6 +192,6 @@
       }
     }
   ],
-  "last_run": "2026-10-27T09:06:02Z",
-  "total_books": 102
+  "last_run": "2026-10-27T17:09:01Z",
+  "total_books": 990
 }
