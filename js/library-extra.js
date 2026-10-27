@@ -50,7 +50,7 @@
   }
 
   function go() {
-    fetch('resources.json?v=' + Date.now())
+    fetch('json/resources.json?v=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(run)
       .catch(function () {});
