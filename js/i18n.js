@@ -23,7 +23,7 @@
     'مجتمع': 'Community', 'ألعاب الحيوانات': 'Animal games', 'لماذا تثق بالمنصة؟': 'Why trust the platform?', 'مجانية وبلا إعلانات': 'Free and ad-free', 'النوع الحيواني:': 'Animal type:', 'وصف الأعراض:': 'Symptoms:', 'قيّم الحالة': 'Assess case', 'نتيجة التقييم': 'Assessment result', 'بانتظار الإدخال': 'Waiting for input',
     'كلب': 'Dog', 'قط': 'Cat', 'بقرة': 'Cow', 'غنم/ماعز': 'Sheep/Goat', 'دجاج': 'Chicken', 'أنشئ الجدول': 'Create schedule', 'احسب': 'Calculate', 'احسب العمر': 'Calculate age', '📅 عمر الحيوان': '📅 Animal age', '💧 احتياج الماء اليومي': '💧 Daily water need', '💉 مولّد جدول التلقيح': '💉 Vaccination schedule',
     'استشارات بيطرية': 'Veterinary consultations', 'اطلب استشارة': 'Request a consultation', 'البحث العلمي': 'Scientific research', 'الأبحاث': 'Research', 'تعليم بيطري': 'Veterinary education', 'ابدأ التعلم': 'Start learning', 'قاعدة المعرفة': 'Knowledge base', 'بحث المعرفة': 'Search knowledge', 'المجتمع': 'Community',
-    'المساعد البيطري الذكي': 'Smart veterinary assistant', 'إرسال': 'Send', 'الدكتور محجوبي عبدالناصر': 'Dr. Mahjoubi Abdenasser', 'د. محجوبي عبدالناصر': 'Dr. Mahjoubi Abdenasser', 'مؤسس وباحث': 'Founder & researcher', 'التواصل والخدمات': 'Contact & services', '💬 واتساب الخدمة': '💬 WhatsApp service', 'تنس، الشلف، الجزائر': 'Ténès, Chlef, Algeria'
+    'المساعد البيطري الذكي': 'Smart veterinary assistant', 'إرسال': 'Send', 'الدكتور محجوبي عبدالناصر': 'Dr. Mahdjoubi Abdenasser', 'د. محجوبي عبدالناصر': 'Dr. Mahdjoubi Abdenasser', 'مؤسس وباحث': 'Founder & researcher', 'التواصل والخدمات': 'Contact & services', '💬 واتساب الخدمة': '💬 WhatsApp service', 'تنس، الشلف، الجزائر': 'Ténès, Chlef, Algeria'
   });
   add('fr', {
     'خدمة العملاء': 'Service client', 'منصة حية': 'Plateforme vivante', 'ابدأ الآن': 'Commencer', 'مريح': 'Confort', 'داكن': 'Sombre', 'فاتح': 'Clair', 'مهني': 'Pro', 'جمهور': 'Public',
@@ -37,7 +37,7 @@
     'مجتمع': 'Communauté', 'ألعاب الحيوانات': 'Jeux d’animaux', 'لماذا تثق بالمنصة؟': 'Pourquoi faire confiance à la plateforme ?', 'مجانية وبلا إعلانات': 'Gratuite et sans publicité', 'النوع الحيواني:': 'Espèce :', 'وصف الأعراض:': 'Symptômes :', 'قيّم الحالة': 'Évaluer le cas', 'نتيجة التقييم': 'Résultat de l’évaluation', 'بانتظار الإدخال': 'En attente de saisie',
     'كلب': 'Chien', 'قط': 'Chat', 'بقرة': 'Vache', 'غنم/ماعز': 'Mouton/Chèvre', 'دجاج': 'Poulet', 'أنشئ الجدول': 'Créer le calendrier', 'احسب': 'Calculer', 'احسب العمر': 'Calculer l’âge', '📅 عمر الحيوان': '📅 Âge de l’animal', '💧 احتياج الماء اليومي': '💧 Besoin en eau quotidien', '💉 مولّد جدول التلقيح': '💉 Calendrier de vaccination',
     'استشارات بيطرية': 'Consultations vétérinaires', 'اطلب استشارة': 'Demander une consultation', 'البحث العلمي': 'Recherche scientifique', 'الأبحاث': 'Recherches', 'تعليم بيطري': 'Enseignement vétérinaire', 'ابدأ التعلم': 'Commencer à apprendre', 'قاعدة المعرفة': 'Base de connaissances', 'بحث المعرفة': 'Rechercher', 'المجتمع': 'Communauté',
-    'المساعد البيطري الذكي': 'Assistant vétérinaire intelligent', 'إرسال': 'Envoyer', 'الدكتور محجوبي عبدالناصر': 'Dr Mahjoubi Abdenasser', 'د. محجوبي عبدالناصر': 'Dr Mahjoubi Abdenasser', 'مؤسس وباحث': 'Fondateur et chercheur', 'التواصل والخدمات': 'Contact et services', '💬 واتساب الخدمة': '💬 WhatsApp service', 'تنس، الشلف، الجزائر': 'Ténès, Chlef, Algérie'
+    'المساعد البيطري الذكي': 'Assistant vétérinaire intelligent', 'إرسال': 'Envoyer', 'الدكتور محجوبي عبدالناصر': 'Dr Mahdjoubi Abdenasser', 'د. محجوبي عبدالناصر': 'Dr Mahdjoubi Abdenasser', 'مؤسس وباحث': 'Fondateur et chercheur', 'التواصل والخدمات': 'Contact et services', '💬 واتساب الخدمة': '💬 WhatsApp service', 'تنس، الشلف، الجزائر': 'Ténès, Chlef, Algérie'
   });
 
   add('en', {
@@ -170,8 +170,8 @@
     document.querySelectorAll('#lsel,#lang').forEach(function (s) { s.onchange = function (e) { setLang(e.target.value); }; });
     setLang(ls('lang') || 'ar');
   }
-  DICT.en.__title = 'VetAI Global × Dr. Mahjoubi | Unified Veterinary Platform';
-  DICT.fr.__title = 'VetAI Global × Dr Mahjoubi | Plateforme vétérinaire unifiée';
+  DICT.en.__title = 'VetAI Global × Dr. Mahdjoubi | Unified Veterinary Platform';
+  DICT.fr.__title = 'VetAI Global × Dr Mahdjoubi | Plateforme vétérinaire unifiée';
 
   window.I18N = {
     setLang: setLang, add: add, aiSuffix: aiSuffix,
