@@ -30,7 +30,7 @@
   padding: 8px; box-shadow: 0 16px 40px rgba(0, 0, 0, .4);
 }
 .un-item {
-  display: block; width: 100%; text-align: start;
+  display: block; width: 100%; text-align: start; min-height: 44px;
   background: transparent; border: none; border-radius: 9px;
   color: #e8f4f8; padding: 8px 10px; cursor: pointer;
   font: 600 13.5px/1.6 system-ui, 'Segoe UI', Tahoma, sans-serif;
