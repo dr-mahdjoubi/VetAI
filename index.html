@@ -26,6 +26,7 @@
     <meta property="og:title" content="VetAI Global — Veterinary Intelligence Without Borders"><meta property="og:description" content="المعرفة البيطرية والذكاء الاصطناعي والأبحاث والتعليم في منصة واحدة."><meta name="application-name" content="VetAI Global"><title>VetAI Global | الذكاء البيطري بلا حدود</title>
     <!-- Tailwind CSS CDN -->
     <link rel="stylesheet" href="css/vetai-tw.css">
+    <link rel="stylesheet" href="css/proactive-assistant.css">
     <style>
 /* VX: fonts loaded via <link> below */
         body { font-family: 'Cairo', sans-serif; background-color: #070a13; color: #f8fafc; }
@@ -6144,6 +6145,7 @@ arm();
 (function(){'use strict';var imgs=document.querySelectorAll('#view-home .vg-animal-core img.vg-rot');if(imgs.length<2)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;var i=0,timer=null;function step(){imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');}function start(){if(!timer)timer=setInterval(step,4200);}function stop(){if(timer){clearInterval(timer);timer=null;}}if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)start();else stop();},{threshold:.12}).observe(imgs[0]);}else{start();}document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});})();
 </script>
 <script src="js/innovations.js"></script>
+<script src="js/proactive-assistant.js" defer></script>
 </body>
   
 </html>
