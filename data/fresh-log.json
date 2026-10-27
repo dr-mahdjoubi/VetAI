@@ -1,6 +1,32 @@
 {
   "runs": [
     {
+      "at": "2026-10-27T01:13:35Z",
+      "added": [
+        {
+          "title": "WHO pandemic influenza vaccine response: operational plan (WHO)",
+          "url": "https://iris.who.int/items/8231b0b9-626c-426d-b731-a81ca920a7d5",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Operational and implementation research for strengthening health emergency capacities: a research agenda for evidence-based practice (WHO)",
+          "url": "https://iris.who.int/items/bc35896d-f348-4edc-b60f-80ca40be1c62",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Philippines–WHO country cooperation strategy 2025–2028 (WHO)",
+          "url": "https://iris.who.int/items/aeaba889-7ffb-43ce-bc3d-19ae21d42a28",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 16,
+          "added": 3
+        }
+      }
+    },
+    {
       "at": "2026-10-26T17:07:53Z",
       "added": [
         {
@@ -114,6 +140,6 @@
       }
     }
   ],
-  "last_run": "2026-10-26T17:07:53Z",
-  "total_books": 35
+  "last_run": "2026-10-27T01:13:35Z",
+  "total_books": 43
 }
