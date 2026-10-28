@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-27T05:40:53.496Z",
+  "generatedAt": "2026-10-28T05:50:02.935Z",
   "generator": "tools/site-guard.mjs",
   "base": "https://vetai.vcom.workers.dev",
-  "overall": "warn",
+  "overall": "fail",
   "counts": {
-    "فيديوهات الوسائط": 50,
-    "صور المعرض": 44,
+    "فيديوهات الوسائط": 53,
+    "صور المعرض": 53,
     "بيانات الأنواع": 8,
     "شريط الأخبار": 11
   },
@@ -15,37 +15,37 @@
       "id": "mirror",
       "label": "مرآة Cloudflare — الرئيسي",
       "status": "ok",
-      "detail": "HTTP 200 · 272ms · العنوان سليم"
+      "detail": "HTTP 200 · 476ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Render — drvet",
       "status": "ok",
-      "detail": "HTTP 200 · 301ms · العنوان سليم"
+      "detail": "HTTP 200 · 325ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Vercel",
       "status": "ok",
-      "detail": "HTTP 200 · 298ms · العنوان سليم"
+      "detail": "HTTP 200 · 240ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة GitHub Pages",
       "status": "ok",
-      "detail": "HTTP 200 · 123ms · العنوان سليم"
+      "detail": "HTTP 200 · 310ms · العنوان سليم"
     },
     {
       "id": "data",
       "label": "فيديوهات الوسائط",
       "status": "ok",
-      "detail": "50 عنصرًا"
+      "detail": "53 عنصرًا"
     },
     {
       "id": "data",
       "label": "صور المعرض",
       "status": "ok",
-      "detail": "44 عنصرًا"
+      "detail": "53 عنصرًا"
     },
     {
       "id": "data",
@@ -75,19 +75,19 @@
       "id": "perf",
       "label": "أداء الصفحة الرئيسية",
       "status": "ok",
-      "detail": "1442KB · 95ms"
+      "detail": "1167KB · 105ms"
     },
     {
       "id": "links",
       "label": "الروابط الداخلية",
       "status": "ok",
-      "detail": "فُحص 53 مرجعًا داخليًا — لا كسور"
+      "detail": "فُحص 60 مرجعًا داخليًا — لا كسور"
     },
     {
       "id": "ai",
-      "label": "محرك الذكاء — إجابة حية",
-      "status": "ok",
-      "detail": "المسار المجاني يجيب فعليًا (بعد 1 محاولة)"
+      "label": "محرك الذكاء — ملف التوجيه",
+      "status": "fail",
+      "detail": "HTTP 200 أو ترتيب المسارات تغيّر (المجاني أولًا مطلوب)"
     },
     {
       "id": "ai",

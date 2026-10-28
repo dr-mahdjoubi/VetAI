@@ -1,0 +1,65 @@
+{
+ "at": "2026-10-28T05:50:02.987Z",
+ "base": "https://drvet.onrender.com",
+ "probes": [
+  {
+   "provider": "pollinations/openai-fast",
+   "ok": true,
+   "ms": 356,
+   "note": "answer received"
+  },
+  {
+   "provider": "pollinations/openai",
+   "ok": true,
+   "ms": 322,
+   "note": "answer received"
+  },
+  {
+   "provider": "worker",
+   "origin": "https://drvet.onrender.com",
+   "ok": true,
+   "httpStatus": 200,
+   "cors": "allowed",
+   "ms": 1061
+  },
+  {
+   "provider": "worker",
+   "origin": "https://vetai.vcom.workers.dev",
+   "ok": true,
+   "httpStatus": 200,
+   "cors": "allowed",
+   "ms": 947
+  },
+  {
+   "provider": "worker",
+   "origin": "https://dr-mahdjoubi.github.io",
+   "ok": true,
+   "httpStatus": 200,
+   "cors": "allowed",
+   "ms": 828
+  }
+ ],
+ "integrity": {
+  "books": {
+   "count": 990,
+   "duplicates": 0,
+   "incomplete": 45
+  },
+  "articles": {
+   "count": 123
+  }
+ },
+ "index": {
+  "path": "js/search-index.json",
+  "action": "rebuilt (source changed or corrupt)",
+  "docs": 1113,
+  "tokens": 4651,
+  "srcHash": "11f0ccf814e92202",
+  "bytes": 308606
+ },
+ "hard": [],
+ "warn": [
+  "45 book entries missing title/url/desc"
+ ],
+ "verdict": "DEGRADED"
+}
