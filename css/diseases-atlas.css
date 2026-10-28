@@ -1,0 +1,56 @@
+/* VetAI — Diseases Atlas by Species (build18) */
+.dz-head .dz-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.dz-chip{border:1px solid #334155;background:#0f172a;color:#e2e8f0;border-radius:999px;
+  padding:9px 14px;font-weight:800;font-size:.9rem;cursor:pointer;min-height:44px}
+.dz-chip:hover{border-color:#22d3ee}
+.dz-chip.active{background:#22d3ee;color:#0b1220;border-color:#22d3ee}
+.dz-chip-n{font-size:.78rem;opacity:.85}
+.dz-controls{display:flex;flex-direction:column;gap:10px}
+.dz-controls input[type=search]{width:100%;background:#0b1220;border:1px solid #334155;
+  border-radius:14px;padding:12px 14px;color:#f1f5f9;font-size:1rem;min-height:48px}
+.dz-controls input[type=search]:focus{outline:2px solid #22d3ee;border-color:#22d3ee}
+.dz-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.dz-row select{background:#0b1220;border:1px solid #334155;border-radius:12px;color:#f1f5f9;
+  padding:10px;font-size:.95rem;min-height:44px}
+.dz-toggle{display:inline-flex;gap:6px;align-items:center;color:#cbd5e1;font-size:.9rem;
+  background:#0b1220;border:1px solid #334155;border-radius:999px;padding:9px 12px;cursor:pointer;min-height:44px}
+.dz-toggle input{width:18px;height:18px;accent-color:#22d3ee}
+.dz-count{color:#94a3b8;font-size:.85rem;margin:0}
+.dz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.dz-card{text-align:right;background:rgba(15,23,42,.72);border:1px solid #1e293b;border-radius:16px;
+  padding:14px;cursor:pointer;display:flex;flex-direction:column;gap:6px;min-height:96px;color:#e2e8f0}
+.dz-card:hover{border-color:#22d3ee}
+.dz-card-name{font-weight:900;font-size:1rem;line-height:1.5}
+.dz-card-en{font-size:.78rem;color:#7dd3fc;direction:ltr;text-align:left}
+.dz-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.dz-tag{font-size:.7rem;font-weight:800;border:1px solid #334155;border-radius:999px;padding:2px 8px;color:#cbd5e1}
+.dz-tag.sp{border-color:#0ea5e9;color:#7dd3fc}
+.dz-tag.zoo{border-color:#f59e0b;color:#fbbf24}
+.dz-tag.urg{border-color:#ef4444;color:#fca5a5}
+.dz-morewrap{text-align:center}
+.dz-more{background:#22d3ee;color:#0b1220;font-weight:900;border:0;border-radius:14px;
+  padding:12px 26px;cursor:pointer;min-height:48px;font-size:.95rem}
+.dz-note{color:#94a3b8;font-size:.78rem;line-height:1.7}
+.dz-empty{color:#94a3b8;grid-column:1/-1;text-align:center;padding:22px}
+/* detail modal */
+.dz-modal{position:fixed;inset:0;z-index:9990}
+.dz-backdrop{position:absolute;inset:0;background:rgba(2,6,23,.78)}
+.dz-sheet{position:absolute;inset-inline:0;bottom:0;max-height:88vh;overflow:auto;background:#0f172a;
+  border:1px solid #1e293b;border-radius:22px 22px 0 0;padding:22px;color:#e2e8f0}
+@media(min-width:720px){.dz-sheet{inset:5vh 0 auto 0;margin-inline:auto;max-width:680px;border-radius:22px}}
+.dz-x{position:sticky;top:0;float:left;background:#1e293b;color:#fff;border:0;border-radius:999px;
+  width:40px;height:40px;font-size:1rem;cursor:pointer}
+.dz-m-sp{color:#94a3b8;font-size:.85rem}
+.dz-m-title{font-size:1.35rem;font-weight:900;margin-top:4px}
+.dz-m-en{color:#7dd3fc;font-size:.85rem;margin-bottom:8px}
+.dz-m-row{border-top:1px solid #1e293b;padding:10px 0}
+.dz-m-row h4{font-weight:900;color:#22d3ee;margin-bottom:4px}
+.dz-m-row p{line-height:1.9;color:#e2e8f0;font-size:.95rem}
+/* entry card in students (exams) view */
+.dz-entry-t{font-size:1.15rem;margin-bottom:6px}
+.dz-entry-btns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.dz-mini{border:1px solid #334155;background:#0f172a;color:#e2e8f0;border-radius:999px;
+  padding:8px 13px;font-weight:800;font-size:.88rem;cursor:pointer;min-height:44px}
+.dz-mini:hover{border-color:#22d3ee}
+.dz-open{background:#22d3ee;color:#0b1220;font-weight:900;border:0;border-radius:14px;
+  padding:12px 22px;cursor:pointer;min-height:48px;font-size:.95rem}
