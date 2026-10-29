@@ -1,6 +1,25 @@
 {
   "runs": [
     {
+      "at": "2026-10-29T01:27:24Z",
+      "added": [],
+      "sources": {
+        "WHO IRIS": {
+          "found": 18,
+          "added": 0
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 14,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-10-28T17:13:21Z",
       "added": [],
       "sources": {
@@ -249,6 +268,6 @@
       }
     }
   ],
-  "last_run": "2026-10-28T17:13:21Z",
+  "last_run": "2026-10-29T01:27:24Z",
   "total_books": 990
 }
