@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الذكاء الاصطناعي البيطري — AI Veterinary Suite | VetAI Global</title>
+<meta name="description" content="قسم مستقل تفاعلي لمنصة VetAI Global: تشخيص بالصور، رفاهية وسلوك، صحة القطعان، وأدوية وطب ترجمي. أدوات تعليمية مساعدة، والقرار السريري للطبيب البيطري.">
+<style>
+:root{--bg:#f6f8f7;--card:#fff;--ink:#12211c;--muted:#5b6b64;--teal:#0e7c66;--teal2:#e6f4ef;--amber:#fff4d6;--red:#fdecec;--line:#dfe8e2}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+header{padding:28px 18px 18px;background:linear-gradient(135deg,#0e7c66,#123f35);color:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1{margin:0 0 6px;font-size:30px}h2{font-size:24px;margin:8px 0}h3{margin:14px 0 6px}
+.sub{opacity:.92;max-width:820px}
+.disclaimer{background:var(--amber);border:1px solid #e8c96a;border-radius:14px;padding:14px 16px;margin:18px 0}
+.disclaimer strong{color:#7a5a00}
+.demo-note{background:var(--teal2);border:1px solid #bfe3d5;border-radius:12px;padding:12px 14px;font-size:14px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+nav.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:700}
+nav.tabs button.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+section.module{display:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:20px}
+section.module.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fcfdfc}
+label{display:block;font-weight:700;margin:10px 0 4px}
+select,input[type=text],input[type=number],input[type=file],textarea{width:100%;padding:10px;border:1px solid #cbd8d1;border-radius:10px;font-size:15px;background:#fff}
+textarea{min-height:90px}
+button.primary{background:var(--teal);color:#fff;border:0;border-radius:10px;padding:11px 18px;font-size:15px;font-weight:700;cursor:pointer;margin-top:12px}
+button.primary:hover{opacity:.92}
+.result{margin-top:16px;border:1px dashed #9cc7b8;border-radius:14px;padding:14px;background:#f8fcf9;display:none}
+.result.show{display:block}
+.bar{height:10px;background:#e5ece8;border-radius:999px;overflow:hidden;margin:4px 0 10px}
+.bar i{display:block;height:100%;background:var(--teal)}
+img.preview{max-width:100%;max-height:280px;border-radius:12px;margin-top:10px;display:none}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px;text-align:right}
+th{background:var(--teal2)}
+.alert{border-right:5px solid #c0392b;background:var(--red);padding:10px 12px;border-radius:8px;margin:8px 0}
+.small{font-size:13px;color:var(--muted)}
+footer{padding:20px 16px 40px;color:var(--muted)}
+code{direction:ltr;unicode-bidi:embed;background:#eef2f0;padding:1px 6px;border-radius:6px}
+a{color:var(--teal)}
+@media(max-width:600px){h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<p style="margin:0;opacity:.85">VETAI GLOBAL · قسم مستقل جديد</p>
+<h1>🧠 الذكاء الاصطناعي البيطري <span dir="ltr">(AI Veterinary Suite)</span></h1>
+<p class="sub">أربع وحدات تفاعلية داخل المنصة: التشخيص بالصور، تحليل السلوك والصوت، إدارة صحة القطعان، وتطوير الأدوية والطب الترجمي — بنفس روح المنصة الحالية: معرفة واضحة، وأدوات عملية، وقرار سريري يبقى للطبيب.</p>
+</div></header>
+
+<main class="wrap">
+<div class="disclaimer"><strong>⚠️ تنبيه مهم — اقرأ قبل الاستخدام:</strong> كل ما في هذا القسم <strong>تعليمي ومساعد فقط، وليس تشخيصًا ولا بديلًا عن الفحص البيطري</strong>. النتائج المعروضة في الوضع التجريبي الحالي هي <strong>أمثلة توضيحية لشكل النتيجة</strong>، وليست تحليلًا حقيقيًا لصورة أو صوت مرفوع، ولا تُستخدم لاتخاذ قرار علاجي لحالة فردية. عند ربط نموذج حقيقي عبر الـ API، يجب أن تمر كل نتيجة بمراجعة طبيب بيطري، وأن تُحفظ الصور والأصوات فقط بموافقة صاحبها، وألا تُخزَّن افتراضيًا. الذكاء الاصطناعي يصنّف الأنماط؛ <strong>لا يترجم لغة الحيوانات</strong>.</div>
+
+<nav class="tabs" aria-label="وحدات الذكاء الاصطناعي البيطري">
+<button class="active" onclick="showModule(1,this)">1 · التشخيص بالصور</button>
+<button onclick="showModule(2,this)">2 · السلوك والصوت والرفاهية</button>
+<button onclick="showModule(3,this)">3 · صحة القطعان والإنتاج</button>
+<button onclick="showModule(4,this)">4 · الأدوية والطب الترجمي</button>
+</nav>
+
+<!-- MODULE 1 -->
+<section class="module active" id="m1">
+<h2>🩻 1 · التشخيص المتقدم بالصور الطبية <span dir="ltr">(Imaging &amp; Diagnostics)</span></h2>
+<p>ارفع صورة طبية، اختر النوع ونوع التصوير، ثم جرّب شكل النتيجة. الربط الحقيقي يتم عبر <code>POST /api/v1/imaging/analyze</code> (انظر ملف مواصفات الـ API المرفق).</p>
+<div class="grid">
+<div><label>النوع الحيواني</label><select id="imgSpecies"><option>كلب</option><option>قط</option><option>حصان</option><option>بقرة</option><option>أغنام / ماعز</option></select></div>
+<div><label>نوع التصوير</label><select id="imgModality"><option value="X-ray">أشعة سينية (X-ray)</option><option value="MRI">رنين مغناطيسي (MRI)</option><option value="Ultrasound">تصوير بالموجات فوق الصوتية (Ultrasound)</option></select></div>
+<div><label>المنطقة</label><select id="imgArea"><option>الأطراف والمفاصل</option><option>الصدر</option><option>البطن</option><option>العمود الفقري</option><option>الجمجمة والأسنان</option></select></div>
+</div>
+<label>رفع الصورة الطبية (تبقى على جهازك في الوضع التجريبي — لا تُرسل إلى أي خادم)</label>
+<input type="file" id="imgFile" accept="image/*" onchange="previewImage(this,'imgPreview')">
+<img id="imgPreview" class="preview" alt="معاينة الصورة المرفوعة">
+<button class="primary" onclick="demoImaging()">عرض نتيجة تجريبية توضيحية</button>
+<div class="result" id="imgResult"></div>
+
+<h3>🔬 ماسح الجلد <span dir="ltr">(Dermatology Scanner)</span> — للقطط والكلاب</h3>
+<p class="small">للأنماط الجلدية الشائعة فقط: طفيليات، حساسية، وآفات جلدية. <strong>لا يمكن تأكيد ورم جلدي من صورة وحدها</strong>؛ أي آفة مشبوهة تحتاج فحصًا سريريًا وخزعة عند الحاجة.</p>
+<div class="grid">
+<div><label>النوع</label><select id="dermSpecies"><option>قط</option><option>كلب</option></select></div>
+<div><label>النمط الظاهر (اختياري)</label><select id="dermPattern"><option>حكة وتساقط شعر</option><option>احمرار وطفح</option><option>كتلة أو عقدة جلدية</option><option>قشور وجروح</option></select></div>
+</div>
+<label>رفع صورة الجلد (على جهازك فقط في الوضع التجريبي)</label>
+<input type="file" id="dermFile" accept="image/*" onchange="previewImage(this,'dermPreview')">
+<img id="dermPreview" class="preview" alt="معاينة صورة الجلد">
+<button class="primary" onclick="demoDerm()">عرض نتيجة جلدية تجريبية</button>
+<div class="result" id="dermResult"></div>
+</section>
+
+<!-- MODULE 2 -->
+<section class="module" id="m2">
+<h2>🐾 2 · تحليل السلوك والصوت والرفاهية <span dir="ltr">(Bioacoustics &amp; Animal Welfare)</span></h2>
+<h3>مراقبة الألم والصحة من تعبيرات الوجه</h3>
+<p class="small">قائمة إرشادية مستوحاة من مقاييس التكشير (Grimace Scales) التعليمية — ليست مقياس ألم مُعتمدًا لحالة فردية، وأي علامة ألم تستدعي طبيبًا.</p>
+<div id="painChecks">
+<label><input type="checkbox" value="2"> تقطّب / تسطّح الأذن أو تراجعها للخلف</label>
+<label><input type="checkbox" value="2"> تضييق العين أو تغيّر توتر عضلات حول العين</label>
+<label><input type="checkbox" value="2"> توتر الكمامة / الفم أو إظهار الأسنان</label>
+<label><input type="checkbox" value="1"> انخفاض النشاط أو الانعزال</label>
+<label><input type="checkbox" value="1"> فقدان الشهية أو رفض الماء</label>
+<label><input type="checkbox" value="1"> وضعية غير طبيعية أو حماية لطرف / بطن</label>
+</div>
+<button class="primary" onclick="scorePain()">احسب مؤشر الرفاهية الإرشادي</button>
+<div class="result" id="painResult"></div>
+
+<h3>🎙️ تحليل الأصوات — مواء القطط وأصوات الحيوانات</h3>
+<p class="small">نحلّل <strong>أنماطًا صوتية</strong> (مدة، نبرة، تكرار) كمؤشرات إرشادية للإجهاد أو الانزعاج — <strong>ولا نفكّ شفرة لغة ولا نترجم ما يقوله الحيوان</strong>. التسجيل يبقى على جهازك في الوضع التجريبي.</p>
+<label>رفع ملف صوتي أو تسجيل قصير</label>
+<input type="file" id="audioFile" accept="audio/*">
+<button class="primary" onclick="demoAudio()">عرض تحليل صوتي تجريبي</button>
+<div class="result" id="audioResult"></div>
+</section>
+
+<!-- MODULE 3 -->
+<section class="module" id="m3">
+<h2>🚜 3 · إدارة صحة القطعان والإنتاج الحيواني <span dir="ltr">(Precision Livestock Farming)</span></h2>
+<h3>لوحة تحكم المزرعة <span dir="ltr">(Farm Dashboard)</span> — بيانات تجريبية</h3>
+<p class="small">في النسخة الحية تُغذَّى اللوحة من أجهزة إنترنت الأشياء (IoT) والكاميرات الذكية عبر <code>POST /api/v1/farm/iot/ingest</code>. الأرقام أدناه مثال توضيحي، وليست بيانات مزرعة حقيقية.</p>
+<div class="grid">
+<div><label>نوع القطيع</label><select id="farmType"><option>أبقار حلوب</option><option>أغنام / ماعز</option><option>دواجن</option></select></div>
+<div><label>عدد الحيوانات (تجريبي)</label><input type="number" id="herdSize" value="120" min="1"></div>
+</div>
+<button class="primary" onclick="demoFarm()">توليد لوحة تجريبية</button>
+<div class="result" id="farmResult"></div>
+
+<h3>🚨 نظام الإنذار المبكر للأمراض المعدية</h3>
+<div class="alert"><strong>مثال توضيحي — إنفلونزا الطيور (HPAI):</strong> نفوق مفاجئ + انخفاض استهلاك العلف والماء → اعزل القطيع فورًا، شدّد الأمن الحيوي، وأبلغ الطبيب البيطري والسلطات البيطرية المختصة. لا تعالج أو تنقل طيورًا قبل التوجيه الرسمي.</div>
+<div class="alert"><strong>مثال توضيحي — الحمى القلاعية (FMD):</strong> تقرّحات فم وأقدام + عرج + سيلان لعاب → أوقف حركة الحيوانات، اعزل المصابين، عقّم المعدات والأحذية، وأبلغ السلطات البيطرية فورًا.</div>
+<p class="small">الإنذار هنا تنبيه للمراجعة العاجلة، وليس تشخيصًا مؤكدًا؛ التأكيد مخبري ورسمي فقط.</p>
+
+<h3>🥣 خطة تغذية مخصصة (تجريبية)</h3>
+<div class="grid">
+<div><label>الوزن (كغ)</label><input type="number" id="feedWeight" value="450"></div>
+<div><label>الهدف</label><select id="feedGoal"><option>حليب</option><option>نمو / تسمين</option><option>صيانة</option></select></div>
+<div><label>معدل النمو المستهدف (كغ/يوم)</label><input type="number" id="feedGain" value="0.8" step="0.1"></div>
+</div>
+<button class="primary" onclick="demoFeed()">اقتراح خطة تغذية تجريبية</button>
+<div class="result" id="feedResult"></div>
+<p class="small">تقدير عام لأغراض التخطيط التعليمي؛ يراجعها طبيب بيطري / أخصائي تغذية قبل التطبيق، ولا تغني عن تحليل العلف المتاح فعليًا.</p>
+</section>
+
+<!-- MODULE 4 -->
+<section class="module" id="m4">
+<h2>💊 4 · تطوير الأدوية والطب الترجمي <span dir="ltr">(Drug Discovery &amp; Veterinary Pharmacology)</span></h2>
+<p>قسم بحثي ومرجعي: أحدث الأدوية البيطرية واللقاحات للأمراض المشتركة بين الإنسان والحيوان (Zoonotic)، مع مؤشرات الجاهزية الإكلينيكية وروابط الطب البشري. <strong>لا يتضمن جرعات لعلاج حالة فردية</strong> — الجرعة يحددها الطبيب البيطري حسب النوع والوزن والحالة والتشريعات المحلية.</p>
+<label>ابحث في المرجع (مثال: داء الكلب، الحمى المالطية، إنفلونزا الطيور)</label>
+<input type="text" id="drugSearch" placeholder="اكتب اسم المرض أو الدواء…" oninput="filterDrugs()">
+<table id="drugTable"><thead><tr><th>المرض المشترك</th><th>الناقل / المضيف</th><th>مرجع وقائي / علاجي (فئة عامة)</th><th>ملاحظة ترجمية</th></tr></thead><tbody>
+<tr><td>داء الكلب (Rabies)</td><td>كلاب، خفافيش، حيوانات برية</td><td>لقاح وقائي + إرشادات ما بعد التعرض</td><td>نموذج One Health: تطعيم الكلاب يحمي الإنسان</td></tr>
+<tr><td>الحمى المالطية (Brucellosis)</td><td>مجترات</td><td>لقاحات قطيع + اختبارات مصلية</td><td>مراقبة مشتركة بيطريًا وبشريًا</td></tr>
+<tr><td>إنفلونزا الطيور (HPAI)</td><td>دواجن وطيور برية</td><td>لقاحات دواجن (حسب برنامج الدولة) + أمن حيوي</td><td>مراقبة جينومية مشتركة للتحورات</td></tr>
+<tr><td>داء البريميات (Leptospirosis)</td><td>قوارض، كلاب، ماشية</td><td>لقاحات كلاب وماشية + مكافحة القوارض</td><td>مخاطر مائية ومهنية مشتركة</td></tr>
+<tr><td>داء المقوسات (Toxoplasmosis)</td><td>قطط (مضيف نهائي)</td><td>وقاية غذائية وصحية؛ علاج بإشراف طبي</td><td>خطر خاص على الحوامل ومنقوصي المناعة</td></tr>
+<tr><td>السالمونيلا (Salmonellosis)</td><td>دواجن، زواحف، أغذية</td><td>أمن حيوي + سلامة غذاء؛ مضادات بوصفة فقط</td><td>مقاومة المضادات قضية مشتركة</td></tr>
+</tbody></table>
+
+<h3>📊 مؤشر الجاهزية الإكلينيكية <span dir="ltr">(VTRI — Veterinary Translational Readiness Index)</span></h3>
+<div class="demo-note"><strong>VTRI هو مؤشر مقترح غير مُتحقَّق منه بعد</strong> من بحث المنصة (تحليل ثانوي لـ 39 دراسة تشخيص بالتعلم العميق؛ درجات أولية تراوحت بين 2 و7 من 15). استخدمه هنا كقائمة شفافية للبحث فقط، وليس كأداة اعتماد سريري.</div>
+<div id="vtriChecks">
+<label><input type="checkbox" value="3"> عينة كافية وممثلة لأنواع متعددة</label>
+<label><input type="checkbox" value="3"> تحقق خارجي على بيانات مستقلة</label>
+<label><input type="checkbox" value="3"> دراسة استباقية / تجربة ميدانية</label>
+<label><input type="checkbox" value="3"> مقارنة مع التشخيص المرجعي الذهبي</label>
+<label><input type="checkbox" value="3"> تقرير شفاف للقيود والأخطاء والانحياز</label>
+</div>
+<button class="primary" onclick="scoreVTRI()">احسب درجة VTRI الأولية</button>
+<div class="result" id="vtriResult"></div>
+<p class="small">مصادر مرجعية للمتابعة: WOAH ،FAO ،WSAVA، والمجلات المفتوحة في مكتبة المنصة. لا تُنشر أي نتيجة بحثية هنا على أنها منشورة محكّمة ما لم تكن كذلك فعلًا.</p>
+</section>
+
+<div class="demo-note"><strong>للمطوّر / لصاحب المنصة:</strong> هذا الملف مستقل تمامًا (HTML + CSS + JS، بلا مكتبات خارجية) ويمكن لصقه كقسم جديد في صفحة المنصة، أو رفعه كصفحة <code>/ai-suite</code> وربطها من القائمة الرئيسية. نقاط الربط الكاملة (Endpoints، الحقول، الاستجابات، الخصوصية) في ملف <strong>API-SPEC.md</strong> المرفق. لاستبدال الوضع التجريبي بنموذج حقيقي: غيّر دوال <code>demo*</code> فقط لتستدعي الـ API، وابقِ شاشة «مراجعة الطبيب» إلزامية قبل عرض أي نتيجة للمستخدم النهائي.</div>
+</main>
+<footer><div class="wrap">VetAI Global · الذكاء الاصطناعي مساعد، والطبيب يقرر · المحتوى تعليمي ولا يغني عن استشارة الطبيب البيطري.</div></footer>
+<script>
+function showModule(n,btn){document.querySelectorAll('.module').forEach(m=>m.classList.remove('active'));document.getElementById('m'+n).classList.add('active');document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');window.scrollTo({top:document.querySelector('nav.tabs').offsetTop-10,behavior:'smooth'});}
+function previewImage(input,id){var f=input.files&&input.files[0];if(!f)return;var r=new FileReader();r.onload=function(e){var im=document.getElementById(id);im.src=e.target.result;im.style.display='block';};r.readAsDataURL(f);}
+function show(id,html){var el=document.getElementById(id);el.innerHTML=html;el.classList.add('show');}
+function bar(label,p){return '<p style="margin:8px 0 0"><strong>'+label+'</strong> — '+p+'% (توضيحي)</p><div class="bar"><i style="width:'+p+'%"></i></div>';}
+function demoImaging(){var sp=document.getElementById('imgSpecies').value,mo=document.getElementById('imgModality').value,ar=document.getElementById('imgArea').value;show('imgResult','<p class="demo-note"><strong>نتيجة تجريبية توضيحية فقط</strong> — لم يُحلَّل محتوى الصورة المرفوعة فعليًا. هذا شكل النتيجة التي سيعيدها النموذج الحقيقي بعد الربط عبر API.</p><p><strong>النوع:</strong> '+sp+' · <strong>التصوير:</strong> '+mo+' · <strong>المنطقة:</strong> '+ar+'</p>'+bar('نمط قد يتوافق مع كسر (مثال)',72)+bar('نمط قد يتوافق مع كتلة / ورم (مثال)',38)+bar('نمط قد يتوافق مع تليّف عضلي (مثال)',21)+'<p><strong>اقتراح أولي للطبيب (وليس تشخيصًا):</strong> مراجعة الصورة الأصلية كاملة، ومقارنتها بالفحص السريري والسوابق، وطلب تصوير إضافي أو خزعة عند الحاجة قبل أي قرار.</p><p class="small">نسبة الدقة هنا مثال لتصميم الواجهة فقط؛ النموذج الحقيقي يجب أن يعرض دقته المُقاسة على بيانات تحقق مستقلة، مع فاصل الثقة وحدود النموذج.</p>');}
+function demoDerm(){var sp=document.getElementById('dermSpecies').value,pa=document.getElementById('dermPattern').value;show('dermResult','<p class="demo-note"><strong>نتيجة جلدية تجريبية توضيحية فقط</strong> — لم يُحلَّل محتوى الصورة فعليًا.</p><p><strong>النوع:</strong> '+sp+' · <strong>النمط المختار:</strong> '+pa+'</p>'+bar('نمط طفيلي (مثال: براغيث / قراد)',54)+bar('نمط حساسية / التهاب جلد (مثال)',47)+bar('آفة تستدعي فحصًا سريريًا عاجلًا (مثال)',29)+'<p><strong>الخطوة التالية المقترحة:</strong> فحص جلدي سريري، وكشط جلدي / فحص مجهري عند الحاجة، وعدم بدء أي علاج موضعي أو جهازي دون طبيب. أي كتلة سريعة النمو أو نازفة أو متقرحة تُحال فورًا.</p>');}
+function scorePain(){var s=0;document.querySelectorAll('#painChecks input:checked').forEach(c=>s+=parseInt(c.value));var txt=s>=6?'مستوى إرشادي مرتفع — راجع الطبيب البيطري اليوم، ولا تؤجل إذا كان الحيوان يرفض الأكل أو الماء أو الحركة.':s>=3?'مستوى إرشادي متوسط — راقب عن قرب وسجّل التغيرات، واتصل بالطبيب لاستشارة.':'مستوى إرشادي منخفض — استمر في المراقبة الروتينية.';show('painResult','<p><strong>المجموع الإرشادي:</strong> '+s+' من 10</p><p>'+txt+'</p><p class="small">هذا مجموع قائمة تعليمية، وليس درجة ألم سريرية معتمدة.</p>');}
+function demoAudio(){var f=document.getElementById('audioFile').files[0];var name=f?f.name:'ملف تجريبي (لم يُرفع ملف)';show('audioResult','<p class="demo-note"><strong>تحليل صوتي تجريبي توضيحي فقط</strong> — لم يُحلَّل محتوى الصوت فعليًا.</p><p><strong>الملف:</strong> '+name+'</p><table><tr><th>الخاصية</th><th>قيمة توضيحية</th></tr><tr><td>المدة</td><td>مثال: 4.2 ثانية</td></tr><tr><td>التكرار / الإيقاع</td><td>متقطع ومتكرر</td></tr><tr><td>نمط إرشادي</td><td>قد يتوافق مع طلب انتباه أو انزعاج — يحتاج سياقًا سلوكيًا وفحصًا</td></tr></table><p><strong>ما لا نفعله:</strong> لا نترجم الصوت إلى كلمات أو مشاعر مؤكدة. أي تغيّر مفاجئ في الصوت مع خمول أو فقدان شهية يستدعي طبيبًا.</p>');}
+function demoFarm(){var t=document.getElementById('farmType').value,n=document.getElementById('herdSize').value;show('farmResult','<p><strong>القطيع:</strong> '+t+' · <strong>العدد التجريبي:</strong> '+n+'</p><table><tr><th>المؤشر</th><th>قيمة تجريبية</th></tr><tr><td>حيوانات نشطة الحركة اليوم</td><td>92%</td></tr><tr><td>حيوانات تحت المراقبة</td><td>5</td></tr><tr><td>ولادات متوقعة خلال 7 أيام</td><td>3 (نافذة تقديرية — تأكيدها بالفحص البيطري)</td></tr><tr><td>تنبيهات نشطة</td><td>1 تنبيه أمن حيوي (مراجعة)</td></tr></table><p class="small">توقّع الولادة هنا تقدير مبني على سلوك وحركة تجريبيين؛ القرار التناسلي والتدخل يبقيان للطبيب.</p>');}
+function demoFeed(){var w=parseFloat(document.getElementById('feedWeight').value)||450,g=document.getElementById('feedGoal').value,ga=parseFloat(document.getElementById('feedGain').value)||0.8;var dm=(w*0.025).toFixed(1);show('feedResult','<p><strong>الهدف:</strong> '+g+' · <strong>الوزن:</strong> '+w+' كغ</p><table><tr><th>البند</th><th>تقدير تجريبي</th></tr><tr><td>المادة الجافة اليومية التقريبية</td><td>'+dm+' كغ/يوم</td></tr><tr><td>علف خشن (تقريبي)</td><td>60% من المادة الجافة</td></tr><tr><td>علف مركز (تقريبي)</td><td>40% من المادة الجافة</td></tr><tr><td>ماء</td><td>متاح نظيفًا وباستمرار — يزيد مع الحر والإرضاع</td></tr></table><p>معدل النمو المستهدف المدخل: '+ga+' كغ/يوم. راجع التركيبة مع أخصائي تغذية ونتائج تحليل العلف قبل التطبيق.</p>');}
+function filterDrugs(){var q=document.getElementById('drugSearch').value.trim();document.querySelectorAll('#drugTable tbody tr').forEach(r=>{r.style.display=!q||r.textContent.includes(q)?'':'none';});}
+function scoreVTRI(){var s=0;document.querySelectorAll('#vtriChecks input:checked').forEach(c=>s+=parseInt(c.value));show('vtriResult','<p><strong>درجة VTRI الأولية (غير متحقق منها):</strong> '+s+' من 15</p><p>'+(s>=12?'جاهزية بحثية أعلى نسبيًا — ما زالت تحتاج تحققًا سريريًا مستقلًا.':s>=6?'جاهزية متوسطة — توجد فجوات تحقق مهمة.':'جاهزية أولية منخفضة — لا يُبنى عليها قرار سريري.')+'</p><p class="small">هذه قائمة شفافية، وليست اعتمادًا.</p>');}
+</script>
+</body>
+</html>
