@@ -58,7 +58,7 @@
   }
 
   function loadExtra() {
-    ['js/extra-articles.js', 'js/library-extra.js'].forEach(function (f) {
+    ['js/extra-articles.js'].forEach(function (f) {
       var el = document.createElement('script');
       el.src = f + '?v=' + Date.now();
       document.body.appendChild(el);
