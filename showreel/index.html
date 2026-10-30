@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جولة في المنصة — Showreel | VetAI Global</title>
+<meta name="description" content="جولة مرئية قصيرة (15 ثانية) فوق منصة VetAI Global — الطب البيطري والذكاء الاصطناعي والبحث والتعليم في منصة واحدة. المحتوى تعليمي، والقرار السريري للطبيب البيطري.">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="جولة في منصة VetAI Global">
+<meta property="og:description" content="تحليق قصير فوق منصة VetAI Global: معرفة بيطرية، بحث علمي، وذكاء اصطناعي مساعد.">
+<meta property="og:url" content="https://dr-mahdjoubi.github.io/VetAI/showreel/">
+<meta property="og:video" content="https://dr-mahdjoubi.github.io/VetAI/showreel/showreel.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1440">
+<meta property="og:video:height" content="1152">
+<style>
+/* Scoped to this standalone page only. No global site styles are touched. */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;color:#12211c;line-height:1.7;
+  background:radial-gradient(120% 90% at 50% 40%,#f9fbfb 0%,#f9fbfb 45%,#f2f3f6 100%);min-height:100vh}
+.svsr-wrap{max-width:1120px;margin:0 auto;padding:28px 16px 44px}
+.svsr-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #dfe8e2;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:700}
+.svsr-badge img{height:21px;width:auto;display:block}
+h1{font-size:30px;margin:16px 0 6px}
+.svsr-sub{color:#5b6b64;max-width:760px;margin:0 0 20px}
+.svsr-frame{background:#fff;border-radius:24px;padding:10px;box-shadow:0 24px 60px rgba(18,33,28,.14),0 4px 16px rgba(18,33,28,.08)}
+.svsr-frame video{display:block;width:100%;aspect-ratio:1440/1152;height:auto;border-radius:18px;background:#f2f3f6}
+.svsr-missing{display:none;border:1px dashed #9cc7b8;border-radius:14px;padding:16px;background:#f8fcf9;margin-top:14px}
+.svsr-missing.show{display:block}
+.svsr-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.svsr-cta{background:#0e7c66;color:#fff;text-decoration:none;border-radius:999px;padding:12px 22px;font-weight:700;font-size:16px}
+.svsr-cta:hover{opacity:.92}
+.svsr-back{color:#0e7c66;text-decoration:none;border:1px solid #bfe3d5;background:#fff;border-radius:999px;padding:12px 22px;font-weight:700;font-size:16px}
+.svsr-note{font-size:13px;color:#5b6b64;margin-top:16px}
+</style>
+</head>
+<body>
+<main class="svsr-wrap">
+  <span class="svsr-badge"><img src="../assets/logo/logo-full.webp" alt="VetAI Global"> VetAI Global</span>
+  <h1>جولة في المنصة</h1>
+  <p class="svsr-sub">تحليق قصير فوق صفحة VetAI Global — من المعرفة إلى رعاية أفضل. الفيديو تعريفي فقط، ومحتوى المنصة تعليمي ولا يغني عن الطبيب البيطري.</p>
+
+  <div class="svsr-frame">
+    <video id="svsr-video" controls playsinline preload="metadata" poster="showreel-poster.jpg" width="1440" height="1152">
+      <source src="showreel.mp4" type="video/mp4">
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+  <div class="svsr-missing" id="svsr-missing">الفيديو قيد الإنتاج حاليًا — ستعمل هذه الصفحة فور وضع ملف <b>showreel.mp4</b> في نفس مجلدها، دون أي تغيير آخر.</div>
+
+  <div class="svsr-actions">
+    <a class="svsr-cta" href="../">ادخل المنصة</a>
+    <a class="svsr-back" href="https://github.com/dr-mahdjoubi/VetAI">المشروع على GitHub</a>
+  </div>
+  <p class="svsr-note">صفحة مستقلة: إضافة أو حذف مجلد <b>showreel</b> لا يغيّر أي قسم أو تصميم في بقية الموقع.</p>
+</main>
+<script>
+(function(){
+  var v=document.getElementById('svsr-video');
+  var note=document.getElementById('svsr-missing');
+  function missing(){ note.classList.add('show'); }
+  v.addEventListener('error',missing,true);
+  var s=v.querySelector('source');
+  if(s){ s.addEventListener('error',missing); }
+})();
+</script>
+</body>
+</html>
