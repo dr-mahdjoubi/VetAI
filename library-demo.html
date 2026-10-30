@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معاينة محرك المكتبة الجديد — VetAI Global</title>
+<style>
+  body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f7f9f9;color:#1a2433;margin:0;padding:24px}
+  .wrap{max-width:980px;margin:0 auto}
+  h1{font-size:22px} p.note{color:#5b6b7b;font-size:14px;line-height:1.9}
+  .bk,.dl{display:block;background:#fff;border:1px solid #e3e9ec;border-radius:12px;
+    padding:12px 14px;margin:0 0 10px;color:inherit;text-decoration:none}
+  .bk.on{background:#0e7a5f;color:#fff}
+  .dl b{display:block;margin-bottom:4px}.dl span{color:#45566b;font-size:13px;line-height:1.8}
+  .bk small,.dl small{display:block;color:#7b8a99;font-size:11px;margin-top:4px}
+  .vetlib-chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+  .vetlib-chips .bk{margin:0;padding:8px 12px;cursor:pointer;font-size:13px}
+  .vetlib-bar{display:flex;gap:8px;margin:14px 0}
+  .vetlib-q{flex:1;padding:10px 12px;border:1px solid #d5dee3;border-radius:10px;font-size:15px}
+  .vetlib-lang{padding:10px;border:1px solid #d5dee3;border-radius:10px}
+  .vetlib-count{color:#5b6b7b;font-size:13px;margin:8px 0}
+  .vetlib-more{display:block;margin:14px auto;padding:10px 26px;border:0;border-radius:10px;
+    background:#0e7a5f;color:#fff;cursor:pointer;font-size:15px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📚 معاينة محرك المكتبة الجديد</h1>
+  <p class="note">هذه الصفحة تعمل بالبيانات الحقيقية المولّدة من مكتبتك الحالية (990 كتابًا):
+  جرّب التمرير للأسفل (تحميل تدريجي 12×)، بدّل التصنيفات (تُجلب ملفاتها فقط عند النقر)،
+  وابحث (يوجد تأخير 300ms مقصود، والبحث يعمل بفهرس خفيف منفصل).
+  افتح تبويب الشبكة في أدوات المطور لترى أن التحميل الأول لا يتجاوز بضعة كيلوبايتات.</p>
+  <div id="library-root"></div>
+</div>
+<script src="js/library-engine.js"></script>
+<script>VetLibrary.mount(document.getElementById('library-root'));</script>
+</body>
+</html>
