@@ -1,0 +1,29 @@
+name: split-library
+# يعيد توليد data/library/ من json/resources.json بعد تحديثات بوت المحتوى.
+# ملاحظة: دفعات البوت التي تتم بـ GITHUB_TOKEN لا تُشغّل workflows أخرى تلقائيًا،
+# لذا نعتمد على الجدولة (بعد دورة البوت) + التشغيل اليدوي عند الحاجة.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 1,9,17 * * *'
+  push:
+    paths:
+      - 'tools/split-library.py'
+permissions:
+  contents: write
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 tools/split-library.py .
+      - name: Commit modular library if changed
+        run: |
+          git config user.name "vetai-library-bot"
+          git config user.email "bot@vetai.local"
+          git add data/library
+          git diff --cached --quiet || git commit -m "chore(library): regenerate modular library data"
+          git push
