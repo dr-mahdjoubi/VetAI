@@ -1,6 +1,31 @@
 {
   "runs": [
     {
+      "at": "2026-10-31T16:59:01Z",
+      "added": [
+        {
+          "title": "Considerations for research studies to evaluate the impact of vaccines on antimicrobial resistance and use (WHO)",
+          "url": "https://iris.who.int/items/87eb8b27-8047-4789-a4d9-0f59c7370aaa",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 15,
+          "added": 1
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-10-31T09:02:23Z",
       "added": [
         {
@@ -413,6 +438,6 @@
       }
     }
   ],
-  "last_run": "2026-10-31T09:02:23Z",
-  "total_books": 992
+  "last_run": "2026-10-31T16:59:01Z",
+  "total_books": 993
 }
