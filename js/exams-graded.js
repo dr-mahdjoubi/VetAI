@@ -43,8 +43,14 @@
   }
   function S() { return STR[lang()] || STR.ar; }
   function subjectsFor(l) {
-    var D = l === 'en' ? window.EXEN : l === 'fr' ? window.EXFR : window.EX;
-    return (D && D.length) ? D : (window.EX || []);
+    // NOTE: index.html declares EX as a top-level const (lexical global), so
+    // window.EX is undefined for Arabic — read the binding directly.
+    var D = null;
+    if (l === 'en') D = window.EXEN || (typeof EXEN !== 'undefined' ? EXEN : null);
+    else if (l === 'fr') D = window.EXFR || (typeof EXFR !== 'undefined' ? EXFR : null);
+    else D = (typeof EX !== 'undefined' ? EX : null) || window.EX || null;
+    if (D && D.length) return D;
+    return (typeof EX !== 'undefined' ? EX : null) || window.EX || [];
   }
   function shuffle(a) {
     return a.map(function (x) { return [Math.random(), x]; })
@@ -167,7 +173,8 @@
     var s = S();
     var D = subjectsFor(l);
     var title = (D[idx] && D[idx][0]) || '';
-    var arName = (window.EX && window.EX[idx]) ? window.EX[idx][0] : title;
+    var arD = subjectsFor('ar');
+    var arName = (arD[idx] && arD[idx][0]) ? arD[idx][0] : title;
     running = { idx: idx, lang: l, ok: 0, n: 0, per: [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]] };
     var body = $('xg-body');
     body.dir = l === 'ar' ? 'rtl' : 'ltr';
