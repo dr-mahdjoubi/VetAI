@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>14-viewer context test</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>body{font-family:system-ui;background:#0b1220;color:#e2e8f0;margin:16px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}figure{margin:0;background:#111c30;border:1px solid #1e293b;border-radius:12px;padding:10px}model-viewer{width:100%;height:250px;background:#1a2740;border-radius:8px}figcaption{font-size:13px;margin-top:8px}</style>
+</head><body>
+<h1>Fourteen simultaneous viewers — WebGL context limit test</h1>
+<div class="grid">
+  <figure><model-viewer src="assets/3d/horse.glb" camera-controls auto-rotate autoplay alt="horse"></model-viewer><figcaption>1. horse</figcaption></figure>
+  <figure><model-viewer src="assets/3d/fox.glb" camera-controls auto-rotate autoplay alt="fox"></model-viewer><figcaption>2. fox</figcaption></figure>
+  <figure><model-viewer src="assets/3d/parrot.glb" camera-controls auto-rotate autoplay alt="parrot"></model-viewer><figcaption>3. parrot</figcaption></figure>
+  <figure><model-viewer src="assets/3d/flamingo.glb" camera-controls auto-rotate autoplay alt="flamingo"></model-viewer><figcaption>4. flamingo</figcaption></figure>
+  <figure><model-viewer src="assets/3d/stork.glb" camera-controls auto-rotate autoplay alt="stork"></model-viewer><figcaption>5. stork</figcaption></figure>
+  <figure><model-viewer src="assets/3d/duck.glb" camera-controls auto-rotate autoplay alt="duck"></model-viewer><figcaption>6. duck</figcaption></figure>
+  <figure><model-viewer src="assets/3d/wolf.glb" camera-controls auto-rotate autoplay alt="wolf"></model-viewer><figcaption>7. wolf</figcaption></figure>
+  <figure><model-viewer src="assets/3d/husky.glb" camera-controls auto-rotate autoplay alt="husky"></model-viewer><figcaption>8. husky</figcaption></figure>
+  <figure><model-viewer src="assets/3d/deer.glb" camera-controls auto-rotate autoplay alt="deer"></model-viewer><figcaption>9. deer</figcaption></figure>
+  <figure><model-viewer src="assets/3d/shark.glb" camera-controls auto-rotate autoplay alt="shark"></model-viewer><figcaption>10. shark</figcaption></figure>
+  <figure><model-viewer src="assets/3d/clownfish.glb" camera-controls auto-rotate autoplay alt="clownfish"></model-viewer><figcaption>11. clownfish</figcaption></figure>
+  <figure><model-viewer src="assets/3d/trex.glb" camera-controls auto-rotate autoplay alt="trex"></model-viewer><figcaption>12. trex</figcaption></figure>
+  <figure><model-viewer src="assets/3d/triceratops.glb" camera-controls auto-rotate autoplay alt="triceratops"></model-viewer><figcaption>13. triceratops</figcaption></figure>
+  <figure><model-viewer src="assets/3d/barramundi.glb" camera-controls auto-rotate autoplay alt="barramundi"></model-viewer><figcaption>14. barramundi</figcaption></figure>
+</div></body></html>
