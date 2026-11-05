@@ -51,7 +51,7 @@
   }
   function loadFeeds() {
     [['breeder', 'breeders'], ['student', 'students'], ['researcher', 'researchers']].forEach(function (p) {
-      fetch('data/' + p[1] + '.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) {
+      fetch('json/' + p[1] + '.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).then(function (a) {
         if (!a.length) return; D[p[0]].tabs.unshift(['🆕 الجديد', renderFeed(a)]);
         if (ov && !ov.hidden && cur === p[0]) show(cur, tab + 1);
       }).catch(function () {});
