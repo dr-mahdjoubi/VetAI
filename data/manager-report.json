@@ -1,51 +1,54 @@
 {
-  "generatedAt": "2026-11-04T06:05:15.453Z",
+  "generatedAt": "2026-11-05T06:06:58.802Z",
   "generator": "tools/site-guard.mjs",
   "base": "https://vetai.vcom.workers.dev",
   "overall": "fail",
   "counts": {
-    "فيديوهات الوسائط": 53,
-    "صور المعرض": 53,
+    "فيديوهات الوسائط": 62,
+    "صور المعرض": 65,
     "بيانات الأنواع": 8,
     "شريط الأخبار": 11
   },
-  "changes": [],
+  "changes": [
+    "عدد الفيديوهات تغيّر: 53 ← 62 (تحقق إن كان مقصودًا)",
+    "عدد الصور تغيّر: 53 ← 65 (تحقق إن كان مقصودًا)"
+  ],
   "checks": [
     {
       "id": "mirror",
       "label": "مرآة Cloudflare — الرئيسي",
       "status": "ok",
-      "detail": "HTTP 200 · 327ms · العنوان سليم"
+      "detail": "HTTP 200 · 246ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Render — drvet",
       "status": "ok",
-      "detail": "HTTP 200 · 369ms · العنوان سليم"
+      "detail": "HTTP 200 · 321ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة Vercel",
       "status": "ok",
-      "detail": "HTTP 200 · 337ms · العنوان سليم"
+      "detail": "HTTP 200 · 558ms · العنوان سليم"
     },
     {
       "id": "mirror",
       "label": "مرآة GitHub Pages",
       "status": "ok",
-      "detail": "HTTP 200 · 363ms · العنوان سليم"
+      "detail": "HTTP 200 · 287ms · العنوان سليم"
     },
     {
       "id": "data",
       "label": "فيديوهات الوسائط",
       "status": "ok",
-      "detail": "53 عنصرًا"
+      "detail": "62 عنصرًا"
     },
     {
       "id": "data",
       "label": "صور المعرض",
       "status": "ok",
-      "detail": "53 عنصرًا"
+      "detail": "65 عنصرًا"
     },
     {
       "id": "data",
@@ -75,7 +78,7 @@
       "id": "perf",
       "label": "أداء الصفحة الرئيسية",
       "status": "ok",
-      "detail": "1167KB · 105ms"
+      "detail": "1185KB · 80ms"
     },
     {
       "id": "links",
