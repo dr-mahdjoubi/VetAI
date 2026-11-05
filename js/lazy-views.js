@@ -31,7 +31,7 @@
 
   var MODULES = {
     modelViewer: {
-      src: 'https://cdn.jsdelivr.net/npm/@google/model-viewer@4.4.0/dist/model-viewer.min.js',
+      src: 'https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js',
       module: true,
       views: ['view-media']
     },
