@@ -6174,7 +6174,7 @@ arm();
 (function(){'use strict';var imgs=document.querySelectorAll('#view-home .vg-animal-core img.vg-rot');if(imgs.length<2)return;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;var i=0,timer=null;function step(){imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].classList.add('on');}function start(){if(!timer)timer=setInterval(step,4200);}function stop(){if(timer){clearInterval(timer);timer=null;}}if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)start();else stop();},{threshold:.12}).observe(imgs[0]);}else{start();}document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});})();
 </script>
 
-<script src="js/proactive-assistant.js" defer></script><script src="js/lazy-views.js" defer></script> <script src="js/ux-nav.js" defer></script> <script src="js/consult-pricing.js" defer></script> <script src="js/diseases-atlas.js" defer></script>
+<script src="js/proactive-assistant.js" defer></script><script src="js/lazy-views.js" defer></script><script src="js/viewer3d.js" defer></script> <script src="js/ux-nav.js" defer></script> <script src="js/consult-pricing.js" defer></script> <script src="js/diseases-atlas.js" defer></script>
     <script src="js/exams-graded.js" defer></script>
 <script src="js/library-engine.js" defer></script><script>window.addEventListener('DOMContentLoaded',function(){if(window.VetLibrary){VetLibrary.mount(document.getElementById('library-root'));}});</script>
 <script id="mmgame-js">
