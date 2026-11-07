@@ -1,6 +1,31 @@
 {
   "runs": [
     {
+      "at": "2026-11-07T09:12:20Z",
+      "added": [
+        {
+          "title": "Surveillance, enquête sur les cas et recherche des contacts lors des flambées épidémiques de maladies à filovirus (WHO)",
+          "url": "https://iris.who.int/items/1062cf35-3a37-4507-85b7-153f5d88f22a",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 16,
+          "added": 1
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-11-07T01:27:35Z",
       "added": [],
       "sources": {
@@ -586,27 +611,8 @@
           "added": 0
         }
       }
-    },
-    {
-      "at": "2026-10-28T09:13:24Z",
-      "added": [],
-      "sources": {
-        "WHO IRIS": {
-          "found": 18,
-          "added": 0
-        },
-        "FAO Open Knowledge": {
-          "found": 0,
-          "added": 0,
-          "error": "HTTP 403"
-        },
-        "NCBI Bookshelf": {
-          "found": 14,
-          "added": 0
-        }
-      }
     }
   ],
-  "last_run": "2026-11-07T01:27:35Z",
-  "total_books": 1001
+  "last_run": "2026-11-07T09:12:20Z",
+  "total_books": 1002
 }
