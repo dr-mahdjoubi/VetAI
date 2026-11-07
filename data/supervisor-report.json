@@ -1,17 +1,17 @@
 {
- "at": "2026-11-06T06:04:22.615Z",
+ "at": "2026-11-07T05:53:36.603Z",
  "base": "https://drvet.onrender.com",
  "probes": [
   {
    "provider": "pollinations/openai-fast",
    "ok": true,
-   "ms": 342,
+   "ms": 618,
    "note": "answer received"
   },
   {
    "provider": "pollinations/openai",
    "ok": true,
-   "ms": 241,
+   "ms": 274,
    "note": "answer received"
   },
   {
@@ -20,7 +20,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 933
+   "ms": 1019
   },
   {
    "provider": "worker",
@@ -28,7 +28,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 740
+   "ms": 2565
   },
   {
    "provider": "worker",
@@ -36,7 +36,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 509
+   "ms": 913
   }
  ],
  "integrity": {
@@ -51,11 +51,10 @@
  },
  "index": {
   "path": "js/search-index.json",
-  "action": "rebuilt (source changed or corrupt)",
+  "action": "verified-fresh",
   "docs": 1124,
   "tokens": 4684,
-  "srcHash": "ef4017b9191f6b1b",
-  "bytes": 311533
+  "srcHash": "ef4017b9191f6b1b"
  },
  "hard": [],
  "warn": [
