@@ -1,6 +1,25 @@
 {
   "runs": [
     {
+      "at": "2026-11-09T18:57:48Z",
+      "added": [],
+      "sources": {
+        "WHO IRIS": {
+          "found": 14,
+          "added": 0
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-11-09T06:57:00Z",
       "added": [],
       "sources": {
@@ -586,33 +605,8 @@
           "added": 0
         }
       }
-    },
-    {
-      "at": "2026-10-30T09:15:16Z",
-      "added": [
-        {
-          "title": "Données du système d’information sanitaire de routine et des établissements de santé sur les maladies tropicales négligées : taeniasis à Taenia solium et cysticercose (WHO)",
-          "url": "https://iris.who.int/items/591879fb-fb65-42f9-9d37-b2b36b324ffc",
-          "source": "WHO IRIS"
-        }
-      ],
-      "sources": {
-        "WHO IRIS": {
-          "found": 17,
-          "added": 1
-        },
-        "FAO Open Knowledge": {
-          "found": 0,
-          "added": 0,
-          "error": "HTTP 403"
-        },
-        "NCBI Bookshelf": {
-          "found": 13,
-          "added": 0
-        }
-      }
     }
   ],
-  "last_run": "2026-11-09T06:57:00Z",
+  "last_run": "2026-11-09T18:57:48Z",
   "total_books": 1002
 }
