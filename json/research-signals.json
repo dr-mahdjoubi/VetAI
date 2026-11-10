@@ -1,0 +1,373 @@
+{
+ "generated_from": "tests/research-live.json",
+ "count": 20,
+ "signals": [
+  {
+   "id": "mahdjoubi-vtri-2026",
+   "evidence": {
+    "design": "Veterinary Medicine: From Laboratory Accuracy to Clinical Readiness — Secondary Analysis of 39 Deep-Learning Studies, a Real-World Benefit–Harm Appraisal, and",
+    "sampleSize": "rom Laboratory Accuracy to Clinical Readiness — Secondary Analysis of 39 Deep-Learning Studies, a Real-World Benefit–Harm Appraisal, and the Veteri"
+   },
+   "design": "narrative_review",
+   "sampleSize": 39,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": true,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": {
+    "domains": {
+     "D1": 0,
+     "D2": 0,
+     "D3": 0
+    },
+    "scoredDomains": 3,
+    "totalOnScored": 0,
+    "note": "Machine-extracted provisional suggestion from explicit text signals only. D5 is never auto-scored. Requires human review; it is NOT the author VTRI score."
+   }
+  },
+  {
+   "id": "pubmed-42597169",
+   "evidence": {
+    "design": "AI applications in veterinary digital health: a systematic survey A PRISMA 2020 systematic survey (2013–2025) of AI in veterinary dig",
+    "sampleSize": "digital health — from radiography CNNs to LLM consultation — covering 22 included studies across imaging, prediction, wearables, livestock and decision"
+   },
+   "design": "systematic_review",
+   "sampleSize": 22,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": true,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": {
+    "domains": {
+     "D1": 0,
+     "D2": 0,
+     "D3": 0
+    },
+    "scoredDomains": 3,
+    "totalOnScored": 0,
+    "note": "Machine-extracted provisional suggestion from explicit text signals only. D5 is never auto-scored. Requires human review; it is NOT the author VTRI score."
+   }
+  },
+  {
+   "id": "pubmed-42848008",
+   "evidence": {
+    "design": "logy: Concepts, applications, and clinical implementation A scoping review (34 studies) plus a laboratory survey on AI in veterinary histopathol",
+    "sampleSize": "ncepts, applications, and clinical implementation A scoping review (34 studies) plus a laboratory survey on AI in veterinary histopathology: mostly"
+   },
+   "design": "narrative_review",
+   "sampleSize": 34,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": true,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": {
+    "domains": {
+     "D1": 0,
+     "D2": 0,
+     "D3": 0
+    },
+    "scoredDomains": 3,
+    "totalOnScored": 0,
+    "note": "Machine-extracted provisional suggestion from explicit text signals only. D5 is never auto-scored. Requires human review; it is NOT the author VTRI score."
+   }
+  },
+  {
+   "id": "pubmed-38568777",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "dogs",
+    "cats"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-42817832",
+   "evidence": {
+    "sampleSize": "24): third-generation cephalosporin and fluoroquinolone resistance in 385 E. coli isolates from companion dogs and cats rose significantly with h"
+   },
+   "design": "not_stated",
+   "sampleSize": 385,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "dogs",
+    "cats"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-42454871",
+   "evidence": {
+    "design": "Rabies Day Themes and Progress toward Zero by 30 A 2016–2025 global review of rabies control: mass dog vaccination reached 70% coverage in Guine"
+   },
+   "design": "narrative_review",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "dogs"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41016798",
+   "evidence": {
+    "design": "Lumpy Skin Disease (review) A comprehensive review of lumpy skin disease in cattle and buffalo"
+   },
+   "design": "narrative_review",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "cattle"
+   ],
+   "speciesGroups": [
+    "livestock"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-42847707",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "cattle"
+   ],
+   "speciesGroups": [
+    "livestock"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "2026-10-23-study-poultry",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": null
+  },
+  {
+   "id": "2026-10-23-study-farm",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": null
+  },
+  {
+   "id": "2026-10-23-study-pets",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41295744",
+   "evidence": {
+    "design": "a Predisposing Factor for Dilated Cardiomyopathy in Dogs: A Narrative Review. A narrative review of the evidence linking diet to dilated cardiom"
+   },
+   "design": "narrative_review",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "dogs"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41716168",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "cattle",
+    "sheep"
+   ],
+   "speciesGroups": [
+    "livestock"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41630772",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "cattle"
+   ],
+   "speciesGroups": [
+    "livestock"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41613773",
+   "evidence": {
+    "sampleSize": "ne glutathione peroxidase 4 in cats with chronic kidney disease. In 82 cats, the urine GPX4-to-creatinine ratio rose with CKD severity and was as"
+   },
+   "design": "not_stated",
+   "sampleSize": 82,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "cats"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41473106",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "horses"
+   ],
+   "speciesGroups": [
+    "equine"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-42376503",
+   "evidence": {
+    "design": "Review of avian influenza outbreaks in Nigeria 2006-2025. Reviews two deca"
+   },
+   "design": "narrative_review",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "poultry"
+   ],
+   "speciesGroups": [
+    "poultry"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41450185",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "dogs",
+    "cats"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-41716152",
+   "evidence": {},
+   "design": "not_stated",
+   "sampleSize": null,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [],
+   "speciesGroups": [],
+   "provisional": null
+  },
+  {
+   "id": "pubmed-42915224",
+   "evidence": {
+    "design": "Systematic review supports the idea that no alternative test presently replaces elimina",
+    "sampleSize": "agnose canine adverse food reactions. A PRISMA systematic review of 59 studies concludes that no alternative test reliably replaces the elimination"
+   },
+   "design": "systematic_review",
+   "sampleSize": 59,
+   "externalValidation": false,
+   "interpretability": false,
+   "dataAvailability": false,
+   "aiRelevant": false,
+   "species": [
+    "dogs"
+   ],
+   "speciesGroups": [
+    "companion"
+   ],
+   "provisional": null
+  }
+ ]
+}
