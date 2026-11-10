@@ -159,7 +159,7 @@
       }
     }
   };
-  var probeTimer = setInterval(function () { Supervisor.probeTick(); }, CONFIG.probe.everyMs);
+  var probeTimer = setInterval(function () { if (!document.hidden) Supervisor.probeTick(); }, CONFIG.probe.everyMs);
   if (typeof window !== 'undefined' && window.addEventListener) {
     window.addEventListener('online', function () { Supervisor.probeTick(); });
     window.addEventListener('offline', function () { Supervisor.degraded = true; });
