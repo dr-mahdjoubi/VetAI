@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LiveCheck — running…</title>
+<style>body{background:#0b1220;color:#dbeafe;font-family:monospace;padding:16px}pre{white-space:pre-wrap;line-height:1.7;font-size:13px}model-viewer{width:320px;height:240px;background:#16283f}</style>
+</head>
+<body>
+<h3>VetAI 3D LiveCheck (self-reporting probe)</h3>
+<pre id="out">starting…</pre>
+<div id="stage"></div>
+<script>
+var out = document.getElementById('out');
+var t0 = Date.now();
+function log(m) {
+  var line = '[' + ((Date.now() - t0) / 1000).toFixed(1) + 's] ' + m;
+  out.textContent += '\n' + line;
+}
+out.textContent = 'probe started @ ' + location.href;
+log('UA: ' + navigator.userAgent);
+
+/* 1) WebGL */
+try {
+  var c = document.createElement('canvas');
+  var gl2 = c.getContext('webgl2');
+  var c2 = document.createElement('canvas');
+  var gl1 = c2.getContext('webgl') || c2.getContext('experimental-webgl');
+  log('WebGL2: ' + !!gl2 + ' | WebGL1: ' + !!gl1);
+  if (gl2 || gl1) {
+    var gl = gl2 || gl1;
+    log('GL vendor/renderer: ' + gl.getParameter(gl.VENDOR) + ' / ' + gl.getParameter(gl.RENDERER));
+  }
+} catch (e) { log('WebGL test threw: ' + e.message); }
+
+/* 2) CORS fetch checks from THIS page context */
+var URLS = [
+  ['lib jsdelivr', 'https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js'],
+  ['Horse threejs', 'https://threejs.org/examples/models/gltf/Horse.glb'],
+  ['Horse jsdelivr-npm', 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/models/gltf/Horse.glb'],
+  ['Fox khronos-raw', 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF-Binary/Fox.glb'],
+  ['Fox jsdelivr-gh', 'https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Fox/glTF-Binary/Fox.glb']
+];
+function fetchCheck(name, url) {
+  var ctl = new AbortController();
+  var to = setTimeout(function () { ctl.abort(); }, 15000);
+  return fetch(url, { method: 'GET', signal: ctl.signal }).then(function (r) {
+    clearTimeout(to);
+    return r.arrayBuffer().then(function (buf) {
+      log('FETCH OK  ' + name + ' → HTTP ' + r.status + ', type=' + r.type + ', bytes=' + buf.byteLength + ', ctype=' + (r.headers.get('content-type') || '?') + ', acao=' + (r.headers.get('access-control-allow-origin') || '?'));
+    });
+  }).catch(function (e) {
+    clearTimeout(to);
+    log('FETCH FAIL ' + name + ' → ' + e.name + ': ' + e.message);
+  });
+}
+
+/* 3) library registration */
+function loadLib() {
+  return new Promise(function (resolve) {
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.src = URLS[0][1];
+    s.onload = function () { log('lib script onload fired'); };
+    s.onerror = function () { log('lib script ERROR'); resolve(false); };
+    document.head.appendChild(s);
+    var n = 0;
+    var iv = setInterval(function () {
+      if (window.customElements && customElements.get('model-viewer')) {
+        clearInterval(iv); log('model-viewer REGISTERED'); resolve(true);
+      } else if (++n > 150) {
+        clearInterval(iv); log('model-viewer NOT registered after 15s'); resolve(false);
+      }
+    }, 100);
+  });
+}
+
+/* 4) real model load attempts */
+function tryModel(label, src) {
+  return new Promise(function (resolve) {
+    var mv = document.createElement('model-viewer');
+    mv.setAttribute('src', src);
+    mv.setAttribute('camera-controls', '');
+    mv.setAttribute('autoplay', '');
+    mv.setAttribute('alt', label);
+    document.getElementById('stage').appendChild(mv);
+    var done = false;
+    var to = setTimeout(function () {
+      if (!done) { done = true; log('MODEL TIMEOUT (45s, no load/error): ' + label); resolve(false); }
+    }, 45000);
+    mv.addEventListener('load', function () {
+      if (done) return; done = true; clearTimeout(to);
+      log('MODEL LOADED ✔ ' + label + ' (loaded=' + mv.loaded + ')');
+      resolve(true);
+    });
+    mv.addEventListener('error', function (ev) {
+      if (done) return; done = true; clearTimeout(to);
+      var d = ev.detail || {};
+      log('MODEL ERROR ✖ ' + label + ' → type=' + (d.type || '?') + ' source=' + (d.sourceError || d.message || JSON.stringify(d).slice(0, 200)));
+      resolve(false);
+    });
+  });
+}
+
+(async function () {
+  for (var i = 0; i < URLS.length; i++) { await fetchCheck(URLS[i][0], URLS[i][1]); }
+  var ok = await loadLib();
+  if (ok) {
+    var h = await tryModel('Horse@threejs', URLS[1][1]);
+    if (!h) await tryModel('Horse@jsdelivr-npm', URLS[2][1]);
+    var f = await tryModel('Fox@khronos-raw', URLS[3][1]);
+    if (!f) await tryModel('Fox@jsdelivr-gh', URLS[4][1]);
+  }
+  log('PROBE COMPLETE');
+  document.title = 'LiveCheck DONE';
+})();
+</script>
+</body>
+</html>
