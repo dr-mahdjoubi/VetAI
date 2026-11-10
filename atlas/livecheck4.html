@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LiveCheck4 — running…</title>
+<style>body{background:#0b1220;color:#dbeafe;font-family:monospace;padding:16px}pre{white-space:pre-wrap;line-height:1.7;font-size:13px}model-viewer{width:340px;height:260px;background:#0a1526}iframe{width:100%;height:480px;border:1px solid #335}</style>
+</head>
+<body>
+<h3>VetAI LiveCheck4 — canvas pixel readback (toBlob), not screenshots</h3>
+<pre id="out">starting…</pre>
+<div id="stage"></div>
+<iframe id="fr" src="/atlas/"></iframe>
+<script type="module">
+import 'https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js';
+var out = document.getElementById('out');
+var t0 = Date.now();
+function log(m) { out.textContent += '\n[' + ((Date.now() - t0) / 1000).toFixed(1) + 's] ' + m; }
+out.textContent = 'probe4 started; module import done';
+function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+async function analyze(mv, label) {
+  try {
+    var blob = await mv.toBlob({ mimeType: 'image/png' });
+    log(label + ': toBlob size = ' + blob.size + ' bytes');
+    var bmp = await createImageBitmap(blob);
+    var c = document.createElement('canvas'); c.width = 48; c.height = 48;
+    var g = c.getContext('2d'); g.drawImage(bmp, 0, 0, 48, 48);
+    var d = g.getImageData(0, 0, 48, 48).data;
+    var colors = {}, nonBg = 0, total = 48 * 48;
+    var bg = d[0] + ',' + d[1] + ',' + d[2];
+    for (var i = 0; i < d.length; i += 4) {
+      var k = d[i] + ',' + d[i + 1] + ',' + d[i + 2];
+      colors[k] = 1;
+      if (k !== bg) nonBg++;
+    }
+    log(label + ': distinct colors = ' + Object.keys(colors).length +
+        ' | non-background pixels = ' + nonBg + '/' + total + ' (' + Math.round(nonBg / total * 100) + '%)' +
+        ' | bg color = rgb(' + bg + ')');
+    log(label + ': VERDICT = ' + (nonBg > total * 0.05 ? 'SCENE IS RENDERING (model visible in pixels)' : 'CANVAS ESSENTIALLY EMPTY'));
+  } catch (e) { log(label + ': toBlob/analysis error: ' + e.message); }
+}
+async function waitLoad(mv, label, timeout) {
+  var end = Date.now() + timeout;
+  while (Date.now() < end) { if (mv.loaded) { log(label + ': loaded=true'); return true; } await sleep(500); }
+  log(label + ': loaded stayed false'); return false;
+}
+/* Test 1: clean viewer on this page */
+var mv = document.createElement('model-viewer');
+mv.setAttribute('src', 'https://threejs.org/examples/models/gltf/Horse.glb');
+mv.setAttribute('camera-controls', '');
+mv.setAttribute('autoplay', '');
+document.getElementById('stage').appendChild(mv);
+if (await waitLoad(mv, 'CLEAN viewer', 30000)) { await sleep(1500); await analyze(mv, 'CLEAN viewer'); }
+/* Test 2: the real atlas's own viewer, inside the iframe */
+var fr = document.getElementById('fr');
+var W = null, end2 = Date.now() + 40000;
+while (Date.now() < end2) {
+  try { var d0 = fr.contentDocument; if (d0 && d0.querySelectorAll('.card').length >= 12) { W = fr.contentWindow; break; } } catch (e) {}
+  await sleep(400);
+}
+if (!W) { log('ATLAS iframe: cards never appeared'); }
+else {
+  var D = W.document;
+  D.getElementById('jumpAnimal').value = '43';
+  D.getElementById('jumpAnimalBtn').click();
+  await sleep(800);
+  var tabs = D.querySelectorAll('.sheet .tab');
+  tabs.forEach(function (t) { if (t.textContent.indexOf('3D') !== -1) t.click(); });
+  var mvA = null, end3 = Date.now() + 10000;
+  while (Date.now() < end3) { mvA = D.querySelector('.sheet model-viewer'); if (mvA) break; await sleep(300); }
+  if (!mvA) log('ATLAS viewer: not created');
+  else if (await waitLoad(mvA, 'ATLAS viewer', 30000)) { await sleep(1500); await analyze(mvA, 'ATLAS viewer'); }
+}
+log('PROBE4 COMPLETE');
+document.title = 'LiveCheck4 DONE';
+</script>
+</body>
+</html>
