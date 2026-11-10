@@ -173,6 +173,7 @@ a{color:var(--cyan)}
 .tabpane{margin-top:11px}
 model-viewer.mv3d{width:100%;height:330px;border-radius:15px;--poster-color:transparent;
   background:radial-gradient(480px 230px at 50% 30%,rgba(34,211,238,.10),transparent),#0a1526}
+.a3d-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .spinbox{position:relative;height:330px;border-radius:15px;overflow:hidden;background:#0a1526;touch-action:pan-y;cursor:grab;user-select:none}
 .spinbox img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform .12s}
 .spinbox .hintline{position:absolute;bottom:10px;inset-inline:0;text-align:center;font-size:11px;color:#e2e8f0;text-shadow:0 1px 8px #000;padding:0 12px}
