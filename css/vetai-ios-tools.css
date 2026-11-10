@@ -1,0 +1,90 @@
+/* vetai-ios-tools.css — طبقة إصلاحات VetAI (2026-11-10)
+ * 1) أسلوب iOS الزجاجي لبطاقات الأدوات خارج قسم v45 (أزرار الوصول السريع
+ *    .card.qa وبطاقات .tool والزر العائم #askfab).
+ * 2) سلامة النقر: طبقات زخرفية لا تلتقط اللمس، والأزرار فوقها دائمًا،
+ *    وإلغاء تأخير اللمس وتوهّج النقر الرمادي.
+ * 3) وضع الخمول الحراري (يضيفه vetai-perf-guard.js): إيقاف الحركات
+ *    وإطفاء الضبابيات الثقيلة عندما لا يتفاعل المستخدم.
+ * تُدرج بعد كل أنماط الموقع لتفوز عند التعادل، وبمحددات دقيقة كي لا تكسر شيئًا. */
+
+/* ---------- سلامة النقر أولًا ---------- */
+.card.qa, .tool, #show45 .card, #askfab {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+canvas.bg, .bg-decor, .hero-decor, [data-decor], .particles, #particles {
+  pointer-events: none !important;
+}
+button, a, [role="button"], input, select, textarea, label {
+  pointer-events: auto;
+}
+
+/* ---------- iOS Glass لبطاقات الوصول السريع ---------- */
+.card.qa {
+  border-radius: 22px !important;
+  border: 1px solid rgba(255, 255, 255, .35) !important;
+  background: linear-gradient(160deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .28)) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  backdrop-filter: blur(12px) saturate(150%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 10px 26px -14px rgba(6, 46, 32, .35) !important;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.card.qa:hover { transform: translateY(-2px); }
+.card.qa:active { transform: scale(.97); }
+.card.qa:focus-visible { outline: 3px solid #0e7a5f; outline-offset: 2px; }
+.card.qa .ib {
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, .35);
+  border: 1px solid rgba(255, 255, 255, .45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+/* ---------- iOS Glass لبطاقات الأدوات العامة ---------- */
+.tool {
+  border-radius: 20px !important;
+  border: 1px solid rgba(13, 60, 44, .10) !important;
+  background: linear-gradient(165deg, rgba(255, 255, 255, .78), rgba(244, 250, 247, .62)) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 12px 28px -16px rgba(6, 46, 32, .28) !important;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.tool:hover { transform: translateY(-2px); }
+.tool:active { transform: scale(.985); }
+
+/* ---------- الزر العائم «اسأل» ---------- */
+#askfab {
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, .4) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  backdrop-filter: blur(12px) saturate(160%);
+  box-shadow: 0 12px 30px -10px rgba(6, 46, 32, .5), inset 0 1px 0 rgba(255, 255, 255, .45) !important;
+  transition: transform .16s ease;
+}
+#askfab:active { transform: scale(.94); }
+
+/* ---------- أحجام متجاوبة مريحة (بلا ازدحام بصري) ---------- */
+@media (max-width: 480px) {
+  .card.qa { border-radius: 18px !important; }
+  .card.qa .ib { width: 42px; height: 42px; }
+  .tool { border-radius: 16px !important; }
+}
+
+/* ---------- وضع الخمول الحراري: تهدئة كل شيء ---------- */
+html.vetai-idle *, html.vetai-idle *::before, html.vetai-idle *::after {
+  animation-play-state: paused !important;
+}
+html.vetai-idle .card.qa, html.vetai-idle .tool, html.vetai-idle #askfab,
+html.vetai-idle #show45 .card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* ---------- احترام تفضيل تقليل الحركة ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .card.qa, .tool, #askfab { transition: none !important; }
+  .card.qa:hover, .tool:hover { transform: none; }
+  .card.qa:active, .tool:active, #askfab:active { transform: none; }
+}
