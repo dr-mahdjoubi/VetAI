@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LiveCheck5 — running…</title>
+<style>body{background:#0b1220;color:#dbeafe;font-family:monospace;padding:16px}pre{white-space:pre-wrap;line-height:1.7;font-size:13px}model-viewer{width:360px;height:280px;background:#0a1526}</style>
+</head>
+<body>
+<h3>VetAI LiveCheck5 — alpha coverage + orbit pixel-diff</h3>
+<pre id="out">starting…</pre>
+<div id="stage"></div>
+<script type="module">
+import 'https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js';
+var out = document.getElementById('out');
+var t0 = Date.now();
+function log(m) { out.textContent += '\n[' + ((Date.now() - t0) / 1000).toFixed(1) + 's] ' + m; }
+out.textContent = 'probe5 started';
+function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+async function shot(mv) {
+  var blob = await mv.toBlob({ mimeType: 'image/png' });
+  var bmp = await createImageBitmap(blob);
+  var c = document.createElement('canvas'); c.width = bmp.width; c.height = bmp.height;
+  var g = c.getContext('2d'); g.drawImage(bmp, 0, 0);
+  return { data: g.getImageData(0, 0, c.width, c.height).data, w: c.width, h: c.height, size: blob.size };
+}
+function stats(s) {
+  var total = s.w * s.h, opaque = 0, rS = 0, gS = 0, bS = 0;
+  for (var i = 0; i < s.data.length; i += 4) {
+    if (s.data[i + 3] > 8) { opaque++; rS += s.data[i]; gS += s.data[i + 1]; bS += s.data[i + 2]; }
+  }
+  return { total: total, opaque: opaque, pct: Math.round(opaque / total * 1000) / 10,
+           mean: opaque ? [Math.round(rS / opaque), Math.round(gS / opaque), Math.round(bS / opaque)] : [0, 0, 0] };
+}
+function diffPct(a, b) {
+  if (a.w !== b.w || a.h !== b.h) return -1;
+  var n = 0, total = a.w * a.h;
+  for (var i = 0; i < a.data.length; i += 4) {
+    if (Math.abs(a.data[i] - b.data[i]) > 12 || Math.abs(a.data[i + 3] - b.data[i + 3]) > 12) n++;
+  }
+  return Math.round(n / total * 1000) / 10;
+}
+async function testModel(label, src) {
+  var mv = document.createElement('model-viewer');
+  mv.setAttribute('src', src);
+  mv.setAttribute('camera-controls', '');
+  document.getElementById('stage').appendChild(mv);
+  var end = Date.now() + 30000, ok = false;
+  while (Date.now() < end) { if (mv.loaded) { ok = true; break; } await sleep(500); }
+  log(label + ': loaded=' + ok);
+  if (!ok) { mv.remove(); return; }
+  await sleep(1200);
+  var s1 = await shot(mv); var st1 = stats(s1);
+  log(label + ' view1: png=' + s1.size + 'B frame=' + s1.w + 'x' + s1.h + ' opaque=' + st1.opaque + '/' + st1.total + ' (' + st1.pct + '%) meanRGB(opaque)=' + st1.mean.join(','));
+  mv.cameraOrbit = '90deg 70deg 100%';
+  await sleep(1500);
+  var s2 = await shot(mv); var st2 = stats(s2);
+  log(label + ' view2(orbited): png=' + s2.size + 'B opaque=' + st2.pct + '% meanRGB=' + st2.mean.join(','));
+  log(label + ': pixel-diff after orbit = ' + diffPct(s1, s2) + '%');
+  log(label + ': VERDICT = ' + (st1.pct > 3 && diffPct(s1, s2) > 1 ? 'LIVE 3D SCENE RENDERS (silhouette present, view changes with orbit)' : (st1.pct > 3 ? 'silhouette renders but orbit diff unclear' : 'NO SILHOUETTE — canvas truly empty')));
+  mv.remove();
+}
+await testModel('Horse', 'https://threejs.org/examples/models/gltf/Horse.glb');
+await testModel('Fox', 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF-Binary/Fox.glb');
+log('PROBE5 COMPLETE');
+document.title = 'LiveCheck5 DONE';
+</script>
+</body>
+</html>
