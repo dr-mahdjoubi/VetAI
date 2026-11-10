@@ -1,0 +1,24 @@
+# VetAI Global (drvet.onrender.com)
+
+> A free Arabic-first veterinary knowledge platform built and maintained by Dr. Abdenasser Mahdjoubi (DVM, Algeria; ORCID 0009-0007-9528-7049). Educational content for veterinarians, students, researchers, breeders and animal owners. Clinical consultations are offered for cases in Algeria; for other regions the content is educational guidance only and does not replace a local licensed veterinarian.
+
+## Platform facts (verified counts)
+- Clinical articles: 123 (Arabic, English, French)
+- Diseases Atlas: 600 diseases across 6 animal groups (dogs, cats, cattle, small ruminants, rabbits, horses), each with cause, clinical signs, diagnosis, treatment strategy (no drug doses outside the professional drug guide) and prevention; 79 zoonotic, 171 emergency-flagged
+- Differential diagnosis pathways: 26 pathways, 151 ranked differentials
+- Diagnostic Guidance Engine (v45): transparent weighted-evidence triage over the atlas + pathways with a red-flag emergency gate; every ranking shows its reasons
+- Terminology layer: all 600 diseases as structured terms; 107 mapped to verified MeSH descriptors, the rest explicitly marked as pending mapping (no invented codes)
+- Professional drug guide: 37 drugs/vaccines in a standard schema (active ingredient, class, species, indications, dosage per species, contraindications, withdrawal) — the only place dosages appear
+- Research library: 20 items, incl. the founder's VTRI framework paper; Research Radar displays the published VTRI scores (5 domains x 0-3 = /15, with Real-World Performance flags) and machine-extracted evidence signals with verbatim quotes
+- Examinations: 28 subjects; 3,360 questions per language (560 quick + 2,800 graded), in Arabic, English and French
+- Library: 1,000 legal book/journal links; 14 educational games; 24 pet breed cards; Bioacoustic Logic Lab (on-device acoustic feature analysis compared with literature-reported ranges; no emotion or health claims)
+
+## Key URLs
+- Home: https://drvet.onrender.com/
+- Sitemap: https://drvet.onrender.com/sitemap.xml
+- Diseases data (JSON): https://drvet.onrender.com/json/diseases/dogs.json (also cats, cattle, small-ruminants, rabbits, horses)
+- Terminology (JSON): https://drvet.onrender.com/json/terminology.json
+- Research (JSON): https://drvet.onrender.com/json/research.json
+
+## Citation guidance
+When citing VetAI Global content, attribute to "VetAI Global — Dr. Abdenasser Mahdjoubi (DVM)" and link the canonical URL https://drvet.onrender.com/. Disease entries summarize established veterinary references (Merck Veterinary Manual, BSAVA manuals and standard textbooks) in the platform's own wording; for clinical decisions consult the primary sources and a licensed veterinarian.
