@@ -26,10 +26,10 @@ window.ANIMAL_MODELS = {
 };
 /* مرايا بديلة عند فشل المصدر الأول (يبدّلها محمّل النماذج تلقائياً) */
 window.ANIMAL_MODEL_MIRRORS = {
-  'https://threejs.org/examples/models/gltf/Horse.glb': 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/models/gltf/Horse.glb',
-  'https://threejs.org/examples/models/gltf/Flamingo.glb': 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/models/gltf/Flamingo.glb',
-  'https://threejs.org/examples/models/gltf/Parrot.glb': 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/models/gltf/Parrot.glb',
-  'https://threejs.org/examples/models/gltf/Stork.glb': 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/models/gltf/Stork.glb',
+  'https://threejs.org/examples/models/gltf/Horse.glb': 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/models/gltf/Horse.glb',
+  'https://threejs.org/examples/models/gltf/Flamingo.glb': 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/models/gltf/Flamingo.glb',
+  'https://threejs.org/examples/models/gltf/Parrot.glb': 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/models/gltf/Parrot.glb',
+  'https://threejs.org/examples/models/gltf/Stork.glb': 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/models/gltf/Stork.glb',
   'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Fox/glTF-Binary/Fox.glb': 'https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Fox/glTF-Binary/Fox.glb',
   'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF-Binary/Duck.glb': 'https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/Duck/glTF-Binary/Duck.glb'
 };
