@@ -1,0 +1,14 @@
+{
+ "note": "Acoustic ranges REPORTED in the cited literature for common vocalization types. Ranges vary by study, breed, age and context. The lab reports numeric similarity between a recording's measured features and these ranges only — it does NOT identify emotions or health states.",
+ "features": ["unitDurMs", "gapMs", "f0MedHz", "harmonicity"],
+ "patterns": [
+  {"id":"dog-bark","name_ar":"نباح كلب (وحدات قصيرة متكررة)","name_en":"Dog bark","src":"Yin & McCowan 2004; Pongrácz et al. 2005","range":{"unitDurMs":[80,450],"gapMs":[80,600],"f0MedHz":[250,1150],"harmonicity":[0.15,0.8]}},
+  {"id":"dog-whine","name_ar":"أنين كلب (وحدات أطول نغمية)","name_en":"Dog whine","src":"Yin & McCowan 2004","range":{"unitDurMs":[300,1600],"gapMs":[150,1200],"f0MedHz":[450,1250],"harmonicity":[0.45,1]}},
+  {"id":"cat-meow","name_ar":"مواء قطة","name_en":"Cat meow","src":"Nicastro & Owren 2003; Schötz 2015","range":{"unitDurMs":[250,1200],"gapMs":[200,1500],"f0MedHz":[350,1250],"harmonicity":[0.4,1]}},
+  {"id":"cat-purr","name_ar":"خرخرة قطة (نبضات منخفضة مستمرة)","name_en":"Cat purr","src":"Frazer Sissom et al. 1991; Schötz 2015","range":{"unitDurMs":[800,10000],"f0MedHz":[20,80],"harmonicity":[0.1,0.7]}},
+  {"id":"horse-whinny","name_ar":"صهيل حصان (نغمتان أساسيتان)","name_en":"Horse whinny (biphonation)","src":"Briefer et al. 2015","range":{"unitDurMs":[900,3200],"f0MedHz":[300,1500],"harmonicity":[0.3,0.95]}},
+  {"id":"cattle-moo","name_ar":"خوار بقرة","name_en":"Cattle moo / low call","src":"de la Torre et al. 2015; Briefer 2012","range":{"unitDurMs":[800,3500],"f0MedHz":[70,450],"harmonicity":[0.35,1]}},
+  {"id":"small-ruminant-bleat","name_ar":"ثغاء غنم/ماعز (اهتزاز سريع)","name_en":"Sheep / goat bleat","src":"Briefer & McElligott 2011","range":{"unitDurMs":[250,1300],"gapMs":[150,900],"f0MedHz":[280,950],"harmonicity":[0.3,0.95]}},
+  {"id":"chicken-cluck","name_ar":"قرقرة دجاجة (وحدات قصيرة جدًا)","name_en":"Hen cluck series","src":"Collias 1987","range":{"unitDurMs":[40,220],"gapMs":[60,400],"f0MedHz":[250,900],"harmonicity":[0.05,0.6]}}
+ ]
+}
