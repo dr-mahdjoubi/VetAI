@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>أطلس الحيوانات 120 — معرض تفاعلي ثلاثي الأبعاد | VetAI</title>
+<meta name="description" content="معرض تفاعلي فائق الحداثة: 120 حيواناً بمعلومات موثقة وصور حقيقية وفيديوهات، ونماذج ثلاثية الأبعاد قابلة للتدوير والواقع المعزز، مع تصفح مرقّم من 1 إلى 120.">
+<meta name="theme-color" content="#070d18">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VetAI">
+<meta property="og:title" content="أطلس الحيوانات 120 — معرض تفاعلي ثلاثي الأبعاد">
+<meta property="og:description" content="120 حيواناً بمعلومات موثقة وصور حقيقية وفيديوهات ونماذج ثلاثية الأبعاد — تصفح مرقّم من 1 إلى 120.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"أطلس الحيوانات 120","inLanguage":"ar",
+ "description":"معرض تفاعلي: 120 حيواناً بمعلومات موثقة وصور وفيديوهات ونماذج ثلاثية الأبعاد.",
+ "isPartOf":{"@type":"WebSite","name":"VetAI"},
+ "mainEntity":{"@type":"ItemList","numberOfItems":120}}
+</script>
+<link rel="stylesheet" href="css/atlas.css">
+</head>
+<body>
+<a class="skip" href="#gridTop">تخطَّ إلى المعرض ↓</a>
+
+<!-- ===== الشريط العلوي الزجاجي النحيف ===== -->
+<nav class="topbar">
+  <a class="brand" href="#top" aria-label="أطلس الحيوانات 120">
+    <span class="brand-mark">🌍</span>
+    <span class="brand-name">أطلس الحيوانات <b>120</b></span>
+    <span class="brand-sub">VetAI</span>
+  </a>
+  <div class="top-links">
+    <a href="#gridTop">المعرض</a>
+    <a href="#index120">الفهرس 1–120</a>
+    <a href="#diagSection">التشخيص</a>
+  </div>
+  <button class="top-cta" type="button" data-open-animal="43">🧊 جرّب 3D</button>
+</nav>
+
+<div class="wrap" id="top">
+
+  <!-- ===== الهيرو: تسلسل هرمي واضح فوق الطيّة ===== -->
+  <header class="hero">
+    <div class="hero-txt">
+      <span class="eb">✦ معرض تفاعلي · ثلاثي الأبعاد · واقع معزز</span>
+      <h1>عالم الحيوان،<br><span class="grad">في 120 محطة</span></h1>
+      <p class="lead">معلومات موثّقة وصور حقيقية وفيديوهات لكل حيوان — ونماذج ثلاثية الأبعاد تُدار باللمس. تصفّح مرقّم من 1 إلى 120، بلا ازدحام وبأسرع ما يكون.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#gridTop">تصفّح الحيوانات ↓</a>
+        <button class="btn ghost" type="button" data-open-animal="27">🦊 افتح نموذجاً ثلاثي الأبعاد</button>
+        <button class="btn ghost" type="button" id="randomBtn">🎲 حيوان عشوائي</button>
+      </div>
+      <div class="stats">
+        <span class="stat">🦁 <b>120</b> حيواناً</span>
+        <span class="stat">🧊 <b id="statModels">15</b> بنماذج 3D</span>
+        <span class="stat">🗂️ <b>6</b> مجموعات</span>
+        <span class="stat">📄 <b>10</b> صفحات</span>
+      </div>
+    </div>
+
+    <!-- بطاقة الحيوان المميز (تتبدل يومياً من الحيوانات ذات النماذج) -->
+    <article class="hero-feat" id="heroFeat" tabindex="0" role="button" aria-label="الحيوان المميز اليوم">
+      <div class="hf-ph">
+        <img id="hfImg" alt="" loading="eager">
+        <span class="hf-badge">⭐ مميز اليوم · 3D</span>
+        <span class="hf-num" id="hfNum"></span>
+      </div>
+      <div class="hf-body">
+        <h3 id="hfName"></h3>
+        <div class="hf-sci" id="hfSci"></div>
+        <p id="hfFact"></p>
+        <span class="hf-open">افتح الصفحة والنموذج ثلاثي الأبعاد ←</span>
+      </div>
+    </article>
+  </header>
+
+  <!-- ===== شريط أدوات نحيف لاصق ===== -->
+  <div class="controls" id="gridTop">
+    <div class="searchrow">
+      <input type="search" id="search" placeholder="🔎 ابحث… (فنك، Panda، Vulpes)" aria-label="بحث في الحيوانات">
+      <select id="sortSel" aria-label="ترتيب النتائج">
+        <option value="id">↕ بالرقم 1–120</option>
+        <option value="name">↕ بالاسم أ–ي</option>
+        <option value="models">🧊 النماذج 3D أولاً</option>
+      </select>
+      <div class="jump mini">
+        <label for="jumpAnimal">حيوان رقم:</label>
+        <input type="number" id="jumpAnimal" min="1" max="120" placeholder="1–120">
+        <button class="chip" id="jumpAnimalBtn" type="button">فتح</button>
+      </div>
+    </div>
+    <div class="chips" id="chips" role="tablist" aria-label="تصنيف المجموعات"></div>
+  </div>
+
+  <main>
+    <div class="grid" id="grid"></div>
+
+    <nav class="pager" id="pager" aria-label="ترقيم الصفحات"></nav>
+    <div class="pageinfo" id="pageInfo"></div>
+    <div class="jump">
+      <label for="jumpPage">انتقل مباشرة إلى:</label>
+      <select id="jumpPage" aria-label="اختيار الصفحة"></select>
+    </div>
+
+    <div class="indexbox" id="index120">
+      <div class="indexbox-h">🗂️ فهرس الحيوانات 1–120 <span>— اضغط أي رقم لفتح صفحته (المؤطّرة سماوياً لها نموذج 3D)</span></div>
+      <div class="numstrip" id="numStrip"></div>
+    </div>
+
+    <details class="diag" id="diagSection">
+      <summary>🩺 تشخيص العرض ثلاثي الأبعاد</summary>
+      <div style="margin-top:10px">
+        <button class="chip" id="diagBtn" type="button">تشغيل الفحص الآن</button>
+        <div id="diagBox" style="margin-top:8px"></div>
+        <p class="diag-note">يفحص: دعم WebGL في جهازك، تسجيل مكتبة العرض، حالة كل نموذج، والمصادر التي نجحت أو فشلت. إن فشل أي نموذج يبدّل المحمّل مصدره تلقائياً إلى مرآة بديلة، ثم إلى صورة — لا يبقى أي مربّع فارغ.</p>
+      </div>
+    </details>
+  </main>
+
+  <footer>
+    أطلس الحيوانات 120 — جزء من منصة VetAI التعليمية البيطرية.<br>
+    النماذج ثلاثية الأبعاد: نماذج مفتوحة المصدر (three.js وKhronos glTF Samples وQuaternius CC0) — تُحمَّل حيّة من مصادرها الرسمية.
+    الصور: صور حقيقية تُجلب عند الطلب من أرشيفات مفتوحة (Flickr عبر LoremFlickr) مع بدائل تلقائية عند أي فشل اتصال.
+  </footer>
+</div>
+
+<button id="topBtn" type="button" aria-label="العودة إلى الأعلى">↑</button>
+
+<!-- نافذة صفحة الحيوان -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script src="js/animals-data.js"></script>
+<script src="js/model-loader.js"></script>
+<script src="js/atlas.js"></script>
+</body>
+</html>
