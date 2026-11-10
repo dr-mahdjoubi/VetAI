@@ -107,7 +107,7 @@
     var m = src.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
     if (m) return 'https://cdn.jsdelivr.net/gh/' + m[1] + '/' + m[2] + '@' + m[3] + '/' + m[4];
     if (src.indexOf('https://threejs.org/examples/models/') === 0) {
-      return 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/models/' + src.split('/examples/models/')[1];
+      return 'https://cdn.jsdelivr.net/gh/mrdoob/three.js@r160/examples/models/' + src.split('/examples/models/')[1];
     }
     return null;
   }
