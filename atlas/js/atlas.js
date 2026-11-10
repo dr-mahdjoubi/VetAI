@@ -331,7 +331,9 @@
     if (a.modelKey && MODELS[a.modelKey]) {
       var mv = document.createElement('model-viewer');
       mv.setAttribute('src', MODELS[a.modelKey]);
-      mv.setAttribute('poster', imgURL(a, 800, 600));
+      /* لا نضع poster على العارض نفسه: صورة بطيئة قد تعلّق إظهار النموذج حتى بعد
+         اكتمال تحميله (صندوق فارغ). نعرض صورتنا فوقه ونخفيها عند جاهزية النموذج. */
+      mv.setAttribute('loading', 'eager');
       mv.setAttribute('camera-controls', '');
       mv.setAttribute('auto-rotate', '');
       mv.setAttribute('autoplay', '');
@@ -343,15 +345,24 @@
       var bar = document.createElement('div');
       bar.className = 'loadbar'; bar.innerHTML = '<i></i>';
       pane.appendChild(bar);
+      var wrap3d = document.createElement('div');
+      wrap3d.style.cssText = 'position:relative;border-radius:15px;overflow:hidden';
+      var pov = document.createElement('img');
+      pov.className = 'a3d-poster';
+      pov.alt = '';
+      applyImg(pov, a, 800, 600);
       mv.addEventListener('progress', function (e) {
         var d = e.detail && e.detail.totalProgress;
         if (typeof d === 'number') bar.firstChild.style.width = Math.round(d * 100) + '%';
       });
       mv.addEventListener('load', function () {
         bar.firstChild.style.width = '100%';
+        pov.style.display = 'none';
         setTimeout(function () { if (bar.parentElement) bar.remove(); }, 500);
       });
-      pane.appendChild(mv);
+      wrap3d.appendChild(mv);
+      wrap3d.appendChild(pov);
+      pane.appendChild(wrap3d);
       var hint = document.createElement('p');
       hint.style.cssText = 'font-size:11.5px;color:var(--mut);margin:8px 0 0;text-align:center';
       hint.textContent = 'اسحب للتدوير · قرّب للتكبير · على الجوال جرّب زر الواقع المعزز AR';
