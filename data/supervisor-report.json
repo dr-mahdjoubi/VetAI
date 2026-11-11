@@ -1,17 +1,17 @@
 {
- "at": "2026-11-10T13:27:08.592Z",
+ "at": "2026-11-11T12:42:26.529Z",
  "base": "https://drvet.onrender.com",
  "probes": [
   {
    "provider": "pollinations/openai-fast",
    "ok": true,
-   "ms": 495,
+   "ms": 503,
    "note": "answer received"
   },
   {
    "provider": "pollinations/openai",
    "ok": true,
-   "ms": 265,
+   "ms": 288,
    "note": "answer received"
   },
   {
@@ -20,7 +20,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 1649
+   "ms": 2621
   },
   {
    "provider": "worker",
@@ -28,7 +28,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 1748
+   "ms": 691
   },
   {
    "provider": "worker",
@@ -36,7 +36,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 10567
+   "ms": 777
   }
  ],
  "integrity": {
