@@ -1,6 +1,25 @@
 {
   "runs": [
     {
+      "at": "2026-11-11T06:51:02Z",
+      "added": [],
+      "sources": {
+        "WHO IRIS": {
+          "found": 14,
+          "added": 0
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-11-10T16:29:44Z",
       "added": [],
       "sources": {
@@ -580,33 +599,8 @@
           "added": 0
         }
       }
-    },
-    {
-      "at": "2026-10-31T09:02:23Z",
-      "added": [
-        {
-          "title": "Evaluation of certain food additives and contaminants: one hundred and second report of the Joint FAO/WHO Expert Committee on Food Additives (WHO)",
-          "url": "https://iris.who.int/items/76ae0254-0b77-4335-873f-a88eaabf79a4",
-          "source": "WHO IRIS"
-        }
-      ],
-      "sources": {
-        "WHO IRIS": {
-          "found": 15,
-          "added": 1
-        },
-        "FAO Open Knowledge": {
-          "found": 0,
-          "added": 0,
-          "error": "HTTP 403"
-        },
-        "NCBI Bookshelf": {
-          "found": 13,
-          "added": 0
-        }
-      }
     }
   ],
-  "last_run": "2026-11-10T16:29:44Z",
+  "last_run": "2026-11-11T06:51:02Z",
   "total_books": 1002
 }
