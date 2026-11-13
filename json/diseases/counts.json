@@ -1,0 +1,13 @@
+{
+  "files": {
+    "cats.json": 100,
+    "cattle.json": 100,
+    "dogs.json": 100,
+    "horses.json": 100,
+    "rabbits.json": 100,
+    "small-ruminants.json": 100
+  },
+  "total": 600,
+  "unique_names": 540,
+  "generated_by": "tools/gen-disease-counts.py (counts entries in json/diseases/*.json; re-run after any data change)"
+}
