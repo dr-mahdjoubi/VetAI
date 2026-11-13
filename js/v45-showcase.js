@@ -86,6 +86,57 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   #show45 .card:active{transform:none}
 }`;
 
+  /* بوابة تشغيل الفيلم (WS-4): autoplay مع muted مطلوبان، لكن فكّ التشفير
+     يتوقف عندما يكون الفيلم خارج الشاشة أو التبويب مخفيًا، ويُستأنف فقط
+     إذا كان الإيقاف من البوابة نفسها — إيقاف المستخدم اليدوي يُحترم ولا
+     يُستأنف تلقائيًا. لا يلمس DOM ولا زر التشغيل الزجاجي (wireFilm). */
+  function gateFilm(video) {
+    if (!video) return;
+    video.muted = true; /* ضمان قبول autoplay؛ يُضبط مرة عند التركيب فقط ولا يُعاد فرضه */
+    let gatedPause = true; /* افتراض نية التشغيل التلقائي حتى أول حدث play/pause حقيقي */
+    let suppressPause = false;
+    let inView = true;
+    video.addEventListener('pause', () => {
+      if (suppressPause) { suppressPause = false; gatedPause = true; }
+      else gatedPause = false;
+    });
+    video.addEventListener('play', () => {
+      /* إعادة فحص عند بدء التشغيل: قد يبدأ autoplay بعد فحص الرؤية
+         الأولي (قبل تحميل البيانات)، فيعمل الفيلم خفيًا دون أي حدث
+         تقاطع لاحق. إن كان خارج الشاشة أو التبويب مخفيًا، أوقفه كبوابة. */
+      if (document.hidden || !inView) { pauseGated(); return; }
+      gatedPause = false;
+    });
+    const pauseGated = () => {
+      if (video.paused) return;
+      suppressPause = true;
+      video.pause();
+    };
+    const resumeGated = () => {
+      if (!video.paused || !gatedPause) return;
+      const p = video.play();
+      if (p && p.catch) p.catch(() => {});
+    };
+    const applyState = () => {
+      if (document.hidden || !inView) pauseGated();
+      else resumeGated();
+    };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {
+        inView = !!(entries[0] && entries[0].isIntersecting);
+        applyState();
+      }, { threshold: 0.15 }).observe(video);
+    }
+    /* فحص أولي متزامن: لا تنتظر أول رد للمراقب — إن كان الفيلم خارج
+       الشاشة لحظة التركيب، اعتبره خارج الرؤية فورًا. */
+    try {
+      const r = video.getBoundingClientRect();
+      if (r.bottom <= 0 || r.top >= window.innerHeight || r.right <= 0 || r.left >= window.innerWidth) inView = false;
+    } catch (e) { /* احتفظ بالافتراض */ }
+    applyState();
+    document.addEventListener('visibilitychange', applyState);
+  }
+
   function mount() {
     const home = document.getElementById('view-home');
     if (!home || document.getElementById('show45')) return;
@@ -96,13 +147,14 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       '<style>' + CSS + '</style>' +
       '<h2>✨ جديد المنصة — v45: ذكاء بيطري من الطراز العالمي</h2>' +
       '<p class="sub">أربعة محركات جديدة تعمل الآن على المنصة، مبنية بأدلة قابلة للتدقيق وحدود علمية صريحة:</p>' +
-      '<div class="film"><video controls preload="none" playsinline poster="assets/promo/poster.jpg"><source src="assets/promo/vetai-film.mp4" type="video/mp4"></video>' +
+      '<div class="film"><video controls autoplay muted loop playsinline preload="auto" poster="assets/promo/poster.jpg"><source src="assets/promo/vetai-film-480p.webm" type="video/webm" media="(max-width: 480px)"><source src="assets/promo/vetai-film.webm" type="video/webm"><source src="assets/promo/vetai-film.mp4" type="video/mp4"></video>' +
       '<p class="filmcap">🎬 فيلم المنصة الرسمي — جولة كاملة في فيتاي غلوبال بصوتٍ يشرح كل شيء، مع مؤسسها د. محجوبي عبدالناصر</p></div>' +
       '<div class="grid">' + CARDS.map((c, i) =>
         '<button type="button" class="card" data-show45="' + i + '"><span class="ic" aria-hidden="true">' + c.icon +
         '</span><b>' + c.title + '</b><span class="desc">' + c.desc + '</span></button>').join('') + '</div>' +
       '<div class="stats">' + STATS.map(s => '<span class="stat"><b>' + s[0] + '</b> ' + s[1] + '</span>').join('') + '</div>';
     home.insertBefore(sec, home.firstChild);
+    gateFilm(sec.querySelector('.film video'));
     sec.addEventListener('click', e => {
       const btn = e.target.closest('[data-show45]');
       if (btn) go(CARDS[Number(btn.getAttribute('data-show45'))].view);

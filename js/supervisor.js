@@ -113,8 +113,20 @@
     }).then(function (r) { return r.json(); })
       .then(function (d) { if (!d.answer) throw errWith('no_answer', 'worker no answer'); return String(d.answer); });
   }
+  // WS-3: مزوّد واجهة RAG الخلفية عبر js/vetai-ai-client.js. يرفض عند فشل
+  // الواجهة (لا رجوع محليًا هنا) لتعمل قواطع الدوائر وسلسلة المزوّدين كما هي.
+  function ragCall(q, history, context) {
+    if (!window.VetAIClient || typeof window.VetAIClient.ask !== 'function')
+      throw errWith('no_client', 'VetAIClient not loaded');
+    return window.VetAIClient.ask(q, { history: history, context: context }).then(function (r) {
+      var t = r && r.text ? String(r.text).trim() : '';
+      if (!t) throw errWith('no_answer', 'rag api empty');
+      return t;
+    });
+  }
 
   var providers = [
+    new Provider('rag-api', 20000, ragCall),
     new Provider('pol-fast', 30000, polCall('openai-fast')),
     new Provider('pol-full', 45000, polCall('openai')),
     new Provider('worker', 12000, workerCall)

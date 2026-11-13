@@ -59,11 +59,23 @@ var VETAI_WORKER_URL = 'https://vetai-chat.vcom.workers.dev';
     });
   }
 
+  // WS-3: جرّب واجهة RAG الخلفية أولًا عبر js/vetai-ai-client.js؛ عند أي فشل
+  // يعود المسار القديم كاملًا دون تغيير (سباق مجاني ثم العامل الاحتياطي).
   window.VetAI_ask = function (question, history, context) {
     history = history || []; context = context || '';
-    return raceFree(question, history, context)
-      .catch(function () { return delay(1500).then(function () { return raceFree(question, history, context); }); })
-      .catch(function () { return withTimeout(viaWorker(question, history, context), 12000); });
+    function legacy() {
+      return raceFree(question, history, context)
+        .catch(function () { return delay(1500).then(function () { return raceFree(question, history, context); }); })
+        .catch(function () { return withTimeout(viaWorker(question, history, context), 12000); });
+    }
+    if (window.VetAIClient && typeof window.VetAIClient.ask === 'function') {
+      return window.VetAIClient.ask(question, { history: history, context: context }).then(function (r) {
+        var t = r && r.text ? String(r.text).trim() : '';
+        if (!t) throw new Error('no answer');
+        return t;
+      }).catch(legacy);
+    }
+    return legacy();
   };
 })();
 

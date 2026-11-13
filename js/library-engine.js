@@ -31,7 +31,7 @@
     var manifestUrl = opts.manifestUrl || 'data/library/manifest.json';
     var base = manifestUrl.replace(/manifest\.json.*$/, '');
     var state = { manifest: null, cat: 'all', lang: '', q: '', shown: 0,
-                  pool: [], poolComplete: false, nextFile: 0, searchIdx: null, mode: 'browse' };
+                  pool: [], poolComplete: false, nextFile: 0, searchIdx: null, apiPool: null, mode: 'browse' };
     var memCache = {};
 
     root.innerHTML =
@@ -114,9 +114,20 @@
     function reset() {
       state.shown = PAGE; state.pool = []; state.poolComplete = false; state.nextFile = 0;
       if (state.mode === 'search') {
+        if (state.apiPool) {
+          // نتائج الواجهة (انظر enterSearch): نرشّح بالتصنيف/اللغة فقط؛
+          // مطابقة الاستعلام نفسها من عمل الواجهة. التصنيف 'all' يعني أن
+          // الواجهة لم تُرجع تصنيفًا، فيُبقى العنصر ظاهرًا.
+          state.pool = state.apiPool.filter(function (it) {
+            return (state.cat === 'all' || it.cat === state.cat || it.cat === 'all') && matchLang(it);
+          });
+          state.poolComplete = true; draw();
+          return;
+        }
+        if (!state.searchIdx) { draw(); return; } // جلب الفهرس المحلي ما زال جاريًا
         var q = norm(state.q);
         state.pool = state.searchIdx.filter(function (e) {
-          return norm(e.t).indexOf(q) !== -1 &&
+          return (e._n || norm(e.t)).indexOf(q) !== -1 &&
                  (state.cat === 'all' || e.c === state.cat) && matchLang({ lang: e.l });
         }).map(function (e) { return { title: e.t, url: e.u, cat: e.c, lang: e.l, catName: catName(e.c) }; });
         state.poolComplete = true; draw();
@@ -124,8 +135,36 @@
     }
 
     function enterSearch() {
+      // API-first (WS-3): جرّب بحث RAG أولًا؛ أي فشل أو نتيجة فارغة أو غياب
+      // العميل يعود إلى التدفق المحلي (useLocalSearch) دون تغيير.
+      if (window.VetAIClient && typeof window.VetAIClient.search === 'function') {
+        var qAtCall = state.q;
+        window.VetAIClient.search(state.q, { limit: 60 }).then(function (res) {
+          if (state.q !== qAtCall) return; // قديم: استعلام أحدث أعاد الدخول
+          var hits = res && res.results;
+          if (hits && hits.length) {
+            var items = hits.map(function (h) {
+              var c = h.category || 'all';
+              return { title: h.title, url: h.url, cat: c, lang: h.lang || '', catName: catName(c) };
+            });
+            if (state.cat !== 'all') {
+              var kept = items.filter(function (it) { return it.cat === state.cat || it.cat === 'all'; });
+              if (kept.length) items = kept;
+            }
+            state.apiPool = items; state.mode = 'search'; reset();
+            return;
+          }
+          useLocalSearch();
+        }).catch(useLocalSearch);
+        return;
+      }
+      useLocalSearch();
+    }
+    function useLocalSearch() {
+      state.apiPool = null;
       if (state.searchIdx) { state.mode = 'search'; reset(); return; }
       fetchJSON(base + 'search.json', 'search', state.manifest.version).then(function (idx) {
+        if (Array.isArray(idx)) idx.forEach(function (e) { e._n = norm(e.t); });
         state.searchIdx = idx; state.mode = 'search'; reset();
       });
     }
@@ -136,7 +175,7 @@
       deb = setTimeout(function () {
         state.q = qEl.value;
         if (state.q.trim()) enterSearch();
-        else { state.mode = 'browse'; reset(); }
+        else { state.mode = 'browse'; state.apiPool = null; reset(); }
       }, DEBOUNCE);
     });
     langEl.addEventListener('change', function () { state.lang = langEl.value; reset(); });

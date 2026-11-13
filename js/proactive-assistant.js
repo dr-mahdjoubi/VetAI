@@ -230,10 +230,23 @@
   }
   function searchArticles(q) {
     // الفهرس المسبق أولًا (بحث مقلوب سريع)، والمانيفست هو الاحتياطي عند الفشل أو غياب النتائج
-    return searchViaIndex(q).then(function (hits) {
-      if (hits && hits.length) return hits;
-      return searchArticlesManifest(q);
-    }).catch(function () { return searchArticlesManifest(q); });
+    function local() {
+      return searchViaIndex(q).then(function (hits) {
+        if (hits && hits.length) return hits;
+        return searchArticlesManifest(q);
+      }).catch(function () { return searchArticlesManifest(q); });
+    }
+    // API-first (WS-3): جرّب بحث RAG أولًا؛ أي فشل أو غياب نتائج مقالات
+    // يعود إلى المسار المحلي أعلاه دون تغيير.
+    if (window.VetAIClient && typeof window.VetAIClient.search === 'function') {
+      return window.VetAIClient.search(q, { limit: 5 }).then(function (res) {
+        var hits = (res && res.results) || [];
+        var arts = hits.filter(function (h) { return h.url && h.url.indexOf('articles/') !== -1; });
+        if (arts.length) return arts.map(function (h) { return { title: h.title, href: h.url }; });
+        return local();
+      }).catch(local);
+    }
+    return local();
   }
   function searchArticlesManifest(q) {
     return loadManifest().then(function (m) {

@@ -29,11 +29,12 @@
     $$('.brd-card h3').forEach(function (h) { idx.push({ t: h.textContent.trim(), k: 'فصيلة', tab: 'pets', bq: h.textContent.trim() }); });
     $$('#wonders article h3').forEach(function (h) { idx.push({ t: h.textContent.trim(), k: 'قصة حيوان', tab: 'library', scroll: h.closest('article') }); });
     $$('.card.game h3, .card.game .t').forEach(function (h) { var tx = h.textContent.trim(); if (tx) idx.push({ t: tx, k: 'لعبة تعليمية', tab: 'home', scroll: h.closest('.card') || h }); });
+    idx.forEach(function (x) { x._n = norm(x.t); x._k = norm(x.k); });
     return idx;
   }
   function loadBooks(idx) {
     fetch('json/resources.json').then(function (r) { return r.json(); }).then(function (d) {
-      (d.books || []).forEach(function (b) { idx.push({ t: b.title.replace(/\s*\((WHO|FAO|NCBI)[^)]*\)\s*$/, ''), k: 'كتاب مجاني', tab: 'library' }); });
+      (d.books || []).forEach(function (b) { var it = { t: b.title.replace(/\s*\((WHO|FAO|NCBI)[^)]*\)\s*$/, ''), k: 'كتاب مجاني', tab: 'library' }; it._n = norm(it.t); it._k = norm(it.k); idx.push(it); });
     }).catch(function () {});
   }
   var ov, inp, list, sel = 0, cur = [];
@@ -57,8 +58,8 @@
   function renderQS(q) {
     var nq = norm(q); sel = 0;
     if (!nq) { list.innerHTML = '<div class="va-qs-hint">ابدأ الكتابة... جرّب: سعار، التهاب ضرع، سلوقي، أسنان، لعبة</div>'; cur = []; return; }
-    var hits = IDX.filter(function (x) { return norm(x.t).indexOf(nq) > -1 || norm(x.k).indexOf(nq) > -1; });
-    hits.sort(function (a, b) { var sa = norm(a.t).indexOf(nq) === 0 ? 0 : 1, sb = norm(b.t).indexOf(nq) === 0 ? 0 : 1; return sa - sb; });
+    var hits = IDX.filter(function (x) { return (x._n || norm(x.t)).indexOf(nq) > -1 || (x._k || norm(x.k)).indexOf(nq) > -1; });
+    hits.sort(function (a, b) { var sa = (a._n || norm(a.t)).indexOf(nq) === 0 ? 0 : 1, sb = (b._n || norm(b.t)).indexOf(nq) === 0 ? 0 : 1; return sa - sb; });
     cur = hits.slice(0, 9);
     list.innerHTML = cur.length ? '' : '<div class="va-qs-hint">لا نتائج لـ«' + q.replace(/</g, '') + '» — جرّب كلمة أقصر</div>';
     cur.forEach(function (x, i) {
