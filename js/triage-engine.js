@@ -236,8 +236,9 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const sec = document.createElement('section');
     sec.id = 'triage45';
     sec.innerHTML =
-      '<h3>🩺 محرك التوجيه التشخيصي الذكي (v45)</h3>' +
-      '<p>اختر نوع الحيوان والأعراض؛ يرتّب المحرك الاحتمالات من أطلس الأمراض (600) ومسارات التشخيص التفريقي (26) مع إظهار أسباب كل ترتيب. <b>أداة فرز وتثقيف — ليست تشخيصًا نهائيًا.</b></p>' +
+      '<p style="margin:0"><span class="eb">المرحلة 2 — التحليل المفصّل</span></p>' +
+      '<h3>🩺 التحليل التفريقي المفصّل (أطلس الأمراض)</h3>' +
+      '<p>المرحلة الثانية المفصّلة من الأداة نفسها: بعد التقييم الأولي أعلاه، اختر نوع الحيوان والأعراض؛ يرتّب المحرك الاحتمالات من أطلس الأمراض (600) ومسارات التشخيص التفريقي (26) مع إظهار أسباب كل ترتيب. <b>أداة فرز وتثقيف — ليست تشخيصًا نهائيًا.</b></p>' +
       '<label>نوع الحيوان <select id="tgSp">' + SPECIES.map(s => '<option value="' + s[0] + '">' + s[1] + '</option>').join('') + '</select></label> ' +
       '<label>الفئة العمرية <select id="tgAge"><option value="">غير محددة</option><option value="young">صغير/جرو</option><option value="adult">بالغ</option><option value="senior">مُسنّ</option></select></label>' +
       '<fieldset><legend>الأعراض</legend>' + CONCEPTS.map(c => '<label style="display:inline-block;margin:2px 6px"><input type="checkbox" class="tgSym" value="' + c.id + '"> ' + esc(c.ar) + '</label>').join('') + '</fieldset>' +
@@ -245,7 +246,15 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       '<label>وصف حرّ اختياري <input id="tgText" type="text" style="width:100%" placeholder="مثال: جرو غير محصّن مع قيء وإسهال مدمى"></label>' +
       '<button id="tgGo" type="button">تحليل الأعراض</button>' +
       '<div id="tgOut" aria-live="polite"></div>';
-    view.insertBefore(sec, view.firstChild);
+    /* Stage 2 of the unified evaluator (audit item 8): mount after the
+       Stage 1 form grid — i.e. just before the tools wrapper (.my) — so
+       the two stages read in order. Falls back to appending if the
+       wrapper is ever absent; mounting target and guard unchanged. */
+    var anchor = null;
+    for (var i = 0; i < view.children.length; i++) {
+      if (view.children[i].classList && view.children[i].classList.contains('my')) { anchor = view.children[i]; break; }
+    }
+    if (anchor) view.insertBefore(sec, anchor); else view.appendChild(sec);
     sec.querySelector('#tgGo').addEventListener('click', () => {
       const out = sec.querySelector('#tgOut');
       out.innerHTML = 'جارٍ التحليل…';

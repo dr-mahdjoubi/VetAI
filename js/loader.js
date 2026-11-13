@@ -6,12 +6,15 @@
     d.textContent = t == null ? '' : t;
     return d.innerHTML;
   }
+  /* Batch G (item 21): is_sample items are demo data and are never rendered,
+     even if their status is ever flipped to approved. Deletion needs the owner's
+     decision (STOP list) — the item stays in the data file, labelled. */
   function load(file) {
     return fetch('json/' + file + '?v=' + Date.now())
       .then(function (r) { return r.json(); })
       .then(function (d) {
         return (d.items || []).filter(function (i) {
-          return i.status === 'approved' && i.title_ar && i.summary_ar;
+          return i.status === 'approved' && !i.is_sample && i.title_ar && i.summary_ar;
         });
       })
       .catch(function () { return []; });
@@ -36,7 +39,7 @@
       var t = document.getElementById('tkt');
       if (!t || !items.length) return;
       var html = items.slice(0, 8).map(function (i) {
-        return '<a class="mx-6" target="_blank" rel="noopener" href="' + esc(i.source_url) + '">• ' + esc(i.title_ar) + '</a>';
+        return '<a class="mx-6" target="_blank" rel="noopener" href="' + esc(i.source_url) + '">• ' + esc(i.title_ar) + (i.published ? ' <small>(' + esc(i.published) + ')</small>' : '') + '</a>';
       }).join('');
       t.insertAdjacentHTML('afterbegin', html);
     });

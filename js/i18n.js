@@ -20,7 +20,7 @@
     'الوصول السريع': 'Quick access', 'الأدوية والعلاجات': 'Drugs & treatments', 'الأمراض والتحاليل': 'Diseases & tests', 'الدروس والاختبارات': 'Lessons & quizzes', 'المكتبة والكتب': 'Library & books', 'الموسوعة والعلوم': 'Encyclopedia & sciences', 'دليل الجامعات البيطرية': 'Veterinary universities guide',
     'محتوى حي': 'Live content', 'جديد ومحدَّث': 'New & updated', 'جديد اليوم': 'New today', 'الحيوان:': 'Animal:', 'التخصص:': 'Specialty:', 'الكل': 'All', '🐕🐈 كلاب وقطط': '🐕🐈 Dogs & cats', '🐄🐑 مجترّات': '🐄🐑 Ruminants', '🐔 دواجن': '🐔 Poultry', '🐎 خيول': '🐎 Horses',
     'بحوث': 'Research', 'تنبيهات وبائية': 'Epidemic alerts', 'تحديثات': 'Updates', 'أدوية': 'Drugs', 'نصائح': 'Tips', 'موضوع اليوم': 'Topic of the day', 'نصيحة اليوم': 'Tip of the day', 'اسأل المساعد': 'Ask the assistant', 'اقرأ المزيد': 'Read more', 'اقرأ': 'Read', 'مقالات مختارة': 'Featured articles',
-    'مجتمع': 'Community', 'ألعاب الحيوانات': 'Animal games', 'لماذا تثق بالمنصة؟': 'Why trust the platform?', 'مجانية وبلا إعلانات': 'Free and ad-free', 'النوع الحيواني:': 'Animal type:', 'وصف الأعراض:': 'Symptoms:', 'قيّم الحالة': 'Assess case', 'نتيجة التقييم': 'Assessment result', 'بانتظار الإدخال': 'Waiting for input',
+    'مجتمع': 'Community', 'ألعاب الحيوانات': 'Animal games', 'لماذا تثق بالمنصة؟': 'Why trust the platform?', 'مجانية': 'Free', 'النوع الحيواني:': 'Animal type:', 'وصف الأعراض:': 'Symptoms:', 'قيّم الحالة': 'Assess case', 'نتيجة التقييم': 'Assessment result', 'بانتظار الإدخال': 'Waiting for input',
     'كلب': 'Dog', 'قط': 'Cat', 'بقرة': 'Cow', 'غنم/ماعز': 'Sheep/Goat', 'دجاج': 'Chicken', 'أنشئ الجدول': 'Create schedule', 'احسب': 'Calculate', 'احسب العمر': 'Calculate age', '📅 عمر الحيوان': '📅 Animal age', '💧 احتياج الماء اليومي': '💧 Daily water need', '💉 مولّد جدول التلقيح': '💉 Vaccination schedule',
     'استشارات بيطرية': 'Veterinary consultations', 'اطلب استشارة': 'Request a consultation', 'البحث العلمي': 'Scientific research', 'الأبحاث': 'Research', 'تعليم بيطري': 'Veterinary education', 'ابدأ التعلم': 'Start learning', 'قاعدة المعرفة': 'Knowledge base', 'بحث المعرفة': 'Search knowledge', 'المجتمع': 'Community',
     'المساعد البيطري الذكي': 'Smart veterinary assistant', 'إرسال': 'Send', 'الدكتور محجوبي عبدالناصر': 'Dr. Mahdjoubi Abdenasser', 'د. محجوبي عبدالناصر': 'Dr. Mahdjoubi Abdenasser', 'مؤسس وباحث': 'Founder & researcher', 'التواصل والخدمات': 'Contact & services', '💬 واتساب الخدمة': '💬 WhatsApp service', 'تنس، الشلف، الجزائر': 'Ténès, Chlef, Algeria'
@@ -34,7 +34,7 @@
     'الوصول السريع': 'Accès rapide', 'الأدوية والعلاجات': 'Médicaments et traitements', 'الأمراض والتحاليل': 'Maladies et analyses', 'الدروس والاختبارات': 'Cours et quiz', 'المكتبة والكتب': 'Bibliothèque et livres', 'الموسوعة والعلوم': 'Encyclopédie et sciences', 'دليل الجامعات البيطرية': 'Guide des universités vétérinaires',
     'محتوى حي': 'Contenu vivant', 'جديد ومحدَّث': 'Nouveau et mis à jour', 'جديد اليوم': 'Nouveau aujourd’hui', 'الحيوان:': 'Animal :', 'التخصص:': 'Spécialité :', 'الكل': 'Tout', '🐕🐈 كلاب وقطط': '🐕🐈 Chiens et chats', '🐄🐑 مجترّات': '🐄🐑 Ruminants', '🐔 دواجن': '🐔 Volailles', '🐎 خيول': '🐎 Chevaux',
     'بحوث': 'Recherches', 'تنبيهات وبائية': 'Alertes épidémiques', 'تحديثات': 'Mises à jour', 'أدوية': 'Médicaments', 'نصائح': 'Conseils', 'موضوع اليوم': 'Sujet du jour', 'نصيحة اليوم': 'Conseil du jour', 'اسأل المساعد': 'Demander à l’assistant', 'اقرأ المزيد': 'Lire la suite', 'اقرأ': 'Lire', 'مقالات مختارة': 'Articles choisis',
-    'مجتمع': 'Communauté', 'ألعاب الحيوانات': 'Jeux d’animaux', 'لماذا تثق بالمنصة؟': 'Pourquoi faire confiance à la plateforme ?', 'مجانية وبلا إعلانات': 'Gratuite et sans publicité', 'النوع الحيواني:': 'Espèce :', 'وصف الأعراض:': 'Symptômes :', 'قيّم الحالة': 'Évaluer le cas', 'نتيجة التقييم': 'Résultat de l’évaluation', 'بانتظار الإدخال': 'En attente de saisie',
+    'مجتمع': 'Communauté', 'ألعاب الحيوانات': 'Jeux d’animaux', 'لماذا تثق بالمنصة؟': 'Pourquoi faire confiance à la plateforme ?', 'مجانية': 'Gratuite', 'النوع الحيواني:': 'Espèce :', 'وصف الأعراض:': 'Symptômes :', 'قيّم الحالة': 'Évaluer le cas', 'نتيجة التقييم': 'Résultat de l’évaluation', 'بانتظار الإدخال': 'En attente de saisie',
     'كلب': 'Chien', 'قط': 'Chat', 'بقرة': 'Vache', 'غنم/ماعز': 'Mouton/Chèvre', 'دجاج': 'Poulet', 'أنشئ الجدول': 'Créer le calendrier', 'احسب': 'Calculer', 'احسب العمر': 'Calculer l’âge', '📅 عمر الحيوان': '📅 Âge de l’animal', '💧 احتياج الماء اليومي': '💧 Besoin en eau quotidien', '💉 مولّد جدول التلقيح': '💉 Calendrier de vaccination',
     'استشارات بيطرية': 'Consultations vétérinaires', 'اطلب استشارة': 'Demander une consultation', 'البحث العلمي': 'Recherche scientifique', 'الأبحاث': 'Recherches', 'تعليم بيطري': 'Enseignement vétérinaire', 'ابدأ التعلم': 'Commencer à apprendre', 'قاعدة المعرفة': 'Base de connaissances', 'بحث المعرفة': 'Rechercher', 'المجتمع': 'Communauté',
     'المساعد البيطري الذكي': 'Assistant vétérinaire intelligent', 'إرسال': 'Envoyer', 'الدكتور محجوبي عبدالناصر': 'Dr Mahdjoubi Abdenasser', 'د. محجوبي عبدالناصر': 'Dr Mahdjoubi Abdenasser', 'مؤسس وباحث': 'Fondateur et chercheur', 'التواصل والخدمات': 'Contact et services', '💬 واتساب الخدمة': '💬 WhatsApp service', 'تنس، الشلف، الجزائر': 'Ténès, Chlef, Algérie'
@@ -59,6 +59,33 @@
     'لا توجد نتائج مطابقة — جرّب كلمة أخرى.': 'Aucun résultat — essayez un autre mot.', 'ألعاب حيوانات عصرية': 'Jeux d’animaux modernes', 'عن المنصة': 'À propos de la plateforme', 'الخصوصية والشروط': 'Confidentialité et conditions', 'الأمراض': 'Maladies', 'التحاليل': 'Analyses', 'محرك بحث بيطري': 'Moteur de recherche vétérinaire',
     'جديد في المنصة': 'Nouveau sur la plateforme', 'قسم الصور والفيديوهات والحيوانات ثلاثية الأبعاد': 'Section photos, vidéos et animaux 3D', 'أدر نماذج حيوانات ثلاثية الأبعاد بيدك، وتصفّح معرض صور بشرح بيطري، وفيديوهات مختارة بعناية للمربين والطلاب والأطباء.': 'Faites tourner des modèles 3D d’animaux, parcourez une galerie commentée par un vétérinaire, et regardez des vidéos choisies pour éleveurs, étudiants et vétérinaires.',
     '💊 دليل الأدوية والعلاجات البيطرية في الجزائر': '💊 Formulaire algérien des médicaments et traitements vétérinaires', '🏷️ الاسم التجاري في الجزائر:': '🏷️ Noms commerciaux en Algérie :', '🎯 دواعي الاستخدام:': '🎯 Indications :', '💉 الجرعة وطريقة الاستخدام:': '💉 Posologie et administration :'
+  });
+
+  /* Batch G (item 36): keys for the ACTUALLY-DISPLAYED nav/chrome forms
+     (audit-proven mismatches: dict held emoji-prefixed forms while the live
+     nav renders plain forms, and vice versa for the voice lab). Short nav
+     strings only; EN/FR key sets stay identical. */
+  add('en', {
+    'مرجع': 'Reference', 'تعلّم': 'Learn', 'أدوات': 'Tools', 'ألعاب': 'Games', 'عنّا': 'About',
+    '🎙 المختبر الصوتي (عرض توضيحي)': '🎙 Voice lab (demo)', 'المختبر الصوتي الحيوي': 'Bioacoustics lab',
+    'موسوعة المواضيع': 'Topics encyclopedia', 'الجامعات ↓': 'Universities ↓', 'الخدمات': 'Services',
+    'مدير الموقع الذكي': 'Smart site manager', 'المجتمع وبيطري-AI': 'Community & Vet-AI',
+    'المؤسس والتواصل': 'Founder & contact', 'الفروع': 'Sections',
+    'المعرفة والموسوعة': 'Knowledge & encyclopedia', 'التعلّم والاختبارات': 'Learning & quizzes',
+    'الذكاء والتشخيص': 'AI & diagnostics', 'المساعد البيطري': 'Veterinary assistant',
+    'أصحاب الكلاب والقطط': 'Dog & cat owners', 'ألعاب ووسائط': 'Games & media',
+    'الصوت: مفعل': 'Sound: on', 'الصوت: صامت': 'Sound: muted', 'المشاهدات:': 'Views:'
+  });
+  add('fr', {
+    'مرجع': 'Référence', 'تعلّم': 'Apprendre', 'أدوات': 'Outils', 'ألعاب': 'Jeux', 'عنّا': 'À propos',
+    '🎙 المختبر الصوتي (عرض توضيحي)': '🎙 Laboratoire vocal (démo)', 'المختبر الصوتي الحيوي': 'Laboratoire de bioacoustique',
+    'موسوعة المواضيع': 'Encyclopédie des sujets', 'الجامعات ↓': 'Universités ↓', 'الخدمات': 'Services',
+    'مدير الموقع الذكي': 'Gestionnaire intelligent du site', 'المجتمع وبيطري-AI': 'Communauté et Vet-AI',
+    'المؤسس والتواصل': 'Fondateur et contact', 'الفروع': 'Rubriques',
+    'المعرفة والموسوعة': 'Connaissances et encyclopédie', 'التعلّم والاختبارات': 'Apprentissage et quiz',
+    'الذكاء والتشخيص': 'IA et diagnostic', 'المساعد البيطري': 'Assistant vétérinaire',
+    'أصحاب الكلاب والقطط': 'Propriétaires de chiens et de chats', 'ألعاب ووسائط': 'Jeux et médias',
+    'الصوت: مفعل': 'Son : activé', 'الصوت: صامت': 'Son : coupé', 'المشاهدات:': 'Vues :'
   });
 
   /* ---------- storage ---------- */

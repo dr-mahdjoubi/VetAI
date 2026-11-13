@@ -13,7 +13,31 @@
   if (/[?&]v7photos=off/.test(location.search)) return;
 
   var U = function (id) {
-    return 'https://images.unsplash.com/photo-' + id + '?auto=format&fit=crop&w=800&q=70';
+    return 'assets/unsplash/' + id + '.webp';
+  };
+
+  /* أبعاد WebP المحلية الحقيقية (مقاسة بعد التحويل) — تُستخدم لسمتَي width/height */
+  var DIMS = {
+    '1434030216411-0b793f4b4173': [800, 534],
+    '1444464666168-49d633b86797': [800, 534],
+    '1456513080510-7bf3a84b82f8': [800, 602],
+    '1471864190281-a93a3070b6de': [800, 534],
+    '1505751172876-fa1923c5c528': [800, 534],
+    '1507842217343-583bb7270b66': [800, 470],
+    '1516467508483-a7212febe31a': [800, 532],
+    '1531746790731-6c087fecd65a': [800, 576],
+    '1532187863486-abf9dbad1b69': [800, 534],
+    '1535591273668-578e31182c4f': [800, 534],
+    '1541339907198-e08756dedf3f': [800, 534],
+    '1548199973-03cce0bbc87b': [1280, 854],
+    '1552053831-71594a27632d': [900, 1444],
+    '1552728089-57bdde30beb3': [900, 1230],
+    '1553284965-83fd3e82fa5a': [900, 600],
+    '1562774053-701939374585': [800, 524],
+    '1576201836106-db1758fd1c97': [900, 600],
+    '1579154204601-01588f351e67': [800, 534],
+    '1584308666744-24d5c474f2ae': [800, 560],
+    '1585110396000-c9ffd4e4b308': [900, 1350]
   };
 
   /* --- خريطة الصور: هدف البطاقة ← صورة موثقة --- */
@@ -62,8 +86,17 @@
     img.alt = pair[1] || '';
     img.loading = 'lazy';
     img.decoding = 'async';
+    img.title = 'الصورة: Unsplash';
+    var dm = /\/([^\/]+)\.webp$/.exec(pair[0]);
+    if (dm && DIMS[dm[1]]) { img.width = DIMS[dm[1]][0]; img.height = DIMS[dm[1]][1]; }
     img.onerror = function () { wrap.remove(); el.classList.remove('v7-has-photo'); };
     wrap.appendChild(img);
+    wrap.title = 'الصورة: Unsplash';
+    var cr = document.createElement('span');
+    cr.textContent = 'الصورة: Unsplash';
+    cr.setAttribute('aria-hidden', 'true');
+    cr.style.cssText = 'position:absolute;bottom:4px;inset-inline-end:8px;z-index:2;font-size:10px;line-height:1;color:#e2e8f0;text-shadow:0 1px 3px rgba(2,6,23,.8);pointer-events:none';
+    wrap.appendChild(cr);
     el.insertBefore(wrap, el.firstChild);
     if (cls) el.classList.add(cls);
     return true;

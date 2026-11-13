@@ -251,7 +251,7 @@
       sb.type = 'button';
       var audio = null;
       sb.addEventListener('click', function () {
-        try { if (audio) audio.pause(); audio = new Audio(SOUND[key]); audio.play(); } catch (e) {}
+        try { if (window.__vetaiSoundOn && !window.__vetaiSoundOn()) return; if (audio) audio.pause(); audio = new Audio(SOUND[key]); audio.play(); } catch (e) {}
       });
       row.appendChild(sb);
     }
