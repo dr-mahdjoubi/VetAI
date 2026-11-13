@@ -107,3 +107,25 @@ html body .sh2 .g{background:linear-gradient(90deg,#67e8f9,#22d3ee);-webkit-back
   html body .bento>.qa .go{top:120px!important}
   html body #view-home .vg-cine-stage{max-width:210px!important}
 }
+
+/* ---------- 5) مشغل فيلم المنصة: مدمج واحترافي (تعديل 2026-11-12) ----------
+   كان المشغل بعرض القسم كاملًا (~1120px) فيسيطر على الصفحة. الآن:
+   إطار مدمج 620px كحد أقصى، نسبة 16/9 مطابقة لأبعاد الفيلم الحقيقية
+   (1280×720)، زوايا 18px، ظلال متعددة الطبقات، توهج سينمائي خلفي،
+   وتسمية توضيحية أصغر وأهدأ. نص التسمية نفسه لم يتغير. */
+html body #show45{overflow-x:clip}
+html body #show45 .film{max-width:620px!important;margin:0 auto 18px!important;position:relative}
+html body #show45 .film::before{content:"";position:absolute;inset:-18px -24px;background:radial-gradient(60% 80% at 50% 40%,rgba(34,211,238,.16),transparent 70%);filter:blur(6px);z-index:-1;pointer-events:none}
+html body #show45 .film video{width:100%!important;aspect-ratio:16/9;object-fit:cover;border-radius:18px!important;border:1px solid rgba(148,163,184,.35)!important;box-shadow:0 1px 2px rgba(2,6,23,.5),0 18px 40px -18px rgba(2,6,23,.75),0 8px 18px -10px rgba(34,211,238,.25);background:#000}
+html body #show45 .filmcap{text-align:center;color:#94a3b8!important;font-size:.85em!important;line-height:1.7;margin-top:10px!important}
+/* زر التشغيل الزجاجي فوق الملصق (يُحقن عبر vetai-v7-photos.js) */
+.v7-play{position:absolute;top:0;left:0;right:0;aspect-ratio:16/9;z-index:3;display:grid;place-items:center;background:transparent;border:0;padding:0;cursor:pointer;transition:opacity .35s ease}
+.v7-play .v7-play-badge{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:rgba(8,15,30,.62);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:24px;padding-inline-start:5px;box-shadow:0 10px 26px rgba(2,6,23,.55);transition:transform .2s ease,background .2s ease}
+.v7-play:hover .v7-play-badge,.v7-play:focus-visible .v7-play-badge{transform:scale(1.08);background:rgba(34,211,238,.88);color:#0f172a}
+html body #show45 .film.v7-playing .v7-play{opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.v7-play{transition:none}}
+@media (max-width:640px){
+  html body #show45 .film::before{inset:-12px -8px}
+  html body #show45 .film video{border-radius:14px!important}
+  .v7-play .v7-play-badge{width:54px;height:54px;font-size:20px}
+}
