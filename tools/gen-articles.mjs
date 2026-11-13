@@ -2,7 +2,7 @@
 // المصدر: مصفوفة R الأساسية وملحقاتها داخل index.html + مصفوفة EXTRA في js/extra-articles.js.
 // المخرجات: articles/<slug>.html لكل مقال + articles/index.html + articles/manifest.json + sitemap.xml محدّثة.
 // الروابط (slugs) ثابتة عبر manifest: لا تتغير أبدًا بعد إسنادها لعنوان ما.
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 
 const ROOT = process.cwd();
 const BASE = 'https://drvet.onrender.com';
@@ -171,6 +171,16 @@ const urls = [
   [BASE + '/', '1.0', 'weekly'], [BASE + '/study-pets.html', '0.8', 'monthly'], [BASE + '/study-farm.html', '0.8', 'monthly'], [BASE + '/study-poultry.html', '0.8', 'monthly'],
   [BASE + '/articles/', '0.8', 'weekly'], ...articles.map((r) => [urlOf(r[0]), '0.6', 'monthly'])
 ];
+// Batch F (item 41): keep the section + disease URLs in the sitemap on every
+// regeneration, so a workflow run never drops them again. Disease slugs are
+// owned by tools/gen-disease-pages.py; this scan only lists the flat .html
+// files already on disk (no slug logic duplicated here).
+for (const s of ['atlas', 'ai-suite', 'research', 'showreel']) urls.push([BASE + '/' + s + '/', '0.8', 'monthly']);
+try {
+  for (const d of readdirSync(ROOT + '/diseases', { withFileTypes: true }).filter((e) => e.isFile() && e.name.endsWith('.html')).map((e) => e.name).sort()) {
+    urls.push([BASE + '/diseases/' + d, '0.6', 'monthly']);
+  }
+} catch (e) { /* diseases/ not generated yet — nothing to add */ }
 writeFileSync(ROOT + '/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls.map(([u, p, f]) => '  <url>\n    <loc>' + u + '</loc>\n    <lastmod>' + today + '</lastmod>\n    <changefreq>' + f + '</changefreq>\n    <priority>' + p + '</priority>\n  </url>').join('\n') + '\n</urlset>\n');
 
