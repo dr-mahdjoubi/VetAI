@@ -3,9 +3,14 @@
    تصميم متجاوب يعطي الأولوية للهواتف الضعيفة: بلا مكتبات، بلا خطوط خارجية. */
 
 .pa-fab {
+  /* Batch G (item 39): moved to the inline-start side, stacked above the
+     .un-stack dock, so the fab no longer covers hero text at first paint
+     (it overlapped .vg-eyebrow at 360px and .vg-cine-note at 1440px).
+     Size, palette and behaviour unchanged; only position moved. */
   position: fixed;
-  inset-inline-end: 14px;
-  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  inset-inline-start: 14px;
+  inset-inline-end: auto;
+  bottom: calc(70px + env(safe-area-inset-bottom, 0px));
   height: 44px;
   z-index: 9990;
   display: flex;
@@ -167,6 +172,11 @@
 @media (max-width: 520px) {
   .pa-fab { bottom: calc(16px + env(safe-area-inset-bottom, 0px)); inset-inline-end: 14px; padding: 0 15px; font-size: 14px; }
   .pa-panel { inset-inline-end: 0; bottom: 0; width: 100vw; height: 100dvh; border-radius: 0; }
+}
+@media (max-width: 640px) {
+  /* Batch G (item 39): on narrow screens the hero copy starts higher, so the
+     fab docks one step up (above the raised .un-stack) to stay clear of it. */
+  .pa-fab { bottom: calc(124px + env(safe-area-inset-bottom, 0px)); inset-inline-end: auto; /* keep the single-sided dock: the max-width:520px rule above pins inset-inline-end, which would stretch the fab full-width */ }
 }
 @media (prefers-reduced-motion: reduce) {
   .pa-fab .pa-fab-dot, .pa-typing span { animation: none; }

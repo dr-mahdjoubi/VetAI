@@ -129,3 +129,11 @@ html body #show45 .film.v7-playing .v7-play{opacity:0;pointer-events:none}
   html body #show45 .film video{border-radius:14px!important}
   .v7-play .v7-play-badge{width:54px;height:54px;font-size:20px}
 }
+
+/* ---------- Batch G (item 39): fixed-pill dock ---------- */
+/* #svc was moved by the protected #fab-dock-fix rule onto #fun's exact spot
+   (bottom:70px, left:14px), covering it 100% at 768/1440px. This later-loaded
+   override moves #fun one dock step up to the 124px slot (formerly #up's;
+   #up is hidden by the same protected rule) so both pills stay visible and
+   clickable. The hero is untouched; only the fixed buttons move. */
+html body #fun{bottom:124px}

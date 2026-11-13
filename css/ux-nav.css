@@ -38,6 +38,11 @@
 .un-item:hover { background: rgba(14, 165, 183, .18); }
 .un-item.un-sub { padding-inline-start: 22px; color: #9db8c4; font-weight: 500; }
 .un-empty { color: #9db8c4; font-size: 13px; padding: 8px 10px; }
+@media (max-width: 640px) {
+  /* Batch G (item 39): the sections dock overlapped the hero eyebrow at
+     360px at first paint; one step up keeps it clear. Desktop unchanged. */
+  .un-stack { bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+}
 @media (prefers-reduced-motion: reduce) {
   .un-progress-fill { transition: none; }
 }
