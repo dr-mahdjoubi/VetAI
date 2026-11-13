@@ -1,0 +1,2702 @@
+{
+  "acetaminophen-paracetamol-toxicity-in-cats": {
+    "e": "Acetaminophen (paracetamol) toxicity in cats",
+    "n": "سمّية الباراسيتامول",
+    "source": "cats.json"
+  },
+  "actinobacillosis-wooden-tongue": {
+    "e": "Actinobacillosis (wooden tongue)",
+    "n": "داء الشعيات العصوية (اللسان الخشبي)",
+    "source": "cattle.json"
+  },
+  "actinomycosis-lumpy-jaw": {
+    "e": "Actinomycosis (lumpy jaw)",
+    "n": "داء الشعيات (الفك المتكتل)",
+    "source": "cattle.json"
+  },
+  "acute-kidney-injury-in-cats": {
+    "e": "Acute kidney injury in cats",
+    "n": "إصابة الكلى الحادة",
+    "source": "cats.json"
+  },
+  "aelurostrongylus-abstrusus-infection": {
+    "e": "Aelurostrongylus abstrusus infection",
+    "n": "دودة الرئة القططية",
+    "source": "cats.json"
+  },
+  "aflatoxicosis": {
+    "e": "Aflatoxicosis",
+    "n": "التسمم بالأفلاتوكسين",
+    "source": "cattle.json"
+  },
+  "amyloidosis": {
+    "e": "Amyloidosis",
+    "n": "الداء النشواني",
+    "source": "rabbits.json"
+  },
+  "anaplasmosis": {
+    "e": "Anaplasmosis",
+    "n": "داء الأنابلازما",
+    "source": "cattle.json"
+  },
+  "anaplasmosis-ovine-caprine": {
+    "e": "Anaplasmosis (ovine/caprine)",
+    "n": "الأنابلازما بالمجترات الصغيرة",
+    "source": "small-ruminants.json"
+  },
+  "ancylostoma-infection-in-cats": {
+    "e": "Ancylostoma infection in cats",
+    "n": "عدوى الأنكلوستوما",
+    "source": "cats.json"
+  },
+  "anemia-general-non-parasitic-causes": {
+    "e": "Anemia (general, non-parasitic causes)",
+    "n": "فقر الدم متعدد الأسباب",
+    "source": "small-ruminants.json"
+  },
+  "angiostrongylosis": {
+    "e": "Angiostrongylosis",
+    "n": "داء الأنجيوسترونجيلوس الرئوي",
+    "source": "dogs.json"
+  },
+  "angular-limb-deformity": {
+    "e": "Angular limb deformity",
+    "n": "تشوهات الأطراف الزاوية",
+    "source": "horses.json"
+  },
+  "anhidrosis": {
+    "e": "Anhidrosis",
+    "n": "فقد التعرق (جفاف العرق)",
+    "source": "horses.json"
+  },
+  "anoplocephala-tapeworm-infestation": {
+    "e": "Anoplocephala tapeworm infestation",
+    "n": "الدودة الشريطية الخيلية",
+    "source": "horses.json"
+  },
+  "anthrax": {
+    "e": "Anthrax",
+    "n": "الجمرة الخبيثة",
+    "source": "cattle.json"
+  },
+  "anthrax-2": {
+    "e": "Anthrax",
+    "n": "الجمرة الخبيثة (الأنثراكس)",
+    "source": "small-ruminants.json"
+  },
+  "anticoagulant-rodenticide-poisoning": {
+    "e": "Anticoagulant rodenticide poisoning",
+    "n": "التسمم بمبيدات القوارض مضادة التخثر",
+    "source": "dogs.json"
+  },
+  "aortic-calcification-and-arteriosclerosis": {
+    "e": "Aortic calcification and arteriosclerosis",
+    "n": "تكلس الأورطي وتصلب الشرايين",
+    "source": "rabbits.json"
+  },
+  "arthritis-joint-ill-in-lambs-and-kids": {
+    "e": "Arthritis (joint ill) in lambs and kids",
+    "n": "التهاب المفاصل الإنتاني عند المواليد (مرض المفصل)",
+    "source": "small-ruminants.json"
+  },
+  "aspergillosis": {
+    "e": "Aspergillosis",
+    "n": "داء الرشاشيات",
+    "source": "rabbits.json"
+  },
+  "aspiration-pneumonia": {
+    "e": "Aspiration pneumonia",
+    "n": "الالتهاب الرئوي الشفطي",
+    "source": "dogs.json"
+  },
+  "atrial-fibrillation": {
+    "e": "Atrial fibrillation",
+    "n": "الرجفان الأذيني",
+    "source": "horses.json"
+  },
+  "atypical-interstitial-pneumonia-fog-fever": {
+    "e": "Atypical interstitial pneumonia (fog fever)",
+    "n": "الالتهاب الرئوي الخلالي اللانمطي (حمى الضباب)",
+    "source": "cattle.json"
+  },
+  "atypical-myopathy": {
+    "e": "Atypical myopathy",
+    "n": "الاعتلال العضلي اللانمطي",
+    "source": "horses.json"
+  },
+  "babesiosis": {
+    "e": "Babesiosis",
+    "n": "داء البابيزيا",
+    "source": "cattle.json"
+  },
+  "babesiosis-ovine": {
+    "e": "Babesiosis (ovine)",
+    "n": "البابيزيا (حمى القراد الحمراء)",
+    "source": "small-ruminants.json"
+  },
+  "bacillary-hemoglobinuria": {
+    "e": "Bacillary hemoglobinuria",
+    "n": "البيلة الهيموغلوبينية العصوية",
+    "source": "cattle.json"
+  },
+  "bacterial-cystitis": {
+    "e": "Bacterial cystitis",
+    "n": "التهاب المثانة البكتيري",
+    "source": "dogs.json"
+  },
+  "bacterial-pleuropneumonia": {
+    "e": "Bacterial pleuropneumonia",
+    "n": "التهاب الجنبة والرئة البكتيري",
+    "source": "horses.json"
+  },
+  "bacterial-pyoderma": {
+    "e": "Bacterial pyoderma",
+    "n": "التهاب الجلد القيحي (البيوديرما)",
+    "source": "dogs.json"
+  },
+  "baylisascaris-larva-migrans": {
+    "e": "Baylisascaris larva migrans",
+    "n": "هجرة يرقات بايليساسكاريس",
+    "source": "rabbits.json"
+  },
+  "benign-prostatic-hyperplasia": {
+    "e": "Benign prostatic hyperplasia",
+    "n": "تضخم البروستات الحميد",
+    "source": "dogs.json"
+  },
+  "blackleg": {
+    "e": "Blackleg",
+    "n": "القدم السوداء",
+    "source": "cattle.json"
+  },
+  "bladder-sludge-hypercalciuria": {
+    "e": "Bladder sludge (hypercalciuria)",
+    "n": "الطحل البولي (فرط كالسيوم البول)",
+    "source": "rabbits.json"
+  },
+  "bloat-ruminal-tympany": {
+    "e": "Bloat (ruminal tympany)",
+    "n": "النفاخ (انتفاخ الكرش)",
+    "source": "small-ruminants.json"
+  },
+  "blowfly-strike-myiasis": {
+    "e": "Blowfly strike (myiasis)",
+    "n": "نغف الجروح (ضربة الذبابة)",
+    "source": "small-ruminants.json"
+  },
+  "bluetongue": {
+    "e": "Bluetongue",
+    "n": "اللسان الأزرق",
+    "source": "cattle.json"
+  },
+  "bluetongue-2": {
+    "e": "Bluetongue",
+    "n": "مرض اللسان الأزرق",
+    "source": "small-ruminants.json"
+  },
+  "border-disease": {
+    "e": "Border disease",
+    "n": "مرض الحدود",
+    "source": "small-ruminants.json"
+  },
+  "bordetella-bronchiseptica-infection": {
+    "e": "Bordetella bronchiseptica infection",
+    "n": "عدوى البورديتيلا القصبية",
+    "source": "cats.json"
+  },
+  "bordetella-bronchiseptica-infection-2": {
+    "e": "Bordetella bronchiseptica infection",
+    "n": "عدوى بورديتيلا برونكيسبتيكا",
+    "source": "rabbits.json"
+  },
+  "botulism": {
+    "e": "Botulism",
+    "n": "التسمم الوشيقي",
+    "source": "cattle.json"
+  },
+  "botulism-2": {
+    "e": "Botulism",
+    "n": "التسمم الوشيقي (البوتيوليزم)",
+    "source": "small-ruminants.json"
+  },
+  "bovine-coronavirus-diarrhea": {
+    "e": "Bovine coronavirus diarrhea",
+    "n": "إسهال فيروس كورونا البقري",
+    "source": "cattle.json"
+  },
+  "bovine-ephemeral-fever": {
+    "e": "Bovine ephemeral fever",
+    "n": "الحمى العابرة البقرية",
+    "source": "cattle.json"
+  },
+  "bovine-pyelonephritis": {
+    "e": "Bovine pyelonephritis",
+    "n": "التهاب الحويضة والكلية البقري",
+    "source": "cattle.json"
+  },
+  "bovine-respiratory-syncytial-virus-infection": {
+    "e": "Bovine respiratory syncytial virus infection",
+    "n": "العدوى بالفيروس المخلوي التنفسي البقري",
+    "source": "cattle.json"
+  },
+  "bovine-spongiform-encephalopathy": {
+    "e": "Bovine spongiform encephalopathy",
+    "n": "اعتلال الدماغ الإسفنجي البقري",
+    "source": "cattle.json"
+  },
+  "bovine-trichomoniasis": {
+    "e": "Bovine trichomoniasis",
+    "n": "داء المشعرات البقري",
+    "source": "cattle.json"
+  },
+  "bovine-tuberculosis": {
+    "e": "Bovine tuberculosis",
+    "n": "السل البقري",
+    "source": "cattle.json"
+  },
+  "bovine-viral-diarrhea": {
+    "e": "Bovine viral diarrhea",
+    "n": "الإسهال الفيروسي البقري",
+    "source": "cattle.json"
+  },
+  "brachycephalic-obstructive-airway-syndrome-boas": {
+    "e": "Brachycephalic obstructive airway syndrome (BOAS)",
+    "n": "متلازمة مجرى الهواء عضدي الرأس",
+    "source": "dogs.json"
+  },
+  "bracken-fern-poisoning": {
+    "e": "Bracken fern poisoning",
+    "n": "التسمم بسرخس الأقحوان",
+    "source": "cattle.json"
+  },
+  "bracken-fern-poisoning-2": {
+    "e": "Bracken fern poisoning",
+    "n": "التسمم بسرخس النسور",
+    "source": "small-ruminants.json"
+  },
+  "brucella-ovis-epididymitis": {
+    "e": "Brucella ovis epididymitis",
+    "n": "التهاب بربخ الكباش (بروسيلا أوفيس)",
+    "source": "small-ruminants.json"
+  },
+  "brucellosis": {
+    "e": "Brucellosis",
+    "n": "داء البروسيلات",
+    "source": "cattle.json"
+  },
+  "brucellosis-brucella-melitensis": {
+    "e": "Brucellosis (Brucella melitensis)",
+    "n": "داء البروسيلات (الحمى المالطية)",
+    "source": "small-ruminants.json"
+  },
+  "c-perfringens-type-c-enteritis-struck-hemorrhagic-enteritis": {
+    "e": "C. perfringens type C enteritis (struck/hemorrhagic enteritis)",
+    "n": "التهاب الأمعاء بالكلوستريديوم نمط C",
+    "source": "small-ruminants.json"
+  },
+  "calf-diphtheria-necrotic-laryngitis": {
+    "e": "Calf diphtheria (necrotic laryngitis)",
+    "n": "خناق العجول (التهاب الحنجرة التنخري)",
+    "source": "cattle.json"
+  },
+  "campylobacter-abortion-vibriosis": {
+    "e": "Campylobacter abortion (vibriosis)",
+    "n": "إجهاض الكامبيلوباكتر",
+    "source": "small-ruminants.json"
+  },
+  "campylobacter-fetus-infection": {
+    "e": "Campylobacter fetus infection",
+    "n": "العدوى التناسلية بالكامبيلوباكتر",
+    "source": "cattle.json"
+  },
+  "canine-atopic-dermatitis": {
+    "e": "Canine atopic dermatitis",
+    "n": "التهاب الجلد التأتبي",
+    "source": "dogs.json"
+  },
+  "canine-babesiosis": {
+    "e": "Canine babesiosis",
+    "n": "داء البابيزيا الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-brucellosis": {
+    "e": "Canine brucellosis",
+    "n": "داء البروسيلات الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-coronavirus-enteritis": {
+    "e": "Canine coronavirus enteritis",
+    "n": "التهاب الأمعاء بفيروس كورونا الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-distemper": {
+    "e": "Canine distemper",
+    "n": "داء الديستمبر الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-ehrlichiosis": {
+    "e": "Canine ehrlichiosis",
+    "n": "داء إيرليخ الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-herpesvirus-infection": {
+    "e": "Canine herpesvirus infection",
+    "n": "عدوى فيروس الهربس الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-influenza": {
+    "e": "Canine influenza",
+    "n": "إنفلونزا الكلاب",
+    "source": "dogs.json"
+  },
+  "canine-leishmaniosis": {
+    "e": "Canine leishmaniosis",
+    "n": "داء الليشمانيا الكلبي",
+    "source": "dogs.json"
+  },
+  "canine-mastitis": {
+    "e": "Canine mastitis",
+    "n": "التهاب الثدي (الماستيت)",
+    "source": "dogs.json"
+  },
+  "canine-parvovirus-enteritis": {
+    "e": "Canine parvovirus enteritis",
+    "n": "بارفو الكلاب",
+    "source": "dogs.json"
+  },
+  "caprine-arthritis-encephalitis-caev": {
+    "e": "Caprine arthritis encephalitis (CAEV)",
+    "n": "التهاب المفاصل والدماغ الفيروسي بالماعز",
+    "source": "small-ruminants.json"
+  },
+  "caseous-lymphadenitis-cla": {
+    "e": "Caseous lymphadenitis (CLA)",
+    "n": "التهاب العقد اللمفية الجبني",
+    "source": "small-ruminants.json"
+  },
+  "castor-bean-ricin-poisoning": {
+    "e": "Castor bean (ricin) poisoning",
+    "n": "التسمم ببذور الخروع",
+    "source": "small-ruminants.json"
+  },
+  "cataract": {
+    "e": "Cataract",
+    "n": "الساد (عتامة العدسة)",
+    "source": "horses.json"
+  },
+  "cataract-2": {
+    "e": "Cataract",
+    "n": "الساد (إعتام عدسة العين)",
+    "source": "rabbits.json"
+  },
+  "cataracts": {
+    "e": "Cataracts",
+    "n": "السادّ (عتامة العدسة)",
+    "source": "dogs.json"
+  },
+  "cecal-dysbiosis": {
+    "e": "Cecal dysbiosis",
+    "n": "خلل توازن الأعور",
+    "source": "rabbits.json"
+  },
+  "cecal-impaction": {
+    "e": "Cecal impaction",
+    "n": "انحشار الأعور",
+    "source": "rabbits.json"
+  },
+  "cerebellar-hypoplasia-in-cats": {
+    "e": "Cerebellar hypoplasia in cats",
+    "n": "نقص تنسج المخيخ",
+    "source": "cats.json"
+  },
+  "cervical-vertebral-stenotic-myelopathy-wobbler-syndrome": {
+    "e": "Cervical vertebral stenotic myelopathy (wobbler syndrome)",
+    "n": "متلازمة المتذبذب (اعتلال النخاع الرقبي الضاغط)",
+    "source": "horses.json"
+  },
+  "cheyletiellosis": {
+    "e": "Cheyletiellosis",
+    "n": "داء الشايلتييلا (القشرة المتحركة)",
+    "source": "dogs.json"
+  },
+  "chlamydia-felis-conjunctivitis": {
+    "e": "Chlamydia felis conjunctivitis",
+    "n": "التهاب الملتحمة بالكلاميديا",
+    "source": "cats.json"
+  },
+  "chorioptic-mange": {
+    "e": "Chorioptic mange",
+    "n": "الجرب الخوريوبتي (جرب الأرجل)",
+    "source": "horses.json"
+  },
+  "chronic-bronchitis": {
+    "e": "Chronic bronchitis",
+    "n": "التهاب القصبات المزمن",
+    "source": "dogs.json"
+  },
+  "chronic-hepatitis": {
+    "e": "Chronic hepatitis",
+    "n": "التهاب الكبد المزمن",
+    "source": "dogs.json"
+  },
+  "chronic-kidney-disease-in-cats": {
+    "e": "Chronic kidney disease in cats",
+    "n": "مرض الكلى المزمن",
+    "source": "cats.json"
+  },
+  "chronic-renal-failure": {
+    "e": "Chronic renal failure",
+    "n": "القصور الكلوي المزمن",
+    "source": "rabbits.json"
+  },
+  "chylothorax-in-cats": {
+    "e": "Chylothorax in cats",
+    "n": "الانصباب الكيلوسي الجنبي",
+    "source": "cats.json"
+  },
+  "clostridial-colitis": {
+    "e": "Clostridial colitis",
+    "n": "التهاب القولون بالمطثيات",
+    "source": "horses.json"
+  },
+  "clostridial-enterotoxemia": {
+    "e": "Clostridial enterotoxemia",
+    "n": "التسمم المعوي بالمطثيات",
+    "source": "rabbits.json"
+  },
+  "clostridium-perfringens-enteritis": {
+    "e": "Clostridium perfringens enteritis",
+    "n": "التهاب الأمعاء بالمطثية الحاطمة",
+    "source": "cattle.json"
+  },
+  "cobalt-deficiency-pine": {
+    "e": "Cobalt deficiency (pine)",
+    "n": "نقص الكوبالت (النحافة المستنزفة)",
+    "source": "small-ruminants.json"
+  },
+  "coccidiosis": {
+    "e": "Coccidiosis",
+    "n": "الكوكسيديا",
+    "source": "cattle.json"
+  },
+  "colibacillosis": {
+    "e": "Colibacillosis",
+    "n": "داء العصيات القولونية",
+    "source": "rabbits.json"
+  },
+  "coliform-mastitis": {
+    "e": "Coliform mastitis",
+    "n": "التهاب الضرع القولوني",
+    "source": "cattle.json"
+  },
+  "congenital-megacolon": {
+    "e": "Congenital megacolon",
+    "n": "تضخم القولون الخلقي",
+    "source": "rabbits.json"
+  },
+  "congestive-heart-failure": {
+    "e": "Congestive heart failure",
+    "n": "قصور القلب الاحتقاني",
+    "source": "rabbits.json"
+  },
+  "conjunctivitis": {
+    "e": "Conjunctivitis",
+    "n": "التهاب الملتحمة",
+    "source": "rabbits.json"
+  },
+  "constipation-and-megacolon-in-cats": {
+    "e": "Constipation and megacolon in cats",
+    "n": "الإمساك والقولون الضخم",
+    "source": "cats.json"
+  },
+  "contagious-agalactia": {
+    "e": "Contagious agalactia",
+    "n": "الإسهال الصفراوي المعدي (التهاب الضرع والرحم)",
+    "source": "small-ruminants.json"
+  },
+  "contagious-bovine-pleuropneumonia": {
+    "e": "Contagious bovine pleuropneumonia",
+    "n": "ذات الجنب والرئة المعدي البقري",
+    "source": "cattle.json"
+  },
+  "contagious-caprine-pleuropneumonia-ccpp": {
+    "e": "Contagious caprine pleuropneumonia (CCPP)",
+    "n": "ذات الجنب والرئة المعدية بالماعز",
+    "source": "small-ruminants.json"
+  },
+  "contagious-ecthyma-orf": {
+    "e": "Contagious ecthyma (Orf)",
+    "n": "التهاب الجلد المعدي (الأورف)",
+    "source": "small-ruminants.json"
+  },
+  "contagious-equine-metritis": {
+    "e": "Contagious equine metritis",
+    "n": "التهاب الرحم المعدي الخيلي",
+    "source": "horses.json"
+  },
+  "contagious-ovine-digital-dermatitis-codd": {
+    "e": "Contagious ovine digital dermatitis (CODD)",
+    "n": "التهاب جلد الأصابع المعدي عند الأغنام",
+    "source": "small-ruminants.json"
+  },
+  "copper-deficiency": {
+    "e": "Copper deficiency",
+    "n": "نقص النحاس",
+    "source": "cattle.json"
+  },
+  "copper-poisoning": {
+    "e": "Copper poisoning",
+    "n": "التسمم بالنحاس",
+    "source": "small-ruminants.json"
+  },
+  "corneal-sequestrum-in-cats": {
+    "e": "Corneal sequestrum in cats",
+    "n": "الحجز القرني (النخر القرني)",
+    "source": "cats.json"
+  },
+  "corneal-ulcer": {
+    "e": "Corneal ulcer",
+    "n": "قرحة القرنية",
+    "source": "dogs.json"
+  },
+  "cranial-cruciate-ligament-rupture": {
+    "e": "Cranial cruciate ligament rupture",
+    "n": "تمزق الرباط الصليبي القحفي",
+    "source": "dogs.json"
+  },
+  "cryptococcosis-in-cats": {
+    "e": "Cryptococcosis in cats",
+    "n": "داء الكريبتوكوكس",
+    "source": "cats.json"
+  },
+  "cryptorchidism": {
+    "e": "Cryptorchidism",
+    "n": "الخصية المعلقة (اختفاء الخصية)",
+    "source": "dogs.json"
+  },
+  "cryptosporidiosis": {
+    "e": "Cryptosporidiosis",
+    "n": "داء خفيات الأبواغ",
+    "source": "cattle.json"
+  },
+  "cyathostominosis": {
+    "e": "Cyathostominosis",
+    "n": "داء الأسطونيات الصغيرة (السياثوستومات)",
+    "source": "horses.json"
+  },
+  "cystitis-and-pyelonephritis": {
+    "e": "Cystitis and pyelonephritis",
+    "n": "التهاب المثانة والكلى الصاعد",
+    "source": "small-ruminants.json"
+  },
+  "dacryocystitis": {
+    "e": "Dacryocystitis",
+    "n": "التهاب كيس الدمع",
+    "source": "rabbits.json"
+  },
+  "degenerative-myelopathy": {
+    "e": "Degenerative myelopathy",
+    "n": "الاعتلال النخاعي التنكسي",
+    "source": "dogs.json"
+  },
+  "demodex-gatoi-infestation": {
+    "e": "Demodex gatoi infestation",
+    "n": "عدوى الديمودكس غاتوي",
+    "source": "cats.json"
+  },
+  "demodicosis": {
+    "e": "Demodicosis",
+    "n": "داء الدويديات (الديمودكس)",
+    "source": "dogs.json"
+  },
+  "dental-abscess": {
+    "e": "Dental abscess",
+    "n": "خراج الأسنان",
+    "source": "rabbits.json"
+  },
+  "dental-malocclusion": {
+    "e": "Dental malocclusion",
+    "n": "سوء إطباق الأسنان",
+    "source": "rabbits.json"
+  },
+  "dermatophilosis-fleece-rot-lumpy-wool": {
+    "e": "Dermatophilosis (fleece rot / lumpy wool)",
+    "n": "التهاب الجلد الخيطي (تعفن الصوف)",
+    "source": "small-ruminants.json"
+  },
+  "dermatophytosis": {
+    "e": "Dermatophytosis",
+    "n": "الفطار الجلدي (القوباء الحلقية)",
+    "source": "dogs.json"
+  },
+  "dermatophytosis-in-cats": {
+    "e": "Dermatophytosis in cats",
+    "n": "الفطار الجلدي (السعفة)",
+    "source": "cats.json"
+  },
+  "diabetes-mellitus": {
+    "e": "Diabetes mellitus",
+    "n": "داء السكري",
+    "source": "dogs.json"
+  },
+  "dictyocaulus-arnfieldi-lungworm": {
+    "e": "Dictyocaulus arnfieldi lungworm",
+    "n": "الدودة الرئوية",
+    "source": "horses.json"
+  },
+  "digital-dermatitis": {
+    "e": "Digital dermatitis",
+    "n": "التهاب الجلد الإصبعي",
+    "source": "cattle.json"
+  },
+  "dilated-cardiomyopathy": {
+    "e": "Dilated cardiomyopathy",
+    "n": "اعتلال عضلة القلب التوسعي",
+    "source": "dogs.json"
+  },
+  "dilated-cardiomyopathy-in-cats": {
+    "e": "Dilated cardiomyopathy in cats",
+    "n": "اعتلال عضلة القلب التمددي",
+    "source": "cats.json"
+  },
+  "dipylidium-caninum-infection": {
+    "e": "Dipylidium caninum infection",
+    "n": "عدوى الديبليديوم",
+    "source": "cats.json"
+  },
+  "dipylidium-caninum-infection-2": {
+    "e": "Dipylidium caninum infection",
+    "n": "الدودة الشريطية (ديبيليديوم)",
+    "source": "dogs.json"
+  },
+  "discospondylitis": {
+    "e": "Discospondylitis",
+    "n": "التهاب القرص والفقرات",
+    "source": "dogs.json"
+  },
+  "displaced-abomasum": {
+    "e": "Displaced abomasum",
+    "n": "انزياح الأنفحة",
+    "source": "cattle.json"
+  },
+  "disseminated-intravascular-coagulation": {
+    "e": "Disseminated intravascular coagulation",
+    "n": "التخثر المنتشر داخل الأوعية",
+    "source": "dogs.json"
+  },
+  "dorsal-displacement-of-the-soft-palate": {
+    "e": "Dorsal displacement of the soft palate",
+    "n": "انزياح الحنك الرخو الظهري",
+    "source": "horses.json"
+  },
+  "dorsal-metacarpal-disease-bucked-shins": {
+    "e": "Dorsal metacarpal disease (bucked shins)",
+    "n": "التهاب عظم المدفع الظهري (التحسس القصبي)",
+    "source": "horses.json"
+  },
+  "dourine": {
+    "e": "Dourine",
+    "n": "الدورين (مرض التغطية)",
+    "source": "horses.json"
+  },
+  "downer-cow-syndrome": {
+    "e": "Downer cow syndrome",
+    "n": "متلازمة البقرة الراقدة",
+    "source": "cattle.json"
+  },
+  "dystocia-in-cats": {
+    "e": "Dystocia in cats",
+    "n": "عسر الولادة",
+    "source": "cats.json"
+  },
+  "e-coli-k99-calf-scours": {
+    "e": "E. coli K99 calf scours",
+    "n": "إسهال العجول بالإشريكية القولونية",
+    "source": "cattle.json"
+  },
+  "ear-mite-infestation": {
+    "e": "Ear mite infestation",
+    "n": "عث الأذن (الأوتودكتس)",
+    "source": "dogs.json"
+  },
+  "ear-mites-psoroptes-cuniculi": {
+    "e": "Ear mites (Psoroptes cuniculi)",
+    "n": "عث الأذن (بسوروبتس)",
+    "source": "rabbits.json"
+  },
+  "eastern-equine-encephalomyelitis": {
+    "e": "Eastern equine encephalomyelitis",
+    "n": "التهاب الدماغ الخيلي الشرقي",
+    "source": "horses.json"
+  },
+  "eclampsia-puerperal-hypocalcemia": {
+    "e": "Eclampsia (puerperal hypocalcemia)",
+    "n": "حمى الحليب (نقص كالسيوم ما بعد الولادة)",
+    "source": "dogs.json"
+  },
+  "ehv-1-myeloencephalopathy": {
+    "e": "EHV-1 myeloencephalopathy",
+    "n": "التهاب النخاع والدماغ الهربسي الخيلي",
+    "source": "horses.json"
+  },
+  "elbow-dysplasia": {
+    "e": "Elbow dysplasia",
+    "n": "خلل تنسج المرفق",
+    "source": "dogs.json"
+  },
+  "encephalitozoon-cuniculi-infection": {
+    "e": "Encephalitozoon cuniculi infection",
+    "n": "عدوى إنسيفاليتوزون كونيكولي",
+    "source": "rabbits.json"
+  },
+  "endometrial-hyperplasia": {
+    "e": "Endometrial hyperplasia",
+    "n": "فرط تنسج بطانة الرحم",
+    "source": "rabbits.json"
+  },
+  "endometritis": {
+    "e": "Endometritis",
+    "n": "التهاب بطانة الرحم",
+    "source": "cattle.json"
+  },
+  "enterolithiasis": {
+    "e": "Enterolithiasis",
+    "n": "الحصيات المعوية",
+    "source": "horses.json"
+  },
+  "enterotoxemia-pulpy-kidney": {
+    "e": "Enterotoxemia (pulpy kidney)",
+    "n": "التسمم المعوي (مرض الكلى الرخوة)",
+    "source": "small-ruminants.json"
+  },
+  "entropion": {
+    "e": "Entropion",
+    "n": "انقلاب الجفن للداخل",
+    "source": "rabbits.json"
+  },
+  "entropion-2": {
+    "e": "Entropion",
+    "n": "انقلاب الجفن للداخل (الانتروبيون)",
+    "source": "small-ruminants.json"
+  },
+  "entropion-in-cats": {
+    "e": "Entropion in cats",
+    "n": "انقلاب الجفن إلى الداخل",
+    "source": "cats.json"
+  },
+  "enzootic-abortion-of-ewes": {
+    "e": "Enzootic abortion of ewes",
+    "n": "الإجهاض الإنزيمي (الكلاميديا)",
+    "source": "small-ruminants.json"
+  },
+  "enzootic-bovine-leukosis": {
+    "e": "Enzootic bovine leukosis",
+    "n": "ابيضاض الدم البقري المتوطن",
+    "source": "cattle.json"
+  },
+  "enzootic-calf-pneumonia": {
+    "e": "Enzootic calf pneumonia",
+    "n": "الالتهاب الرئوي المتوطن في العجول",
+    "source": "cattle.json"
+  },
+  "eosinophilic-granuloma-complex-in-cats": {
+    "e": "Eosinophilic granuloma complex in cats",
+    "n": "معقّد الورم الحبيبي اليوزيني",
+    "source": "cats.json"
+  },
+  "eosinophilic-keratitis-in-cats": {
+    "e": "Eosinophilic keratitis in cats",
+    "n": "التهاب القرنية اليوزيني",
+    "source": "cats.json"
+  },
+  "eperythrozoonosis-mycoplasma-ovis-infection": {
+    "e": "Eperythrozoonosis (Mycoplasma ovis infection)",
+    "n": "الإبيريثروزون (ميكوبلازما الدم عند الأغنام)",
+    "source": "small-ruminants.json"
+  },
+  "epilepsy": {
+    "e": "Epilepsy",
+    "n": "الصرع",
+    "source": "dogs.json"
+  },
+  "epilepsy-in-cats": {
+    "e": "Epilepsy in cats",
+    "n": "الصرع عند القطط",
+    "source": "cats.json"
+  },
+  "equine-asthma": {
+    "e": "Equine asthma",
+    "n": "ربو الخيول",
+    "source": "horses.json"
+  },
+  "equine-coital-exanthema": {
+    "e": "Equine coital exanthema",
+    "n": "الثؤلول التناسلي الجرابي (الهربس التناسلي)",
+    "source": "horses.json"
+  },
+  "equine-coronavirus-enteritis": {
+    "e": "Equine coronavirus enteritis",
+    "n": "التهاب الأمعاء بفيروس كورونا الخيلي",
+    "source": "horses.json"
+  },
+  "equine-dysautonomia-grass-sickness": {
+    "e": "Equine dysautonomia (grass sickness)",
+    "n": "خلل الاستقلال العشبي (مرض العشب)",
+    "source": "horses.json"
+  },
+  "equine-gastric-ulcer-syndrome": {
+    "e": "Equine gastric ulcer syndrome",
+    "n": "متلازمة قرحة المعدة الخيلية",
+    "source": "horses.json"
+  },
+  "equine-herpesvirus-1-and-4-infection": {
+    "e": "Equine herpesvirus 1 and 4 infection",
+    "n": "عدوى فيروس الهربس الخيلي 1 و4",
+    "source": "horses.json"
+  },
+  "equine-infectious-anemia": {
+    "e": "Equine infectious anemia",
+    "n": "فقر الدم المعدي الخيلي",
+    "source": "horses.json"
+  },
+  "equine-influenza": {
+    "e": "Equine influenza",
+    "n": "إنفلونزا الخيول",
+    "source": "horses.json"
+  },
+  "equine-metabolic-syndrome": {
+    "e": "Equine metabolic syndrome",
+    "n": "المتلازمة الاستقلابية الخيلية",
+    "source": "horses.json"
+  },
+  "equine-piroplasmosis": {
+    "e": "Equine piroplasmosis",
+    "n": "داء الكمثريات الخيلي (البابيزيا)",
+    "source": "horses.json"
+  },
+  "equine-protozoal-myeloencephalitis": {
+    "e": "Equine protozoal myeloencephalitis",
+    "n": "التهاب النخاع والدماغ بالأوالي الخيلية",
+    "source": "horses.json"
+  },
+  "equine-recurrent-uveitis": {
+    "e": "Equine recurrent uveitis",
+    "n": "التهاب العنبية المتكرر الخيلي",
+    "source": "horses.json"
+  },
+  "equine-sarcoid": {
+    "e": "Equine sarcoid",
+    "n": "الساركويد الخيلي",
+    "source": "horses.json"
+  },
+  "equine-viral-arteritis": {
+    "e": "Equine viral arteritis",
+    "n": "التهاب الشرايين الفيروسي الخيلي",
+    "source": "horses.json"
+  },
+  "erysipelas-arthritis-in-lambs": {
+    "e": "Erysipelas (arthritis) in lambs",
+    "n": "الحمرة (التهاب المفاصل) عند الحملان",
+    "source": "small-ruminants.json"
+  },
+  "esophageal-obstruction-choke": {
+    "e": "Esophageal obstruction (choke)",
+    "n": "انسداد المريء",
+    "source": "horses.json"
+  },
+  "ethylene-glycol-antifreeze-poisoning-in-cats": {
+    "e": "Ethylene glycol (antifreeze) poisoning in cats",
+    "n": "سمّية الإيثيلين غليكول (مضاد التجمد)",
+    "source": "cats.json"
+  },
+  "exercise-induced-pulmonary-hemorrhage": {
+    "e": "Exercise-induced pulmonary hemorrhage",
+    "n": "النزف الرئوي المستحث بالجهد",
+    "source": "horses.json"
+  },
+  "exertional-rhabdomyolysis": {
+    "e": "Exertional rhabdomyolysis",
+    "n": "انحلال الربيدات الجهدي (الربط العضلي)",
+    "source": "horses.json"
+  },
+  "exocrine-pancreatic-insufficiency": {
+    "e": "Exocrine pancreatic insufficiency",
+    "n": "قصور البنكرياس الخارجي",
+    "source": "dogs.json"
+  },
+  "exocrine-pancreatic-insufficiency-in-cats": {
+    "e": "Exocrine pancreatic insufficiency in cats",
+    "n": "قصور البنكرياس خارجي الإفراز",
+    "source": "cats.json"
+  },
+  "failure-of-passive-transfer": {
+    "e": "Failure of passive transfer",
+    "n": "فشل انتقال المناعة السلبية",
+    "source": "horses.json"
+  },
+  "fascioliasis": {
+    "e": "Fascioliasis",
+    "n": "داء المثقوبات الكبدية (الفاسيولا)",
+    "source": "rabbits.json"
+  },
+  "fasciolosis": {
+    "e": "Fasciolosis",
+    "n": "داء المتورقات الكبدية",
+    "source": "cattle.json"
+  },
+  "fasciolosis-liver-fluke": {
+    "e": "Fasciolosis (liver fluke)",
+    "n": "داء المتورقات (دودة الكبد)",
+    "source": "small-ruminants.json"
+  },
+  "fatty-liver-syndrome": {
+    "e": "Fatty liver syndrome",
+    "n": "متلازمة الكبد الدهني",
+    "source": "cattle.json"
+  },
+  "feline-acromegaly": {
+    "e": "Feline acromegaly",
+    "n": "ضخامة الأطراف عند القطط",
+    "source": "cats.json"
+  },
+  "feline-amyloidosis": {
+    "e": "Feline amyloidosis",
+    "n": "الداء النشواني عند القطط",
+    "source": "cats.json"
+  },
+  "feline-aortic-thromboembolism": {
+    "e": "Feline aortic thromboembolism",
+    "n": "الانصمام الخثاري الأبهري",
+    "source": "cats.json"
+  },
+  "feline-asthma": {
+    "e": "Feline asthma",
+    "n": "ربو القطط",
+    "source": "cats.json"
+  },
+  "feline-atopic-skin-syndrome": {
+    "e": "Feline atopic skin syndrome",
+    "n": "متلازمة الجلد التأتبي القططية",
+    "source": "cats.json"
+  },
+  "feline-bartonellosis": {
+    "e": "Feline bartonellosis",
+    "n": "داء البارتونيلا",
+    "source": "cats.json"
+  },
+  "feline-calicivirus-infection": {
+    "e": "Feline calicivirus infection",
+    "n": "عدوى فيروس الكاليسي",
+    "source": "cats.json"
+  },
+  "feline-chin-acne": {
+    "e": "Feline chin acne",
+    "n": "حب شباب ذقن القطط",
+    "source": "cats.json"
+  },
+  "feline-cholangitis": {
+    "e": "Feline cholangitis",
+    "n": "التهاب الأقنية الصفراوية",
+    "source": "cats.json"
+  },
+  "feline-coccidiosis": {
+    "e": "Feline coccidiosis",
+    "n": "داء الكوكسيديا",
+    "source": "cats.json"
+  },
+  "feline-cognitive-dysfunction": {
+    "e": "Feline cognitive dysfunction",
+    "n": "الخلل المعرفي عند القطط المسنة",
+    "source": "cats.json"
+  },
+  "feline-cowpox": {
+    "e": "Feline cowpox",
+    "n": "جدري البقر القططي",
+    "source": "cats.json"
+  },
+  "feline-diabetes-mellitus": {
+    "e": "Feline diabetes mellitus",
+    "n": "داء السكري عند القطط",
+    "source": "cats.json"
+  },
+  "feline-enteric-coronavirus-infection": {
+    "e": "Feline enteric coronavirus infection",
+    "n": "عدوى فيروس كورونا المعوي",
+    "source": "cats.json"
+  },
+  "feline-gingivostomatitis": {
+    "e": "Feline gingivostomatitis",
+    "n": "التهاب اللثة والفم المزمن",
+    "source": "cats.json"
+  },
+  "feline-heartworm-disease": {
+    "e": "Feline heartworm disease",
+    "n": "مرض الدودة القلبية",
+    "source": "cats.json"
+  },
+  "feline-hemoplasmosis": {
+    "e": "Feline hemoplasmosis",
+    "n": "داء الهيموبلازما",
+    "source": "cats.json"
+  },
+  "feline-herpesvirus-rhinotracheitis": {
+    "e": "Feline herpesvirus rhinotracheitis",
+    "n": "التهاب الأنف والقصبة الهربسي",
+    "source": "cats.json"
+  },
+  "feline-hip-dysplasia": {
+    "e": "Feline hip dysplasia",
+    "n": "خلل تنسج الورك",
+    "source": "cats.json"
+  },
+  "feline-hyperesthesia-syndrome": {
+    "e": "Feline hyperesthesia syndrome",
+    "n": "متلازمة فرط الحساسية الجلدية العصبية",
+    "source": "cats.json"
+  },
+  "feline-hyperthyroidism": {
+    "e": "Feline hyperthyroidism",
+    "n": "فرط نشاط الغدة الدرقية",
+    "source": "cats.json"
+  },
+  "feline-hypothyroidism": {
+    "e": "Feline hypothyroidism",
+    "n": "قصور الغدة الدرقية عند القطط",
+    "source": "cats.json"
+  },
+  "feline-idiopathic-cystitis": {
+    "e": "Feline idiopathic cystitis",
+    "n": "التهاب المثانة مجهول السبب",
+    "source": "cats.json"
+  },
+  "feline-immunodeficiency-virus-infection": {
+    "e": "Feline immunodeficiency virus infection",
+    "n": "فيروس نقص المناعة القططي",
+    "source": "cats.json"
+  },
+  "feline-infectious-anemia": {
+    "e": "Feline infectious anemia",
+    "n": "فقر الدم المعدي عند القطط",
+    "source": "cats.json"
+  },
+  "feline-infectious-peritonitis": {
+    "e": "Feline infectious peritonitis",
+    "n": "التهاب الصفاق المعدي القططي",
+    "source": "cats.json"
+  },
+  "feline-injection-site-sarcoma": {
+    "e": "Feline injection-site sarcoma",
+    "n": "ساركوما مواضع الحقن",
+    "source": "cats.json"
+  },
+  "feline-leukemia-virus-infection": {
+    "e": "Feline leukemia virus infection",
+    "n": "فيروس ابيضاض الدم القططي",
+    "source": "cats.json"
+  },
+  "feline-lymphoma": {
+    "e": "Feline lymphoma",
+    "n": "اللمفوما عند القطط",
+    "source": "cats.json"
+  },
+  "feline-mammary-carcinoma": {
+    "e": "Feline mammary carcinoma",
+    "n": "سرطان الغدة الثديية",
+    "source": "cats.json"
+  },
+  "feline-mycobacteriosis": {
+    "e": "Feline mycobacteriosis",
+    "n": "داء المتفطرات",
+    "source": "cats.json"
+  },
+  "feline-pancreatitis": {
+    "e": "Feline pancreatitis",
+    "n": "التهاب البنكرياس عند القطط",
+    "source": "cats.json"
+  },
+  "feline-panleukopenia": {
+    "e": "Feline panleukopenia",
+    "n": "بانليوكوبينيا القطط (طاعون القطط)",
+    "source": "cats.json"
+  },
+  "feline-salmonellosis": {
+    "e": "Feline salmonellosis",
+    "n": "داء السالمونيلا",
+    "source": "cats.json"
+  },
+  "feline-systemic-hypertension": {
+    "e": "Feline systemic hypertension",
+    "n": "ارتفاع ضغط الدم الجهازي",
+    "source": "cats.json"
+  },
+  "feline-triaditis": {
+    "e": "Feline triaditis",
+    "n": "ثلاثي الالتهاب القططي",
+    "source": "cats.json"
+  },
+  "feline-urethral-obstruction": {
+    "e": "Feline urethral obstruction",
+    "n": "انسداد الإحليل",
+    "source": "cats.json"
+  },
+  "feline-urolithiasis": {
+    "e": "Feline urolithiasis",
+    "n": "حصيات المسالك البولية",
+    "source": "cats.json"
+  },
+  "flea-allergy-dermatitis": {
+    "e": "Flea allergy dermatitis",
+    "n": "التهاب الجلد التحسسي من البراغيث",
+    "source": "dogs.json"
+  },
+  "flea-allergy-dermatitis-in-cats": {
+    "e": "Flea allergy dermatitis in cats",
+    "n": "التهاب الجلد التحسسي للبراغيث",
+    "source": "cats.json"
+  },
+  "flea-infestation": {
+    "e": "Flea infestation",
+    "n": "الإصابة بالبراغيث",
+    "source": "rabbits.json"
+  },
+  "floppy-rabbit-syndrome": {
+    "e": "Floppy rabbit syndrome",
+    "n": "متلازمة الأرنب الرخو",
+    "source": "rabbits.json"
+  },
+  "flystrike-myiasis": {
+    "e": "Flystrike (myiasis)",
+    "n": "نغف الجروح (ذبابة اللحم)",
+    "source": "rabbits.json"
+  },
+  "foot-and-mouth-disease": {
+    "e": "Foot-and-mouth disease",
+    "n": "الحمى القلاعية",
+    "source": "cattle.json"
+  },
+  "foot-rot": {
+    "e": "Foot rot",
+    "n": "تعفن القدم",
+    "source": "cattle.json"
+  },
+  "fur-mites-cheyletiella-parasitovorax": {
+    "e": "Fur mites (Cheyletiella parasitovorax)",
+    "n": "عث الفراء (كيليتيلا)",
+    "source": "rabbits.json"
+  },
+  "gangrenous-mastitis": {
+    "e": "Gangrenous mastitis",
+    "n": "التهاب الضرع الغنغريني",
+    "source": "small-ruminants.json"
+  },
+  "gasterophilus-bots": {
+    "e": "Gasterophilus bots",
+    "n": "ذباب النبر المعوي (الغاستروفيلوس)",
+    "source": "horses.json"
+  },
+  "gastric-dilatation-volvulus": {
+    "e": "Gastric dilatation-volvulus",
+    "n": "تمدد المعدة والتواؤها",
+    "source": "dogs.json"
+  },
+  "gastric-trichobezoar": {
+    "e": "Gastric trichobezoar",
+    "n": "كرة الشعر المعدية",
+    "source": "rabbits.json"
+  },
+  "gastric-ulceration": {
+    "e": "Gastric ulceration",
+    "n": "قرح المعدة",
+    "source": "rabbits.json"
+  },
+  "gastrointestinal-nematodes-trichostrongylus": {
+    "e": "Gastrointestinal nematodes (Trichostrongylus)",
+    "n": "ديدان المعدة والأمعاء الخيطية",
+    "source": "rabbits.json"
+  },
+  "gastrointestinal-stasis": {
+    "e": "Gastrointestinal stasis",
+    "n": "ركود الجهاز الهضمي",
+    "source": "rabbits.json"
+  },
+  "giardiasis-in-cats": {
+    "e": "Giardiasis in cats",
+    "n": "داء الجيارديا",
+    "source": "cats.json"
+  },
+  "gid-coenurus-cerebralis-coenurosis": {
+    "e": "Gid (Coenurus cerebralis, coenurosis)",
+    "n": "الدوران (كيس المخ المائي الكاذب)",
+    "source": "small-ruminants.json"
+  },
+  "glanders": {
+    "e": "Glanders",
+    "n": "الرعام",
+    "source": "horses.json"
+  },
+  "glaucoma": {
+    "e": "Glaucoma",
+    "n": "الزرق (الماء الأزرق)",
+    "source": "horses.json"
+  },
+  "glaucoma-buphthalmia": {
+    "e": "Glaucoma (buphthalmia)",
+    "n": "الزرق (الجلوكوما وبوفتالميا)",
+    "source": "rabbits.json"
+  },
+  "glaucoma-in-cats": {
+    "e": "Glaucoma in cats",
+    "n": "الزرق (الغلوكوما)",
+    "source": "cats.json"
+  },
+  "guttural-pouch-empyema": {
+    "e": "Guttural pouch empyema",
+    "n": "تقيح الجيب الحلقي",
+    "source": "horses.json"
+  },
+  "guttural-pouch-mycosis": {
+    "e": "Guttural pouch mycosis",
+    "n": "فطار الجيب الحلقي",
+    "source": "horses.json"
+  },
+  "habronemiasis": {
+    "e": "Habronemiasis",
+    "n": "داء هابرونيما الجلدي (قروح الصيف)",
+    "source": "horses.json"
+  },
+  "haemonchosis-barber-s-pole-worm": {
+    "e": "Haemonchosis (barber's pole worm)",
+    "n": "الهيمونكوس (دودة المصلاة)",
+    "source": "small-ruminants.json"
+  },
+  "head-tilt-vestibular-syndrome": {
+    "e": "Head tilt (vestibular syndrome)",
+    "n": "ميلان الرأس (المتلازمة الدهليزية)",
+    "source": "rabbits.json"
+  },
+  "heartwater": {
+    "e": "Heartwater",
+    "n": "داء القلب المائي",
+    "source": "cattle.json"
+  },
+  "heartwater-cowdriosis": {
+    "e": "Heartwater (cowdriosis)",
+    "n": "ماء القلب (داء الكاودريا)",
+    "source": "small-ruminants.json"
+  },
+  "heartworm-disease-dirofilaria-immitis": {
+    "e": "Heartworm disease (Dirofilaria immitis)",
+    "n": "دودة القلب",
+    "source": "dogs.json"
+  },
+  "heat-stroke": {
+    "e": "Heat stroke",
+    "n": "ضربة الحرارة",
+    "source": "dogs.json"
+  },
+  "heliotrope-poisoning": {
+    "e": "Heliotrope poisoning",
+    "n": "التسمم بالهليوتروب (حشيشة العقرب)",
+    "source": "small-ruminants.json"
+  },
+  "hemangiosarcoma": {
+    "e": "Hemangiosarcoma",
+    "n": "الساركوما الوعائية",
+    "source": "dogs.json"
+  },
+  "hemorrhagic-septicemia": {
+    "e": "Hemorrhagic septicemia",
+    "n": "الإنتان الدموي النزفي",
+    "source": "cattle.json"
+  },
+  "hepatic-coccidiosis-eimeria-stiedae": {
+    "e": "Hepatic coccidiosis (Eimeria stiedae)",
+    "n": "الكوكسيديا الكبدية",
+    "source": "rabbits.json"
+  },
+  "hepatic-lipidosis": {
+    "e": "Hepatic lipidosis",
+    "n": "التشحم الكبدي",
+    "source": "rabbits.json"
+  },
+  "hepatic-lipidosis-in-cats": {
+    "e": "Hepatic lipidosis in cats",
+    "n": "التنكس الدهني الكبدي",
+    "source": "cats.json"
+  },
+  "hoof-abscess": {
+    "e": "Hoof abscess",
+    "n": "خراج الحافر",
+    "source": "horses.json"
+  },
+  "hookworm-infection": {
+    "e": "Hookworm infection",
+    "n": "ديدان الخطاف (الأنكلستوما)",
+    "source": "dogs.json"
+  },
+  "hydatid-disease-cystic-echinococcosis": {
+    "e": "Hydatid disease (cystic echinococcosis)",
+    "n": "الأكياس المائية (الهيداتيد)",
+    "source": "small-ruminants.json"
+  },
+  "hyperadrenocorticism-cushing-disease": {
+    "e": "Hyperadrenocorticism (Cushing disease)",
+    "n": "داء كوشينغ (فرط نشاط الكظر)",
+    "source": "dogs.json"
+  },
+  "hyperkalemic-periodic-paralysis": {
+    "e": "Hyperkalemic periodic paralysis",
+    "n": "شلل فرط بوتاسيوم الدم الدوري",
+    "source": "horses.json"
+  },
+  "hypertrophic-cardiomyopathy-in-cats": {
+    "e": "Hypertrophic cardiomyopathy in cats",
+    "n": "اعتلال عضلة القلب الضخامي",
+    "source": "cats.json"
+  },
+  "hypertrophic-osteodystrophy": {
+    "e": "Hypertrophic osteodystrophy",
+    "n": "اعتلال العظم التضخمي النمائي",
+    "source": "dogs.json"
+  },
+  "hypoadrenocorticism-addison-disease": {
+    "e": "Hypoadrenocorticism (Addison disease)",
+    "n": "داء أديسون (قصور الكظر)",
+    "source": "dogs.json"
+  },
+  "hypokalemia": {
+    "e": "Hypokalemia",
+    "n": "نقص بوتاسيوم الدم",
+    "source": "cattle.json"
+  },
+  "hypomagnesemia-grass-tetany": {
+    "e": "Hypomagnesemia (grass tetany)",
+    "n": "تكزز نقص المغنيسيوم",
+    "source": "cattle.json"
+  },
+  "hypomagnesemia-grass-tetany-2": {
+    "e": "Hypomagnesemia (grass tetany)",
+    "n": "نقص المغنيسيوم (تكزز العشب)",
+    "source": "small-ruminants.json"
+  },
+  "hypophosphatemia": {
+    "e": "Hypophosphatemia",
+    "n": "نقص فوسفور الدم",
+    "source": "cattle.json"
+  },
+  "hypothyroidism": {
+    "e": "Hypothyroidism",
+    "n": "قصور الدرقية",
+    "source": "dogs.json"
+  },
+  "ileal-impaction": {
+    "e": "Ileal impaction",
+    "n": "انحشار اللفائفي",
+    "source": "horses.json"
+  },
+  "immune-mediated-hemolytic-anemia-in-cats": {
+    "e": "Immune-mediated hemolytic anemia in cats",
+    "n": "فقر الدم الانحلالي المناعي",
+    "source": "cats.json"
+  },
+  "immune-mediated-thrombocytopenia": {
+    "e": "Immune-mediated thrombocytopenia",
+    "n": "قلة الصفيحات المناعية",
+    "source": "dogs.json"
+  },
+  "infectious-arthritis-joint-ill": {
+    "e": "Infectious arthritis (joint ill)",
+    "n": "التهاب المفاصل المعدي في العجول",
+    "source": "cattle.json"
+  },
+  "infectious-bovine-keratoconjunctivitis-pinkeye": {
+    "e": "Infectious bovine keratoconjunctivitis (pinkeye)",
+    "n": "التهاب القرنية والملتحمة المعدي",
+    "source": "cattle.json"
+  },
+  "infectious-bovine-rhinotracheitis": {
+    "e": "Infectious bovine rhinotracheitis",
+    "n": "التهاب الأنف والقصبات المعدي",
+    "source": "cattle.json"
+  },
+  "infectious-canine-hepatitis": {
+    "e": "Infectious canine hepatitis",
+    "n": "التهاب الكبد المعدي الكلبي",
+    "source": "dogs.json"
+  },
+  "infectious-keratoconjunctivitis-pink-eye": {
+    "e": "Infectious keratoconjunctivitis (pink eye)",
+    "n": "التهاب القرنية والملتحمة المعدي (العين الوردية)",
+    "source": "small-ruminants.json"
+  },
+  "inflammatory-airway-disease": {
+    "e": "Inflammatory airway disease",
+    "n": "التهاب المجاري الهوائية الالتهابي",
+    "source": "horses.json"
+  },
+  "inflammatory-bowel-disease-in-cats": {
+    "e": "Inflammatory bowel disease in cats",
+    "n": "مرض الأمعاء الالتهابي",
+    "source": "cats.json"
+  },
+  "intervertebral-disc-disease": {
+    "e": "Intervertebral disc disease",
+    "n": "مرض القرص بين الفقري",
+    "source": "dogs.json"
+  },
+  "intestinal-coccidiosis": {
+    "e": "Intestinal coccidiosis",
+    "n": "الكوكسيديا المعوية",
+    "source": "rabbits.json"
+  },
+  "intestinal-obstruction": {
+    "e": "Intestinal obstruction",
+    "n": "الانسداد المعوي",
+    "source": "rabbits.json"
+  },
+  "iodine-deficiency-goitre-in-newborns": {
+    "e": "Iodine deficiency (goitre in newborns)",
+    "n": "نقص اليود (الدُّراق عند المواليد)",
+    "source": "small-ruminants.json"
+  },
+  "ionophore-monensin-toxicity": {
+    "e": "Ionophore (monensin) toxicity",
+    "n": "تسمم الأيونوفورات (المونينسين)",
+    "source": "horses.json"
+  },
+  "johne-s-disease-paratuberculosis": {
+    "e": "Johne's disease (paratuberculosis)",
+    "n": "داء جون",
+    "source": "cattle.json"
+  },
+  "johne-s-disease-paratuberculosis-2": {
+    "e": "Johne's disease (paratuberculosis)",
+    "n": "مرض جون (نظير السل)",
+    "source": "small-ruminants.json"
+  },
+  "kennel-cough-complex-infectious-tracheobronchitis": {
+    "e": "Kennel cough complex (infectious tracheobronchitis)",
+    "n": "مركب سعال بيوت الكلاب",
+    "source": "dogs.json"
+  },
+  "keratoconjunctivitis-sicca": {
+    "e": "Keratoconjunctivitis sicca",
+    "n": "التهاب القرنية والملتحمة الجاف (جفاف العين)",
+    "source": "dogs.json"
+  },
+  "ketosis": {
+    "e": "Ketosis",
+    "n": "الكيتوزية",
+    "source": "cattle.json"
+  },
+  "laminitis": {
+    "e": "Laminitis",
+    "n": "التهاب الصفيحة",
+    "source": "cattle.json"
+  },
+  "laminitis-2": {
+    "e": "Laminitis",
+    "n": "التهاب الصفيحة (الحُمرة الحافرية)",
+    "source": "horses.json"
+  },
+  "large-colon-displacement": {
+    "e": "Large colon displacement",
+    "n": "انزياح القولون الصاعد",
+    "source": "horses.json"
+  },
+  "large-colon-volvulus": {
+    "e": "Large colon volvulus",
+    "n": "انفتال القولون الصاعد",
+    "source": "horses.json"
+  },
+  "large-strongyles-infestation": {
+    "e": "Large strongyles infestation",
+    "n": "الأسطونيات الكبيرة",
+    "source": "horses.json"
+  },
+  "laryngeal-paralysis": {
+    "e": "Laryngeal paralysis",
+    "n": "شلل الحنجرة",
+    "source": "dogs.json"
+  },
+  "lawsonia-intracellularis-enteropathy": {
+    "e": "Lawsonia intracellularis enteropathy",
+    "n": "اعتلال الأمعاء بلوسونيا",
+    "source": "horses.json"
+  },
+  "lead-poisoning": {
+    "e": "Lead poisoning",
+    "n": "التسمم بالرصاص",
+    "source": "cattle.json"
+  },
+  "legg-calve-perthes-disease": {
+    "e": "Legg-Calvé-Perthes disease",
+    "n": "داء ليغ-كالفيه-بيرتس",
+    "source": "dogs.json"
+  },
+  "lens-luxation-in-cats": {
+    "e": "Lens luxation in cats",
+    "n": "خلع العدسة",
+    "source": "cats.json"
+  },
+  "leptospirosis": {
+    "e": "Leptospirosis",
+    "n": "داء البريميات",
+    "source": "cattle.json"
+  },
+  "leptospirosis-2": {
+    "e": "Leptospirosis",
+    "n": "داء البريميات (الليبتوسبيروز)",
+    "source": "dogs.json"
+  },
+  "leptospirosis-3": {
+    "e": "Leptospirosis",
+    "n": "داء البريميات الرقيقة (الليبتوسبيروز)",
+    "source": "small-ruminants.json"
+  },
+  "lice-infestation": {
+    "e": "Lice infestation",
+    "n": "الإصابة بالقمل",
+    "source": "cattle.json"
+  },
+  "lice-infestation-haemodipsus-ventricosus": {
+    "e": "Lice infestation (Haemodipsus ventricosus)",
+    "n": "الإصابة بقمل الأرانب",
+    "source": "rabbits.json"
+  },
+  "lily-poisoning-in-cats": {
+    "e": "Lily poisoning in cats",
+    "n": "سمّية الزنبق",
+    "source": "cats.json"
+  },
+  "listeriosis": {
+    "e": "Listeriosis",
+    "n": "داء الليستريات",
+    "source": "cattle.json"
+  },
+  "louping-ill": {
+    "e": "Louping ill",
+    "n": "مرض اللوبينغ إيل (القفز الخادع)",
+    "source": "small-ruminants.json"
+  },
+  "lumbar-vertebral-fracture": {
+    "e": "Lumbar vertebral fracture",
+    "n": "كسر الفقرات القطنية",
+    "source": "rabbits.json"
+  },
+  "lumpy-skin-disease": {
+    "e": "Lumpy skin disease",
+    "n": "مرض الجلد المتكتل",
+    "source": "cattle.json"
+  },
+  "lungworm-dictyocaulus": {
+    "e": "Lungworm (Dictyocaulus)",
+    "n": "داء الديدان الرئوية",
+    "source": "cattle.json"
+  },
+  "lungworm-infection-dictyocaulus-filaria": {
+    "e": "Lungworm infection (Dictyocaulus filaria)",
+    "n": "ديدان الرئة (الديكتيوكولوس)",
+    "source": "small-ruminants.json"
+  },
+  "lyme-borreliosis": {
+    "e": "Lyme borreliosis",
+    "n": "داء لايم",
+    "source": "dogs.json"
+  },
+  "lymphoma": {
+    "e": "Lymphoma",
+    "n": "اللمفوما",
+    "source": "dogs.json"
+  },
+  "maedi-visna": {
+    "e": "Maedi-visna",
+    "n": "مايدي-فيزنا",
+    "source": "small-ruminants.json"
+  },
+  "malassezia-dermatitis-in-cats": {
+    "e": "Malassezia dermatitis in cats",
+    "n": "التهاب الجلد بالمالاسيزيا",
+    "source": "cats.json"
+  },
+  "malignant-catarrhal-fever": {
+    "e": "Malignant catarrhal fever",
+    "n": "الحمى النزلية الخبيثة",
+    "source": "cattle.json"
+  },
+  "malignant-edema": {
+    "e": "Malignant edema",
+    "n": "الوذمة الخبيثة",
+    "source": "cattle.json"
+  },
+  "mammary-tumors": {
+    "e": "Mammary tumors",
+    "n": "أورام الثدي",
+    "source": "dogs.json"
+  },
+  "mange": {
+    "e": "Mange",
+    "n": "الجرب",
+    "source": "cattle.json"
+  },
+  "mannheimia-haemolytica-pneumonia": {
+    "e": "Mannheimia haemolytica pneumonia",
+    "n": "ذات الرئة بالمانهيمية الحالة للدم",
+    "source": "cattle.json"
+  },
+  "mannheimia-pneumonia-pasteurellosis": {
+    "e": "Mannheimia pneumonia (pasteurellosis)",
+    "n": "ذات الرئة بالمانهيميا (حمى الشحن)",
+    "source": "small-ruminants.json"
+  },
+  "mast-cell-tumor-in-cats": {
+    "e": "Mast cell tumor in cats",
+    "n": "ورم الخلايا البدينة",
+    "source": "cats.json"
+  },
+  "mastitis-in-cats": {
+    "e": "Mastitis in cats",
+    "n": "التهاب الضرع",
+    "source": "cats.json"
+  },
+  "meconium-impaction": {
+    "e": "Meconium impaction",
+    "n": "انحشار العقي",
+    "source": "horses.json"
+  },
+  "megaesophagus": {
+    "e": "Megaesophagus",
+    "n": "توسع المريء (الميغا إيسوفاغوس)",
+    "source": "dogs.json"
+  },
+  "melanoma": {
+    "e": "Melanoma",
+    "n": "الميلانوما",
+    "source": "horses.json"
+  },
+  "meningoencephalitis-of-unknown-origin-muo": {
+    "e": "Meningoencephalitis of unknown origin (MUO)",
+    "n": "التهاب الدماغ والنخاع مجهول السبب (MUO)",
+    "source": "dogs.json"
+  },
+  "metabolic-bone-disease": {
+    "e": "Metabolic bone disease",
+    "n": "مرض العظام الأيضي (هشاشة العظام الغذائية)",
+    "source": "rabbits.json"
+  },
+  "metritis": {
+    "e": "Metritis",
+    "n": "التهاب الرحم التالٍ للولادة",
+    "source": "cattle.json"
+  },
+  "metritis-postpartum": {
+    "e": "Metritis (postpartum)",
+    "n": "التهاب الرحم بعد الولادة",
+    "source": "small-ruminants.json"
+  },
+  "milk-fever": {
+    "e": "Milk fever",
+    "n": "حمى الحليب",
+    "source": "cattle.json"
+  },
+  "milk-fever-hypocalcemia": {
+    "e": "Milk fever (hypocalcemia)",
+    "n": "حمى الحليب (نقص الكالسيوم)",
+    "source": "small-ruminants.json"
+  },
+  "moist-dermatitis-of-the-dewlap": {
+    "e": "Moist dermatitis of the dewlap",
+    "n": "التهاب جلد الثنية العنقية الرطب",
+    "source": "rabbits.json"
+  },
+  "molar-spurs": {
+    "e": "Molar spurs",
+    "n": "نتوءات الأضراس الحادة",
+    "source": "rabbits.json"
+  },
+  "moniezia-tapeworm-infection": {
+    "e": "Moniezia tapeworm infection",
+    "n": "عدوى الدودة الشريطية (المونيزيا)",
+    "source": "small-ruminants.json"
+  },
+  "mucoid-enteropathy": {
+    "e": "Mucoid enteropathy",
+    "n": "الاعتلال المعوي المخاطي",
+    "source": "rabbits.json"
+  },
+  "myasthenia-gravis": {
+    "e": "Myasthenia gravis",
+    "n": "الوهن العضلي الوبيل",
+    "source": "dogs.json"
+  },
+  "mycoplasma-bovis-infection": {
+    "e": "Mycoplasma bovis infection",
+    "n": "عدوى الميكوبلازما البقرية",
+    "source": "cattle.json"
+  },
+  "mycoplasma-ovipneumoniae-pneumonia-atypical-pneumonia": {
+    "e": "Mycoplasma ovipneumoniae pneumonia (atypical pneumonia)",
+    "n": "ذات الرئة بالميكوبلازما الغنمية (اللادرسية)",
+    "source": "small-ruminants.json"
+  },
+  "mycotoxicosis-aflatoxin": {
+    "e": "Mycotoxicosis (aflatoxin)",
+    "n": "التسمم الفطري العَلفي (أفلاتوكسين)",
+    "source": "small-ruminants.json"
+  },
+  "myxomatosis": {
+    "e": "Myxomatosis",
+    "n": "الورم المخاطي (الميكسوماتوزيس)",
+    "source": "rabbits.json"
+  },
+  "myxomatous-mitral-valve-disease": {
+    "e": "Myxomatous mitral valve disease",
+    "n": "مرض الصمام التاجي التنكسي",
+    "source": "dogs.json"
+  },
+  "nasal-bot-fly-infestation-oestrus-ovis": {
+    "e": "Nasal bot fly infestation (Oestrus ovis)",
+    "n": "غرْغَر الأنف (يرقات ذبابة الأنف)",
+    "source": "small-ruminants.json"
+  },
+  "nasolacrimal-duct-obstruction": {
+    "e": "Nasolacrimal duct obstruction",
+    "n": "انسداد قناة الدمع",
+    "source": "rabbits.json"
+  },
+  "nasopharyngeal-polyps-in-cats": {
+    "e": "Nasopharyngeal polyps in cats",
+    "n": "السلائل البلعومية الأنفية",
+    "source": "cats.json"
+  },
+  "navel-ill": {
+    "e": "Navel ill",
+    "n": "التهاب السرة",
+    "source": "cattle.json"
+  },
+  "navicular-disease": {
+    "e": "Navicular disease",
+    "n": "مرض العظم الزورقي",
+    "source": "horses.json"
+  },
+  "necrobacillosis": {
+    "e": "Necrobacillosis",
+    "n": "النخاز البكتيري (نيكروباسيلوزيس)",
+    "source": "rabbits.json"
+  },
+  "nematodirus-infection": {
+    "e": "Nematodirus infection",
+    "n": "عدوى النيماتوديروس",
+    "source": "small-ruminants.json"
+  },
+  "neonatal-isoerythrolysis": {
+    "e": "Neonatal isoerythrolysis",
+    "n": "انحلال دم المهر وليد الأم المضادة",
+    "source": "horses.json"
+  },
+  "neonatal-maladjustment-syndrome": {
+    "e": "Neonatal maladjustment syndrome",
+    "n": "متلازمة سوء التكيف الوليدي (المهر البليد)",
+    "source": "horses.json"
+  },
+  "neospora-abortion": {
+    "e": "Neospora abortion",
+    "n": "الإجهاض بالنيوسبورا",
+    "source": "cattle.json"
+  },
+  "nitrate-nitrite-and-cyanide-poisoning-plant-related": {
+    "e": "Nitrate/nitrite and cyanide poisoning (plant-related)",
+    "n": "التسمم بالنترات والسيانيد النباتي",
+    "source": "small-ruminants.json"
+  },
+  "nitrate-poisoning": {
+    "e": "Nitrate poisoning",
+    "n": "التسمم بالنترات",
+    "source": "cattle.json"
+  },
+  "notoedres-cati-mange": {
+    "e": "Notoedres cati mange",
+    "n": "جرب النوتويدرس",
+    "source": "cats.json"
+  },
+  "nutritional-muscular-dystrophy": {
+    "e": "Nutritional muscular dystrophy",
+    "n": "الحثل العضلي الغذائي (نقص فيتامين هـ والسيلينيوم)",
+    "source": "rabbits.json"
+  },
+  "obesity": {
+    "e": "Obesity",
+    "n": "البدانة",
+    "source": "rabbits.json"
+  },
+  "ocular-squamous-cell-carcinoma": {
+    "e": "Ocular squamous cell carcinoma",
+    "n": "سرطان الخلايا الحرشفية العيني",
+    "source": "cattle.json"
+  },
+  "onchocerciasis": {
+    "e": "Onchocerciasis",
+    "n": "داء كلابية الذنب",
+    "source": "horses.json"
+  },
+  "orchitis-and-epididymitis": {
+    "e": "Orchitis and epididymitis",
+    "n": "التهاب الخصية والبربخ",
+    "source": "rabbits.json"
+  },
+  "osteoarthritis": {
+    "e": "Osteoarthritis",
+    "n": "التهاب المفاصل التنكسي (الفصال العظمي)",
+    "source": "dogs.json"
+  },
+  "osteoarthritis-2": {
+    "e": "Osteoarthritis",
+    "n": "الفصال العظمي (التهاب المفاصل التنكسي)",
+    "source": "horses.json"
+  },
+  "osteoarthritis-in-cats": {
+    "e": "Osteoarthritis in cats",
+    "n": "الفصال العظمي (خشونة المفاصل)",
+    "source": "cats.json"
+  },
+  "osteochondrosis": {
+    "e": "Osteochondrosis",
+    "n": "الداء العظمي الغضروفي",
+    "source": "horses.json"
+  },
+  "osteochondrosis-dissecans-ocd": {
+    "e": "Osteochondrosis dissecans (OCD)",
+    "n": "التهاب العظم والغضروف المنفصل",
+    "source": "dogs.json"
+  },
+  "osteomalacia-and-rickets": {
+    "e": "Osteomalacia and rickets",
+    "n": "لين العظام والكساح",
+    "source": "cattle.json"
+  },
+  "osteosarcoma": {
+    "e": "Osteosarcoma",
+    "n": "الساركوما العظمية",
+    "source": "dogs.json"
+  },
+  "ostertagiosis": {
+    "e": "Ostertagiosis",
+    "n": "داء الأسطوانيات المعدية",
+    "source": "cattle.json"
+  },
+  "otitis-externa-in-cats": {
+    "e": "Otitis externa in cats",
+    "n": "التهاب الأذن الخارجية",
+    "source": "cats.json"
+  },
+  "otitis-media-interna": {
+    "e": "Otitis media/interna",
+    "n": "التهاب الأذن الوسطى والداخلية",
+    "source": "rabbits.json"
+  },
+  "otodectes-cynotis-infestation": {
+    "e": "Otodectes cynotis infestation",
+    "n": "عث الأذن",
+    "source": "cats.json"
+  },
+  "ovarian-cysts": {
+    "e": "Ovarian cysts",
+    "n": "أكياس المبيض",
+    "source": "rabbits.json"
+  },
+  "ovine-caprine-dermatophytosis-like-yeast-dermatitis-malassezia": {
+    "e": "Ovine/caprine dermatophytosis-like yeast dermatitis (Malassezia)",
+    "n": "التهاب الجلد الخمائري بالماعز والأغنام",
+    "source": "small-ruminants.json"
+  },
+  "ovine-pulmonary-adenocarcinoma-jaagsiekte": {
+    "e": "Ovine pulmonary adenocarcinoma (jaagsiekte)",
+    "n": "السرطانة الغدية الرئوية (الياكسيكته)",
+    "source": "small-ruminants.json"
+  },
+  "oxalate-poisoning-plant": {
+    "e": "Oxalate poisoning (plant)",
+    "n": "التسمم بالأكسالات النباتية",
+    "source": "small-ruminants.json"
+  },
+  "oxyuris-equi-pinworm": {
+    "e": "Oxyuris equi pinworm",
+    "n": "الدودة الدبوسية الخيلية",
+    "source": "horses.json"
+  },
+  "pancreatitis": {
+    "e": "Pancreatitis",
+    "n": "التهاب البنكرياس",
+    "source": "dogs.json"
+  },
+  "panosteitis": {
+    "e": "Panosteitis",
+    "n": "التهاب العظام الشامل (البانوستيت)",
+    "source": "dogs.json"
+  },
+  "pansteatitis-yellow-fat-disease-in-cats": {
+    "e": "Pansteatitis (yellow fat disease) in cats",
+    "n": "التهاب الدهن (مرض الدهن الأصفر)",
+    "source": "cats.json"
+  },
+  "papillomatosis-warts": {
+    "e": "Papillomatosis (warts)",
+    "n": "الأورام الحليمية (التآليل)",
+    "source": "cattle.json"
+  },
+  "parainfluenza-3-pneumonia": {
+    "e": "Parainfluenza-3 pneumonia",
+    "n": "ذات الرئة بنظير الإنفلونزا البقرية",
+    "source": "cattle.json"
+  },
+  "paramphistomosis": {
+    "e": "Paramphistomosis",
+    "n": "داء المثقوبات الكرشية",
+    "source": "cattle.json"
+  },
+  "paramphistomosis-rumen-fluke": {
+    "e": "Paramphistomosis (rumen fluke)",
+    "n": "داء البارامفيستوما (دودة الكرش)",
+    "source": "small-ruminants.json"
+  },
+  "parascaris-infestation": {
+    "e": "Parascaris infestation",
+    "n": "إصابة الباراسكاريس (الإسكارس الخيلي)",
+    "source": "horses.json"
+  },
+  "pastern-dermatitis-scratches": {
+    "e": "Pastern dermatitis (scratches)",
+    "n": "التهاب جلد العُقبة (الخدوش الطينية)",
+    "source": "horses.json"
+  },
+  "pasteurellosis-snuffles": {
+    "e": "Pasteurellosis (snuffles)",
+    "n": "داء الباستيريلا (الزكام المعدي)",
+    "source": "rabbits.json"
+  },
+  "patellar-luxation-in-cats": {
+    "e": "Patellar luxation in cats",
+    "n": "خلع الرضفة",
+    "source": "cats.json"
+  },
+  "patent-ductus-arteriosus": {
+    "e": "Patent ductus arteriosus",
+    "n": "القناة الشريانية السالكة",
+    "source": "dogs.json"
+  },
+  "pericardial-effusion": {
+    "e": "Pericardial effusion",
+    "n": "الانصباب التاموري",
+    "source": "dogs.json"
+  },
+  "periodontal-disease-in-cats": {
+    "e": "Periodontal disease in cats",
+    "n": "مرض اللثة والأنسجة الداعمة",
+    "source": "cats.json"
+  },
+  "permethrin-toxicity-in-cats": {
+    "e": "Permethrin toxicity in cats",
+    "n": "سمّية البيرميثرين",
+    "source": "cats.json"
+  },
+  "peste-des-petits-ruminants-ppr": {
+    "e": "Peste des petits ruminants (PPR)",
+    "n": "طاعون المجترات الصغيرة",
+    "source": "small-ruminants.json"
+  },
+  "phacoclastic-uveitis": {
+    "e": "Phacoclastic uveitis",
+    "n": "التهاب العنبية البلاستيكي (عدوى إنسيفاليتوزون في العدسة)",
+    "source": "rabbits.json"
+  },
+  "photosensitization": {
+    "e": "Photosensitization",
+    "n": "التحسس الضوئي",
+    "source": "cattle.json"
+  },
+  "pinworm-passalurus-ambiguus": {
+    "e": "Pinworm (Passalurus ambiguus)",
+    "n": "الدودة الدبوسية للأرانب",
+    "source": "rabbits.json"
+  },
+  "pituitary-pars-intermedia-dysfunction": {
+    "e": "Pituitary pars intermedia dysfunction",
+    "n": "خلل الغدة النخامية الجزء الأوسط (كوشينغ الخيلي)",
+    "source": "horses.json"
+  },
+  "placentitis": {
+    "e": "Placentitis",
+    "n": "التهاب المشيمة",
+    "source": "horses.json"
+  },
+  "plague-in-cats": {
+    "e": "Plague in cats",
+    "n": "الطاعون عند القطط",
+    "source": "cats.json"
+  },
+  "polioencephalomalacia": {
+    "e": "Polioencephalomalacia",
+    "n": "تلين الدماغ قشري المخ",
+    "source": "cattle.json"
+  },
+  "polioencephalomalacia-cerebrocortical-necrosis": {
+    "e": "Polioencephalomalacia (cerebrocortical necrosis)",
+    "n": "تلين قشرة الدماغ (نخر القشرة المخية)",
+    "source": "small-ruminants.json"
+  },
+  "polyarthritis-of-growing-lambs-kids": {
+    "e": "Polyarthritis of growing lambs/kids",
+    "n": "التهاب المفاصل المتعدد عند الصغار النامية",
+    "source": "small-ruminants.json"
+  },
+  "polycystic-kidney-disease-in-cats": {
+    "e": "Polycystic kidney disease in cats",
+    "n": "داء الكلى متعددة الكيسات",
+    "source": "cats.json"
+  },
+  "polysaccharide-storage-myopathy": {
+    "e": "Polysaccharide storage myopathy",
+    "n": "اعتلال العضلات بتخزين عديد السكريات",
+    "source": "horses.json"
+  },
+  "portosystemic-shunt-in-cats": {
+    "e": "Portosystemic shunt in cats",
+    "n": "التحويلة البابية الجهازية",
+    "source": "cats.json"
+  },
+  "postparturient-hemoglobinuria": {
+    "e": "Postparturient hemoglobinuria",
+    "n": "البيلة الهيموغلوبينية بعد الولادة",
+    "source": "cattle.json"
+  },
+  "potomac-horse-fever": {
+    "e": "Potomac horse fever",
+    "n": "حمى حصان البوتوماك",
+    "source": "horses.json"
+  },
+  "pregnancy-toxemia": {
+    "e": "Pregnancy toxemia",
+    "n": "تسمم الحمل",
+    "source": "rabbits.json"
+  },
+  "pregnancy-toxemia-twin-lamb-disease": {
+    "e": "Pregnancy toxemia (twin-lamb disease)",
+    "n": "تسمم الحمل (مرض الحمل التوأمي)",
+    "source": "small-ruminants.json"
+  },
+  "progressive-retinal-atrophy-in-cats": {
+    "e": "Progressive retinal atrophy in cats",
+    "n": "ضمور الشبكية المترقي",
+    "source": "cats.json"
+  },
+  "pseudocowpox": {
+    "e": "Pseudocowpox",
+    "n": "جدري البقر الكاذب",
+    "source": "cattle.json"
+  },
+  "pseudopregnancy": {
+    "e": "Pseudopregnancy",
+    "n": "الحمل الكاذب",
+    "source": "dogs.json"
+  },
+  "pseudotuberculosis-yersinia-pseudotuberculosis": {
+    "e": "Pseudotuberculosis (Yersinia pseudotuberculosis)",
+    "n": "السل الكاذب (اليرسينيا)",
+    "source": "rabbits.json"
+  },
+  "pyelonephritis-in-cats": {
+    "e": "Pyelonephritis in cats",
+    "n": "التهاب الحويضة والكلية",
+    "source": "cats.json"
+  },
+  "pyometra": {
+    "e": "Pyometra",
+    "n": "تقيح الرحم (البيومترا)",
+    "source": "dogs.json"
+  },
+  "pyometra-2": {
+    "e": "Pyometra",
+    "n": "قيح الرحم (التهاب الرحم القيحي)",
+    "source": "rabbits.json"
+  },
+  "pyometra-in-cats": {
+    "e": "Pyometra in cats",
+    "n": "تقيّح الرحم",
+    "source": "cats.json"
+  },
+  "pyothorax-in-cats": {
+    "e": "Pyothorax in cats",
+    "n": "الانصباب القيحي الجنبي (البيوثوراكس)",
+    "source": "cats.json"
+  },
+  "q-fever": {
+    "e": "Q fever",
+    "n": "حمى كيو",
+    "source": "small-ruminants.json"
+  },
+  "rabbit-coronavirus-enteritis": {
+    "e": "Rabbit coronavirus enteritis",
+    "n": "التهاب الأمعاء بفيروس كورونا الأرانب",
+    "source": "rabbits.json"
+  },
+  "rabbit-hemorrhagic-disease-rhdv1": {
+    "e": "Rabbit hemorrhagic disease (RHDV1)",
+    "n": "مرض النزف الفيروسي للأرانب (النوع الأول)",
+    "source": "rabbits.json"
+  },
+  "rabbit-hemorrhagic-disease-rhdv2": {
+    "e": "Rabbit hemorrhagic disease (RHDV2)",
+    "n": "مرض النزف الفيروسي للأرانب (النوع الثاني)",
+    "source": "rabbits.json"
+  },
+  "rabbit-syphilis-treponematosis": {
+    "e": "Rabbit syphilis (treponematosis)",
+    "n": "سفلس الأرانب (داء اللولبيات التناسلي)",
+    "source": "rabbits.json"
+  },
+  "rabbit-tapeworm-cittotaenia-ctenoides": {
+    "e": "Rabbit tapeworm (Cittotaenia ctenoides)",
+    "n": "الدودة الشريطية للأرانب (سيتوتينيا)",
+    "source": "rabbits.json"
+  },
+  "rabies": {
+    "e": "Rabies",
+    "n": "داء الكلب",
+    "source": "cats.json"
+  },
+  "rabies-2": {
+    "e": "Rabies",
+    "n": "داء الكلب (السعار)",
+    "source": "dogs.json"
+  },
+  "ragwort-pyrrolizidine-alkaloid-poisoning": {
+    "e": "Ragwort / pyrrolizidine alkaloid poisoning",
+    "n": "التسمم بنبات الشيخة (قلويدات بيروليزيدين)",
+    "source": "small-ruminants.json"
+  },
+  "rain-scald-dermatophilus-congolensis": {
+    "e": "Rain scald (Dermatophilus congolensis)",
+    "n": "حرقة المطر (التهاب الجلد بالديرماتوفيلوس)",
+    "source": "horses.json"
+  },
+  "recurrent-laryngeal-neuropathy": {
+    "e": "Recurrent laryngeal neuropathy",
+    "n": "شلل العصب الحنجري الراجع",
+    "source": "horses.json"
+  },
+  "red-maple-leaf-toxicity": {
+    "e": "Red maple leaf toxicity",
+    "n": "تسمم أوراق القيقب الأحمر",
+    "source": "horses.json"
+  },
+  "renal-failure-nephrosis": {
+    "e": "Renal failure / nephrosis",
+    "n": "الفشل الكلوي والتنكس الكلوي",
+    "source": "small-ruminants.json"
+  },
+  "retained-placenta": {
+    "e": "Retained placenta",
+    "n": "احتباس المشيمة",
+    "source": "cattle.json"
+  },
+  "retrobulbar-abscess": {
+    "e": "Retrobulbar abscess",
+    "n": "الخراج خلف المقلة والجحوظ",
+    "source": "rabbits.json"
+  },
+  "rhodococcus-equi-pneumonia": {
+    "e": "Rhodococcus equi pneumonia",
+    "n": "التهاب الرئة بالرودوكوكس في المهرات",
+    "source": "horses.json"
+  },
+  "rhododendron-grayanotoxin-poisoning": {
+    "e": "Rhododendron (grayanotoxin) poisoning",
+    "n": "التسمم بالرودودندرون (غرايانوتوكسين)",
+    "source": "small-ruminants.json"
+  },
+  "rickets-osteomalacia": {
+    "e": "Rickets / osteomalacia",
+    "n": "الكساح ولين العظام",
+    "source": "small-ruminants.json"
+  },
+  "rift-valley-fever": {
+    "e": "Rift Valley fever",
+    "n": "حمى الوادي المتصدع",
+    "source": "cattle.json"
+  },
+  "ringworm": {
+    "e": "Ringworm",
+    "n": "القوباء الحلقية",
+    "source": "cattle.json"
+  },
+  "ringworm-dermatophytosis": {
+    "e": "Ringworm (dermatophytosis)",
+    "n": "السعفة (القوباء الحلقية)",
+    "source": "horses.json"
+  },
+  "ringworm-dermatophytosis-2": {
+    "e": "Ringworm (dermatophytosis)",
+    "n": "القوباء الحلقية (الفطار الجلدي)",
+    "source": "small-ruminants.json"
+  },
+  "rotaviral-enteritis": {
+    "e": "Rotaviral enteritis",
+    "n": "التهاب الأمعاء بالفيروس العجلي",
+    "source": "rabbits.json"
+  },
+  "rotavirus-calf-diarrhea": {
+    "e": "Rotavirus calf diarrhea",
+    "n": "إسهال العجول بفيروس الروتا",
+    "source": "cattle.json"
+  },
+  "roundworm-infection-toxocara-canis": {
+    "e": "Roundworm infection (Toxocara canis)",
+    "n": "الديدان الأسطوانية (التوكسوكارا)",
+    "source": "dogs.json"
+  },
+  "ruminal-acidosis": {
+    "e": "Ruminal acidosis",
+    "n": "الحماض الكرشي",
+    "source": "cattle.json"
+  },
+  "ruminal-acidosis-grain-overload": {
+    "e": "Ruminal acidosis (grain overload)",
+    "n": "حماض الكرش (فرط الحبوب)",
+    "source": "small-ruminants.json"
+  },
+  "ruminal-and-abomasal-mycosis": {
+    "e": "Ruminal and abomasal mycosis",
+    "n": "الفطار الكرشي والمنفحي",
+    "source": "small-ruminants.json"
+  },
+  "ruminal-bloat": {
+    "e": "Ruminal bloat",
+    "n": "النفاخ الكرشي",
+    "source": "cattle.json"
+  },
+  "salmonella-abortion": {
+    "e": "Salmonella abortion",
+    "n": "إجهاض السالمونيلا",
+    "source": "small-ruminants.json"
+  },
+  "salmonellosis": {
+    "e": "Salmonellosis",
+    "n": "داء السلمونيلا",
+    "source": "dogs.json"
+  },
+  "sand-impaction": {
+    "e": "Sand impaction",
+    "n": "الانحشار الرملي",
+    "source": "horses.json"
+  },
+  "sarcoptic-mange": {
+    "e": "Sarcoptic mange",
+    "n": "الجرب الساركوبتي",
+    "source": "dogs.json"
+  },
+  "sarcoptic-mange-2": {
+    "e": "Sarcoptic mange",
+    "n": "الجرب القارمي (ساركوبتس)",
+    "source": "rabbits.json"
+  },
+  "schmallenberg-virus-infection": {
+    "e": "Schmallenberg virus infection",
+    "n": "عدوى فيروس شمالنبرغ",
+    "source": "small-ruminants.json"
+  },
+  "scottish-fold-osteochondrodysplasia": {
+    "e": "Scottish Fold osteochondrodysplasia",
+    "n": "خلل التنسج الغضروفي العظمي للسكوتش فولد",
+    "source": "cats.json"
+  },
+  "scrapie": {
+    "e": "Scrapie",
+    "n": "السكرابي (حكاك الأغنام)",
+    "source": "small-ruminants.json"
+  },
+  "seizures-and-epilepsy": {
+    "e": "Seizures and epilepsy",
+    "n": "النوبات والتشنجات (الصرع)",
+    "source": "rabbits.json"
+  },
+  "septic-arthritis": {
+    "e": "Septic arthritis",
+    "n": "التهاب المفصل الإنتاني",
+    "source": "horses.json"
+  },
+  "septic-arthritis-2": {
+    "e": "Septic arthritis",
+    "n": "التهاب المفاصل الإنتاني",
+    "source": "rabbits.json"
+  },
+  "sheep-and-goat-pox": {
+    "e": "Sheep and goat pox",
+    "n": "جدري الأغنام والماعز",
+    "source": "small-ruminants.json"
+  },
+  "sheep-scab-psoroptes-ovis": {
+    "e": "Sheep scab (Psoroptes ovis)",
+    "n": "جرب الأغنام (البسوروبتس)",
+    "source": "small-ruminants.json"
+  },
+  "shope-fibroma": {
+    "e": "Shope fibroma",
+    "n": "الورم الليفي شوب",
+    "source": "rabbits.json"
+  },
+  "shope-papillomatosis": {
+    "e": "Shope papillomatosis",
+    "n": "الورم الحليمي شوب",
+    "source": "rabbits.json"
+  },
+  "sinusitis": {
+    "e": "Sinusitis",
+    "n": "التهاب الجيوب الأنفية",
+    "source": "horses.json"
+  },
+  "sore-hocks-ulcerative-pododermatitis": {
+    "e": "Sore hocks (ulcerative pododermatitis)",
+    "n": "تقرح أخمص القدم (التهاب الجلد القرحي)",
+    "source": "rabbits.json"
+  },
+  "splints": {
+    "e": "Splints",
+    "n": "الجبائر العظمية (التهاب عظم المدفع)",
+    "source": "horses.json"
+  },
+  "spondylosis": {
+    "e": "Spondylosis",
+    "n": "داء الفقار (تنكس العمود الفقري)",
+    "source": "rabbits.json"
+  },
+  "sporotrichosis-in-cats": {
+    "e": "Sporotrichosis in cats",
+    "n": "داء السبورتريكس",
+    "source": "cats.json"
+  },
+  "squamous-cell-carcinoma-in-cats": {
+    "e": "Squamous cell carcinoma in cats",
+    "n": "سرطان الخلايا الحرشفية",
+    "source": "cats.json"
+  },
+  "staphylococcal-mastitis": {
+    "e": "Staphylococcal mastitis",
+    "n": "التهاب الضرع بالمكورات العنقودية",
+    "source": "cattle.json"
+  },
+  "staphylococcosis": {
+    "e": "Staphylococcosis",
+    "n": "داء المكورات العنقودية",
+    "source": "rabbits.json"
+  },
+  "steroid-responsive-meningitis-arteritis": {
+    "e": "Steroid-responsive meningitis-arteritis",
+    "n": "التهاب السحايا والشرايين المستجيب للستيرويد",
+    "source": "dogs.json"
+  },
+  "strangles": {
+    "e": "Strangles",
+    "n": "الخناق الخيلي",
+    "source": "horses.json"
+  },
+  "strangulating-lipoma": {
+    "e": "Strangulating lipoma",
+    "n": "الورم الشحمي المخنق",
+    "source": "horses.json"
+  },
+  "streptococcus-agalactiae-mastitis": {
+    "e": "Streptococcus agalactiae mastitis",
+    "n": "التهاب الضرع بالعقدية اللبنية",
+    "source": "cattle.json"
+  },
+  "subcutaneous-abscesses": {
+    "e": "Subcutaneous abscesses",
+    "n": "الخراجات تحت الجلد",
+    "source": "rabbits.json"
+  },
+  "summer-mastitis": {
+    "e": "Summer mastitis",
+    "n": "التهاب الضرع الصيفي",
+    "source": "cattle.json"
+  },
+  "superficial-digital-flexor-tendinitis": {
+    "e": "Superficial digital flexor tendinitis",
+    "n": "التهاب وتر المثنية الرقمية السطحية",
+    "source": "horses.json"
+  },
+  "surra": {
+    "e": "Surra",
+    "n": "السُّرّا",
+    "source": "horses.json"
+  },
+  "suspensory-desmitis": {
+    "e": "Suspensory desmitis",
+    "n": "التهاب الرباط المعلق",
+    "source": "horses.json"
+  },
+  "swayback-enzootic-ataxia-copper-deficiency": {
+    "e": "Swayback (enzootic ataxia, copper deficiency)",
+    "n": "الترنح الإنزيمي (نقص النحاس)",
+    "source": "small-ruminants.json"
+  },
+  "sweet-itch-insect-bite-hypersensitivity": {
+    "e": "Sweet itch (insect bite hypersensitivity)",
+    "n": "حكة الصيف (حساسية لدغ الحشرات)",
+    "source": "horses.json"
+  },
+  "taenia-pisiformis-cysticercosis": {
+    "e": "Taenia pisiformis cysticercosis",
+    "n": "داء الكيسيات المذنبة (تينيا بيزي فورميس)",
+    "source": "rabbits.json"
+  },
+  "teladorsagia-infection-ostertagiasis-of-sheep": {
+    "e": "Teladorsagia infection (ostertagiasis of sheep)",
+    "n": "عدوى التيلادورساجيا (التهاب المنفحة)",
+    "source": "small-ruminants.json"
+  },
+  "testicular-neoplasia": {
+    "e": "Testicular neoplasia",
+    "n": "أورام الخصية",
+    "source": "rabbits.json"
+  },
+  "tetanus": {
+    "e": "Tetanus",
+    "n": "الكزاز",
+    "source": "cattle.json"
+  },
+  "tetanus-2": {
+    "e": "Tetanus",
+    "n": "الكزاز (التيتانوس)",
+    "source": "dogs.json"
+  },
+  "theileriosis-east-coast-fever": {
+    "e": "Theileriosis (East Coast fever)",
+    "n": "الثايلريوز (حمى الساحل الشرقي)",
+    "source": "cattle.json"
+  },
+  "theileriosis-ovine-caprine": {
+    "e": "Theileriosis (ovine/caprine)",
+    "n": "الثايليريا بالمجترات الصغيرة",
+    "source": "small-ruminants.json"
+  },
+  "thromboembolic-meningoencephalitis": {
+    "e": "Thromboembolic meningoencephalitis",
+    "n": "التهاب السحايا والدماغ الخثاري",
+    "source": "cattle.json"
+  },
+  "thrush": {
+    "e": "Thrush",
+    "n": "عفن الضفدع",
+    "source": "horses.json"
+  },
+  "thymoma": {
+    "e": "Thymoma",
+    "n": "الورم التيموسي (الثيموما)",
+    "source": "rabbits.json"
+  },
+  "tick-pyemia": {
+    "e": "Tick pyemia",
+    "n": "تقيح القراد عند الحملان",
+    "source": "small-ruminants.json"
+  },
+  "tooth-resorption-in-cats": {
+    "e": "Tooth resorption in cats",
+    "n": "ارتشاف الأسنان",
+    "source": "cats.json"
+  },
+  "toxocara-cati-infection": {
+    "e": "Toxocara cati infection",
+    "n": "عدوى التوكسوكارا",
+    "source": "cats.json"
+  },
+  "toxoplasma-abortion": {
+    "e": "Toxoplasma abortion",
+    "n": "إجهاض التوكسوبلازما",
+    "source": "small-ruminants.json"
+  },
+  "toxoplasmosis-in-cats": {
+    "e": "Toxoplasmosis in cats",
+    "n": "داء المقوسات",
+    "source": "cats.json"
+  },
+  "tracheal-collapse": {
+    "e": "Tracheal collapse",
+    "n": "انهيار القصبة الهوائية",
+    "source": "dogs.json"
+  },
+  "transmissible-venereal-tumor": {
+    "e": "Transmissible venereal tumor",
+    "n": "الورم التناسلي المنقول",
+    "source": "dogs.json"
+  },
+  "traumatic-reticuloperitonitis": {
+    "e": "Traumatic reticuloperitonitis",
+    "n": "التهاب الشبكية والبريتون الرضي",
+    "source": "cattle.json"
+  },
+  "trichostrongylosis": {
+    "e": "Trichostrongylosis",
+    "n": "داء الشعرينات المعدية (الترايكوسترونجيلوس)",
+    "source": "small-ruminants.json"
+  },
+  "tritrichomonas-foetus-diarrhea": {
+    "e": "Tritrichomonas foetus diarrhea",
+    "n": "إسهال التريتريكوموناس",
+    "source": "cats.json"
+  },
+  "trypanosomiasis": {
+    "e": "Trypanosomiasis",
+    "n": "داء المثقبيات",
+    "source": "cattle.json"
+  },
+  "tuberculosis-in-small-ruminants": {
+    "e": "Tuberculosis in small ruminants",
+    "n": "السل البقري بالمجترات الصغيرة",
+    "source": "small-ruminants.json"
+  },
+  "tularemia": {
+    "e": "Tularemia",
+    "n": "التولاريميا (حمى الأرانب)",
+    "source": "rabbits.json"
+  },
+  "tularemia-in-cats": {
+    "e": "Tularemia in cats",
+    "n": "التولاريميا عند القطط",
+    "source": "cats.json"
+  },
+  "tyzzer-disease": {
+    "e": "Tyzzer disease",
+    "n": "مرض تايزر",
+    "source": "rabbits.json"
+  },
+  "udder-edema": {
+    "e": "Udder edema",
+    "n": "وذمة الضرع",
+    "source": "cattle.json"
+  },
+  "ulcerative-posthitis-pizzle-rot": {
+    "e": "Ulcerative posthitis (pizzle rot)",
+    "n": "التهاب القلفة التقرحي",
+    "source": "small-ruminants.json"
+  },
+  "umbilical-abscess-navel-ill-complications": {
+    "e": "Umbilical abscess / navel ill complications",
+    "n": "خراجات السرة ومضاعفاتها عند المواليد",
+    "source": "small-ruminants.json"
+  },
+  "urea-poisoning": {
+    "e": "Urea poisoning",
+    "n": "التسمم باليوريا",
+    "source": "cattle.json"
+  },
+  "urine-scald": {
+    "e": "Urine scald",
+    "n": "حروق البول (سفع البول)",
+    "source": "rabbits.json"
+  },
+  "urolithiasis": {
+    "e": "Urolithiasis",
+    "n": "التحصي البولي",
+    "source": "cattle.json"
+  },
+  "urolithiasis-2": {
+    "e": "Urolithiasis",
+    "n": "حصيات الجهاز البولي",
+    "source": "rabbits.json"
+  },
+  "urolithiasis-obstructive": {
+    "e": "Urolithiasis (obstructive)",
+    "n": "الحصيات البولية الانسدادية",
+    "source": "small-ruminants.json"
+  },
+  "uroperitoneum": {
+    "e": "Uroperitoneum",
+    "n": "البطن البولي (تمزق المثانة الوليدي)",
+    "source": "horses.json"
+  },
+  "uterine-adenocarcinoma": {
+    "e": "Uterine adenocarcinoma",
+    "n": "سرطان الرحم الغدي",
+    "source": "rabbits.json"
+  },
+  "uterine-prolapse": {
+    "e": "Uterine prolapse",
+    "n": "تدلي الرحم",
+    "source": "cattle.json"
+  },
+  "uveitis-in-cats": {
+    "e": "Uveitis in cats",
+    "n": "التهاب القزحية",
+    "source": "cats.json"
+  },
+  "vaginal-prolapse": {
+    "e": "Vaginal prolapse",
+    "n": "تدلي المهبل",
+    "source": "small-ruminants.json"
+  },
+  "vesicular-stomatitis": {
+    "e": "Vesicular stomatitis",
+    "n": "التهاب الفم الحويصلي",
+    "source": "cattle.json"
+  },
+  "vestibular-disease-in-cats": {
+    "e": "Vestibular disease in cats",
+    "n": "المرض الدهليزي",
+    "source": "cats.json"
+  },
+  "vitamin-a-deficiency": {
+    "e": "Vitamin A deficiency",
+    "n": "نقص فيتامين أ",
+    "source": "cattle.json"
+  },
+  "vitamin-d-toxicosis-calcinosis": {
+    "e": "Vitamin D toxicosis (calcinosis)",
+    "n": "تسمم فيتامين د (التكلس المرضي)",
+    "source": "rabbits.json"
+  },
+  "von-willebrand-disease": {
+    "e": "Von Willebrand disease",
+    "n": "داء فون ويلبراند",
+    "source": "dogs.json"
+  },
+  "weaning-enteritis-complex": {
+    "e": "Weaning enteritis complex",
+    "n": "معقد التهاب أمعاء الفطام",
+    "source": "rabbits.json"
+  },
+  "west-nile-encephalitis": {
+    "e": "West Nile encephalitis",
+    "n": "التهاب الدماغ بغرب النيل",
+    "source": "horses.json"
+  },
+  "whipworm-infection-trichuris-vulpis": {
+    "e": "Whipworm infection (Trichuris vulpis)",
+    "n": "الديدان السوطية",
+    "source": "dogs.json"
+  },
+  "white-line-disease": {
+    "e": "White line disease",
+    "n": "مرض الخط الأبيض",
+    "source": "horses.json"
+  },
+  "white-muscle-disease": {
+    "e": "White muscle disease",
+    "n": "داء العضلات البيضاء",
+    "source": "cattle.json"
+  },
+  "white-muscle-disease-nutritional-myopathy": {
+    "e": "White muscle disease (nutritional myopathy)",
+    "n": "مرض العضلة البيضاء",
+    "source": "small-ruminants.json"
+  },
+  "xylitol-toxicity": {
+    "e": "Xylitol toxicity",
+    "n": "تسمم الزيليتول",
+    "source": "dogs.json"
+  },
+  "yersiniosis-enterocolitis": {
+    "e": "Yersiniosis (enterocolitis)",
+    "n": "داء اليرسينيا (التهاب الأمعاء)",
+    "source": "small-ruminants.json"
+  }
+}
