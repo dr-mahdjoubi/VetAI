@@ -1,0 +1,64 @@
+# Render blueprint for the VetAI Global static site (Batch F, audit item 5).
+#
+# SCOPE — READ BEFORE APPLYING:
+# - This file affects ONLY the Render mirror (drvet.onrender.com). GitHub
+#   Pages and the Cloudflare Workers mirror ignore it.
+# - Its live effect is UNVERIFIED: nothing in the repair program deploys,
+#   and this file has only been YAML-validated locally. Do not assume the
+#   headers below are live until Noe applies the blueprint and re-checks
+#   response headers with curl.
+# - `name` must match the existing Render service name before applying;
+#   a mismatched name may create a second service instead of updating the
+#   existing one. Noe confirms the service name/type/plan in the Render
+#   dashboard first (see docs/render-sleep-mitigation.md).
+# - There is no build step: the repo is static files served as-is.
+#
+# CACHE POLICY NOTES:
+# - Filenames carry NO content hash, so `immutable` is used ONLY for
+#   /assets/* and /books/* (rarely-changing binaries; a same-name update
+#   needs a cache-busting rename or a purge). /css/* and /js/* get a
+#   7-day max-age WITHOUT immutable so code updates propagate within a
+#   week at worst; the service worker already revalidates with
+#   cache:'no-cache' for repeat visits.
+# - / (index.html) and the content-bot files (json/news.json,
+#   json/resources.json, data/fresh-log.json) are no-cache so fresh
+#   content is never stale. The in-code cache-busters (?v=Date.now(),
+#   no-store fetches) are unchanged by this file.
+
+services:
+  - type: web
+    name: vetai-global
+    env: static
+    buildCommand: "echo 'static site: no build step'"
+    staticPublishPath: .
+    headers:
+      - path: /
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate"
+      - path: /index.html
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate"
+      - path: /json/news.json
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate"
+      - path: /json/resources.json
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate"
+      - path: /data/fresh-log.json
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate"
+      - path: /assets/*
+        name: Cache-Control
+        value: "public, max-age=31536000, immutable"
+      - path: /books/*
+        name: Cache-Control
+        value: "public, max-age=31536000, immutable"
+      - path: /css/*
+        name: Cache-Control
+        value: "public, max-age=604800, must-revalidate"
+      - path: /js/*
+        name: Cache-Control
+        value: "public, max-age=604800, must-revalidate"
+      - path: /data/library/*
+        name: Cache-Control
+        value: "public, max-age=604800, must-revalidate"

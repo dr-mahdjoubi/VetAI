@@ -835,13 +835,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/anaplasmosis-ovine-caprine.html</loc>
+    <loc>https://drvet.onrender.com/diseases/anaplasmosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/anaplasmosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/anaplasmosis-ovine-caprine.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -883,13 +883,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/anthrax-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/anthrax.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/anthrax.html</loc>
+    <loc>https://drvet.onrender.com/diseases/anthrax-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -943,13 +943,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/babesiosis-ovine.html</loc>
+    <loc>https://drvet.onrender.com/diseases/babesiosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/babesiosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/babesiosis-ovine.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1015,13 +1015,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/bluetongue-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/bluetongue.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/bluetongue.html</loc>
+    <loc>https://drvet.onrender.com/diseases/bluetongue-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1033,25 +1033,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/bordetella-bronchiseptica-infection-2.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://drvet.onrender.com/diseases/bordetella-bronchiseptica-infection.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/botulism-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/bordetella-bronchiseptica-infection-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/botulism.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://drvet.onrender.com/diseases/botulism-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1111,13 +1111,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/bracken-fern-poisoning-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/bracken-fern-poisoning.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/bracken-fern-poisoning.html</loc>
+    <loc>https://drvet.onrender.com/diseases/bracken-fern-poisoning-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1129,13 +1129,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/brucellosis-brucella-melitensis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/brucellosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/brucellosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/brucellosis-brucella-melitensis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1249,13 +1249,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/cataract-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/cataract.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/cataract.html</loc>
+    <loc>https://drvet.onrender.com/diseases/cataract-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1543,13 +1543,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/dermatophytosis-in-cats.html</loc>
+    <loc>https://drvet.onrender.com/diseases/dermatophytosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/dermatophytosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/dermatophytosis-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1573,25 +1573,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/dilated-cardiomyopathy-in-cats.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://drvet.onrender.com/diseases/dilated-cardiomyopathy.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/dipylidium-caninum-infection-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/dilated-cardiomyopathy-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/dipylidium-caninum-infection.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://drvet.onrender.com/diseases/dipylidium-caninum-infection-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1717,6 +1717,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://drvet.onrender.com/diseases/entropion.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://drvet.onrender.com/diseases/entropion-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1724,12 +1730,6 @@
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/entropion-in-cats.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drvet.onrender.com/diseases/entropion.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1771,13 +1771,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/epilepsy-in-cats.html</loc>
+    <loc>https://drvet.onrender.com/diseases/epilepsy.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/epilepsy.html</loc>
+    <loc>https://drvet.onrender.com/diseases/epilepsy-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1897,13 +1897,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/exocrine-pancreatic-insufficiency-in-cats.html</loc>
+    <loc>https://drvet.onrender.com/diseases/exocrine-pancreatic-insufficiency.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/exocrine-pancreatic-insufficiency.html</loc>
+    <loc>https://drvet.onrender.com/diseases/exocrine-pancreatic-insufficiency-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1921,13 +1921,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/fasciolosis-liver-fluke.html</loc>
+    <loc>https://drvet.onrender.com/diseases/fasciolosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/fasciolosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/fasciolosis-liver-fluke.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2167,13 +2167,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/flea-allergy-dermatitis-in-cats.html</loc>
+    <loc>https://drvet.onrender.com/diseases/flea-allergy-dermatitis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/flea-allergy-dermatitis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/flea-allergy-dermatitis-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2275,6 +2275,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://drvet.onrender.com/diseases/glaucoma.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://drvet.onrender.com/diseases/glaucoma-buphthalmia.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -2282,12 +2288,6 @@
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/glaucoma-in-cats.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drvet.onrender.com/diseases/glaucoma.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2323,13 +2323,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/heartwater-cowdriosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/heartwater.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/heartwater.html</loc>
+    <loc>https://drvet.onrender.com/diseases/heartwater-cowdriosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2371,13 +2371,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/hepatic-lipidosis-in-cats.html</loc>
+    <loc>https://drvet.onrender.com/diseases/hepatic-lipidosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/hepatic-lipidosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/hepatic-lipidosis-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2437,13 +2437,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/hypomagnesemia-grass-tetany-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/hypomagnesemia-grass-tetany.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/hypomagnesemia-grass-tetany.html</loc>
+    <loc>https://drvet.onrender.com/diseases/hypomagnesemia-grass-tetany-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2551,13 +2551,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/johne-s-disease-paratuberculosis-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/johne-s-disease-paratuberculosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/johne-s-disease-paratuberculosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/johne-s-disease-paratuberculosis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2581,13 +2581,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/laminitis-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/laminitis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/laminitis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/laminitis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2641,6 +2641,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://drvet.onrender.com/diseases/leptospirosis.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://drvet.onrender.com/diseases/leptospirosis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -2653,19 +2659,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/leptospirosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/lice-infestation.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/lice-infestation-haemodipsus-ventricosus.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drvet.onrender.com/diseases/lice-infestation.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2815,25 +2815,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/metritis-postpartum.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://drvet.onrender.com/diseases/metritis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/milk-fever-hypocalcemia.html</loc>
+    <loc>https://drvet.onrender.com/diseases/metritis-postpartum.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/milk-fever.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://drvet.onrender.com/diseases/milk-fever-hypocalcemia.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3007,6 +3007,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://drvet.onrender.com/diseases/osteoarthritis.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://drvet.onrender.com/diseases/osteoarthritis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3019,19 +3025,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/osteoarthritis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/osteochondrosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/osteochondrosis-dissecans-ocd.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drvet.onrender.com/diseases/osteochondrosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3133,13 +3133,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/paramphistomosis-rumen-fluke.html</loc>
+    <loc>https://drvet.onrender.com/diseases/paramphistomosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/paramphistomosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/paramphistomosis-rumen-fluke.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3235,13 +3235,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/polioencephalomalacia-cerebrocortical-necrosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/polioencephalomalacia.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/polioencephalomalacia.html</loc>
+    <loc>https://drvet.onrender.com/diseases/polioencephalomalacia-cerebrocortical-necrosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3283,13 +3283,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/pregnancy-toxemia-twin-lamb-disease.html</loc>
+    <loc>https://drvet.onrender.com/diseases/pregnancy-toxemia.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/pregnancy-toxemia.html</loc>
+    <loc>https://drvet.onrender.com/diseases/pregnancy-toxemia-twin-lamb-disease.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3325,6 +3325,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://drvet.onrender.com/diseases/pyometra.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://drvet.onrender.com/diseases/pyometra-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3332,12 +3338,6 @@
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/pyometra-in-cats.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drvet.onrender.com/diseases/pyometra.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3385,13 +3385,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/rabies-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/rabies.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/rabies.html</loc>
+    <loc>https://drvet.onrender.com/diseases/rabies-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3463,7 +3463,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/ringworm-dermatophytosis-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/ringworm.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3475,7 +3475,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/ringworm.html</loc>
+    <loc>https://drvet.onrender.com/diseases/ringworm-dermatophytosis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3499,13 +3499,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/ruminal-acidosis-grain-overload.html</loc>
+    <loc>https://drvet.onrender.com/diseases/ruminal-acidosis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/ruminal-acidosis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/ruminal-acidosis-grain-overload.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3541,13 +3541,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/sarcoptic-mange-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/sarcoptic-mange.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/sarcoptic-mange.html</loc>
+    <loc>https://drvet.onrender.com/diseases/sarcoptic-mange-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3577,13 +3577,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/septic-arthritis-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/septic-arthritis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/septic-arthritis.html</loc>
+    <loc>https://drvet.onrender.com/diseases/septic-arthritis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3745,13 +3745,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/tetanus-2.html</loc>
+    <loc>https://drvet.onrender.com/diseases/tetanus.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/tetanus.html</loc>
+    <loc>https://drvet.onrender.com/diseases/tetanus-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3859,13 +3859,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/tularemia-in-cats.html</loc>
+    <loc>https://drvet.onrender.com/diseases/tularemia.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/tularemia.html</loc>
+    <loc>https://drvet.onrender.com/diseases/tularemia-in-cats.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3907,6 +3907,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://drvet.onrender.com/diseases/urolithiasis.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://drvet.onrender.com/diseases/urolithiasis-2.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -3914,12 +3920,6 @@
   </url>
   <url>
     <loc>https://drvet.onrender.com/diseases/urolithiasis-obstructive.html</loc>
-    <lastmod>2026-11-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://drvet.onrender.com/diseases/urolithiasis.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4009,13 +4009,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/white-muscle-disease-nutritional-myopathy.html</loc>
+    <loc>https://drvet.onrender.com/diseases/white-muscle-disease.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://drvet.onrender.com/diseases/white-muscle-disease.html</loc>
+    <loc>https://drvet.onrender.com/diseases/white-muscle-disease-nutritional-myopathy.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
