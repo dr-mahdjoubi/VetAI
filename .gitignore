@@ -1,0 +1,3 @@
+# RAG indexer local artifacts (Workstream 2, 2026-11-13)
+.rag-pdf-text/
+.rag-index-checkpoint.json

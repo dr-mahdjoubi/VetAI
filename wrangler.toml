@@ -4,3 +4,13 @@ compatibility_date = "2025-01-01"
 
 [ai]
 binding = "AI"
+
+# Vectorize binding for the RAG backend (Workstream 1, 2026-11-13).
+# Index `vetai-corpus` must be created with 1024 dimensions and cosine
+# metric to match the embedding model @cf/baai/bge-m3
+# (1024 output dimensions). Dimensions/metric cannot be changed after
+# creation. Setup steps: docs/VECTORIZE-SETUP.md. The [ai] binding
+# above is unchanged.
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "vetai-corpus"
