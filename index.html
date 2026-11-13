@@ -2975,16 +2975,6 @@ html.perf-idle body #cv{display:none!important}
             return text.replace(/[&<>"']/g, function(m) { return map[m]; });
         }
 
-        // Live Visitors Simulator
-        setInterval(() => {
-            const counter = null;
-            if(counter) {
-                const current = parseInt(counter.innerText.replace(/,/g, ''));
-                const diff = Math.floor(Math.random() * 11) - 5;
-                const updated = Math.max(4800, current + diff);
-                counter.innerText = updated.toLocaleString();
-            }
-        }, 5000);
     </script>
 <script>
 
@@ -3265,7 +3255,7 @@ async function gen(){const st=q('#hrSt'),t=TOP[hk()%TOP.length];let txt=null,tag
 const prompt='اكتب معلومة جديدة ومفيدة وصحيحة بالعربية عن موضوع «'+t+'» في الطب البيطري والعلوم المرتبطة في 3 جمل، دون جرعات علاجية، وتجنب تكرار: '+feed.slice(-5).map(x=>x.x.slice(0,40)).join(' | ')+'. أعد النص فقط.';
 st.textContent='⏳ جارٍ التحضير...';
 try{const s=window.claude&&await claude.use('sample');if(s){const r=await s(prompt,{cache:false});txt=r&&r.text}}catch(e){}
-if(!txt&&window.VETAI_ENDPOINT){try{const r=await fetch(window.VETAI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:prompt})});const j=await r.json();txt=j.text||j.answer||null}catch(e){}}
+if(!txt&&window.VetAIClient&&typeof window.VetAIClient.ask==='function'){try{const r=await window.VetAIClient.ask(prompt,{});txt=r&&r.text?r.text:null}catch(e){}}
 if(!txt){const used=new Set(feed.map(x=>x.x)),free=POOL.filter(p=>!used.has(p)),L=free.length?free:POOL;txt=L[Math.floor(Math.random()*L.length)];tag='معلومة منتقاة'}
 feed.push({t:tag,h:new Date().toLocaleTimeString('ar-DZ',{hour:'2-digit',minute:'2-digit'}),x:txt});feed=feed.slice(-20);try{localStorage.setItem('hrfeed',JSON.stringify(feed))}catch(e){}paint();st.textContent='✅ أضيفت معلومة جديدة';return true} q('#hrGen').onclick=gen;
 const on=q('#hrOn');try{on.checked=localStorage.getItem('hron')=='1'}catch(e){}
@@ -3309,13 +3299,17 @@ function setAud(a){aud=a;try{localStorage.setItem('aud',a)}catch(e){}document.bo
 window.__ref=show;window.__refR=R;q('#aud-pro').onclick=()=>setAud('pro');q('#aud-pub').onclick=()=>setAud('pub');setAud(aud);
 const gs=q('#gs'),gr=q('#gsr');
 function openEl(el){let d=el;while(d){if(d.tagName=='DETAILS')d.open=true;d=d.parentElement}const s=el.closest('section[id^=view-]');if(s)switchTab(s.id.slice(5));setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'center'}),200)}
-gs.oninput=()=>{const w=gs.value.trim().toLowerCase();if(w.length<2){gr.classList.add('hidden');return}const out=[];
-R.forEach((r,i)=>{if((r[0]+' '+r[1]+' '+r[2]+' '+r[8]).toLowerCase().includes(w))out.push(['📖 '+r[0],()=>{switchTab('ref');show('a:'+i)}])});
-T.forEach(t=>{if(t.join(' ').toLowerCase().includes(w))out.push(['☠️ '+t[0],()=>{switchTab('ref');show('ph')}])});
-DD.forEach(d=>{if(JSON.stringify(d).toLowerCase().includes(w))out.push(['⚖️ '+d[0],()=>{switchTab('ref');show('dd')}])});
-document.querySelectorAll('.art').forEach(a=>{if(a.textContent.toLowerCase().includes(w)&&out.length<14)out.push(['📝 '+a.querySelector('summary').textContent,()=>openEl(a)])});
+let _gsHay=null,_gsT=0;
+function runGs(){const w=gs.value.trim().toLowerCase();if(w.length<2){gr.classList.add('hidden');return}
+if(!_gsHay){_gsHay={R:R.map(r=>(r[0]+' '+r[1]+' '+r[2]+' '+r[8]).toLowerCase()),T:T.map(t=>t.join(' ').toLowerCase()),DD:DD.map(d=>JSON.stringify(d).toLowerCase())};}
+const out=[];
+R.forEach((r,i)=>{if(_gsHay.R[i].includes(w))out.push(['📖 '+r[0],()=>{switchTab('ref');show('a:'+i)}])});
+T.forEach((t,i)=>{if(_gsHay.T[i].includes(w))out.push(['☠️ '+t[0],()=>{switchTab('ref');show('ph')}])});
+DD.forEach((d,i)=>{if(_gsHay.DD[i].includes(w))out.push(['⚖️ '+d[0],()=>{switchTab('ref');show('dd')}])});
+const arts=document.querySelectorAll('.art');for(let ai2=0;ai2<arts.length&&out.length<14;ai2++){const a=arts[ai2];if(a.textContent.toLowerCase().includes(w))out.push(['📝 '+a.querySelector('summary').textContent,()=>openEl(a)])}
 gr.innerHTML='';out.slice(0,10).forEach(o=>{const b=document.createElement('button');b.className='block w-full text-right px-4 py-2 text-sm hover:bg-slate-800';b.textContent=o[0];b.onclick=()=>{gr.classList.add('hidden');o[1]()};gr.append(b)});
-const ai=document.createElement('button');ai.className='block w-full text-right px-4 py-2 text-sm text-vetCyan hover:bg-slate-800 border-t border-slate-700';ai.textContent='🧠 اسأل بيطري-AI عن: '+gs.value;ai.onclick=()=>{gr.classList.add('hidden');switchTab('chat');if(window.ask)ask(gs.value)};gr.append(ai);gr.classList.remove('hidden')};
+const ai=document.createElement('button');ai.className='block w-full text-right px-4 py-2 text-sm text-vetCyan hover:bg-slate-800 border-t border-slate-700';ai.textContent='🧠 اسأل بيطري-AI عن: '+gs.value;ai.onclick=()=>{gr.classList.add('hidden');switchTab('chat');if(window.ask)ask(gs.value)};gr.append(ai);gr.classList.remove('hidden')}
+gs.oninput=()=>{clearTimeout(_gsT);if(gs.value.trim().length<2){gr.classList.add('hidden');return}_gsT=setTimeout(runGs,180)};
 document.addEventListener('click',e=>{if(!e.target.closest('#gs,#gsr'))gr.classList.add('hidden')});})();
 </script>
 <script>
@@ -3462,6 +3456,7 @@ const groups=[...o.querySelectorAll('.mt-3 > div')];groups.forEach((gp,i)=>{cons
 o.onclick=e=>{const b=e.target.closest('.ex-opt');if(!b||b.parentNode.dataset.done)return;b.parentNode.dataset.done=1;d++;if(b.dataset.r==1){ok++;b.classList.add('ok')}else{b.classList.add('no');b.parentNode.querySelector('[data-r="1"]').classList.add('ok')}if(d==j.qs.length)g('sqr').textContent='النتيجة: '+ok+' / '+d+' ('+Math.round(ok/d*100)+'%)'}}catch(e){o.innerHTML='<p class="text-sm text-amber-300">تعذّر التوليد الآن (قد تحتاج الموافقة على تفعيل المساعد الذكي). استخدم الاختبارات الجاهزة أعلاه.</p>'}}}
 })();
 </script> 
+<script src="js/vetai-ai-client.js" defer></script>
 <script src="js/ai-engine.js" defer></script>
 <script src="js/supervisor.js" defer></script>
 
