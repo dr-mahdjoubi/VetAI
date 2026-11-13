@@ -1,6 +1,31 @@
 {
   "runs": [
     {
+      "at": "2026-11-13T06:59:52Z",
+      "added": [
+        {
+          "title": "Artificial intelligence in climate adaptation and health: emerging use, cases and considerations for the Western Pacific Region (WHO)",
+          "url": "https://iris.who.int/items/0cc04cb6-2085-4c0e-9d2e-9796168488b8",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 15,
+          "added": 1
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-11-12T16:55:47Z",
       "added": [],
       "sources": {
@@ -574,27 +599,8 @@
           "added": 0
         }
       }
-    },
-    {
-      "at": "2026-11-01T16:58:38Z",
-      "added": [],
-      "sources": {
-        "WHO IRIS": {
-          "found": 15,
-          "added": 0
-        },
-        "FAO Open Knowledge": {
-          "found": 0,
-          "added": 0,
-          "error": "HTTP 403"
-        },
-        "NCBI Bookshelf": {
-          "found": 13,
-          "added": 0
-        }
-      }
     }
   ],
-  "last_run": "2026-11-12T16:55:47Z",
-  "total_books": 1002
+  "last_run": "2026-11-13T06:59:52Z",
+  "total_books": 1003
 }
