@@ -1,0 +1,109 @@
+/* ============================================================
+   VetAI v7 — Reskin layer (STAGING — NOT deployed)
+   إعادة هندسة بصرية فقط: لا حذف ولا تعديل ولا إعادة صياغة
+   لأي نص أو وظيفة أو بيانات. كل القواعد هنا إضافية (override)
+   فوق أنماط الصفحة الأصلية، وتُرفع كملف مستقل.
+   1) Above-the-fold: القسم العلوي (هيدر + موجز + هيرو) داخل 100vh
+   2) بطاقات بصور فوتوغرافية حقيقية (تُحقن عبر vetai-v7-photos.js)
+   3) شبكة عصرية، ظلال متعددة الطبقات، تدرجات راقية
+   ============================================================ */
+
+/* ---------- 1) Above the fold: ضغط القسم العلوي ---------- */
+/* الشريط العلوي + موجز الأخبار: أنحف بلا مساس بالمحتوى */
+html body .mq.news-strip{padding:5px 12px!important;font-size:12.5px}
+html body .mq.news-strip .news-label{font-size:12px}
+/* صفوف البحث والفروع: تباعد مدمج */
+html body .toolrow{margin:6px 0!important}
+html body .paragraph-finder{padding:10px 14px!important;margin:6px 0!important}
+html body .branch-explorer{padding:6px 10px!important;margin:6px 0 0!important}
+/* حاوية main: هوامش علوية أصغر وتباعد أقسام أخف */
+html body main.flex-grow{padding-top:8px!important;padding-bottom:24px!important}
+html body #view-home.space-y-12>*+*{margin-top:20px!important}
+
+/* ترتيب بصري فقط (بلا مساس بالـ DOM): الهيرو فوق قسم v45 حتى يدخل
+   الموجز + الهيرو معًا في أول شاشة. قسم v45 يُدرج برمجيًا كأول ابن
+   في #view-home فيدفع الهيرو تحت الطيّة — order يعكس الترتيب المرئي فقط */
+html body #view-home{display:flex;flex-direction:column}
+html body #view-home>.vg-global-intro{order:-1}
+html body #view-home>#show45{order:0}
+/* الهيرو السينمائي: عنوان مدمج + مسرح أصغر + حشوة أخف */
+html body #view-home .vg-global-intro{padding:12px 22px 10px!important;margin:6px 0 0!important;border-radius:22px}
+html body #view-home .vg-global-intro h2{font-size:clamp(1.75rem,3.4vw,2.5rem)!important;line-height:1.22!important;margin:8px 0 6px!important;max-width:640px}
+html body #view-home .vg-global-intro .vg-lead{font-size:.95rem!important;line-height:1.7!important;max-width:620px}
+html body #view-home .vg-cine-stage{max-width:260px!important}
+html body #view-home .vg-cinematic{gap:24px!important}
+html body #view-home .vg-actions{margin-top:10px!important}
+html body #view-home .vg-trustline{margin-top:8px!important;font-size:.72rem}
+
+/* ---------- 2) بطاقات الصور الفوتوغرافية ---------- */
+/* قاعدة الصورة المشتركة: نسبة 16/9، ملء كامل، تكبير ناعم عند التمرير */
+.v7-photo{position:relative;display:block;overflow:hidden;background:#0b1220}
+.v7-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease}
+.v7-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(2,6,23,.45));pointer-events:none}
+
+/* بطاقات الوصول السريع (.bento > .qa): صورة علوية + صف الأيقونة والنص */
+html body .bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+html body .bento>.qa{padding:0!important;overflow:hidden;display:grid!important;grid-template-columns:auto minmax(0,1fr);grid-template-rows:96px auto auto;column-gap:12px;row-gap:2px;align-items:center;border-radius:18px}
+html body .bento>.qa .v7-photo{grid-column:1/-1;grid-row:1;height:96px;margin:0}
+html body .bento>.qa .ib{grid-column:1;grid-row:2/4;margin:0 0 14px 14px}
+html body .bento>.qa .t{grid-column:2;grid-row:2;align-self:end;margin:0;padding-top:12px}
+html body .bento>.qa .d{grid-column:2;grid-row:3;align-self:start;margin:0 0 14px;padding-bottom:0}
+html body .bento>.qa .go{top:106px!important;inset-inline-end:14px!important}
+html body .bento>.qa:hover .v7-photo img{transform:scale(1.07)}
+html body .bento>.qa:hover{box-shadow:0 18px 34px -18px rgba(2,6,23,.7),0 6px 14px -8px rgba(34,211,238,.25)}
+
+/* بطاقات واجهة v45 (#show45): صورة علوية + شارة أيقونة زجاجية فوقها */
+html body #show45 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+html body #show45 .grid .card{padding:0!important;overflow:hidden;display:flex;flex-direction:column;text-align:start;border-radius:18px}
+html body #show45 .grid .card .v7-photo{height:110px;flex:none}
+html body #show45 .grid .card .ic{position:absolute;z-index:2;inset-inline-start:12px;top:86px;width:36px;height:36px;display:grid;place-items:center;font-size:18px;background:rgba(11,18,32,.72);border:1px solid rgba(148,163,184,.35);border-radius:12px;backdrop-filter:blur(8px)}
+html body #show45 .grid .card b{display:block;padding:14px 16px 4px;font-size:15px}
+html body #show45 .grid .card .desc{display:block;padding:0 16px 16px;font-size:12.5px;line-height:1.65;color:var(--mut)}
+html body #show45 .grid .card{position:relative;background:linear-gradient(180deg,#0f172a,#0b1220)!important}
+html body #show45 .grid .card .desc{color:#cbd5e1!important}
+html body #show45 .grid .card:hover .v7-photo img{transform:scale(1.07)}
+html body #show45 .grid .card:hover{box-shadow:0 18px 34px -18px rgba(2,6,23,.7),0 6px 14px -8px rgba(34,211,238,.25)}
+
+/* بطاقات الجمهور الثلاث (.tri .aud-card): صورة علوية */
+html body .tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+html body .tri .aud-card{padding:0!important;overflow:hidden;display:flex;flex-direction:column;border-radius:18px}
+html body .tri .aud-card .v7-photo{height:100px;flex:none}
+html body .tri .aud-card>*:not(.v7-photo){margin-inline:16px}
+html body .tri .aud-card>*:last-child{margin-bottom:16px}
+html body .tri .aud-card:hover .v7-photo img{transform:scale(1.07)}
+
+/* بطاقات الأدوات العامة (.tool) وبطاقات الجامعات: صورة علوية عند توفرها */
+html body .tool.v7-has-photo,html body #uni-end .glass-panel.v7-has-photo{padding:0!important;overflow:hidden}
+html body .tool.v7-has-photo .v7-photo,html body #uni-end .glass-panel.v7-has-photo .v7-photo{height:104px}
+html body .tool.v7-has-photo>*:not(.v7-photo){margin-inline:16px}
+html body .tool.v7-has-photo>*:last-child{margin-bottom:16px}
+html body .tool.v7-has-photo:hover .v7-photo img{transform:scale(1.06)}
+/* احترام تقليل الحركة */
+@media (prefers-reduced-motion:reduce){
+  .v7-photo img{transition:none}
+  html body .bento>.qa:hover .v7-photo img,html body #show45 .grid .card:hover .v7-photo img,html body .tri .aud-card:hover .v7-photo img,html body .tool.v7-has-photo:hover .v7-photo img{transform:none}
+}
+
+/* ---------- 3) لمسات جمالية: تدرجات وظلال متعددة الطبقات ---------- */
+html body .glass-panel,html body .card{box-shadow:0 1px 2px rgba(2,6,23,.4),0 10px 26px -14px rgba(2,6,23,.6)}
+html body .sh2 h2{letter-spacing:-.01em}
+html body .sh2 .g{background:linear-gradient(90deg,#67e8f9,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- 4) التجاوب ---------- */
+@media (max-width:900px){
+  html body .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
+  html body #show45 .grid{grid-template-columns:1fr 1fr}
+  html body .tri{grid-template-columns:1fr 1fr}
+  html body #view-home .vg-cine-stage{max-width:230px!important}
+  html body #view-home .vg-global-intro h2{font-size:clamp(1.6rem,7vw,2.1rem)!important}
+}
+@media (max-width:560px){
+  /* بطاقات HUD العائمة: تصغير بدل إخفاء — لتبقى دائرة الحيوان ظاهرة */
+  html body #view-home .vg-hud-left,html body #view-home .vg-hud-right{transform:scale(.78);transform-origin:bottom center}
+  html body #view-home .vg-hud{font-size:.62rem}
+  html body .bento,html body #show45 .grid,html body .tri{grid-template-columns:1fr}
+  html body .bento>.qa .v7-photo{height:110px}
+  html body .bento>.qa{grid-template-rows:110px auto auto}
+  html body .bento>.qa .go{top:120px!important}
+  html body #view-home .vg-cine-stage{max-width:210px!important}
+}
