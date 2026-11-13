@@ -12,7 +12,9 @@
       "source_url": "https://example.com/article",
       "category": "animal-health",
       "published": "2026-10-09",
-      "status": "pending_review"
+      "status": "pending_review",
+      "is_sample": true,
+      "sample_note": "نموذج تجريبي — عنصر بيانات نموذجي (عنوان ومصدر ورابط مثال) غير معروض؛ لا يُحذف دون قرار المالك (STOP)."
     },
     {
       "id": "2026-10-25-001",
