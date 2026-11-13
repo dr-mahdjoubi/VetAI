@@ -1,0 +1,154 @@
+/* ==========================================================================
+   VetAI — Clean-UI staging layer (BELOW THE FOLD ONLY)
+   --------------------------------------------------------------------------
+   STAGING ONLY. This file has NO effect unless it is loaded, and nothing in
+   the live page loads it today: there is no <link> for it in index.html.
+   It is applied only when the gated loader injects it for "?clean=1"
+   previews (see docs/PERF-REPORT.md, section 6, for the exact snippet).
+   It must never be linked by default without Noe's explicit final-version
+   approval (standing HARD GATE for all design versions).
+
+   SCOPE (by construction, not by trust):
+   - Every rule is scoped to content views below the fold: the direct-child
+     content sections of <main> other than the home view, plus the two
+     named below-fold grids on the home view (#homeArts, #homeLocal).
+   - The top chrome, the intro block, the quick-access row, and the
+     daily-news block are outside this scope: they sit outside <main> or
+     inside the home view's first blocks, which no selector here matches.
+   - No rule here names the top chrome, the intro block, or the daily-news
+     block. A grep for those zone names over this file returns nothing.
+
+   NON-GOALS (deliberate, verified against the frozen head, lines 1-1612):
+   - No colour changes: the only colour token used is var(--a1), inside the
+     focus-ring rule, mirroring the ring the head already defines. No hex,
+     rgb, or named colours appear anywhere in this file.
+   - No font changes: no typeface property appears anywhere in this file.
+   - No logo, layout-identity, or structural changes: no display, position,
+     float, grid/flex container, width, or height declarations.
+   - No shadow or radius normalisation: the head already pins card shadows
+     (flat in the dark theme) and card radii (24px / --vx-r / 22px per
+     context) with high-specificity rules. This file does not fight them;
+     the one radius value it sets is the 12px focus-ring radius the head
+     itself uses. Card-like components (.dl, .bx-card, .ownb-card,
+     .aud-card, chat bubbles) each already carry deliberate radii and are
+     left untouched.
+   - No override flags, except inside the reduced-motion block (section 5),
+     where it is the standard way to honour the user's OS preference.
+
+   SPECIFICITY DISCIPLINE: rhythm and prose rules use :where() scoping plus
+   type selectors, so they sit BELOW any utility class (e.g. Tailwind
+   spacing) and only fill gaps where the existing cascade is silent.
+   Existing intentional spacing always wins. Logical properties are used
+   throughout so the Arabic-first RTL layout is untouched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1) Spacing rhythm — gentle vertical rhythm for plain stacked prose.
+   Only plain paragraphs/headings with no utility spacing are affected:
+   the type-only specificity below loses to every spacing utility, so
+   intentional gaps are never overridden. Margins collapse with any
+   heading margin above, so the result is the larger gap, never a sum.
+   -------------------------------------------------------------------------- */
+
+/* 1.1 Consecutive plain paragraphs inside below-fold content views. */
+:where(main > section:not(#view-home)) p + p {
+  margin-top: 0.75em;
+}
+
+/* 1.2 A plain paragraph directly under a section/content heading. */
+:where(main > section:not(#view-home)) :is(h2, h3) + p {
+  margin-top: 0.5em;
+}
+
+/* 1.3 The same paragraph rhythm inside the two named below-fold grids. */
+:where(#homeArts, #homeLocal) p + p {
+  margin-top: 0.75em;
+}
+
+/* --------------------------------------------------------------------------
+   2) Card polish — overflow safety only.
+   Radii and shadows are already governed by the head (see the top comment
+   of this file) and are intentionally not re-declared here. What was genuinely missing:
+   long unbroken strings (URLs, file names) could overflow card-like
+   containers that lack the overflow-wrap rule the head gives .card/.tool.
+   This extends that same value to the containers that lack it.
+   -------------------------------------------------------------------------- */
+
+/* 2.1 Bio-lab cards, chat message column, and the named home grids. */
+:where(main > section:not(#view-home)) :is(.bx-card, .msgs),
+:where(#homeArts, #homeLocal) > * {
+  overflow-wrap: anywhere;
+}
+
+/* 2.2 Download rows: keep long titles/URLs inside the row. */
+:where(main > section:not(#view-home)) .dl {
+  overflow-wrap: anywhere;
+}
+
+/* --------------------------------------------------------------------------
+   3) Readable line-lengths — prose inside wide cards.
+   68ch matches the precedent the head already uses for section prose.
+   Narrow cards are unaffected (their width already constrains the line);
+   only full-width cards gain the cap. No font or size change.
+   -------------------------------------------------------------------------- */
+
+/* 3.1 Card / tool / bio-card prose in below-fold content views. */
+:where(main > section:not(#view-home)) :is(.card, .tool, .bx-card) p {
+  max-width: 68ch;
+}
+
+/* 3.2 Prose inside the named below-fold grids. */
+:where(#homeArts, #homeLocal) p {
+  max-width: 68ch;
+}
+
+/* --------------------------------------------------------------------------
+   4) Focus-visible polish — belt and braces.
+   The head already defines a complete focus-visible ring (2px, offset 3px,
+   12px ring radius) for links, buttons, inputs, selects, textareas,
+   summaries, and tabbable elements. This section re-asserts exactly those
+   same values for interactive elements inside below-fold cards, so the
+   ring survives any intervening layer that removes outlines. Values are
+   copied from the head rule, not invented; no new colour is introduced.
+   -------------------------------------------------------------------------- */
+
+/* 4.1 Interactive elements inside below-fold cards keep a visible ring. */
+:where(main > section:not(#view-home)) :is(.card, .tool, .bx-card)
+  :is(a, button, summary):focus-visible,
+:where(#homeArts, #homeLocal) :is(a, button):focus-visible {
+  outline: 2px solid var(--a1);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   5) Reduced-motion respect — below the fold only.
+   The head disables motion only for a few named components. Users who set
+   the OS reduced-motion preference get the same treatment across all
+   below-fold content: animations and transitions collapse to a single
+   near-instant step (the .01ms pattern keeps animation/transition end
+   events firing for scripts that listen for them). The override flags
+   are confined to this block and only apply when the user asked for
+   reduced motion. The top chrome and intro block are untouched here too:
+   their motion is governed by the head alone.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  /* 5.1 Below-fold content views: near-instant motion, one iteration. */
+  :where(main > section:not(#view-home)) *,
+  :where(main > section:not(#view-home)) *::before,
+  :where(main > section:not(#view-home)) *::after,
+  :where(#homeArts, #homeLocal) *,
+  :where(#homeArts, #homeLocal) *::before,
+  :where(#homeArts, #homeLocal) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   End of staging layer. Integration: gated loader only — see
+   docs/PERF-REPORT.md section 6. Do not add a <link> for this file to
+   index.html without Noe's explicit final-version approval.
+   ========================================================================== */
