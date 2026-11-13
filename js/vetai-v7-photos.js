@@ -4,7 +4,7 @@
    تغيير أي نص أو وظيفة أو بيانات: الإضافة عنصر <span> واحد
    في أعلى البطاقة فقط. كل الروابط مُتحقق منها (HTTP 200).
    فشل أي صورة = تُزال بهدوء وتبقى البطاقة الأصلية كما هي.
-   إيقاف مؤقت: أضف ‎?v7photos=off إلى الرابط.
+   إيقاف مؤقت: أضف ?v7photos=off إلى الرابط.
    ============================================================ */
 (function () {
   'use strict';
@@ -100,6 +100,28 @@
       var p = byKeywords(t);
       if (p) inject(t, p, 'v7-has-photo');
     });
+    /* 5) زر تشغيل فيلم المنصة */
+    wireFilm();
+  }
+
+  /* 5) زر التشغيل الزجاجي فوق فيلم المنصة (تعديل 2026-11-12):
+     شارة تشغيل فوق الملصق تختفي عند التشغيل وتعود عند الإيقاف/الانتهاء.
+     أدوات التحكم الأصلية باقية كما هي وتعمل بعد بدء التشغيل. */
+  function wireFilm() {
+    var film = document.querySelector('#show45 .film');
+    if (!film || film.querySelector('.v7-play')) return;
+    var video = film.querySelector('video');
+    if (!video) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'v7-play';
+    btn.setAttribute('aria-label', 'تشغيل فيلم المنصة');
+    btn.innerHTML = '<span class="v7-play-badge" aria-hidden="true">▶</span>';
+    btn.addEventListener('click', function () { video.play().catch(function () {}); });
+    film.insertBefore(btn, film.firstChild);
+    video.addEventListener('play', function () { film.classList.add('v7-playing'); });
+    video.addEventListener('pause', function () { film.classList.remove('v7-playing'); });
+    video.addEventListener('ended', function () { film.classList.remove('v7-playing'); });
   }
 
   function ready(fn) {
