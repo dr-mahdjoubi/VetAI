@@ -1,17 +1,17 @@
 {
- "at": "2026-11-16T13:37:17.723Z",
+ "at": "2026-11-17T14:22:08.473Z",
  "base": "https://drvet.onrender.com",
  "probes": [
   {
    "provider": "pollinations/openai-fast",
    "ok": true,
-   "ms": 441,
+   "ms": 276,
    "note": "answer received"
   },
   {
    "provider": "pollinations/openai",
    "ok": true,
-   "ms": 266,
+   "ms": 178,
    "note": "answer received"
   },
   {
@@ -20,7 +20,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 1021
+   "ms": 1225
   },
   {
    "provider": "worker",
@@ -28,7 +28,7 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 883
+   "ms": 846
   },
   {
    "provider": "worker",
@@ -36,14 +36,14 @@
    "ok": true,
    "httpStatus": 200,
    "cors": "allowed",
-   "ms": 653
+   "ms": 856
   }
  ],
  "integrity": {
   "books": {
-   "count": 1004,
+   "count": 1005,
    "duplicates": 0,
-   "incomplete": 54
+   "incomplete": 55
   },
   "articles": {
    "count": 123
@@ -51,14 +51,15 @@
  },
  "index": {
   "path": "js/search-index.json",
-  "action": "verified-fresh",
-  "docs": 1127,
-  "tokens": 4690,
-  "srcHash": "1ef4c6823b8c686c"
+  "action": "rebuilt (source changed or corrupt)",
+  "docs": 1128,
+  "tokens": 4693,
+  "srcHash": "74495100e09027fc",
+  "bytes": 312628
  },
  "hard": [],
  "warn": [
-  "54 book entries missing title/url/desc"
+  "55 book entries missing title/url/desc"
  ],
  "verdict": "DEGRADED"
 }
