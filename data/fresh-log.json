@@ -1,6 +1,36 @@
 {
   "runs": [
     {
+      "at": "2026-11-20T07:33:38Z",
+      "added": [
+        {
+          "title": "Guidance for national and global assessment of the healthiness of diets (WHO)",
+          "url": "https://iris.who.int/items/588f8431-c58e-44c1-a33d-e8ed2a0ad0d3",
+          "source": "WHO IRIS"
+        },
+        {
+          "title": "Análise da situação da resistência aos antimicrobianos em Angola no contexto “Uma Só Saúde” (WHO)",
+          "url": "https://iris.who.int/items/1a689cf9-bb85-4a29-a6bc-aa0e6e6e13b3",
+          "source": "WHO IRIS"
+        }
+      ],
+      "sources": {
+        "WHO IRIS": {
+          "found": 16,
+          "added": 2
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-11-19T17:28:53Z",
       "added": [],
       "sources": {
@@ -581,27 +611,8 @@
           "added": 0
         }
       }
-    },
-    {
-      "at": "2026-11-07T01:27:35Z",
-      "added": [],
-      "sources": {
-        "WHO IRIS": {
-          "found": 17,
-          "added": 0
-        },
-        "FAO Open Knowledge": {
-          "found": 0,
-          "added": 0,
-          "error": "HTTP 403"
-        },
-        "NCBI Bookshelf": {
-          "found": 13,
-          "added": 0
-        }
-      }
     }
   ],
-  "last_run": "2026-11-19T17:28:53Z",
-  "total_books": 1006
+  "last_run": "2026-11-20T07:33:38Z",
+  "total_books": 1008
 }
