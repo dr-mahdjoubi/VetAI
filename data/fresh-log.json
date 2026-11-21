@@ -1,6 +1,25 @@
 {
   "runs": [
     {
+      "at": "2026-11-21T21:44:54Z",
+      "added": [],
+      "sources": {
+        "WHO IRIS": {
+          "found": 16,
+          "added": 0
+        },
+        "FAO Open Knowledge": {
+          "found": 0,
+          "added": 0,
+          "error": "HTTP 403"
+        },
+        "NCBI Bookshelf": {
+          "found": 13,
+          "added": 0
+        }
+      }
+    },
+    {
       "at": "2026-11-21T16:16:12Z",
       "added": [],
       "sources": {
@@ -592,27 +611,8 @@
           "added": 0
         }
       }
-    },
-    {
-      "at": "2026-11-08T09:13:12Z",
-      "added": [],
-      "sources": {
-        "WHO IRIS": {
-          "found": 14,
-          "added": 0
-        },
-        "FAO Open Knowledge": {
-          "found": 0,
-          "added": 0,
-          "error": "HTTP 403"
-        },
-        "NCBI Bookshelf": {
-          "found": 13,
-          "added": 0
-        }
-      }
     }
   ],
-  "last_run": "2026-11-21T16:16:12Z",
+  "last_run": "2026-11-21T21:44:54Z",
   "total_books": 1009
 }
