@@ -1,5 +1,5 @@
 // غيّر هذا الرقم عند كل نشر جديد
-const CACHE = 'vetai-v64';
+const CACHE = 'vetai-v56';
 
 self.addEventListener('install', () => self.skipWaiting());
 
