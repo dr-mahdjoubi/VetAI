@@ -45,3 +45,13 @@
 }
 .lic-unverified { color: var(--va-accent); border-color: rgba(217, 119, 6, .45); background: rgba(217, 119, 6, .08); }
 .lic-open { color: var(--va-primary); border-color: rgba(11, 110, 79, .45); background: rgba(11, 110, 79, .08); }
+
+/* قاعدة الخط الموحدة (المرحلة 3): نص أساسي ≥16px وارتفاع سطر 1.7 للعربية */
+body { font-family: 'IBM Plex Sans Arabic', 'Cairo', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif !important; line-height: 1.7; }
+h1, h2, h3, .font-black { font-family: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+
+/* إعادة توجيه توكن خطوط i18n إلى الحزمة المحلية الموحدة */
+:root {
+  --f-ar: 'IBM Plex Sans Arabic', 'Cairo', system-ui, sans-serif;
+  --f-lat: 'IBM Plex Sans Arabic', 'Inter', system-ui, sans-serif;
+}
