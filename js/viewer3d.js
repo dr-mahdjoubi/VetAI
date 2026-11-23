@@ -323,7 +323,7 @@
   function buildExtraCard(item, grid) {
     var card = el('div', 'rounded-2xl glass-panel p-4');
     var mv = document.createElement('model-viewer');
-    mv.setAttribute('camera-controls', ''); mv.setAttribute('auto-rotate', '');
+    mv.setAttribute('camera-controls', '');
     mv.setAttribute('shadow-intensity', '1'); mv.setAttribute('loading', 'lazy');
     mv.setAttribute('autoplay', '');
     mv.setAttribute('alt', 'نموذج ثلاثي الأبعاد: ' + item.name);
