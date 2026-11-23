@@ -371,6 +371,3006 @@
    "title": "كلام بيطري: تراه جميلًا… فهل تعرف الثمن الذي يدفعه؟ — د. أحمد الزيات",
    "desc": "حلقة تناقش كيف قد تخفي صفات الجمال في بعض السلالات (الأذن المطوية والأنف القصير) مشكلات صحية، ولماذا تُقدَّم الصحة على المظهر.",
    "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "9Z6WPLLsRRw",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Morris Animal Foundation Presents Lecture on Veterinary Pathology",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "Zh_XIFdBJsI",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: 3 Vet Tips for Scratched dog eye!! (Corneal Ulcer)",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "AS66-VHi30g",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Pet dental cleanings: What to expect",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "0zyNzDtBCfI",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Understanding dog vaccinations - Purina",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "E1UrICC7et0",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: How Can You Tell if Your Dog has Arthritis: top 10 symptoms",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "b08KUCAFyT8",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Introduction to Veterinary Immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "xVYzA_87RFQ",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Mike Herrtage - Case Studies In Abdominal Diagnostic Imaging",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "zI8JSTGtRQc",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: HOW TO CARE FOR A HORSE (Complete Guide)",
+   "cat": "خيول"
+  },
+  {
+   "id": "F3TN2szu-n4",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Satisfying Full Horse Hoof Restoration | 4K FARRIER ASMR",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "MG0JeUIy2kg",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Six dairy farm management tips to increase longevity of dairy cows",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "0eFgDMK42cg",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: 5 Common Poultry Disease and Treatment",
+   "cat": "دواجن"
+  },
+  {
+   "id": "FKKGzN4sOIU",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: DO PARROTS MAKE GOOD PETS? | 7 Things to Consider Before Getting Your First Parrot",
+   "cat": "طيور"
+  },
+  {
+   "id": "GSmWGq4lNEQ",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: How to Perform a Body Condition Assessment - Dog",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "GedC1WjJEnM",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Ruminant Nutrition: A Symbiotic Relationship",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "L4gwvTm0VqM",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Treat Itchy and Allergic Dog Skin!!! | MUST WATCH",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "CqJkz9SfGk4",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Lec1: Introduction to animal behavior and how it is studied",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "KcIER93BORQ",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: What Actually Is Positive Reinforcement Dog Training?",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "3GIbxJJMbCw",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Dog Grooming Steps for Dummies",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "at4gV-fqWvo",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Vet School Auto-Immune Lecture A",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "OXX55dYFjzM",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Holistic Veterinarian Shares BIG Secrets To Your Dogs Health! Dr. Kris Dallas | No Bad Dogs Podcast",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "lN4c_8gLVcA",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: How to Care for Your PET'S TEETH: 7 EASY & Essential Tips You Can Practice AT HOME",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "oac6EU3CGMs",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Puppy Vaccine Schedule",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "AxLSWirNaME",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Treating Arthritis in Dogs - a plan to keep them pain free!",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "FpXIGTFD8Qs",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: 30. Immunology 1 – Diversity, Specificity, & B cells",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "Hv52Je6RlcQ",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Abdominal X-Ray Interpretation: The 5-Step Guide Every Vet Must Know!",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "TF8u4QKb0S0",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: TIPS FOR NEW HORSE OWNERS: Essential Beginners Guide",
+   "cat": "خيول"
+  },
+  {
+   "id": "g3QOb_kMSAA",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Horse Hoof RESTORATION // Satisfying // HORSE HOOF TRIMMING",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "G__UCVGABDs",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Understanding Dairy cow management: Feeding",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "pyw7B3S6FFw",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: HOW TO PREVENT AND TREAT THE 5 MOST COMMON CHICKEN DISEASES (newcastle, fowl pox, marek's, coccidia.",
+   "cat": "دواجن"
+  },
+  {
+   "id": "t_Q7WMntlMo",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: How to take Care of a Parakeet | Beginner's Guide to Pet Birds",
+   "cat": "طيور"
+  },
+  {
+   "id": "piWRs5sFLr8",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Introduction to Dog Nutrition | Body Condition and Calculating Energy Requirements",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "3tREQ5Z8eYc",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Rick Machen - Cattle Nutrition - Mineral Supplementation for Cattle",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "gcSZfNPM2rg",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Top 3 Steps to Stop the Itching caused by Yeast",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "F1wi9wh528g",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Wildlife – The Strangest Animal Behaviors Science Still Can’t Fully Explain | Wildlife Documentary",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "BjYEWjlIS7g",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Stop Yelling! Do THIS and Your Dog Will Finally Listen!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "Ni1yyrD2Bi0",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Dog Grooming-Guide for Beginners Instructional video",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "NVgMRUFKppY",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: The Science of Feel: Chris Irwin on Veterinary Horsemanship | Utrecht University Lecture",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "DNhAxveyhgg",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: When You Can’t Afford the Vet: A Vet’s Honest Advice",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "eastjGw1Rp4",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: When is a DOG Too old for a Dental Cleaning?",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "tJ8ydjYMUl4",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Understanding Dog Vaccinations II Pet Care II Schedule II Vaccines II Veterinary Wizard",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "n4NfGQrOaq4",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Does Your DOG have ARTHRITIS?  Dr. Dan covers Doggy Arthritis.",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "_jBpv9fYSU4",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Understanding the Immune System in One Video",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "BdY5xtlbDes",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: The Reading Room S1E4 - Veterinary Radiology Cases",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "fdGhd2phEHs",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Horse Care For Beginners",
+   "cat": "خيول"
+  },
+  {
+   "id": "17e7BpnR1vM",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: SAW MARKS in Neglected Hoof",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "2Aw5G3-Ki9g",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: INCREASE PRODUCTION In Your Dairy Farming || Dairy Farm Management Tips",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "sdDINl0HGpA",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: How To Treat and Prevent Coccidiosis in Chickens",
+   "cat": "دواجن"
+  },
+  {
+   "id": "ZEUls2wyb3w",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Basics of Parrot Care",
+   "cat": "طيور"
+  },
+  {
+   "id": "vSo5ZtjKMWU",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Westie Nutrition | Healthy Weight, Skin & Digestion | Dog Health Academy S31E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "HRX7N5RmJio",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: The role of protein in dairy cow nutrition",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "pQkBBXp3lQo",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Found Crusty Scabs on Dog’s Back? Here’s Why and What to Do",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "onY0ZU99Px0",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Secrets to the Study of Animal Behavior – Dr. Eileen Lacey (UC Berkeley)",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "cXN8Obr1yss",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: 5 Dog Training Exercises You Should Do EVERY DAY At Home!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "nFoYYxhs2qo",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: How To Trim The Fur Between Your Dog's Eyes | Home Dog Grooming Tips",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "hEpxDE2mlMk",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Vet Med Lecture: \"Bovine Surgery Case\"",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "V2wjZDygT0M",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Help my dog has separation anxiety! | ASK THE VET with Dr Scott Miller",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "dmmWDbh2zBc",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: After Care Instructions for Dental Surgery",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "aj9O3tkILew",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Pet Vaccines to give, Vaccines to AVOID!",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "P3QFI_wKOSw",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Arthritis In Dogs – 7 Common Signs, Symptoms And Treatment Options",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "bWmi7vMprFw",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: MBC Online Vet Tech Review 3.1 - Intro to Immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "sK9SeCgwSxE",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Diagnostic Imaging Review for the VTNE",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "85YUWPpvrZE",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: THE BASIC CARE OF YOUR HORSES HEALTH",
+   "cat": "خيول"
+  },
+  {
+   "id": "atc5KUL4Wfo",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: These Hooves Were in Terrible Condition! Massive Draft Horse Hoof Restoration Part 2 - So Satisfying",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "q6DSQG0xM8w",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Next Level Dairy Cow Farming | High-tech CHEESE Making From Cow Milk",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "znUYQWS93SA",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Poultry Disease & Management | Vaccines | Precautions | Poultry Management | AFO | NABARD | RRB-SO",
+   "cat": "دواجن"
+  },
+  {
+   "id": "ulMjSlPzQE0",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: THE ULTIMATE AMAZON PARROT CARE GUIDE 2020",
+   "cat": "طيور"
+  },
+  {
+   "id": "xZhNQdDEZ4A",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Samoyed Nutrition Guide | Coat, Weight & Energy | Dog Health Academy S27E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "WiMTq_w2h2U",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: What Do Cattle Eat: Diet Formulation & Nutrition",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "PXohTvSL6S8",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Dog Skin Infection: Dr. Dan covers bacterial skin infections in the dog also call a HOT SPOT!",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "K4cKnOGJZlI",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Introduction to Animal Behavior",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "PI5W2Stv0Ik",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: The First Steps For Training Your Rescue/Rehomed/Adult Dog!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "INoLfpErTsg",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: How to become a pet groomer | How much money do groomers make?",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "wKLw8yq01Xs",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Lecture 01: Introduction to Veterinary Radiology and Physical Properties of X-Ray",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "ioAKvpyDk0U",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: The Honest Vet On Pet Anti-Vaxxers, Banning Frenchies, & Pet Food Myths",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "Mu9qDk4Litg",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Dr. Keaten at MVD explains how to properly clean animal teeth keeping ergonomics in mind",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "AxkhI_y6N70",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Which Vaccinations Does Your Puppy Need?",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "HUhKHgtgKPQ",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Top 3 Signs Your Dog Might Have Arthritis!",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "SqGmQ6CFYHw",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: 31. Immunology 2 – Memory, T cells, & Autoimmunity",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "VvF_G8cRbqY",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Unlock Radiology Mastery with Dr. Andrew Fischetti!",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "TOFHKjRUdcQ",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: BASIC HORSE CARE 101 - FOR BEGINNERS",
+   "cat": "خيول"
+  },
+  {
+   "id": "NWpNpwl7RKs",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Satisfying Full Horse Hoof Restoration | 4K FARRIER ASMR",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "4BnnHsUs9oY",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Dairy Farming Terms Every Beginner Should Know",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "nV7lk3lht60",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Chicken DISEASES 🦠: How to Treat & Prevent Them",
+   "cat": "دواجن"
+  },
+  {
+   "id": "r3Gr92HzX0k",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: How To Keep a PARROT Happy and Healthy  -  Simple everyday Tips",
+   "cat": "طيور"
+  },
+  {
+   "id": "fy-MPS-b-gA",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Cocker Spaniel Nutrition Guide | Healthy Diet & Weight Management | Dog Health Academy S13E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "o44xtCG9Z-E",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Animal Nutrition For Beginners - Energy, Protein, Fibre, Vitamins and Minerals",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "c_CBPw95wvo",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Common dermatological conditions in dogs presented by Dr. Sandra Koch - VMC AHES",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "4OopKR76mxQ",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Weirdest Animal Behaviors Science Cant Explain",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "M5OANGG342Y",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: The BEST FIX for REACTIVE, Nervous & DISTRACTED Dogs! (Engage/Disengage for Neutrality)",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "LVmxn4nlfmk",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: DOG GROOMING TIPS CUTE FACE - How to groom a dogs face #doggrooming #doghaircut",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "eFKVVGXEisM",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Lecture on workplace culture and mastering surgical skills",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "KqClwoUrgZA",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Emergency Vet Instructs: Learn to Perform CPR on a Dog in 5 minutes",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "9FaDPiZtvJ4",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Dog Dental Care Without Brushing",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "Bab2W88fg-o",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: What vaccines does your puppy need?",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "gRA0FXfhwRE",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: HOW I TREATED MY DOG´S ARTHRITIS FAST (without drugs or painkillers)",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "r2HgBk3I_Os",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Veterinary Immunology Basics: Antigens, Immunogens & Adjuvants 🔬🐄 | Vaccine Science Explained",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "jlMCzZLdnaM",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: The Reading Room S1E07 - Cases in veterinary Radiology - Subtle feline Cardiomegaly",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "XRc4S7j12UQ",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: WINTER HORSE CARE HACKS (you’ve never heard of)",
+   "cat": "خيول"
+  },
+  {
+   "id": "fa-EYD2o9rw",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: SUPER Long Hoof Transformation",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "HTTbhaD_bMw",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: LET'S LEARN THE ART OF DAIRY FARMING",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "ta0Dfj9E2-Q",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: 5 Deadly Poultry Diseases That Can Kill Your Chicken In 48 Hours.",
+   "cat": "دواجن"
+  },
+  {
+   "id": "IAv-6tTfjLA",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Indian Ringneck Parakeet Care Guide",
+   "cat": "طيور"
+  },
+  {
+   "id": "f73Ly4qYTwE",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Labrador Retriever Nutrition Guide | Feeding for Lifelong Health | Dog Health Academy S5E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "5dwTjYKGk6I",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Animal Nutrition and Diet",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "gogHgzpzjhk",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Skin Conditions in Dogs and How to Help Them",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "6hREwakXmAo",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Animal Behavior",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "599ui09KFJs",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: MY BEST ADVICE FOR BEGINNER DOG OWNERS | DOG TIPS",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "xF-qaSiIcZ0",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: The top five dog-grooming tips from the pros",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "-6F7_b3x0yk",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Vet school vlog | A productive uni week: vet pathology lectures, anaesthesia labs, studying & more",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "sE0hTlByhYI",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: How to Keep Your Pet's Teeth Healthy: 6 Vet Tips",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "b4Zi0OCUIG8",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Professional Dog Teeth Cleaning",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "C5jV0iCGMWg",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: 💉 Dog #vaccination  Schedule Explained | Essential Booster Guide #dogbreed",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "ms4KCw01Yvk",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Dog Arthritis: Signs and Treatments",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "qkIfYwnaYqc",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Immunology | Immune System: Overview",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "mb360eET6vc",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Peritoneal effusion radiographs - The Reading Room S1: E22 - Cases in veterinary radiology",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "InwHxUC__Lw",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: MORNING ROUTINE WITH 3 PONIES IN THE WINTER! (Daily Horse Care Routine)",
+   "cat": "خيول"
+  },
+  {
+   "id": "rWFRKuYt97o",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Hoof Trim Process",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "Jn-e4w4whh0",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: How to Develop Heifers - Heifer Development 101",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "MBIRHQZ2E2k",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Poultry Farm Biosecurity Basics: Tips to Defend Your Birds from Disease",
+   "cat": "دواجن"
+  },
+  {
+   "id": "UaZ8lzZRlBs",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: 5 General Bird Care Tips For Beginners",
+   "cat": "طيور"
+  },
+  {
+   "id": "YiRt1crKSPY",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Dog Nutrition 101 | Episode 6: Is Your Dog Overweight, Underweight, or Just Right?",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "z8QI_UFcLZM",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Every Concentrate Feed Explained in 9 Minutes",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "-LBeLNZgjKk",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: How to Treat Dog Pyoderma (Skin Infections) with Natural Remedies",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "2Oxi_sHVllM",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Animal Behaviour Highlights - Wild Talks",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "70q00hAtXpE",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: 5 Dog Training Exercises You Should Do EVERY DAY!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "RNAUncQEASo",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: How to Use Clippers when Grooming a Shaggy-Haired Dog : Dog Grooming",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "ei6ItBk3fxY",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: How to study in BVSc 1st year | BVSc online lectures | BVSc study guidance",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "LBkyx0BP9qw",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Caring for your dog after Neutering them?  | 5 Tips - Veterinarian approved",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "0wzAUoD1tw8",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: How Much is a Dog Dental Cleaning",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "jrWMhX4luSc",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Dog Vaccines Explained What Does Your Dog Need and Why!",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "WFopmjCoSPg",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Dog Arthritis Back Legs - How to Check Your Dog's Hips for Arthritis",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "GIJK3dwCWCw",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Immune System, Part 1: Crash Course Anatomy & Physiology #45",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "s5BD_EA_gW4",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: VET.CT Radiology Webinar - Case examples (Cases 1-3): When and why should you consider CT?",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "Plb64MqF0Ks",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How to Groom a Horse (Step-By-Step Guide)",
+   "cat": "خيول"
+  },
+  {
+   "id": "rwdYV5ShYl0",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Farrier ASMR: Hoof Cleaning Compilation",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "Ukln4q9ZgLI",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Manure Management and Methane Gas Collection on 5100 Cow Dairy!! (Part2)",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "jHYldv9KVHQ",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Top Winter Poultry Diseases in Chickens & Birds | Winter Poultry Care and Disease Control",
+   "cat": "دواجن"
+  },
+  {
+   "id": "IPG_Obzl2cw",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: MY ADVICE TO NEW BIRD OWNERS",
+   "cat": "طيور"
+  },
+  {
+   "id": "Ku-SYf4Hcc4",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Border Collie Nutrition Guide | Feeding for Lifelong Health | Dog Health Academy S3E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "VHmn-8mei38",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: What automated feed systems can do for a farm",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "RvqjPTnBJns",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: The $23 Fix That Replaced My $300 Vet Visit",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "gFL-A3IBL-8",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: 10 Mesmerizing Animal Behaviors | Smithsonian Channel",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "XQRgci18tvY",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Everything You NEED To KNOW To TRAIN Your DOG!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "1dht0awdwp8",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Learn How to Shave Your Dog's Feet from The Soggy Doggy",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "_qLTRpyiQMA",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Heartwater Disease Explained: Etiology, Clinical Signs, Diagnosis & Control | Veterinary Lecture",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "pUy1Qheu-cI",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Vet Bills Out of Control? What Pet Owners Can Actually Do",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "-QP-kFzBNoc",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Is Your Dog’s Food Causing Dental Disease? 5 Natural Ways to Clean Your Dog’s Teeth at Home",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "XnYPm_PVAI8",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: What's the Deal with Puppy Vaccines? | Vet Tips",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "G2Dbm3bF9mg",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: What to Do When Your Dog Is Diagnosed with Arthritis by a Vet",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "lbfywanF2Bc",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Innate Immunity | Immune System",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "_fpZzBbVGf8",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Radiology Boards Prep - MSK Cases",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "R_Tgyki6Y90",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Horse Care Day with Cowgirl Meekah! | Educational Videos for Kids | Blippi and Meekah Kids TV",
+   "cat": "خيول"
+  },
+  {
+   "id": "wQ5s3WyD1NE",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: DIFFICULT Trim Job. SEVERE Neglect",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "5zIWHAoptNE",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Running a Dairy Farm",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "o4tKijbB5is",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Protect Your Flock From DEADLY Newcastle Disease! The Symptoms, Prevention, Treatment",
+   "cat": "دواجن"
+  },
+  {
+   "id": "ZYRSfKmYL_M",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Parrot Care Basics | Compilation",
+   "cat": "طيور"
+  },
+  {
+   "id": "eVFVpO-nLMA",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Maltese Nutrition Guide | Feeding for a Lifetime of Health | Dog Health Academy S19E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "zo1pthxYRaw",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: All About Nutrition in Beef Cattle",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "606P5MtAV3s",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: AVS Free Webinar Series | Common Skin Diseases in Dogs",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "EyyDq19Mi3A",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Animal Behavior - CrashCourse Biology #25",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "_5sWvxpiHBI",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Do These 5 Dog Training Exercises Before Each Walk",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "MRBmOZTcXZ8",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: how to properly use a dog clipper to give your dog a haircut",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "gwlqy2bw904",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Foundations of Immunity & Veterinary Clinical Applications | Complete Veterinary Immunology Lecture",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "AvCvrwl4N5E",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: 7 Things to Never Say to Your Vet",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "QA15psegCcQ",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Dr. Jones Tries At Home Dental Scaler - Does It Work?",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "hMIbVvw-ozE",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Puppy Vaccination Guide: How & When to Vaccinate Your Puppy🐶",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "jimqwdBmdhY",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: How to Tell If Your Dog Has Arthritis & What to Do",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "-2QD4M41W2c",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Types of Immunoglobulins (IgM, IgG, IgA, IgE & IgD) | Veterinary Immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "TFtyvXI_D6s",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: The Reading Room - Respiratory distress in a middle aged cat - Veterinary Radiology Cases",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "gG8faNGg6os",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How to make a horse a friend. One cowboy's partnership with horses",
+   "cat": "خيول"
+  },
+  {
+   "id": "ZwMbYc0i2Qo",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: What a Mess – Watch This Hoof Transformation",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "XMB61w9cPe4",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: How Canada’s dairy supply management system works — and why Trump hates it",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "bT7JfFcNGhI",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: POULTRY FARMERS, DON'T MAKE THIS MISTAKE! | Diseases, Vaccination & Biosecurity",
+   "cat": "دواجن"
+  },
+  {
+   "id": "2gL7CQtFmcM",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: 10 Things You Should Know BEFORE YOU GET A PET BIRD",
+   "cat": "طيور"
+  },
+  {
+   "id": "TzRvpoUWxV4",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Belgian Malinois Nutrition Guide | Fueling an Elite Working Dog | Dog Health Academy S7E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "ruB_-2onmdA",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Every Roughage Feed Explained in 9 Minutes",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "1xw4CpIIzxo",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Dog Itchy Skin and Hot Spot Remedy",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "fQHxqWDNcgw",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: 10 Animal Behaviours Filmed for the First Time Ever | BBC Earth",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "--PXr3edQDo",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Teach Your Dog to COME to you EVERYTIME! Perfect Recall Training",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "db5whSI6rZE",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: COMPLETE DOG GROOMING LESSON how to GROOM a DOG from START to FINISH",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "QpnGJ28p2cs",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Abdomen | Radiology | Lecture 01",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "bKk5Ansyj3k",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Vet Minute: How to Help a Constipated Dog",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "cCESfuc5VcU",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Periodontal Scaling in Cats & Dogs",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "XsZk0YSrve4",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Puppy Health 101: Vaccination & Deworming Schedules you Need to know!",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "o4dQ4FATjMs",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: ARTHRITIS IN PETS SIMPLIFIED",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "Hm-UfRjKNrs",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Understanding How Age-Associated Changes of the Immune System Lead to Immune Dysfunction",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "3AVtAZKdH0Q",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: 5 Tricky NAVLE Veterinary Cases You MUST Solve! 🩺 | DVM #NAVLE #VetStudent",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "RFP8EKKcdrE",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: HOW TO CARE FOR A HORSE- BASICS For BEGINNERS",
+   "cat": "خيول"
+  },
+  {
+   "id": "x0kXxjFN1N4",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: SATISFYING HORSE HOOF RESTORATION!",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "ZhDctuT8xPM",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Dairy cattle management lessons presentation Agriculture Notes for higher education degree diploma",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "S8NisW3cyeI",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: 15 most common chicken and poultry DISEASES, their symptoms and how to prevent or treat them",
+   "cat": "دواجن"
+  },
+  {
+   "id": "D2gf3pUMM8g",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Exposing 7 Common Parrot Care Myths",
+   "cat": "طيور"
+  },
+  {
+   "id": "F78pdfPalvE",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Dog Nutrition Explained | VitalPet Podcast #11",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "O8OfXqMX_oQ",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Introduction to Animal Nutrition | Basics of animal nutrition|1",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "blhu4OU46qw",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: How your Vet may treat a dog's skin infection",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "I3y0LioNiYc",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: What is Animal Behaviour?",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "Q-NBJfZM_RY",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Dog Training With Positive Reinforcement | Teacher's Pet With Victoria Stilwell",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "7FtEy9CwwI4",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Dog Grooming Clipper Blades-Everything You Need to Know",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "S7jxL-rTqgI",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: I'm an Exotic Pet Vet | My Life ★ Glam.com",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "F6S50BZU1D0",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: How to Brush your dog's teeth - AKC Vet's Corner",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "ZC_RA1uwudM",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Veterinary Dentist Explains How to Brush Your Pet's Teeth",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "zZfFsVLcL8E",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: EP27 - Dog Vaccines Explained: Rabies, Puppy Shots, Titers & Reactions | The Dr. Molly Says Podcast",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "U-Fsm6LpFtA",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Pain Awareness Month - Spot the signs of arthritis in your dog",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "xQiF2ZwI2uo",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Introduction to Immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "7s4n9FIphpI",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Patella luxation in a dog - The Reading Room - Veterinary Radiology",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "6iHe016x-4Y",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How to Groom a Horse: My Daily Routine",
+   "cat": "خيول"
+  },
+  {
+   "id": "lg5JbNBOhm0",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Biggest Hoof I've Ever Worked On || Massive Draft Hoof || Trimming   Draft Horse || So Satisfying",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "RRcgDQ3z-sg",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: 70% OF THIS HERD IS A2A2 AND 70% DRY OFF WITHOUT ANTIBIOTICS - FAZENDA COLORADO 🇧🇷",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "nWjLgYO2dkY",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Emergency Medicines in Chicken Farming | 10 Important Disease & Treatment in Birds & Chickens",
+   "cat": "دواجن"
+  },
+  {
+   "id": "Ke3E712spb8",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Everything You Need to Know Before Getting a Bird",
+   "cat": "طيور"
+  },
+  {
+   "id": "qVmTAlQhi58",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: French Bulldog Nutrition Guide | Healthy Weight & Lifelong Wellness | Dog Health Academy S8E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "wY7hAZOIIgg",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: About LNC - Textured Feed",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "ANYvemXzx_Y",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: A Vet’s Guide to Skin Conditions in Dogs Ft  Dr. John Morgan (Episode 52)",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "Gfj4tVC9eu4",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Animal Behavior Explained Episode 5: Instincts vs. Learned Behaviors 🤔📚",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "tSvfVs4LKyg",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How to Stop Leash Pulling Now! Pro Tips for Success",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "vf26dCuvmRM",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Dog Grooming: 10 Beginner MISTAKES to Avoid!",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "objP3E625Xo",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: What Being a Veterinarian Really Takes | Melanie Bowden, DVM | TEDxCoeurdalene",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "M_Gy0M40EZ4",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Dog Spay Surgery After Care 5 Tips! | Veterinary Approved",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "bt7gkbnvriI",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Dental Disease in Pets SOLVED? Natural Remedy Just Released!",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "sDkMK7qnaBA",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Your Complete Guide to Puppy & Adult Dog Vaccinations.",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "QE3G13zyDvU",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: My Dog Has What?  Arthritis OR Pinched Nerve",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "vWOhJgjN-vA",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Immunology Masterclass: Hypersensitivity, Transplantation & Autoimmunity | Dr. Priyanka Sachdev",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "VejygdGguf8",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Five Fascinating Veterinary Radiology Cases with Specialist and AI Insights",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "NqUWXqVAinw",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How to care for a miniature horse",
+   "cat": "خيول"
+  },
+  {
+   "id": "pnISP8sRpBY",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Satisfying Full Horse Hoof Restoration | 4K FARRIER ASMR",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "OKs8v-LWnJc",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Feeding Programs for Growing Calves",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "mD8DjRINya8",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: POULTRY DISEASES PART 1",
+   "cat": "دواجن"
+  },
+  {
+   "id": "PbyV4eURG8E",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: African Grey Parrot Care Routine 2024 - Everything You Need To Know!",
+   "cat": "طيور"
+  },
+  {
+   "id": "PSN00aRxYCc",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Hill's™ UK & IE:  Dog Body Condition Score (BCS): How to find out your Dog's BCS",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "_gepo0CVXU8",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Cheap Fat Feed for Cattle: Stay Under 6% Rule",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "scLPT1_-gq4",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: 5 Easy Home Remedies for Follicular Cysts in Dogs",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "gwf5Xy5p_DI",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Ethology and animal behavior",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "TBvPaqMZyo8",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How to stop unwanted behavior-  the positive interrupter",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "V-Xp2RaG_2c",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Dog Grooming Steps-How to Groom a Dog from Start to Finish (give your dog a haircut)",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "GIihjadra08",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: sarcoptic and psoroptic mange lecture for vet students",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "QT7CCUlXK1o",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: 5 Mistakes I see Arthritic Dog Owners Make ALL THE TIME (Veterinarian explains)",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "Erj0nwXSuNI",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Ultimate Guide to Dental Disease Prevention | Vet Explains",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "HZGKCRdTMRY",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Dog Vaccinations - Overview and Core Vaccines",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "jGEW23Lc7Vk",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Dog Arthritis Signs & Treatment: Help Your Senior Dog Walk Pain-Free",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "uCm0tVbzZeI",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Understanding Veterinary Immunology: IMHA, Vaccines & Immune Diseases Explained by Dr. Jim Thompson",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "kwpzKmqsruM",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Thoracic Radiology: Principles of Interpretation",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "wwrtN5jnhYg",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Max Corcoran: Horse Care for All Seasons",
+   "cat": "خيول"
+  },
+  {
+   "id": "vB1-o5ZVRBI",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Old horse finally gets relief!",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "qSMb2gHWSn4",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: A must-watch for aspiring dairy farmers and anyone passionate about breeding. #farming",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "nhvTwx_xZBo",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: 7 Common Poultry Diseases. Their Signs And Symptoms And How To Prevent Them.",
+   "cat": "دواجن"
+  },
+  {
+   "id": "VJrjdiusKjw",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Starter Birds | WHAT'S A GOOD FIRST BIRD? WHAT BIRD SHOULD YOU GET?",
+   "cat": "طيور"
+  },
+  {
+   "id": "vJkvHIBSbFM",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: German Shepherd Nutrition Guide | Feeding for Lifelong Health | Dog Health Academy S6E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "_9OqDzlzamE",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: We Found The BEST Feed Ration for Butcher Steers",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "vif23WmCmII",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Itchy Dog or Cat? Fix the Skin Barrier First",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "zRuuRPM3X3o",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Exciting Animal Behavior in the most enchanting Forests of our Planet | Full Documentary",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "kqV4PQNJ8lI",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Dog Training Tips Using Positive Reinforcement",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "YpzjiS5M8V0",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: DOG GROOMING TUTORIAL - Step by Step Maltese haircut",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "bwtj_gRh4dE",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Horses join first-day veterinary students at anatomy lecture in Budapest",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "6rOyF4rk2RY",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: 5 Arthritis Treatment Tips For Your Dog This Summer (veterinarian explains)",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "MUqEjoi7LJo",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Dental Grading Explained",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "St0DRn2DuVU",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: DOG VACCINATION | Microbiology | Vivek Srinivas | #Parvo #Distemper #Rabies #VeterinaryScience",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "ZvdhCVJm34w",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: How To Spot Severe Arthritis Early In Dogs",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "E4dZ5w3D9ZM",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: The Complement System is SO EASY! Stop Making it Hard!",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "_WYbZWtAMNE",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: The Importance of Positioning and Technique in Veterinary Radiology",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "DqN3Ps01Qp8",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: The 7 Golden Rules Of Feeding Horses",
+   "cat": "خيول"
+  },
+  {
+   "id": "kDCdzWOzPKs",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: LONG HOOVES on ARABIAN STUD Horse Restoration",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "AHlIvthqQWg",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Joanne Leigh from Top Notch Calves shares her secret to rearing healthy calves",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "D78d1J26lv4",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Rainy Season Diseases | In Poultry Prevention & Cure",
+   "cat": "دواجن"
+  },
+  {
+   "id": "H0UjkPr4u8w",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: How to Care for a Budgie",
+   "cat": "طيور"
+  },
+  {
+   "id": "iMTX9H9EYdE",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Muscle Condition Score: A critical part of patient assessment",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "iWT8xsUYSsg",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Introduction to Animal Nutrition",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "8CgNSWRDS-Q",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Black Spots on Dog Skin? Skin Turning Black, Dark Patches & Hyperpigmentation Explained",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "chW3Ac86HBU",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: 10 Incredibly Strange Animal Behaviours",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "gYjnAPtID1w",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Puppy TRAINING - The FIRST 5 Things To Teach Any Puppy!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "wI9xARUzo1E",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: How to Cut a Dog's Hair? 🐶 BASIC GROOMING Tutorial",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "QjG1ypi8kNc",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Suture Patterns | General Surgery | Lecture 08",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "ULFwjoZoRt8",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Veterinary Technician and Assistant Training: Handling and Restraining Dogs",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "wj49fYFMgk4",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: ASK THE VET with Dr Scott Miller | Pet Dental Care",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "jmh7yDHQ8wA",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Core Veterinary Vaccines Explained *reupload* — Dogs, Cats, Horses & Cattle!",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "bdhbOGavqow",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: The Natural Arthritis Fix Vets Don’t Talk About (For Dogs)",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "07YHQ9NS0Vc",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: \"Introduction to Immunology\" By: Mr. Bhartendu Vimal",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "fkREM20zxlU",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Canine Elbow Radiographs - The Reading Room - Veterinary Radiolog",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "I95J-kS7M0U",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: READING HORSE BODY LANGUAGE & BEHAVIOR",
+   "cat": "خيول"
+  },
+  {
+   "id": "u2xJAkd4skY",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: INCREDIBLY LONG, HARD, and DRY Hooves",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "lx49vClrvwg",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Village Dairy Producing 32 Litres per Cow using Simple Feeding No Silage",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "K3hQoXSZ-1U",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Lecture: Poultry Health and Diseases",
+   "cat": "دواجن"
+  },
+  {
+   "id": "d1Dl8albMQ4",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Living with an African Grey: What It’s Really Like After 10 Years",
+   "cat": "طيور"
+  },
+  {
+   "id": "giU17bG8heg",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Golden Retriever Nutrition Guide | Feeding for Lifelong Health | Dog Health Academy S4E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "x3eT3AHAtBk",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Cattle Nutrition Basics",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "0IzoRWZgGpU",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: How To Treat Itchy Dog Skin at Home Naturally",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "ad3YxSuO5TE",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Strangest Cat Behaviours Finally Explained",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "umt0jF9MHeI",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How to Train Your Dog to LEAVE IT: Complete Beginner's Guide",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "wRp00ueaKtw",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Dog Grooming Clipper Blades And Combs - What's The Difference? What Should I Use?",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "YfcYgAMBh58",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: How Anesthesia for Veterinary Surgery on a Dog is Performed",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "fwialpXYpz4",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Veterinarian Warns: Dog Treats Causing Liver Damage! | Tula's Shocking Diagnosis Explained",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "QhQsB2dGfvE",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Vet Dentistry for Vet Nurses - 1 - Oral Clinical Examination",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "ohW5gTdPXtE",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Complete Puppy Vaccination Schedule | Protect Your Puppy from Deadly Diseases",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "rdCZc0yKwhg",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Managing Arthritis in dogs",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "sNIcR1PAGIk",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Introduction to Innate Immunity",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "3SnVXzta03M",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Pulmonary Patterns in Vet X-Rays – Are You Interpreting Them Correctly? (Part 1)",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "uc6r0HmDVzY",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: BAREFOOT BASICS",
+   "cat": "خيول"
+  },
+  {
+   "id": "cw8gjwEtdhY",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Farrier-Hoof Restoration-Satisfying",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "eLKScfjYhac",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Dairy Farm Management",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "CJSnwe4pqRI",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: How to Prevent & Treat Coccidiosis in Chickens & Birds | Home Remedies for Cocci & Chicken Care",
+   "cat": "دواجن"
+  },
+  {
+   "id": "l09VMqnSw0w",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Living With an African Grey: 5 Things I Wish I Knew Sooner",
+   "cat": "طيور"
+  },
+  {
+   "id": "H60buQ8gD0A",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Dog Diets & Weight Management Tips from Vet Surgeon Dr. Courtney Campbell | Care Experts",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "CtOmWQTwr6k",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Urea Feeding in Ruminants Explained | NPN in Animal Nutrition",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "HVCEAakCvpY",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: How to help your dog with skin issues | PET CIRCLE",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "32GBqvVyx_A",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Is Animal Behaviour Shaped By Genes or Learned? | Our World",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "7P1DgDED23o",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Teach Your Dog To Stop Jumping Up In 4 Simple Steps!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "TolK4R7Z82s",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: HELP your Difficult Dog Accept Dog Grooming and be Calm during Grooming",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "NgEpqQHIiGo",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Approach to Common Neurologic Emergencies in Dogs and Cats || SEVN Webinar Lecture #8",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "aimTOjs0Krc",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Vet-Approved: 5 OTC Meds That Can Save Your Pet's Day",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "5w2JugDShkw",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Veterinary Dentistry: The COHAT and Dental Basics Explained",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "6BWFYcV349M",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: 2022 AAHA Canine Vaccination Guidelines",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "p8IsJrw06RM",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: How To Know If Your Dog Is Experiencing Joint Pains",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "wXbz1O4UzfE",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Introduction and History of Immunology | Vet Bytes | Immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "2ahdBKZ8B94",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Meet The Specialist  - Dr. Dainna Stelmach, Veterinary Radiologist",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "ri-lN5i1kmU",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Horsemanship Lesson: How to Clean a Horse Stall | Horse Care Basics",
+   "cat": "خيول"
+  },
+  {
+   "id": "H00ZUlTqdxs",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: SHIRE HORSE - HOOF RESTORATION - HUGE FEET",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "1Nx9nKRinU8",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Cattle Management Practices",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "eDpwqCWvyFE",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Important Poultry Diseases | AFO SERIES 2025",
+   "cat": "دواجن"
+  },
+  {
+   "id": "0WGUpvftNm4",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Cockatiel Guide | Tips For New Bird Owners | Cockatiel Care, Diet, Training & Behaviour",
+   "cat": "طيور"
+  },
+  {
+   "id": "6Cj1f0cVyY0",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Chihuahua Nutrition Guide | Fueling a Long and Healthy Life | Dog Health Academy S21E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "JLHBI0aB1sc",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Evening Feeding for Cattle: The Hidden Efficiency Boost",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "-ehJ-6VbnvY",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Natural Solutions for Dog Allergies & Itchy Skin: Expert Advice from Holistic Vet, Julie Anne Lee",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "_5Ud1D67J14",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Decoding Animal Behavior",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "jFMA5ggFsXU",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Dog Training 101: How to Train ANY DOG the Basics",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "mYz4YdKNrHo",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Doodle Teddy Bear Face Grooming Demo",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "UEXK1m061uM",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Inaugural lecture - From cells to Clydesdales: a romp around the veterinary profession",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "kVSp9tirf60",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Seizures in Dogs - Causes, Diagnosis and Treatment | Southeast Veterinary Neurology",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "oUfsD_sfDLU",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Vet Dentistry for Vet Nurses - 2 - Charting",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "eOJrOmxHhJE",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: DON’T Believe These 3 Dog Vaccine Myths (And What’s ACTUALLY True)",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "9C6XZVCr0sM",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Degenerative Myelopathy in Dogs - Causes, Signs, Diagnosis and Treatment Options Explained",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "nbtt-0CgCuU",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: An introduction to vaccines for veterinary technicians",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "FfYYFGMaW9Y",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Notes from Diagnostic Imaging: Shining a Light on Veterinary Radiology",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "uWUDwiyl9LQ",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How to Be Safe Around Horses (ESSENTIAL Info for Beginners)",
+   "cat": "خيول"
+  },
+  {
+   "id": "8OJXvEj-IUI",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: BLUE ROAN STALLION gets LAMINITIS HOOF TREATMENT",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "myCq--XESaU",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Inside a Modern Cow Milk Dairy Farm  Full Cow Milking Process",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "QcgQbUa2JwE",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: NEWCASTLE DISEASE ORGANIC TREATMENT REMEDIES (SYMPTOMS, NATURAL REMEDIES & PREVENTION OF NEWCASTLE)",
+   "cat": "دواجن"
+  },
+  {
+   "id": "-qIRL6DXmCU",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Budgie Parakeet, The Best Pet Reptile?",
+   "cat": "طيور"
+  },
+  {
+   "id": "f6J3wYQ6-1c",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Understanding the Body Condition Score in Dogs",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "uerAAq8Q5Vc",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: 15 Animal Feed Ingredients and Their Nutritional Composition",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "T3LoSHavI8E",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Banfield Pet Hospital - Cat and Dog Skin and Coat Conditions",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "TAKIsFshLyI",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: What Explains Bizarre Animal Behavior?",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "8fEYjiVuMHQ",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Positive ONLY Dog Training is a LIE - Train Your DOG the BEST WAY",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "NRCS-WaA_ZI",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: HOW to TRIM a MALTESE at HOME! (Trimming your DOG at home) BASIC DOG GROOMING Tutorial",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "86we9yCgcpc",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Intro to Bristol Veterinary School (ft taster lecture on Vet Skills)",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "d5Y8jmQG1WU",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Vet Minute: Dog Incontinence",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "VBHsYhQTHWQ",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Everything You Need to Know About Dog Dental Care",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "vASJMuDnEE8",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Types of Canine and Feline Vaccines",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "bokiXOnsOsU",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Tips for Managing Arthritis in Dogs",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "bmqYzpuf5OM",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: INTRODUCTION TO IMMUNOLOGY",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "Emr7bcL27Mw",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Where is that mediastinal mass coming from? - The Reading Room - Veterinary Radiology Explained",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "Sv2CdYMDbDw",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: HORSE HOOF CARE FOR BEGINNERS | Hoof Care 101",
+   "cat": "خيول"
+  },
+  {
+   "id": "tdQgjDJgUIQ",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Trimming a Horse With Crooked Legs! These Hooves Were Overdue and in Desperate Need of a Trim",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "3MTyLUbJ1cA",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Cattle Farming 101: A Beginner’s Guide to Raising Cattle (Part 1)",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "h2jVOvUf8vw",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Protect Your Baby Chicks: Top 5 Killer Diseases & Organic Solutions. #chickhealthtips",
+   "cat": "دواجن"
+  },
+  {
+   "id": "JMXWJUpCl2s",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: 27 Parrot Owner Must Haves",
+   "cat": "طيور"
+  },
+  {
+   "id": "BreZDtKJwSU",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Obesity in Pets - Definition and Body Condition Scoring",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "NGvnIsDVsVc",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: How do you feed your cows  Do you know what feed rations are and what your cow needs",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "NoH6FZzo8Qo",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Dry, Itchy and Flaky Dog Skin? Brand New Holistic Remedy",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "-oGKxsoeJ6U",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Unusual and Strange Animal Behavior",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "qNtwkSVr2Pw",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Avoid THESE Puppy Training First Week MISTAKES!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "nCJ0wh5cxi4",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: 5 TIPS for training your dog to like GROOMING and NAIL TRIMMING",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "cfZz9D9yKWA",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Introduction to Suture",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "Ree_mFM_cqo",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: When to Vaccinate Your Pets and When to Skip It - Vet Breaks It Down",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "U4jeGkjL6h4",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Walkthrough of a Dental Cleaning",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "FYtyTiT4KmE",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: New Puppy Owner? Follow This Essential Vaccination Schedule!",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "OpvQV9yRKi8",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: How to Treat Dog's Arthritis at Home | kutte ke jodo ka dard ka ilaj | How to fix Joint Pain in Dogs",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "-R0orjk8EKY",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: ANSC 142  Lymphatic & Immune System",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "e6RsPPq4Ysg",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Introduction to Veterinary Radiology | X-Ray Basics, Principles & Imaging | BVSc | ICAR PG & VO Exam",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "ZDRupfU1J5s",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: The Ultimate Guide to Horse Care Tips and Tricks #secretanimals @WildHorseSecrets",
+   "cat": "خيول"
+  },
+  {
+   "id": "DpfILFERmsM",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: Satisfying Full Horseshoes change | 4K ASMR 1HOUR",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "QYxUNJ6qm8Y",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Managing a Small Cattle Herd",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "g3fM-e7o0zA",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Is My Chicken Sick? How to Treat Chickens Naturally",
+   "cat": "دواجن"
+  },
+  {
+   "id": "RzQD3OtJXxY",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: EVERYTHING YOU NEED Before You Get a Parrot!",
+   "cat": "طيور"
+  },
+  {
+   "id": "zhosP4TcBfA",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Newfoundland Nutrition Guide | Growth, Weight & Bloat | Dog Health Academy S28E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "5VAD1jkFhY8",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Livestock Nutrition Service from Oklahoma Cooperative Extension Service",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "mmXL914tW8M",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: How to Heal Your Pet’s Itchy Skin Through Natural Remedies & Pet Gut Health - Holistic Vet Advice",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "W3STkYePBCo",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: What Are Animal Behaviors?",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "EVIzKL7RauQ",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How to Clicker Train Your Dog - An Intro to Positive Reinforcement Based Training",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "dTrL_O7YXkM",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: HOW TO GROOM A SHIH TZU FROM START TO FINISH 🐶",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "p4hnFf_jmvU",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: The Integumentary System",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "xi-Lt9zDKHg",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: Dog Heart Murmur!  3 Vet Tips",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "LwZiPCnuKFw",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Veterinary Dentist's ULTIMATE Guide to Reading Veterinary Dental Radiographs & X Rays",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "YRP8QmD5tq8",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: VACCINES for DOGS & CATS (What You Need to Know!) | Arah Virtucio",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "6ZT2y9myENk",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Dog & Cat Diseases : Rheumatoid Arthritis Symptoms in Dogs",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "d6UfntdjGR0",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Microbiology | Immunology (MHC,Th1 vs Th2,ELISA) ONE SHOT | MBBS 2nd Year/NEET PG/FMGE/INICET",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "t0BJ0S4JSJQ",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: A Day in the Life of a Veterinary Radiologist",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "L_huDxSkDX0",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Daily Horse Care Routine",
+   "cat": "خيول"
+  },
+  {
+   "id": "NwL_gTYQ-PU",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: 1 HOURS OF EXTREME HORSE HOOF RESTORATION! 😱",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "n8cyT3ycKrM",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: Body condition scoring - brought to you by AHDB Dairy",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "6jmibA5kXvM",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: Tackling avian flu and other dangerous poultry diseases",
+   "cat": "دواجن"
+  },
+  {
+   "id": "qkWFKrHnLjU",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Parakeet Care Guide for Beginners",
+   "cat": "طيور"
+  },
+  {
+   "id": "LFhjEd45wq4",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Bull Terrier Nutrition Guide | Food, Skin & Healthy Weight | Dog Health Academy S32E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "l3QPekE2rhQ",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Livestock Nutrition 101: Essential Tips for Healthy and Productive Animals",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "HyBRmHzjhN0",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Itchy Dog's 'Suffering' May Never End 😢 | Bondi Vet Clips | Bondi Vet",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "kcqBrJgAfn0",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Animal Behaviors Video for Kids: Imprinting, Instinct, Conditioning, and Imitation Explained |",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "-O1u3T3zS2M",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How to Train Your Dog to Ignore Other Dogs: Step-By-Step Tutorial",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "v3DLc2FSFcc",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Essential At Home Dog Grooming Guide",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "yO3cj_E5SVQ",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: EYE Examination | Regional Surgery | Lecture 04",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "n7iNfw_qOnM",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: How To Perform A Clinical Exam On Your Dog | Vet Demo",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "MDiKzXg2sxQ",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Veterinary Dental Radiology: Interpretation of common pathologies & Tips for capturing images",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "VEJie75DKcQ",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Dog Vaccines by Georgia Veterinary Associates with Dr. Reiss",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "JTbJIzMaA-A",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Weak Hind Legs in Senior Dogs: Causes & When to See a Vet",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "UBPgySKEAG8",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Antibodies | Immunoglobulins | IgG| IgM | IgA | IgD | IgE | Immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "4isfbfOZnho",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Veterinary Student Radiology Positioning Skills",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "3gbrBl5TOsk",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Taking Care of Horses in −40°C | What Winter Horse Care Really Looks Like",
+   "cat": "خيول"
+  },
+  {
+   "id": "9O0FfC0KxCE",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: How To Trim Horse Hooves: Barefoot Hoof Trimming For Beginners",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "GMyj6rM00qY",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: American Ranchers Raise 30,1 Million Beef Cattle This Way - American Cow Farm",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "gh9TQb8LPFE",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: 5 Biosecurity measures on your poultry farm🤗",
+   "cat": "دواجن"
+  },
+  {
+   "id": "HPdSMXEBTDk",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Cockatiel Care Guide | Everything You Need To Know! | BirdNerdSophie",
+   "cat": "طيور"
+  },
+  {
+   "id": "rhQF8zdmmH8",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Cane Corso Nutrition Guide | Dog Health Academy S15E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "EkcffxXb1Nk",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Nutritional Management of Livestock in Western Queensland",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "j6CccEmQHSg",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: DOG Medicated Shampoos without a Veterinarian",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "FdMWK4nJQdI",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Habituation in Animal Behavior | Understanding How Animals Learn Over Time",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "qsh0HqUiRu8",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Dog Training Tips In 'Teenage Phase'",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "FmSijaaNbhE",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: SMALL DOG HAIRCUT easy STEP by step INSTRUCTIONS",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "gvX5ao5SCjE",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Neuroanatomy made ridiculously simple",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "zEe8b3Y7xx0",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: The Feeding Mistake 90% of Dog Owners Still Make (Vet Explained)",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "Zr8Z5VrdvD8",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: At The Veterinary Hospital!  Dental Machine and Dental X-Ray.",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "YR8Whq0mj8g",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Dog Vaccination-Schedule, Vaccines & Other Details",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "BwvJIrxbHDU",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: How to Treat Arthritis in Dogs - Arthritis In Dogs",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "k9QAyP3bYmc",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: IMMUNE SYSTEM MADE EASY- IMMUNOLOGY INNATE AND ADAPTIVE IMMUNITY SIMPLE ANIMATION",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "KgrbhdoWq0c",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Pulmonary Patterns in Vet Chest X-Rays – Are You Reading Them Right? (Part 2)",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "67Qx7unmQb8",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How to groom and look after your Shetland Pony Tutorial with Harlow White Age 5",
+   "cat": "خيول"
+  },
+  {
+   "id": "dG9ZgM-zg0o",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: These Hooves Are So Dry!!! Hard Hooves Needing a Trim - Hoof Restoration - So Satisfying",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "0as2I9KcqoE",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: How to start and run a successful dairy farm - The FarmGuide Sn1 E1",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "_WDD7H-Dr38",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: 14 COMMON POULTRY DISEASES  || EVERY POULTRY FARMER MUST KNOW!!! = PART 1",
+   "cat": "دواجن"
+  },
+  {
+   "id": "UErWQ0NUm6k",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Parrotlet Care For Beginners | Topics",
+   "cat": "طيور"
+  },
+  {
+   "id": "nwUollQo39E",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Great Pyrenees Nutrition Guide | Growth, Weight & Bloat | Dog Health Academy S24E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "w8_RmBRnsY0",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Animal Nutritionist",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "NUfQQ9Aykeo",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Staph & Your Dog's Skin Disease",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "kmBAL_Un3Sw",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: What Happens When You Shout at Your Pet?",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "76TCrr-Pt6E",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Stop Everything: Your Dog Needs These 5 Commands Now!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "6pqLkCUVEo4",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: Step By Step Small Dog Grooming For Beginners",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "G5eLO6EWmUk",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Forelimb Osteology | Complete Veterinary Anatomy Lecture for ICAR | TVP Target ICAR",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "WrXKVjHnxn4",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: How To Get Rid Of Fleas | Vet Tips",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "AHGTRnaAf0A",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Understanding Post Dental Procedure Care for Pets",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "5P02rTBxr-U",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Puppy Vaccination Schedule: Which Shots and When (Dog & Cat Vaccine Schedule Explained)",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "t1QFGCFovak",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Dog Arthritis Treatment Methods",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "sdeQdg5nDA4",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Immunology Lecture 2 | Primary and Secondary Lymphoid Organs and Blood (Hematopoiesis)",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "VMSQXB9o_tw",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: VVS Cardiology Webinar- 'Basic Echocardiography' with Dr Brigite Pedro",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "FxbT-iSZmmo",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: Miniature Horse Basics! My Morning Routine!",
+   "cat": "خيول"
+  },
+  {
+   "id": "RmJZ7te76yU",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: NEGLECTED HOOF Restoration",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "t9Ka-NrbsLs",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: THE BIGGEST DAIRY FARM IN SOUTH AMERICA - ESTANCIAS DEL LAGO, URUGUAY 🇺🇾",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "3Ww9LVXAbs8",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: How to cure Gumboro disease in poultry farming organically with the best herbal remedies",
+   "cat": "دواجن"
+  },
+  {
+   "id": "vDvGXleLMKI",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: 7 Mistakes Every New Quaker Parrot Owner Makes — And The One That Is Hardest To Undo",
+   "cat": "طيور"
+  },
+  {
+   "id": "FD-8wSd9tZo",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: AskVCA Nutrition - How can I tell if my pet is over or under weight?",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "kAYr2MjtEV0",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: This Green Leaf Beats Grain for Livestock Growth",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "flAuSw-9kmc",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Dr Jones' Simple and Natural DIY Dog Allergy Cream: It really Stops Itching!",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "ftfQsQdFFeI",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Why Study Animal Behavior?",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "E_gT_snmtP0",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How to Teach Your Dog to Play Dead (\"Bang!\" dog trick)",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "Npx4o6w1LIE",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: How To Groom Your Dog's Face | Home Dog Grooming Tips",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "2O2-iIKjCMo",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Fluid Therapy | General Surgery | Lecture 05",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "UYS0Shvd0lk",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: The Deadly Feeding Mistake 98% of Dog Owners Make Every Day ( Vet Warned Every Dog Owner)",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "N4FXSttj_0U",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: A Day in the Life of a Dental Cleaning Patient",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "OM1i-_Kctyk",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Dr Andrew Jones explains: WHAT Dog Vaccines to GIVE, and what NOT to",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "VPEnrQFDFq0",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Arthritis Treatments and Supplements For Dogs! | Veterinarian Explains",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "0S1ffpt_4zo",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Immunology Explained 🔥 | Antigen & Antibody | Veterinary Microbiology Lecture 4 | Veterinary Officer",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "dmVNpV7cPJc",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: How to diagnose a linear foreign body with confidence - The Reading Room - Veterinary Radiology",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "dooMErgi440",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: What To Buy For Your First Horse!",
+   "cat": "خيول"
+  },
+  {
+   "id": "-AQ_VOy2Y64",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: A Barefoot Horse Hoof Trimming Mini Masterclass",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "7fMlFqU1tA8",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: How to Write Dairy Farm Business Plan to Start Dairy Farm Business in 2026",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "mk946rLMY0A",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: How to Identify and Help Prevent the Most Common Chicken Diseases | Dr. Maurice Pitesky",
+   "cat": "دواجن"
+  },
+  {
+   "id": "jGDwSIHIEWE",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: STOP Making These 7 Beginner Cockatiel Care Mistakes",
+   "cat": "طيور"
+  },
+  {
+   "id": "ZmEFQulo8vI",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Poodle Nutrition Guide | Feeding for Lifelong Health | Dog Health Academy S11E3",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "CVe6QBObJF4",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Feeding Livestock in South Africa: Tips for Healthy & Productive Animals",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "JGKD3PWgiEA",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Dog Yeast Infections: Symptoms, Causes, Natural Remedies & When to See a Vet!",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "JYG8uDYkV64",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Every Rabbit Behavior Explained",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "lUzcA9qa_P8",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: How To Teach Your Dog The Basics",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "86eSPiTckRA",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: 10 Things To Consider BEFORE Becoming a Pet Groomer | Pet Grooming Career",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "fR3NxCR9z2U",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Metabolism & Nutrition, Part 1: Crash Course Anatomy & Physiology #36",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "Y8KKlVk1soA",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: How a Vet Fixes Cataracts.  How to get your dog's vision back!",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "wXnp6GkkPr8",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: How to Brush Your Dog’s Teeth: Step-by-Step Vet Guide",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "5WuA0-fc6jk",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: What Vaccines Does My Puppy Need? A Vet Explains the Schedule",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "QBSrCNCKYQg",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Signs Your Dog Has Arthritis | PetMD",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "AhwpA6lKCL0",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Veterinary immunology lecture 1 from Ian Tizard book// Basics of veterinary immunology",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "JK8rjQ6pFag",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Diagnostic Imaging: Radiographs for Decision Making in Thoracic and Abdominal Emergencies",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "KXgO6dzoOLM",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: What You Need For Your First Horse! AD | This Esme",
+   "cat": "خيول"
+  },
+  {
+   "id": "47CubmtDic0",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: BIG HORSES!!!    Budweiser Clydesdale Barefoot Trim by Olsen Equine CJF",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "uKrLXJ3QECI",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: The Hidden World of Milk – How America's Largest Dairy Farms Really Work | Agriculture Technology",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "lfKK5oZD-G0",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: How to Protect Chicks Against Diseases - Zero Deaths!",
+   "cat": "دواجن"
+  },
+  {
+   "id": "W-sDIpELvyU",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: 🌧️ Rainy Season Parrot Care Guide | Do These 5 Things to Keep Your Parrot Healthy! 🦜",
+   "cat": "طيور"
+  },
+  {
+   "id": "52HG5KlQFSk",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: Body Condition Scoring",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "2hEVASFnHzE",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Beef Cattle Nutrition 10 TIPS for Raising & Feeding Cows 🐮",
+   "cat": "تغذية المواشي"
+  },
+  {
+   "id": "qLHdj2PF_uI",
+   "title": "مشكلات جلد الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «مشكلات جلد الكلاب عند الطبيب البيطري». العنوان الأصلي: Dog Cushings Disease.  Dr. Dan covers symptoms, diagnosis, and treatment of Cushing's disease",
+   "cat": "جلد وأذن"
+  },
+  {
+   "id": "u-dEnJpCGAQ",
+   "title": "سلوك الحيوان مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «سلوك الحيوان مشروحًا». العنوان الأصلي: Wildlife - The Fascinating World of Wild Animals | Full Series | Free Documentary Nature",
+   "cat": "سلوك الحيوان"
+  },
+  {
+   "id": "VSDvvr3TedU",
+   "title": "أساسيات تدريب الكلاب بالإيجابية",
+   "desc": "فيديو تعليمي في موضوع «أساسيات تدريب الكلاب بالإيجابية». العنوان الأصلي: Beginner's Guide to POSITIVE Reinforcement Dog Training - For Puppies and Adults!",
+   "cat": "سلوك ونشاط"
+  },
+  {
+   "id": "s7hlcoA4Xpg",
+   "title": "أساسيات العناية بنظافة الكلاب",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بنظافة الكلاب». العنوان الأصلي: How I Groom My Golden Retriever ASMR",
+   "cat": "عناية ونظافة"
+  },
+  {
+   "id": "-E_K5YlHZjY",
+   "title": "محاضرة بيطرية للطلاب والأطباء",
+   "desc": "فيديو تعليمي في موضوع «محاضرة بيطرية للطلاب والأطباء». العنوان الأصلي: Balanced Weekend as a Vet Student 🐾🩺| Vet Ball, Lectures & Study Sessions",
+   "cat": "طلاب وأطباء"
+  },
+  {
+   "id": "8_9yp1M-xTs",
+   "title": "نصائح طبيب بيطري للعناية بالكلاب",
+   "desc": "فيديو تعليمي في موضوع «نصائح طبيب بيطري للعناية بالكلاب». العنوان الأصلي: The Best Age to Spay Your Dog in 2026 (veterinarian explains)",
+   "cat": "حيوانات أليفة"
+  },
+  {
+   "id": "io3Ckr8R8T0",
+   "title": "العناية بأسنان الكلاب عند الطبيب البيطري",
+   "desc": "فيديو تعليمي في موضوع «العناية بأسنان الكلاب عند الطبيب البيطري». العنوان الأصلي: Dental Health in dogs and cats: What You Need to Know",
+   "cat": "صحة الفم والأسنان"
+  },
+  {
+   "id": "kX_IZJNz5IA",
+   "title": "جدول لقاحات الكلاب مشروحًا",
+   "desc": "فيديو تعليمي في موضوع «جدول لقاحات الكلاب مشروحًا». العنوان الأصلي: Puppy Vaccines by Georgia Veterinary Associates and Dr. Hines",
+   "cat": "تلقيح ووقاية"
+  },
+  {
+   "id": "HJd2becg61E",
+   "title": "التهاب المفاصل عند الكلاب: العلامات والعلاج",
+   "desc": "فيديو تعليمي في موضوع «التهاب المفاصل عند الكلاب: العلامات والعلاج». العنوان الأصلي: Arthritis in Dogs: The Quiet Signs Your Dog Is Hurting",
+   "cat": "عظام ومفاصل"
+  },
+  {
+   "id": "urFzmEJ2HMg",
+   "title": "محاضرة في علم المناعة البيطرية",
+   "desc": "فيديو تعليمي في موضوع «محاضرة في علم المناعة البيطرية». العنوان الأصلي: Innate Immune System (VET Immunology)",
+   "cat": "علم مناعة"
+  },
+  {
+   "id": "-8IYIadFIcw",
+   "title": "حالات أشعة وتشخيص بيطري",
+   "desc": "فيديو تعليمي في موضوع «حالات أشعة وتشخيص بيطري». العنوان الأصلي: Radiology at Metropolitan Veterinary Associates",
+   "cat": "أشعة وتشخيص"
+  },
+  {
+   "id": "V1-MD7wYQ6g",
+   "title": "أساسيات العناية بالخيول",
+   "desc": "فيديو تعليمي في موضوع «أساسيات العناية بالخيول». العنوان الأصلي: How To Properly Groom A Horse! (You're doing it WRONG!)",
+   "cat": "خيول"
+  },
+  {
+   "id": "LsJzD0vWxJM",
+   "title": "العناية بحوافر الخيول عند البيطار",
+   "desc": "فيديو تعليمي في موضوع «العناية بحوافر الخيول عند البيطار». العنوان الأصلي: These Hooves Were In Terrible Condition!!! How Can People Let This Happen - Satisfying Restoration",
+   "cat": "عناية بالحوافر"
+  },
+  {
+   "id": "K78dEI1U6oM",
+   "title": "إدارة أبقار الحليب في المزرعة",
+   "desc": "فيديو تعليمي في موضوع «إدارة أبقار الحليب في المزرعة». العنوان الأصلي: How to Start a Cattle Farm: Easy & Essential Steps for Beginners",
+   "cat": "مواشٍ ومجترات"
+  },
+  {
+   "id": "-4agZpnE_j8",
+   "title": "أمراض الدواجن وسبل الوقاية منها",
+   "desc": "فيديو تعليمي في موضوع «أمراض الدواجن وسبل الوقاية منها». العنوان الأصلي: How to prevent chicken from dying and diseases",
+   "cat": "دواجن"
+  },
+  {
+   "id": "98AMK891iQU",
+   "title": "دليل العناية بالببغاوات",
+   "desc": "فيديو تعليمي في موضوع «دليل العناية بالببغاوات». العنوان الأصلي: Is a Pionus for you? Pionus parrot care guide and tips",
+   "cat": "طيور"
+  },
+  {
+   "id": "eGaoRMZv2KQ",
+   "title": "تغذية الكلاب وتقييم حالة الجسم",
+   "desc": "فيديو تعليمي في موضوع «تغذية الكلاب وتقييم حالة الجسم». العنوان الأصلي: What is a body condition score and how does it affect Dogs?",
+   "cat": "تغذية ووزن"
+  },
+  {
+   "id": "MGORUYiuQr4",
+   "title": "تغذية المواشي وإدارة الأعلاف",
+   "desc": "فيديو تعليمي في موضوع «تغذية المواشي وإدارة الأعلاف». العنوان الأصلي: Podcast #13 - When Nutrition Meets Veterinary Medicine: A Better Way to Feed Cattle",
+   "cat": "تغذية المواشي"
   }
  ]
 }
