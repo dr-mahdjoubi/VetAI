@@ -64,3 +64,53 @@ h1, h2, h3, .font-black { font-family: 'Cairo', 'IBM Plex Sans Arabic', system-u
 }
 .skip-link:focus-visible { top: 0; }
 :focus-visible { outline: 3px solid var(--va-accent); outline-offset: 2px; border-radius: 4px; }
+
+/* ===== إعادة تصميم بصرية شاملة — v63 ===== */
+/* 1) عنوان البطل: إلغاء تباعد الأحرف السالب (يكسر اتصال الحروف العربية) */
+#view-home .vg-cinematic h2 { letter-spacing: 0 !important; line-height: 1.3 !important; }
+/* 2) البطل على الجوال: عمود واحد مضغوط بلا زخارف دوّارة */
+@media (max-width: 700px) {
+  #view-home .vg-cinematic { grid-template-columns: 1fr !important; padding: 26px 18px 30px !important; gap: 12px !important; }
+  #view-home .vg-cinematic h2 { font-size: 2.05rem !important; margin: 8px 0 12px !important; }
+  #view-home .vg-cinematic .vg-orbit,
+  #view-home .vg-cinematic .vg-hud,
+  #view-home .vg-cinematic .vg-rot,
+  #view-home .vg-cinematic .vg-wave { display: none !important; }
+}
+/* 3) بطاقات موحدة: زوايا أكبر وظل ناعم */
+.card, .tool { border-radius: 18px !important; box-shadow: 0 10px 30px rgba(2, 12, 8, .16) !important; }
+/* 4) عناوين الأقسام: شريط تأكيد جانبي */
+.sh2 { border-inline-start: 4px solid var(--va-accent); padding-inline-start: 12px; }
+.sh2 h2 { font-size: 1.5rem; line-height: 1.35; }
+/* 5) رقائق الفروع: حبوب واضحة بحالة نشطة قوية */
+.branch-link { border-radius: 999px !important; padding: 8px 15px !important; font-weight: 700; }
+.branch-link.active { background: var(--va-primary) !important; color: #fff !important; border-color: transparent !important; }
+/* 6) الأزرار العائمة: إرساء التصميم الأصلي + زر مساعد دائري على الجوال */
+.pa-fab { bottom: 124px !important; }
+[data-btt] { bottom: 128px !important; }
+@media (max-width: 700px) {
+  /* إخفاء عمود الزخرفة البصري في البطل على الجوال (فن فقط — لا محتوى وظيفي) */
+  #view-home .vg-cinematic > :nth-child(2) { display: none !important; }
+  /* زر المساعد: دائرة أيقونة فقط بدل الحبة العريضة التي تغطي النص */
+  .pa-fab {
+    width: 52px !important; height: 52px !important; min-height: 52px !important;
+    padding: 0 !important; border-radius: 50% !important; justify-content: center;
+    font-size: 0 !important;
+  }
+  .pa-fab::before { content: '🤖'; font-size: 22px; line-height: 1; }
+  .pa-fab .pa-fab-dot { position: absolute; top: 3px; inset-inline-end: 3px; }
+}
+/* 7) زر طيّ باحث الفقرات */
+.pf-toggle {
+  display: inline-flex; align-items: center; gap: 6px; margin: 2px 0 8px;
+  min-height: 40px; padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--hatch-widget-border, rgba(127, 180, 200, .4));
+  background: transparent; color: inherit; font: inherit; font-size: .92rem; font-weight: 700;
+}
+
+/* v63b: خفض شريط الأزرار العائمة السفلي حتى لا يغطي أزرار البطل */
+.un-stack { bottom: 8px !important; }
+#svc { bottom: 8px !important; }
+@media (max-width: 700px) {
+  #view-home .vg-cinematic { padding-bottom: 20px !important; }
+}
