@@ -59,7 +59,27 @@
     });
   }
 
-  function init() { addBackToTop(); checkHash(); }
+  /* ---------- Collapse the paragraph finder behind a toggle (v63 declutter) ---------- */
+  function collapseFinder() {
+    var pf = document.querySelector('.paragraph-finder');
+    if (!pf || pf.getAttribute('data-collapsed')) return;
+    pf.setAttribute('data-collapsed', '1');
+    pf.style.display = 'none';
+    var t = document.createElement('button');
+    t.type = 'button';
+    t.className = 'pf-toggle';
+    t.textContent = '⌕ بحث داخل نصوص الصفحة';
+    t.setAttribute('aria-expanded', 'false');
+    t.addEventListener('click', function () {
+      var open = pf.style.display !== 'none';
+      pf.style.display = open ? 'none' : '';
+      t.setAttribute('aria-expanded', String(!open));
+      if (!open) { var q = document.getElementById('paragraphQuery'); if (q) q.focus(); }
+    });
+    pf.parentElement.insertBefore(t, pf);
+  }
+
+  function init() { addBackToTop(); checkHash(); collapseFinder(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
   window.addEventListener('hashchange', checkHash);
 })();
