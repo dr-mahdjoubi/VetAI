@@ -1545,6 +1545,7 @@ html.perf-idle body #cv{display:none!important}
 </script>
 <link rel="stylesheet" href="css/vetai-ios-tools.css">
 <link rel="stylesheet" href="css/vetai-v7-reskin.css">
+<link rel="stylesheet" href="css/perf-fix.css">
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -4817,7 +4818,7 @@ $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(
     M3D.forEach(function(m){
       var card=el('div','rounded-2xl glass-panel p-4');
       var mv=document.createElement('model-viewer');
-      mv.setAttribute('src',m.src);mv.setAttribute('camera-controls','');mv.setAttribute('auto-rotate','');
+      mv.setAttribute('src',m.src);mv.setAttribute('camera-controls','');
       if(m.anim)mv.setAttribute('autoplay','');
       mv.setAttribute('shadow-intensity','1');mv.setAttribute('loading','lazy');mv.setAttribute('alt','نموذج ثلاثي الأبعاد: '+m.name);
       mv.className='mv3d';
@@ -4932,7 +4933,7 @@ $('bx-t1').onclick=function(){tab(1)};$('bx-t2').onclick=function(){tab(2)};tab(
       var stage=document.getElementById('psStage');
       if(!mv){
         mv=document.createElement('model-viewer');
-        mv.setAttribute('camera-controls',''); mv.setAttribute('auto-rotate','');
+        mv.setAttribute('camera-controls','');
         mv.setAttribute('shadow-intensity','1'); mv.setAttribute('loading','eager');
         mv.className='psmv';
         mv.addEventListener('load',onMvLoad);
@@ -5075,8 +5076,8 @@ const ANIMALS=[
   const choices=sh(others.concat([cur]));
   opts.innerHTML=choices.map(a=>'<button data-n="'+a.n+'">'+a.n+'</button>').join('');
   scoreEl.textContent='السؤال '+round+'/8 · النقاط: '+score+(streak>=2?' · 🔥 سلسلة '+streak:'');
-  locked=false;left=100;bar.style.width='100%';clearInterval(timer);
-  timer=setInterval(()=>{left-=2;bar.style.width=left+'%';if(left<=0){clearInterval(timer);answer(null)}},100);
+  locked=false;left=100;bar.style.width='100%';bar.style.transformOrigin='right center';bar.style.transform='scaleX(1)';clearInterval(timer);
+  timer=setInterval(()=>{left-=2;bar.style.transform='scaleX('+(left/100)+')';if(left<=0){clearInterval(timer);answer(null)}},100);
  }
  function answer(n){
   if(locked)return;locked=true;clearInterval(timer);
@@ -5150,9 +5151,9 @@ const ANIMALS=[
   const choices=sh(others.concat([cur]));
   opts.innerHTML=choices.map(a=>'<button data-n="'+a.n+'">'+a.n+'</button>').join('');
   scoreEl.textContent='الجولة '+round+'/8 · النقاط: '+score+(streak>=2?' · 🔥 سلسلة '+streak:'');
-  locked=false;left=100;bar.style.width='100%';clearInterval(timer);
+  locked=false;left=100;bar.style.width='100%';bar.style.transformOrigin='right center';bar.style.transform='scaleX(1)';clearInterval(timer);
   if(window.__vetaiSoundOn?window.__vetaiSoundOn():true){au.currentTime=0;au.play().catch(()=>{});}
-  timer=setInterval(()=>{left-=2;bar.style.width=left+'%';if(left<=0){clearInterval(timer);answer(null)}},100);
+  timer=setInterval(()=>{left-=2;bar.style.transform='scaleX('+(left/100)+')';if(left<=0){clearInterval(timer);answer(null)}},100);
  }
  function answer(n){
   if(locked)return;locked=true;clearInterval(timer);au.pause();
@@ -5193,8 +5194,8 @@ const ANIMALS=[
   const choices=sh(others.concat([cur.f]));
   opts.innerHTML=choices.map(f=>'<button data-f="'+f+'">'+f+'</button>').join('');
   scoreEl.textContent='السؤال '+round+'/8 · ما الغذاء الأنسب لهذا الحيوان؟ · النقاط: '+score;
-  locked=false;left=100;bar.style.width='100%';clearInterval(timer);
-  timer=setInterval(()=>{left-=2;bar.style.width=left+'%';if(left<=0){clearInterval(timer);answer(null)}},100);
+  locked=false;left=100;bar.style.width='100%';bar.style.transformOrigin='right center';bar.style.transform='scaleX(1)';clearInterval(timer);
+  timer=setInterval(()=>{left-=2;bar.style.transform='scaleX('+(left/100)+')';if(left<=0){clearInterval(timer);answer(null)}},100);
  }
  function answer(f){
   if(locked)return;locked=true;clearInterval(timer);
@@ -6273,6 +6274,7 @@ arm();
 <script src="js/bioacoustic-lab.js" defer></script>
 <script src="js/v45-showcase.js" defer></script>
 <script src="js/thesis-ai.js" defer></script>
+<script src="js/anim-governor.js" defer></script>
     <script src="js/exams-graded.js" defer></script>
 <script src="js/library-engine.js" defer></script><script>window.addEventListener('DOMContentLoaded',function(){if(window.VetLibrary){VetLibrary.mount(document.getElementById('library-root'));}});</script>
 <script id="mmgame-js">
