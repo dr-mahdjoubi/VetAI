@@ -147,14 +147,11 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       '<style>' + CSS + '</style>' +
       '<h2>✨ جديد المنصة — v45: ذكاء بيطري من الطراز العالمي</h2>' +
       '<p class="sub">أربعة محركات جديدة تعمل الآن على المنصة، مبنية بأدلة قابلة للتدقيق وحدود علمية صريحة:</p>' +
-      '<div class="film"><video controls autoplay muted loop playsinline preload="auto" poster="assets/promo/poster.jpg"><source src="assets/promo/vetai-film-480p.webm" type="video/webm" media="(max-width: 480px)"><source src="assets/promo/vetai-film.webm" type="video/webm"><source src="assets/promo/vetai-film.mp4" type="video/mp4"></video>' +
-      '<p class="filmcap">🎬 فيلم المنصة الرسمي — جولة كاملة في فيتاي غلوبال بصوتٍ يشرح كل شيء، مع مؤسسها د. محجوبي عبدالناصر</p></div>' +
       '<div class="grid">' + CARDS.map((c, i) =>
         '<button type="button" class="card" data-show45="' + i + '"><span class="ic" aria-hidden="true">' + c.icon +
         '</span><b>' + c.title + '</b><span class="desc">' + c.desc + '</span></button>').join('') + '</div>' +
       '<div class="stats">' + STATS.map(s => '<span class="stat"><b>' + s[0] + '</b> ' + s[1] + '</span>').join('') + '</div>';
     home.insertBefore(sec, home.firstChild);
-    gateFilm(sec.querySelector('.film video'));
     sec.addEventListener('click', e => {
       const btn = e.target.closest('[data-show45]');
       if (btn) go(CARDS[Number(btn.getAttribute('data-show45'))].view);
