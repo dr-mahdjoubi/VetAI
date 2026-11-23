@@ -1,0 +1,39 @@
+/* VetAI page-design (Phase 1+3) — طبقة التصميم الموحدة:
+   توكنز محدودة + ثلاثية تركيز الرئيسية + حالات تفاعل موحدة.
+   تُحمَّل بعد perf-fix.css. */
+:root {
+  --va-primary: #0b6e4f;
+  --va-secondary: #0e7490;
+  --va-accent: #d97706;
+  --va-ink: #12212b;
+  --va-gray-1: #f6f8f7;
+  --va-gray-2: #e7edea;
+  --va-gray-3: #c9d4cf;
+  --va-gray-4: #71857c;
+  --va-gray-5: #3c4f47;
+  --va-r-sm: 8px; --va-r-md: 12px; --va-r-lg: 16px; --va-r-xl: 24px;
+  --va-shadow: 0 6px 20px rgba(11, 60, 44, .08);
+  --va-ease: 180ms ease;
+}
+.focus-trio {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin: 14px auto; max-width: 1060px; padding: 0 12px;
+}
+.focus-trio button {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  min-height: 44px; padding: 16px 10px; cursor: pointer; text-align: center;
+  background: #fff; border: 1px solid var(--va-gray-2); border-radius: var(--va-r-lg);
+  box-shadow: var(--va-shadow); color: var(--va-ink);
+  transition: transform var(--va-ease), box-shadow var(--va-ease), border-color var(--va-ease);
+}
+.focus-trio button:hover { transform: translateY(-2px); border-color: var(--va-primary); }
+.focus-trio button:active { transform: scale(.98); }
+.focus-trio button:focus-visible { outline: 3px solid var(--va-secondary); outline-offset: 2px; }
+.focus-trio .ft-ic { font-size: 30px; line-height: 1; }
+.focus-trio .ft-t { font-weight: 800; font-size: 17px; color: var(--va-primary); }
+.focus-trio .ft-d { font-size: 13px; color: var(--va-gray-4); line-height: 1.5; }
+@media (max-width: 640px) {
+  .focus-trio { grid-template-columns: 1fr; }
+  .focus-trio button { flex-direction: row; text-align: start; padding: 12px 14px; }
+  .focus-trio .ft-ic { font-size: 24px; }
+}
