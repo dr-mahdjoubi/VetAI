@@ -114,3 +114,14 @@ h1, h2, h3, .font-black { font-family: 'Cairo', 'IBM Plex Sans Arabic', system-u
 @media (max-width: 700px) {
   #view-home .vg-cinematic { padding-bottom: 20px !important; }
 }
+
+/* ===== v64: صور الأقسام والعناوين — أبعاد ثابتة، بلا فلاتر ثقيلة ===== */
+.view-banner { margin: 0 0 18px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(127, 180, 200, .25); }
+.view-banner img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; object-fit: cover; object-position: center; }
+@media (min-width: 768px) { .view-banner img { aspect-ratio: 32 / 10; } }
+#main-content .sh2 { display: grid; grid-template-columns: 56px 1fr; column-gap: 12px; align-items: center; }
+#main-content .sh2 > *:not(.sh2-art) { grid-column: 2; }
+.sh2-art { grid-row: 1 / span 4; width: 56px; height: 56px; border-radius: 14px; object-fit: cover; object-position: center; border: 1px solid rgba(127, 180, 200, .3); }
+.ft-art { width: 46px; height: 46px; border-radius: 12px; object-fit: cover; object-position: center; flex: none; }
+.qa-art { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; border-radius: 12px; margin-bottom: 10px; }
+.h-art { width: 44px; height: 44px; border-radius: 12px; object-fit: cover; object-position: center; vertical-align: -13px; margin-inline-end: 10px; border: 1px solid rgba(127, 180, 200, .3); }
