@@ -52,9 +52,22 @@
       '<div class="th-card"><h3>🤖 2) المساعد الأكاديمي الذكي</h3>' +
         '<p style="color:#94a3b8;font-size:13px;line-height:1.9;margin:0 0 8px">اسأل عن أي خطوة: صياغة الإشكالية، الفرضيات، منهجية الدراسة، تنسيق مرجع، التحضير للمناقشة… يجيبك ذكاء المنصة مع مراجع من محتوى VetAI.</p>' +
         '<div class="th-chips" id="th-chips"></div>' +
+        '<div style="max-width:340px;margin:0 0 10px"><label>نظام توثيق المراجع</label><select id="th-style"><option value="apa">APA</option><option value="vancouver">Vancouver</option><option value="chicago">Chicago</option><option value="ieee">IEEE</option></select></div>' +
         '<textarea id="th-q" rows="3" placeholder="مثال: كيف أصيغ إشكالية مذكرة عن التهاب الضرع عند الأبقار؟"></textarea>' +
         '<div class="th-row"><button class="th-btn" id="th-ask" type="button">اسأل المساعد</button></div>' +
         '<div class="th-answer" id="th-answer" style="margin-top:12px;display:none"></div>' +
+      '</div>' +
+
+      '<div class="th-card"><h3>🧭 3) مدقّق الاتساق المنهجي</h3>' +
+        '<p style="color:#94a3b8;font-size:13px;line-height:1.9;margin:0 0 10px">أدخل عناصر مذكرتك الأربعة، وسيدقّق المساعد الاتساق بين العنوان والإشكالية والفرضيات والمنهج، ويراجعك في أربعة أقسام: نقاط القوة، ملاحظات منهجية وعلمية، تصحيح لغوي وأكاديمي، ونسخة محسّنة مقترحة.</p>' +
+        '<div class="th-grid">' +
+          '<div style="grid-column:1/-1"><label>عنوان المذكرة</label><input id="th-cc-title" placeholder="مثال: التهاب الضرع عند الأبقار الحلوب في ولاية الشلف: دراسة ميدانية"></div>' +
+          '<div style="grid-column:1/-1"><label>الإشكالية</label><textarea id="th-cc-problem" rows="3" placeholder="اكتب نص الإشكالية كما صغتها في مذكرتك…"></textarea></div>' +
+          '<div style="grid-column:1/-1"><label>الفرضيات / التساؤلات</label><textarea id="th-cc-hypo" rows="3" placeholder="اكتب الفرضية العامة والفرضيات الجزئية أو تساؤلات الدراسة…"></textarea></div>' +
+          '<div style="grid-column:1/-1"><label>المنهج المختار</label><textarea id="th-cc-method" rows="2" placeholder="مثال: المنهج الوصفي التحليلي — دراسة ميدانية باستبيان وفحوصات مخبرية…"></textarea></div>' +
+        '</div>' +
+        '<div class="th-row"><button class="th-btn" id="th-cc-btn" type="button">دقّق الاتساق</button></div>' +
+        '<div class="th-answer" id="th-cc-answer" style="margin-top:12px;display:none"></div>' +
       '</div>' +
 
       '<div id="th-guides"></div>' +
@@ -138,7 +151,7 @@
   var GUIDES = [
     ['📚 كيف تختار موضوع مذكرتك؟', '• ابدأ من مشكلة حقيقية لاحظتها في التدريب الميداني أو العيادة.\n• تأكد من توفر المراجع والعينات/الحالات محليًا قبل الاعتماد.\n• الموضوع الجيد: محدد (نوع حيوان + مكان + فترة)، قابل للقياس، ومفيد مهنيًا.\n• تجنب المواضيع الواسعة جدًا («أمراض الأبقار») واختر زاوية ضيقة عميقة.\n• ناقش العنوان مع مشرفك مبكرًا ولا تبدأ الكتابة قبل اعتماده كتابة.'],
     ['🔬 منهجية البحث العلمي في سطور', '• الإشكالية سؤال واحد واضح، والفرضيات إجابات مؤقتة قابلة للاختبار.\n• عرّف مجتمع الدراسة والعينة وطريقة اختيارها وأدوات جمع البيانات.\n• اذكر التحليل الإحصائي المستعمل (نسب، متوسطات، اختبارات دلالة) وبرنامجه.\n• وثّق كل معلومة بمرجعها، واكتب الطرق بصيغة تسمح لغيرك بتكرارها.\n• احترم أخلاقيات البحث: موافقات، رفق بالحيوان، وسرية بيانات المربين.'],
-    ['✒️ تنسيق المراجع: APA وفانكوفر', 'مقال علمي — APA:\nBennett, R. M., & Perrett, E. (2024). Title of the article. Journal of Dairy Science, 107(3), 1500–1512.\n\nمقال علمي — Vancouver:\nBennett RM, Perrett E. Title of the article. J Dairy Sci. 2024;107(3):1500-12.\n\nكتاب — APA:\nRadostits, O. M., Gay, C. C., Hinchcliff, K. W., & Constable, P. D. (2007). Veterinary Medicine (10th ed.). Saunders Elsevier.\n\nقاعدة ذهبية: صيغة واحدة من أول مرجع إلى آخر مرجع، وكل مرجع في القائمة مذكور في المتن.'],
+    ['✒️ تنسيق المراجع: APA وVancouver وChicago وIEEE', 'اختر نظامًا واحدًا من الأنظمة الأربعة المعتمدة دوليًا والتزم به من أول مرجع إلى آخر مرجع (اختر النظام نفسه في «المساعد الأكاديمي» أعلاه لتوثيق الأمثلة به):\n\nمقال علمي — APA:\nBennett, R. M., & Perrett, E. (2024). Title of the article. Journal of Dairy Science, 107(3), 1500–1512.\n\nمقال علمي — Vancouver:\nBennett RM, Perrett E. Title of the article. J Dairy Sci. 2024;107(3):1500-12.\n\nمقال علمي — Chicago (مؤلف–تاريخ):\nBennett, R. M., and E. Perrett. 2024. "Title of the article." Journal of Dairy Science 107 (3): 1500–1512.\n\nمقال علمي — IEEE:\n[1] R. M. Bennett and E. Perrett, "Title of the article," J. Dairy Sci., vol. 107, no. 3, pp. 1500–1512, 2024.\n\nكتاب — APA:\nRadostits, O. M., Gay, C. C., Hinchcliff, K. W., & Constable, P. D. (2007). Veterinary Medicine (10th ed.). Saunders Elsevier.\n\nقاعدة ذهبية: صيغة واحدة من أول مرجع إلى آخر مرجع، وكل مرجع في القائمة مذكور في المتن — وتحقق من كل مرجع في مصدره الأصلي (Google Scholar أو Scopus أو PubMed) قبل اعتماده.'],
     ['🎤 أخطاء شائعة أمام لجنة المناقشة', '• قراءة العرض حرفيًا من الشرائح بدل الحديث الواثق الموجز.\n• ادعاء نتائج لا تدعمها بياناتك — كن صريحًا مع حدود دراستك.\n• عدم معرفة سبب اختيارك للطرق والإحصاء المستعمل.\n• إهمال التدقيق اللغوي وتنسيق المراجع — أول ما تلاحظه اللجنة.\n• حضّر إجابات عن: لماذا هذا الموضوع؟ ما الجديد في دراستك؟ ما حدودها؟'],
     ['📝 نموذج تصريح باستخدام الذكاء الاصطناعي (انسخه وعدّله)', 'أصرّح أنا الطالب(ة) …………………… أنني استعنت بأدوات الذكاء الاصطناعي (مساعد مذكرات VetAI) في: توليد الهيكل الأولي، واقتراح صياغات، وتلخيص بعض المراجع، والمراجعة اللغوية. وأن صياغة الأفكار والتحليل والنتائج والمناقشة في هذه المذكرة من عملي الشخصي، وقد تحققت من صحة كل معلومة من مصادرها الأصلية.']
   ];
@@ -156,7 +169,7 @@
     host.appendChild(div);
 
     var guides = document.getElementById('th-guides');
-    guides.innerHTML = '<h3 style="color:#22d3ee;font-weight:900;font-size:18px;margin:18px 0 4px">📖 3) أدلة المنهجية والتنسيق</h3>' +
+    guides.innerHTML = '<h3 style="color:#22d3ee;font-weight:900;font-size:18px;margin:18px 0 4px">📖 4) أدلة المنهجية والتنسيق</h3>' +
       GUIDES.map(function (g) {
         return '<details><summary>' + g[0] + '</summary><div class="th-body">' + g[1] + '</div></details>';
       }).join('');
@@ -185,16 +198,15 @@
       }
     });
     document.getElementById('th-ask').addEventListener('click', ask);
+    document.getElementById('th-cc-btn').addEventListener('click', checkConsistency);
   }
 
-  function ask() {
-    var qEl = document.getElementById('th-q');
-    var box = document.getElementById('th-answer');
-    var q = (qEl.value || '').trim();
-    if (!q) { box.style.display = 'block'; box.textContent = 'اكتب سؤالك أولًا، أو اضغط أحد الاقتراحات الجاهزة.'; return; }
+  var RULES = 'قواعد صارمة يجب الالتزام بها حرفيًا: (1) يُمنع منعًا باتًا اختلاق أو تخمين أي مراجع أو دراسات سابقة أو أسماء باحثين أو أرقام إحصائية أو اقتباسات؛ (2) إذا تعذّر التحقق من مصدر أو معلومة، صرّح بذلك بوضوح ووجّه الطالب إلى قواعد البيانات الأكاديمية المعتمدة (Google Scholar أو Scopus أو PubMed أو DOAJ) مع اقتراح كلمات مفتاحية دقيقة للبحث؛ (3) ذكّر الطالب عند الحاجة بوجوب التصريح عن استخدام الذكاء الاصطناعي وفق نظام جامعته؛ (4) اختم إجابتك دائمًا بسطر أخير مستقل يبدأ بـ«الخطوة التالية:» ويتضمن خطوة عملية واحدة محددة.';
+  var STYLES = { apa: 'APA (الطبعة السابعة)', vancouver: 'Vancouver', chicago: 'Chicago (نظام المؤلف–التاريخ)', ieee: 'IEEE' };
+
+  function runAsk(prompt, box, thinking) {
     box.style.display = 'block';
-    box.textContent = '⏳ المساعد الأكاديمي يفكر…';
-    var prompt = 'أنت مساعد أكاديمي متخصص في منهجية البحث العلمي في الطب البيطري، تساعد طالبًا في إعداد مذكرة تخرج جامعية. أجب بالعربية الفصحى إجابة منظمة وعملية وقابلة للتطبيق مباشرة، مع أمثلة قصيرة عند الحاجة. سؤال الطالب: ' + q;
+    box.textContent = thinking;
     if (window.VetAIClient && typeof window.VetAIClient.ask === 'function') {
       window.VetAIClient.ask(prompt, { lang: 'ar' }).then(function (res) {
         var ans = '';
@@ -213,6 +225,36 @@
     } else {
       box.textContent = 'المساعد الذكي غير متاح في هذه اللحظة — جرّب قسم «المساعد البيطري» في المنصة.';
     }
+  }
+
+  function ask() {
+    var qEl = document.getElementById('th-q');
+    var box = document.getElementById('th-answer');
+    var q = (qEl.value || '').trim();
+    if (!q) { box.style.display = 'block'; box.textContent = 'اكتب سؤالك أولًا، أو اضغط أحد الاقتراحات الجاهزة.'; return; }
+    var styleEl = document.getElementById('th-style');
+    var styleName = STYLES[(styleEl && styleEl.value) || 'apa'] || STYLES.apa;
+    var prompt = 'أنت مساعد أكاديمي متخصص في منهجية البحث العلمي في الطب البيطري، تساعد طالبًا في إعداد مذكرة تخرج جامعية. أجب بالعربية الفصحى إجابة منظمة وعملية وقابلة للتطبيق مباشرة، مع أمثلة قصيرة عند الحاجة. وثّق أي مثال أو مرجع تذكره في إجابتك بصيغة ' + styleName + ' حصرًا. ' + RULES + ' سؤال الطالب: ' + q;
+    runAsk(prompt, box, '⏳ المساعد الأكاديمي يفكر…');
+  }
+
+  function checkConsistency() {
+    var box = document.getElementById('th-cc-answer');
+    var title = (document.getElementById('th-cc-title').value || '').trim();
+    var problem = (document.getElementById('th-cc-problem').value || '').trim();
+    var hypo = (document.getElementById('th-cc-hypo').value || '').trim();
+    var method = (document.getElementById('th-cc-method').value || '').trim();
+    if (!title && !problem && !hypo && !method) {
+      box.style.display = 'block';
+      box.textContent = 'أدخل عناصر مذكرتك الأربعة أولًا (العنوان، الإشكالية، الفرضيات/التساؤلات، المنهج) ثم اضغط «دقّق الاتساق».';
+      return;
+    }
+    var prompt = 'أنت مدقّق منهجي أكاديمي صارم متخصص في أبحاث ومذكرات التخرج في الطب البيطري. مهمتك تدقيق الاتساق والترابط بين عناصر المذكرة التالية: العنوان، الإشكالية، الفرضيات/التساؤلات، والمنهج المختار (هل يجيب العنوان عن الإشكالية؟ هل الفرضيات قابلة للاختبار ومشتقة من الإشكالية؟ هل المنهج ملائم للإجابة عنها؟). قدّم مراجعتك بالعربية الفصحى منظمة في أربعة أقسام بهذا الترتيب حصرًا وبعناوينها حرفيًا: 1) نقاط القوة. 2) ملاحظات منهجية وعلمية. 3) تصحيح لغوي وأكاديمي. 4) نسخة محسّنة مقترحة. ' + RULES +
+      '\n\n— عناصر المذكرة —\nعنوان المذكرة: ' + (title || '(غير مدخل)') +
+      '\nالإشكالية: ' + (problem || '(غير مدخلة)') +
+      '\nالفرضيات/التساؤلات: ' + (hypo || '(غير مدخلة)') +
+      '\nالمنهج المختار: ' + (method || '(غير مدخل)');
+    runAsk(prompt, box, '⏳ المدقّق المنهجي يراجع عناصر مذكرتك…');
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
