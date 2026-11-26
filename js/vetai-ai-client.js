@@ -350,7 +350,11 @@
     var history = Array.isArray(opts.history) ? opts.history.slice(-6).map(function (m) {
       return { role: m && m.role, content: trimStr(m && m.content, 2000) };
     }) : [];
-    var body = { question: q, history: history, context: trimStr(opts.context || '', 4000) };
+    /* The deployed Worker answers /api/ask only when `messages` is present
+           (a bare {question} body gets {"error":"no_messages"}); send both
+                  shapes so either Worker contract works. */
+         var messages = history.concat([{ role: 'user', content: trimStr(q, 4000) }]);
+         var body = { question: q, messages: messages, history: history, context: trimStr(opts.context || '', 4000), lang: opts.lang || 'ar' };
     return fetchJSON('/api/ask', body, opts.timeoutMs || ASK_TIMEOUT_MS, opts.signal)
       .then(function (j) {
         var text = '';
@@ -377,7 +381,7 @@
       });
   }
 
-  /* ---------------- public: triage (Worker-root contract) ----------------
+   /* ---------------- public: triage (Worker-root contract) ----------------
      POST {base}/ { messages, mode: 'emergency' } -> { text }.
      Mirrors worker.js input limits (last 8 messages, 4000 chars each).
      NOT wired to any UI by WS-3; provided for the Worker workstream. */
